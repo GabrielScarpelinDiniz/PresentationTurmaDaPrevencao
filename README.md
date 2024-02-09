@@ -12,7 +12,7 @@
 
 ## 👨‍🎓 Integrantes: 
 - <a href="">Gabriel Henrique</a>
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 2</a>
+- <a href="https://www.linkedin.com/in/gabriel-scarpelin-diniz-425258144/">Gabriel Scarpelin Diniz</a>
 - <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 3</a> 
 - <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 4</a> 
 - <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 5</a>
