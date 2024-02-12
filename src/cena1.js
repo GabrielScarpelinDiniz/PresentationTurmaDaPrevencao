@@ -15,14 +15,14 @@ var game = new Phaser.Game(config);
 function preload() {
 
     this.load.image('fundo', 'assets/fundoMar.png');
-    this.load.image('peixe', 'assets/peixe/tubarao.png');
+    this.load.image('medico', 'assets/medico.png');
     }
 
 function create () {
 
     this.add.image(400, 300, 'fundo');
-    tubarao = this.add.image(400, 300, 'peixe');
-    tubarao.setFlip(true, false);
+    medico = this.add.image(400, 300, 'medico');
+    medico.setFlip(true, false);
     
     keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A);
     keyW = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W);
@@ -34,12 +34,12 @@ function update () {
     var pixelMove = 10;
 
     if (keyA.isDown) {
-        tubarao.x -= pixelMove;
+        medico.x -= pixelMove;
     } if (keyD.isDown) {
-        tubarao.x += pixelMove;
+        medico.x += pixelMove;
     } if (keyS.isDown) {
-        tubarao.y += pixelMove;
+        medico.y += pixelMove;
     } if (keyW.isDown) {
-        tubarao.y -= pixelMove;
+        medico.y -= pixelMove;
     }
 }
