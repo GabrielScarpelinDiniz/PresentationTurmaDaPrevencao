@@ -39,7 +39,7 @@ function create () {
 
 function update () {
     // Ajuste de velocidade do personagem
-    var pixelMove = 5;
+    const pixelMove = 5;
 
     // Reposiciona o objeto medico de volta ao mapa (Temporário antes de implementar colisão)
     if (medico.x > config.width) {
