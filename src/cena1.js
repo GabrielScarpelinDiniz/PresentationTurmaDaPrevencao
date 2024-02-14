@@ -18,12 +18,35 @@ var game = new Phaser.Game(config);
 
 function preload() {
     // Carregamento de imagens
-    this.load.image('fundo', 'assets/cenaHospital.png'); // Fundo da cena do Hospital
-    this.load.image('medico', 'assets/medico.png'); // Objeto Medico
+    this.load.image('cenaHospital', 'assets/cenaHospital.png'); // Fundo da cena do Hospital
+    this.load.image('cenaMainMenu', 'assets/cenaMainMenu.png'); // Fundo da cena do Main Menu
+    this.load.image('botaoJogar', 'assets/botaoJogar.png');     // Objeto Botao Jogar
+    this.load.image('medico', 'assets/medico.png');             // Objeto Medico
     }
 
 function create () {
-    this.add.image(667, 362, 'fundo'); // Cria e posiciona o Fundo
+    // Cena Main Menu
+    mainMenu = this.add.image(667, 362, 'cenaMainMenu').setDepth(2).setScale(1.005); // Muda profundidade para frente
+    botaoJogar = this.add.image(830, 575, 'botaoJogar').setInteractive().setDepth(2);
+    
+    // Hover button properties
+    botaoJogar.on("pointerover", () => {
+        this.input.setDefaultCursor("pointer");
+    });
+
+    botaoJogar.on("pointerout", () => {
+        this.input.setDefaultCursor("default");
+    });
+
+    botaoJogar.on("pointerdown", () => {
+        mainMenu.destroy();
+        botaoJogar.destroy();
+        this.input.setDefaultCursor("default");
+    });
+
+    
+    // Cena Hospital
+    this.add.image(667, 362, 'cenaHospital'); // Cria e posiciona o Fundo
     medico = this.add.image(400, 300, 'medico'); // Cria e posiciona o Medico
     medico.setFlip(true, false); // Ajusta a orientação do Medico
     
