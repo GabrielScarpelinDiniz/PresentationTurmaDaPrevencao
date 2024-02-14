@@ -13,7 +13,7 @@ var config = {
     }
 };
 
-// Cria o jogo passando a variável config como atributo
+// Cria o jogo passando a variável config como atributos
 var game = new Phaser.Game(config);
 
 function preload() {
@@ -29,7 +29,7 @@ function create () {
     
     // Inicializa as variáveis para movimentação do personagem
     keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A); // Precisa inicializar as variaveis com var?
-    keyW = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W);
+    keyW = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W); // O código de cada tecla e o modo pelo qual devemos "chamá-la" se encontram na linha 115000 do arquivo "phaser.js"
     keyS = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S);
     keyD = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D);
 
