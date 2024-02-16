@@ -334,10 +334,21 @@ var config = {
         update: update      // Atualiza a lógica do jogo
     }
 };
-
-
 ```
-<!-- ![Uma imagem](other\sprint_1_item_4.1_files\figura1.png) -->
+### Dificuldades
+- Tentar ajustar o tamanho da tela automaticamente para diferentes dispositivos;
+- Definir corretamente os inputs de movimentação, demora para achar a sintaxe correta;
+- Adaptação às boas práticas ao escrever código em Javascript.
+
+### Próximos passos
+- Adaptar os inputs de movimentação para funcionarem com as setas do teclado e com o touch screen de dispositivos mobile
+- Normalizar a velocidade do deslocamento do objeto médico na direção diagonal
+- Mudar a arte gráfica para a definida pelo grupo de Design
+- Transformar a cena inicial de menu para um arquivo separado
+- Implementar mudança de cenas
+- Adicionar um objeto médico com animação (spritesheetd)
+- Adicionar lógica de colisão ao personagem para interação com outros objetos ou NPCs
+- Começar a implementação do quiz ao acessar a biblioteca (vide abaixo)
 
 ## 4.2. Desenvolvimento básico do jogo (sprint 2)
 
