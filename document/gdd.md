@@ -284,7 +284,7 @@ A primeira versão do jogo possui duas cenas, uma de início e uma de jogo. Amba
 <p align=center><img src="other\sprint_1_item_4.1_files\figura2.png" alt="Figura 2" width="400"/></p>
 <p align=center style="font-size:1em">Figura 2: Cena de jogo</p>
 
-A cena de início é uma artimanha de programação e será transformada futuramente em um arquivo JavaScript separado ao adquirirmos o conhecimento para tal. De momento, criamos duas imagens um layer a frente das outras e as removemos por um evento acionado pelo clique do mouse no botão “Jogar”.
+A cena de início é uma artimanha de programação e será transformada futuramente em um arquivo JavaScript separado ao adquirirmos o conhecimento para tal. De momento, criamos duas imagens, um layer a frente das outras, e as removemos por um evento acionado pelo clique do mouse no botão “Jogar”.
 
 <p align=center><img src="other\sprint_1_item_4.1_files\figura3.png" alt="Figura 3" width="400"/></p>
 <p align=center style="font-size:1em">Figura 3: Fundo da Cena de início</p>
@@ -413,7 +413,7 @@ var config = {
 - Adicionar lógica de colisão ao personagem para interação com outros objetos ou NPCs;
 - Começar a implementação do quiz ao acessar o laboratório (vide abaixo).
 
-<p align=center><img src="other\sprint_1_item_4.1_files\figura7.png" alt="Figura 7" width="200"/></p>
+<p align=center><img src="other\sprint_1_item_4.1_files\figura7.png" alt="Figura 7" width="400"/></p>
 <p align=center style="font-size:1em">Figura 7: Protótipo do Quiz</p>
 
 ## 4.2. Desenvolvimento básico do jogo (sprint 2)
