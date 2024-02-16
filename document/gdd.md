@@ -257,7 +257,7 @@ function create () {
     medico = this.add.image(400, 300, 'medico');    // Cria e posiciona o Medico
     medico.setFlip(true, false);                    // Ajusta a orientação do Medico
 ```
-Após o carregamento das imagens da cena do menu, configuramos uma série de eventos que ajustam o comportamento da imagem da setinha ao passar sobre o botão Jogar e o que ocorre ao clicá-lo.
+Após o carregamento das imagens da cena do menu, configuramos uma série de eventos que ajustam o comportamento da imagem da setinha ao passar sobre o botão "Jogar" e o que ocorre ao clicá-lo.
 ```js
 // Ajuste visual da imagem do mouse para fornecer feedback que o botão jogar é interativo
     botaoJogar.on("pointerover", () => {        // Evento de passar o mouse sobre o botaoJogar
@@ -275,7 +275,7 @@ Após o carregamento das imagens da cena do menu, configuramos uma série de eve
     });
 ```
 Após o clique do botão jogar e remoção dos elementos da cena inicial, foram implementados os controles básicos de movimento para o personagem utilizando as teclas WASD do teclado.
-O código da movimentação começou com a definição de um objeto para cada tecla na função “create”. Por exemplo, o objeto “keyA” recebeu o input da tecla “A” do teclado, como visto abaixo. 
+O código da movimentação começou com a definição de um objeto para cada tecla na função _“create”_. Por exemplo, o objeto “keyA” recebeu o _input_ da tecla “A” do teclado, como visto abaixo. 
 ```js
     // Inicializa as variáveis para movimentação do personagem
     keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A); 
@@ -283,7 +283,7 @@ O código da movimentação começou com a definição de um objeto para cada te
     keyS = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S); // encontram-se na linha 115000 do arquivo "phaser.js"
     keyD = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D);
 ```
-Posteriormente, na função “update”, implementamos uma lógica para atualizar a posição do médico um número de pixels ao acionar cada tecla individualmente. Foi criada uma variável chamada pixelMove do tipo const para ajustar um número fixo de pixels que a figura do médico deve mover ao receber o input de cada tecla. Um detalhe adicional é a mudança de orientação da figura do personagem ao acionar as teclas de movimentação do eixo horizontal, teclas “A” e “D”. Vale ressaltar que, por conta de utilizarmos apenas o condicional if na notação do “if/else”, ela torna-se inclusiva, ou seja, é possível clicar em mais de uma tecla ao mesmo tempo, possibilitando o movimento diagonal.
+Posteriormente, na função _“update”_, implementamos uma lógica para atualizar a posição do médico um número de _pixels_ ao acionar cada tecla individualmente. Foi criada uma variável chamada _pixelMove_ do tipo _const_ para ajustar um número fixo de _pixels_ que a figura do médico deve mover ao receber o _input_ de cada tecla. Um detalhe adicional é a mudança de orientação da figura do personagem ao acionar as teclas de movimentação do eixo horizontal, teclas “A” e “D”. Vale ressaltar que, por conta de utilizarmos apenas o condicional _if_ na notação do _“if/else”_, ela torna-se inclusiva, ou seja, é possível clicar em mais de uma tecla ao mesmo tempo, possibilitando o movimento diagonal.
 ```js
     // Mapeamento de Inputs (Normalizar o movimento diagonal futuramente)
     if (keyA.isDown) {
@@ -317,8 +317,8 @@ Como o personagem não possui física ou colisão, é possível movimentá-lo pa
         medico.y = config.height - 20;
     }
 ```
-O final do código apresenta uma lógica inicial e experimental de tentativa de implementação de inputs mobile. Mais estudo e pesquisa são necessários para refinar seu entendimento e comportamento.
-Por fim, a variável config criada no início do código guarda todas as configurações necessárias para criar o objeto Phaser.Game. Dentre elas, podemos destacar que o tamanho da tela foi temporariamente fixado para 1334x725 pixels e o atributo scale foi definido como FIT para ajustar o tamanho da tela automaticamente, como podemos ver abaixo.
+O final do código apresenta uma lógica inicial e experimental de tentativa de implementação de _inputs_ mobile. Mais estudo e pesquisa são necessários para refinar seu entendimento e comportamento.
+Por fim, a variável _config_ criada no início do código guarda todas as configurações necessárias para criar o objeto Phaser.Game. Dentre elas, podemos destacar que o tamanho da tela foi temporariamente fixado para 1334x725 _pixels_ e o atributo _scale_ foi definido como "FIT" para ajustar o tamanho da tela automaticamente, como podemos ver abaixo.
 ```js
 // Cria as configurações para Phaser.Game
 var config = {
