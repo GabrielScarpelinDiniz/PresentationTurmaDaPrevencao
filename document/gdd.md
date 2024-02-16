@@ -214,10 +214,13 @@ Figura 1: detalhe da cena da partida do herói para a missão, usando sua nave
 ## 4.1. Desenvolvimento preliminar do jogo (sprint 1)
 
 A primeira versão do jogo possui duas cenas, uma de início e uma de jogo. Ambas possuem arte gráfica provisória e foram desenvolvidas com o intuito de serem apresentadas na reunião com o parceiro ao final do Sprint 1.
+
 <p align=center><img src="other\sprint_1_item_4.1_files\figura1.png" alt="Figura 1" width="400"/></p>
-<p align=center style="font-size:1em">Figura 1: Cena de início</p>
+<p align=center style="font-size:0.5em">Figura 1: Cena de início</p>
+
 <center><img src="other\sprint_1_item_4.1_files\figura2.png" alt="Figura 2" width="400"/></center>
 <p style="text-align:center; font-size:1em">Figura 2: Cena de jogo</p>
+
 A cena de início é uma artimanha de programação e será transformada em um arquivo javascript separado futuramente ao adquirirmos o conhecimento para tal. De momento, criamos duas imagens um layer a frente das outras e as removemos com um evento acionado pelo clique do mouse no botão “Jogar”.
 <p align=center><img src="other\sprint_1_item_4.1_files\figura3.png" alt="Figura 3" width="400"/></p>
 <p align=center style="font-size:1em">Figura 3: Fundo da Cena de início</p>
@@ -252,7 +255,85 @@ function create () {
     medico.setFlip(true, false);                    // Ajusta a orientação do Medico
 ```
 Após o carregamento das imagens da cena do menu, configuramos uma série de eventos que ajustam o comportamento da imagem da setinha ao passar sobre o botão Jogar e o que ocorre ao clicá-lo.
+```js
+// Ajuste visual da imagem do mouse para fornecer feedback que o botão jogar é interativo
+    botaoJogar.on("pointerover", () => {        // Evento de passar o mouse sobre o botaoJogar
+        this.input.setDefaultCursor("pointer"); // Cursor vira mãozinha
+    });
+    botaoJogar.on("pointerout", () => {         // Evento de retirar o mouse do botaoJogar
+        this.input.setDefaultCursor("default"); // Cursor vira setinha
+    });
 
+    // Evento disparado ao clicar no botão (Código temporário apenas para demonstração da funcionalidade na sprint 1)
+    botaoJogar.on("pointerdown", () => {        // Evento de click do mouse
+        mainMenu.destroy();                     // Remoção da imagem mainMenu da tela
+        botaoJogar.destroy();                   // Remoção da imagem botaoJogar da tela
+        this.input.setDefaultCursor("default"); // Retorno do cursor do mouse para setinha
+    });
+```
+Após o clique do botão jogar e remoção dos elementos da cena inicial, foram implementados os controles básicos de movimento para o personagem utilizando as teclas WASD do teclado.
+O código da movimentação começou com a definição de um objeto para cada tecla na função “create”. Por exemplo, o objeto “keyA” recebeu o input da tecla “A” do teclado, como visto abaixo. 
+```js
+    // Inicializa as variáveis para movimentação do personagem
+    keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A); 
+    keyW = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W); // O código de cada tecla e o modo pelo qual devemos "chamá-la"
+    keyS = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S); // encontram-se na linha 115000 do arquivo "phaser.js"
+    keyD = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D);
+```
+Posteriormente, na função “update”, implementamos uma lógica para atualizar a posição do médico um número de pixels ao acionar cada tecla individualmente. Foi criada uma variável chamada pixelMove do tipo const para ajustar um número fixo de pixels que a figura do médico deve mover ao receber o input de cada tecla. Um detalhe adicional é a mudança de orientação da figura do personagem ao acionar as teclas de movimentação do eixo horizontal, teclas “A” e “D”. Vale ressaltar que, por conta de utilizarmos apenas o condicional if na notação do “if/else”, ela torna-se inclusiva, ou seja, é possível clicar em mais de uma tecla ao mesmo tempo, possibilitando o movimento diagonal.
+```js
+    // Mapeamento de Inputs (Normalizar o movimento diagonal futuramente)
+    if (keyA.isDown) {
+        medico.x -= pixelMove;
+        medico.setFlip(true, false); // Ajusta orientação do personagem
+    }
+    if (keyD.isDown) {
+        medico.x += pixelMove;
+        medico.setFlip(false, false); // Ajusta orientação do personagem
+    }   
+    if (keyS.isDown) {
+        medico.y += pixelMove;
+    } 
+    if (keyW.isDown) {
+        medico.y -= pixelMove;
+    }
+```
+Como o personagem não possui física ou colisão, é possível movimentá-lo para fora da cena do hospital. Com o intuito de evitar esse comportamento, foi implementado provisoriamente o código a seguir que reposiciona-o de volta à cena sempre que atingir uma borda.
+```js
+    // Reposiciona o objeto medico de volta ao mapa (Temporário antes de implementar colisão)
+    if (medico.x > config.width) {
+        medico.x = 20;
+    }
+    if (medico.x < 0) {
+        medico.x = config.width - 20;
+    }
+    if (medico.y > config.height) {
+        medico.y = 20;
+    }
+    if (medico.y < 0) {
+        medico.y = config.height - 20;
+    }
+```
+O final do código apresenta uma lógica inicial e experimental de tentativa de implementação de inputs mobile. Mais estudo e pesquisa são necessários para refinar seu entendimento e comportamento.
+Por fim, a variável config criada no início do código guarda todas as configurações necessárias para criar o objeto Phaser.Game. Dentre elas, podemos destacar que o tamanho da tela foi temporariamente fixado para 1334x725 pixels e o atributo scale foi definido como FIT para ajustar o tamanho da tela automaticamente, como podemos ver abaixo.
+```js
+// Cria as configurações para Phaser.Game
+var config = {
+    type: Phaser.AUTO,      // Ajusta o renderizador automaticamente (WebGL e Canvas)
+    width: 1334,            // Ajusta a largura para 1334 pixels (temporário)
+    height: 725,            // Ajusta a altura
+    scale: {
+        mode: Phaser.Scale.FIT, // Ajusta a tela para mobile
+    },
+    scene: { // Funções da cena
+        preload: preload,   // Carrega os assets
+        create: create,     // Cria os objetos e inicializa algumas configurações
+        update: update      // Atualiza a lógica do jogo
+    }
+};
+
+
+```
 <!-- ![Uma imagem](other\sprint_1_item_4.1_files\figura1.png) -->
 
 ## 4.2. Desenvolvimento básico do jogo (sprint 2)
