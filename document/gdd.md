@@ -231,7 +231,7 @@ A cena de jogo é composta por duas imagens também, uma simulando o cenário do
 
 <p align=center><img src="other\sprint_1_item_4.1_files\figura5.png" alt="Figura 5" width="400"/></p>
 <p align=center style="font-size:1em">Figura 5: Imagem do Cenário</p>
-<p align=center><img src="other\sprint_1_item_4.1_files\figura6.png" alt="Figura 6" width="400"/></p>
+<p align=center><img src="other\sprint_1_item_4.1_files\figura6.png" alt="Figura 6" width="80"/></p>
 <p align=center style="font-size:1em">Figura 6: Imagem do Personagem</p>
 
 Para iniciar a explicação do código, dentro do arquivo “cena1.js”, carregamos as imagens na função “preload” e as criamos na função “create”, como mostrado a seguir.
