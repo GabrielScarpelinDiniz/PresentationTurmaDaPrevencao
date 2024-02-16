@@ -220,14 +220,14 @@ A primeira versão do jogo possui duas cenas, uma de início e uma de jogo. Amba
 <p align=center><img src="other\sprint_1_item_4.1_files\figura2.png" alt="Figura 2" width="400"/></p>
 <p align=center style="font-size:1em">Figura 2: Cena de jogo</p>
 
-A cena de início é uma artimanha de programação e será transformada em um arquivo javascript separado futuramente ao adquirirmos o conhecimento para tal. De momento, criamos duas imagens um layer a frente das outras e as removemos com um evento acionado pelo clique do mouse no botão “Jogar”.
+A cena de início é uma artimanha de programação e será transformada futuramente em um arquivo JavaScript separado ao adquirirmos o conhecimento para tal. De momento, criamos duas imagens um layer a frente das outras e as removemos por um evento acionado pelo clique do mouse no botão “Jogar”.
 
 <p align=center><img src="other\sprint_1_item_4.1_files\figura3.png" alt="Figura 3" width="400"/></p>
 <p align=center style="font-size:1em">Figura 3: Fundo da Cena de início</p>
 <p align=center><img src="other\sprint_1_item_4.1_files\figura4.png" alt="Figura 4" width="400"/></p>
 <p align=center style="font-size:1em">Figura 4: Botão de Jogar</p>
 
-A cena de jogo é composta por duas imagens também, uma simulando o cenário do jogo e outra, o personagem jogável, uma figura de médico. O personagem possui movimento direcional controlado pelas teclas WASD, como será exposto abaixo. Futuras adaptações para o movimento pelas setas do teclado e pelo toque em smartphones são planejadas.
+A cena de jogo é composta por duas imagens também, uma simulando o cenário do jogo e outra, o personagem jogável, uma figura de médico. O personagem possui movimento direcional controlado pelas teclas WASD, como será exposto abaixo. Adaptações para os _inputs_ estão listados abaixo.
 
 <p align=center><img src="other\sprint_1_item_4.1_files\figura5.png" alt="Figura 5" width="400"/></p>
 <p align=center style="font-size:1em">Figura 5: Imagem do Cenário</p>
@@ -274,8 +274,7 @@ Após o carregamento das imagens da cena do menu, configuramos uma série de eve
         this.input.setDefaultCursor("default"); // Retorno do cursor do mouse para setinha
     });
 ```
-Após o clique do botão jogar e remoção dos elementos da cena inicial, foram implementados os controles básicos de movimento para o personagem utilizando as teclas WASD do teclado.
-O código da movimentação começou com a definição de um objeto para cada tecla na função _“create”_. Por exemplo, o objeto “keyA” recebeu o _input_ da tecla “A” do teclado, como visto abaixo. 
+Após o clique do botão jogar e remoção dos elementos da cena inicial, foram implementados os controles básicos de movimento para o personagem utilizando as teclas WASD do teclado. O código da movimentação começou com a definição de um objeto para cada tecla na função _“create”_. Por exemplo, o objeto “keyA” recebeu o _input_ da tecla “A” do teclado, como visto abaixo. 
 ```js
     // Inicializa as variáveis para movimentação do personagem
     keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A); 
@@ -317,8 +316,8 @@ Como o personagem não possui física ou colisão, é possível movimentá-lo pa
         medico.y = config.height - 20;
     }
 ```
-O final do código apresenta uma lógica inicial e experimental de tentativa de implementação de _inputs_ mobile. Mais estudo e pesquisa são necessários para refinar seu entendimento e comportamento.
-Por fim, a variável _config_ criada no início do código guarda todas as configurações necessárias para criar o objeto Phaser.Game. Dentre elas, podemos destacar que o tamanho da tela foi temporariamente fixado para 1334x725 _pixels_ e o atributo _scale_ foi definido como "FIT" para ajustar o tamanho da tela automaticamente, como podemos ver abaixo.
+O final do código apresenta uma lógica inicial e experimental de tentativa de implementação de _inputs_ _mobile_. Mais estudo e pesquisa são necessários para refinar seu entendimento e comportamento.
+Por fim, a variável _config_ criada no início do código guarda todas as configurações necessárias para criar o objeto "Phaser.Game". Dentre elas, podemos destacar que o tamanho da tela foi temporariamente fixado em 1334x725 _pixels_ e a propriedade _scale_ foi definido como "FIT" para ajustar o tamanho da tela automaticamente, como podemos ver abaixo.
 ```js
 // Cria as configurações para Phaser.Game
 var config = {
@@ -341,14 +340,14 @@ var config = {
 - Adaptação às boas práticas ao escrever código em Javascript.
 
 ### Próximos passos
-- Adaptar os inputs de movimentação para funcionarem com as setas do teclado e com o touch screen de dispositivos mobile
-- Normalizar a velocidade do deslocamento do objeto médico na direção diagonal
-- Mudar a arte gráfica para a definida pelo grupo de Design
-- Transformar a cena inicial de menu para um arquivo separado
-- Implementar mudança de cenas
-- Adicionar um objeto médico com animação (spritesheetd)
-- Adicionar lógica de colisão ao personagem para interação com outros objetos ou NPCs
-- Começar a implementação do quiz ao acessar o laboratório (vide abaixo)
+- Adaptar os inputs de movimentação para funcionarem com as setas do teclado e com o touch screen de dispositivos mobile;
+- Normalizar a velocidade do deslocamento do objeto médico na direção diagonal;
+- Mudar a arte gráfica para a definida pelo grupo de Design;
+- Transformar a cena inicial de menu para um arquivo separado;
+- Implementar mudança de cenas;
+- Adicionar um objeto médico com animação (spritesheetd);
+- Adicionar lógica de colisão ao personagem para interação com outros objetos ou NPCs;
+- Começar a implementação do quiz ao acessar o laboratório (vide abaixo).
 
 <p align=center><img src="other\sprint_1_item_4.1_files\figura7.png" alt="Figura 7" width="200"/></p>
 <p align=center style="font-size:1em">Figura 7: Protótipo do Quiz</p>
