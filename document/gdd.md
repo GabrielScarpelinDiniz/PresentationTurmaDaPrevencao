@@ -218,8 +218,18 @@ A primeira versão do jogo possui duas cenas, uma de início e uma de jogo. Amba
 <p style="text-align:center; font-size:1em">Figura 1: Cena de início</p>
 <center><img src="other\sprint_1_item_4.1_files\figura2.png" alt="Figura 1" width="400"/></center>
 <p style="text-align:center; font-size:1em">Figura 2: Cena de jogo</p>
-A cena de início é uma artimanha de programação e será transformada em um arquivo javascript separado futuramente ao adquirirmos o conhecimento para tal. De momento, criamos duas imagens um layer a frente das outras e as removemos com um evento acionado pelo clique do mouse no botão “Jogar”.
+A cena de início é uma artimanha de programação e será transformada em um arquivo javascript separado futuramente ao adquirirmos o conhecimento para tal. De momento, criamos duas imagens um layer a frente das outras e as removemos com um evento acionado pelo clique do mouse no botão “Jogar”.<br><br>
 
+
+```js
+function preload() {
+    // Carregamento de imagens
+    this.load.image('cenaHospital', 'assets/cenaHospital.png'); // Fundo da cena do Hospital
+    this.load.image('cenaMainMenu', 'assets/cenaMainMenu.png'); // Fundo da cena do Main Menu
+    this.load.image('botaoJogar', 'assets/botaoJogar.png');     // Imagem para botaoJogar
+    this.load.image('medico', 'assets/medico.png');             // Imagem para medico
+    }
+```
 
 <!-- ![Uma imagem](other\sprint_1_item_4.1_files\figura1.png) -->
 
