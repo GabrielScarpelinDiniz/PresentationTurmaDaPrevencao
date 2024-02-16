@@ -214,7 +214,7 @@ Figura 1: detalhe da cena da partida do herói para a missão, usando sua nave
 ## 4.1. Desenvolvimento preliminar do jogo (sprint 1)
 
 A primeira versão do jogo possui duas cenas, uma de início e uma de jogo. Ambas possuem arte gráfica provisória e foram desenvolvidas com o intuito de serem apresentadas na reunião com o parceiro ao final do Sprint 1.
-<center><img src="other\sprint_1_item_4.1_files\figura1.png" alt="Figura 1" width="400"/></center>
+<p align="center"><img src="other\sprint_1_item_4.1_files\figura1.png" alt="Figura 1" width="400"/></p>
 <p style="text-align:center; font-size:1em">Figura 1: Cena de início</p>
 <center><img src="other\sprint_1_item_4.1_files\figura2.png" alt="Figura 1" width="400"/></center>
 <p style="text-align:center; font-size:1em">Figura 2: Cena de jogo</p>
