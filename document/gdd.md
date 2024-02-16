@@ -217,27 +217,23 @@ A primeira versão do jogo possui duas cenas, uma de início e uma de jogo. Amba
 
 <p align=center><img src="other\sprint_1_item_4.1_files\figura1.png" alt="Figura 1" width="400"/></p>
 <p align=center style="font-size:1em">Figura 1: Cena de início</p>
-
-<figure>
-  <img
-  src="other\sprint_1_item_4.1_files\figura1.png"
-  alt="Figura 1">
-  <center><figcaption>MDN Logo</figcaption></center>
-</figure>
-
-<center><img src="other\sprint_1_item_4.1_files\figura2.png" alt="Figura 2" width="400"/></center>
-<p style="text-align:center; font-size:1em">Figura 2: Cena de jogo</p>
+<p align=center><img src="other\sprint_1_item_4.1_files\figura2.png" alt="Figura 2" width="400"/></p>
+<p align=center style="font-size:1em">Figura 2: Cena de jogo</p>
 
 A cena de início é uma artimanha de programação e será transformada em um arquivo javascript separado futuramente ao adquirirmos o conhecimento para tal. De momento, criamos duas imagens um layer a frente das outras e as removemos com um evento acionado pelo clique do mouse no botão “Jogar”.
+
 <p align=center><img src="other\sprint_1_item_4.1_files\figura3.png" alt="Figura 3" width="400"/></p>
 <p align=center style="font-size:1em">Figura 3: Fundo da Cena de início</p>
-<center><img src="other\sprint_1_item_4.1_files\figura4.png" alt="Figura 4" width="400"/></center>
-<p style="text-align:center; font-size:1em">Figura 4: Botão de Jogar</p>
+<p align=center><img src="other\sprint_1_item_4.1_files\figura4.png" alt="Figura 4" width="400"/></p>
+<p align=center style="font-size:1em">Figura 4: Botão de Jogar</p>
+
 A cena de jogo é composta por duas imagens também, uma simulando o cenário do jogo e outra, o personagem jogável, uma figura de médico. O personagem possui movimento direcional controlado pelas teclas WASD, como será exposto abaixo. Futuras adaptações para o movimento pelas setas do teclado e pelo toque em smartphones são planejadas.
+
 <p align=center><img src="other\sprint_1_item_4.1_files\figura5.png" alt="Figura 5" width="400"/></p>
 <p align=center style="font-size:1em">Figura 5: Imagem do Cenário</p>
-<center><img src="other\sprint_1_item_4.1_files\figura6.png" alt="Figura 6" width="80"/></center>
-<p style="text-align:center; font-size:1em">Figura 6: Imagem do Personagem</p>
+<p align=center><img src="other\sprint_1_item_4.1_files\figura6.png" alt="Figura 6" width="400"/></p>
+<p align=center style="font-size:1em">Figura 6: Imagem do Personagem</p>
+
 Para iniciar a explicação do código, dentro do arquivo “cena1.js”, carregamos as imagens na função “preload” e as criamos na função “create”, como mostrado a seguir.
 
 ```js
