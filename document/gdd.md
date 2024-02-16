@@ -216,10 +216,19 @@ Figura 1: detalhe da cena da partida do herói para a missão, usando sua nave
 A primeira versão do jogo possui duas cenas, uma de início e uma de jogo. Ambas possuem arte gráfica provisória e foram desenvolvidas com o intuito de serem apresentadas na reunião com o parceiro ao final do Sprint 1.
 <p align=center><img src="other\sprint_1_item_4.1_files\figura1.png" alt="Figura 1" width="400"/></p>
 <p align=center style="font-size:1em">Figura 1: Cena de início</p>
-<center><img src="other\sprint_1_item_4.1_files\figura2.png" alt="Figura 1" width="400"/></center>
+<center><img src="other\sprint_1_item_4.1_files\figura2.png" alt="Figura 2" width="400"/></center>
 <p style="text-align:center; font-size:1em">Figura 2: Cena de jogo</p>
-A cena de início é uma artimanha de programação e será transformada em um arquivo javascript separado futuramente ao adquirirmos o conhecimento para tal. De momento, criamos duas imagens um layer a frente das outras e as removemos com um evento acionado pelo clique do mouse no botão “Jogar”.<br><br>
-
+A cena de início é uma artimanha de programação e será transformada em um arquivo javascript separado futuramente ao adquirirmos o conhecimento para tal. De momento, criamos duas imagens um layer a frente das outras e as removemos com um evento acionado pelo clique do mouse no botão “Jogar”.
+<p align=center><img src="other\sprint_1_item_4.1_files\figura3.png" alt="Figura 3" width="400"/></p>
+<p align=center style="font-size:1em">Figura 3: Fundo da Cena de início</p>
+<center><img src="other\sprint_1_item_4.1_files\figura4.png" alt="Figura 4" width="400"/></center>
+<p style="text-align:center; font-size:1em">Figura 4: Botão de Jogar</p>
+A cena de jogo é composta por duas imagens também, uma simulando o cenário do jogo e outra, o personagem jogável, uma figura de médico. O personagem possui movimento direcional controlado pelas teclas WASD, como será exposto abaixo. Futuras adaptações para o movimento pelas setas do teclado e pelo toque em smartphones são planejadas.
+<p align=center><img src="other\sprint_1_item_4.1_files\figura5.png" alt="Figura 5" width="400"/></p>
+<p align=center style="font-size:1em">Figura 5: Imagem do Cenário</p>
+<center><img src="other\sprint_1_item_4.1_files\figura6.png" alt="Figura 6" width="80"/></center>
+<p style="text-align:center; font-size:1em">Figura 6: Imagem do Personagem</p>
+Para iniciar a explicação do código, dentro do arquivo “cena1.js”, carregamos as imagens na função “preload” e as criamos na função “create”, como mostrado a seguir.
 
 ```js
 function preload() {
@@ -230,6 +239,19 @@ function preload() {
     this.load.image('medico', 'assets/medico.png');             // Imagem para medico
     }
 ```
+```js
+function create () {
+    // Carrega a cena Main Menu
+    mainMenu = this.add.image(667, 362, 'cenaMainMenu').setDepth(2).setScale(1.005);    // setDepth -> Muda profundidade para frente
+    botaoJogar = this.add.image(830, 575, 'botaoJogar').setInteractive().setDepth(2);
+```
+```js
+    // Cena Hospital
+    this.add.image(667, 362, 'cenaHospital');       // Cria e posiciona o Fundo
+    medico = this.add.image(400, 300, 'medico');    // Cria e posiciona o Medico
+    medico.setFlip(true, false);                    // Ajusta a orientação do Medico
+```
+Após o carregamento das imagens da cena do menu, configuramos uma série de eventos que ajustam o comportamento da imagem da setinha ao passar sobre o botão Jogar e o que ocorre ao clicá-lo.
 
 <!-- ![Uma imagem](other\sprint_1_item_4.1_files\figura1.png) -->
 
