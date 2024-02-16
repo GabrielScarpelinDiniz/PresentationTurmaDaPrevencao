@@ -348,7 +348,10 @@ var config = {
 - Implementar mudança de cenas
 - Adicionar um objeto médico com animação (spritesheetd)
 - Adicionar lógica de colisão ao personagem para interação com outros objetos ou NPCs
-- Começar a implementação do quiz ao acessar a biblioteca (vide abaixo)
+- Começar a implementação do quiz ao acessar o laboratório (vide abaixo)
+
+<p align=center><img src="other\sprint_1_item_4.1_files\figura7.png" alt="Figura 7" width="200"/></p>
+<p align=center style="font-size:1em">Figura 7: Protótipo do Quiz</p>
 
 ## 4.2. Desenvolvimento básico do jogo (sprint 2)
 
