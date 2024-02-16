@@ -214,7 +214,14 @@ Figura 1: detalhe da cena da partida do herói para a missão, usando sua nave
 ## 4.1. Desenvolvimento preliminar do jogo (sprint 1)
 
 A primeira versão do jogo possui duas cenas, uma de início e uma de jogo. Ambas possuem arte gráfica provisória e foram desenvolvidas com o intuito de serem apresentadas na reunião com o parceiro ao final do Sprint 1.
-![Uma imagem](document\other\sprint_1_item_4.1_files\figura1.png)
+<center><img src="other\sprint_1_item_4.1_files\figura1.png" alt="Figura 1" width="400"/></center>
+<p style="text-align:center; font-size:1em">Figura 1: Cena de início</p>
+<center><img src="other\sprint_1_item_4.1_files\figura2.png" alt="Figura 1" width="400"/></center>
+<p style="text-align:center; font-size:1em">Figura 2: Cena de jogo</p>
+A cena de início é uma artimanha de programação e será transformada em um arquivo javascript separado futuramente ao adquirirmos o conhecimento para tal. De momento, criamos duas imagens um layer a frente das outras e as removemos com um evento acionado pelo clique do mouse no botão “Jogar”.
+
+
+<!-- ![Uma imagem](other\sprint_1_item_4.1_files\figura1.png) -->
 
 ## 4.2. Desenvolvimento básico do jogo (sprint 2)
 
