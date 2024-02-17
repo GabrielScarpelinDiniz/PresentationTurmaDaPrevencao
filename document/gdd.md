@@ -3,8 +3,6 @@
 
 # GDD - Game Design Document - Módulo 1 - Inteli
 
-**_Os trechos em itálico servem apenas como guia para o preenchimento da seção. Por esse motivo, não devem fazer parte da documentação final_**
-
 ## Tilápia
 
 #### Rodrigo Natan Erlich
@@ -493,4 +491,3 @@ O modelo Kanban consiste na separação das tarefas em três: A fazer, fazendo e
 
 <img src="./other/notion_print.png"/>
 
-*Inclua aqui quaisquer complementos para seu projeto, como diagramas, imagens, tabelas etc. Organize em sub-tópicos utilizando headings menores (use ## ou ### para isso)*
