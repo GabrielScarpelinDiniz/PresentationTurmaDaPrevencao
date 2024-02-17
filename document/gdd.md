@@ -74,6 +74,7 @@ A Matriz de Riscos, também chamada de Matriz de Probabilidade e Impacto, é uma
 A fim de gerenciar os riscos do nosso produto, a equipe construiu os gráficos (Imagem xx e Imagem yy) que representam nossas ameaças e oportunidades e, contribuem efetivamente para o planejamento de planos de ação.
 
 <img src="./other/matriz_de_riscos.jpg">
+<img src="./other/matriz_de_oportunidades.png">
 
 \# | Plano de ações:
 --- | ---
