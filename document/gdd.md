@@ -486,4 +486,11 @@ CASAROTTO,  Camila. Rockcontent. Disponível em: https://rockcontent.com/br/blog
 
 # <a name="c8"></a>Anexos
 
+## Ferramentas
+### Notion: https://www.notion.so/invite/e05ef502f25f484e949078ca88fb05c3ef6fb2e6
+Notion foi uma ferramenta auxiliar durante o projeto, ajudando principalmente na organização de tarefas com o modelo Kanban de divisão de tarefas.
+O modelo Kanban consiste na separação das tarefas em três: A fazer, fazendo e feito. Obtendo um melhor controle de todas as tarefas.
+
+<img src="./other/notion_print.png"/>
+
 *Inclua aqui quaisquer complementos para seu projeto, como diagramas, imagens, tabelas etc. Organize em sub-tópicos utilizando headings menores (use ## ou ### para isso)*
