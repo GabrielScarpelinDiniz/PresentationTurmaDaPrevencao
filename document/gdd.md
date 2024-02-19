@@ -141,27 +141,28 @@ A fim de gerenciar os riscos do nosso produto, a equipe construiu os gráficos (
 
 ## 2.1. Objetivos do Jogo (sprint 2)
 
-*Descreva o que o jogador deve cumprir para avançar ou concluir o jogo*
+Atender o máximo de pacientes em um tempo determinado passando por um ciclo de estudo e prática.
 
 ## 2.2. Características do Jogo (sprint 2)
 
 ### 2.2.1. Gênero do Jogo (sprint 2)
 
-*simulação, RPG, corrida, estratégia, esportes, ação, aventura etc.*  
+O jogo simula a atuação de um médico na triagem dos pacientes, portanto seu gênero é simulação.  
 
 ### 2.2.2. Plataforma do Jogo (sprint 2)
 
-*quanto ao dispositivo: desktop, smartphones, tablets, TV etc.*
-
-*quanto ao sistema: Web, Windows, MacOS, Android, IOS etc.*
+Dispositivos: Smartphones e Tablets.
+Sistema: Web.
 
 ### 2.2.3. Número de jogadores (sprint 2)
 
-*1 jogador, 2 jogadores versus, 2 jogadores cooperação, multiplayer etc.*
+1 jogador.
 
 ### 2.2.4. Títulos semelhantes e inspirações (sprint 2)
 
-*Liste e descreva títulos semelhantes e jogos que inspiram e são usados como referência do projeto*
+Overcooked (https://www.team17.com/games/overcooked/)
+Hospital Questiona (https://metodoquestiona.com.br/)
+Stardew Valley (https://www.stardewvalley.net/)
 
 ### 2.2.5. Tempo estimado de jogo (sprint 5)
 
