@@ -160,9 +160,11 @@ Sistema: Web.
 
 ### 2.2.4. Títulos semelhantes e inspirações (sprint 2)
 
-Overcooked (https://www.team17.com/games/overcooked/)
-Hospital Questiona (https://metodoquestiona.com.br/)
-Stardew Valley (https://www.stardewvalley.net/)
+Para a concepção do jogo, foram utilizados alguns jogos como referência de jogabilidade e design:
+
+[Overcooked](https://www.team17.com/games/overcooked/)
+[Hospital Questiona](https://metodoquestiona.com.br/)
+[Stardew Valley](https://www.stardewvalley.net/)
 
 ### 2.2.5. Tempo estimado de jogo (sprint 5)
 
