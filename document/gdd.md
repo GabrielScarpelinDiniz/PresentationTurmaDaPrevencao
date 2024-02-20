@@ -162,9 +162,9 @@ Sistema: Web.
 
 Para a concepção do jogo, foram utilizados alguns jogos como referência de jogabilidade e design:
 
-[Overcooked](https://www.team17.com/games/overcooked/)
-[Hospital Questiona](https://metodoquestiona.com.br/)
-[Stardew Valley](https://www.stardewvalley.net/)
+*[Overcooked](https://www.team17.com/games/overcooked/)<br>
+*[Hospital Questiona](https://metodoquestiona.com.br/)<br>
+*[Stardew Valley](https://www.stardewvalley.net/)<br>
 
 ### 2.2.5. Tempo estimado de jogo (sprint 5)
 
