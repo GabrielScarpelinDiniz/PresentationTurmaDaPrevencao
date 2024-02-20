@@ -5,13 +5,13 @@
 
 ## Tilápia
 
-#### Rodrigo Natan Erlich
-#### Pietra Pasqualini Batista
-#### Gabriel Scarpelin Diniz
 #### Gabriel Henrique Martins Alves
+#### Gabriel Scarpelin Diniz
 #### Isabelly Maia Montalvão
 #### Leonardo Casal Andriolo
 #### Matheus Jorge Rosa
+#### Pietra Pasqualini Batista
+#### Rodrigo Natan Erlich
 
 
 ## Sumário
