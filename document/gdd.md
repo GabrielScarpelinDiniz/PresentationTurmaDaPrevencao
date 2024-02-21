@@ -180,6 +180,21 @@ Para a concepção do jogo, foram utilizados alguns jogos como referência de jo
 
 *Caso seu jogo não possua enredo/história (ex. jogo Tetris), mencione os motivos de não existir e como o jogador pode se contextualizar com o ambiente do jogo.*
 
+O jogador assume o papel de Residente, um recém-formado médico que inicia sua residência no pronto-socorro de queimaduras de um hospital movimentado. Sob a orientação de sua supervisora, a experiente Dra. Tina, o Residente enfrenta uma série de desafios enquanto aprende a diagnosticar, tratar e cuidar de pacientes com diferentes tipos de queimaduras.
+
+Ao longo do jogo, o jogador é apresentado a uma variedade de pacientes, cada um com sua própria história e circunstâncias. Alguns pacientes podem ter sofrido queimaduras em acidentes domésticos, enquanto outros podem ter sido vítimas de incêndios ou exposição a produtos químicos. Cada caso apresenta desafios únicos que exigem avaliação rápida e tratamento adequado.
+
+Durante o jogo, o Residente tem acesso a recursos importantes que o auxiliam em seu trabalho:
+
+Biblioteca: Residente pode consultar a biblioteca do hospital para buscar informações sobre diferentes tipos de queimaduras, métodos de tratamento e protocolos de emergência. A biblioteca fornece a ele conhecimento valioso que pode ser aplicado no atendimento aos pacientes.
+
+Laboratório: O laboratório do hospital permite que o Residente realize testes e análises para determinar o tratamento mais adequado na situação de um paciente específico.
+
+À medida que o Residente progride no jogo, ele recebe uma pontuação com base em sua eficácia no tratamento dos pacientes. Essa pontuação é influenciada por vários fatores, como precisão no diagnóstico, rapidez no atendimento e satisfação do paciente. Residente tem a oportunidade de melhorar sua pontuação a cada vez que joga, aplicando o que aprendeu em experiências anteriores e aprimorando suas habilidades médicas.
+
+No final do jogo, a pontuação de Residente reflete seu desempenho geral como médico no pronto-socorro de queimaduras. Ele pode comparar sua pontuação com outras vezes que jogou, buscando constantemente melhorar e alcançar resultados mais altos. Essa mecânica de jogo incentiva a prática e o aprimoramento contínuo, refletindo a jornada de aprendizado e crescimento de Residente como profissional médico.
+
+
 ## 3.2. Personagens (sprints 2 e 3)
 
 ### 3.2.1. Controláveis
