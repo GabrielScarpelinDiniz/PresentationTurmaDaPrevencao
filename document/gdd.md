@@ -162,9 +162,9 @@ Sistema: Web.
 
 Para a concepção do jogo, foram utilizados alguns jogos como referência de jogabilidade e design:
 
-*[Overcooked](https://www.team17.com/games/overcooked/)<br>
-*[Hospital Questiona](https://metodoquestiona.com.br/)<br>
-*[Stardew Valley](https://www.stardewvalley.net/)<br>
+* [Overcooked](https://www.team17.com/games/overcooked/)<br>
+* [Hospital Questiona](https://metodoquestiona.com.br/)<br>
+* [Stardew Valley](https://www.stardewvalley.net/)<br>
 
 ### 2.2.5. Tempo estimado de jogo (sprint 5)
 
@@ -184,13 +184,12 @@ Para a concepção do jogo, foram utilizados alguns jogos como referência de jo
 
 ### 3.2.1. Controláveis
 
-*Descreva os personagens controláveis pelo jogador. Mencione nome, objetivos, características, habilidades, diferenciais etc. Utilize figuras (character art, sprite sheets etc.) para ilustrá-los. Caso utilize material de terceiros em licença Creative Commons, não deixe de citar os autores/fontes.* 
-
-*Caso não existam personagens (ex. jogo Tetris), mencione os motivos de não existirem e como o jogador pode interpretar tal fato.*
+Personagens controláveis referem-se aqueles avatares que são comandados pelo jogador através de comandos de movimento, ações, combate, dentre outros. O jogo referido neste documento terá apenas um personagem controlável em jogo, porém o jogador poderá selecionar o sexo do protagonista, ou seja, haverá duas opções: O residente médico protagonista masculino e a residente médica protagonista feminina. Não será possível jogar com mais de um personagem controlável no mesmo jogo. O nome do personagem controlável masculino é X e Y, o nome da protagonista feminina. O avatar controlável será um(a) residente médico(a) especializando-se na área de cirurgia plásticas, especialmente em queimaduras. X ou Y é guiado pela Dra. Cristina durante seu expediente, e possui habilidades para atender os pacientes, consultar livros na Biblioteca para adquirir o conhecimento e responder às perguntas no Laboratório para receber o remédio (fictício) necessário para tratar o cliente.
 
 ### 3.2.2. Non-Playable Characters (NPC)
 
-*\<opcional\> Se existirem coadjuvantes ou vilões, aqui é o local para descrevê-los e ilustrá-los. Utilize listas ou tabelas para organizar esta seção. Caso utilize material de terceiros em licença Creative Commons, não deixe de citar os autores/fontes. Caso não existam NPCs, remova esta seção.*
+
+Personagens não controláveis (NPCs) são avatares os quais o jogador não possui controle direto, portanto não comandam seus movimentos e ações específicas. Em nosso projeto, haverá vários NPCs, dos quais 6 representarão os pacientes a serem atendidos pelo jogador através do personagem principal e a um será a Dra. Cristina, NPC responsável por guiar o jogador sobre o fluxo de jogabilidade e tutoriais em pontos específicos.
 
 ### 3.2.3. Diversidade e Representatividade dos Personagens
 
