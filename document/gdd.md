@@ -97,21 +97,19 @@ A fim de gerenciar os riscos do nosso produto, a equipe construiu os gráficos (
  Esta seção tem como objetivo fornecer uma visão abrangente e detalhada dos requisitos essenciais que orientarão o desenvolvimento do projeto. Aqui, serão delineadas as funcionalidades, características e restrições fundamentais para garantir a compreensão unificada entre a equipe de desenvolvimento e o cliente.
 \# | Requisito do cliente 
 --- | ---
-# Deve ser explicado sobre
-1|Quais são as 3 camadas da pele;
-2|A espessura das camadas da pele;
-3|Os diferentes tipos de queimadura;
-4|Por que uma queimadura profunda não dói.
-# Demais requisitos
-1 |O jogo deve ser compatível com mobile;
-2 |A palheta de cores deve ser da FMUSP e do INTELI;
-3 |Tempo limitado apenas com a intenção de capacitação, experiência única, 15’;
-4 |Jogo tem de atrair o interesse dos alunos;
-5 |Deve ter recompensas, pontuação, recordes;
-6 |Pode ser expandido para fora das escolas;
-7 |O jogo não aborda formas de tratamento;
-8 |Focar na prevenção e no que NÃO fazer;
-9 |Desmistificação de mitos.
+1|Ensinar quais são as 3 camadas da pele;
+2|Falar sobre a espessura das camadas da pele;
+3|Definir os diferentes tipos de queimadura;
+4|Dizer por que uma queimadura profunda não dói;
+5|O jogo deve ser compatível com mobile;
+6|A palheta de cores deve ser da FMUSP e do INTELI;
+7|Tempo limitado apenas com a intenção de capacitação, experiência única, 15’;
+8|Jogo tem de atrair o interesse dos alunos;
+9|Deve ter recompensas, pontuação, recordes;
+10|Pode ser expandido para fora das escolas;
+11|O jogo não aborda formas de tratamento;
+12|Focar na prevenção e no que NÃO fazer;
+13|Desmistificação de mitos.
 
 \# | Requisito do grupo 
 --- | ---
