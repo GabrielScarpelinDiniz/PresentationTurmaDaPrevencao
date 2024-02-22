@@ -314,24 +314,45 @@ Figura 1: detalhe da cena da partida do herói para a missão, usando sua nave
 
 A primeira versão do jogo possui duas cenas, uma de início e uma de jogo. Ambas possuem arte gráfica provisória e foram desenvolvidas com o intuito de serem apresentadas na reunião com o parceiro ao final do Sprint 1.
 
-<p align=center><img src="other\sprint_1_item_4.1_files\figura1.png" alt="Figura 1" width="400"/></p>
+<!-- <p align=center><img src="other\sprint_1_item_4.1_files\figura1.png" alt="Figura 1" width="400"/></p>
 <p align=center style="font-size:1em">Figura 1: Cena de início</p>
 <p align=center><img src="other\sprint_1_item_4.1_files\figura2.png" alt="Figura 2" width="400"/></p>
-<p align=center style="font-size:1em">Figura 2: Cena de jogo</p>
+<p align=center style="font-size:1em">Figura 2: Cena de jogo</p> -->
+
+<p align=center style="font-size:1em">Figura 1: Cenas de jogo</p>
+<p align="middle">
+  <img src="other\sprint_1_item_4.1_files\figura1.png" width="400" />
+  <img src="other\sprint_1_item_4.1_files\figura2.png" width="400" /> 
+</p>
+<p align=center style="font-size:1em">Fonte: Autores</p>
 
 A cena de início é uma artimanha de programação e será transformada futuramente em um arquivo JavaScript separado ao adquirirmos o conhecimento para tal. De momento, criamos duas imagens, um layer a frente das outras, e as removemos por um evento acionado pelo clique do mouse no botão “Jogar”.
-
+<!-- 
 <p align=center><img src="other\sprint_1_item_4.1_files\figura3.png" alt="Figura 3" width="400"/></p>
 <p align=center style="font-size:1em">Figura 3: Fundo da Cena de início</p>
 <p align=center><img src="other\sprint_1_item_4.1_files\figura4.png" alt="Figura 4" width="400"/></p>
-<p align=center style="font-size:1em">Figura 4: Botão de Jogar</p>
+<p align=center style="font-size:1em">Figura 4: Botão de Jogar</p> -->
+
+<p align=center style="font-size:1em">Figura 2: Cena de início</p>
+<p align="middle">
+  <img src="other\sprint_1_item_4.1_files\figura3.png" width="400" />
+  <img src="other\sprint_1_item_4.1_files\figura4.png" width="400" /> 
+</p>
+<p align=center style="font-size:1em">Fonte: Autores</p>
 
 A cena de jogo é composta por duas imagens também, uma simulando o cenário do jogo e outra, o personagem jogável, uma figura de médico. O personagem possui movimento direcional controlado pelas teclas WASD, como será exposto abaixo. Adaptações para os _inputs_ estão listados abaixo.
 
-<p align=center><img src="other\sprint_1_item_4.1_files\figura5.png" alt="Figura 5" width="400"/></p>
+<!-- <p align=center><img src="other\sprint_1_item_4.1_files\figura5.png" alt="Figura 5" width="400"/></p>
 <p align=center style="font-size:1em">Figura 5: Imagem do Cenário</p>
 <p align=center><img src="other\sprint_1_item_4.1_files\figura6.png" alt="Figura 6" width="80"/></p>
-<p align=center style="font-size:1em">Figura 6: Imagem do Personagem</p>
+<p align=center style="font-size:1em">Figura 6: Imagem do Personagem</p> -->
+
+<p align=center style="font-size:1em">Figura 3: Cena de jogo</p>
+<p align="middle">
+  <img src="other\sprint_1_item_4.1_files\figura5.png" width="400" />
+  <img src="other\sprint_1_item_4.1_files\figura6.png" width="100" /> 
+</p>
+<p align=center style="font-size:1em">Fonte: Autores</p>
 
 Para iniciar a explicação do código, dentro do arquivo “cena1.js”, carregamos as imagens na função _“preload”_ e as criamos na função _“create”_, como mostrado a seguir.
 
@@ -448,8 +469,9 @@ var config = {
 - Adicionar lógica de colisão ao personagem para interação com outros objetos ou NPCs;
 - Começar a implementação do quiz ao acessar o laboratório (vide abaixo).
 
+<p align=center style="font-size:1em">Figura 4: Protótipo do Quiz</p>
 <p align=center><img src="other\sprint_1_item_4.1_files\figura7.png" alt="Figura 7" width="400"/></p>
-<p align=center style="font-size:1em">Figura 7: Protótipo do Quiz</p>
+<p align=center style="font-size:1em">Fonte: Autores</p>
 
 ## 4.2. Desenvolvimento básico do jogo (sprint 2)
 
