@@ -97,41 +97,43 @@ A fim de gerenciar os riscos do nosso produto, a equipe construiu os gráficos (
  Esta seção tem como objetivo fornecer uma visão abrangente e detalhada dos requisitos essenciais que orientarão o desenvolvimento do projeto. Aqui, serão delineadas as funcionalidades, características e restrições fundamentais para garantir a compreensão unificada entre a equipe de desenvolvimento e o cliente.
 \# | Requisito do cliente 
 --- | ---
+# Deve ser explicado sobre
 1|Quais são as 3 camadas da pele;
 2|A espessura das camadas da pele;
 3|Os diferentes tipos de queimadura;
-4|Por que uma queimadura profunda não dói; 
-5|O jogo deve ser compatível com mobile;
-6|A palheta de cores deve ser da FMUSP e do INTELI;
-7|Tempo limitado apenas com a intenção de capacitação, experiência única, 15’;
-8|Jogo que atraia o interesse dos alunos;
-9|Deve ter recompensas, pontuação, recordes;
-10|Pode ser expandido para fora das escolas.
-11|O jogo não aborda formas de tratamento
-12|Focar na prevenção e no que NÃO fazer
-13|Desmistificação de mitos
+4|Por que uma queimadura profunda não dói.
+# Demais requisitos
+1 |O jogo deve ser compatível com mobile;
+2 |A palheta de cores deve ser da FMUSP e do INTELI;
+3 |Tempo limitado apenas com a intenção de capacitação, experiência única, 15’;
+4 |Jogo tem de atrair o interesse dos alunos;
+5 |Deve ter recompensas, pontuação, recordes;
+6 |Pode ser expandido para fora das escolas;
+7 |O jogo não aborda formas de tratamento;
+8 |Focar na prevenção e no que NÃO fazer;
+9 |Desmistificação de mitos.
 
 \# | Requisito do grupo 
 --- | ---
-1 | Menu inicial;
-2 | Recepção;
-3 | Sala de espera;
-4 | Laboratório com questionário;
-5 | Biblioteca;
-6 | Pontuação/sistema de recompensa;
-7 | Efeitos sonoros;
-8 | Música de fundo;
-9 | Arte gráfica (provavelmente pixel art.);
-10 | Inputs de movimentação para funcionarem com as setas do teclado e com o touch screen de dispositivos mobile;
-11 | Mudança de cenas;
-12 | Animação;
-13 | Tecla de input para interação com outros objetos ou personagens;
-14 | Quiz no laboratório.
-15 | O jogo deve ser rápido, com um tempo de duração de em média 10 minutos;
-16 | Pode ter a possibilidade de rejogabilidade;
-17 | Deslocamento do médico na direção diagonal tem de ser normalizado;
-18 | Adquirir pontos em forma de conhecimento;
-19 | Ter a logo do HC.
+1 | No jogo deve ser implementado um menu inicial com um botão “inciar”;
+2 |O jogo deve conter uma sala de recepção, sala de espera para os pacientes, farmácia com questionário e uma biblioteca com livros para se adquirir conhecimento;
+3 |deve ser adicionado ao jogo um sistema de recompensa tendo como base o tempo de atendimento, os acertos no questionário e a satisfação do cliente;
+4 |adicionar efeitos sonoros, música de fundo por meio do framework phaser; 
+5 | deve ter animações que serão feitas com spritesheet;
+6 |irá conter uma arte gráfica pixelada, feita com auxílio do piskel;
+7 |Inputs de movimentação com o touch screen de dispositivos mobile
+8 |implementação de movimento vetorial para normalização de velocidade;
+9 |programar mudança de cenas para ter um código funcional do menu;
+10 |adicionar animações ao personagem com spritesheet;
+11 |adicionar tecla de input para interação com outros objetos ou personagens;
+12 |fazer quiz no laboratório com mudança de cenas;
+13 |o jogo deve ser rápido, com um tempo de duração de em média 10 minutos;
+14 |terá possibilidade de rejogabilidade;
+15 |adquirir pontos em forma de conhecimento e remédio com estilo mágico para não passar a impressão de ser um remédio verdadeiro;
+16 |ter a logo do Hospital das Clínicas, entre outras referências;
+17 |ter uma grande sala com foco no personagem, utilizando dinâmica de câmeras;
+18 |caixa de diálogo com NPC para instruir o personagem principal sobre quais serão seus próximos passos.
+
 
 ## 1.3. Público-alvo do Projeto (sprint 2)
 
