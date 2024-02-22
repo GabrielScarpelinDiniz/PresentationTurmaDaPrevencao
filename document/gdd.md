@@ -210,6 +210,18 @@ Considerando as personagens do game, analise se estas estão alinhadas ao públi
 
 *Descreva o ambiente do jogo, em que locais ele ocorre. Ilustre com imagens. Se houverem mapas, posicione-os aqui, descrevendo as áreas em acordo com o enredo. Se houverem fases, descreva-as também em acordo com o enredo (pode ser um jogo de uma fase só). Utilize listas ou tabelas para organizar esta seção. Caso utilize material de terceiros em licença Creative Commons, não deixe de citar os autores/fontes.*
 
+O jogo se passa em um fase única e cíclica composta pelos seguintes ambientes:
+
+Sala de Triagem: Onde os pacientes chegam ao hospital e são inicialmente avaliados pelo jogador, que no papel do médico residente, avalia a gravidade das queimaduras dos pacientes. 
+
+Consultório: Após a triagem, o paciente se desloca para o consultório, onde aguarda o médico voltar com seu tratamento.
+
+Biblioteca: Um ambiente onde o jogador pode acessar informações sobre prevenção de queimaduras e procedimentos de primeiros socorros de acordo com o paciente que está atendendo.
+
+Laboratório: Onde o jogador aplica os conhecimentos adquiridos para que consiga o remédio (representativo) correto para que consiga tratar o paciente.
+
+<img src="./other/mapa.jpeg">
+
 ### 3.3.2. Navegação pelo mundo (sprints 2 e 3)
 
 *Descreva como os personagens se movem no mundo criado e as relações entre as locações – como as áreas/fases são acessadas ou desbloqueadas, o que é necessário para serem acessadas etc. Utilize listas ou tabelas para organizar esta seção.*
