@@ -141,26 +141,37 @@ A fim de gerenciar os riscos do nosso produto, a equipe construiu os gráficos (
 
 ## 2.1. Objetivos do Jogo (sprint 2)
 
-Atender o máximo de pacientes em um tempo determinado passando por um ciclo de estudo e prática.
+O objetivo de um jogo geralmente é a meta que os jogadores devem alcançar para vencer ou progredir. Pode envolver completar tarefas específicas, resolver quebra-cabeças, derrotar inimigos, acumular pontos, entre outros desafios.
+
+Para o nosso jogo, o objetivo é atender o máximo de pacientes em um tempo determinado passando por um ciclo de estudo e prática. Isso implica que os jogadores devem equilibrar eficiência no atendimento com aprimoramento de habilidades através da aprendizagem.
 
 ## 2.2. Características do Jogo (sprint 2)
 
 ### 2.2.1. Gênero do Jogo (sprint 2)
 
-O jogo simula a atuação de um médico na triagem dos pacientes, portanto seu gênero é simulação.  
+O gênero se refere à classificação ou categoria que descreve o estilo e a mecânica de jogo predominantes. Cada gênero tem características específicas que definem como os jogadores interagem com o jogo e o que podem esperar dele em termos de jogabilidade, narrativa e objetivos.
+
+O nosso jogo simula a atuação de um médico na triagem dos pacientes, portanto seu gênero é simulação. Como tal, o jogo oferece uma experiência imersiva e educativa, onde os jogadores podem aprender sobre prevenção de queimaduras e sobre o que deve-se ou não fazer logo após se queimar.
 
 ### 2.2.2. Plataforma do Jogo (sprint 2)
 
-Dispositivos: Smartphones e Tablets.
-Sistema: Web.
+A plataforma de um jogo se refere ao ambiente ou sistema no qual o jogo é executado. Isso inclui dispositivos como computadores, consoles de videogame, smartphones, tablets, entre outros, e também o sistema operacional ou plataforma online que suporta a execução do jogo.
+
+O jogo será desenvolvido para dispositivos móveis, como smartphones e tablets, e oferecerá uma experiência acessível e portátil. A interface será otimizada para telas sensíveis ao toque, permitindo aos jogadores interagirem intuitivamente com os elementos do jogo. Além disso, a natureza móvel desses dispositivos permitirá que os jogadores acessem o jogo em qualquer lugar, tornando-o conveniente para ser usado na educação.
+
+A aplicação também poderá ser acessado via web, oferecendo flexibilidade adicional aos jogadores, que poderão jogar diretamente de seus navegadores sem a necessidade de downloads adicionais. Isso tornará o jogo acessível a uma ampla gama de dispositivos, garantindo que mais pessoas possam participar e aprender sobre a importância da prevenção de queimaduras.
 
 ### 2.2.3. Número de jogadores (sprint 2)
 
-1 jogador.
+O número de jogadores de um jogo refere-se à quantidade de participantes que podem jogar simultaneamente ou de forma sequencial. Esse aspecto é fundamental na definição da dinâmica do jogo, determinando se é um jogo para um único jogador, para dois jogadores, ou para múltiplos jogadores. O número de jogadores pode influenciar elementos como competição, colaboração, estratégia e interação social dentro do jogo.
+
+No contexto do nosso jogo sobre prevenção de queimaduras, a opção de um jogador oferecerá uma experiência individualizada e centrada no aprendizado. Isso permitirá um foco maior na absorção de informações e na prática de habilidades específicas, como identificar riscos de queimaduras e tomar decisões preventivas adequadas. Além disso, jogar sozinho pode facilitar a personalização da experiência de acordo com o ritmo e as necessidades individuais do jogador.
 
 ### 2.2.4. Títulos semelhantes e inspirações (sprint 2)
 
-Para a concepção do jogo, foram utilizados alguns jogos como referência de jogabilidade e design:
+Títulos semelhantes e inspirações de um jogo referem-se a outros jogos que compartilham características, temas, mecânicas de jogo ou atmosfera semelhantes com o jogo que está sendo desenvolvido. Ao analisar títulos semelhantes, podemos identificar elementos que foram bem-sucedidos em outros jogos e incorporá-los ao nosso próprio projeto. Já as inspirações nos forneceram uma fonte de criatividade e direção para o desenvolvimento do jogo.
+
+Para a concepção do jogo, foram utilizados os seguites jogos como referência de jogabilidade e design:
 
 * [Overcooked](https://www.team17.com/games/overcooked/)<br>
 * [Hospital Questiona](https://metodoquestiona.com.br/)<br>
