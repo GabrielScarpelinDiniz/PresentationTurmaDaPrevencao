@@ -5,13 +5,13 @@
 
 ## Tilápia
 
-#### Rodrigo Natan Erlich
-#### Pietra Pasqualini Batista
-#### Gabriel Scarpelin Diniz
 #### Gabriel Henrique Martins Alves
+#### Gabriel Scarpelin Diniz
 #### Isabelly Maia Montalvão
 #### Leonardo Casal Andriolo
 #### Matheus Jorge Rosa
+#### Pietra Pasqualini Batista
+#### Rodrigo Natan Erlich
 
 
 ## Sumário
@@ -97,41 +97,41 @@ A fim de gerenciar os riscos do nosso produto, a equipe construiu os gráficos (
  Esta seção tem como objetivo fornecer uma visão abrangente e detalhada dos requisitos essenciais que orientarão o desenvolvimento do projeto. Aqui, serão delineadas as funcionalidades, características e restrições fundamentais para garantir a compreensão unificada entre a equipe de desenvolvimento e o cliente.
 \# | Requisito do cliente 
 --- | ---
-1|Quais são as 3 camadas da pele;
-2|A espessura das camadas da pele;
-3|Os diferentes tipos de queimadura;
-4|Por que uma queimadura profunda não dói; 
+1|Ensinar quais são as 3 camadas da pele;
+2|Falar sobre a espessura das camadas da pele;
+3|Definir os diferentes tipos de queimadura;
+4|Dizer por que uma queimadura profunda não dói;
 5|O jogo deve ser compatível com mobile;
 6|A palheta de cores deve ser da FMUSP e do INTELI;
 7|Tempo limitado apenas com a intenção de capacitação, experiência única, 15’;
-8|Jogo que atraia o interesse dos alunos;
+8|Jogo tem de atrair o interesse dos alunos;
 9|Deve ter recompensas, pontuação, recordes;
-10|Pode ser expandido para fora das escolas.
-11|O jogo não aborda formas de tratamento
-12|Focar na prevenção e no que NÃO fazer
-13|Desmistificação de mitos
+10|Pode ser expandido para fora das escolas;
+11|O jogo não aborda formas de tratamento;
+12|Focar na prevenção e no que NÃO fazer;
+13|Desmistificação de mitos.
 
 \# | Requisito do grupo 
 --- | ---
-1 | Menu inicial;
-2 | Recepção;
-3 | Sala de espera;
-4 | Laboratório com questionário;
-5 | Biblioteca;
-6 | Pontuação/sistema de recompensa;
-7 | Efeitos sonoros;
-8 | Música de fundo;
-9 | Arte gráfica (provavelmente pixel art.);
-10 | Inputs de movimentação para funcionarem com as setas do teclado e com o touch screen de dispositivos mobile;
-11 | Mudança de cenas;
-12 | Animação;
-13 | Tecla de input para interação com outros objetos ou personagens;
-14 | Quiz no laboratório.
-15 | O jogo deve ser rápido, com um tempo de duração de em média 10 minutos;
-16 | Pode ter a possibilidade de rejogabilidade;
-17 | Deslocamento do médico na direção diagonal tem de ser normalizado;
-18 | Adquirir pontos em forma de conhecimento;
-19 | Ter a logo do HC.
+1 | No jogo deve ser implementado um menu inicial com um botão “inciar”;
+2 |O jogo deve conter uma sala de recepção, sala de espera para os pacientes, farmácia com questionário e uma biblioteca com livros para se adquirir conhecimento;
+3 |Deve ser adicionado ao jogo um sistema de recompensa tendo como base o tempo de atendimento, os acertos no questionário e a satisfação do cliente;
+4 |Adicionar efeitos sonoros, música de fundo por meio do framework phaser; 
+5 | deve ter animações que serão feitas com spritesheet;
+6 |Irá conter uma arte gráfica pixelada, feita com auxílio do piskel;
+7 |Inputs de movimentação com o touch screen de dispositivos mobile
+8 |Implementação de movimento vetorial para normalização de velocidade;
+9 |Programar mudança de cenas para ter um código funcional do menu;
+10 |Adicionar animações ao personagem com spritesheet;
+11 |Adicionar tecla de input para interação com outros objetos ou personagens;
+12 |Fazer quiz no laboratório com mudança de cenas;
+13 |O jogo deve ser rápido, com um tempo de duração de em média 10 minutos;
+14 |Terá possibilidade de rejogabilidade;
+15 |Adquirir pontos em forma de conhecimento e remédio com estilo mágico para não passar a impressão de ser um remédio verdadeiro;
+16 |Ter a logo do Hospital das Clínicas, entre outras referências;
+17 |Ter uma grande sala com foco no personagem, utilizando dinâmica de câmeras;
+18 |Caixa de diálogo com NPC para instruir o personagem principal sobre quais serão seus próximos passos.
+
 
 ## 1.3. Público-alvo do Projeto (sprint 2)
 
@@ -141,27 +141,41 @@ O nosso jogo é pensado e destinado a adolescentes e jovens adultos que fazem pa
 
 ## 2.1. Objetivos do Jogo (sprint 2)
 
-*Descreva o que o jogador deve cumprir para avançar ou concluir o jogo*
+O objetivo de um jogo geralmente é a meta que os jogadores devem alcançar para vencer ou progredir. Pode envolver completar tarefas específicas, resolver quebra-cabeças, derrotar inimigos, acumular pontos, entre outros desafios.
+
+Para o nosso jogo, o objetivo é atender o máximo de pacientes em um tempo determinado passando por um ciclo de estudo e prática. Isso implica que os jogadores devem equilibrar eficiência no atendimento com aprimoramento de habilidades através da aprendizagem.
 
 ## 2.2. Características do Jogo (sprint 2)
 
 ### 2.2.1. Gênero do Jogo (sprint 2)
 
-*simulação, RPG, corrida, estratégia, esportes, ação, aventura etc.*  
+O gênero se refere à classificação ou categoria que descreve o estilo e a mecânica de jogo predominantes. Cada gênero tem características específicas que definem como os jogadores interagem com o jogo e o que podem esperar dele em termos de jogabilidade, narrativa e objetivos.
+
+O nosso jogo simula a atuação de um médico na triagem dos pacientes, portanto seu gênero é simulação. Como tal, o jogo oferece uma experiência imersiva e educativa, onde os jogadores podem aprender sobre prevenção de queimaduras e sobre o que deve-se ou não fazer logo após se queimar.
 
 ### 2.2.2. Plataforma do Jogo (sprint 2)
 
-*quanto ao dispositivo: desktop, smartphones, tablets, TV etc.*
+A plataforma de um jogo se refere ao ambiente ou sistema no qual o jogo é executado. Isso inclui dispositivos como computadores, consoles de videogame, smartphones, tablets, entre outros, e também o sistema operacional ou plataforma online que suporta a execução do jogo.
 
-*quanto ao sistema: Web, Windows, MacOS, Android, IOS etc.*
+O jogo será desenvolvido para dispositivos móveis, como smartphones e tablets, e oferecerá uma experiência acessível e portátil. A interface será otimizada para telas sensíveis ao toque, permitindo aos jogadores interagirem intuitivamente com os elementos do jogo. Além disso, a natureza móvel desses dispositivos permitirá que os jogadores acessem o jogo em qualquer lugar, tornando-o conveniente para ser usado na educação.
+
+A aplicação também poderá ser acessado via web, oferecendo flexibilidade adicional aos jogadores, que poderão jogar diretamente de seus navegadores sem a necessidade de downloads adicionais. Isso tornará o jogo acessível a uma ampla gama de dispositivos, garantindo que mais pessoas possam participar e aprender sobre a importância da prevenção de queimaduras.
 
 ### 2.2.3. Número de jogadores (sprint 2)
 
-*1 jogador, 2 jogadores versus, 2 jogadores cooperação, multiplayer etc.*
+O número de jogadores de um jogo refere-se à quantidade de participantes que podem jogar simultaneamente ou de forma sequencial. Esse aspecto é fundamental na definição da dinâmica do jogo, determinando se é um jogo para um único jogador, para dois jogadores, ou para múltiplos jogadores. O número de jogadores pode influenciar elementos como competição, colaboração, estratégia e interação social dentro do jogo.
+
+No contexto do nosso jogo sobre prevenção de queimaduras, a opção de um jogador oferecerá uma experiência individualizada e centrada no aprendizado. Isso permitirá um foco maior na absorção de informações e na prática de habilidades específicas, como identificar riscos de queimaduras e tomar decisões preventivas adequadas. Além disso, jogar sozinho pode facilitar a personalização da experiência de acordo com o ritmo e as necessidades individuais do jogador.
 
 ### 2.2.4. Títulos semelhantes e inspirações (sprint 2)
 
-*Liste e descreva títulos semelhantes e jogos que inspiram e são usados como referência do projeto*
+Títulos semelhantes e inspirações de um jogo referem-se a outros jogos que compartilham características, temas, mecânicas de jogo ou atmosfera semelhantes com o jogo que está sendo desenvolvido. Ao analisar títulos semelhantes, podemos identificar elementos que foram bem-sucedidos em outros jogos e incorporá-los ao nosso próprio projeto. Já as inspirações nos forneceram uma fonte de criatividade e direção para o desenvolvimento do jogo.
+
+Para a concepção do jogo, foram utilizados os seguites jogos como referência de jogabilidade e design:
+
+* [Overcooked](https://www.team17.com/games/overcooked/)<br>
+* [Hospital Questiona](https://metodoquestiona.com.br/)<br>
+* [Stardew Valley](https://www.stardewvalley.net/)<br>
 
 ### 2.2.5. Tempo estimado de jogo (sprint 5)
 
@@ -177,17 +191,25 @@ O nosso jogo é pensado e destinado a adolescentes e jovens adultos que fazem pa
 
 *Caso seu jogo não possua enredo/história (ex. jogo Tetris), mencione os motivos de não existir e como o jogador pode se contextualizar com o ambiente do jogo.*
 
+O jogador encarna o papel de Residente, um jovem médico recentemente formado, prestes a iniciar sua jornada no desafiador mundo da medicina. Ao ingressar na equipe do pronto-socorro de queimaduras, ele é guiado pela experiente Dra. Tina, uma figura respeitada no campo da medicina de emergência.
+
+Inicialmente, o Residente é confrontado com situações desafiadoras e momentos de incerteza, onde sua inexperiência se manifesta de maneira evidente. No entanto, à medida que ele se envolve em diagnósticos, tratamentos de emergência e tomadas de decisão rápidas, ele começa a perceber que sua verdadeira jornada como médico está apenas começando.
+
+Ao longo do jogo, o Residente é confrontado com uma série de desafios que testam suas habilidades técnicas, sua eficiência e sua ética . Ele se encontra diante de pacientes cujas vidas dependem de suas decisões, exigindo coragem e determinação para superar obstáculos e salvar vidas.
+
+À medida que o Residente avança em sua jornada, ele não apenas ganha confiança em suas habilidades clínicas, mas também cresce como profissional. Ele aprende lições importantes sobre a prevenção de queimaduras e o domínio sobre os procedimentos de primeiros socorros.
+
+
 ## 3.2. Personagens (sprints 2 e 3)
 
 ### 3.2.1. Controláveis
 
-*Descreva os personagens controláveis pelo jogador. Mencione nome, objetivos, características, habilidades, diferenciais etc. Utilize figuras (character art, sprite sheets etc.) para ilustrá-los. Caso utilize material de terceiros em licença Creative Commons, não deixe de citar os autores/fontes.* 
-
-*Caso não existam personagens (ex. jogo Tetris), mencione os motivos de não existirem e como o jogador pode interpretar tal fato.*
+Personagens controláveis referem-se aqueles avatares que são comandados pelo jogador através de comandos de movimento, ações, combate, dentre outros. O jogo referido neste documento terá apenas um personagem controlável em jogo, porém o jogador poderá selecionar o sexo do protagonista, ou seja, haverá duas opções: O residente médico protagonista masculino e a residente médica protagonista feminina. Não será possível jogar com mais de um personagem controlável no mesmo jogo. O nome do personagem controlável masculino é X e Y, o nome da protagonista feminina. O avatar controlável será um(a) residente médico(a) especializando-se na área de cirurgia plásticas, especialmente em queimaduras. X ou Y é guiado pela Dra. Cristina durante seu expediente, e possui habilidades para atender os pacientes, consultar livros na Biblioteca para adquirir o conhecimento e responder às perguntas no Laboratório para receber o remédio (fictício) necessário para tratar o cliente.
 
 ### 3.2.2. Non-Playable Characters (NPC)
 
-*\<opcional\> Se existirem coadjuvantes ou vilões, aqui é o local para descrevê-los e ilustrá-los. Utilize listas ou tabelas para organizar esta seção. Caso utilize material de terceiros em licença Creative Commons, não deixe de citar os autores/fontes. Caso não existam NPCs, remova esta seção.*
+
+Personagens não controláveis (NPCs) são avatares os quais o jogador não possui controle direto, portanto não comandam seus movimentos e ações específicas. Em nosso projeto, haverá vários NPCs, dos quais 6 representarão os pacientes a serem atendidos pelo jogador através do personagem principal e a um será a Dra. Cristina, NPC responsável por guiar o jogador sobre o fluxo de jogabilidade e tutoriais em pontos específicos.
 
 ### 3.2.3. Diversidade e Representatividade dos Personagens
 
@@ -199,9 +221,34 @@ Considerando as personagens do game, analise se estas estão alinhadas ao públi
 
 *Descreva o ambiente do jogo, em que locais ele ocorre. Ilustre com imagens. Se houverem mapas, posicione-os aqui, descrevendo as áreas em acordo com o enredo. Se houverem fases, descreva-as também em acordo com o enredo (pode ser um jogo de uma fase só). Utilize listas ou tabelas para organizar esta seção. Caso utilize material de terceiros em licença Creative Commons, não deixe de citar os autores/fontes.*
 
+O jogo se passa em um fase única e cíclica composta pelos seguintes ambientes:
+
+Sala de Triagem: Onde os pacientes chegam ao hospital e são inicialmente avaliados pelo jogador, que no papel do médico residente, avalia a gravidade das queimaduras dos pacientes. 
+
+Consultório: Após a triagem, o paciente se desloca para o consultório, onde aguarda o médico voltar com seu tratamento.
+
+Biblioteca: Um ambiente onde o jogador pode acessar informações sobre prevenção de queimaduras e procedimentos de primeiros socorros de acordo com o paciente que está atendendo.
+
+Laboratório: Onde o jogador aplica os conhecimentos adquiridos para que consiga o remédio (representativo) correto para que consiga tratar o paciente.
+
+<img src="./other/mapa.jpeg">
+
 ### 3.3.2. Navegação pelo mundo (sprints 2 e 3)
 
 *Descreva como os personagens se movem no mundo criado e as relações entre as locações – como as áreas/fases são acessadas ou desbloqueadas, o que é necessário para serem acessadas etc. Utilize listas ou tabelas para organizar esta seção.*
+
+O jogador controla o médico residente, utilizando controles direcionais de dispositivos móveis tocando na tela e arrastando o dedo na direção desejada, possibilitando a movimentação de uma área para outra dentro dos limites do hospital e interagindo com possíveis objetos e pacientes por meio de uma colisão.
+
+No jogo, o acesso às diferentes salas e ambientes é automático e não requer desbloqueio. No entanto, para interagir com objetos e pacientes e acessar certas funcionalidades, existem condições específicas a serem cumpridas.
+
+Na sala de triagem, o jogador pode se mover livremente e deve se aproximar de um paciente para visualizar e avaliar seu prontuário. Após a avaliação, o paciente é transferido automaticamente para o consultório.
+
+A Biblioteca está disponível para o Residente a qualquer momento. Para acessar as informações, basta colidir com uma estante. O conteúdo da Biblioteca permanece o mesmo, independente do paciente sendo atendido.
+
+No laboratório, o Residente deve colidir com um objeto para iniciar um jogo de perguntas. As perguntas variam de acordo com o histórico do paciente, tornando essa funcionalidade disponível apenas após a triagem. Ao responder corretamente, o jogador recebe uma pílula de tratamento.
+
+O Residente retorna ao consultório, onde o paciente o espera, para administrar o tratamento após identificar a medicação correta. Esse procedimento só é possível se o médico tiver triado o paciente corretamente e recebido a medicação após o quiz.
+
 
 ### 3.3.3. Condições climáticas e temporais (sprints 2 e 3)
 
@@ -278,24 +325,45 @@ Figura 1: detalhe da cena da partida do herói para a missão, usando sua nave
 
 A primeira versão do jogo possui duas cenas, uma de início e uma de jogo. Ambas possuem arte gráfica provisória e foram desenvolvidas com o intuito de serem apresentadas na reunião com o parceiro ao final do Sprint 1.
 
-<p align=center><img src="other\sprint_1_item_4.1_files\figura1.png" alt="Figura 1" width="400"/></p>
+<!-- <p align=center><img src="other\sprint_1_item_4.1_files\figura1.png" alt="Figura 1" width="400"/></p>
 <p align=center style="font-size:1em">Figura 1: Cena de início</p>
 <p align=center><img src="other\sprint_1_item_4.1_files\figura2.png" alt="Figura 2" width="400"/></p>
-<p align=center style="font-size:1em">Figura 2: Cena de jogo</p>
+<p align=center style="font-size:1em">Figura 2: Cena de jogo</p> -->
+
+<p align=center style="font-size:1em">Figura 1: Cenas de jogo</p>
+<p align="middle">
+  <img src="other\sprint_1_item_4.1_files\figura1.png" width="400" />
+  <img src="other\sprint_1_item_4.1_files\figura2.png" width="400" /> 
+</p>
+<p align=center style="font-size:1em">Fonte: Autores</p>
 
 A cena de início é uma artimanha de programação e será transformada futuramente em um arquivo JavaScript separado ao adquirirmos o conhecimento para tal. De momento, criamos duas imagens, um layer a frente das outras, e as removemos por um evento acionado pelo clique do mouse no botão “Jogar”.
-
+<!-- 
 <p align=center><img src="other\sprint_1_item_4.1_files\figura3.png" alt="Figura 3" width="400"/></p>
 <p align=center style="font-size:1em">Figura 3: Fundo da Cena de início</p>
 <p align=center><img src="other\sprint_1_item_4.1_files\figura4.png" alt="Figura 4" width="400"/></p>
-<p align=center style="font-size:1em">Figura 4: Botão de Jogar</p>
+<p align=center style="font-size:1em">Figura 4: Botão de Jogar</p> -->
+
+<p align=center style="font-size:1em">Figura 2: Cena de início</p>
+<p align="middle">
+  <img src="other\sprint_1_item_4.1_files\figura3.png" width="400" />
+  <img src="other\sprint_1_item_4.1_files\figura4.png" width="400" /> 
+</p>
+<p align=center style="font-size:1em">Fonte: Autores</p>
 
 A cena de jogo é composta por duas imagens também, uma simulando o cenário do jogo e outra, o personagem jogável, uma figura de médico. O personagem possui movimento direcional controlado pelas teclas WASD, como será exposto abaixo. Adaptações para os _inputs_ estão listados abaixo.
 
-<p align=center><img src="other\sprint_1_item_4.1_files\figura5.png" alt="Figura 5" width="400"/></p>
+<!-- <p align=center><img src="other\sprint_1_item_4.1_files\figura5.png" alt="Figura 5" width="400"/></p>
 <p align=center style="font-size:1em">Figura 5: Imagem do Cenário</p>
 <p align=center><img src="other\sprint_1_item_4.1_files\figura6.png" alt="Figura 6" width="80"/></p>
-<p align=center style="font-size:1em">Figura 6: Imagem do Personagem</p>
+<p align=center style="font-size:1em">Figura 6: Imagem do Personagem</p> -->
+
+<p align=center style="font-size:1em">Figura 3: Cena de jogo</p>
+<p align="middle">
+  <img src="other\sprint_1_item_4.1_files\figura5.png" width="400" />
+  <img src="other\sprint_1_item_4.1_files\figura6.png" width="100" /> 
+</p>
+<p align=center style="font-size:1em">Fonte: Autores</p>
 
 Para iniciar a explicação do código, dentro do arquivo “cena1.js”, carregamos as imagens na função _“preload”_ e as criamos na função _“create”_, como mostrado a seguir.
 
@@ -412,8 +480,9 @@ var config = {
 - Adicionar lógica de colisão ao personagem para interação com outros objetos ou NPCs;
 - Começar a implementação do quiz ao acessar o laboratório (vide abaixo).
 
+<p align=center style="font-size:1em">Figura 4: Protótipo do Quiz</p>
 <p align=center><img src="other\sprint_1_item_4.1_files\figura7.png" alt="Figura 7" width="400"/></p>
-<p align=center style="font-size:1em">Figura 7: Protótipo do Quiz</p>
+<p align=center style="font-size:1em">Fonte: Autores</p>
 
 ## 4.2. Desenvolvimento básico do jogo (sprint 2)
 
