@@ -115,22 +115,22 @@ A fim de gerenciar os riscos do nosso produto, a equipe construiu os gráficos (
 --- | ---
 1 | No jogo deve ser implementado um menu inicial com um botão “inciar”;
 2 |O jogo deve conter uma sala de recepção, sala de espera para os pacientes, farmácia com questionário e uma biblioteca com livros para se adquirir conhecimento;
-3 |deve ser adicionado ao jogo um sistema de recompensa tendo como base o tempo de atendimento, os acertos no questionário e a satisfação do cliente;
-4 |adicionar efeitos sonoros, música de fundo por meio do framework phaser; 
+3 |Deve ser adicionado ao jogo um sistema de recompensa tendo como base o tempo de atendimento, os acertos no questionário e a satisfação do cliente;
+4 |Adicionar efeitos sonoros, música de fundo por meio do framework phaser; 
 5 | deve ter animações que serão feitas com spritesheet;
-6 |irá conter uma arte gráfica pixelada, feita com auxílio do piskel;
+6 |Irá conter uma arte gráfica pixelada, feita com auxílio do piskel;
 7 |Inputs de movimentação com o touch screen de dispositivos mobile
-8 |implementação de movimento vetorial para normalização de velocidade;
-9 |programar mudança de cenas para ter um código funcional do menu;
-10 |adicionar animações ao personagem com spritesheet;
-11 |adicionar tecla de input para interação com outros objetos ou personagens;
-12 |fazer quiz no laboratório com mudança de cenas;
-13 |o jogo deve ser rápido, com um tempo de duração de em média 10 minutos;
-14 |terá possibilidade de rejogabilidade;
-15 |adquirir pontos em forma de conhecimento e remédio com estilo mágico para não passar a impressão de ser um remédio verdadeiro;
-16 |ter a logo do Hospital das Clínicas, entre outras referências;
-17 |ter uma grande sala com foco no personagem, utilizando dinâmica de câmeras;
-18 |caixa de diálogo com NPC para instruir o personagem principal sobre quais serão seus próximos passos.
+8 |Implementação de movimento vetorial para normalização de velocidade;
+9 |Programar mudança de cenas para ter um código funcional do menu;
+10 |Adicionar animações ao personagem com spritesheet;
+11 |Adicionar tecla de input para interação com outros objetos ou personagens;
+12 |Fazer quiz no laboratório com mudança de cenas;
+13 |O jogo deve ser rápido, com um tempo de duração de em média 10 minutos;
+14 |Terá possibilidade de rejogabilidade;
+15 |Adquirir pontos em forma de conhecimento e remédio com estilo mágico para não passar a impressão de ser um remédio verdadeiro;
+16 |Ter a logo do Hospital das Clínicas, entre outras referências;
+17 |Ter uma grande sala com foco no personagem, utilizando dinâmica de câmeras;
+18 |Caixa de diálogo com NPC para instruir o personagem principal sobre quais serão seus próximos passos.
 
 
 ## 1.3. Público-alvo do Projeto (sprint 2)
