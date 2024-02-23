@@ -135,7 +135,7 @@ A fim de gerenciar os riscos do nosso produto, a equipe construiu os gráficos (
 
 ## 1.3. Público-alvo do Projeto (sprint 2)
 
-*Posicione aqui uma descrição justificada do público-alvo do jogo, em termos demográficos e de preferências/gostos pessoais.*
+O nosso jogo é pensado e destinado a adolescentes e jovens adultos que fazem parte de comunidades e regiões carentes com acesso limitado à educação, visto que o objetivo principal do projeto é a conscientização e 90% dos incidentes envolvendo queimaduras são reportados em locais onde a população é leiga. O enfoque em jovens facilita a assimilação de informações e a capacitação da população em curto e longo prazo. 
 
 # <a name="c2"></a>2. Visão Geral do Jogo (sprint 2)
 
