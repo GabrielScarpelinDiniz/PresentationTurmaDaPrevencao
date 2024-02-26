@@ -1,8 +1,12 @@
 // Cria as configurações para Phaser.Game
+const gameDimensions = {
+    width: 1334,
+    height: 725
+}
 var config = {
     type: Phaser.AUTO,      // Ajusta o renderizador automaticamente (WebGL e Canvas)
-    width: 1334,            // Ajusta a largura para 1334 pixels (temporário)
-    height: 725,            // Ajusta a altura
+    width: gameDimensions.width,            // Ajusta a largura para 1334 pixels (temporário)
+    height: gameDimensions.height,            // Ajusta a altura
     scale: {
         mode: Phaser.Scale.FIT, // Ajusta a tela para mobile
     },
@@ -15,16 +19,21 @@ var config = {
 
 // Cria o jogo passando a variável config como atributos
 var game = new Phaser.Game(config);
+let joystick;
+
 
 function preload() {
     // Carregamento de imagens
+    this.load.plugin('rexvirtualjoystickplugin', 'https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/master/dist/rexvirtualjoystickplugin.min.js', true);
     this.load.image('cenaHospital', 'assets/cenaHospital.png'); // Fundo da cena do Hospital
     this.load.image('cenaMainMenu', 'assets/cenaMainMenu.png'); // Fundo da cena do Main Menu
     this.load.image('botaoJogar', 'assets/botaoJogar.png');     // Imagem para botaoJogar
     this.load.image('medico', 'assets/medico.png');             // Imagem para medico
+
     }
 
 function create () {
+    
     // Carrega a cena Main Menu
     mainMenu = this.add.image(667, 362, 'cenaMainMenu').setDepth(2).setScale(1.005);    // setDepth -> Muda profundidade para frente
     botaoJogar = this.add.image(830, 575, 'botaoJogar').setInteractive().setDepth(2);
@@ -58,6 +67,14 @@ function create () {
 
     // Adiciona um touch input a mais (para adaptação mobile de multitouch)
     this.input.addPointer(1);
+    joystick = this.plugins.get('rexvirtualjoystickplugin').add({ preload, create, update}, {
+        x: 200,
+        y: gameDimensions.height - 150,
+        radius: 100,
+        base: this.add.circle(0, 0, 100, 0xff0000),
+        thumb: this.add.circle(0, 0, 50, 0xcccccc)
+    })
+    this.cursorKeys = joystick.createCursorKeys();
     }
 
 function update () {
@@ -83,18 +100,18 @@ function update () {
     // console.log("medico.x: "+medico.x)
 
     // Mapeamento de Inputs (Normalizar o movimento diagonal futuramente)
-    if (keyA.isDown) {
+    if (keyA.isDown || this.cursorKeys.left.isDown) {
         medico.x -= pixelMove;
         medico.setFlip(true, false); // Ajusta orientação do personagem
     }
-    if (keyD.isDown) {
+    if (keyD.isDown || this.cursorKeys.right.isDown) {
         medico.x += pixelMove;
         medico.setFlip(false, false); // Ajusta orientação do personagem
     }   
-    if (keyS.isDown) {
+    if (keyS.isDown || this.cursorKeys.down.isDown) {
         medico.y += pixelMove;
     } 
-    if (keyW.isDown) {
+    if (keyW.isDown || this.cursorKeys.up.isDown) {
         medico.y -= pixelMove;
     }
 
