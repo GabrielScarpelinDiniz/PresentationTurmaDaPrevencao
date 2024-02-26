@@ -12,8 +12,8 @@ class CenaHospital extends Phaser.Scene {
     );
     this.load.image("cenaHospital", "assets/cenaHospital.png"); // Fundo da cena do Hospital
     this.load.image("medico", "assets/medico.png"); // Imagem para medico
-    this.load.image('parede', 'assets/tilemaps/parede.png');
-    this.load.tilemapTiledJSON('mapa', 'assets/tilemaps/main_map.json');
+    this.load.image('parede', 'assets/tilemaps/parede.png'); // Paredes do Mapa
+    this.load.tilemapTiledJSON('mapa', 'assets/tilemaps/main_map.json'); 
     }
 
   create() {
@@ -23,7 +23,9 @@ class CenaHospital extends Phaser.Scene {
     const tileset = map.addTilesetImage("parede", 'parede');
 
     const layer = map.createLayer("Walls", tileset, 0, 0);
+
     // this.add.image(667, 362, "cenaHospital"); // Cria e posiciona o Fundo
+    
     this.medico = this.add.image(400, 300, "medico"); // Cria e posiciona o Medico
     this.medico.setFlip(true, false); // Ajusta a orientação do Medico
 
