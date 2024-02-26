@@ -29,7 +29,7 @@ class CenaHospital extends Phaser.Scene {
     // Adiciona um touch input a mais (para adaptação mobile de multitouch)
     this.input.addPointer(1);
     this.joystick = this.plugins.get("rexvirtualjoystickplugin").add(
-      { preload, create, update },
+      CenaHospital,
       {
         x: 200,
         y: gameDimensions.height - 150,
@@ -38,7 +38,7 @@ class CenaHospital extends Phaser.Scene {
         thumb: this.add.circle(0, 0, 50, 0xcccccc),
       }
     );
-    this.cursorKeys = joystick.createCursorKeys();
+    this.cursorKeys = this.joystick.createCursorKeys();
   }
 
   update() {
