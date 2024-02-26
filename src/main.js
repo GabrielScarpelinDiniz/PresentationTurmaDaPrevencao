@@ -1,5 +1,4 @@
-import MenuPrincipal from "./scenes/menu";
-import CenaHospital from "./scenes/hospital";
+
 // Cria as configurações para Phaser.Game
 const gameDimensions = {
     width: 1334,
