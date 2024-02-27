@@ -1,8 +1,8 @@
 
 // Cria as configurações para Phaser.Game
 const gameDimensions = {
-    width: 1920,
-    height: 1080,
+    width: 1280,
+    height: 740,
 }
 const config = {
     type: Phaser.AUTO, // Ajusta o renderizador automaticamente (WebGL e Canvas)

@@ -5,14 +5,27 @@ class MenuPrincipal extends Phaser.Scene {
     })
   }
   preload() {
-    this.load.image("cenaMainMenu", "assets/cenaMainMenu.png") // Fundo da cena do Main Menu
-    this.load.image("botaoJogar", "assets/botaoJogar.png") // Imagem para botaoJogar
+    this.load.image("background", "assets/background.png") // Fundo da cena do Main Menu
+    this.load.spritesheet("botaoJogar", "assets/button.png", { frameWidth: 138, frameHeight: 46 }) // Imagem para botaoJogar
+
   }
 
   create() {
     // Carrega a cena Main Menu
-    this.mainMenu = this.add.image(667, 362, "cenaMainMenu").setDepth(2).setScale(1.005) // setDepth -> Muda profundidade para frente
-    this.botaoJogar = this.add.image(830, 575, "botaoJogar").setInteractive().setDepth(2)
+    this.mainMenu = this.add.image(640, 360, "background").setScale(2) // setDepth -> Muda profundidade para frente
+    this.botaoJogar = this.add.sprite(900, 575, "botaoJogar").setInteractive().setScale(2)
+
+    // Cria a animação de botaoJogar
+    this.anims.create({
+      key: 'animar',
+      frames: this.anims.generateFrameNumbers('botaoJogar', { start: 0, end: 1 }),
+      frameRate: 4,
+      repeat: -1
+    });
+
+    // Ativa a animação de botaoJogar
+    this.botaoJogar.anims.play('animar', true);
+
 
     // Ajuste visual da imagem do mouse para fornecer feedback que o botão jogar é interativo
     this.botaoJogar.on("pointerover", () => {
