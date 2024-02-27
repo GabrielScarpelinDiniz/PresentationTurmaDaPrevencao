@@ -47,7 +47,7 @@ class CenaHospital extends Phaser.Scene {
     this.cameras.main.startFollow(this.medico, true); //camera inicia o follow no personagem principal
 
     // this.cameras.main.setDeadzone(400, 200);
-    this.cameras.main.setZoom(0.5); //Dá um zoom de 2 no personagem
+    this.cameras.main.setZoom(2);
 
     // Inicializa as variáveis para movimentação do personagem
     this.keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A);

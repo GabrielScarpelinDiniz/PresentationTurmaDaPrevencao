@@ -8,27 +8,26 @@
 
 # Nome do projeto
 
-## Nome do grupo
+## Tilápia
 
 ## 👨‍🎓 Integrantes: 
-- <a href="">Gabriel Henrique</a>
+- <a href="">Gabriel Henrique Martins Alves</a>
 - <a href="https://www.linkedin.com/in/gabriel-scarpelin-diniz-425258144/">Gabriel Scarpelin Diniz</a>
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 3</a> 
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 4</a> 
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 5</a>
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 6</a> 
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 7</a>
+- <a href="https://www.linkedin.com/in//">Isabelly Maia</a>
+- <a href="https://www.linkedin.com/in//">Leonardo Casal Andriolo</a> 
+- <a href="https://www.linkedin.com/in//">Matheus Jorge Rosa</a>
+- <a href="https://www.linkedin.com/in//">Pietra Pasqualini Batista</a> 
+- <a href="https://www.linkedin.com/in/v/">Rodrigo</a>
 
 ## 👩‍🏫 Professores:
 ### Orientador(a) 
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 1</a>
+- <a href="https://www.linkedin.com/in/victorbarq/">Claudio André</a>
 ### Instrutores
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 2</a>
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 3</a> 
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 4</a> 
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 5</a>
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 6</a> 
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 7</a>
+- <a href="https://www.linkedin.com/in/victorbarq/">André Godoi Chiovato</a>
+- <a href="https://www.linkedin.com/in/victorbarq/">Cristiano da Silva Benides</a> 
+- <a href="https://www.linkedin.com/in/victorbarq/">Egon Ferreira Daxbacher</a> 
+- <a href="https://www.linkedin.com/in/victorbarq/">Henrique Mohallen Paiva</a>
+- <a href="https://www.linkedin.com/in/victorbarq/">Julia Stateri</a> 
 
 ## 📜 Descrição
 
