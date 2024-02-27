@@ -143,7 +143,7 @@ O nosso jogo é pensado e destinado a adolescentes e jovens adultos que fazem pa
 
 O objetivo de um jogo geralmente é a meta que os jogadores devem alcançar para vencer ou progredir. Pode envolver completar tarefas específicas, resolver quebra-cabeças, derrotar inimigos, acumular pontos, entre outros desafios.
 
-Para o nosso jogo, o objetivo é atender o máximo de pacientes em um tempo determinado passando por um ciclo de estudo e prática. Isso implica que os jogadores devem equilibrar eficiência no atendimento com aprimoramento de habilidades através da aprendizagem.
+Para o nosso jogo, o objetivo é atender o máximo de pacientes em um tempo determinado passando por um ciclo de estudo e prática, obtendo assim uma pontuação final que pode ser superada a cada novo ciclo. Isso incentiva que os jogadores equilibram eficiência no atendimento e aprimoramento de habilidades através da aprendizagem.
 
 ## 2.2. Características do Jogo (sprint 2)
 
