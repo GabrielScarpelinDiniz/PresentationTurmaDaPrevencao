@@ -71,25 +71,6 @@ class CenaHospital extends Phaser.Scene {
     // Ajuste de velocidade do personagem
     const pixelMove = 10;
 
-    // Reposiciona o objeto medico de volta ao mapa (Temporário antes de implementar colisão)
-    /*
-    if (this.medico.x > config.width) {
-      this.medico.x = 20;
-    }
-    if (medico.x < 0) {
-      medico.x = config.width - 20;
-    }
-    if (medico.y > config.height) {
-      medico.y = 20;
-    }
-    if (medico.y < 0) {
-      medico.y = config.height - 20;
-    }
-    */
-    // Debug para posição
-    // console.log("config.width: "+config.width)
-    // console.log("medico.x: "+medico.x)
-
     // Mapeamento de Inputs (Normalizar o movimento diagonal futuramente)
     if (this.keyA.isDown || this.cursorKeys.left.isDown) {
       this.medico.x -= pixelMove;
