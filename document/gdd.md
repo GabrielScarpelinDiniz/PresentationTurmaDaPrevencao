@@ -488,15 +488,15 @@ var config = {
 
 *Descreva e ilustre aqui o desenvolvimento da versão básica do jogo, explicando brevemente o que foi entregue em termos de código e jogo. Utilize prints de tela para ilustrar. Indique as eventuais dificuldades e próximos passos.*
 
-Na primeira sprint, o desenvolvimento foi voltado a ter somente um esboço do jogo. Ou seja, boa parte do código foi refatorada conforme os conteúdos eram dispostos no decorrer da sprint.
+Na primeira sprint, o desenvolvimento foi focado em criar apenas um esboço do jogo. Em outras palavras, uma parte significativa do código foi refatorada à medida que os conteúdos eram apresentados ao longo da sprint.
 
-A decisão foi de separar a parte de programação em pequenas etapas, como: refatorando o jogo para múltiplas cenas, implementação do novo menu em Pixel Art, das físicas, de colisões, integração da câmera no cenário, e do novo cenário em Pixel Art através do Tiled Map Editor
+A decisão foi dividir a programação em pequenas etapas, tais como: refatorar o jogo para incluir múltiplas cenas, implementar o novo menu em Pixel Art, adicionar físicas e colisões, integrar a câmera ao cenário e criar o novo cenário em Pixel Art usando o Tiled Map Editor.
 
 ### Etapa 1 do desenvolvimento - Refatorando o jogo em múltiplas cenas
 
-A princípio para a primeira entrega, o jogo dispunha de um menu e a cena do médico no hospital. Tudo estava incluso no mesmo arquivo sem qualquer separação entre cenas. No fim, o que ocorria era a imagem do menu ser renderizada em primeiro plano, e quando ocorria o 'click' no botão de jogar, essa imagem era destruída.
+A princípio, na primeira entrega, o jogo apresentava um menu e a cena do médico no hospital. Ambos estavam incluídos no mesmo arquivo, sem qualquer separação entre as cenas. Como resultado, a imagem do menu era renderizada em primeiro plano, e ao clicar no botão de jogar, essa imagem era destruída.
 
-Para uma melhor arquitetura do jogo, essa artimanha, foi refatorada para duas cenas diferentes. Dessa forma, sendo separado em três arquivos: "main.js", "menu.js, "hospital.js". Onde cada arquivo é importado dentro da tag body do HTML
+Para aprimorar a arquitetura do jogo, essa abordagem foi refatorada para utilizar duas cenas distintas. Dessa maneira, o código foi dividido em três arquivos: "main.js", "menu.js" e "hospital.js". Cada arquivo é importado dentro da tag body do HTML, proporcionando uma estrutura mais organizada e modular.
 ```html
     <script src="scenes/menu.js"></script>
     <script src="scenes/hospital.js"></script>
@@ -530,9 +530,9 @@ const config = {
 // Cria o jogo passando a variável config como construtor para a classe
 const game = new Phaser.Game(config);
 ```
-Observe que no atributo "scene" é passado um array com as classes das duas cenas, que serão controladas pelo Phaser.
+Observe que no atributo "scene", é passado um array com as classes das duas cenas, as quais serão controladas pelo Phaser.
 
-Nos outros arquivos hospital e menu, são criadas duas classes que recebem de herança a classe Phaser.Scene. Ainda sim, essas classes mantem a estrutura básica do Phaser como as funções Preload, Update e Create como métodos agora.
+Nos outros arquivos, "hospital" e "menu", são criadas duas classes que herdam da classe Phaser.Scene. Ainda assim, essas classes mantêm a estrutura básica do Phaser, incluindo as funções preload, update e create como métodos agora.
 ```js
 class CenaHospital extends Phaser.Scene {
     preload(){}
@@ -542,11 +542,11 @@ class CenaHospital extends Phaser.Scene {
 ```
 O mesmo exemplo é aplicável ao menu.
 
-Para finalizar, o código das respectivas cenas e funções foram transferidas para os arquivos em classe, colocando o operador "this" antes das variáveis por conta da mudança para classe
+Para finalizar, o código das respectivas cenas e funções foram transferidas para os arquivos em classe, colocando o operador "this" antes das variáveis por conta da mudança para classe.
 
 ### Etapa 2 do desenvolvimento - Novo menu em Pixel Art
 
-O primeiro passo foi fazer o desenho do novo menu, com uma cara parecida, porém em Pixel Art feito no Piskel.
+O primeiro passo foi fazer o desenho do novo menu, com uma cara parecida, porém em Pixel Art feita no Piskel.
 <p align=center style="font-size:1em">Figura X: Novo menu desenvolvido no Piskel</p>
 <p align=center><img src="other\sprint_2_item_4.2_files\figura1.png" alt="Figura X" width="400"/></p>
 <p align=center style="font-size:1em">Fonte: Autores</p>
@@ -642,9 +642,9 @@ Com essa propriedade definida nos blocos, foi o momento de implementar a colisã
 this.wallsLayer.setCollisionByProperty({ collider: true }) //Seta as colisões onde tem a propriedade collider: true no tiled map
 this.physics.add.collider(this.medico, this.wallsLayer, () => console.log("Colidiu")) //Adiciona colisão entre o médico e a camada de parede
 ````
-A primeira linha fala que a camada da parede vai ter uma colisão com os blocos que foram definidos com a propriedade collider como true. Já na segunda linha adicionamos a colisão entre o médico e a parede, retornando um console.log para avisar que colidiu
+A primeira linha indica que a camada da parede terá colisão com os blocos que foram definidos com a propriedade "Collider" como verdadeira. Na segunda linha, adicionamos a colisão entre o médico e a parede, retornando um console.log para avisar que houve a colisão.
 
-Por fim, para a colisão funcionar como deve, foi preciso trocar o modo de movimentação do personagem. Ao invés de mover o X e Y do personagem, precisamos setar uma velocidade para o personagem. Dessa forma, o Phaser consegue ter controle de todas as colisões. Isso foi possível usando o seguinte método dentro do update (com a verificação WASD já implementada no desenvolvimento básico do jogo)
+Para que a colisão funcione como deveria, foi necessário alterar o modo de movimentação do personagem. Ao invés de movimentar o X e Y do personagem diretamente, foi preciso configurar uma velocidade para o personagem. Dessa forma, o Phaser consegue ter controle sobre todas as colisões. Essa modificação foi implementada utilizando o seguinte método dentro do bloco "update" (considerando que a verificação WASD já foi implementada no desenvolvimento básico do jogo):
 ````js
 this.medico.setVelocityX(velocidadeEmX)
 this.medico.setVelocityY(velocidadeEmY)
