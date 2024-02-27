@@ -18,30 +18,30 @@ class CenaHospital extends Phaser.Scene {
 
   create() {
     // Cena Hospital
-    const map = this.make.tilemap({ key: "mapa", tileWidth: 32, tileHeight: 32});
-
-    const tileset = map.addTilesetImage("parede", 'parede');
-
-    const layer = map.createLayer("Walls", tileset, 0, 0);
+    this.map = this.make.tilemap({ key: "mapa", tileWidth: 32, tileHeight: 32});
+    this.tileset = this.map.addTilesetImage('parede');
+    this.layer = this.map.createLayer("Walls", this.tileset);
+    this.map.setCollision([ 20, 48 ]);
 
     
 
-    const layer2 = map.createLayer("Ground", tileset, 0, 0);
+    // const layer2 = map.createLayer("Ground", tileset, 0, 0);
 
 
 
     // this.add.image(667, 362, "cenaHospital"); // Cria e posiciona o Fundo
     
     this.medico = this.physics.add.sprite(1200, 300, "medico"); // Cria e posiciona o Medico
+    this.physics.add.existing(this.medico);
     this.medico.setFlip(true, false).setScale(0.2); // Ajusta a orientação do Medico
 
-    this.physics.add.collider(this.medico,layer)
-    layer.setCollisionBetween(20,20)
+    this.physics.add.collider(this.medico,this.layer)
+    // this.layer.setCollisionBetween(20,20)
 
 
     this.cameras.main.startFollow(this.medico, true);
-    this.cameras.main.setDeadzone(80, 40);
-    this.cameras.main.setZoom(0.5);
+    // this.cameras.main.setDeadzone(400, 200);
+    this.cameras.main.setZoom(2);
 
     // Inicializa as variáveis para movimentação do personagem
     this.keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A);
@@ -65,6 +65,9 @@ class CenaHospital extends Phaser.Scene {
   }
 
   update() {
+    // Colisão de personagem com layer
+    this.physics.collide(this.medico, this.layer);
+    
     // Ajuste de velocidade do personagem
     const pixelMove = 10;
 
