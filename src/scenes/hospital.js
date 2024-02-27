@@ -36,9 +36,9 @@ class CenaHospital extends Phaser.Scene {
     this.map.setCollisionByExclusion([ 0, 1 ]);
 
     // Visualize the colliding tiles
-    const debugGraphics = this.add.graphics();
-    debugGraphics.setScale(2);
-    this.map.renderDebug(debugGraphics);
+    // const debugGraphics = this.add.graphics();
+    // debugGraphics.setScale(2);
+    // this.map.renderDebug(debugGraphics);
 
     this.medico = this.physics.add.sprite(1200, 300, "medico"); // Cria e posiciona o Medico
     this.physics.add.existing(this.medico);
@@ -47,7 +47,7 @@ class CenaHospital extends Phaser.Scene {
 
     this.cameras.main.startFollow(this.medico, true);
     // this.cameras.main.setDeadzone(400, 200);
-    this.cameras.main.setZoom(0.5);
+    this.cameras.main.setZoom(2);
 
     // Inicializa as variáveis para movimentação do personagem
     this.keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A);
@@ -75,7 +75,7 @@ class CenaHospital extends Phaser.Scene {
     this.physics.collide(this.medico, this.wallsLayer);
     
     // Ajuste de velocidade do personagem
-    const pixelMove = 5;
+    const pixelMove = 2;
 
     // Mapeamento de Inputs (Normalizar o movimento diagonal futuramente)
     if (this.keyA.isDown || this.cursorKeys.left.isDown) {
