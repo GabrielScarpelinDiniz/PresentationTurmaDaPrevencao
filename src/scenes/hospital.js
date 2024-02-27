@@ -72,7 +72,7 @@ class CenaHospital extends Phaser.Scene {
     this.cursorKeys = this.joystick.createCursorKeys();
   }
   update() {
-    this.joystick.setPosition(this.medico.x, this.medico.y)
+    this.joystick.setPosition(this.cameras.main.scrollX, this.cameras.main.scrollY)
     console.log(this.medico.x, this.medico.y)
     // Colisão de personagem com layer
 

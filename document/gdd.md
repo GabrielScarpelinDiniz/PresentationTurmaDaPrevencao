@@ -476,7 +476,7 @@ var config = {
 - Mudar a arte gráfica para a definida pelo grupo de Design;
 - Transformar a cena inicial de menu para um arquivo separado;
 - Implementar mudança de cenas;
-- Adicionar um objeto médico com animação (spritesheetd);
+- Adicionar um objeto médico com animação (spritesheet);
 - Adicionar lógica de colisão ao personagem para interação com outros objetos ou NPCs;
 - Começar a implementação do quiz ao acessar o laboratório (vide abaixo).
 
@@ -487,6 +487,184 @@ var config = {
 ## 4.2. Desenvolvimento básico do jogo (sprint 2)
 
 *Descreva e ilustre aqui o desenvolvimento da versão básica do jogo, explicando brevemente o que foi entregue em termos de código e jogo. Utilize prints de tela para ilustrar. Indique as eventuais dificuldades e próximos passos.*
+
+Na primeira sprint, o desenvolvimento foi voltado a ter somente um esboço do jogo. Ou seja, boa parte do código foi refatorada conforme os conteúdos eram dispostos no decorrer da sprint.
+
+A decisão foi de separar a parte de programação em pequenas etapas, como: refatorando o jogo para múltiplas cenas, implementação do novo menu em Pixel Art, das físicas, de colisões, integração da câmera no cenário, e do novo cenário em Pixel Art através do Tiled Map Editor
+
+### Etapa 1 do desenvolvimento - Refatorando o jogo em múltiplas cenas
+
+A princípio para a primeira entrega, o jogo dispunha de um menu e a cena do médico no hospital. Tudo estava incluso no mesmo arquivo sem qualquer separação entre cenas. No fim, o que ocorria era a imagem do menu ser renderizada em primeiro plano, e quando ocorria o 'click' no botão de jogar, essa imagem era destruída.
+
+Para uma melhor arquitetura do jogo, essa artimanha, foi refatorada para duas cenas diferentes. Dessa forma, sendo separado em três arquivos: "main.js", "menu.js, "hospital.js". Onde cada arquivo é importado dentro da tag body do HTML
+```html
+    <script src="scenes/menu.js"></script>
+    <script src="scenes/hospital.js"></script>
+    <script src="main.js"></script>
+```
+Vale ressaltar que, essa ordem é importante. Visto que, sem as duas classes contidas nos arquivos "menu.js" e "hospital.js" precisam estar declaradas para o arquivo "main.js" acessar.
+
+No arquivo "main.js" está contida as configurações do phaser e a instância do objeto do jogo
+```js
+// Cria as configurações para Phaser.Game
+const config = {
+    type: Phaser.AUTO, // Ajusta o renderizador automaticamente (WebGL e Canvas)
+    width: gameDimensions.width,  // Ajusta a largura para 1334 pixels (temporário)
+    height: gameDimensions.height, // Ajusta a altura
+    autoCenter: Phaser.Scale.CENTER_BOTH,
+    physics: {
+        default: 'arcade',
+        arcade: {
+            gravity: { y: 0 },
+            debug: true
+        }
+    },
+    scale: {
+        mode: Phaser.Scale.FIT, // Ajusta a tela para mobile
+    },
+    scene: [
+        MenuPrincipal, CenaHospital
+    ]
+};
+
+// Cria o jogo passando a variável config como construtor para a classe
+const game = new Phaser.Game(config);
+```
+Observe que no atributo "scene" é passado um array com as classes das duas cenas, que serão controladas pelo Phaser.
+
+Nos outros arquivos hospital e menu, são criadas duas classes que recebem de herança a classe Phaser.Scene. Ainda sim, essas classes mantem a estrutura básica do Phaser como as funções Preload, Update e Create como métodos agora.
+```js
+class CenaHospital extends Phaser.Scene {
+    preload(){}
+    create(){}
+    update(){}
+}
+```
+O mesmo exemplo é aplicável ao menu.
+
+Para finalizar, o código das respectivas cenas e funções foram transferidas para os arquivos em classe, colocando o operador "this" antes das variáveis por conta da mudança para classe
+
+### Etapa 2 do desenvolvimento - Novo menu em Pixel Art
+
+O primeiro passo foi fazer o desenho do novo menu, com uma cara parecida, porém em Pixel Art feito no Piskel.
+<p align=center style="font-size:1em">Figura X: Novo menu desenvolvido no Piskel</p>
+<p align=center><img src="other\sprint_2_item_4.2_files\figura1.png" alt="Figura X" width="400"/></p>
+<p align=center style="font-size:1em">Fonte: Autores</p>
+<br>
+<p align=center style="font-size:1em">Figura X: Spritesheet do botão para animação</p>
+<p align=center><img src="other\sprint_2_item_4.2_files\button.png" alt="Figura X" width="400"/></p>
+<p align=center style="font-size:1em">Fonte: Autores</p>
+
+Após o design desenvolvido, o próximo passo foi implementar no Phaser
+No método preload: 
+```js
+preload(){
+    this.load.image("background", "assets/background.png") // Fundo da cena do Main Menu
+    this.load.spritesheet("botaoJogar", "assets/button.png", { frameWidth: 138, frameHeight: 46 }) // Imagem para botaoJogar
+}
+``` 
+Em seguida, o menu foi implementado da mesma forma que no desenvolvimento preliminar. A única alteração foi no click do botão que ao invés de destruir as imagens, troca a cena. 
+Da seguinte forma:
+````js
+this.botaoJogar.on("pointerdown", () => {
+    // Evento de click do mouse
+    this.scene.start("hospital")
+    this.scene.stop('menu')
+    this.input.setDefaultCursor("default") // Retorno do cursor do mouse para setinha
+})
+````
+No this.scene.start o Phaser inicia a cena do hospital e na linha seguinte encerra o menu
+
+### Etapa 3 do desenvolvimento - Implementação da física
+
+O primeiro passo foi habilitar a física na configuração do jogo
+```js
+// Cria as configurações para Phaser.Game
+const config = {
+    physics: {
+        default: 'arcade',
+        arcade: {
+            gravity: { y: 0 },
+            debug: true
+        }
+    }
+};
+```
+Colocando esse trecho de código, habilitamos a física no jogo, sem gravidade pois o nosso jogo é no estilo "top down", vista de cima para baixo
+
+### Etapa 5 do desenvolvimento - Câmeras e cenário do Tiled Map Editor
+
+Nesta etapa, foi realizado a implementação do Mapa através de um arquivo JSON, localizado em "src/assets/tilemaps/main_map.json". Este arquivo é exportado do Tiled Map Editor, que é um editor de mapas em blocos e por camadas
+
+<p align=center style="font-size:1em">Figura X: Mapa no Tiled Map Editor</p>
+<p align=center><img src="other\sprint_2_item_4.2_files\tiled_map_editor.png" alt="Figura X" width="400"/></p>
+<p align=center style="font-size:1em">Fonte: Autores</p>
+
+Após isso foi preciso importar o JSON para a classe CenaHospital e definir as camadas presentes, que no caso são as paredes e o chão até o momento.
+
+```js
+preload(){
+    this.load.image("medico", "assets/medico.png"); // Imagem para medico
+
+    this.load.image('parede', 'assets/tilemaps/parede.png'); // Paredes do Mapa
+    this.load.image('piso-atendimento', 'assets/tilemaps/piso-atendimento.png'); // Piso do mapa
+    this.load.image('piso-corredor', 'assets/tilemaps/piso-corredor.png'); // Piso do corredor do Mapa
+    this.load.image('piso-madeira', 'assets/tilemaps/piso-madeira.png'); // Piso da biblioteca do Mapa
+
+    this.load.tilemapTiledJSON('mapa', 'assets/tilemaps/main_map.json'); //Carrega o tiled do mapa
+}
+create(){
+    this.map = this.make.tilemap({ key: "mapa", tileWidth: 32, tileHeight: 32}); //Cria o mapa colocando o tamanho de cada "azulejo", que no nosso tiled foi 32x32
+    this.tileset1 = this.map.addTilesetImage('parede'); //Adiciona no map um tileset e armazena ela
+    this.tileset2 = this.map.addTilesetImage('piso-atendimento'); //Adiciona no map um tileset e armazena ela
+    this.tileset3 = this.map.addTilesetImage('piso-corredor'); //Adiciona no map um tileset e armazena ela
+    this.tileset4 = this.map.addTilesetImage('piso-madeira'); //Adiciona no map um tileset e armazena ela
+
+    this.groundLayer = this.map.createLayer("Ground", [this.tileset2,this.tileset3,this.tileset4]); //Cria a camada do chão, passando o tileset e o nome que definimos no tiled map editor
+    this.wallsLayer = this.map.createLayer("Walls", [this.tileset1], 0 , 0); //Cria a camada de paredes, passando o tileset e o nome que definimos no tiled map editor
+}
+```
+Dessa forma, o mapa é carregado e aparece corretamente no mapa. No entanto, o mapa é muito grande, para melhorar a jogabilidade, foi preciso implementar a câmera. Dentro da função create, setamos duas coisas na câmera. O zoom e a perseguição no jogador
+````js
+this.cameras.main.startFollow(this.medico, true); //camera inicia o follow no personagem principal
+this.cameras.main.setZoom(2);
+````
+<p align=center style="font-size:1em">Figura X: Mapa implementado no phaser com câmera</p>
+<p align=center><img src="other\sprint_2_item_4.2_files\camera_and_tiled_map.png" alt="Figura X" width="400"/></p>
+<p align=center style="font-size:1em">Fonte: Autores</p>
+
+### Etapa 6 do desenvolvimento - Colisões com as paredes
+
+De início, foi preciso fazer algumas alterações no Tiled Map Editor, precisamos setar em todos os blocos que tem colisão uma propriedade personalizada, que chamamos de Collider. Essa propriedade precisa ser do tipo boolean (Verdadeiro ou falso)
+Com essa propriedade definida nos blocos, foi o momento de implementar a colisão. E com apenas duas linhas, graças ao Tiled Map Editor e a suas facilidades, foi possível definir colisão entre o muro e o jogador
+
+````js
+this.wallsLayer.setCollisionByProperty({ collider: true }) //Seta as colisões onde tem a propriedade collider: true no tiled map
+this.physics.add.collider(this.medico, this.wallsLayer, () => console.log("Colidiu")) //Adiciona colisão entre o médico e a camada de parede
+````
+A primeira linha fala que a camada da parede vai ter uma colisão com os blocos que foram definidos com a propriedade collider como true. Já na segunda linha adicionamos a colisão entre o médico e a parede, retornando um console.log para avisar que colidiu
+
+Por fim, para a colisão funcionar como deve, foi preciso trocar o modo de movimentação do personagem. Ao invés de mover o X e Y do personagem, precisamos setar uma velocidade para o personagem. Dessa forma, o Phaser consegue ter controle de todas as colisões. Isso foi possível usando o seguinte método dentro do update (com a verificação WASD já implementada no desenvolvimento básico do jogo)
+````js
+this.medico.setVelocityX(velocidadeEmX)
+this.medico.setVelocityY(velocidadeEmY)
+````
+<p align=center style="font-size:1em">Figura X: Colisão entre o personagem e a parede</p>
+<p align=center><img src="other\sprint_2_item_4.2_files\collision.png" alt="Figura X" width="400"/></p>
+<p align=center style="font-size:1em">Fonte: Autores</p>
+
+### Dificuldades
+- Implementação da colisão
+- Dificuldade em ajustar o Tile Map
+- Implementar as entradas Mobile - O jogo já tem uma biblioteca para um joystick, porém ainda está com bugs
+
+### Próximos passos
+- Implementar o joystick funcional
+- Terminar toda a decoração do mapa
+- Implementar o quiz e a lógica da biblioteca
+- Implementar a movimentação através de vetores
+- Spritesheet do personagem animada e finalizada
+- Sritesheet dos NPC's para animar no jogo
 
 ## 4.3. Desenvolvimento intermediário do jogo (sprint 3)
 
