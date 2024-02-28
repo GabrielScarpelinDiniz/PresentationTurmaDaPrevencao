@@ -6,13 +6,15 @@ class MenuPrincipal extends Phaser.Scene {
   }
   preload() {
     this.load.image("background", "assets/background.png") // Fundo da cena do Main Menu
+    this.load.image("inteliLogo", "assets/logointeli.png") // Fundo da cena do Main Menu
     this.load.spritesheet("botaoJogar", "assets/button.png", { frameWidth: 138, frameHeight: 46 }) // Imagem para botaoJogar
 
   }
 
   create() {
     // Carrega a cena Main Menu
-    this.mainMenu = this.add.image(640, 360, "background").setScale(2) // setDepth -> Muda profundidade para frente
+    this.mainMenu = this.add.image(630, 365, "background").setScale(2.1)
+    this.logoInteli = this.add.image(1200, 690, "inteliLogo").setScale(1)
     this.botaoJogar = this.add.sprite(900, 575, "botaoJogar").setInteractive().setScale(2)
 
     // Cria a animação de botaoJogar
