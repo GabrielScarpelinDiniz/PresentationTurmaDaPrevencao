@@ -280,7 +280,7 @@ O jogo referido neste documento terá apenas um personagem controlável em jogo,
 
 <sub>Figura X - Mapa do Jogo</sub>
 
-<img src="./other/mapa.jpeg" width="100%">
+<img src="./other/mapa1.png" width="70%">
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 </div>
