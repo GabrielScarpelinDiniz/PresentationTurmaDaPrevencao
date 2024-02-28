@@ -1,5 +1,8 @@
 
 class CenaHospital extends Phaser.Scene {
+  defaultVelocity = 2;
+  radiansAngleJoystick = 0;
+  joystickForce = 0;
   constructor() {
     super({
       key: "hospital",
@@ -61,8 +64,8 @@ class CenaHospital extends Phaser.Scene {
     this.joystick = this.plugins.get("rexvirtualjoystickplugin").add(
       this,
       {
-        x: 490,
-        y: this.medico.y + 135,
+        x: 500,
+        y: this.medico.y + 120,
         radius: 30,
         base: this.add.circle(0, 0, 30, 0xff0000),
         thumb: this.add.circle(0, 0, 15, 0xcccccc),
@@ -70,34 +73,37 @@ class CenaHospital extends Phaser.Scene {
       }
     );
     this.joystick.setScrollFactor(0); // Faz com que o joystick não se mova com a câmera
-    this.cursorKeys = this.joystick.createCursorKeys();
   }
   update() {
-    // Colisão de personagem com layer
-
-    // Ajuste de velocidade do personagem
-    const velocityXY = 100;
-
+    this.radiansAngleJoystick = this.fixAngle(this.joystick.angle)*Math.PI/180 || 0;
+    this.joystickForce = this.joystick.force < 75 ? this.joystick.force : 75;
+    const velocityDoctorX = (this.defaultVelocity * Math.cos(this.radiansAngleJoystick) * this.joystickForce)
+    velocityDoctorX < 0 ? this.medico.setFlip(false, false) : this.medico.setFlip(true, false)
+    const velocityDoctorY = -(this.defaultVelocity * Math.sin(this.radiansAngleJoystick) * this.joystickForce)
+    this.medico.setVelocityX(velocityDoctorX)
+    this.medico.setVelocityY(velocityDoctorY)
     // Mapeamento de Inputs (Normalizar o movimento diagonal futuramente)
-    if (this.keyA.isDown || this.cursorKeys.left.isDown) {
-      this.medico.setVelocityX(-velocityXY);
-      this.medico.setFlip(false, false); // Ajusta orientação do personagem
+    if (this.keyA.isDown) {
+      this.medico.setVelocityX(-this.defaultVelocity * 50);
+      this.medico.setFlip(false, false); // Ajusta orientação do personagem   
     }
-    else if (this.keyD.isDown || this.cursorKeys.right.isDown) {
-      this.medico.setVelocityX(velocityXY);
-      this.medico.setFlip(true, false); // Ajusta orientação do personagem
+    else if (this.keyD.isDown) {
+      this.medico.setVelocityX(this.defaultVelocity * 50);
+      this.medico.setFlip(true, false); // Ajusta orientação do personagem    
     }
-    else {
-      this.medico.setVelocityX(0)
+    if (this.keyS.isDown) {
+      this.medico.setVelocityY(this.defaultVelocity * 50)    
     }
-    if (this.keyS.isDown || this.cursorKeys.down.isDown) {
-      this.medico.setVelocityY(velocityXY)
+    else if (this.keyW.isDown) {
+      this.medico.setVelocityY(-this.defaultVelocity * 50)
     }
-    else if (this.keyW.isDown || this.cursorKeys.up.isDown) {
-      this.medico.setVelocityY(-velocityXY)
+  }
+  fixAngle(angle) {
+    if (angle < 0) {
+      return -angle
     }
-    else {
-      this.medico.setVelocityY(0);
+    else if (angle > 0) {
+      return 360 - angle
     }
   }
 }

@@ -2,7 +2,7 @@
 // Cria as configurações para Phaser.Game
 const gameDimensions = {
     width: 1280,
-    height: 740,
+    height: 720,
 }
 const config = {
     type: Phaser.AUTO, // Ajusta o renderizador automaticamente (WebGL e Canvas)
@@ -21,7 +21,8 @@ const config = {
     },
     scene: [
         MenuPrincipal, CenaHospital
-    ]
+    ],
+    
 };
 
 // Cria o jogo passando a variável config como atributos

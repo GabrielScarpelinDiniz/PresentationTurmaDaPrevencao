@@ -51,15 +51,15 @@ class MenuPrincipal extends Phaser.Scene {
 
   update() {}
   openFullScreen() {
-    const page = document.documentElement
-    if (page.requestFullscreen){
-        page.requestFullscreen()
-    } else if (page.mozRequestFullScreen){
-        page.mozRequestFullScreen()
-    } else if (page.webkitRequestFullscreen){
-        page.webkitRequestFullscreen()
-    } else if (page.msRequestFullscreen){
-        page.msRequestFullscreen()
+    const page = document.documentElement //Pega o documento inteiro
+    if (page.requestFullscreen){ //Se o navegador suportar o Fullscreen
+        page.requestFullscreen() //Ativa o Fullscreen
+    } else if (page.mozRequestFullScreen){ //Se o navegador suportar o Fullscreen do Mozila
+        page.mozRequestFullScreen() //Ativa o Fullscreen
+    } else if (page.webkitRequestFullscreen){ //Se o navegador suportar o Fullscreen do Webkit
+        page.webkitRequestFullscreen() //Ativa o Fullscreen
+    } else if (page.msRequestFullscreen){ //Se o navegador suportar o Fullscreen do Microsoft
+        page.msRequestFullscreen() //Ativa o Fullscreen
     }
   }
 }
