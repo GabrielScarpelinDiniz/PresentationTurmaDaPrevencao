@@ -684,12 +684,67 @@ this.medico.setVelocityY(velocidadeEmY)
 
 *Descreva nesta seção os casos de teste comuns que podem ser executados a qualquer momento para testar o funcionamento e integração das partes do jogo. Utilize tabelas para facilitar a organização.*
 
-*Exemplo de tabela*
+&nbsp;&nbsp;&nbsp;&nbsp; Intro
+
+<div align="center">
+<sub>Tabela X - Casos de Testes da Cena main.js</sub>
+</div>
+
 \# | pré-condição | descrição do teste | pós-condição 
 --- | --- | --- | --- 
-1 | posicionar o jogo na tela de abertura | iniciar o jogo desde seu início | o jogo deve iniciar da fase 1
-2 | posicionar o personagem em local seguro de inimigos | aguardar o tempo passar até o final da contagem | o personagem deve perder uma vida e reiniciar a fase
-3 | ...
+1 |  As dimensões da tela do jogo estão definidas | Verificar se as dimensões do jogo estão corretamente configuradas | A tela do jogo possui as dimensões corretas
+2 |  O sistema de centralização automática está funcionando | Verificar se a tela do jogo é centralizada automaticamente em ambos os eixos | A tela do jogo está centralizada corretamente
+3 |  Carregar o jogo em ambiente mobile | Verificar se a tela se ajusta à dispositivos móveis | A tela do jogo carrega sem problemas em dispositivos móveis
+4 | Duas cenas criadas | Verificar se existem duas cenas adicionadas ao jogo: MenuPrincipal e CenaHospital | Existem duas cenas adicionadas corretamente ao jogo
+<div align="center">
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp; Explicação da tabela acima
+
+&nbsp;&nbsp;&nbsp;&nbsp; Introdução da tabela abaixo
+
+<div align="center">
+<sub>Tabela X - Casos de Testes da Cena menu.js</sub>
+</div>
+
+\# | pré-condição | descrição do teste | pós-condição 
+|------|---------|--- |--- |
+1 | Carregar assets | Verificar se os assets são carregados corretamente sem erros | Todos os assets são carregados sem erros                                                    |
+2 | Clicar no botão "Jogar" | Simular um clique no botão "Jogar"  | A cena "hospital" é iniciada e a cena "menu" é parada, o cursor do mouse retorna para a setinha |
+3 | Passar o mouse sobre o botão "Jogar" | Mover o cursor do mouse sobre o botão "Jogar" | O cursor do mouse muda para uma mãozinha                                                     |
+4 | Retirar o mouse do botão "Jogar"  | Mover o cursor do mouse para fora do botão "Jogar" | O cursor do mouse retorna para a setinha                                               |
+5 | Animar o botão "Jogar"   | Verificar se a animação do botão "Jogar" é executada corretamente | O botão jogar é animado sem erros   |
+6 | Verificar a posição dos elementos      | Verificar se os elementos (background, logo, botão "Jogar") estão posicionados corretamente na tela | Os elementos estão posicionados corretamente na tela                                         |
+<div align="center">
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp; Explicação da tabela acima
+
+&nbsp;&nbsp;&nbsp;&nbsp; Introdução da tabela abaixo
+
+<div align="center">
+<sub>Tabela X - Casos de Testes da Cena hospital.js</sub>
+</div>
+
+\# | Pré-condição | Descrição do Teste | Pós-condição
+|------|---------|--- |--- |
+1 | Cena hospital.js carregada | Verificar se a cena do hospital foi carregada corretamente | Os assets da cena do hospital estão carregados e prontos para uso |
+2 | Mapa carregado | Verificar se o mapa foi carregado corretamente | O mapa está carregado e pronto para ser utilizado na cena |
+3 | Joystick criado | Verificar se o joystick foi criado corretamente na cena do hospital.js | O joystick está presente e funcional na cena |
+4 | Colisão com paredes | Testar colisão do personagem com as paredes do mapa | O personagem não atravessa as paredes e colide corretamente |
+5 | O personagem está parado | Testar se o personagem se move corretamente | O personagem se move com o clique de teclas de input |
+6 | O personagem está carregado | Verificar se a orientação do personagem muda corretamente com o movimento horizontal | A orientação do personagem está correta de acordo com a direção do movimento |
+7 | Parada do personagem | Testar se o personagem para de se mover quando nenhuma tecla de movimento é pressionada | O personagem para |
+8 | Posição do Joystick definida | Verificar se a posição do joystick é ajustada corretamente de acordo com a posição da câmera | A posição do joystick está sincronizada com a posição da câmera |
+9 | Verificar a posição do personagem | Testar se a posição do personagem é atualizada corretamente | A posição do personagem é atualizada de acordo com o movimento |
+
+<div align="center">
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp; Explicação da tabela acima
 
 ## 5.2. Testes de jogabilidade (playtests) (sprint 4)
 
