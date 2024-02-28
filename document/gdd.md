@@ -140,11 +140,11 @@
 \# | Requisito do cliente 
 --- | ---
 1|Ensinar quais são as três camadas da pele;
-2|Falar sobre a espessura das camadas da pele;
+2|Falar sobre a espessura das camadas da pele e qual a relação delas com os tipos de queimadura;
 3|Definir os diferentes tipos de queimadura;
 4|Dizer por que uma queimadura profunda não dói;
 5|O jogo deve ser compatível com mobile;
-6|A palheta de cores deve ser da FMUSP e do INTELI;
+6|A paleta de cores deve ser da FMUSP e do INTELI;
 7|Tempo limitado apenas com a intenção de capacitação, sendo uma experiência única, de aproximadamente 15 minutos;
 8|Jogo tem de atrair o interesse dos alunos;
 9|Deve ter recompensas, pontuação, recordes;
@@ -179,8 +179,11 @@
 ## 1.3. Público-alvo do Projeto (sprint 2)
 
 &nbsp;&nbsp;&nbsp;&nbsp;De acordo com Kotler (2000), também conhecido como o “pai do marketing”, o público alvo é o grupo de consumidores que possui necessidades semelhantes àquelas que a empresa atende. O público alvo pode ser dividido em diversos fatores, como geografia, demografia, psicografia e comportamental. 
-O nosso jogo é pensado e destinado à adolescentes e jovens adultos que fazem parte de comunidades e regiões carentes com acesso limitado à educação, visto que o objetivo principal do projeto é a conscientização e, 90% dos incidentes envolvendo queimaduras são reportados em locais onde a população é leiga. 
-Portanto, para que a magnitude da influência e impacto gerado do nosso produto seja positiva, definimos o público alvo levando em consideração os aspectos demográficos, especificamente a idade, renda e educação. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;O nosso jogo é pensado e destinado à adolescentes e jovens adultos que fazem parte de comunidades e regiões carentes com acesso limitado à educação, visto que o objetivo principal do projeto é a conscientização e, 90% dos incidentes envolvendo queimaduras são reportados em locais onde a população é leiga. 
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;Portanto, para que a magnitude da influência e impacto gerado do nosso produto seja positiva, definimos o público alvo levando em consideração os aspectos demográficos, especificamente a idade, renda e educação. 
 Isso posto, entendemos que a definição adequada do público alvo aumenta a magnitude da influência e impacto gerado, o que vai de acordo com o nosso objetivo principal.
 
 # <a name="c2"></a>2. Visão Geral do Jogo (sprint 2)
@@ -277,7 +280,7 @@ O jogo referido neste documento terá apenas um personagem controlável em jogo,
 
 <sub>Figura X - Mapa do Jogo</sub>
 
-<img src="./other/mapa.jpeg" width="100%">
+<img src="./other/mapa1.png" width="70%">
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 </div>
