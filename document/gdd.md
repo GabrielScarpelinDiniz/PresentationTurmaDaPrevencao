@@ -367,7 +367,7 @@ Um Diagrama de Cenas é uma ferramenta utilizada para auxiliar na organização 
 
 </div>
 
-Ao abrir o menu e clicar no botão “JOGAR”, o jogo iniciará. A tela inicial do jogo se passa no hospital onde chegarão os pacientes a serem orientados, vítimas de queimaduras.
+1 - Ao abrir o menu e clicar no botão “JOGAR”, o jogo iniciará. A tela inicial do jogo se passa no hospital onde chegarão os pacientes a serem orientados, vítimas de queimaduras.
 
 <div align="center">
 
@@ -379,7 +379,7 @@ Ao abrir o menu e clicar no botão “JOGAR”, o jogo iniciará. A tela inicial
 
 </div>
 
-No Hall Principal do hospital, o jogador poderá ir para a biblioteca, onde poderá ler livros sobre primeiros socorros, tratamento e prevenção de queimaduras. No entanto, apesar do jogador poder ir à farmácia, ela estará bloqueada, pois nenhum paciente foi atendido.
+2 - No Hall Principal do Hospital, o jogador poderá ir para a Biblioteca, onde poderá ler livros sobre primeiros socorros, tratamento e prevenção de queimaduras. No entanto, apesar do jogador poder ir à farmácia, ela estará bloqueada, pois nenhum paciente foi atendido.
 
 <div align="center">
 
@@ -391,7 +391,7 @@ No Hall Principal do hospital, o jogador poderá ir para a biblioteca, onde pode
 
 </div>
 
-Após recepcionar o paciente no Hall Principal, o médico se dirigirá a Triagem, onde realizará a triagem do paciente para investigar como o trauma foi causado. 
+3 - Após recepcionar o paciente no Hall Principal, o médico se dirigirá a Triagem, onde realizará a triagem do paciente para investigar como o trauma foi causado. 
 
 <div align="center">
 
@@ -403,7 +403,7 @@ Após recepcionar o paciente no Hall Principal, o médico se dirigirá a Triagem
 
 </div>
 
-Após a triagem, o médico deverá ir à biblioteca para estudar sobre primeiros socorros, métodos de prevenção sobre o caso de seu paciente e mitos a serem desmistificados. 
+4 - Após a triagem, o médico deverá ir à biblioteca para estudar sobre primeiros socorros, métodos de prevenção sobre o caso de seu paciente e mitos a serem desmistificados. 
 
 <div align="center">
 
@@ -415,7 +415,7 @@ Após a triagem, o médico deverá ir à biblioteca para estudar sobre primeiros
 
 </div>
 
-Com o conhecimento adquirido na biblioteca, o médico agora pode ir à farmácia (bloqueada caso não antes realizar a triagem do paciente) e realizar o quiz para aquisição do remédio para tratamento do paciente.
+5 - Com o conhecimento adquirido na biblioteca, o médico agora pode ir à farmácia (bloqueada caso não antes realizar a triagem do paciente) e realizar o quiz para aquisição do remédio para tratamento do paciente.
 
 <div align="center">
 
@@ -427,7 +427,7 @@ Com o conhecimento adquirido na biblioteca, o médico agora pode ir à farmácia
 
 </div>
 
-Adquirindo o remédio, o médico deverá entregá-lo ao paciente, que estará na Sala de Espera, concluindo o ciclo de vida deste NPC no jogo e rendendo pontos ao jogador.
+6 - Adquirindo o remédio, o médico deverá entregá-lo ao paciente, que estará na Sala de Espera, concluindo o ciclo de vida deste NPC no jogo e rendendo pontos ao jogador.
 
 <div align="center">
 

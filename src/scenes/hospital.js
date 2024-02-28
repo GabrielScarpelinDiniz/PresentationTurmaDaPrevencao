@@ -6,16 +6,15 @@ class CenaHospital extends Phaser.Scene {
     });
     this.gameDimensions =  {
       width: 1280,
-      height: 740,
+      height: 720,
     }
   } 
   preload() {
     this.load.plugin(
       "rexvirtualjoystickplugin",
-      "https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/master/dist/rexvirtualjoystickplugin.min.js",
+      "/src/plugins/rexvirtualjoystickplugin.min.js",
       true
     ); //Carrega a biblioteca do joystick
-    this.load.image("cenaHospital", "assets/cenaHospital.png"); // Fundo da cena do Hospital
     this.load.image("medico", "assets/medico.png"); // Imagem para medico
 
     this.load.image('parede', 'assets/tilemaps/parede.png'); // Paredes do Mapa
@@ -47,7 +46,7 @@ class CenaHospital extends Phaser.Scene {
     this.cameras.main.startFollow(this.medico, true); //camera inicia o follow no personagem principal
 
     // this.cameras.main.setDeadzone(400, 200);
-    this.cameras.main.setZoom(2);
+    this.cameras.main.setZoom(3);
 
     // Inicializa as variáveis para movimentação do personagem
     this.keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A);
@@ -60,20 +59,20 @@ class CenaHospital extends Phaser.Scene {
 
     //Cria o joystick na cena do hospital
     this.joystick = this.plugins.get("rexvirtualjoystickplugin").add(
-      CenaHospital,
+      this,
       {
-        x: 200,
-        y: gameDimensions.height - 150,
-        radius: 50,
-        base: this.add.circle(0, 0, 50, 0xff0000),
-        thumb: this.add.circle(0, 0, 25, 0xcccccc),
+        x: 490,
+        y: this.medico.y + 135,
+        radius: 30,
+        base: this.add.circle(0, 0, 30, 0xff0000),
+        thumb: this.add.circle(0, 0, 15, 0xcccccc),
+        minForce: 2,
       }
     );
+    this.joystick.setScrollFactor(0); // Faz com que o joystick não se mova com a câmera
     this.cursorKeys = this.joystick.createCursorKeys();
   }
   update() {
-    this.joystick.setPosition(this.cameras.main.scrollX, this.cameras.main.scrollY)
-    console.log(this.medico.x, this.medico.y)
     // Colisão de personagem com layer
 
     // Ajuste de velocidade do personagem
