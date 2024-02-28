@@ -12,7 +12,7 @@ class MenuPrincipal extends Phaser.Scene {
 
   create() {
     // Carrega a cena Main Menu
-    this.mainMenu = this.add.image(640, 360, "background").setScale(2)
+    this.mainMenu = this.add.image(630, 365, "background").setScale(2.1)
     this.botaoJogar = this.add.sprite(900, 575, "botaoJogar").setInteractive().setScale(2)
 
     // Cria a animação de botaoJogar
