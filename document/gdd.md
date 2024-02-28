@@ -80,14 +80,14 @@ A proposta de valor, é a essência do que um produto ou serviço oferece aos cl
 
 <sub>Figura X - Canvas da Proposta de Valor do Projeto</sub>
 
-<img src=".other/canvas_proposta_valor.png" width="100%">
+<img src=".\other\canvas_proposta_valor.png" width="100%">
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 </div>
 
 Com base no perfil do cliente analisado através do 'Canva Proposition Value', ao observarmos suas dores, ganhos e necessidades, desenvolvemos uma proposta de solução totalmente gamificada. 
 
-Essa proposta visa envolver os jovens, proporcionando-lhes um ambiente divertido que cumpra o principal objetivo do projeto: a conscientização. Destacamos, sobretudo, a necessidade de algo versátil e atrativo para o público-alvo, oferecendo uma experiência única e divertida, a fim de disseminar entre diversas pessoas e conscientizar cada vez mais a população.
+Essa proposta visa envolver os jovens em um ambiente divertido que cumpra o principal objetivo do projeto: a conscientização. Destacamos, sobretudo, a necessidade de algo versátil e atrativo para o público-alvo, oferecendo uma experiência única e divertida, a fim de disseminar entre diversas pessoas e conscientizar cada vez mais a população.
 
 ### 1.1.5. Matriz de Riscos (sprints 1 e 4)
 
@@ -241,7 +241,9 @@ Ao longo do jogo, o Residente é confrontado com uma série de desafios que test
 
 Personagens controláveis referem-se aqueles avatares que são comandados pelo jogador através de comandos de movimento, ações, combate, dentre outros.
 
-O jogo referido neste documento terá apenas um personagem controlável em jogo, porém o jogador poderá selecionar o sexo do protagonista, ou seja, haverá duas opções: O residente médico protagonista masculino e a residente médica protagonista feminina. Não será possível jogar com mais de um personagem controlável no mesmo jogo. O nome do personagem controlável masculino é X e Y, o nome da protagonista feminina. O avatar controlável será um(a) residente médico(a) especializando-se na área de cirurgia plásticas, especialmente em queimaduras. X ou Y é guiado pela Dra. Cristina durante seu expediente, e possui habilidades para atender os pacientes, consultar livros na Biblioteca para adquirir o conhecimento e responder às perguntas no Laboratório para receber o remédio (fictício) necessário para tratar o cliente.
+O jogo referido neste documento terá apenas um personagem controlável em jogo, porém o jogador poderá selecionar o sexo do protagonista, ou seja, haverá duas opções: O residente médico protagonista masculino e a residente médica protagonista feminina. Não será possível jogar com mais de um personagem controlável no mesmo jogo. O nome do personagem controlável masculino é X e Y, o nome da protagonista feminina.
+
+O avatar controlável será um(a) residente médico(a) especializando-se na área de cirurgia plásticas, especialmente em queimaduras. X ou Y é guiado pela Dra. Cristina durante seu expediente, e possui habilidades para atender os pacientes, consultar livros na Biblioteca para adquirir o conhecimento e responder às perguntas no Laboratório para receber o remédio (fictício) necessário para tratar o cliente.
 
 ### 3.2.2. Non-Playable Characters (NPC)
 
@@ -292,7 +294,10 @@ O Residente retorna ao consultório, onde o paciente o espera, para administrar 
 
 ### 3.3.3. Condições climáticas e temporais (sprints 2 e 3)
 
-No jogo, o tempo é um elemento que adiciona diversão e desafio à experiência do jogador. 
+As condições climáticas e temporais de um jogo podem afetar na experiência do usuário em relação ao produto. 
+
+Em nosso jogo, o tempo é um elemento que adiciona diversão e desafio à experiência do jogador.
+
 Um cronômetro é utilizado para medir o tempo que o jogador tem para completar cada ciclo de cuidado com o paciente no pronto-socorro de queimaduras. 
 
 O desafio está em cumprir o máximo de ciclos no tempo estipulado, o que cria uma sensação de urgência e emoção. 
@@ -354,9 +359,7 @@ Figura 1: detalhe da cena da partida do herói para a missão, usando sua nave
 
 ## 3.5. Gameflow (Diagrama de cenas) (sprint 2)
 
-*Posicione aqui seu "storyboard de programação" - o diagrama de cenas do jogo. Indique, por exemplo, como o jogo começa, quais opções o jogador tem, como ele avança nas fases, quais as condições de 'game over', como o jogo reinicia. Seu diagrama deve representar as classes, atributos e métodos usados no jogo.*
-
-Um Diagrama de Cenas é uma ferramenta utilizada para auxiliar na organização do desenvolvimento técnico do jogo, apresentando as cenas do projeto e suas relações com outras cenas, exibindo os caminhos possíveis e bloqueios.
+Um Gameflow (Diagrama de Cenas) é uma ferramenta utilizada para auxiliar na organização do desenvolvimento técnico do jogo, apresentando as cenas do projeto e suas relações com outras cenas, exibindo os caminhos possíveis e bloqueios.
 
 <div align="center">
 
@@ -368,7 +371,9 @@ Um Diagrama de Cenas é uma ferramenta utilizada para auxiliar na organização 
 
 </div>
 
-Ao abrir o menu e clicar no botão “JOGAR”, o jogo iniciará. A tela inicial do jogo se passa no hospital onde chegarão os pacientes a serem orientados, vítimas de queimaduras.
+Nosso [Gameflow](https://miro.com/app/board/uXjVNqYNiJo=/?share_link_id=956847327312) se inicia no Menu do Jogo:
+
+1 - Ao abrir o menu e clicar no botão “JOGAR”, o jogo iniciará. A tela inicial do jogo se passa no hospital onde chegarão os pacientes a serem orientados, vítimas de queimaduras.
 
 <div align="center">
 
@@ -380,7 +385,7 @@ Ao abrir o menu e clicar no botão “JOGAR”, o jogo iniciará. A tela inicial
 
 </div>
 
-No Hall Principal do hospital, o jogador poderá ir para a biblioteca, onde poderá ler livros sobre primeiros socorros, tratamento e prevenção de queimaduras. No entanto, apesar do jogador poder ir à farmácia, ela estará bloqueada, pois nenhum paciente foi atendido.
+2 - No Hall Principal do hospital, o jogador poderá ir para a biblioteca, onde poderá ler livros sobre primeiros socorros, tratamento e prevenção de queimaduras. No entanto, apesar do jogador poder ir à farmácia, ela estará bloqueada, pois nenhum paciente foi atendido.
 
 <div align="center">
 
@@ -392,7 +397,7 @@ No Hall Principal do hospital, o jogador poderá ir para a biblioteca, onde pode
 
 </div>
 
-Após recepcionar o paciente no Hall Principal, o médico se dirigirá a Triagem, onde realizará a triagem do paciente para investigar como o trauma foi causado. 
+3 - Após recepcionar o paciente no Hall Principal, o médico se dirigirá a Triagem, onde realizará a triagem do paciente para investigar como o trauma foi causado. 
 
 <div align="center">
 
@@ -404,7 +409,7 @@ Após recepcionar o paciente no Hall Principal, o médico se dirigirá a Triagem
 
 </div>
 
-Após a triagem, o médico deverá ir à biblioteca para estudar sobre primeiros socorros, métodos de prevenção sobre o caso de seu paciente e mitos a serem desmistificados. 
+4 - Após a triagem, o médico deverá ir à biblioteca para estudar sobre primeiros socorros, métodos de prevenção sobre o caso de seu paciente e mitos a serem desmistificados. 
 
 <div align="center">
 
@@ -416,7 +421,7 @@ Após a triagem, o médico deverá ir à biblioteca para estudar sobre primeiros
 
 </div>
 
-Com o conhecimento adquirido na biblioteca, o médico agora pode ir à farmácia (bloqueada caso não antes realizar a triagem do paciente) e realizar o quiz para aquisição do remédio para tratamento do paciente.
+5 - Com o conhecimento adquirido na biblioteca, o médico agora pode ir à farmácia (bloqueada caso não antes realizar a triagem do paciente) e realizar o quiz para aquisição do remédio para tratamento do paciente.
 
 <div align="center">
 
@@ -428,13 +433,37 @@ Com o conhecimento adquirido na biblioteca, o médico agora pode ir à farmácia
 
 </div>
 
-Adquirindo o remédio, o médico deverá entregá-lo ao paciente, que estará na Sala de Espera, concluindo o ciclo de vida deste NPC no jogo e rendendo pontos ao jogador.
+6 - Adquirindo o remédio, o médico deverá entregá-lo ao paciente, que estará na Sala de Espera, concluindo o ciclo de vida deste NPC no jogo e rendendo pontos ao jogador.
 
 <div align="center">
 
 <sub>Figura X - Sala de Espera</sub>
 
 <img src="./other/sala_espera.png" width="100%">
+
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+
+</div>
+
+7 - É importante notar que na etapa 2, o Jogador tem a opção de seguir um caminho diferente do ideal para o andamento do ciclo de jogo, indo à Biblioteca antes de inicializar o tratamento de um paciente na Triagem.
+
+<div align="center">
+
+<sub>Figura X - Caminho a Biblioteca</sub>
+
+<img src="./other/biblioteca_7.png" width="100%">
+
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+
+</div>
+
+8 - Apesar de ser possível a passagem para a Biblioteca, o Jogador não estará permitido ir à Farmácia, dado que ainda não inicializou o atendimento a nenhum paciente e, portanto, não terá que responder a um Quiz específico.
+
+<div align="center">
+
+<sub>Figura X - Farmácia Bloqueada</sub>
+
+<img src="./other/farmacia_block.png" width="100%">
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
