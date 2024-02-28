@@ -41,22 +41,34 @@
 
 ### 1.1.1. Contexto da indústria (sprints 1 e 4)
 
-A Faculdade de Medicina da USP é uma referência no campo da educação superior, destacando-se no ensino de Medicina no Brasil e na realização de pesquisas de ponta, além de campanhas de conscientização para a população. Competindo com outras instituições renomadas, como UNICAMP, PUC-SP e UNIFESP, a FMUSP se destaca por suas iniciativas inovadoras e seu impacto notável no mercado regional e nacional, especialmente através de suas campanhas e atividades clínicas de alto padrão. Internacionalmente reconhecida, a FMUSP continua a liderar o caminho em pesquisas de vanguarda, abrangendo áreas como cirurgia com células-tronco, desenvolvimento de pele artificial e outras tendências futuras na medicina.
+A Faculdade de Medicina da USP é uma referência no campo da educação superior, destacando-se no ensino de Medicina no Brasil e na realização de pesquisas de ponta, além de campanhas de conscientização para a população. Competindo com outras instituições renomadas, como UNICAMP, PUC-SP e UNIFESP, a FMUSP se destaca por suas iniciativas inovadoras e seu impacto notável no mercado regional e nacional, especialmente através de suas campanhas e atividades clínicas de alto padrão.
+
+Internacionalmente reconhecida, a FMUSP continua a liderar o caminho em pesquisas de vanguarda, abrangendo áreas como cirurgia com células-tronco, desenvolvimento de pele artificial e outras tendências futuras na medicina.
 
 ### 1.1.2. Análise SWOT (sprints 1 e 4)
 
 Uma análise SWOT é uma técnica usada para identificar forças, oportunidades, fraquezas e ameaças para a sua empresa ou até para um projeto específico. Apesar de simples, a análise SWOT é uma ferramenta poderosa para identificar oportunidades de melhoria frente à concorrência.
 
-<img src="./other/analise_swot.png">
+<div align="center">
+
+<sub>Figura X - Canvas da Proposta de Valor do Projeto</sub>
+
+<img src="./other/analise_swot.png" width="100%">
+
+<sup>Fonte: Material produzido pelos autores (2024)</sup></div>
 
 Com a análise SWOT, foi possível observar características importantes, tais como os projetos sociais realizados pela Faculdade de Medicina da USP (FMUSP) e a carência de ferramentas tecnológicas para esses projetos sociais. Associados a esses pontos, destacam-se algumas oportunidades, como o amplo público atendido pela FMUSP e, sobretudo, a crescente digitalização mundial. Nesse contexto, o 'Game' foi desenvolvido com o objetivo de atenuar os pontos fracos, potencializar ainda mais os pontos fortes e aproveitar as oportunidades.
 
 ### 1.1.3. Descrição da Solução Desenvolvida (sprints 1 e 4)
 
 A falta de conscientização sobre prevenção, primeiros socorros e informações inadequadas sobre queimaduras, em especial em populações vulneráveis, influi na alta incidência de queimaduras, que se torna uma das maiores causas de lesões traumáticas no mundo.<br>
+
 São registrados cerca de 1 milhão de novos casos anualmente no Brasil, e acredita-se que 90% das queimaduras seriam evitadas com devida educação e conscientização da população. Grande parte das queimaduras registradas ocorrem em ambiente residencial e em atividades de lazer, abrangendo, em maioria, homens de 20 a 39 anos. <br>
-O game visa conscientizar a população, em especial as vulneráveis, sobre queimaduras, à medida que fornece informações embasadas para estimular a educação de prevenção de queimaduras, além de auxiliar nos primeiros socorros e desmitificar métodos inapropriados de tratamentos. <br>
+
+O game visa conscientizar a população, em especial as vulneráveis, sobre queimaduras, à medida que fornece informações embasadas para estimular a educação de prevenção de queimaduras, além de auxiliar nos primeiros socorros e desmitificar métodos inapropriados de tratamentos.<br>
+
 O game deverá ser acessado pelos smartphones dos estudantes e poderá ser utilizado durante as campanhas de conscientização promovidas pela Faculdade de Medicina da USP ou quando da preferência do usuário. A solução impulsiona os benefícios já fornecidos pelas campanhas de conscientização através de seu aspecto lúdico e divertido de compartilhar informações e combater desinformações. <br>
+
 O critério de sucesso será a satisfação do jogador durante o processo de conscientização através de um game. Para avaliarmos tal critério, uma pesquisa de satisfação será realizada ao final do game, levando em consideração fatores como diversão, jogabilidade e transmissão de conhecimento.
 
 
@@ -64,17 +76,44 @@ O critério de sucesso será a satisfação do jogador durante o processo de con
 
 A proposta de valor, é a essência do que um produto ou serviço oferece aos clientes e como atende às suas necessidades. Desenvolvida em torno do perfil do cliente e da proposta de valor da empresa, a proposta de valor busca alinhar os ganhos desejados, dores enfrentadas e trabalhos a serem realizados pelos clientes com os benefícios oferecidos, problemas resolvidos e produtos/serviços específicos da empresa. Essa ideia foi apresentada por Alexander Osterwalder e sua equipe em seu livro "Value Proposition Design: How to Create Products and Services Customers Want".
 
-<img src="./other/canva_proposta_valor.jpg">
+<div align="center">
 
-Com base no perfil do cliente analisado através do 'Canva Proposition Value', ao observarmos suas dores, ganhos e necessidades, desenvolvemos uma proposta de solução totalmente gamificada. Essa proposta visa envolver os jovens, proporcionando-lhes um ambiente divertido que cumpra o principal objetivo do projeto: a conscientização. Destacamos, sobretudo, a necessidade de algo versátil e atrativo para o público-alvo, oferecendo uma experiência única e divertida, a fim de disseminar entre diversas pessoas e conscientizar cada vez mais a população.
+<sub>Figura X - Canvas da Proposta de Valor do Projeto</sub>
+
+<img src=".other/canvas_proposta_valor.png" width="100%">
+
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+</div>
+
+Com base no perfil do cliente analisado através do 'Canva Proposition Value', ao observarmos suas dores, ganhos e necessidades, desenvolvemos uma proposta de solução totalmente gamificada. 
+
+Essa proposta visa envolver os jovens, proporcionando-lhes um ambiente divertido que cumpra o principal objetivo do projeto: a conscientização. Destacamos, sobretudo, a necessidade de algo versátil e atrativo para o público-alvo, oferecendo uma experiência única e divertida, a fim de disseminar entre diversas pessoas e conscientizar cada vez mais a população.
 
 ### 1.1.5. Matriz de Riscos (sprints 1 e 4)
 
-A Matriz de Riscos, também chamada de Matriz de Probabilidade e Impacto, é uma ferramenta utilizada para avaliar qual a probabilidade de um evento acontecer e qual o impacto que ele teria na empresa ou projeto. A matriz é eficiente quando há a necessidade de priorizar os riscos, sejam eles negativos (as ameaças) ou positivos (as oportunidades), ou seja, analisar e visualizar quais riscos merecem mais atenção no momento, auxiliando na criação de planos de ação para prevenir ou potencializar tal risco. 
-A fim de gerenciar os riscos do nosso produto, a equipe construiu os gráficos (Imagem xx e Imagem yy) que representam nossas ameaças e oportunidades e, contribuem efetivamente para o planejamento de planos de ação.
+A Matriz de Riscos, também chamada de Matriz de Probabilidade e Impacto, é uma ferramenta utilizada para avaliar qual a probabilidade de um evento acontecer e qual o impacto que ele teria na empresa ou projeto.
 
-<img src="./other/matriz_de_riscos.jpg">
-<img src="./other/matriz_de_oportunidades.png">
+A matriz é eficiente quando há a necessidade de priorizar os riscos, sejam eles negativos (as ameaças) ou positivos (as oportunidades), ou seja, analisar e visualizar quais riscos merecem mais atenção no momento, auxiliando na criação de planos de ação para prevenir ou potencializar tal risco. 
+
+A fim de gerenciar os riscos do nosso produto, a equipe construiu os gráficos (Imagem XX e Imagem YY) que representam nossas ameaças e oportunidades e, contribuem efetivamente para o planejamento de planos de ação.
+
+<div align="center">
+
+<sub>Figura 3 - Matriz de Riscos</sub>
+
+<img src="./other/matriz_de_riscos.jpg" width="100%">
+
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+</div>
+
+<div align="center">
+
+<sub>Figura 3 - Matriz de Oportunidades</sub>
+
+<img src="./other/matriz_de_oportunidades.png" width="100%">
+
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+</div>
 
 \# | Plano de ações:
 --- | ---
@@ -187,10 +226,6 @@ Para a concepção do jogo, foram utilizados os seguites jogos como referência 
 
 ## 3.1. Enredo do Jogo (sprints 2 e 3)
 
-*Descreva o enredo/história do jogo, criando contexto para os personagens (seção 3.2) e o mundo do jogo (seção 3.3). Uma boa história costuma ter um arco narrativo de contexto, conflito e resolução. Utilize etapas sequenciais para descrever esta história.* 
-
-*Caso seu jogo não possua enredo/história (ex. jogo Tetris), mencione os motivos de não existir e como o jogador pode se contextualizar com o ambiente do jogo.*
-
 O jogador encarna o papel de Residente, um jovem médico recentemente formado, prestes a iniciar sua jornada no desafiador mundo da medicina. Ao ingressar na equipe do pronto-socorro de queimaduras, ele é guiado pela experiente Dra. Tina, uma figura respeitada no campo da medicina de emergência.
 
 Inicialmente, o Residente é confrontado com situações desafiadoras e momentos de incerteza, onde sua inexperiência se manifesta de maneira evidente. No entanto, à medida que ele se envolve em diagnósticos, tratamentos de emergência e tomadas de decisão rápidas, ele começa a perceber que sua verdadeira jornada como médico está apenas começando.
@@ -204,7 +239,9 @@ Ao longo do jogo, o Residente é confrontado com uma série de desafios que test
 
 ### 3.2.1. Controláveis
 
-Personagens controláveis referem-se aqueles avatares que são comandados pelo jogador através de comandos de movimento, ações, combate, dentre outros. O jogo referido neste documento terá apenas um personagem controlável em jogo, porém o jogador poderá selecionar o sexo do protagonista, ou seja, haverá duas opções: O residente médico protagonista masculino e a residente médica protagonista feminina. Não será possível jogar com mais de um personagem controlável no mesmo jogo. O nome do personagem controlável masculino é X e Y, o nome da protagonista feminina. O avatar controlável será um(a) residente médico(a) especializando-se na área de cirurgia plásticas, especialmente em queimaduras. X ou Y é guiado pela Dra. Cristina durante seu expediente, e possui habilidades para atender os pacientes, consultar livros na Biblioteca para adquirir o conhecimento e responder às perguntas no Laboratório para receber o remédio (fictício) necessário para tratar o cliente.
+Personagens controláveis referem-se aqueles avatares que são comandados pelo jogador através de comandos de movimento, ações, combate, dentre outros.
+
+O jogo referido neste documento terá apenas um personagem controlável em jogo, porém o jogador poderá selecionar o sexo do protagonista, ou seja, haverá duas opções: O residente médico protagonista masculino e a residente médica protagonista feminina. Não será possível jogar com mais de um personagem controlável no mesmo jogo. O nome do personagem controlável masculino é X e Y, o nome da protagonista feminina. O avatar controlável será um(a) residente médico(a) especializando-se na área de cirurgia plásticas, especialmente em queimaduras. X ou Y é guiado pela Dra. Cristina durante seu expediente, e possui habilidades para atender os pacientes, consultar livros na Biblioteca para adquirir o conhecimento e responder às perguntas no Laboratório para receber o remédio (fictício) necessário para tratar o cliente.
 
 ### 3.2.2. Non-Playable Characters (NPC)
 
@@ -219,8 +256,6 @@ Considerando as personagens do game, analise se estas estão alinhadas ao públi
 
 ### 3.3.1. Locações Principais e/ou Mapas (sprints 2 e 3)
 
-*Descreva o ambiente do jogo, em que locais ele ocorre. Ilustre com imagens. Se houverem mapas, posicione-os aqui, descrevendo as áreas em acordo com o enredo. Se houverem fases, descreva-as também em acordo com o enredo (pode ser um jogo de uma fase só). Utilize listas ou tabelas para organizar esta seção. Caso utilize material de terceiros em licença Creative Commons, não deixe de citar os autores/fontes.*
-
 O jogo se passa em um fase única e cíclica composta pelos seguintes ambientes:
 
 Sala de Triagem: Onde os pacientes chegam ao hospital e são inicialmente avaliados pelo jogador, que no papel do médico residente, avalia a gravidade das queimaduras dos pacientes. 
@@ -231,11 +266,16 @@ Biblioteca: Um ambiente onde o jogador pode acessar informações sobre prevenç
 
 Laboratório: Onde o jogador aplica os conhecimentos adquiridos para que consiga o remédio (representativo) correto para que consiga tratar o paciente.
 
-<img src="./other/mapa.jpeg">
+<div align="center">
+
+<sub>Figura X - Mapa do Jogo</sub>
+
+<img src="./other/mapa.jpeg" width="100%">
+
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+</div>
 
 ### 3.3.2. Navegação pelo mundo (sprints 2 e 3)
-
-*Descreva como os personagens se movem no mundo criado e as relações entre as locações – como as áreas/fases são acessadas ou desbloqueadas, o que é necessário para serem acessadas etc. Utilize listas ou tabelas para organizar esta seção.*
 
 O jogador controla o médico residente, utilizando controles direcionais de dispositivos móveis tocando na tela e arrastando o dedo na direção desejada, possibilitando a movimentação de uma área para outra dentro dos limites do hospital e interagindo com possíveis objetos e pacientes por meio de uma colisão.
 
@@ -252,15 +292,28 @@ O Residente retorna ao consultório, onde o paciente o espera, para administrar 
 
 ### 3.3.3. Condições climáticas e temporais (sprints 2 e 3)
 
-*\<opcional\> Descreva diferentes condições de clima que podem afetar o mundo e as fases, se aplicável*
+No jogo, o tempo é um elemento que adiciona diversão e desafio à experiência do jogador. 
+Um cronômetro é utilizado para medir o tempo que o jogador tem para completar cada ciclo de cuidado com o paciente no pronto-socorro de queimaduras. 
 
-*Caso seja relevante, descreva como o tempo passa, se ele é um fator limitante ao jogo (ex. contagem de tempo para terminar uma fase)*
+O desafio está em cumprir o máximo de ciclos no tempo estipulado, o que cria uma sensação de urgência e emoção. 
+
+O jogador é recompensado com pontuações mais altas por sua eficiência e rapidez, incentivando repetições para melhorar o desempenho. No entanto, erros resultam na perda de tempo, tornando essencial tomar decisões cuidadosas e precisas durante o jogo. 
+
+Em resumo, o cronômetro adiciona dinamismo e intensidade à jogabilidade, mantendo os jogadores engajados e focados em suas tarefas.
 
 ### 3.3.4. Concept Art (sprint 2)
 
 *Inclua imagens de Concept Art do jogo que ainda não foram demonstradas em outras seções deste documento. Para cada imagem, coloque legendas, como no exemplo abaixo.*
 
-<img src="../assets/concept1.jpg">
+<div align="center">
+
+<sub>Figura X - Concept Art</sub>
+
+<img src="./assets/concept1.jpg" width="100%">
+
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+
+</div>
 
 Figura 1: detalhe da cena da partida do herói para a missão, usando sua nave
 
@@ -303,6 +356,90 @@ Figura 1: detalhe da cena da partida do herói para a missão, usando sua nave
 
 *Posicione aqui seu "storyboard de programação" - o diagrama de cenas do jogo. Indique, por exemplo, como o jogo começa, quais opções o jogador tem, como ele avança nas fases, quais as condições de 'game over', como o jogo reinicia. Seu diagrama deve representar as classes, atributos e métodos usados no jogo.*
 
+Um Diagrama de Cenas é uma ferramenta utilizada para auxiliar na organização do desenvolvimento técnico do jogo, apresentando as cenas do projeto e suas relações com outras cenas, exibindo os caminhos possíveis e bloqueios.
+
+<div align="center">
+
+<sub>Figura X - Visão geral do Diagrama de Cenas</sub>
+
+<img src="./other/diagrama_geral.png" width="100%">
+
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+
+</div>
+
+Ao abrir o menu e clicar no botão “JOGAR”, o jogo iniciará. A tela inicial do jogo se passa no hospital onde chegarão os pacientes a serem orientados, vítimas de queimaduras.
+
+<div align="center">
+
+<sub>Figura X - Menu do Jogo</sub>
+
+<img src="./other/menu.png" width="100%">
+
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+
+</div>
+
+No Hall Principal do hospital, o jogador poderá ir para a biblioteca, onde poderá ler livros sobre primeiros socorros, tratamento e prevenção de queimaduras. No entanto, apesar do jogador poder ir à farmácia, ela estará bloqueada, pois nenhum paciente foi atendido.
+
+<div align="center">
+
+<sub>Figura X - Hospital</sub>
+
+<img src="./other/hospital.png" width="100%">
+
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+
+</div>
+
+Após recepcionar o paciente no Hall Principal, o médico se dirigirá a Triagem, onde realizará a triagem do paciente para investigar como o trauma foi causado. 
+
+<div align="center">
+
+<sub>Figura X - Triagem</sub>
+
+<img src="./other/triagem.png" width="100%">
+
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+
+</div>
+
+Após a triagem, o médico deverá ir à biblioteca para estudar sobre primeiros socorros, métodos de prevenção sobre o caso de seu paciente e mitos a serem desmistificados. 
+
+<div align="center">
+
+<sub>Figura X - Biblioteca</sub>
+
+<img src="./other/biblioteca.png" width="100%">
+
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+
+</div>
+
+Com o conhecimento adquirido na biblioteca, o médico agora pode ir à farmácia (bloqueada caso não antes realizar a triagem do paciente) e realizar o quiz para aquisição do remédio para tratamento do paciente.
+
+<div align="center">
+
+<sub>Figura X - Farmácia</sub>
+
+<img src="./other/farmacia.png" width="100%">
+
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+
+</div>
+
+Adquirindo o remédio, o médico deverá entregá-lo ao paciente, que estará na Sala de Espera, concluindo o ciclo de vida deste NPC no jogo e rendendo pontos ao jogador.
+
+<div align="center">
+
+<sub>Figura X - Sala de Espera</sub>
+
+<img src="./other/sala_espera.png" width="100%">
+
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+
+</div>
+
 ## 3.6. Regras do jogo (sprint 3)
 
 *Descreva aqui as regras do seu jogo: objetivos/desafios, meios para se conseguir alcançar*
@@ -331,11 +468,14 @@ A primeira versão do jogo possui duas cenas, uma de início e uma de jogo. Amba
 <p align=center style="font-size:1em">Figura 2: Cena de jogo</p> -->
 
 <p align=center style="font-size:1em">Figura 1: Cenas de jogo</p>
+
 <p align="middle">
   <img src="other\sprint_1_item_4.1_files\figura1.png" width="400" />
+
   <img src="other\sprint_1_item_4.1_files\figura2.png" width="400" /> 
+
 </p>
-<p align=center style="font-size:1em">Fonte: Autores</p>
+<p align=center style="font-size:1em">Fonte: Material produzido pelos autores (2024)</p>
 
 A cena de início é uma artimanha de programação e será transformada futuramente em um arquivo JavaScript separado ao adquirirmos o conhecimento para tal. De momento, criamos duas imagens, um layer a frente das outras, e as removemos por um evento acionado pelo clique do mouse no botão “Jogar”.
 <!-- 
@@ -349,7 +489,7 @@ A cena de início é uma artimanha de programação e será transformada futuram
   <img src="other\sprint_1_item_4.1_files\figura3.png" width="400" />
   <img src="other\sprint_1_item_4.1_files\figura4.png" width="400" /> 
 </p>
-<p align=center style="font-size:1em">Fonte: Autores</p>
+<p align=center style="font-size:1em">Fonte: Material produzido pelos autores (2024)</p>
 
 A cena de jogo é composta por duas imagens também, uma simulando o cenário do jogo e outra, o personagem jogável, uma figura de médico. O personagem possui movimento direcional controlado pelas teclas WASD, como será exposto abaixo. Adaptações para os _inputs_ estão listados abaixo.
 
@@ -363,7 +503,7 @@ A cena de jogo é composta por duas imagens também, uma simulando o cenário do
   <img src="other\sprint_1_item_4.1_files\figura5.png" width="400" />
   <img src="other\sprint_1_item_4.1_files\figura6.png" width="100" /> 
 </p>
-<p align=center style="font-size:1em">Fonte: Autores</p>
+<p align=center style="font-size:1em">Fonte: Material produzido pelos autores (2024)</p>
 
 Para iniciar a explicação do código, dentro do arquivo “cena1.js”, carregamos as imagens na função _“preload”_ e as criamos na função _“create”_, como mostrado a seguir.
 
@@ -482,7 +622,7 @@ var config = {
 
 <p align=center style="font-size:1em">Figura 4: Protótipo do Quiz</p>
 <p align=center><img src="other\sprint_1_item_4.1_files\figura7.png" alt="Figura 7" width="400"/></p>
-<p align=center style="font-size:1em">Fonte: Autores</p>
+<p align=center style="font-size:1em">Fonte: Material produzido pelos autores (2024)</p>
 
 ## 4.2. Desenvolvimento básico do jogo (sprint 2)
 
@@ -555,9 +695,47 @@ CASAROTTO,  Camila. Rockcontent. Disponível em: https://rockcontent.com/br/blog
 # <a name="c8"></a>Anexos
 
 ## Ferramentas
-### Notion: https://www.notion.so/invite/e05ef502f25f484e949078ca88fb05c3ef6fb2e6
-Notion foi uma ferramenta auxiliar durante o projeto, ajudando principalmente na organização de tarefas com o modelo Kanban de divisão de tarefas.
-O modelo Kanban consiste na separação das tarefas em três: A fazer, fazendo e feito. Obtendo um melhor controle de todas as tarefas.
+### Kanban
 
-<img src="./other/notion_print.png"/>
+Para organizarmos nosso trabalho, utilizamos a ferramenta Kanban, na aba Projects dentro do GitHub. O modelo Kanban consiste na separação das tarefas a serem realizadas em um projeto em etapas, movendo os cards das tarefas para as seções adequadas. Para nosso projeto, utilizamos as etapas A fazer, Fazendo, Feito e Revisão.
 
+* [Kanban](https://github.com/orgs/Inteli-College/projects/66/views/1)<br>
+
+Esta ferramenta nos oferta uma visão geral do andamento de nosso projeto, além de um acompanhamento individual de cada integrante em relação às tarefas propostas.
+
+### Miro
+
+O website Miro foi utilizado para a concepção gráfica do Diagrama de Cenas.
+
+* [Miro](https://miro.com/app/dashboard/)<br>
+
+Através desta ferramenta, foi possível integrar os esboços das cenas do jogo e definir um fluxo de jogabilidade de maneira gráfica. 
+
+
+### Canva
+
+Foi utilizado o website Canva para o desenvolvimento gráfico da Tabela de Análise SWOT (Item 1.1.2), Matriz de Riscos (Item 1.1.4), Matriz de Oportunidades (Item 1.1.4) e Canva de Proposta de Valor (Item 1.1.5).
+
+* [Canva](https://www.canva.com/)<br>
+
+No Canva, transferimos os atributos específicos das Tabelas e Matrizes para representações gráficas de forma simples e intuitiva.
+
+### Piskel
+
+A ferramenta Piskel foi utilizada para a concepção das Pixel Arts do jogo.
+
+* [Piskel](https://www.piskelapp.com/)<br>
+
+Através do Piskel, desenvolvemos o cenário, decorações e personagens do nosso projeto.
+
+### Krita
+
+Utilizamos o software Krita para realizarmos os esboços de nossos personagens, cenários e itens do jogo.
+
+* [Krita](https://krita.org/en/)<br>
+
+### Tiled
+
+O software Tiled foi utilizado na integração dos elementos do cenário, tais como paredes, piso e decorações.
+
+* [Tiled](https://www.mapeditor.org/)<br>
