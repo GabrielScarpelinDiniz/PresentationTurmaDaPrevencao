@@ -132,15 +132,20 @@
 ## 1.2. Requisitos do Projeto (sprints 1 e 2)
 
 &nbsp;&nbsp;&nbsp;&nbsp;Esta seção tem como objetivo fornecer uma visão abrangente e detalhada dos requisitos essenciais que orientarão o desenvolvimento do projeto. Aqui, serão delineadas as funcionalidades, características e restrições fundamentais para garantir a compreensão unificada entre a equipe de desenvolvimento e o cliente.
+
+<div align="center">
+<sub>Tabela X - Requisitos do cliente</sub>
+</div>
+
 \# | Requisito do cliente 
 --- | ---
-1|Ensinar quais são as 3 camadas da pele;
+1|Ensinar quais são as três camadas da pele;
 2|Falar sobre a espessura das camadas da pele;
 3|Definir os diferentes tipos de queimadura;
 4|Dizer por que uma queimadura profunda não dói;
 5|O jogo deve ser compatível com mobile;
 6|A palheta de cores deve ser da FMUSP e do INTELI;
-7|Tempo limitado apenas com a intenção de capacitação, experiência única, 15’;
+7|Tempo limitado apenas com a intenção de capacitação, sendo uma experiência única, de aproximadamente 15 minutos;
 8|Jogo tem de atrair o interesse dos alunos;
 9|Deve ter recompensas, pontuação, recordes;
 10|Pode ser expandido para fora das escolas;
@@ -169,10 +174,14 @@
 17 |Ter uma grande sala com foco no personagem, utilizando dinâmica de câmeras;
 18 |Caixa de diálogo com NPC para instruir o personagem principal sobre quais serão seus próximos passos.
 
+&nbsp;&nbsp;&nbsp;&nbsp;Listar esses pontos em uma tabela auxiliou o grupo a se organizar melhor para a produção de requisitos alinhados com os do cliente e a ter um maior entendimento do projeto, visando sempre o atenditmento dos pedidos do cliente. E, ao mesmo tempo, ajudou o grupo a organizar as tarefas de forma eficiente, ou seja, abrangendo todos os pontos listados e propotcionando uma divisão igualitária dessas tarefas.
 
 ## 1.3. Público-alvo do Projeto (sprint 2)
 
-&nbsp;&nbsp;&nbsp;&nbsp;O nosso jogo é pensado e destinado a adolescentes e jovens adultos que fazem parte de comunidades e regiões carentes com acesso limitado à educação, visto que o objetivo principal do projeto é a conscientização e 90% dos incidentes envolvendo queimaduras são reportados em locais onde a população é leiga. O enfoque em jovens facilita a assimilação de informações e a capacitação da população em curto e longo prazo. 
+&nbsp;&nbsp;&nbsp;&nbsp;De acordo com Kotler (2000), também conhecido como o “pai do marketing”, o público alvo é o grupo de consumidores que possui necessidades semelhantes àquelas que a empresa atende. O público alvo pode ser dividido em diversos fatores, como geografia, demografia, psicografia e comportamental. 
+O nosso jogo é pensado e destinado à adolescentes e jovens adultos que fazem parte de comunidades e regiões carentes com acesso limitado à educação, visto que o objetivo principal do projeto é a conscientização e, 90% dos incidentes envolvendo queimaduras são reportados em locais onde a população é leiga. 
+Portanto, para que a magnitude da influência e impacto gerado do nosso produto seja positiva, definimos o público alvo levando em consideração os aspectos demográficos, especificamente a idade, renda e educação. 
+Isso posto, entendemos que a definição adequada do público alvo aumenta a magnitude da influência e impacto gerado, o que vai de acordo com o nosso objetivo principal.
 
 # <a name="c2"></a>2. Visão Geral do Jogo (sprint 2)
 
@@ -946,6 +955,13 @@ OSTERWALDER, Alex. Value Proposition Design: How to Create Products and Services
 MINETTO, Bianca. Ferramentas da qualidade. Disponível em: https://ferramentasdaqualidade.org/matriz-de-riscos-matriz-de-probabilidade-e-impacto/. Acesso em: 16 Fev. 2024 <br>
 
 CASAROTTO,  Camila. Rockcontent. Disponível em: https://rockcontent.com/br/blog/como-fazer-uma-analise-swot/. Acesso em: 16 fev. 2024 <br>
+
+JRS CONSULTORIA (AL). Público-alvo: tudo o que você precisa saber sobre o assunto!. Maceió, 2022. Disponível em: https://www.jrsconsultoria.com.br/2022/07/publico-alvo-tudo-o-que-voce-precisa-saber-sobre-o-assunto/. Acesso em: 27 fev. 2024.
+
+KOTLER, Philip; ARMSTRONG, Gary. Princípios de Marketing. 15. ed. [S. l.]: Pearson Universidades, 2014. 800 p. ISBN 978-8543004471.
+
+
+
 
 # <a name="c8"></a>Anexos
 

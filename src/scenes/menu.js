@@ -45,8 +45,21 @@ class MenuPrincipal extends Phaser.Scene {
       this.scene.start("hospital")
       this.scene.stop('menu')
       this.input.setDefaultCursor("default") // Retorno do cursor do mouse para setinha
+      this.openFullScreen()
     })
   }
 
   update() {}
+  openFullScreen() {
+    const page = document.documentElement
+    if (page.requestFullscreen){
+        page.requestFullscreen()
+    } else if (page.mozRequestFullScreen){
+        page.mozRequestFullScreen()
+    } else if (page.webkitRequestFullscreen){
+        page.webkitRequestFullscreen()
+    } else if (page.msRequestFullscreen){
+        page.msRequestFullscreen()
+    }
+  }
 }
