@@ -178,7 +178,13 @@
 
 ## 1.3. Público-alvo do Projeto (sprint 2)
 
-&nbsp;&nbsp;&nbsp;&nbsp;O nosso jogo é pensado e destinado a adolescentes e jovens adultos que fazem parte de comunidades e regiões carentes com acesso limitado à educação, visto que o objetivo principal do projeto é a conscientização e 90% dos incidentes envolvendo queimaduras são reportados em locais onde a população é leiga. O enfoque em jovens facilita a assimilação de informações e a capacitação da população em curto e longo prazo. 
+&nbsp;&nbsp;&nbsp;&nbsp;De acordo com Kotler (2000), também conhecido como o “pai do marketing”, o público alvo é o grupo de consumidores que possui necessidades semelhantes àquelas que a empresa atende. O público alvo pode ser dividido em diversos fatores, como geografia, demografia, psicografia e comportamental. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;O nosso jogo é pensado e destinado à adolescentes e jovens adultos que fazem parte de comunidades e regiões carentes com acesso limitado à educação, visto que o objetivo principal do projeto é a conscientização e, 90% dos incidentes envolvendo queimaduras são reportados em locais onde a população é leiga. 
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;Portanto, para que a magnitude da influência e impacto gerado do nosso produto seja positiva, definimos o público alvo levando em consideração os aspectos demográficos, especificamente a idade, renda e educação. 
+Isso posto, entendemos que a definição adequada do público alvo aumenta a magnitude da influência e impacto gerado, o que vai de acordo com o nosso objetivo principal.
 
 # <a name="c2"></a>2. Visão Geral do Jogo (sprint 2)
 
@@ -296,7 +302,7 @@ O jogo referido neste documento terá apenas um personagem controlável em jogo,
 
 ### 3.3.3. Condições climáticas e temporais (sprints 2 e 3)
 
-No jogo, o tempo é um elemento que adiciona diversão e desafio à experiência do jogador. 
+&nbsp;&nbsp;&nbsp;&nbsp;No jogo, o tempo é um elemento que adiciona diversão e desafio à experiência do jogador. 
 Um cronômetro é utilizado para medir o tempo que o jogador tem para completar cada ciclo de cuidado com o paciente no pronto-socorro de queimaduras. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;O desafio está em cumprir o máximo de ciclos no tempo estipulado, o que cria uma sensação de urgência e emoção. 
@@ -360,109 +366,109 @@ Figura 1: detalhe da cena da partida do herói para a missão, usando sua nave
 
 *Posicione aqui seu "storyboard de programação" - o diagrama de cenas do jogo. Indique, por exemplo, como o jogo começa, quais opções o jogador tem, como ele avança nas fases, quais as condições de 'game over', como o jogo reinicia. Seu diagrama deve representar as classes, atributos e métodos usados no jogo.*
 
-Um Diagrama de Cenas é uma ferramenta utilizada para auxiliar na organização do desenvolvimento técnico do jogo, apresentando as cenas do projeto e suas relações com outras cenas, exibindo os caminhos possíveis e bloqueios.
+&nbsp;&nbsp;&nbsp;&nbsp;Um Diagrama de Cenas é uma ferramenta utilizada para auxiliar na organização do desenvolvimento técnico do jogo, apresentando as cenas do projeto e suas relações com outras cenas, exibindo os caminhos possíveis e bloqueios.
 
 <div align="center">
 
 <sub>Figura X - Visão geral do Diagrama de Cenas</sub>
 
-<img src="./other/diagrama_geral.png" width="100%">
+<img src="./other/diagrama_geral.png" width="80%">
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
 </div>
 
-1 - Ao abrir o menu e clicar no botão “JOGAR”, o jogo iniciará. A tela inicial do jogo se passa no hospital onde chegarão os pacientes a serem orientados, vítimas de queimaduras.
+&nbsp;&nbsp;&nbsp;&nbsp;1 - Ao abrir o menu e clicar no botão “JOGAR”, o jogo iniciará. A tela inicial do jogo se passa no hospital onde chegarão os pacientes a serem orientados, vítimas de queimaduras.
 
 <div align="center">
 
 <sub>Figura X - Menu do Jogo</sub>
 
-<img src="./other/menu.png" width="100%">
+<img src="./other/menu.png" width="80%">
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
 </div>
 
-2 - No Hall Principal do Hospital, o jogador poderá ir para a Biblioteca, onde poderá ler livros sobre primeiros socorros, tratamento e prevenção de queimaduras. No entanto, apesar do jogador poder ir à farmácia, ela estará bloqueada, pois nenhum paciente foi atendido.
+&nbsp;&nbsp;&nbsp;&nbsp;2 - No Hall Principal do Hospital, o jogador poderá ir para a Biblioteca, onde poderá ler livros sobre primeiros socorros, tratamento e prevenção de queimaduras. No entanto, apesar do jogador poder ir à farmácia, ela estará bloqueada, pois nenhum paciente foi atendido.
 
 <div align="center">
 
 <sub>Figura X - Hospital</sub>
 
-<img src="./other/hospital.png" width="100%">
+<img src="./other/hospital.png" width="80%">
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
 </div>
 
-3 - Após recepcionar o paciente no Hall Principal, o médico se dirigirá a Triagem, onde realizará a triagem do paciente para investigar como o trauma foi causado. 
+&nbsp;&nbsp;&nbsp;&nbsp;3 - Após recepcionar o paciente no Hall Principal, o médico se dirigirá a Triagem, onde realizará a triagem do paciente para investigar como o trauma foi causado. 
 
 <div align="center">
 
 <sub>Figura X - Triagem</sub>
 
-<img src="./other/triagem.png" width="100%">
+<img src="./other/triagem.png" width="80%">
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
 </div>
 
-4 - Após a triagem, o médico deverá ir à biblioteca para estudar sobre primeiros socorros, métodos de prevenção sobre o caso de seu paciente e mitos a serem desmistificados. 
+&nbsp;&nbsp;&nbsp;&nbsp;4 - Após a triagem, o médico deverá ir à biblioteca para estudar sobre primeiros socorros, métodos de prevenção sobre o caso de seu paciente e mitos a serem desmistificados. 
 
 <div align="center">
 
 <sub>Figura X - Biblioteca</sub>
 
-<img src="./other/biblioteca.png" width="100%">
+<img src="./other/biblioteca.png" width="80%">
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
 </div>
 
-5 - Com o conhecimento adquirido na biblioteca, o médico agora pode ir à farmácia (bloqueada caso não antes realizar a triagem do paciente) e realizar o quiz para aquisição do remédio para tratamento do paciente.
+&nbsp;&nbsp;&nbsp;&nbsp;5 - Com o conhecimento adquirido na biblioteca, o médico agora pode ir à farmácia (bloqueada caso não antes realizar a triagem do paciente) e realizar o quiz para aquisição do remédio para tratamento do paciente.
 
 <div align="center">
 
 <sub>Figura X - Farmácia</sub>
 
-<img src="./other/farmacia.png" width="100%">
+<img src="./other/farmacia.png" width="80%">
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
 </div>
 
-6 - Adquirindo o remédio, o médico deverá entregá-lo ao paciente, que estará na Sala de Espera, concluindo o ciclo de vida deste NPC no jogo e rendendo pontos ao jogador.
+&nbsp;&nbsp;&nbsp;&nbsp;6 - Adquirindo o remédio, o médico deverá entregá-lo ao paciente, que estará na Sala de Espera, concluindo o ciclo de vida deste NPC no jogo e rendendo pontos ao jogador.
 
 <div align="center">
 
 <sub>Figura X - Sala de Espera</sub>
 
-<img src="./other/sala_espera.png" width="100%">
+<img src="./other/sala_espera.png" width="80%">
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
 </div>
 
-7 - É importante notar que na etapa 2, o Jogador tem a opção de seguir um caminho diferente do ideal para o andamento do ciclo de jogo, indo à Biblioteca antes de inicializar o tratamento de um paciente na Triagem.
+&nbsp;&nbsp;&nbsp;&nbsp;7 - É importante notar que na etapa 2, o Jogador tem a opção de seguir um caminho diferente do ideal para o andamento do ciclo de jogo, indo à Biblioteca antes de inicializar o tratamento de um paciente na Triagem.
 
 <div align="center">
 
 <sub>Figura X - Caminho a Biblioteca</sub>
 
-<img src="./other/biblioteca_7.png" width="100%">
+<img src="./other/biblioteca_7.png" width="80%">
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
 </div>
 
-8 - Apesar de ser possível a passagem para a Biblioteca, o Jogador não estará permitido ir à Farmácia, dado que ainda não inicializou o atendimento a nenhum paciente e, portanto, não terá que responder a um Quiz específico.
+&nbsp;&nbsp;&nbsp;&nbsp;8 - Apesar de ser possível a passagem para a Biblioteca, o Jogador não estará permitido ir à Farmácia, dado que ainda não inicializou o atendimento a nenhum paciente e, portanto, não terá que responder a um Quiz específico.
 
 <div align="center">
 
 <sub>Figura X - Farmácia Bloqueada</sub>
 
-<img src="./other/farmacia_block.png" width="100%">
+<img src="./other/farmacia_block.png" width="80%">
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
@@ -945,13 +951,20 @@ O que poderia melhorar no jogo? | A responsividade do personagem aos controles, 
 
 # <a name="c7"></a>7. Referências (sprint 5)
 
-Abaixo, estão contidas as referências utilizadas para embasar todo o projeto, visando entender todo o cenário, não só do cliente, como do mercado ao qual o projeto está inserida.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Abaixo, estão contidas as referências utilizadas para embasar todo o projeto, visando entender todo o cenário, não só do cliente, como do mercado ao qual o projeto está inserida.<br>
 
 OSTERWALDER, Alex. Value Proposition Design: How to Create Products and Services Customers Want. 1st Edition. Wiley, 2014. <br>
 
 MINETTO, Bianca. Ferramentas da qualidade. Disponível em: https://ferramentasdaqualidade.org/matriz-de-riscos-matriz-de-probabilidade-e-impacto/. Acesso em: 16 Fev. 2024 <br>
 
 CASAROTTO,  Camila. Rockcontent. Disponível em: https://rockcontent.com/br/blog/como-fazer-uma-analise-swot/. Acesso em: 16 fev. 2024 <br>
+
+JRS CONSULTORIA (AL). Público-alvo: tudo o que você precisa saber sobre o assunto!. Maceió, 2022. Disponível em: https://www.jrsconsultoria.com.br/2022/07/publico-alvo-tudo-o-que-voce-precisa-saber-sobre-o-assunto/. Acesso em: 27 fev. 2024.
+
+KOTLER, Philip; ARMSTRONG, Gary. Princípios de Marketing. 15. ed. [S. l.]: Pearson Universidades, 2014. 800 p. ISBN 978-8543004471.
+
+
+
 
 # <a name="c8"></a>Anexos
 
