@@ -310,19 +310,45 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 ### 3.3.4. Concept Art (sprint 2)
 
-*Inclua imagens de Concept Art do jogo que ainda não foram demonstradas em outras seções deste documento. Para cada imagem, coloque legendas, como no exemplo abaixo.*
+As Concepts Arts são desenhos desenvolvidos com o objetivo de conceituar elementos do jogo como personagens, itens, cenários, etc.
+
+Para nosso jogo, as concepts arts desenvolvidas estão listadas abaixo:
 
 <div align="center">
 
-<sub>Figura X - Concept Art</sub>
+<sub>Figura X - Concept Art do Mapa</sub>
 
-<img src="./assets/concept1.jpg" width="100%">
+<img src="./other/MapConceptArt.png" width="80%">
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
 </div>
 
-Figura 1: detalhe da cena da partida do herói para a missão, usando sua nave
+Figura 1: Concept Art representando o Mapa do Jogo.
+
+<div align="center">
+
+<sub>Figura X - Concept Art do Prontuário</sub>
+
+<img src="./other/ConceptArt_Prontuario.jpeg" width="80%">
+
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+
+</div>
+
+Figura 2: Concept Art do prontuário dos pacientes.
+
+<div align="center">
+
+<sub>Figura X - Concept Art da Página de Livros</sub>
+
+<img src="./other/ConceptArt_Livro.jpg" width="80%">
+
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+
+</div>
+
+Figura 3: Concept Art da Página do Livro.
 
 ### 3.3.5. Trilha sonora (sprint 3)
 
@@ -960,7 +986,7 @@ JRS CONSULTORIA (AL). Público-alvo: tudo o que você precisa saber sobre o assu
 
 KOTLER, Philip; ARMSTRONG, Gary. Princípios de Marketing. 15. ed. [S. l.]: Pearson Universidades, 2014. 800 p. ISBN 978-8543004471.
 
-
+EIKO, Julia. Revospace. Disponível em: https://revospace.com.br/artigo/o-que-e-concept-art/ Acesso em 28 fev. 2024.
 
 
 # <a name="c8"></a>Anexos
