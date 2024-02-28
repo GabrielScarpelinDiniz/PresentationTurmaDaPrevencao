@@ -85,7 +85,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;Com base no perfil do cliente analisado através do 'Canva Proposition Value', ao observarmos suas dores, ganhos e necessidades, desenvolvemos uma proposta de solução totalmente gamificada. 
 
-Essa proposta visa envolver os jovens, proporcionando-lhes um ambiente divertido que cumpra o principal objetivo do projeto: a conscientização. Destacamos, sobretudo, a necessidade de algo versátil e atrativo para o público-alvo, oferecendo uma experiência única e divertida, a fim de disseminar entre diversas pessoas e conscientizar cada vez mais a população.
+&nbsp;&nbsp;&nbsp;&nbsp;Essa proposta visa envolver os jovens, proporcionando-lhes um ambiente divertido que cumpra o principal objetivo do projeto: a conscientização. Destacamos, sobretudo, a necessidade de algo versátil e atrativo para o público-alvo, oferecendo uma experiência única e divertida, a fim de disseminar entre diversas pessoas e conscientizar cada vez mais a população.
 
 ### 1.1.5. Matriz de Riscos (sprints 1 e 4)
 
@@ -169,6 +169,7 @@ Essa proposta visa envolver os jovens, proporcionando-lhes um ambiente divertido
 17 |Ter uma grande sala com foco no personagem, utilizando dinâmica de câmeras;
 18 |Caixa de diálogo com NPC para instruir o personagem principal sobre quais serão seus próximos passos.
 
+&nbsp;&nbsp;&nbsp;&nbsp;Listar esses pontos em uma tabela auxiliou o grupo a se organizar melhor para a produção de requisitos alinhados com os do cliente e a ter um maior entendimento do projeto, visando sempre o atenditmento dos pedidos do cliente. E, ao mesmo tempo, ajudou o grupo a organizar as tarefas de forma eficiente, ou seja, abrangendo todos os pontos listados e propotcionando uma divisão igualitária dessas tarefas.
 
 ## 1.3. Público-alvo do Projeto (sprint 2)
 
