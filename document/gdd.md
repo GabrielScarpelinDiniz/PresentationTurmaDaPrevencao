@@ -11,8 +11,6 @@
 #### Leonardo Casal Andriolo
 #### Matheus Jorge Rosa
 #### Pietra Pasqualini Batista
-#### Rodrigo Natan Erlich
-
 
 ## Sumário
 
@@ -41,13 +39,13 @@
 
 ### 1.1.1. Contexto da indústria (sprints 1 e 4)
 
-A Faculdade de Medicina da USP é uma referência no campo da educação superior, destacando-se no ensino de Medicina no Brasil e na realização de pesquisas de ponta, além de campanhas de conscientização para a população. Competindo com outras instituições renomadas, como UNICAMP, PUC-SP e UNIFESP, a FMUSP se destaca por suas iniciativas inovadoras e seu impacto notável no mercado regional e nacional, especialmente através de suas campanhas e atividades clínicas de alto padrão.
+&nbsp;&nbsp;&nbsp;&nbsp;A Faculdade de Medicina da USP é uma referência no campo da educação superior, destacando-se no ensino de Medicina no Brasil e na realização de pesquisas de ponta, além de campanhas de conscientização para a população. Competindo com outras instituições renomadas, como UNICAMP, PUC-SP e UNIFESP, a FMUSP se destaca por suas iniciativas inovadoras e seu impacto notável no mercado regional e nacional, especialmente através de suas campanhas e atividades clínicas de alto padrão.
 
-Internacionalmente reconhecida, a FMUSP continua a liderar o caminho em pesquisas de vanguarda, abrangendo áreas como cirurgia com células-tronco, desenvolvimento de pele artificial e outras tendências futuras na medicina.
+&nbsp;&nbsp;&nbsp;&nbsp;Internacionalmente reconhecida, a FMUSP continua a liderar o caminho em pesquisas de vanguarda, abrangendo áreas como cirurgia com células-tronco, desenvolvimento de pele artificial e outras tendências futuras na medicina.
 
 ### 1.1.2. Análise SWOT (sprints 1 e 4)
 
-Uma análise SWOT é uma técnica usada para identificar forças, oportunidades, fraquezas e ameaças para a sua empresa ou até para um projeto específico. Apesar de simples, a análise SWOT é uma ferramenta poderosa para identificar oportunidades de melhoria frente à concorrência.
+&nbsp;&nbsp;&nbsp;&nbsp;Uma análise SWOT é uma técnica usada para identificar forças, oportunidades, fraquezas e ameaças para a sua empresa ou até para um projeto específico. Apesar de simples, a análise SWOT é uma ferramenta poderosa para identificar oportunidades de melhoria frente à concorrência.
 
 <div align="center">
 
@@ -57,24 +55,24 @@ Uma análise SWOT é uma técnica usada para identificar forças, oportunidades,
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup></div>
 
-Com a análise SWOT, foi possível observar características importantes, tais como os projetos sociais realizados pela Faculdade de Medicina da USP (FMUSP) e a carência de ferramentas tecnológicas para esses projetos sociais. Associados a esses pontos, destacam-se algumas oportunidades, como o amplo público atendido pela FMUSP e, sobretudo, a crescente digitalização mundial. Nesse contexto, o 'Game' foi desenvolvido com o objetivo de atenuar os pontos fracos, potencializar ainda mais os pontos fortes e aproveitar as oportunidades.
+&nbsp;&nbsp;&nbsp;&nbsp;Com a análise SWOT, foi possível observar características importantes, tais como os projetos sociais realizados pela Faculdade de Medicina da USP (FMUSP) e a carência de ferramentas tecnológicas para esses projetos sociais. Associados a esses pontos, destacam-se algumas oportunidades, como o amplo público atendido pela FMUSP e, sobretudo, a crescente digitalização mundial. Nesse contexto, o 'Game' foi desenvolvido com o objetivo de atenuar os pontos fracos, potencializar ainda mais os pontos fortes e aproveitar as oportunidades.
 
 ### 1.1.3. Descrição da Solução Desenvolvida (sprints 1 e 4)
 
-A falta de conscientização sobre prevenção, primeiros socorros e informações inadequadas sobre queimaduras, em especial em populações vulneráveis, influi na alta incidência de queimaduras, que se torna uma das maiores causas de lesões traumáticas no mundo.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A falta de conscientização sobre prevenção, primeiros socorros e informações inadequadas sobre queimaduras, em especial em populações vulneráveis, influi na alta incidência de queimaduras, que se torna uma das maiores causas de lesões traumáticas no mundo.<br>
 
-São registrados cerca de 1 milhão de novos casos anualmente no Brasil, e acredita-se que 90% das queimaduras seriam evitadas com devida educação e conscientização da população. Grande parte das queimaduras registradas ocorrem em ambiente residencial e em atividades de lazer, abrangendo, em maioria, homens de 20 a 39 anos. <br>
+&nbsp;&nbsp;&nbsp;&nbsp;São registrados cerca de 1 milhão de novos casos anualmente no Brasil, e acredita-se que 90% das queimaduras seriam evitadas com devida educação e conscientização da população. Grande parte das queimaduras registradas ocorrem em ambiente residencial e em atividades de lazer, abrangendo, em maioria, homens de 20 a 39 anos. <br>
 
-O game visa conscientizar a população, em especial as vulneráveis, sobre queimaduras, à medida que fornece informações embasadas para estimular a educação de prevenção de queimaduras, além de auxiliar nos primeiros socorros e desmitificar métodos inapropriados de tratamentos.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;O game visa conscientizar a população, em especial as vulneráveis, sobre queimaduras, à medida que fornece informações embasadas para estimular a educação de prevenção de queimaduras, além de auxiliar nos primeiros socorros e desmitificar métodos inapropriados de tratamentos.<br>
 
-O game deverá ser acessado pelos smartphones dos estudantes e poderá ser utilizado durante as campanhas de conscientização promovidas pela Faculdade de Medicina da USP ou quando da preferência do usuário. A solução impulsiona os benefícios já fornecidos pelas campanhas de conscientização através de seu aspecto lúdico e divertido de compartilhar informações e combater desinformações. <br>
+&nbsp;&nbsp;&nbsp;&nbsp;O game deverá ser acessado pelos smartphones dos estudantes e poderá ser utilizado durante as campanhas de conscientização promovidas pela Faculdade de Medicina da USP ou quando da preferência do usuário. A solução impulsiona os benefícios já fornecidos pelas campanhas de conscientização através de seu aspecto lúdico e divertido de compartilhar informações e combater desinformações. <br>
 
-O critério de sucesso será a satisfação do jogador durante o processo de conscientização através de um game. Para avaliarmos tal critério, uma pesquisa de satisfação será realizada ao final do game, levando em consideração fatores como diversão, jogabilidade e transmissão de conhecimento.
+&nbsp;&nbsp;&nbsp;&nbsp;O critério de sucesso será a satisfação do jogador durante o processo de conscientização através de um game. Para avaliarmos tal critério, uma pesquisa de satisfação será realizada ao final do game, levando em consideração fatores como diversão, jogabilidade e transmissão de conhecimento.
 
 
 ### 1.1.4. Proposta de Valor (sprints 1 e 4)
 
-A proposta de valor, é a essência do que um produto ou serviço oferece aos clientes e como atende às suas necessidades. Desenvolvida em torno do perfil do cliente e da proposta de valor da empresa, a proposta de valor busca alinhar os ganhos desejados, dores enfrentadas e trabalhos a serem realizados pelos clientes com os benefícios oferecidos, problemas resolvidos e produtos/serviços específicos da empresa. Essa ideia foi apresentada por Alexander Osterwalder e sua equipe em seu livro "Value Proposition Design: How to Create Products and Services Customers Want".
+&nbsp;&nbsp;&nbsp;&nbsp;A proposta de valor, é a essência do que um produto ou serviço oferece aos clientes e como atende às suas necessidades. Desenvolvida em torno do perfil do cliente e da proposta de valor da empresa, a proposta de valor busca alinhar os ganhos desejados, dores enfrentadas e trabalhos a serem realizados pelos clientes com os benefícios oferecidos, problemas resolvidos e produtos/serviços específicos da empresa. Essa ideia foi apresentada por Alexander Osterwalder e sua equipe em seu livro "Value Proposition Design: How to Create Products and Services Customers Want".
 
 <div align="center">
 
@@ -85,17 +83,17 @@ A proposta de valor, é a essência do que um produto ou serviço oferece aos cl
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 </div>
 
-Com base no perfil do cliente analisado através do 'Canva Proposition Value', ao observarmos suas dores, ganhos e necessidades, desenvolvemos uma proposta de solução totalmente gamificada. 
+&nbsp;&nbsp;&nbsp;&nbsp;Com base no perfil do cliente analisado através do 'Canva Proposition Value', ao observarmos suas dores, ganhos e necessidades, desenvolvemos uma proposta de solução totalmente gamificada. 
 
-Essa proposta visa envolver os jovens, proporcionando-lhes um ambiente divertido que cumpra o principal objetivo do projeto: a conscientização. Destacamos, sobretudo, a necessidade de algo versátil e atrativo para o público-alvo, oferecendo uma experiência única e divertida, a fim de disseminar entre diversas pessoas e conscientizar cada vez mais a população.
+&nbsp;&nbsp;&nbsp;&nbsp;Essa proposta visa envolver os jovens, proporcionando-lhes um ambiente divertido que cumpra o principal objetivo do projeto: a conscientização. Destacamos, sobretudo, a necessidade de algo versátil e atrativo para o público-alvo, oferecendo uma experiência única e divertida, a fim de disseminar entre diversas pessoas e conscientizar cada vez mais a população.
 
 ### 1.1.5. Matriz de Riscos (sprints 1 e 4)
 
-A Matriz de Riscos, também chamada de Matriz de Probabilidade e Impacto, é uma ferramenta utilizada para avaliar qual a probabilidade de um evento acontecer e qual o impacto que ele teria na empresa ou projeto.
+&nbsp;&nbsp;&nbsp;&nbsp;A Matriz de Riscos, também chamada de Matriz de Probabilidade e Impacto, é uma ferramenta utilizada para avaliar qual a probabilidade de um evento acontecer e qual o impacto que ele teria na empresa ou projeto.
 
-A matriz é eficiente quando há a necessidade de priorizar os riscos, sejam eles negativos (as ameaças) ou positivos (as oportunidades), ou seja, analisar e visualizar quais riscos merecem mais atenção no momento, auxiliando na criação de planos de ação para prevenir ou potencializar tal risco. 
+&nbsp;&nbsp;&nbsp;&nbsp;A matriz é eficiente quando há a necessidade de priorizar os riscos, sejam eles negativos (as ameaças) ou positivos (as oportunidades), ou seja, analisar e visualizar quais riscos merecem mais atenção no momento, auxiliando na criação de planos de ação para prevenir ou potencializar tal risco. 
 
-A fim de gerenciar os riscos do nosso produto, a equipe construiu os gráficos (Imagem XX e Imagem YY) que representam nossas ameaças e oportunidades e, contribuem efetivamente para o planejamento de planos de ação.
+&nbsp;&nbsp;&nbsp;&nbsp;A fim de gerenciar os riscos do nosso produto, a equipe construiu os gráficos (Imagem XX e Imagem YY) que representam nossas ameaças e oportunidades e, contribuem efetivamente para o planejamento de planos de ação.
 
 <div align="center">
 
@@ -133,7 +131,7 @@ A fim de gerenciar os riscos do nosso produto, a equipe construiu os gráficos (
 
 ## 1.2. Requisitos do Projeto (sprints 1 e 2)
 
- Esta seção tem como objetivo fornecer uma visão abrangente e detalhada dos requisitos essenciais que orientarão o desenvolvimento do projeto. Aqui, serão delineadas as funcionalidades, características e restrições fundamentais para garantir a compreensão unificada entre a equipe de desenvolvimento e o cliente.
+&nbsp;&nbsp;&nbsp;&nbsp;Esta seção tem como objetivo fornecer uma visão abrangente e detalhada dos requisitos essenciais que orientarão o desenvolvimento do projeto. Aqui, serão delineadas as funcionalidades, características e restrições fundamentais para garantir a compreensão unificada entre a equipe de desenvolvimento e o cliente.
 \# | Requisito do cliente 
 --- | ---
 1|Ensinar quais são as 3 camadas da pele;
@@ -174,43 +172,43 @@ A fim de gerenciar os riscos do nosso produto, a equipe construiu os gráficos (
 
 ## 1.3. Público-alvo do Projeto (sprint 2)
 
-O nosso jogo é pensado e destinado a adolescentes e jovens adultos que fazem parte de comunidades e regiões carentes com acesso limitado à educação, visto que o objetivo principal do projeto é a conscientização e 90% dos incidentes envolvendo queimaduras são reportados em locais onde a população é leiga. O enfoque em jovens facilita a assimilação de informações e a capacitação da população em curto e longo prazo. 
+&nbsp;&nbsp;&nbsp;&nbsp;O nosso jogo é pensado e destinado a adolescentes e jovens adultos que fazem parte de comunidades e regiões carentes com acesso limitado à educação, visto que o objetivo principal do projeto é a conscientização e 90% dos incidentes envolvendo queimaduras são reportados em locais onde a população é leiga. O enfoque em jovens facilita a assimilação de informações e a capacitação da população em curto e longo prazo. 
 
 # <a name="c2"></a>2. Visão Geral do Jogo (sprint 2)
 
 ## 2.1. Objetivos do Jogo (sprint 2)
 
-O objetivo de um jogo geralmente é a meta que os jogadores devem alcançar para vencer ou progredir. Pode envolver completar tarefas específicas, resolver quebra-cabeças, derrotar inimigos, acumular pontos, entre outros desafios.
+&nbsp;&nbsp;&nbsp;&nbsp;O objetivo de um jogo geralmente é a meta que os jogadores devem alcançar para vencer ou progredir. Pode envolver completar tarefas específicas, resolver quebra-cabeças, derrotar inimigos, acumular pontos, entre outros desafios.
 
-Para o nosso jogo, o objetivo é atender o máximo de pacientes em um tempo determinado passando por um ciclo de estudo e prática, obtendo assim uma pontuação final que pode ser superada a cada novo ciclo. Isso incentiva que os jogadores equilibram eficiência no atendimento e aprimoramento de habilidades através da aprendizagem.
+&nbsp;&nbsp;&nbsp;&nbsp;Para o nosso jogo, o objetivo é atender o máximo de pacientes em um tempo determinado passando por um ciclo de estudo e prática, obtendo assim uma pontuação final que pode ser superada a cada novo ciclo. Isso incentiva que os jogadores equilibram eficiência no atendimento e aprimoramento de habilidades através da aprendizagem.
 
 ## 2.2. Características do Jogo (sprint 2)
 
 ### 2.2.1. Gênero do Jogo (sprint 2)
 
-O gênero se refere à classificação ou categoria que descreve o estilo e a mecânica de jogo predominantes. Cada gênero tem características específicas que definem como os jogadores interagem com o jogo e o que podem esperar dele em termos de jogabilidade, narrativa e objetivos.
+&nbsp;&nbsp;&nbsp;&nbsp;O gênero se refere à classificação ou categoria que descreve o estilo e a mecânica de jogo predominantes. Cada gênero tem características específicas que definem como os jogadores interagem com o jogo e o que podem esperar dele em termos de jogabilidade, narrativa e objetivos.
 
-O nosso jogo simula a atuação de um médico na triagem dos pacientes, portanto seu gênero é simulação. Como tal, o jogo oferece uma experiência imersiva e educativa, onde os jogadores podem aprender sobre prevenção de queimaduras e sobre o que deve-se ou não fazer logo após se queimar.
+&nbsp;&nbsp;&nbsp;&nbsp;O nosso jogo simula a atuação de um médico na triagem dos pacientes, portanto seu gênero é simulação. Como tal, o jogo oferece uma experiência imersiva e educativa, onde os jogadores podem aprender sobre prevenção de queimaduras e sobre o que deve-se ou não fazer logo após se queimar.
 
 ### 2.2.2. Plataforma do Jogo (sprint 2)
 
-A plataforma de um jogo se refere ao ambiente ou sistema no qual o jogo é executado. Isso inclui dispositivos como computadores, consoles de videogame, smartphones, tablets, entre outros, e também o sistema operacional ou plataforma online que suporta a execução do jogo.
+&nbsp;&nbsp;&nbsp;&nbsp;A plataforma de um jogo se refere ao ambiente ou sistema no qual o jogo é executado. Isso inclui dispositivos como computadores, consoles de videogame, smartphones, tablets, entre outros, e também o sistema operacional ou plataforma online que suporta a execução do jogo.
 
-O jogo será desenvolvido para dispositivos móveis, como smartphones e tablets, e oferecerá uma experiência acessível e portátil. A interface será otimizada para telas sensíveis ao toque, permitindo aos jogadores interagirem intuitivamente com os elementos do jogo. Além disso, a natureza móvel desses dispositivos permitirá que os jogadores acessem o jogo em qualquer lugar, tornando-o conveniente para ser usado na educação.
+&nbsp;&nbsp;&nbsp;&nbsp;O jogo será desenvolvido para dispositivos móveis, como smartphones e tablets, e oferecerá uma experiência acessível e portátil. A interface será otimizada para telas sensíveis ao toque, permitindo aos jogadores interagirem intuitivamente com os elementos do jogo. Além disso, a natureza móvel desses dispositivos permitirá que os jogadores acessem o jogo em qualquer lugar, tornando-o conveniente para ser usado na educação.
 
-A aplicação também poderá ser acessado via web, oferecendo flexibilidade adicional aos jogadores, que poderão jogar diretamente de seus navegadores sem a necessidade de downloads adicionais. Isso tornará o jogo acessível a uma ampla gama de dispositivos, garantindo que mais pessoas possam participar e aprender sobre a importância da prevenção de queimaduras.
+&nbsp;&nbsp;&nbsp;&nbsp;A aplicação também poderá ser acessado via web, oferecendo flexibilidade adicional aos jogadores, que poderão jogar diretamente de seus navegadores sem a necessidade de downloads adicionais. Isso tornará o jogo acessível a uma ampla gama de dispositivos, garantindo que mais pessoas possam participar e aprender sobre a importância da prevenção de queimaduras.
 
 ### 2.2.3. Número de jogadores (sprint 2)
 
-O número de jogadores de um jogo refere-se à quantidade de participantes que podem jogar simultaneamente ou de forma sequencial. Esse aspecto é fundamental na definição da dinâmica do jogo, determinando se é um jogo para um único jogador, para dois jogadores, ou para múltiplos jogadores. O número de jogadores pode influenciar elementos como competição, colaboração, estratégia e interação social dentro do jogo.
+&nbsp;&nbsp;&nbsp;&nbsp;O número de jogadores de um jogo refere-se à quantidade de participantes que podem jogar simultaneamente ou de forma sequencial. Esse aspecto é fundamental na definição da dinâmica do jogo, determinando se é um jogo para um único jogador, para dois jogadores, ou para múltiplos jogadores. O número de jogadores pode influenciar elementos como competição, colaboração, estratégia e interação social dentro do jogo.
 
-No contexto do nosso jogo sobre prevenção de queimaduras, a opção de um jogador oferecerá uma experiência individualizada e centrada no aprendizado. Isso permitirá um foco maior na absorção de informações e na prática de habilidades específicas, como identificar riscos de queimaduras e tomar decisões preventivas adequadas. Além disso, jogar sozinho pode facilitar a personalização da experiência de acordo com o ritmo e as necessidades individuais do jogador.
+&nbsp;&nbsp;&nbsp;&nbsp;No contexto do nosso jogo sobre prevenção de queimaduras, a opção de um jogador oferecerá uma experiência individualizada e centrada no aprendizado. Isso permitirá um foco maior na absorção de informações e na prática de habilidades específicas, como identificar riscos de queimaduras e tomar decisões preventivas adequadas. Além disso, jogar sozinho pode facilitar a personalização da experiência de acordo com o ritmo e as necessidades individuais do jogador.
 
 ### 2.2.4. Títulos semelhantes e inspirações (sprint 2)
 
-Títulos semelhantes e inspirações de um jogo referem-se a outros jogos que compartilham características, temas, mecânicas de jogo ou atmosfera semelhantes com o jogo que está sendo desenvolvido. Ao analisar títulos semelhantes, podemos identificar elementos que foram bem-sucedidos em outros jogos e incorporá-los ao nosso próprio projeto. Já as inspirações nos forneceram uma fonte de criatividade e direção para o desenvolvimento do jogo.
+&nbsp;&nbsp;&nbsp;&nbsp;Títulos semelhantes e inspirações de um jogo referem-se a outros jogos que compartilham características, temas, mecânicas de jogo ou atmosfera semelhantes com o jogo que está sendo desenvolvido. Ao analisar títulos semelhantes, podemos identificar elementos que foram bem-sucedidos em outros jogos e incorporá-los ao nosso próprio projeto. Já as inspirações nos forneceram uma fonte de criatividade e direção para o desenvolvimento do jogo.
 
-Para a concepção do jogo, foram utilizados os seguites jogos como referência de jogabilidade e design:
+&nbsp;&nbsp;&nbsp;&nbsp;Para a concepção do jogo, foram utilizados os seguites jogos como referência de jogabilidade e design:
 
 * [Overcooked](https://www.team17.com/games/overcooked/)<br>
 * [Hospital Questiona](https://metodoquestiona.com.br/)<br>
@@ -226,45 +224,45 @@ Para a concepção do jogo, foram utilizados os seguites jogos como referência 
 
 ## 3.1. Enredo do Jogo (sprints 2 e 3)
 
-O jogador encarna o papel de Residente, um jovem médico recentemente formado, prestes a iniciar sua jornada no desafiador mundo da medicina. Ao ingressar na equipe do pronto-socorro de queimaduras, ele é guiado pela experiente Dra. Tina, uma figura respeitada no campo da medicina de emergência.
+&nbsp;&nbsp;&nbsp;&nbsp;O jogador encarna o papel de Residente, um jovem médico recentemente formado, prestes a iniciar sua jornada no desafiador mundo da medicina. Ao ingressar na equipe do pronto-socorro de queimaduras, ele é guiado pela experiente Dra. Tina, uma figura respeitada no campo da medicina de emergência.
 
-Inicialmente, o Residente é confrontado com situações desafiadoras e momentos de incerteza, onde sua inexperiência se manifesta de maneira evidente. No entanto, à medida que ele se envolve em diagnósticos, tratamentos de emergência e tomadas de decisão rápidas, ele começa a perceber que sua verdadeira jornada como médico está apenas começando.
+&nbsp;&nbsp;&nbsp;&nbsp;Inicialmente, o Residente é confrontado com situações desafiadoras e momentos de incerteza, onde sua inexperiência se manifesta de maneira evidente. No entanto, à medida que ele se envolve em diagnósticos, tratamentos de emergência e tomadas de decisão rápidas, ele começa a perceber que sua verdadeira jornada como médico está apenas começando.
 
-Ao longo do jogo, o Residente é confrontado com uma série de desafios que testam suas habilidades técnicas, sua eficiência e sua ética . Ele se encontra diante de pacientes cujas vidas dependem de suas decisões, exigindo coragem e determinação para superar obstáculos e salvar vidas.
+&nbsp;&nbsp;&nbsp;&nbsp;Ao longo do jogo, o Residente é confrontado com uma série de desafios que testam suas habilidades técnicas, sua eficiência e sua ética . Ele se encontra diante de pacientes cujas vidas dependem de suas decisões, exigindo coragem e determinação para superar obstáculos e salvar vidas.
 
-À medida que o Residente avança em sua jornada, ele não apenas ganha confiança em suas habilidades clínicas, mas também cresce como profissional. Ele aprende lições importantes sobre a prevenção de queimaduras e o domínio sobre os procedimentos de primeiros socorros.
+&nbsp;&nbsp;&nbsp;&nbsp;À medida que o Residente avança em sua jornada, ele não apenas ganha confiança em suas habilidades clínicas, mas também cresce como profissional. Ele aprende lições importantes sobre a prevenção de queimaduras e o domínio sobre os procedimentos de primeiros socorros.
 
 
 ## 3.2. Personagens (sprints 2 e 3)
 
 ### 3.2.1. Controláveis
 
-Personagens controláveis referem-se aqueles avatares que são comandados pelo jogador através de comandos de movimento, ações, combate, dentre outros.
+&nbsp;&nbsp;&nbsp;&nbsp;Personagens controláveis referem-se aqueles avatares que são comandados pelo jogador através de comandos de movimento, ações, combate, dentre outros.
 
-O jogo referido neste documento terá apenas um personagem controlável em jogo, porém o jogador poderá selecionar o sexo do protagonista, ou seja, haverá duas opções: O residente médico protagonista masculino e a residente médica protagonista feminina. Não será possível jogar com mais de um personagem controlável no mesmo jogo. O nome do personagem controlável masculino é X e Y, o nome da protagonista feminina. O avatar controlável será um(a) residente médico(a) especializando-se na área de cirurgia plásticas, especialmente em queimaduras. X ou Y é guiado pela Dra. Cristina durante seu expediente, e possui habilidades para atender os pacientes, consultar livros na Biblioteca para adquirir o conhecimento e responder às perguntas no Laboratório para receber o remédio (fictício) necessário para tratar o cliente.
+&nbsp;&nbsp;&nbsp;&nbsp;O jogo referido neste documento terá apenas um personagem controlável em jogo, porém o jogador poderá selecionar o sexo do protagonista, ou seja, haverá duas opções: O residente médico protagonista masculino e a residente médica protagonista feminina. Não será possível jogar com mais de um personagem controlável no mesmo jogo. O nome do personagem controlável masculino é X e Y, o nome da protagonista feminina. O avatar controlável será um(a) residente médico(a) especializando-se na área de cirurgia plásticas, especialmente em queimaduras. X ou Y é guiado pela Dra. Cristina durante seu expediente, e possui habilidades para atender os pacientes, consultar livros na Biblioteca para adquirir o conhecimento e responder às perguntas no Laboratório para receber o remédio (fictício) necessário para tratar o cliente.
 
 ### 3.2.2. Non-Playable Characters (NPC)
 
 
-Personagens não controláveis (NPCs) são avatares os quais o jogador não possui controle direto, portanto não comandam seus movimentos e ações específicas. Em nosso projeto, haverá vários NPCs, dos quais 6 representarão os pacientes a serem atendidos pelo jogador através do personagem principal e a um será a Dra. Cristina, NPC responsável por guiar o jogador sobre o fluxo de jogabilidade e tutoriais em pontos específicos.
+&nbsp;&nbsp;&nbsp;&nbsp;Personagens não controláveis (NPCs) são avatares os quais o jogador não possui controle direto, portanto não comandam seus movimentos e ações específicas. Em nosso projeto, haverá vários NPCs, dos quais 6 representarão os pacientes a serem atendidos pelo jogador através do personagem principal e a um será a Dra. Cristina, NPC responsável por guiar o jogador sobre o fluxo de jogabilidade e tutoriais em pontos específicos.
 
 ### 3.2.3. Diversidade e Representatividade dos Personagens
 
-Considerando as personagens do game, analise se estas estão alinhadas ao público-alvo do jogo (seção 1.3), e compare-as dentro da realidade da sociedade brasileira. Por fim, discorra sobre qual é o impacto esperado da escolha dessas personagens.
+&nbsp;&nbsp;&nbsp;&nbsp;Considerando as personagens do game, analise se estas estão alinhadas ao público-alvo do jogo (seção 1.3), e compare-as dentro da realidade da sociedade brasileira. Por fim, discorra sobre qual é o impacto esperado da escolha dessas personagens.
 
 ## 3.3. Mundo do jogo (sprints 2 e 3)
 
 ### 3.3.1. Locações Principais e/ou Mapas (sprints 2 e 3)
 
-O jogo se passa em um fase única e cíclica composta pelos seguintes ambientes:
+&nbsp;&nbsp;&nbsp;&nbsp;O jogo se passa em um fase única e cíclica composta pelos seguintes ambientes:
 
-Sala de Triagem: Onde os pacientes chegam ao hospital e são inicialmente avaliados pelo jogador, que no papel do médico residente, avalia a gravidade das queimaduras dos pacientes. 
+&nbsp;&nbsp;&nbsp;&nbsp;Sala de Triagem: Onde os pacientes chegam ao hospital e são inicialmente avaliados pelo jogador, que no papel do médico residente, avalia a gravidade das queimaduras dos pacientes. 
 
-Consultório: Após a triagem, o paciente se desloca para o consultório, onde aguarda o médico voltar com seu tratamento.
+&nbsp;&nbsp;&nbsp;&nbsp;Consultório: Após a triagem, o paciente se desloca para o consultório, onde aguarda o médico voltar com seu tratamento.
 
-Biblioteca: Um ambiente onde o jogador pode acessar informações sobre prevenção de queimaduras e procedimentos de primeiros socorros de acordo com o paciente que está atendendo.
+&nbsp;&nbsp;&nbsp;&nbsp;Biblioteca: Um ambiente onde o jogador pode acessar informações sobre prevenção de queimaduras e procedimentos de primeiros socorros de acordo com o paciente que está atendendo.
 
-Laboratório: Onde o jogador aplica os conhecimentos adquiridos para que consiga o remédio (representativo) correto para que consiga tratar o paciente.
+&nbsp;&nbsp;&nbsp;&nbsp;Farmácia: Onde o jogador aplica os conhecimentos adquiridos para que consiga o remédio (representativo) correto para que consiga tratar o paciente.
 
 <div align="center">
 
@@ -277,29 +275,29 @@ Laboratório: Onde o jogador aplica os conhecimentos adquiridos para que consiga
 
 ### 3.3.2. Navegação pelo mundo (sprints 2 e 3)
 
-O jogador controla o médico residente, utilizando controles direcionais de dispositivos móveis tocando na tela e arrastando o dedo na direção desejada, possibilitando a movimentação de uma área para outra dentro dos limites do hospital e interagindo com possíveis objetos e pacientes por meio de uma colisão.
+&nbsp;&nbsp;&nbsp;&nbsp;O jogador controla o médico residente, utilizando controles direcionais de dispositivos móveis tocando na tela e arrastando o dedo na direção desejada, possibilitando a movimentação de uma área para outra dentro dos limites do hospital e interagindo com possíveis objetos e pacientes por meio de uma colisão.
 
-No jogo, o acesso às diferentes salas e ambientes é automático e não requer desbloqueio. No entanto, para interagir com objetos e pacientes e acessar certas funcionalidades, existem condições específicas a serem cumpridas.
+&nbsp;&nbsp;&nbsp;&nbsp;No jogo, o acesso às diferentes salas e ambientes é automático e não requer desbloqueio. No entanto, para interagir com objetos e pacientes e acessar certas funcionalidades, existem condições específicas a serem cumpridas.
 
-Na sala de triagem, o jogador pode se mover livremente e deve se aproximar de um paciente para visualizar e avaliar seu prontuário. Após a avaliação, o paciente é transferido automaticamente para o consultório.
+&nbsp;&nbsp;&nbsp;&nbsp;Na sala de triagem, o jogador pode se mover livremente e deve se aproximar de um paciente para visualizar e avaliar seu prontuário. Após a avaliação, o paciente é transferido automaticamente para o consultório.
 
-A Biblioteca está disponível para o Residente a qualquer momento. Para acessar as informações, basta colidir com uma estante. O conteúdo da Biblioteca permanece o mesmo, independente do paciente sendo atendido.
+&nbsp;&nbsp;&nbsp;&nbsp;A Biblioteca está disponível para o Residente a qualquer momento. Para acessar as informações, basta colidir com uma estante. O conteúdo da Biblioteca permanece o mesmo, independente do paciente sendo atendido.
 
-No laboratório, o Residente deve colidir com um objeto para iniciar um jogo de perguntas. As perguntas variam de acordo com o histórico do paciente, tornando essa funcionalidade disponível apenas após a triagem. Ao responder corretamente, o jogador recebe uma pílula de tratamento.
+&nbsp;&nbsp;&nbsp;&nbsp;No laboratório, o Residente deve colidir com um objeto para iniciar um jogo de perguntas. As perguntas variam de acordo com o histórico do paciente, tornando essa funcionalidade disponível apenas após a triagem. Ao responder corretamente, o jogador recebe uma pílula de tratamento.
 
-O Residente retorna ao consultório, onde o paciente o espera, para administrar o tratamento após identificar a medicação correta. Esse procedimento só é possível se o médico tiver triado o paciente corretamente e recebido a medicação após o quiz.
+&nbsp;&nbsp;&nbsp;&nbsp;O Residente retorna ao consultório, onde o paciente o espera, para administrar o tratamento após identificar a medicação correta. Esse procedimento só é possível se o médico tiver triado o paciente corretamente e recebido a medicação após o quiz.
 
 
 ### 3.3.3. Condições climáticas e temporais (sprints 2 e 3)
 
-No jogo, o tempo é um elemento que adiciona diversão e desafio à experiência do jogador. 
+&nbsp;&nbsp;&nbsp;&nbsp;No jogo, o tempo é um elemento que adiciona diversão e desafio à experiência do jogador. 
 Um cronômetro é utilizado para medir o tempo que o jogador tem para completar cada ciclo de cuidado com o paciente no pronto-socorro de queimaduras. 
 
-O desafio está em cumprir o máximo de ciclos no tempo estipulado, o que cria uma sensação de urgência e emoção. 
+&nbsp;&nbsp;&nbsp;&nbsp;O desafio está em cumprir o máximo de ciclos no tempo estipulado, o que cria uma sensação de urgência e emoção. 
 
-O jogador é recompensado com pontuações mais altas por sua eficiência e rapidez, incentivando repetições para melhorar o desempenho. No entanto, erros resultam na perda de tempo, tornando essencial tomar decisões cuidadosas e precisas durante o jogo. 
+&nbsp;&nbsp;&nbsp;&nbsp;O jogador é recompensado com pontuações mais altas por sua eficiência e rapidez, incentivando repetições para melhorar o desempenho. No entanto, erros resultam na perda de tempo, tornando essencial tomar decisões cuidadosas e precisas durante o jogo. 
 
-Em resumo, o cronômetro adiciona dinamismo e intensidade à jogabilidade, mantendo os jogadores engajados e focados em suas tarefas.
+&nbsp;&nbsp;&nbsp;&nbsp;Em resumo, o cronômetro adiciona dinamismo e intensidade à jogabilidade, mantendo os jogadores engajados e focados em suas tarefas.
 
 ### 3.3.4. Concept Art (sprint 2)
 
@@ -356,7 +354,7 @@ Figura 1: detalhe da cena da partida do herói para a missão, usando sua nave
 
 *Posicione aqui seu "storyboard de programação" - o diagrama de cenas do jogo. Indique, por exemplo, como o jogo começa, quais opções o jogador tem, como ele avança nas fases, quais as condições de 'game over', como o jogo reinicia. Seu diagrama deve representar as classes, atributos e métodos usados no jogo.*
 
-Um Diagrama de Cenas é uma ferramenta utilizada para auxiliar na organização do desenvolvimento técnico do jogo, apresentando as cenas do projeto e suas relações com outras cenas, exibindo os caminhos possíveis e bloqueios.
+&nbsp;&nbsp;&nbsp;&nbsp;Um Diagrama de Cenas é uma ferramenta utilizada para auxiliar na organização do desenvolvimento técnico do jogo, apresentando as cenas do projeto e suas relações com outras cenas, exibindo os caminhos possíveis e bloqueios.
 
 <div align="center">
 
@@ -368,7 +366,7 @@ Um Diagrama de Cenas é uma ferramenta utilizada para auxiliar na organização 
 
 </div>
 
-Ao abrir o menu e clicar no botão “JOGAR”, o jogo iniciará. A tela inicial do jogo se passa no hospital onde chegarão os pacientes a serem orientados, vítimas de queimaduras.
+&nbsp;&nbsp;&nbsp;&nbsp;Ao abrir o menu e clicar no botão “JOGAR”, o jogo iniciará. A tela inicial do jogo se passa no hospital onde chegarão os pacientes a serem orientados, vítimas de queimaduras.
 
 <div align="center">
 
@@ -380,7 +378,7 @@ Ao abrir o menu e clicar no botão “JOGAR”, o jogo iniciará. A tela inicial
 
 </div>
 
-No Hall Principal do hospital, o jogador poderá ir para a biblioteca, onde poderá ler livros sobre primeiros socorros, tratamento e prevenção de queimaduras. No entanto, apesar do jogador poder ir à farmácia, ela estará bloqueada, pois nenhum paciente foi atendido.
+&nbsp;&nbsp;&nbsp;&nbsp;No Hall Principal do hospital, o jogador poderá ir para a biblioteca, onde poderá ler livros sobre primeiros socorros, tratamento e prevenção de queimaduras. No entanto, apesar do jogador poder ir à farmácia, ela estará bloqueada, pois nenhum paciente foi atendido.
 
 <div align="center">
 
@@ -392,7 +390,7 @@ No Hall Principal do hospital, o jogador poderá ir para a biblioteca, onde pode
 
 </div>
 
-Após recepcionar o paciente no Hall Principal, o médico se dirigirá a Triagem, onde realizará a triagem do paciente para investigar como o trauma foi causado. 
+&nbsp;&nbsp;&nbsp;&nbsp;Após recepcionar o paciente no Hall Principal, o médico se dirigirá a Triagem, onde realizará a triagem do paciente para investigar como o trauma foi causado. 
 
 <div align="center">
 
@@ -404,7 +402,7 @@ Após recepcionar o paciente no Hall Principal, o médico se dirigirá a Triagem
 
 </div>
 
-Após a triagem, o médico deverá ir à biblioteca para estudar sobre primeiros socorros, métodos de prevenção sobre o caso de seu paciente e mitos a serem desmistificados. 
+&nbsp;&nbsp;&nbsp;&nbsp;Logo depois da triagem, o médico deverá ir à biblioteca para estudar sobre primeiros socorros, métodos de prevenção sobre o caso de seu paciente e mitos a serem desmistificados. 
 
 <div align="center">
 
@@ -416,7 +414,7 @@ Após a triagem, o médico deverá ir à biblioteca para estudar sobre primeiros
 
 </div>
 
-Com o conhecimento adquirido na biblioteca, o médico agora pode ir à farmácia (bloqueada caso não antes realizar a triagem do paciente) e realizar o quiz para aquisição do remédio para tratamento do paciente.
+&nbsp;&nbsp;&nbsp;&nbsp;Com o conhecimento adquirido na biblioteca, o médico agora pode ir à farmácia (bloqueada caso não antes realizar a triagem do paciente) e realizar o quiz para aquisição do remédio para tratamento do paciente.
 
 <div align="center">
 
@@ -428,7 +426,7 @@ Com o conhecimento adquirido na biblioteca, o médico agora pode ir à farmácia
 
 </div>
 
-Adquirindo o remédio, o médico deverá entregá-lo ao paciente, que estará na Sala de Espera, concluindo o ciclo de vida deste NPC no jogo e rendendo pontos ao jogador.
+&nbsp;&nbsp;&nbsp;&nbsp;Adquirindo o remédio, o médico deverá entregá-lo ao paciente, que estará na Sala de Espera, concluindo o ciclo de vida deste NPC no jogo e rendendo pontos ao jogador.
 
 <div align="center">
 
@@ -460,7 +458,7 @@ Adquirindo o remédio, o médico deverá entregá-lo ao paciente, que estará na
 
 ## 4.1. Desenvolvimento preliminar do jogo (sprint 1)
 
-A primeira versão do jogo possui duas cenas, uma de início e uma de jogo. Ambas possuem arte gráfica provisória e foram desenvolvidas com o intuito de serem apresentadas na reunião com o parceiro ao final do Sprint 1.
+&nbsp;&nbsp;&nbsp;&nbsp;A primeira versão do jogo possui duas cenas, uma de início e uma de jogo. Ambas possuem arte gráfica provisória e foram desenvolvidas com o intuito de serem apresentadas na reunião com o parceiro ao final do Sprint 1.
 
 <!-- <p align=center><img src="other\sprint_1_item_4.1_files\figura1.png" alt="Figura 1" width="400"/></p>
 <p align=center style="font-size:1em">Figura 1: Cena de início</p>
@@ -477,7 +475,7 @@ A primeira versão do jogo possui duas cenas, uma de início e uma de jogo. Amba
 </p>
 <p align=center style="font-size:1em">Fonte: Material produzido pelos autores (2024)</p>
 
-A cena de início é uma artimanha de programação e será transformada futuramente em um arquivo JavaScript separado ao adquirirmos o conhecimento para tal. De momento, criamos duas imagens, um layer a frente das outras, e as removemos por um evento acionado pelo clique do mouse no botão “Jogar”.
+&nbsp;&nbsp;&nbsp;&nbsp;A cena de início é uma artimanha de programação e será transformada futuramente em um arquivo JavaScript separado ao adquirirmos o conhecimento para tal. De momento, criamos duas imagens, um layer a frente das outras, e as removemos por um evento acionado pelo clique do mouse no botão “Jogar”.
 <!-- 
 <p align=center><img src="other\sprint_1_item_4.1_files\figura3.png" alt="Figura 3" width="400"/></p>
 <p align=center style="font-size:1em">Figura 3: Fundo da Cena de início</p>
@@ -491,7 +489,7 @@ A cena de início é uma artimanha de programação e será transformada futuram
 </p>
 <p align=center style="font-size:1em">Fonte: Material produzido pelos autores (2024)</p>
 
-A cena de jogo é composta por duas imagens também, uma simulando o cenário do jogo e outra, o personagem jogável, uma figura de médico. O personagem possui movimento direcional controlado pelas teclas WASD, como será exposto abaixo. Adaptações para os _inputs_ estão listados abaixo.
+&nbsp;&nbsp;&nbsp;&nbsp;A cena de jogo é composta por duas imagens também, uma simulando o cenário do jogo e outra, o personagem jogável, uma figura de médico. O personagem possui movimento direcional controlado pelas teclas WASD, como será exposto abaixo. Adaptações para os _inputs_ estão listados abaixo.
 
 <!-- <p align=center><img src="other\sprint_1_item_4.1_files\figura5.png" alt="Figura 5" width="400"/></p>
 <p align=center style="font-size:1em">Figura 5: Imagem do Cenário</p>
@@ -505,7 +503,7 @@ A cena de jogo é composta por duas imagens também, uma simulando o cenário do
 </p>
 <p align=center style="font-size:1em">Fonte: Material produzido pelos autores (2024)</p>
 
-Para iniciar a explicação do código, dentro do arquivo “cena1.js”, carregamos as imagens na função _“preload”_ e as criamos na função _“create”_, como mostrado a seguir.
+&nbsp;&nbsp;&nbsp;&nbsp;Para iniciar a explicação do código, dentro do arquivo “cena1.js”, carregamos as imagens na função _“preload”_ e as criamos na função _“create”_, como mostrado a seguir.
 
 ```js
 function preload() {
@@ -528,7 +526,7 @@ function create () {
     medico = this.add.image(400, 300, 'medico');    // Cria e posiciona o Medico
     medico.setFlip(true, false);                    // Ajusta a orientação do Medico
 ```
-Após o carregamento das imagens da cena do menu, configuramos uma série de eventos que ajustam o comportamento da imagem da setinha ao passar sobre o botão "Jogar" e o que ocorre ao clicá-lo.
+&nbsp;&nbsp;&nbsp;&nbsp;Após o carregamento das imagens da cena do menu, configuramos uma série de eventos que ajustam o comportamento da imagem da setinha ao passar sobre o botão "Jogar" e o que ocorre ao clicá-lo.
 ```js
 // Ajuste visual da imagem do mouse para fornecer feedback que o botão jogar é interativo
     botaoJogar.on("pointerover", () => {        // Evento de passar o mouse sobre o botaoJogar
@@ -545,7 +543,7 @@ Após o carregamento das imagens da cena do menu, configuramos uma série de eve
         this.input.setDefaultCursor("default"); // Retorno do cursor do mouse para setinha
     });
 ```
-Após o clique do botão jogar e remoção dos elementos da cena inicial, foram implementados os controles básicos de movimento para o personagem utilizando as teclas WASD do teclado. O código da movimentação começou com a definição de um objeto para cada tecla na função _“create”_. Por exemplo, o objeto “keyA” recebeu o _input_ da tecla “A” do teclado, como visto abaixo. 
+&nbsp;&nbsp;&nbsp;&nbsp;Após o clique do botão jogar e remoção dos elementos da cena inicial, foram implementados os controles básicos de movimento para o personagem utilizando as teclas WASD do teclado. O código da movimentação começou com a definição de um objeto para cada tecla na função _“create”_. Por exemplo, o objeto “keyA” recebeu o _input_ da tecla “A” do teclado, como visto abaixo. 
 ```js
     // Inicializa as variáveis para movimentação do personagem
     keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A); 
@@ -553,7 +551,7 @@ Após o clique do botão jogar e remoção dos elementos da cena inicial, foram 
     keyS = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S); // encontram-se na linha 115000 do arquivo "phaser.js"
     keyD = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D);
 ```
-Posteriormente, na função _“update”_, implementamos uma lógica para atualizar a posição do médico um número de _pixels_ ao acionar cada tecla individualmente. Foi criada uma variável chamada _pixelMove_ do tipo _const_ para ajustar um número fixo de _pixels_ que a figura do médico deve mover ao receber o _input_ de cada tecla. Um detalhe adicional é a mudança de orientação da figura do personagem ao acionar as teclas de movimentação do eixo horizontal, teclas “A” e “D”. Vale ressaltar que, por conta de utilizarmos apenas o condicional _if_ na notação do _“if/else”_, ela torna-se inclusiva, ou seja, é possível clicar em mais de uma tecla ao mesmo tempo, possibilitando o movimento diagonal.
+&nbsp;&nbsp;&nbsp;&nbsp;Posteriormente, na função _“update”_, implementamos uma lógica para atualizar a posição do médico um número de _pixels_ ao acionar cada tecla individualmente. Foi criada uma variável chamada _pixelMove_ do tipo _const_ para ajustar um número fixo de _pixels_ que a figura do médico deve mover ao receber o _input_ de cada tecla. Um detalhe adicional é a mudança de orientação da figura do personagem ao acionar as teclas de movimentação do eixo horizontal, teclas “A” e “D”. Vale ressaltar que, por conta de utilizarmos apenas o condicional _if_ na notação do _“if/else”_, ela torna-se inclusiva, ou seja, é possível clicar em mais de uma tecla ao mesmo tempo, possibilitando o movimento diagonal.
 ```js
     // Mapeamento de Inputs (Normalizar o movimento diagonal futuramente)
     if (keyA.isDown) {
@@ -571,7 +569,7 @@ Posteriormente, na função _“update”_, implementamos uma lógica para atual
         medico.y -= pixelMove;
     }
 ```
-Como o personagem não possui física ou colisão, é possível movimentá-lo para fora da cena do hospital. Com o intuito de evitar esse comportamento, foi implementado provisoriamente o código a seguir que reposiciona-o de volta à cena sempre que atingir uma borda.
+&nbsp;&nbsp;&nbsp;&nbsp;Como o personagem não possui física ou colisão, é possível movimentá-lo para fora da cena do hospital. Com o intuito de evitar esse comportamento, foi implementado provisoriamente o código a seguir que reposiciona-o de volta à cena sempre que atingir uma borda.
 ```js
     // Reposiciona o objeto medico de volta ao mapa (Temporário antes de implementar colisão)
     if (medico.x > config.width) {
@@ -587,7 +585,7 @@ Como o personagem não possui física ou colisão, é possível movimentá-lo pa
         medico.y = config.height - 20;
     }
 ```
-O final do código apresenta uma lógica inicial e experimental de tentativa de implementação de _inputs_ _mobile_. Mais estudo e pesquisa são necessários para refinar seu entendimento e comportamento.
+&nbsp;&nbsp;&nbsp;&nbsp;O final do código apresenta uma lógica inicial e experimental de tentativa de implementação de _inputs_ _mobile_. Mais estudo e pesquisa são necessários para refinar seu entendimento e comportamento.
 Por fim, a variável _config_ criada no início do código guarda todas as configurações necessárias para criar o objeto "Phaser.Game". Dentre elas, podemos destacar que o tamanho da tela foi temporariamente fixado em 1334x725 _pixels_ e a propriedade _scale_ foi definido como "FIT" para ajustar o tamanho da tela automaticamente, como podemos ver abaixo.
 ```js
 // Cria as configurações para Phaser.Game
@@ -628,23 +626,23 @@ var config = {
 
 *Descreva e ilustre aqui o desenvolvimento da versão básica do jogo, explicando brevemente o que foi entregue em termos de código e jogo. Utilize prints de tela para ilustrar. Indique as eventuais dificuldades e próximos passos.*
 
-Na primeira sprint, o desenvolvimento foi focado em criar apenas um esboço do jogo. Em outras palavras, uma parte significativa do código foi refatorada à medida que os conteúdos eram apresentados ao longo da sprint.
+&nbsp;&nbsp;&nbsp;&nbsp;Na primeira sprint, o desenvolvimento foi focado em criar apenas um esboço do jogo. Em outras palavras, uma parte significativa do código foi refatorada à medida que os conteúdos eram apresentados ao longo da sprint.
 
-A decisão foi dividir a programação em pequenas etapas, tais como: refatorar o jogo para incluir múltiplas cenas, implementar o novo menu em Pixel Art, adicionar físicas e colisões, integrar a câmera ao cenário e criar o novo cenário em Pixel Art usando o Tiled Map Editor.
+&nbsp;&nbsp;&nbsp;&nbsp;A decisão foi dividir a programação em pequenas etapas, tais como: refatorar o jogo para incluir múltiplas cenas, implementar o novo menu em Pixel Art, adicionar físicas e colisões, integrar a câmera ao cenário e criar o novo cenário em Pixel Art usando o Tiled Map Editor.
 
 ### Etapa 1 do desenvolvimento - Refatorando o jogo em múltiplas cenas
 
-A princípio, na primeira entrega, o jogo apresentava um menu e a cena do médico no hospital. Ambos estavam incluídos no mesmo arquivo, sem qualquer separação entre as cenas. Como resultado, a imagem do menu era renderizada em primeiro plano, e ao clicar no botão de jogar, essa imagem era destruída.
+&nbsp;&nbsp;&nbsp;&nbsp;A princípio, na primeira entrega, o jogo apresentava um menu e a cena do médico no hospital. Ambos estavam incluídos no mesmo arquivo, sem qualquer separação entre as cenas. Como resultado, a imagem do menu era renderizada em primeiro plano, e ao clicar no botão de jogar, essa imagem era destruída.
 
-Para aprimorar a arquitetura do jogo, essa abordagem foi refatorada para utilizar duas cenas distintas. Dessa maneira, o código foi dividido em três arquivos: "main.js", "menu.js" e "hospital.js". Cada arquivo é importado dentro da tag body do HTML, proporcionando uma estrutura mais organizada e modular.
+&nbsp;&nbsp;&nbsp;&nbsp;Para aprimorar a arquitetura do jogo, essa abordagem foi refatorada para utilizar duas cenas distintas. Dessa maneira, o código foi dividido em três arquivos: `"main.js"`, `"menu.js"` e `"hospital.js"`. Cada arquivo é importado dentro da tag `<body>` do HTML, proporcionando uma estrutura mais organizada e modular.
 ```html
     <script src="scenes/menu.js"></script>
     <script src="scenes/hospital.js"></script>
     <script src="main.js"></script>
 ```
-Vale ressaltar que, essa ordem é importante. Visto que, sem as duas classes contidas nos arquivos "menu.js" e "hospital.js" precisam estar declaradas para o arquivo "main.js" acessar.
+&nbsp;&nbsp;&nbsp;&nbsp;Vale ressaltar que, essa ordem é importante. Visto que, sem as duas classes contidas nos arquivos `"menu.js"` e `"hospital.js"` precisam estar declaradas para o arquivo `"main.js"` acessar.
 
-No arquivo "main.js" está contida as configurações do phaser e a instância do objeto do jogo
+&nbsp;&nbsp;&nbsp;&nbsp;No arquivo "main.js" está contida as configurações do phaser e a instância do objeto do jogo
 ```js
 // Cria as configurações para Phaser.Game
 const config = {
@@ -670,9 +668,9 @@ const config = {
 // Cria o jogo passando a variável config como construtor para a classe
 const game = new Phaser.Game(config);
 ```
-Observe que no atributo "scene", é passado um array com as classes das duas cenas, as quais serão controladas pelo Phaser.
+&nbsp;&nbsp;&nbsp;&nbsp;Observe que no atributo `scene`, é passado um array com as classes das duas cenas, as quais serão controladas pelo Phaser.
 
-Nos outros arquivos, "hospital" e "menu", são criadas duas classes que herdam da classe Phaser.Scene. Ainda assim, essas classes mantêm a estrutura básica do Phaser, incluindo as funções preload, update e create como métodos agora.
+&nbsp;&nbsp;&nbsp;&nbsp;Nos outros arquivos, "hospital" e "menu", são criadas duas classes que herdam da classe `Phaser.Scene`. Ainda assim, essas classes mantêm a estrutura básica do Phaser, incluindo as funções `preload`, `update` e `create` como métodos agora.
 ```js
 class CenaHospital extends Phaser.Scene {
     preload(){}
@@ -680,30 +678,30 @@ class CenaHospital extends Phaser.Scene {
     update(){}
 }
 ```
-O mesmo exemplo é aplicável ao menu.
+&nbsp;&nbsp;&nbsp;&nbsp;O mesmo exemplo é aplicável ao menu.
 
-Para finalizar, o código das respectivas cenas e funções foram transferidas para os arquivos em classe, colocando o operador "this" antes das variáveis por conta da mudança para classe.
+&nbsp;&nbsp;&nbsp;&nbsp;Para finalizar, o código das respectivas cenas e funções foram transferidas para os arquivos em classe, colocando o operador `this` antes das variáveis por conta da mudança para classe.
 
 ### Etapa 2 do desenvolvimento - Novo menu em Pixel Art
 
-O primeiro passo foi fazer o desenho do novo menu, com uma cara parecida, porém em Pixel Art feita no Piskel.
+&nbsp;&nbsp;&nbsp;&nbsp;O primeiro passo foi fazer o desenho do novo menu, com uma cara parecida, porém em Pixel Art feita no Piskel.
 <p align=center style="font-size:1em">Figura X: Novo menu desenvolvido no Piskel</p>
 <p align=center><img src="other\sprint_2_item_4.2_files\figura1.png" alt="Figura X" width="400"/></p>
 <p align=center style="font-size:1em">Fonte: Autores</p>
 <br>
 <p align=center style="font-size:1em">Figura X: Spritesheet do botão para animação</p>
 <p align=center><img src="other\sprint_2_item_4.2_files\button.png" alt="Figura X" width="400"/></p>
-<p align=center style="font-size:1em">Fonte: Autores</p>
+<p align=center style="font-size:1em">Fonte: Autores (2024)</p>
 
-Após o design desenvolvido, o próximo passo foi implementar no Phaser
-No método preload: 
+&nbsp;&nbsp;&nbsp;&nbsp;Após o design desenvolvido, o próximo passo foi implementar no Phaser
+no método `preload`: 
 ```js
 preload(){
     this.load.image("background", "assets/background.png") // Fundo da cena do Main Menu
     this.load.spritesheet("botaoJogar", "assets/button.png", { frameWidth: 138, frameHeight: 46 }) // Imagem para botaoJogar
 }
 ``` 
-Em seguida, o menu foi implementado da mesma forma que no desenvolvimento preliminar. A única alteração foi no click do botão que ao invés de destruir as imagens, troca a cena. 
+&nbsp;&nbsp;&nbsp;&nbsp;Em seguida, o menu foi implementado da mesma forma que no desenvolvimento preliminar. A única alteração foi no click do botão que ao invés de destruir as imagens, troca a cena. 
 Da seguinte forma:
 ````js
 this.botaoJogar.on("pointerdown", () => {
@@ -713,11 +711,11 @@ this.botaoJogar.on("pointerdown", () => {
     this.input.setDefaultCursor("default") // Retorno do cursor do mouse para setinha
 })
 ````
-No this.scene.start o Phaser inicia a cena do hospital e na linha seguinte encerra o menu
+&nbsp;&nbsp;&nbsp;&nbsp;No `this.scene.start` o Phaser inicia a cena do hospital e na linha seguinte encerra o menu
 
 ### Etapa 3 do desenvolvimento - Implementação da física
 
-O primeiro passo foi habilitar a física na configuração do jogo
+&nbsp;&nbsp;&nbsp;&nbsp;O primeiro passo foi habilitar a física na configuração do jogo
 ```js
 // Cria as configurações para Phaser.Game
 const config = {
@@ -730,17 +728,17 @@ const config = {
     }
 };
 ```
-Colocando esse trecho de código, habilitamos a física no jogo, sem gravidade pois o nosso jogo é no estilo "top down", vista de cima para baixo
+&nbsp;&nbsp;&nbsp;&nbsp;Colocando esse trecho de código, habilitamos a física no jogo, sem gravidade pois o nosso jogo é no estilo "top down", vista de cima para baixo
 
 ### Etapa 5 do desenvolvimento - Câmeras e cenário do Tiled Map Editor
 
-Nesta etapa, foi realizado a implementação do Mapa através de um arquivo JSON, localizado em "src/assets/tilemaps/main_map.json". Este arquivo é exportado do Tiled Map Editor, que é um editor de mapas em blocos e por camadas
+&nbsp;&nbsp;&nbsp;&nbsp;Nesta etapa, foi realizado a implementação do Mapa através de um arquivo JSON, localizado em `"src/assets/tilemaps/main_map.json"`. Este arquivo é exportado do Tiled Map Editor, que é um editor de mapas em blocos e por camadas
 
 <p align=center style="font-size:1em">Figura X: Mapa no Tiled Map Editor</p>
 <p align=center><img src="other\sprint_2_item_4.2_files\tiled_map_editor.png" alt="Figura X" width="400"/></p>
 <p align=center style="font-size:1em">Fonte: Autores</p>
 
-Após isso foi preciso importar o JSON para a classe CenaHospital e definir as camadas presentes, que no caso são as paredes e o chão até o momento.
+&nbsp;&nbsp;&nbsp;&nbsp;Após isso foi preciso importar o JSON para a classe `CenaHospital` e definir as camadas presentes, que no caso são as paredes e o chão até o momento.
 
 ```js
 preload(){
@@ -764,7 +762,7 @@ create(){
     this.wallsLayer = this.map.createLayer("Walls", [this.tileset1], 0 , 0); //Cria a camada de paredes, passando o tileset e o nome que definimos no tiled map editor
 }
 ```
-Dessa forma, o mapa é carregado e aparece corretamente no mapa. No entanto, o mapa é muito grande, para melhorar a jogabilidade, foi preciso implementar a câmera. Dentro da função create, setamos duas coisas na câmera. O zoom e a perseguição no jogador
+&nbsp;&nbsp;&nbsp;&nbsp;Dessa forma, o mapa é carregado e aparece corretamente na tela. No entanto, o mapa é muito grande, para melhorar a jogabilidade, foi preciso implementar a câmera. Dentro da função `create`, setamos duas coisas na câmera. O zoom e a perseguição no jogador
 ````js
 this.cameras.main.startFollow(this.medico, true); //camera inicia o follow no personagem principal
 this.cameras.main.setZoom(2);
@@ -775,16 +773,16 @@ this.cameras.main.setZoom(2);
 
 ### Etapa 6 do desenvolvimento - Colisões com as paredes
 
-De início, foi preciso fazer algumas alterações no Tiled Map Editor, precisamos setar em todos os blocos que tem colisão uma propriedade personalizada, que chamamos de Collider. Essa propriedade precisa ser do tipo boolean (Verdadeiro ou falso)
-Com essa propriedade definida nos blocos, foi o momento de implementar a colisão. E com apenas duas linhas, graças ao Tiled Map Editor e a suas facilidades, foi possível definir colisão entre o muro e o jogador
+&nbsp;&nbsp;&nbsp;&nbsp;De início, foi preciso fazer algumas alterações no Tiled Map Editor, precisamos setar em todos os blocos que tem colisão uma propriedade personalizada, que chamamos de `Collider`. Essa propriedade precisa ser do tipo `boolean` (Verdadeiro ou falso). 
+Com essa propriedade definida nos blocos, foi o momento de implementar a colisão. E com apenas duas linhas, graças ao Tiled Map Editor e a suas facilidades, foi possível definir colisão entre o muro e o jogador.
 
 ````js
 this.wallsLayer.setCollisionByProperty({ collider: true }) //Seta as colisões onde tem a propriedade collider: true no tiled map
 this.physics.add.collider(this.medico, this.wallsLayer, () => console.log("Colidiu")) //Adiciona colisão entre o médico e a camada de parede
 ````
-A primeira linha indica que a camada da parede terá colisão com os blocos que foram definidos com a propriedade "Collider" como verdadeira. Na segunda linha, adicionamos a colisão entre o médico e a parede, retornando um console.log para avisar que houve a colisão.
+&nbsp;&nbsp;&nbsp;&nbsp;A primeira linha indica que a camada da parede terá colisão com os blocos que foram definidos com a propriedade `Collider` como verdadeira. Na segunda linha, adicionamos a colisão entre o médico e a parede, retornando um console.log para avisar que houve a colisão.
 
-Para que a colisão funcione como deveria, foi necessário alterar o modo de movimentação do personagem. Ao invés de movimentar o X e Y do personagem diretamente, foi preciso configurar uma velocidade para o personagem. Dessa forma, o Phaser consegue ter controle sobre todas as colisões. Essa modificação foi implementada utilizando o seguinte método dentro do bloco "update" (considerando que a verificação WASD já foi implementada no desenvolvimento básico do jogo):
+&nbsp;&nbsp;&nbsp;&nbsp;Para que a colisão funcione como deveria, foi necessário alterar o modo de movimentação do personagem. Ao invés de movimentar o X e Y do personagem diretamente, foi preciso configurar uma velocidade para o personagem. Dessa forma, o Phaser consegue ter controle sobre todas as colisões. Essa modificação foi implementada utilizando o seguinte método dentro do bloco `update` (considerando que a verificação WASD já foi implementada no desenvolvimento básico do jogo):
 ````js
 this.medico.setVelocityX(velocidadeEmX)
 this.medico.setVelocityY(velocidadeEmY)
@@ -875,45 +873,45 @@ CASAROTTO,  Camila. Rockcontent. Disponível em: https://rockcontent.com/br/blog
 ## Ferramentas
 ### Kanban
 
-Para organizarmos nosso trabalho, utilizamos a ferramenta Kanban, na aba Projects dentro do GitHub. O modelo Kanban consiste na separação das tarefas a serem realizadas em um projeto em etapas, movendo os cards das tarefas para as seções adequadas. Para nosso projeto, utilizamos as etapas A fazer, Fazendo, Feito e Revisão.
+&nbsp;&nbsp;&nbsp;&nbsp;Para organizarmos nosso trabalho, utilizamos a ferramenta Kanban, na aba Projects dentro do GitHub. O modelo Kanban consiste na separação das tarefas a serem realizadas em um projeto em etapas, movendo os cards das tarefas para as seções adequadas. Para nosso projeto, utilizamos as etapas A fazer, Fazendo, Feito e Revisão.
 
 * [Kanban](https://github.com/orgs/Inteli-College/projects/66/views/1)<br>
 
-Esta ferramenta nos oferta uma visão geral do andamento de nosso projeto, além de um acompanhamento individual de cada integrante em relação às tarefas propostas.
+&nbsp;&nbsp;&nbsp;&nbsp;Esta ferramenta nos oferta uma visão geral do andamento de nosso projeto, além de um acompanhamento individual de cada integrante em relação às tarefas propostas.
 
 ### Miro
 
-O website Miro foi utilizado para a concepção gráfica do Diagrama de Cenas.
+&nbsp;&nbsp;&nbsp;&nbsp;O website Miro foi utilizado para a concepção gráfica do Diagrama de Cenas.
 
 * [Miro](https://miro.com/app/dashboard/)<br>
 
-Através desta ferramenta, foi possível integrar os esboços das cenas do jogo e definir um fluxo de jogabilidade de maneira gráfica. 
+  &nbsp;&nbsp;&nbsp;&nbsp;Através desta ferramenta, foi possível integrar os esboços das cenas do jogo e definir um fluxo de jogabilidade de maneira gráfica. 
 
 
 ### Canva
 
-Foi utilizado o website Canva para o desenvolvimento gráfico da Tabela de Análise SWOT (Item 1.1.2), Matriz de Riscos (Item 1.1.4), Matriz de Oportunidades (Item 1.1.4) e Canva de Proposta de Valor (Item 1.1.5).
+&nbsp;&nbsp;&nbsp;&nbsp;Foi utilizado o website Canva para o desenvolvimento gráfico da Tabela de Análise SWOT (Item 1.1.2), Matriz de Riscos (Item 1.1.4), Matriz de Oportunidades (Item 1.1.4) e Canva de Proposta de Valor (Item 1.1.5).
 
 * [Canva](https://www.canva.com/)<br>
 
-No Canva, transferimos os atributos específicos das Tabelas e Matrizes para representações gráficas de forma simples e intuitiva.
+  &nbsp;&nbsp;&nbsp;&nbsp;No Canva, transferimos os atributos específicos das Tabelas e Matrizes para representações gráficas de forma simples e intuitiva.
 
 ### Piskel
 
-A ferramenta Piskel foi utilizada para a concepção das Pixel Arts do jogo.
+&nbsp;&nbsp;&nbsp;&nbsp;A ferramenta Piskel foi utilizada para a concepção das Pixel Arts do jogo.
 
 * [Piskel](https://www.piskelapp.com/)<br>
 
-Através do Piskel, desenvolvemos o cenário, decorações e personagens do nosso projeto.
+  &nbsp;&nbsp;&nbsp;&nbsp;Através do Piskel, desenvolvemos o cenário, decorações e personagens do nosso projeto.
 
 ### Krita
 
-Utilizamos o software Krita para realizarmos os esboços de nossos personagens, cenários e itens do jogo.
+&nbsp;&nbsp;&nbsp;&nbsp;Utilizamos o software Krita para realizarmos os esboços de nossos personagens, cenários e itens do jogo.
 
 * [Krita](https://krita.org/en/)<br>
 
 ### Tiled
 
-O software Tiled foi utilizado na integração dos elementos do cenário, tais como paredes, piso e decorações.
+&nbsp;&nbsp;&nbsp;&nbsp;O software Tiled foi utilizado na integração dos elementos do cenário, tais como paredes, piso e decorações.
 
 * [Tiled](https://www.mapeditor.org/)<br>
