@@ -815,13 +815,90 @@ this.medico.setVelocityY(velocidadeEmY)
 <p align=center><img src="other\sprint_2_item_4.2_files\collision.png" alt="Figura X" width="400"/></p>
 <p align=center style="font-size:1em">Fonte: Autores</p>
 
+### Etapa 7 do desenvolvimento - Implementação do joystick e tela cheia
+
+&nbsp;&nbsp;&nbsp;&nbsp;No projeto foi utilizada uma biblioteca chamada 'Rex Virtual Joystick'. Essa biblioteca está localizada em `src/plugins/rexvirtualjoystickplugin.min.js` sendo importada na cena do hospital na função `preload()`
+````js
+this.load.plugin("rexvirtualjoystickplugin","/src/plugins/rexvirtualjoystickplugin.min.js",true); //Carrega a biblioteca do joystick
+````
+&nbsp;&nbsp;&nbsp;&nbsp;O joystick também tem um objeto config, onde define algumas coisas como as posições x e y, qual o raio do objeto e os objetos dentro do phaser que representarão os joysticks, além de definir qual a cena que está sendo utilizada, no nosso caso a CenaHospital. Além disso, uma função no joystick é chamada `scrollFactor(0)` que define que o joystick mova junto com a câmera
+````js
+this.joystick = this.plugins.get("rexvirtualjoystickplugin").add(
+      this,
+      {
+        x: 490,
+        y: this.medico.y + 125,
+        radius: 30,
+        base: this.add.circle(0, 0, 30, 0xff0000),
+        thumb: this.add.circle(0, 0, 15, 0xcccccc),
+        minForce: 2,
+      }
+);
+this.joystick.setScrollFactor(0); // Faz com que o joystick não se mova com a câmera
+````
+&nbsp;&nbsp;&nbsp;&nbsp;Na biblioteca do joystick, dois atributos são retornados o `angle` e o `force`. Esse atributos estão sendo utilizados para a movimentação vetorial. O cálculo foi feito usando a decomposição vetorial, da seguinte forma:
+
+<p align=center style="font-size:1em">Figura X: Cálculo da velocidade em X e Y</p>
+<p align=center><img src="other\sprint_2_item_4.2_files\vetores.png" alt="Figura X" width="400"/></p>
+<p align=center style="font-size:1em">Fonte: Autores</p>
+
+Os vetores são decompostos para o personagem, além de não andar mais rápido na diagonal, seguir o ângulo que o usuário coloca no joystick virtual.
+
+A biblioteca, no atributo `angle` retorna um ângulo entre 0 e -180 graus na parte de cima e de 180 até 0 graus na metade do círculo para baixo, tudo isso foi verificado com `console.log()`. Para resolver esse problema a função `fixAngle()` é chamada, ela faz com que o ângulo do joystick vá de 0 a 360 graus no sentido anti-horário.
+````js
+fixAngle(angle) {
+    if (angle < 0) {
+      return -angle
+    }
+    else if (angle > 0) {
+      return 360 - angle
+    }
+}
+````
+Após isso, um tratamento é feito para converter o ângulo de graus para radianos, pois o cálculo de seno e cosseno no javascript precisa ser feito em radianos. `this.radiansAngleJoystick = this.fixAngle(this.joystick.angle)*Math.PI/180 || 0;`.
+
+Por fim, defini-se uma força máxima para o jogador não ficar muito rápido, visto que a força do joystick não define limite, ou seja, a força seria equivalente ao quanto você arrasta na tela. Ficando da seguinte forma: `this.joystickForce = this.joystick.force < 75 ? this.joystick.force : 75;`
+
+Passando para as contas para o javascript:
+````js
+const velocityDoctorX = (this.defaultVelocity * Math.cos(this.radiansAngleJoystick) * this.joystickForce)
+velocityDoctorX < 0 ? this.medico.setFlip(false, false) : this.medico.setFlip(true, false)
+const velocityDoctorY = -(this.defaultVelocity * Math.sin(this.radiansAngleJoystick) * this.joystickForce)
+````
+Após isso, basta setar a velocidade do personagem para que a movimentação vetorial funcione.
+
+<p align=center style="font-size:1em">Figura X: Movimentação vetorial com o joystick</p>
+<p align=center><img src="other\sprint_2_item_4.2_files\movimentacao_vetorial.png" alt="Figura X" width="400"/></p>
+<p align=center style="font-size:1em">Fonte: Autores</p>
+
+&nbsp;&nbsp;&nbsp;&nbsp;Para a tela cheia, quando o jogador clica no botão 'jogar' uma função que acessa o elemento principal do HTML e deixa ele em tela cheia.
+````js
+openFullScreen() {
+    const page = document.documentElement //Pega o documento inteiro
+    if (page.requestFullscreen){ //Se o navegador suportar o Fullscreen
+        page.requestFullscreen() //Ativa o Fullscreen
+    } else if (page.mozRequestFullScreen){ //Se o navegador suportar o Fullscreen do Mozila
+        page.mozRequestFullScreen() //Ativa o Fullscreen
+    } else if (page.webkitRequestFullscreen){ //Se o navegador suportar o Fullscreen do Webkit
+        page.webkitRequestFullscreen() //Ativa o Fullscreen
+    } else if (page.msRequestFullscreen){ //Se o navegador suportar o Fullscreen do Microsoft
+        page.msRequestFullscreen() //Ativa o Fullscreen
+    }
+}
+````
+&nbsp;&nbsp;&nbsp;&nbsp;Esse método deixa a página em tela cheia, assim que o botão de jogar é clicado
+
+<p align=center style="font-size:1em">Figura X: Joystick no jogo e tela cheia</p>
+<p align=center><img src="other\sprint_2_item_4.2_files\joystick.png" alt="Figura X" width="400"/></p>
+<p align=center style="font-size:1em">Fonte: Autores</p>
+
+
 ### Dificuldades
 - Implementação da colisão
 - Dificuldade em ajustar o Tile Map
-- Implementar as entradas Mobile - O jogo já tem uma biblioteca para um joystick, porém ainda está com bugs
+- Implementar as entradas Mobile - O jogo já tem uma biblioteca para um joystick e teve dificuldade quanto a responsividade
 
 ### Próximos passos
-- Implementar o joystick funcional
 - Terminar toda a decoração do mapa
 - Implementar o quiz e a lógica da biblioteca
 - Implementar a movimentação através de vetores

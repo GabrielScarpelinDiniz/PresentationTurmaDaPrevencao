@@ -75,13 +75,13 @@ class CenaHospital extends Phaser.Scene {
     this.joystick.setScrollFactor(0); // Faz com que o joystick não se mova com a câmera
   }
   update() {
-    this.radiansAngleJoystick = this.fixAngle(this.joystick.angle)*Math.PI/180 || 0;
-    this.joystickForce = this.joystick.force < 75 ? this.joystick.force : 75;
-    const velocityDoctorX = (this.defaultVelocity * Math.cos(this.radiansAngleJoystick) * this.joystickForce)
-    velocityDoctorX < 0 ? this.medico.setFlip(false, false) : this.medico.setFlip(true, false)
-    const velocityDoctorY = -(this.defaultVelocity * Math.sin(this.radiansAngleJoystick) * this.joystickForce)
-    this.medico.setVelocityX(velocityDoctorX)
-    this.medico.setVelocityY(velocityDoctorY)
+    this.radiansAngleJoystick = this.fixAngle(this.joystick.angle)*Math.PI/180 || 0; // Converte o ângulo do joystick para radianos e normaliza o input para 0 até 360 graus no joystick
+    this.joystickForce = this.joystick.force < 75 ? this.joystick.force : 75; // Limita a força do joystick para 75
+    const velocityDoctorX = (this.defaultVelocity * Math.cos(this.radiansAngleJoystick) * this.joystickForce) // Calcula a velocidade do médico no eixo X
+    velocityDoctorX < 0 ? this.medico.setFlip(false, false) : this.medico.setFlip(true, false) // Ajusta orientação do personagem
+    const velocityDoctorY = -(this.defaultVelocity * Math.sin(this.radiansAngleJoystick) * this.joystickForce) // Calcula a velocidade do médico no eixo Y
+    this.medico.setVelocityX(velocityDoctorX) // Atribui a velocidade calculada ao médico
+    this.medico.setVelocityY(velocityDoctorY) // Atribui a velocidade calculada ao médico
     // Mapeamento de Inputs (Normalizar o movimento diagonal futuramente)
     if (this.keyA.isDown) {
       this.medico.setVelocityX(-this.defaultVelocity * 50);
@@ -99,6 +99,7 @@ class CenaHospital extends Phaser.Scene {
     }
   }
   fixAngle(angle) {
+    // Corrige o ângulo do joystick para que ele vá de 0 a 360 graus
     if (angle < 0) {
       return -angle
     }
