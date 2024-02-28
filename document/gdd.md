@@ -140,11 +140,11 @@
 \# | Requisito do cliente 
 --- | ---
 1|Ensinar quais são as três camadas da pele;
-2|Falar sobre a espessura das camadas da pele;
+2|Falar sobre a espessura das camadas da pele e qual a relação delas com os tipos de queimadura;
 3|Definir os diferentes tipos de queimadura;
 4|Dizer por que uma queimadura profunda não dói;
 5|O jogo deve ser compatível com mobile;
-6|A palheta de cores deve ser da FMUSP e do INTELI;
+6|A paleta de cores deve ser da FMUSP e do INTELI;
 7|Tempo limitado apenas com a intenção de capacitação, sendo uma experiência única, de aproximadamente 15 minutos;
 8|Jogo tem de atrair o interesse dos alunos;
 9|Deve ter recompensas, pontuação, recordes;
