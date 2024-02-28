@@ -828,7 +828,7 @@ this.medico.setVelocityY(velocidadeEmY)
 <sub>Tabela X - Casos de Testes da Cena main.js</sub>
 </div>
 
-\# | pré-condição | descrição do teste | pós-condição 
+\# | Pré-condição | Descrição do Teste | Pós-condição
 --- | --- | --- | --- 
 1 |  As dimensões da tela do jogo estão definidas | Verificar se as dimensões do jogo estão corretamente configuradas | A tela do jogo possui as dimensões corretas
 2 |  O sistema de centralização automática está funcionando | Verificar se a tela do jogo é centralizada automaticamente em ambos os eixos | A tela do jogo está centralizada corretamente
@@ -846,7 +846,7 @@ this.medico.setVelocityY(velocidadeEmY)
 <sub>Tabela X - Casos de Testes da Cena menu.js</sub>
 </div>
 
-\# | pré-condição | descrição do teste | pós-condição 
+\# | Pré-condição | Descrição do Teste | Pós-condição
 |------|---------|--- |--- |
 1 | Carregar assets | Verificar se os assets são carregados corretamente sem erros | Todos os assets são carregados sem erros                                                    |
 2 | Clicar no botão "Jogar" | Simular um clique no botão "Jogar"  | A cena "hospital" é iniciada e a cena "menu" é parada, o cursor do mouse retorna para a setinha |
