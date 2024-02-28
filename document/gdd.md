@@ -132,15 +132,20 @@
 ## 1.2. Requisitos do Projeto (sprints 1 e 2)
 
 &nbsp;&nbsp;&nbsp;&nbsp;Esta seção tem como objetivo fornecer uma visão abrangente e detalhada dos requisitos essenciais que orientarão o desenvolvimento do projeto. Aqui, serão delineadas as funcionalidades, características e restrições fundamentais para garantir a compreensão unificada entre a equipe de desenvolvimento e o cliente.
+
+<div align="center">
+<sub>Tabela X - Requisitos do cliente</sub>
+</div>
+
 \# | Requisito do cliente 
 --- | ---
-1|Ensinar quais são as 3 camadas da pele;
+1|Ensinar quais são as três camadas da pele;
 2|Falar sobre a espessura das camadas da pele;
 3|Definir os diferentes tipos de queimadura;
 4|Dizer por que uma queimadura profunda não dói;
 5|O jogo deve ser compatível com mobile;
 6|A palheta de cores deve ser da FMUSP e do INTELI;
-7|Tempo limitado apenas com a intenção de capacitação, experiência única, 15’;
+7|Tempo limitado apenas com a intenção de capacitação, sendo uma experiência única, de aproximadamente 15 minutos;
 8|Jogo tem de atrair o interesse dos alunos;
 9|Deve ter recompensas, pontuação, recordes;
 10|Pode ser expandido para fora das escolas;
