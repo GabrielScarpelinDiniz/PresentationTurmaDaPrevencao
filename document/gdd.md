@@ -85,7 +85,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;As maneiras pelas quais nosso jogo se conecta com o perfil do cliente, solucionando suas principais necessidades e impulsionando seus atuais ganhos foram esclarecidas com a elaboração desse canvas. Uma estratégia para enfrentar o problema do cliente de maneira objetiva foi traçada em conjunto com a análise SWOT e, com base nessas informações, o desenvolvimento inicial foi iniciado. 
 
-&nbsp;&nbsp;&nbsp;&nbsp;Tendo em vista o perfil do cliente analisado através do 'Canva Proposition Value', ao observarmos suas dores, ganhos e necessidades, desenvolvemos uma proposta de solução totalmente gamificada. Essa proposta visa envolver os jovens, proporcionando-lhes um ambiente divertido que cumpra o principal objetivo do projeto: a conscientização. Destacamos, sobretudo, a necessidade de algo versátil e atrativo para o público-alvo, oferecendo uma experiência única e divertida, a fim de disseminar entre diversas pessoas e conscientizar cada vez mais a população.
+&nbsp;&nbsp;&nbsp;&nbsp;Tendo em vista o perfil do cliente analisado através do *value proposition canvas*, ao observarmos suas dores, ganhos e necessidades, desenvolvemos uma proposta de solução totalmente gamificada. Essa proposta visa envolver os jovens, proporcionando-lhes um ambiente divertido que cumpra o principal objetivo do projeto: a conscientização. Destacamos, sobretudo, a necessidade de algo versátil e atrativo para o público-alvo, oferecendo uma experiência única e divertida, a fim de disseminar entre diversas pessoas e conscientizar cada vez mais a população.
 
 ### 1.1.5. Matriz de Riscos (sprints 1 e 4)
 
@@ -562,7 +562,7 @@ Figura 3: Concept Art da Página do Livro.
 </p>
 <p align=center style="font-size:1em">Fonte: Material produzido pelos autores (2024)</p>
 
-&nbsp;&nbsp;&nbsp;&nbsp;Para iniciar a explicação do código, dentro do arquivo “cena1.js”, carregamos as imagens na função _“preload”_ e as criamos na função _“create”_, como mostrado a seguir.
+&nbsp;&nbsp;&nbsp;&nbsp;Para iniciar a explicação do código, dentro do arquivo `“cena1.js”`, carregamos as imagens na função `preload` e as criamos na função `create`, como mostrado a seguir.
 
 ```js
 function preload() {
@@ -602,7 +602,7 @@ function create () {
         this.input.setDefaultCursor("default"); // Retorno do cursor do mouse para setinha
     });
 ```
-&nbsp;&nbsp;&nbsp;&nbsp;Após o clique do botão jogar e remoção dos elementos da cena inicial, foram implementados os controles básicos de movimento para o personagem utilizando as teclas WASD do teclado. O código da movimentação começou com a definição de um objeto para cada tecla na função _“create”_. Por exemplo, o objeto “keyA” recebeu o _input_ da tecla “A” do teclado, como visto abaixo. 
+&nbsp;&nbsp;&nbsp;&nbsp;Após o clique do botão jogar e remoção dos elementos da cena inicial, foram implementados os controles básicos de movimento para o personagem utilizando as teclas WASD do teclado. O código da movimentação começou com a definição de um objeto para cada tecla na função `create`. Por exemplo, o objeto `keyA` recebeu o _input_ da tecla “A” do teclado, como visto abaixo. 
 ```js
     // Inicializa as variáveis para movimentação do personagem
     keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A); 
@@ -610,7 +610,7 @@ function create () {
     keyS = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S); // encontram-se na linha 115000 do arquivo "phaser.js"
     keyD = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D);
 ```
-&nbsp;&nbsp;&nbsp;&nbsp;Posteriormente, na função _“update”_, implementamos uma lógica para atualizar a posição do médico um número de _pixels_ ao acionar cada tecla individualmente. Foi criada uma variável chamada _pixelMove_ do tipo _const_ para ajustar um número fixo de _pixels_ que a figura do médico deve mover ao receber o _input_ de cada tecla. Um detalhe adicional é a mudança de orientação da figura do personagem ao acionar as teclas de movimentação do eixo horizontal, teclas “A” e “D”. Vale ressaltar que, por conta de utilizarmos apenas o condicional _if_ na notação do _“if/else”_, ela torna-se inclusiva, ou seja, é possível clicar em mais de uma tecla ao mesmo tempo, possibilitando o movimento diagonal.
+&nbsp;&nbsp;&nbsp;&nbsp;Posteriormente, na função `update`, implementamos uma lógica para atualizar a posição do médico um número de _pixels_ ao acionar cada tecla individualmente. Foi criada uma variável chamada `pixelMove` do tipo _const_ para ajustar um número fixo de _pixels_ que a figura do médico deve mover ao receber o _input_ de cada tecla. Um detalhe adicional é a mudança de orientação da figura do personagem ao acionar as teclas de movimentação do eixo horizontal, teclas “A” e “D”. Vale ressaltar que, por conta de utilizarmos apenas o condicional `if` na notação do _“if/else”_, ela torna-se inclusiva, ou seja, é possível clicar em mais de uma tecla ao mesmo tempo, possibilitando o movimento diagonal.
 ```js
     // Mapeamento de Inputs (Normalizar o movimento diagonal futuramente)
     if (keyA.isDown) {
@@ -645,7 +645,7 @@ function create () {
     }
 ```
 &nbsp;&nbsp;&nbsp;&nbsp;O final do código apresenta uma lógica inicial e experimental de tentativa de implementação de _inputs_ _mobile_. Mais estudo e pesquisa são necessários para refinar seu entendimento e comportamento.
-Por fim, a variável _config_ criada no início do código guarda todas as configurações necessárias para criar o objeto "Phaser.Game". Dentre elas, podemos destacar que o tamanho da tela foi temporariamente fixado em 1334x725 _pixels_ e a propriedade _scale_ foi definido como "FIT" para ajustar o tamanho da tela automaticamente, como podemos ver abaixo.
+Por fim, a variável `config` criada no início do código guarda todas as configurações necessárias para criar o objeto `Phaser.Game`. Dentre elas, podemos destacar que o tamanho da tela foi temporariamente fixado em 1334x725 _pixels_ e a propriedade `scale` foi definido como "FIT" para ajustar o tamanho da tela automaticamente, como podemos ver abaixo.
 ```js
 // Cria as configurações para Phaser.Game
 var config = {
@@ -664,7 +664,7 @@ var config = {
 ```
 ### Dificuldades
 - Tentar ajustar o tamanho da tela automaticamente para diferentes dispositivos;
-- Definir corretamente os inputs de movimentação, demora para achar a sintaxe correta;
+- Definir corretamente os inputs de movimentação( demora para achar a sintaxe correta);
 - Adaptação às boas práticas ao escrever código em Javascript.
 
 ### Próximos passos
@@ -687,11 +687,11 @@ var config = {
 
 &nbsp;&nbsp;&nbsp;&nbsp;Na primeira sprint, o desenvolvimento foi focado em criar apenas um esboço do jogo. Em outras palavras, uma parte significativa do código foi refatorada à medida que os conteúdos eram apresentados ao longo da sprint.
 
-&nbsp;&nbsp;&nbsp;&nbsp;A decisão foi dividir a programação em pequenas etapas, tais como: refatorar o jogo para incluir múltiplas cenas, implementar o novo menu em Pixel Art, adicionar físicas e colisões, integrar a câmera ao cenário e criar o novo cenário em Pixel Art usando o Tiled Map Editor.
+&nbsp;&nbsp;&nbsp;&nbsp;Desse modo, a decisão foi: dividir a programação em pequenas etapas, que são: refatorar o jogo para incluir múltiplas cenas, implementar o novo menu em *pixel art*, adicionar físicas e colisões, integrar a câmera ao cenário e criar o novo cenário em *pixel art* usando o Tiled Map Editor.
 
 ### Etapa 1 do desenvolvimento - Refatorando o jogo em múltiplas cenas
 
-&nbsp;&nbsp;&nbsp;&nbsp;A princípio, na primeira entrega, o jogo apresentava um menu e a cena do médico no hospital. Ambos estavam incluídos no mesmo arquivo, sem qualquer separação entre as cenas. Como resultado, a imagem do menu era renderizada em primeiro plano, e ao clicar no botão de jogar, essa imagem era destruída.
+&nbsp;&nbsp;&nbsp;&nbsp;Na primeira entrega, o jogo apresentava um menu e a cena do médico no hospital. Ambos estavam incluídos no mesmo arquivo, sem qualquer separação entre as cenas. Como resultado, a imagem do menu era renderizada em primeiro plano, e ao clicar no botão de jogar, essa imagem era destruída.
 
 &nbsp;&nbsp;&nbsp;&nbsp;Para aprimorar a arquitetura do jogo, essa abordagem foi refatorada para utilizar duas cenas distintas. Dessa maneira, o código foi dividido em três arquivos: `"main.js"`, `"menu.js"` e `"hospital.js"`. Cada arquivo é importado dentro da tag `<body>` do HTML, proporcionando uma estrutura mais organizada e modular.
 ```html
@@ -699,9 +699,9 @@ var config = {
     <script src="scenes/hospital.js"></script>
     <script src="main.js"></script>
 ```
-&nbsp;&nbsp;&nbsp;&nbsp;Vale ressaltar que, essa ordem é importante. Visto que, sem as duas classes contidas nos arquivos `"menu.js"` e `"hospital.js"` precisam estar declaradas para o arquivo `"main.js"` acessar.
+&nbsp;&nbsp;&nbsp;&nbsp;Vale ressaltar que essa ordem é importante, visto que, as duas classes contidas nos arquivos `"menu.js"` e `"hospital.js"` precisam estar declaradas para que o arquivo `"main.js"` possa ter acesso.
 
-&nbsp;&nbsp;&nbsp;&nbsp;No arquivo "main.js" está contida as configurações do phaser e a instância do objeto do jogo
+&nbsp;&nbsp;&nbsp;&nbsp;No arquivo `"main.js"`, está contida as configurações do phaser e a instância do objeto do jogo
 ```js
 // Cria as configurações para Phaser.Game
 const config = {
@@ -729,7 +729,7 @@ const game = new Phaser.Game(config);
 ```
 &nbsp;&nbsp;&nbsp;&nbsp;Observe que no atributo `scene`, é passado um array com as classes das duas cenas, as quais serão controladas pelo Phaser.
 
-&nbsp;&nbsp;&nbsp;&nbsp;Nos outros arquivos, "hospital" e "menu", são criadas duas classes que herdam da classe `Phaser.Scene`. Ainda assim, essas classes mantêm a estrutura básica do Phaser, incluindo as funções `preload`, `update` e `create` como métodos agora.
+&nbsp;&nbsp;&nbsp;&nbsp;Nos outros arquivos, `"hospital.js"` e `"menu.js"`, são criadas duas classes que herdam da classe `Phaser.Scene`. Ainda assim, essas classes mantêm a estrutura básica do Phaser, incluindo as funções `preload`, `update` e `create` como métodos agora.
 ```js
 class CenaHospital extends Phaser.Scene {
     preload(){}
@@ -741,9 +741,9 @@ class CenaHospital extends Phaser.Scene {
 
 &nbsp;&nbsp;&nbsp;&nbsp;Para finalizar, o código das respectivas cenas e funções foram transferidas para os arquivos em classe, colocando o operador `this` antes das variáveis por conta da mudança para classe.
 
-### Etapa 2 do desenvolvimento - Novo menu em Pixel Art
+### Etapa 2 do desenvolvimento - Novo menu em *pixel art*
 
-&nbsp;&nbsp;&nbsp;&nbsp;O primeiro passo foi fazer o desenho do novo menu, com uma cara parecida, porém em Pixel Art feita no Piskel.
+&nbsp;&nbsp;&nbsp;&nbsp;O primeiro passo foi fazer o desenho do novo menu, com uma cara parecida, porém em *pixel art* feita no Piskel.
 <p align=center style="font-size:1em">Figura X: Novo menu desenvolvido no Piskel</p>
 <p align=center><img src="other\sprint_2_item_4.2_files\figura1.png" alt="Figura X" width="400"/></p>
 <p align=center style="font-size:1em">Fonte: Autores</p>
@@ -760,8 +760,7 @@ preload(){
     this.load.spritesheet("botaoJogar", "assets/button.png", { frameWidth: 138, frameHeight: 46 }) // Imagem para botaoJogar
 }
 ``` 
-&nbsp;&nbsp;&nbsp;&nbsp;Em seguida, o menu foi implementado da mesma forma que no desenvolvimento preliminar. A única alteração foi no click do botão que ao invés de destruir as imagens, troca a cena. 
-Da seguinte forma:
+&nbsp;&nbsp;&nbsp;&nbsp;Em seguida, o menu foi implementado da mesma forma que no desenvolvimento preliminar. A única alteração foi no *click* do botão que, ao invés de destruir as imagens, troca a cena da seguinte forma:
 ````js
 this.botaoJogar.on("pointerdown", () => {
     // Evento de click do mouse
@@ -770,11 +769,11 @@ this.botaoJogar.on("pointerdown", () => {
     this.input.setDefaultCursor("default") // Retorno do cursor do mouse para setinha
 })
 ````
-&nbsp;&nbsp;&nbsp;&nbsp;No `this.scene.start` o Phaser inicia a cena do hospital e na linha seguinte encerra o menu
+&nbsp;&nbsp;&nbsp;&nbsp;No `this.scene.start` o Phaser inicia a cena do hospital e na linha seguinte encerra o menu.
 
 ### Etapa 3 do desenvolvimento - Implementação da física
 
-&nbsp;&nbsp;&nbsp;&nbsp;O primeiro passo foi habilitar a física na configuração do jogo
+&nbsp;&nbsp;&nbsp;&nbsp;O primeiro passo foi habilitar a física na configuração do jogo:
 ```js
 // Cria as configurações para Phaser.Game
 const config = {
@@ -787,7 +786,7 @@ const config = {
     }
 };
 ```
-&nbsp;&nbsp;&nbsp;&nbsp;Colocando esse trecho de código, habilitamos a física no jogo, sem gravidade pois o nosso jogo é no estilo "top down", vista de cima para baixo
+&nbsp;&nbsp;&nbsp;&nbsp;Colocando esse trecho de código, habilitamos a física no jogo, sem gravidade pois o nosso jogo é no estilo *top down*: vista de cima para baixo.
 
 ### Etapa 5 do desenvolvimento - Câmeras e cenário do Tiled Map Editor
 
@@ -797,7 +796,7 @@ const config = {
 <p align=center><img src="other\sprint_2_item_4.2_files\tiled_map_editor.png" alt="Figura X" width="400"/></p>
 <p align=center style="font-size:1em">Fonte: Autores</p>
 
-&nbsp;&nbsp;&nbsp;&nbsp;Após isso foi preciso importar o JSON para a classe `CenaHospital` e definir as camadas presentes, que no caso são as paredes e o chão até o momento.
+&nbsp;&nbsp;&nbsp;&nbsp;Após isso, foi preciso importar o JSON para a classe `CenaHospital` e definir as camadas presentes nele que, nessa figura, são as paredes e o chão.
 
 ```js
 preload(){
@@ -821,7 +820,7 @@ create(){
     this.wallsLayer = this.map.createLayer("Walls", [this.tileset1], 0 , 0); //Cria a camada de paredes, passando o tileset e o nome que definimos no tiled map editor
 }
 ```
-&nbsp;&nbsp;&nbsp;&nbsp;Dessa forma, o mapa é carregado e aparece corretamente na tela. No entanto, o mapa é muito grande, para melhorar a jogabilidade, foi preciso implementar a câmera. Dentro da função `create`, setamos duas coisas na câmera. O zoom e a perseguição no jogador
+&nbsp;&nbsp;&nbsp;&nbsp;Dessa forma, o mapa é carregado e aparece corretamente na tela. No entanto, o mapa é muito grande e para melhorar a jogabilidade foi preciso implementar a câmera. Dentro da função `create`, foram atribuídos duas coisas na câmera: o *zoom* e a perseguição dela ao jogador.
 ````js
 this.cameras.main.startFollow(this.medico, true); //camera inicia o follow no personagem principal
 this.cameras.main.setZoom(2);
@@ -832,14 +831,13 @@ this.cameras.main.setZoom(2);
 
 ### Etapa 6 do desenvolvimento - Colisões com as paredes
 
-&nbsp;&nbsp;&nbsp;&nbsp;De início, foi preciso fazer algumas alterações no Tiled Map Editor, precisamos setar em todos os blocos que tem colisão uma propriedade personalizada, que chamamos de `Collider`. Essa propriedade precisa ser do tipo `boolean` (Verdadeiro ou falso). 
-Com essa propriedade definida nos blocos, foi o momento de implementar a colisão. E com apenas duas linhas, graças ao Tiled Map Editor e a suas facilidades, foi possível definir colisão entre o muro e o jogador.
+&nbsp;&nbsp;&nbsp;&nbsp;De início, foi preciso fazer algumas alterações no Tiled Map Editor, precisamos atribuir a todos os blocos que têm colisão uma propriedade personalizada que chamamos de `Collider`. Essa propriedade precisa ser do tipo `boolean` (verdadeiro ou falso). Com essa propriedade definida nos blocos, foi o momento de implementar a colisão. E com apenas duas linhas, graças ao Tiled Map Editor e às suas facilidades, foi possível definir colisão entre as paredes e o jogador.
 
 ````js
 this.wallsLayer.setCollisionByProperty({ collider: true }) //Seta as colisões onde tem a propriedade collider: true no tiled map
 this.physics.add.collider(this.medico, this.wallsLayer, () => console.log("Colidiu")) //Adiciona colisão entre o médico e a camada de parede
 ````
-&nbsp;&nbsp;&nbsp;&nbsp;A primeira linha indica que a camada da parede terá colisão com os blocos que foram definidos com a propriedade `Collider` como verdadeira. Na segunda linha, adicionamos a colisão entre o médico e a parede, retornando um console.log para avisar que houve a colisão.
+&nbsp;&nbsp;&nbsp;&nbsp;A primeira linha indica que a camada da parede terá colisão com os blocos que foram definidos com a propriedade `Collider` como verdadeira. Na segunda linha, adicionamos a colisão entre o médico e a parede, retornando um `console.log` para indicar que houve a colisão.
 
 &nbsp;&nbsp;&nbsp;&nbsp;Para que a colisão funcione como deveria, foi necessário alterar o modo de movimentação do personagem. Ao invés de movimentar o X e Y do personagem diretamente, foi preciso configurar uma velocidade para o personagem. Dessa forma, o Phaser consegue ter controle sobre todas as colisões. Essa modificação foi implementada utilizando o seguinte método dentro do bloco `update` (considerando que a verificação WASD já foi implementada no desenvolvimento básico do jogo):
 ````js
@@ -852,11 +850,11 @@ this.medico.setVelocityY(velocidadeEmY)
 
 ### Etapa 7 do desenvolvimento - Implementação do joystick e tela cheia
 
-&nbsp;&nbsp;&nbsp;&nbsp;No projeto foi utilizada uma biblioteca chamada 'Rex Virtual Joystick'. Essa biblioteca está localizada em `src/plugins/rexvirtualjoystickplugin.min.js` sendo importada na cena do hospital na função `preload()`
+&nbsp;&nbsp;&nbsp;&nbsp;No projeto foi utilizada uma biblioteca chamada *Rex Virtual Joystick*, que está localizada em `src/plugins/rexvirtualjoystickplugin.min.js` sendo importada na cena do hospital na função `preload()`.
 ````js
 this.load.plugin("rexvirtualjoystickplugin","/src/plugins/rexvirtualjoystickplugin.min.js",true); //Carrega a biblioteca do joystick
 ````
-&nbsp;&nbsp;&nbsp;&nbsp;O joystick também tem um objeto config, onde define algumas coisas como as posições x e y, qual o raio do objeto e os objetos dentro do phaser que representarão os joysticks, além de definir qual a cena que está sendo utilizada, no nosso caso a CenaHospital. Além disso, uma função no joystick é chamada `scrollFactor(0)` que define que o joystick mova junto com a câmera
+&nbsp;&nbsp;&nbsp;&nbsp;O joystick também tem um objeto `config`, em que são definidos certos parâmetos, como as posições x e y, o raio do objeto e os objetos dentro do phaser que representarão os joysticks. Além disso, define qual a cena que está sendo utilizada, no nosso caso a `CenaHospital`. Ademais, uma função no joystick é chamada `scrollFactor(0)` que define que o joystick mova junto com a câmera
 ````js
 this.joystick = this.plugins.get("rexvirtualjoystickplugin").add(
       this,
@@ -871,15 +869,15 @@ this.joystick = this.plugins.get("rexvirtualjoystickplugin").add(
 );
 this.joystick.setScrollFactor(0); // Faz com que o joystick não se mova com a câmera
 ````
-&nbsp;&nbsp;&nbsp;&nbsp;Na biblioteca do joystick, dois atributos são retornados o `angle` e o `force`. Esse atributos estão sendo utilizados para a movimentação vetorial. O cálculo foi feito usando a decomposição vetorial, da seguinte forma:
+&nbsp;&nbsp;&nbsp;&nbsp;Na biblioteca do joystick, dois atributos são retornados: o `angle` e o `force`. Esse atributos estão sendo utilizados para a movimentação vetorial. O cálculo foi feito usando a decomposição vetorial, da seguinte forma:
 
 <p align=center style="font-size:1em">Figura X: Cálculo da velocidade em X e Y</p>
 <p align=center><img src="other\sprint_2_item_4.2_files\vetores.png" alt="Figura X" width="400"/></p>
 <p align=center style="font-size:1em">Fonte: Autores</p>
 
-Os vetores são decompostos para o personagem, além de não andar mais rápido na diagonal, seguir o ângulo que o usuário coloca no joystick virtual.
+&nbsp;&nbsp;&nbsp;&nbsp;Os vetores da velocidade do personagem são decompostos, o que faz com que ele, além de não andar mais rápido na diagonal, siga o ângulo que o usuário coloca no joystick virtual.
 
-A biblioteca, no atributo `angle` retorna um ângulo entre 0 e -180 graus na parte de cima e de 180 até 0 graus na metade do círculo para baixo, tudo isso foi verificado com `console.log()`. Para resolver esse problema a função `fixAngle()` é chamada, ela faz com que o ângulo do joystick vá de 0 a 360 graus no sentido anti-horário.
+&nbsp;&nbsp;&nbsp;&nbsp;A biblioteca, no atributo `angle` retorna um ângulo entre 0 e -180 graus no primeiro e no segundo quadrante do círculo trigonométrico e de 180 até 0 graus no terceiro e no quarto quadrante do círculo, tudo isso foi verificado com `console.log()`. Para resolver esse problema a função `fixAngle()` é chamada, ela faz com que o ângulo do joystick vá de 0 a 360 graus no sentido anti-horário.
 ````js
 fixAngle(angle) {
     if (angle < 0) {
@@ -890,17 +888,17 @@ fixAngle(angle) {
     }
 }
 ````
-Após isso, um tratamento é feito para converter o ângulo de graus para radianos, pois o cálculo de seno e cosseno no javascript precisa ser feito em radianos. `this.radiansAngleJoystick = this.fixAngle(this.joystick.angle)*Math.PI/180 || 0;`.
+&nbsp;&nbsp;&nbsp;&nbsp;Após isso, um tratamento é feito para converter o ângulo, que antes estava graus, para radianos, pois o cálculo de seno e cosseno no javascript precisa ser feito em radianos. `this.radiansAngleJoystick = this.fixAngle(this.joystick.angle)*Math.PI/180 || 0;`.
 
-Por fim, defini-se uma força máxima para o jogador não ficar muito rápido, visto que a força do joystick não define limite, ou seja, a força seria equivalente ao quanto você arrasta na tela. Ficando da seguinte forma: `this.joystickForce = this.joystick.force < 75 ? this.joystick.force : 75;`
+&nbsp;&nbsp;&nbsp;&nbsp;Por fim, define-se uma força máxima para o jogador não ficar muito rápido, visto que a força do joystick não define limite para ela, ou seja, a força seria equivalente ao quanto o dedo é arrastado na tela e poderia ser muito grande se a tela fosse grande. Ficando da seguinte forma: `this.joystickForce = this.joystick.force < 75 ? this.joystick.force : 75;`
 
-Passando para as contas para o javascript:
+&nbsp;&nbsp;&nbsp;&nbsp;Passando para as contas para o javascript:
 ````js
 const velocityDoctorX = (this.defaultVelocity * Math.cos(this.radiansAngleJoystick) * this.joystickForce)
 velocityDoctorX < 0 ? this.medico.setFlip(false, false) : this.medico.setFlip(true, false)
 const velocityDoctorY = -(this.defaultVelocity * Math.sin(this.radiansAngleJoystick) * this.joystickForce)
 ````
-Após isso, basta setar a velocidade do personagem para que a movimentação vetorial funcione.
+&nbsp;&nbsp;&nbsp;&nbsp;Após isso, basta implementar a velocidade do personagem para que a movimentação vetorial funcione.
 
 <p align=center style="font-size:1em">Figura X: Movimentação vetorial com o joystick</p>
 <p align=center><img src="other\sprint_2_item_4.2_files\movimentacao_vetorial.png" alt="Figura X" width="400"/></p>
@@ -921,7 +919,7 @@ openFullScreen() {
     }
 }
 ````
-&nbsp;&nbsp;&nbsp;&nbsp;Esse método deixa a página em tela cheia, assim que o botão de jogar é clicado
+&nbsp;&nbsp;&nbsp;&nbsp;Esse método deixa a página em tela cheia, assim que o botão de jogar é clicado.
 
 <p align=center style="font-size:1em">Figura X: Joystick no jogo e tela cheia</p>
 <p align=center><img src="other\sprint_2_item_4.2_files\joystick.png" alt="Figura X" width="400"/></p>
@@ -929,16 +927,16 @@ openFullScreen() {
 
 
 ### Dificuldades
-- Implementação da colisão
-- Dificuldade em ajustar o Tile Map
-- Implementar as entradas Mobile - O jogo já tem uma biblioteca para um joystick e teve dificuldade quanto a responsividade
+- Implementação da colisão;
+- Dificuldade em ajustar o Tile Map;
+- Implementar as entradas Mobile - O jogo já tem uma biblioteca para um joystick e teve dificuldade quanto a responsividade.
 
 ### Próximos passos
-- Terminar toda a decoração do mapa
-- Implementar o quiz e a lógica da biblioteca
-- Implementar a movimentação através de vetores
-- Spritesheet do personagem animada e finalizada
-- Sritesheet dos NPC's para animar no jogo
+- Terminar toda a decoração do mapa;
+- Implementar o quiz e a lógica da biblioteca;
+- Implementar a movimentação através de vetores;
+- Spritesheet do personagem animada e finalizada;
+- Sritesheet dos NPC's para animar no jogo.
 
 ## 4.3. Desenvolvimento intermediário do jogo (sprint 3)
 
@@ -1107,7 +1105,7 @@ SCHWERING, Ramona. Como definir casos de teste e prioridades. Disponível em: ht
 
 ### Piskel
 
-&nbsp;&nbsp;&nbsp;&nbsp;A ferramenta Piskel foi utilizada para a concepção das Pixel Arts do jogo.
+&nbsp;&nbsp;&nbsp;&nbsp;A ferramenta Piskel foi utilizada para a concepção das *pixel arts* do jogo.
 
 * [Piskel](https://www.piskelapp.com/)<br>
 
