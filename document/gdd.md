@@ -1,4 +1,4 @@
-<img src="../assets/logointeli.png">
+<img src="../src/assets/logointeli.png">
 
 
 # GDD - Game Design Document - Módulo 1 - Inteli
@@ -49,9 +49,9 @@
 
 <div align="center">
 
-<sub>Figura X - Canvas da Proposta de Valor do Projeto</sub>
+<sub>Figura 1 - Canvas da Proposta de Valor do Projeto</sub>
 
-<img src="./other/analise_swot.png" width="100%">
+<img src="./other/analise_swot.png" width="70%">
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup></div>
 
@@ -76,7 +76,7 @@
 
 <div align="center">
 
-<sub>Figura X - Canvas da Proposta de Valor do Projeto</sub>
+<sub>Figura 2 - Canvas da Proposta de Valor do Projeto</sub>
 
 <img src=".\other\canvas_proposta_valor.png" width="100%">
 
@@ -106,7 +106,7 @@
 
 <div align="center">
 
-<sub>Figura 3 - Matriz de Oportunidades</sub>
+<sub>Figura 4 - Matriz de Oportunidades</sub>
 
 <img src="./other/matriz_de_oportunidades.png" width="60%">
 
@@ -277,7 +277,7 @@ Posto isso, foi entendido que a definição adequada do público alvo aumenta a 
 
 <div align="center">
 
-<sub>Figura X - Mapa do Jogo</sub>
+<sub>Figura 5 - Mapa do Jogo</sub>
 
 <img src="./other/mapa1.png" width="60%">
 
@@ -316,7 +316,7 @@ Para nosso jogo, as concepts arts desenvolvidas estão listadas abaixo:
 
 <div align="center">
 
-<sub>Figura X - Concept Art do Mapa</sub>
+<sub>Figura 6 - Concept Art do Mapa</sub>
 
 <img src="./other/MapConceptArt.png" width="80%">
 
@@ -324,25 +324,25 @@ Para nosso jogo, as concepts arts desenvolvidas estão listadas abaixo:
 
 </div>
 
-Figura 1: Concept Art representando o Mapa do Jogo.
+&nbsp;&nbsp;&nbsp;&nbsp;A Figura 6: Concept Art representando o Mapa do Jogo.
 
 <div align="center">
 
-<sub>Figura X - Concept Art do Prontuário</sub>
+<sub>Figura 7 - Concept Art do Prontuário</sub>
 
-<img src="./other/ConceptArt_Prontuario.jpeg" width="80%">
+<img src="./other/ConceptArt_Prontuario.jpeg" width="40%">
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
 </div>
 
-Figura 2: Concept Art do prontuário dos pacientes.
+&nbsp;&nbsp;&nbsp;&nbsp;A Figura 7: Concept Art do prontuário dos pacientes.
 
 <div align="center">
 
 <sub>Figura X - Concept Art da Página de Livros</sub>
 
-<img src="./other/ConceptArt_Livro.jpg" width="80%">
+<img src="./other/ConceptArt_Livro.jpg" width="40%">
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
