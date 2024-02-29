@@ -83,9 +83,9 @@
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;Com base no perfil do cliente analisado através do 'Canva Proposition Value', ao observarmos suas dores, ganhos e necessidades, desenvolvemos uma proposta de solução totalmente gamificada. 
+&nbsp;&nbsp;&nbsp;&nbsp;As maneiras pelas quais nosso jogo se conecta com o perfil do cliente, solucionando suas principais necessidades e impulsionando seus atuais ganhos foram esclarecidas com a elaboração desse canvas. Uma estratégia para enfrentar o problema do cliente de maneira objetiva foi traçada em conjunto com a análise SWOT e, com base nessas informações, o desenvolvimento inicial foi iniciado. 
 
-&nbsp;&nbsp;&nbsp;&nbsp;Essa proposta visa envolver os jovens, proporcionando-lhes um ambiente divertido que cumpra o principal objetivo do projeto: a conscientização. Destacamos, sobretudo, a necessidade de algo versátil e atrativo para o público-alvo, oferecendo uma experiência única e divertida, a fim de disseminar entre diversas pessoas e conscientizar cada vez mais a população.
+&nbsp;&nbsp;&nbsp;&nbsp;Tendo em vista o perfil do cliente analisado através do 'Canva Proposition Value', ao observarmos suas dores, ganhos e necessidades, desenvolvemos uma proposta de solução totalmente gamificada. Essa proposta visa envolver os jovens, proporcionando-lhes um ambiente divertido que cumpra o principal objetivo do projeto: a conscientização. Destacamos, sobretudo, a necessidade de algo versátil e atrativo para o público-alvo, oferecendo uma experiência única e divertida, a fim de disseminar entre diversas pessoas e conscientizar cada vez mais a população.
 
 ### 1.1.5. Matriz de Riscos (sprints 1 e 4)
 
@@ -156,7 +156,7 @@
 \# | Requisito do grupo 
 --- | ---
 1 | No jogo deve ser implementado um menu inicial com um botão “inciar”;
-2 |O jogo deve conter uma sala de recepção, sala de espera para os pacientes, farmácia com questionário e uma biblioteca com livros para se adquirir conhecimento;
+2 |O jogo deve conter uma sala de recepção, sala de espera para os pacientes, Farmácia com questionário e uma biblioteca com livros para se adquirir conhecimento;
 3 |Deve ser adicionado ao jogo um sistema de recompensa tendo como base o tempo de atendimento, os acertos no questionário e a satisfação do cliente;
 4 |Adicionar efeitos sonoros, música de fundo por meio do framework phaser; 
 5 | deve ter animações que serão feitas com spritesheet;
@@ -166,7 +166,7 @@
 9 |Programar mudança de cenas para ter um código funcional do menu;
 10 |Adicionar animações ao personagem com spritesheet;
 11 |Adicionar tecla de input para interação com outros objetos ou personagens;
-12 |Fazer quiz no laboratório com mudança de cenas;
+12 |Fazer quiz na Farmácia com mudança de cenas;
 13 |O jogo deve ser rápido, com um tempo de duração de em média 10 minutos;
 14 |Terá possibilidade de rejogabilidade;
 15 |Adquirir pontos em forma de conhecimento e remédio com estilo mágico para não passar a impressão de ser um remédio verdadeiro;
@@ -178,13 +178,13 @@
 
 ## 1.3. Público-alvo do Projeto (sprint 2)
 
-&nbsp;&nbsp;&nbsp;&nbsp;De acordo com Kotler (2000), também conhecido como o “pai do marketing”, o público alvo é o grupo de consumidores que possui necessidades semelhantes àquelas que a empresa atende. O público alvo pode ser dividido em diversos fatores, como geografia, demografia, psicografia e comportamental. 
+&nbsp;&nbsp;&nbsp;&nbsp;De acordo com Kotler (2000), também conhecido como o “pai do marketing”, o público alvo é o grupo de consumidores que possui necessidades semelhantes àquelas que a empresa atende. O público alvo pode ser dividido em diversos fatores tais quais: geografia, demografia, psicografia e comportamento. 
 
-&nbsp;&nbsp;&nbsp;&nbsp;O nosso jogo é pensado e destinado à adolescentes e jovens adultos que fazem parte de comunidades e regiões carentes com acesso limitado à educação, visto que o objetivo principal do projeto é a conscientização e, 90% dos incidentes envolvendo queimaduras são reportados em locais onde a população é leiga. 
+&nbsp;&nbsp;&nbsp;&nbsp;O nosso jogo é pensado e destinado à adolescentes e jovens adultos que fazem parte de comunidades e regiões carentes com acesso limitado à educação, visto que o objetivo principal do projeto é a conscientização e 90% dos incidentes envolvendo queimaduras são reportados em locais onde a população é leiga. 
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;Portanto, para que a magnitude da influência e impacto gerado do nosso produto seja positiva, definimos o público alvo levando em consideração os aspectos demográficos, especificamente a idade, renda e educação. 
-Isso posto, entendemos que a definição adequada do público alvo aumenta a magnitude da influência e impacto gerado, o que vai de acordo com o nosso objetivo principal.
+Posto isso, foi entendido que a definição adequada do público alvo aumenta a magnitude da influência e impacto gerado, o que vai de acordo com o nosso objetivo principal.
 
 # <a name="c2"></a>2. Visão Geral do Jogo (sprint 2)
 
@@ -238,7 +238,7 @@ Isso posto, entendemos que a definição adequada do público alvo aumenta a mag
 
 &nbsp;&nbsp;&nbsp;&nbsp;O jogador encarna o papel de Residente, um jovem médico recentemente formado, prestes a iniciar sua jornada no desafiador mundo da medicina. Ao ingressar na equipe do pronto-socorro de queimaduras, ele é guiado pela experiente Dra. Tina, uma figura respeitada no campo da medicina de emergência.
 
-&nbsp;&nbsp;&nbsp;&nbsp;Inicialmente, o Residente é confrontado com situações desafiadoras e momentos de incerteza, onde sua inexperiência se manifesta de maneira evidente. No entanto, à medida que ele se envolve em diagnósticos, tratamentos de emergência e tomadas de decisão rápidas, ele começa a perceber que sua verdadeira jornada como médico está apenas começando.
+&nbsp;&nbsp;&nbsp;&nbsp;Inicialmente, o Residente é confrontado com situações desafiadoras e momentos de incerteza, nos quais sua inexperiência se manifesta de maneira evidente. No entanto, à medida que ele se envolve em diagnósticos, tratamentos de emergência e tomadas de decisão rápidas, ele começa a perceber que sua verdadeira jornada como médico está apenas começando.
 
 &nbsp;&nbsp;&nbsp;&nbsp;Ao longo do jogo, o Residente é confrontado com uma série de desafios que testam suas habilidades técnicas, sua eficiência e sua ética . Ele se encontra diante de pacientes cujas vidas dependem de suas decisões, exigindo coragem e determinação para superar obstáculos e salvar vidas.
 
@@ -249,14 +249,14 @@ Isso posto, entendemos que a definição adequada do público alvo aumenta a mag
 
 ### 3.2.1. Controláveis
 
-&nbsp;&nbsp;&nbsp;&nbsp;Personagens controláveis referem-se aqueles avatares que são comandados pelo jogador através de comandos de movimento, ações, combate, dentre outros.
+&nbsp;&nbsp;&nbsp;&nbsp;O termo "personagem controlável" refere-se àqueles avatares que são comandados pelo jogador através de comandos de movimento, ações, combate, dentre outros.
 
-O jogo referido neste documento terá apenas um personagem controlável em jogo, porém o jogador poderá selecionar o sexo do protagonista, ou seja, haverá duas opções: O residente médico protagonista masculino e a residente médica protagonista feminina. Não será possível jogar com mais de um personagem controlável no mesmo jogo. O nome do personagem controlável masculino é X e Y, o nome da protagonista feminina. O avatar controlável será um(a) residente médico(a) especializando-se na área de cirurgia plásticas, especialmente em queimaduras. X ou Y é guiado pela Dra. Cristina durante seu expediente, e possui habilidades para atender os pacientes, consultar livros na Biblioteca para adquirir o conhecimento e responder às perguntas no Laboratório para receber o remédio (fictício) necessário para tratar o cliente.
+O jogo referido neste documento terá apenas um personagem controlável em jogo, porém o jogador poderá selecionar o sexo do protagonista, ou seja, haverá duas opções: O residente médico protagonista masculino e a residente médica protagonista feminina. Não será possível jogar com mais de um personagem controlável ao iniciar o jogo, portanto ele só poderá ser alterado quando o jogador retornar ao menu inicial. O nome do personagem controlável masculino é X e Y, o nome da protagonista feminina. O avatar controlável será um(a) residente médico(a) especializando-se na área de cirurgia plásticas, especialmente em casos de pacientes que sofreram queimaduras. X ou Y é guiado pela Dra. Tina durante seu expediente e possui habilidades para atender os pacientes, consultar livros na Biblioteca para adquirir conhecimento e responder às perguntas na Farmácia para receber o remédio (fictício) necessário para tratar o cliente.
 
 ### 3.2.2. Non-Playable Characters (NPC)
 
 
-&nbsp;&nbsp;&nbsp;&nbsp;Personagens não controláveis (NPCs) são avatares os quais o jogador não possui controle direto, portanto não comandam seus movimentos e ações específicas. Em nosso projeto, haverá vários NPCs, dos quais 6 representarão os pacientes a serem atendidos pelo jogador através do personagem principal e a um será a Dra. Cristina, NPC responsável por guiar o jogador sobre o fluxo de jogabilidade e tutoriais em pontos específicos.
+&nbsp;&nbsp;&nbsp;&nbsp;Personagens não controláveis (NPCs) são avatares que o jogador não possui controle direto, portanto não comandam seus movimentos e ações específicas. Em nosso projeto, haverá vários NPCs, dos quais 6 representarão os pacientes a serem atendidos pelo jogador através do personagem principal e um será a Dra. Tina, NPC responsável por guiar o jogador sobre o fluxo de jogabilidade e tutoriais em pontos específicos.
 
 ### 3.2.3. Diversidade e Representatividade dos Personagens
 
@@ -268,13 +268,13 @@ O jogo referido neste documento terá apenas um personagem controlável em jogo,
 
 &nbsp;&nbsp;&nbsp;&nbsp;O jogo se passa em um fase única e cíclica composta pelos seguintes ambientes:
 
-&nbsp;&nbsp;&nbsp;&nbsp;Sala de Triagem: Onde os pacientes chegam ao hospital e são inicialmente avaliados pelo jogador, que no papel do médico residente, avalia a gravidade das queimaduras dos pacientes. 
+&nbsp;&nbsp;&nbsp;&nbsp;Sala de Triagem: Onde os pacientes chegam ao hospital e são inicialmente avaliados pelo jogador, que, no papel do médico residente, avalia a gravidade das queimaduras dos pacientes. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;Consultório: Após a triagem, o paciente se desloca para o consultório, onde aguarda o médico voltar com seu tratamento.
 
 &nbsp;&nbsp;&nbsp;&nbsp;Biblioteca: Um ambiente onde o jogador pode acessar informações sobre prevenção de queimaduras e procedimentos de primeiros socorros de acordo com o paciente que está atendendo.
 
-&nbsp;&nbsp;&nbsp;&nbsp;Farmácia: Onde o jogador aplica os conhecimentos adquiridos para que consiga o remédio (representativo) correto para que consiga tratar o paciente.
+&nbsp;&nbsp;&nbsp;&nbsp;Farmácia: Lugar em que o jogador aplica os conhecimentos adquiridos para que consiga o remédio (representativo) correto para que consiga tratar o paciente.
 
 <div align="center">
 
@@ -295,7 +295,7 @@ O jogo referido neste documento terá apenas um personagem controlável em jogo,
 
 &nbsp;&nbsp;&nbsp;&nbsp;A Biblioteca está disponível para o Residente a qualquer momento. Para acessar as informações, basta colidir com uma estante. O conteúdo da Biblioteca permanece o mesmo, independente do paciente sendo atendido.
 
-&nbsp;&nbsp;&nbsp;&nbsp;No laboratório, o Residente deve colidir com um objeto para iniciar um jogo de perguntas. As perguntas variam de acordo com o histórico do paciente, tornando essa funcionalidade disponível apenas após a triagem. Ao responder corretamente, o jogador recebe uma pílula de tratamento.
+&nbsp;&nbsp;&nbsp;&nbsp;Na Farmácia, o Residente deve colidir com um objeto para iniciar um jogo de perguntas. As perguntas variam de acordo com o histórico do paciente, tornando essa funcionalidade disponível apenas após a triagem. Ao responder corretamente, o jogador recebe uma pílula de tratamento.
 
 &nbsp;&nbsp;&nbsp;&nbsp;O Residente retorna ao consultório, onde o paciente o espera, para administrar o tratamento após identificar a medicação correta. Esse procedimento só é possível se o médico tiver triado o paciente corretamente e recebido a medicação após o quiz.
 
@@ -305,9 +305,7 @@ O jogo referido neste documento terá apenas um personagem controlável em jogo,
 &nbsp;&nbsp;&nbsp;&nbsp;No jogo, o tempo é um elemento que adiciona diversão e desafio à experiência do jogador. 
 Um cronômetro é utilizado para medir o tempo que o jogador tem para completar cada ciclo de cuidado com o paciente no pronto-socorro de queimaduras. 
 
-&nbsp;&nbsp;&nbsp;&nbsp;O desafio está em cumprir o máximo de ciclos no tempo estipulado, o que cria uma sensação de urgência e emoção. 
-
-&nbsp;&nbsp;&nbsp;&nbsp;O jogador é recompensado com pontuações mais altas por sua eficiência e rapidez, incentivando repetições para melhorar o desempenho. No entanto, erros resultam na perda de tempo, tornando essencial tomar decisões cuidadosas e precisas durante o jogo. 
+&nbsp;&nbsp;&nbsp;&nbsp;O desafio está em cumprir o máximo de ciclos no tempo estipulado, o que cria uma sensação de urgência e emoção. O jogador é recompensado com pontuações mais altas por sua eficiência e rapidez, incentivando repetições para melhorar o desempenho. No entanto, erros resultam na perda de tempo, tornando essencial tomar decisões cuidadosas e precisas durante o jogo. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;Em resumo, o cronômetro adiciona dinamismo e intensidade à jogabilidade, mantendo os jogadores engajados e focados em suas tarefas.
 
@@ -416,7 +414,7 @@ Figura 3: Concept Art da Página do Livro.
 
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;2 - No Hall Principal do Hospital, o jogador poderá ir para a Biblioteca, onde poderá ler livros sobre primeiros socorros, tratamento e prevenção de queimaduras. No entanto, apesar do jogador poder ir à farmácia, ela estará bloqueada, pois nenhum paciente foi atendido.
+&nbsp;&nbsp;&nbsp;&nbsp;2 - No Hall Principal do Hospital, o jogador poderá ir para a Biblioteca, onde poderá ler livros sobre primeiros socorros, tratamento e prevenção de queimaduras. No entanto, apesar do jogador poder ir à Farmácia, ela estará bloqueada, pois nenhum paciente foi atendido.
 
 <div align="center">
 
@@ -452,7 +450,7 @@ Figura 3: Concept Art da Página do Livro.
 
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;5 - Com o conhecimento adquirido na biblioteca, o médico agora pode ir à farmácia (bloqueada caso não antes realizar a triagem do paciente) e realizar o quiz para aquisição do remédio para tratamento do paciente.
+&nbsp;&nbsp;&nbsp;&nbsp;5 - Com o conhecimento adquirido na biblioteca, o médico agora pode ir à Farmácia (bloqueada caso não antes realizar a triagem do paciente) e realizar o quiz para aquisição do remédio para tratamento do paciente.
 
 <div align="center">
 
@@ -678,7 +676,7 @@ var config = {
 - Implementar mudança de cenas;
 - Adicionar um objeto médico com animação (spritesheet);
 - Adicionar lógica de colisão ao personagem para interação com outros objetos ou NPCs;
-- Começar a implementação do quiz ao acessar o laboratório (vide abaixo).
+- Começar a implementação do quiz ao acessar o Farmácia (vide abaixo).
 
 <p align=center style="font-size:1em">Figura 4: Protótipo do Quiz</p>
 <p align=center><img src="other\sprint_1_item_4.1_files\figura7.png" alt="Figura 7" width="400"/></p>
@@ -853,13 +851,90 @@ this.medico.setVelocityY(velocidadeEmY)
 <p align=center><img src="other\sprint_2_item_4.2_files\collision.png" alt="Figura X" width="400"/></p>
 <p align=center style="font-size:1em">Fonte: Autores</p>
 
+### Etapa 7 do desenvolvimento - Implementação do joystick e tela cheia
+
+&nbsp;&nbsp;&nbsp;&nbsp;No projeto foi utilizada uma biblioteca chamada 'Rex Virtual Joystick'. Essa biblioteca está localizada em `src/plugins/rexvirtualjoystickplugin.min.js` sendo importada na cena do hospital na função `preload()`
+````js
+this.load.plugin("rexvirtualjoystickplugin","/src/plugins/rexvirtualjoystickplugin.min.js",true); //Carrega a biblioteca do joystick
+````
+&nbsp;&nbsp;&nbsp;&nbsp;O joystick também tem um objeto config, onde define algumas coisas como as posições x e y, qual o raio do objeto e os objetos dentro do phaser que representarão os joysticks, além de definir qual a cena que está sendo utilizada, no nosso caso a CenaHospital. Além disso, uma função no joystick é chamada `scrollFactor(0)` que define que o joystick mova junto com a câmera
+````js
+this.joystick = this.plugins.get("rexvirtualjoystickplugin").add(
+      this,
+      {
+        x: 490,
+        y: this.medico.y + 125,
+        radius: 30,
+        base: this.add.circle(0, 0, 30, 0xff0000),
+        thumb: this.add.circle(0, 0, 15, 0xcccccc),
+        minForce: 2,
+      }
+);
+this.joystick.setScrollFactor(0); // Faz com que o joystick não se mova com a câmera
+````
+&nbsp;&nbsp;&nbsp;&nbsp;Na biblioteca do joystick, dois atributos são retornados o `angle` e o `force`. Esse atributos estão sendo utilizados para a movimentação vetorial. O cálculo foi feito usando a decomposição vetorial, da seguinte forma:
+
+<p align=center style="font-size:1em">Figura X: Cálculo da velocidade em X e Y</p>
+<p align=center><img src="other\sprint_2_item_4.2_files\vetores.png" alt="Figura X" width="400"/></p>
+<p align=center style="font-size:1em">Fonte: Autores</p>
+
+Os vetores são decompostos para o personagem, além de não andar mais rápido na diagonal, seguir o ângulo que o usuário coloca no joystick virtual.
+
+A biblioteca, no atributo `angle` retorna um ângulo entre 0 e -180 graus na parte de cima e de 180 até 0 graus na metade do círculo para baixo, tudo isso foi verificado com `console.log()`. Para resolver esse problema a função `fixAngle()` é chamada, ela faz com que o ângulo do joystick vá de 0 a 360 graus no sentido anti-horário.
+````js
+fixAngle(angle) {
+    if (angle < 0) {
+      return -angle
+    }
+    else if (angle > 0) {
+      return 360 - angle
+    }
+}
+````
+Após isso, um tratamento é feito para converter o ângulo de graus para radianos, pois o cálculo de seno e cosseno no javascript precisa ser feito em radianos. `this.radiansAngleJoystick = this.fixAngle(this.joystick.angle)*Math.PI/180 || 0;`.
+
+Por fim, defini-se uma força máxima para o jogador não ficar muito rápido, visto que a força do joystick não define limite, ou seja, a força seria equivalente ao quanto você arrasta na tela. Ficando da seguinte forma: `this.joystickForce = this.joystick.force < 75 ? this.joystick.force : 75;`
+
+Passando para as contas para o javascript:
+````js
+const velocityDoctorX = (this.defaultVelocity * Math.cos(this.radiansAngleJoystick) * this.joystickForce)
+velocityDoctorX < 0 ? this.medico.setFlip(false, false) : this.medico.setFlip(true, false)
+const velocityDoctorY = -(this.defaultVelocity * Math.sin(this.radiansAngleJoystick) * this.joystickForce)
+````
+Após isso, basta setar a velocidade do personagem para que a movimentação vetorial funcione.
+
+<p align=center style="font-size:1em">Figura X: Movimentação vetorial com o joystick</p>
+<p align=center><img src="other\sprint_2_item_4.2_files\movimentacao_vetorial.png" alt="Figura X" width="400"/></p>
+<p align=center style="font-size:1em">Fonte: Autores</p>
+
+&nbsp;&nbsp;&nbsp;&nbsp;Para a tela cheia, quando o jogador clica no botão 'jogar' uma função que acessa o elemento principal do HTML e deixa ele em tela cheia.
+````js
+openFullScreen() {
+    const page = document.documentElement //Pega o documento inteiro
+    if (page.requestFullscreen){ //Se o navegador suportar o Fullscreen
+        page.requestFullscreen() //Ativa o Fullscreen
+    } else if (page.mozRequestFullScreen){ //Se o navegador suportar o Fullscreen do Mozila
+        page.mozRequestFullScreen() //Ativa o Fullscreen
+    } else if (page.webkitRequestFullscreen){ //Se o navegador suportar o Fullscreen do Webkit
+        page.webkitRequestFullscreen() //Ativa o Fullscreen
+    } else if (page.msRequestFullscreen){ //Se o navegador suportar o Fullscreen do Microsoft
+        page.msRequestFullscreen() //Ativa o Fullscreen
+    }
+}
+````
+&nbsp;&nbsp;&nbsp;&nbsp;Esse método deixa a página em tela cheia, assim que o botão de jogar é clicado
+
+<p align=center style="font-size:1em">Figura X: Joystick no jogo e tela cheia</p>
+<p align=center><img src="other\sprint_2_item_4.2_files\joystick.png" alt="Figura X" width="400"/></p>
+<p align=center style="font-size:1em">Fonte: Material produzido pelos</p>
+
+
 ### Dificuldades
 - Implementação da colisão
 - Dificuldade em ajustar o Tile Map
-- Implementar as entradas Mobile - O jogo já tem uma biblioteca para um joystick, porém ainda está com bugs
+- Implementar as entradas Mobile - O jogo já tem uma biblioteca para um joystick e teve dificuldade quanto a responsividade
 
 ### Próximos passos
-- Implementar o joystick funcional
 - Terminar toda a decoração do mapa
 - Implementar o quiz e a lógica da biblioteca
 - Implementar a movimentação através de vetores
