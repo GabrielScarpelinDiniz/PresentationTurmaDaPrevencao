@@ -279,7 +279,7 @@ Posto isso, foi entendido que a definição adequada do público alvo aumenta a 
 
 <sub>Figura X - Mapa do Jogo</sub>
 
-<img src="./other/mapa1.png" width="70%">
+<img src="./other/mapa1.png" width="60%">
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 </div>
