@@ -99,7 +99,7 @@
 
 <sub>Figura 3 - Matriz de Riscos</sub>
 
-<img src="./other/matriz_de_riscos.jpg" width="100%">
+<img src="./other/matriz_de_riscos.jpg" width="80%">
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 </div>
@@ -108,7 +108,7 @@
 
 <sub>Figura 3 - Matriz de Oportunidades</sub>
 
-<img src="./other/matriz_de_oportunidades.png" width="100%">
+<img src="./other/matriz_de_oportunidades.png" width="80%">
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 </div>
@@ -243,7 +243,6 @@ Posto isso, foi entendido que a definição adequada do público alvo aumenta a 
 &nbsp;&nbsp;&nbsp;&nbsp;Ao longo do jogo, o Residente é confrontado com uma série de desafios que testam suas habilidades técnicas, sua eficiência e sua ética . Ele se encontra diante de pacientes cujas vidas dependem de suas decisões, exigindo coragem e determinação para superar obstáculos e salvar vidas.
 
 &nbsp;&nbsp;&nbsp;&nbsp;À medida que o Residente avança em sua jornada, ele não apenas ganha confiança em suas habilidades clínicas, mas também cresce como profissional. Ele aprende lições importantes sobre a prevenção de queimaduras e o domínio sobre os procedimentos de primeiros socorros.
-
 
 ## 3.2. Personagens (sprints 2 e 3)
 
@@ -525,7 +524,7 @@ Figura 3: Concept Art da Página do Livro.
 <p align=center><img src="other\sprint_1_item_4.1_files\figura2.png" alt="Figura 2" width="400"/></p>
 <p align=center style="font-size:1em">Figura 2: Cena de jogo</p> -->
 
-<p align=center style="font-size:1em">Figura 1: Cenas de jogo</p>
+<p align=center style="font-size:1em">Figura x: Cenas de jogo</p>
 
 <p align="middle">
   <img src="other\sprint_1_item_4.1_files\figura1.png" width="400" />
@@ -542,7 +541,7 @@ Figura 3: Concept Art da Página do Livro.
 <p align=center><img src="other\sprint_1_item_4.1_files\figura4.png" alt="Figura 4" width="400"/></p>
 <p align=center style="font-size:1em">Figura 4: Botão de Jogar</p> -->
 
-<p align=center style="font-size:1em">Figura 2: Cena de início</p>
+<p align=center style="font-size:1em">Figura X: Cena de início</p>
 <p align="middle">
   <img src="other\sprint_1_item_4.1_files\figura3.png" width="400" />
   <img src="other\sprint_1_item_4.1_files\figura4.png" width="400" /> 
@@ -556,7 +555,7 @@ Figura 3: Concept Art da Página do Livro.
 <p align=center><img src="other\sprint_1_item_4.1_files\figura6.png" alt="Figura 6" width="80"/></p>
 <p align=center style="font-size:1em">Figura 6: Imagem do Personagem</p> -->
 
-<p align=center style="font-size:1em">Figura 3: Cena de jogo</p>
+<p align=center style="font-size:1em">Figura X: Cena de jogo</p>
 <p align="middle">
   <img src="other\sprint_1_item_4.1_files\figura5.png" width="400" />
   <img src="other\sprint_1_item_4.1_files\figura6.png" width="100" /> 
@@ -957,9 +956,11 @@ openFullScreen() {
 
 ## 5.1. Casos de Teste
 
-*Descreva nesta seção os casos de teste comuns que podem ser executados a qualquer momento para testar o funcionamento e integração das partes do jogo. Utilize tabelas para facilitar a organização.*
+&nbsp;&nbsp;&nbsp;&nbsp;Segundo o site "web.dev", no desenvolvimento de software, um caso de teste é definido como "uma sequência de ações ou circunstâncias planejadas para confirmar a eficácia de um programa ou aplicativo de software". Esses casos têm como objetivo assegurar que o software opere conforme planejado, garantindo que todos os seus recursos e funções tenham o desempenho correto. Normalmente, são criados por testadores ou desenvolvedores de software para garantir que o software atenda aos requisitos e especificações definidos.
 
-&nbsp;&nbsp;&nbsp;&nbsp; Intro
+&nbsp;&nbsp;&nbsp;&nbsp;O presente projeto, ao adotar o paradigma de programação orientada a objetos, torna essencial a criação de casos de teste para garantir que as classes, métodos e interações entre os objetos funcionem corretamente e atendam aos requisitos do sistema. Os testes devem abranger também diversas situações e cenários possíveis de uso do sistema, verificando se os objetos interagem corretamente entre si e se os métodos produzem os resultados esperados.
+
+&nbsp;&nbsp;&nbsp;&nbsp;A tabela abaixo representa os casos de teste que podem ser realizados na cena "main.js". Entre eles, podemos destacar a verificação se as dimensões de inicialização da tela do jogo estão corretas, se a tela está com o ajuste configurado para dispositivos mobile e se existem duas cenas sendo adicionadas ao jogo.
 
 <div align="center">
 <sub>Tabela X - Casos de Testes da Cena main.js</sub>
@@ -975,9 +976,9 @@ openFullScreen() {
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp; Explicação da tabela acima
+&nbsp;&nbsp;&nbsp;&nbsp; A tabela acima apresenta os casos de testes iniciais que podemos aplicar à cena "main.js" para começarmos a trabalhar na gestão da qualidade e funcionamento do software.
 
-&nbsp;&nbsp;&nbsp;&nbsp; Introdução da tabela abaixo
+&nbsp;&nbsp;&nbsp;&nbsp; Outro arquivo em que deve-se criar casos de teste é a cena chamada menu.js. Aqui estão os testes relacionados com o carregamento do jogo e posicionamento das imagens na tela. Além disso, criamos testes também para testar a funcionalidade do botão "Jogar".
 
 <div align="center">
 <sub>Tabela X - Casos de Testes da Cena menu.js</sub>
@@ -995,9 +996,10 @@ openFullScreen() {
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp; Explicação da tabela acima
+&nbsp;&nbsp;&nbsp;&nbsp;Após a interação com o botão "Jogar" da tela anterior, "menu.js", a tela "hospital.js" é carregada e a lógica do jogo é inicializada. Nessa etapa também existem testes para o précarregamento de assets, mas o foco está mais nas mecânicas do personagem e em como o mundo interage com ele.
 
-&nbsp;&nbsp;&nbsp;&nbsp; Introdução da tabela abaixo
+&nbsp;&nbsp;&nbsp;&nbsp;Testes como a verificação do carregamento do mapa, a criação do joystick virtual e a colisão com paredes são feitos nessa parte. Como "hospital.js" será um arquivo com mais código do que os outros, mais testes serão adicionados com a implementação de novas mecânicas.
+
 
 <div align="center">
 <sub>Tabela X - Casos de Testes da Cena hospital.js</sub>
@@ -1019,7 +1021,7 @@ openFullScreen() {
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp; Explicação da tabela acima
+&nbsp;&nbsp;&nbsp;&nbsp;Por fim, a criação dos casos de teste é muito importante ao longo de um projeto de software e trás vários benefícios, como: auxiliar na garantia de qualidade, reduzir erros, facilitar a manutenção e promover a evolução do código garantindo estabilidade e integridade.
 
 ## 5.2. Testes de jogabilidade (playtests) (sprint 4)
 
@@ -1056,15 +1058,23 @@ O que poderia melhorar no jogo? | A responsividade do personagem aos controles, 
 
 OSTERWALDER, Alex. Value Proposition Design: How to Create Products and Services Customers Want. 1st Edition. Wiley, 2014. <br>
 
+WIRTZ, Bryan. Gamedesigning. Disponível em: https://www.gamedesigning.org/gaming/video-game-genres/#Educational-Games. Acesso em 14 Fev. 2024<br>
+
 MINETTO, Bianca. Ferramentas da qualidade. Disponível em: https://ferramentasdaqualidade.org/matriz-de-riscos-matriz-de-probabilidade-e-impacto/. Acesso em: 16 Fev. 2024 <br>
 
 CASAROTTO,  Camila. Rockcontent. Disponível em: https://rockcontent.com/br/blog/como-fazer-uma-analise-swot/. Acesso em: 16 fev. 2024 <br>
 
-JRS CONSULTORIA (AL). Público-alvo: tudo o que você precisa saber sobre o assunto!. Maceió, 2022. Disponível em: https://www.jrsconsultoria.com.br/2022/07/publico-alvo-tudo-o-que-voce-precisa-saber-sobre-o-assunto/. Acesso em: 27 fev. 2024.
+JRS CONSULTORIA (AL). Público-alvo: tudo o que você precisa saber sobre o assunto!. Maceió, 2022. Disponível em: https://www.jrsconsultoria.com.br/2022/07/publico-alvo-tudo-o-que-voce-precisa-saber-sobre-o-assunto/. Acesso em: 27 fev. 2024.<br>
 
-KOTLER, Philip; ARMSTRONG, Gary. Princípios de Marketing. 15. ed. [S. l.]: Pearson Universidades, 2014. 800 p. ISBN 978-8543004471.
+KOTLER, Philip; ARMSTRONG, Gary. Princípios de Marketing. 15. ed. [S. l.]: Pearson Universidades, 2014. 800 p. ISBN 978-8543004471.<br>
 
-EIKO, Julia. Revospace. Disponível em: https://revospace.com.br/artigo/o-que-e-concept-art/ Acesso em 28 fev. 2024.
+EIKO, Julia. Revospace. Disponível em: https://revospace.com.br/artigo/o-que-e-concept-art/. Acesso em 28 fev. 2024.<br>
+
+LIMA, Rafael; LIMA, Leonardo. A Estrutura Narrativa Dos Jogos Eletrônicos. A Estrutura Narrativa Dos Jogos Eletrônicos, Londrina, Piauí, p. 695-698, 13 nov. 2015. Disponível em: https://www.sbgames.org/sbgames2015/anaispdf/artesedesign-short/147515.pdf. Acesso em: 22 fev. 2024.<br>
+
+BORGES, D. M.; BARREIRA, R. G.; SOUZA, J. G.. Comportamento de personagens em jogos de computador. In: ENCOINFO - Congresso de Computação e Tecnologias da Informação, 11., 2009, Palmas - TO. Anais [...]. Palmas - TO: CEULP/ULBRA, 2009. p. 101 - 108. ISSN e-ISSN: 2447-0767 versão online. Disponível em: https://ulbra-to.br/encoinfo/edicoes/2009/artigos/comportamento-de-personagens-em-jogos-de-computador/. Acesso em: 28 fev. 2024.<br>
+
+SCHWERING, Ramona. Como definir casos de teste e prioridades. Disponível em: https://web.dev/articles/ta-test-cases?hl=pt-br. Acesso em 28 fev. 2024.<br>
 
 
 # <a name="c8"></a>Anexos
