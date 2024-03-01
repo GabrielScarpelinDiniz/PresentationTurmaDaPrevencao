@@ -321,9 +321,9 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 ### 3.3.4. Concept Art (sprint 2)
 
-As Concepts Arts são desenhos desenvolvidos com o objetivo de conceituar elementos do jogo como personagens, itens, cenários, etc.
+&nbsp;&nbsp;&nbsp;&nbsp;As Concepts Arts são desenhos desenvolvidos com o objetivo de conceituar elementos do jogo como personagens, itens, cenários, etc.
 
-Para nosso jogo, as concepts arts desenvolvidas estão listadas abaixo:
+&nbsp;&nbsp;&nbsp;&nbsp;Para nosso jogo, as concepts arts desenvolvidas estão listadas abaixo:
 
 <div align="center">
 
@@ -359,7 +359,7 @@ Para nosso jogo, as concepts arts desenvolvidas estão listadas abaixo:
 
 </div>
 
-Figura 8: Concept Art da Página do Livro.
+&nbsp;&nbsp;&nbsp;&nbsp;Figura 8: Concept Art da Página do Livro.
 
 ### 3.3.5. Trilha sonora (sprint 3)
 
@@ -528,48 +528,45 @@ Figura 8: Concept Art da Página do Livro.
 
 &nbsp;&nbsp;&nbsp;&nbsp;A primeira versão do jogo possui duas cenas, uma de início e uma de jogo. Ambas possuem arte gráfica provisória e foram desenvolvidas com o intuito de serem apresentadas na reunião com o parceiro ao final do Sprint 1.
 
-<!-- <p align=center><img src="other\sprint_1_item_4.1_files\figura1.png" alt="Figura 1" width="400"/></p>
-<p align=center style="font-size:1em">Figura 1: Cena de início</p>
-<p align=center><img src="other\sprint_1_item_4.1_files\figura2.png" alt="Figura 2" width="400"/></p>
-<p align=center style="font-size:1em">Figura 2: Cena de jogo</p> -->
+<div align="center">
 
-<p align=center style="font-size:1em">Figura 18 - Cenas de jogo</p>
+<sub>Figura 18 - Cenas de jogo</sub>
 
 <p align="middle">
-  <img src="other\sprint_1_item_4.1_files\figura1.png" width="400" />
-
-  <img src="other\sprint_1_item_4.1_files\figura2.png" width="400" /> 
-
+    <img src="other\sprint_1_item_4.1_files\figura1.png" width="40%">
+    <img src="other\sprint_1_item_4.1_files\figura2.png" width="40%">
 </p>
-<p align=center style="font-size:1em">Fonte: Material produzido pelos autores (2024)</p>
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+
+</div>
 
 &nbsp;&nbsp;&nbsp;&nbsp;A cena de início é uma artimanha de programação e será transformada futuramente em um arquivo JavaScript separado ao adquirirmos o conhecimento para tal. De momento, criamos duas imagens, um layer a frente das outras, e as removemos por um evento acionado pelo clique do mouse no botão “Jogar”.
-<!-- 
-<p align=center><img src="other\sprint_1_item_4.1_files\figura3.png" alt="Figura 3" width="400"/></p>
-<p align=center style="font-size:1em">Figura 3: Fundo da Cena de início</p>
-<p align=center><img src="other\sprint_1_item_4.1_files\figura4.png" alt="Figura 4" width="400"/></p>
-<p align=center style="font-size:1em">Figura 4: Botão de Jogar</p> -->
 
-<p align=center style="font-size:1em">Figura 19 - Cena de início</p>
+<div align="center">
+
+<sub>Figura 19 - Cena de início</sub>
+
 <p align="middle">
-  <img src="other\sprint_1_item_4.1_files\figura3.png" width="400" />
-  <img src="other\sprint_1_item_4.1_files\figura4.png" width="400" /> 
+    <img src="other\sprint_1_item_4.1_files\figura3.png" width="40%">
+    <img src="other\sprint_1_item_4.1_files\figura4.png" width="40%">
 </p>
-<p align=center style="font-size:1em">Fonte: Material produzido pelos autores (2024)</p>
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+
+</div>
 
 &nbsp;&nbsp;&nbsp;&nbsp;A cena de jogo é composta por duas imagens também, uma simulando o cenário do jogo e outra, o personagem jogável, uma figura de médico. O personagem possui movimento direcional controlado pelas teclas WASD, como será exposto abaixo. Adaptações para os _inputs_ estão listados abaixo.
 
-<!-- <p align=center><img src="other\sprint_1_item_4.1_files\figura5.png" alt="Figura 5" width="400"/></p>
-<p align=center style="font-size:1em">Figura 5: Imagem do Cenário</p>
-<p align=center><img src="other\sprint_1_item_4.1_files\figura6.png" alt="Figura 6" width="80"/></p>
-<p align=center style="font-size:1em">Figura 6: Imagem do Personagem</p> -->
+<div align="center">
 
-<p align=center style="font-size:1em">Figura 20 - Cena de jogo</p>
+<sub>Figura 20 - Cena de jogo</sub>
+
 <p align="middle">
-  <img src="other\sprint_1_item_4.1_files\figura5.png" width="400" />
-  <img src="other\sprint_1_item_4.1_files\figura6.png" width="100" /> 
+    <img src="other\sprint_1_item_4.1_files\figura5.png" width="40%">
+    <img src="other\sprint_1_item_4.1_files\figura6.png" width="10%">
 </p>
-<p align=center style="font-size:1em">Fonte: Material produzido pelos autores (2024)</p>
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+
+</div>
 
 &nbsp;&nbsp;&nbsp;&nbsp;Para iniciar a explicação do código, dentro do arquivo `“cena1.js”`, carregamos as imagens na função `preload()` e as criamos na função `create()`, como mostrado a seguir.
 
@@ -686,9 +683,17 @@ var config = {
 - Adicionar lógica de colisão ao personagem para interação com outros objetos ou NPCs;
 - Começar a implementação do quiz ao acessar o Farmácia (vide abaixo).
 
-<p align=center style="font-size:1em">Figura 21 - Protótipo do Quiz</p>
-<p align=center><img src="other\sprint_1_item_4.1_files\figura7.jpg" width="400"/></p>
-<p align=center style="font-size:1em">Fonte: Material produzido pelos autores (2024)</p>
+<div align="center">
+
+<sub>Figura 21 - Protótipo do Quiz</sub>
+
+<img src="other\sprint_1_item_4.1_files\figura7.jpg" width="40%">
+
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+
+</div>
+
+
 
 ## 4.2. Desenvolvimento básico do jogo (sprint 2)
 
