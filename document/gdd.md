@@ -89,11 +89,10 @@
 
 ### 1.1.5. Matriz de Riscos (sprints 1 e 4)
 
-&nbsp;&nbsp;&nbsp;&nbsp;A Matriz de Riscos, também chamada de Matriz de Probabilidade e Impacto, é uma ferramenta utilizada para avaliar qual a probabilidade de um evento acontecer e qual o impacto que ele teria na empresa ou projeto.
+&nbsp;&nbsp;&nbsp;&nbsp;A Matriz de Riscos, também chamada de Matriz de Probabilidade e Impacto, é uma ferramenta utilizada, majoritariamente em empresas, para avaliar qual a probabilidade de um evento acontecer e qual o impacto que ele teria no empreendimento ou em um projeto. A matriz é eficiente quando há necessidade de priorizar os riscos, sejam eles negativos (as ameaças) ou positivos (as oportunidades), ou seja, analisar e visualizar quais riscos merecem mais atenção no momento, auxiliando na criação de planos de ação para prevenir ou potencializar tal risco. Em 1963 foi publicado o livro “Risk Management in the Business Enterprise”, de Robert Mehr e Bob Hedges, onde surgiu a técnica de Gerência de Riscos e se mostrou muito eficiente desde então. Apesar dos autores não terem criado efetivamente a "matriz de riscos", há muita influência de seus conceitos na construção da mesma.
 
-&nbsp;&nbsp;&nbsp;&nbsp;A matriz é eficiente quando há a necessidade de priorizar os riscos, sejam eles negativos (as ameaças) ou positivos (as oportunidades), ou seja, analisar e visualizar quais riscos merecem mais atenção no momento, auxiliando na criação de planos de ação para prevenir ou potencializar tal risco. 
+&nbsp;&nbsp;&nbsp;&nbsp;A fim de gerenciar os riscos do nosso produto, a equipe construiu os gráficos que representam potenciais ameaças e oportunidades no projeto (figura 3 e figura 4, respectivamente), contribuindo efetivamente para a tomada de decisões estratégicas e planejamento de planos de ação. 
 
-&nbsp;&nbsp;&nbsp;&nbsp;A fim de gerenciar os riscos do nosso produto, a equipe construiu os gráficos (Imagem XX e Imagem YY) que representam nossas ameaças e oportunidades e, contribuem efetivamente para o planejamento de planos de ação.
 
 <div align="center">
 
@@ -113,9 +112,14 @@
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 </div>
 
+&nbsp;&nbsp;&nbsp;&nbsp;A análise dos riscos no projeto foi realizada com o objetivo de auxiliar o grupo a entender e lidar com possíveis ameaças e oportunidades. Sendo assim, conseguimos prever de forma mais eficaz certos eventos como, por exemplo, a possibilidade do usuário não entender a mecânica do jogo e criar, a partir dessa ameaça, um tutorial simples e esclarecedor. Além disso, foi possível visualizar que a parceria com a FMUSP gera um impacto social significante, indo de acordo com o que o projeto visa. Deste modo, chegamos nos seguintes planos de ação:
+
 <div align="center">
 <sub>Tabela 1: Requisitos do cliente</sub>
 </div>
+
+
+
 
 \# | Plano de ações:
 --- | ---
