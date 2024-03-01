@@ -49,7 +49,7 @@
 
 <div align="center">
 
-<sub>Figura 1 - Canvas da Proposta de Valor do Projeto</sub>
+<sub>Figura 1 - Análise SWOT da FMUSP</sub>
 
 <img src="./other/analise_swot.png" width="70%">
 
@@ -113,6 +113,10 @@
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 </div>
 
+<div align="center">
+<sub>Tabela 1: Requisitos do cliente</sub>
+</div>
+
 \# | Plano de ações:
 --- | ---
 1 | Atraso nas entregas dos afazeres: Apesar da equipe ser bem organizada com prazos e datas, o atraso nas entregas do backlog tem probabilidade de ocorrência média e impacto também médio. A solução ideal é realizar encontros breves diariamente (daily), para que todos os membros do grupo estejam cientes do andamento das funções individuais e coletivas, evitando sobrecargas e obstáculos desnecessários no desenvolvimento do projeto.
@@ -134,7 +138,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;Esta seção tem como objetivo fornecer uma visão abrangente e detalhada dos requisitos essenciais que orientarão o desenvolvimento do projeto. Aqui, serão delineadas as funcionalidades, características e restrições fundamentais para garantir a compreensão unificada entre a equipe de desenvolvimento e o cliente.
 
 <div align="center">
-<sub>Tabela X - Requisitos do cliente</sub>
+<sub>Tabela 2: Requisitos do cliente</sub>
 </div>
 
 \# | Requisito do cliente 
@@ -152,6 +156,9 @@
 11|O jogo não aborda formas de tratamento;
 12|Focar na prevenção e no que NÃO fazer;
 13|Desmistificação de mitos.
+<div align="center">
+<sub>Tabela 3: Requisitos do cliente</sub>
+</div>
 
 \# | Requisito do grupo 
 --- | ---
@@ -340,7 +347,7 @@ Para nosso jogo, as concepts arts desenvolvidas estão listadas abaixo:
 
 <div align="center">
 
-<sub>Figura X - Concept Art da Página de Livros</sub>
+<sub>Figura 8 - Concept Art da Página de Livros</sub>
 
 <img src="./other/ConceptArt_Livro.jpg" width="40%">
 
@@ -348,7 +355,7 @@ Para nosso jogo, as concepts arts desenvolvidas estão listadas abaixo:
 
 </div>
 
-Figura 3: Concept Art da Página do Livro.
+Figura 8: Concept Art da Página do Livro.
 
 ### 3.3.5. Trilha sonora (sprint 3)
 
@@ -393,7 +400,7 @@ Figura 3: Concept Art da Página do Livro.
 
 <div align="center">
 
-<sub>Figura X - Visão geral do Diagrama de Cenas</sub>
+<sub>Figura 9 - Visão geral do Diagrama de Cenas</sub>
 
 <img src="./other/diagrama_geral.png" width="80%">
 
@@ -405,7 +412,7 @@ Figura 3: Concept Art da Página do Livro.
 
 <div align="center">
 
-<sub>Figura X - Menu do Jogo</sub>
+<sub>Figura 10 - Menu do Jogo</sub>
 
 <img src="./other/menu.png" width="80%">
 
@@ -417,7 +424,7 @@ Figura 3: Concept Art da Página do Livro.
 
 <div align="center">
 
-<sub>Figura X - Hospital</sub>
+<sub>Figura 11 - Hospital</sub>
 
 <img src="./other/hospital.png" width="80%">
 
@@ -429,7 +436,7 @@ Figura 3: Concept Art da Página do Livro.
 
 <div align="center">
 
-<sub>Figura X - Triagem</sub>
+<sub>Figura 12 - Triagem</sub>
 
 <img src="./other/triagem.png" width="80%">
 
@@ -441,7 +448,7 @@ Figura 3: Concept Art da Página do Livro.
 
 <div align="center">
 
-<sub>Figura X - Biblioteca</sub>
+<sub>Figura 13 - Biblioteca</sub>
 
 <img src="./other/biblioteca.png" width="80%">
 
@@ -453,7 +460,7 @@ Figura 3: Concept Art da Página do Livro.
 
 <div align="center">
 
-<sub>Figura X - Farmácia</sub>
+<sub>Figura 14 - Farmácia</sub>
 
 <img src="./other/farmacia.png" width="80%">
 
@@ -465,7 +472,7 @@ Figura 3: Concept Art da Página do Livro.
 
 <div align="center">
 
-<sub>Figura X - Sala de Espera</sub>
+<sub>Figura 15 - Sala de Espera</sub>
 
 <img src="./other/sala_espera.png" width="80%">
 
@@ -477,7 +484,7 @@ Figura 3: Concept Art da Página do Livro.
 
 <div align="center">
 
-<sub>Figura X - Caminho a Biblioteca</sub>
+<sub>Figura 16 - Caminho a Biblioteca</sub>
 
 <img src="./other/biblioteca_7.png" width="80%">
 
@@ -489,7 +496,7 @@ Figura 3: Concept Art da Página do Livro.
 
 <div align="center">
 
-<sub>Figura X - Farmácia Bloqueada</sub>
+<sub>Figura 17 - Farmácia Bloqueada</sub>
 
 <img src="./other/farmacia_block.png" width="80%">
 
@@ -524,7 +531,7 @@ Figura 3: Concept Art da Página do Livro.
 <p align=center><img src="other\sprint_1_item_4.1_files\figura2.png" alt="Figura 2" width="400"/></p>
 <p align=center style="font-size:1em">Figura 2: Cena de jogo</p> -->
 
-<p align=center style="font-size:1em">Figura x: Cenas de jogo</p>
+<p align=center style="font-size:1em">Figura 18 - Cenas de jogo</p>
 
 <p align="middle">
   <img src="other\sprint_1_item_4.1_files\figura1.png" width="400" />
@@ -541,7 +548,7 @@ Figura 3: Concept Art da Página do Livro.
 <p align=center><img src="other\sprint_1_item_4.1_files\figura4.png" alt="Figura 4" width="400"/></p>
 <p align=center style="font-size:1em">Figura 4: Botão de Jogar</p> -->
 
-<p align=center style="font-size:1em">Figura X: Cena de início</p>
+<p align=center style="font-size:1em">Figura 19 - Cena de início</p>
 <p align="middle">
   <img src="other\sprint_1_item_4.1_files\figura3.png" width="400" />
   <img src="other\sprint_1_item_4.1_files\figura4.png" width="400" /> 
@@ -555,7 +562,7 @@ Figura 3: Concept Art da Página do Livro.
 <p align=center><img src="other\sprint_1_item_4.1_files\figura6.png" alt="Figura 6" width="80"/></p>
 <p align=center style="font-size:1em">Figura 6: Imagem do Personagem</p> -->
 
-<p align=center style="font-size:1em">Figura X: Cena de jogo</p>
+<p align=center style="font-size:1em">Figura 20 - Cena de jogo</p>
 <p align="middle">
   <img src="other\sprint_1_item_4.1_files\figura5.png" width="400" />
   <img src="other\sprint_1_item_4.1_files\figura6.png" width="100" /> 
@@ -677,8 +684,8 @@ var config = {
 - Adicionar lógica de colisão ao personagem para interação com outros objetos ou NPCs;
 - Começar a implementação do quiz ao acessar o Farmácia (vide abaixo).
 
-<p align=center style="font-size:1em">Figura 4: Protótipo do Quiz</p>
-<p align=center><img src="other\sprint_1_item_4.1_files\figura7.png" alt="Figura 7" width="400"/></p>
+<p align=center style="font-size:1em">Figura 21 - Protótipo do Quiz</p>
+<p align=center><img src="other\sprint_1_item_4.1_files\figura7.jpg" width="400"/></p>
 <p align=center style="font-size:1em">Fonte: Material produzido pelos autores (2024)</p>
 
 ## 4.2. Desenvolvimento básico do jogo (sprint 2)
@@ -744,12 +751,12 @@ class CenaHospital extends Phaser.Scene {
 ### Etapa 2 do desenvolvimento - Novo menu em *pixel art*
 
 &nbsp;&nbsp;&nbsp;&nbsp;O primeiro passo foi fazer o desenho do novo menu, com uma cara parecida, porém em *pixel art* feita no Piskel.
-<p align=center style="font-size:1em">Figura X: Novo menu desenvolvido no Piskel</p>
-<p align=center><img src="other\sprint_2_item_4.2_files\figura1.png" alt="Figura X" width="400"/></p>
+<p align=center style="font-size:1em">Figura 22 - Novo menu desenvolvido no Piskel</p>
+<p align=center><img src="other\sprint_2_item_4.2_files\figura1.png" width="400"/></p>
 <p align=center style="font-size:1em">Fonte: Autores</p>
 <br>
-<p align=center style="font-size:1em">Figura X: Spritesheet do botão para animação</p>
-<p align=center><img src="other\sprint_2_item_4.2_files\button.png" alt="Figura X" width="400"/></p>
+<p align=center style="font-size:1em">Figura 23 - Spritesheet do botão para animação</p>
+<p align=center><img src="other\sprint_2_item_4.2_files\button.png" width="400"/></p>
 <p align=center style="font-size:1em">Fonte: Autores (2024)</p>
 
 &nbsp;&nbsp;&nbsp;&nbsp;Após o design desenvolvido, o próximo passo foi implementar no Phaser
@@ -792,8 +799,8 @@ const config = {
 
 &nbsp;&nbsp;&nbsp;&nbsp;Nesta etapa, foi realizado a implementação do Mapa através de um arquivo JSON, localizado em `"src/assets/tilemaps/main_map.json"`. Este arquivo é exportado do Tiled Map Editor, que é um editor de mapas em blocos e por camadas
 
-<p align=center style="font-size:1em">Figura X: Mapa no Tiled Map Editor</p>
-<p align=center><img src="other\sprint_2_item_4.2_files\tiled_map_editor.png" alt="Figura X" width="400"/></p>
+<p align=center style="font-size:1em">Figura 24 - Mapa no Tiled Map Editor</p>
+<p align=center><img src="other\sprint_2_item_4.2_files\tiled_map_editor.png" width="400"/></p>
 <p align=center style="font-size:1em">Fonte: Autores</p>
 
 &nbsp;&nbsp;&nbsp;&nbsp;Após isso, foi preciso importar o JSON para a classe `CenaHospital` e definir as camadas presentes nele que, nessa figura, são as paredes e o chão.
@@ -825,8 +832,8 @@ create(){
 this.cameras.main.startFollow(this.medico, true); //camera inicia o follow no personagem principal
 this.cameras.main.setZoom(2);
 ````
-<p align=center style="font-size:1em">Figura X: Mapa implementado no phaser com câmera</p>
-<p align=center><img src="other\sprint_2_item_4.2_files\camera_and_tiled_map.png" alt="Figura X" width="400"/></p>
+<p align=center style="font-size:1em">Figura 25 - Mapa implementado no phaser com câmera</p>
+<p align=center><img src="other\sprint_2_item_4.2_files\camera_and_tiled_map.png" width="400"/></p>
 <p align=center style="font-size:1em">Fonte: Autores</p>
 
 ### Etapa 6 do desenvolvimento - Colisões com as paredes
@@ -844,8 +851,8 @@ this.physics.add.collider(this.medico, this.wallsLayer, () => console.log("Colid
 this.medico.setVelocityX(velocidadeEmX)
 this.medico.setVelocityY(velocidadeEmY)
 ````
-<p align=center style="font-size:1em">Figura X: Colisão entre o personagem e a parede</p>
-<p align=center><img src="other\sprint_2_item_4.2_files\collision.png" alt="Figura X" width="400"/></p>
+<p align=center style="font-size:1em">Figura 26 - Colisão entre o personagem e a parede</p>
+<p align=center><img src="other\sprint_2_item_4.2_files\collision.png" width="400"/></p>
 <p align=center style="font-size:1em">Fonte: Autores</p>
 
 ### Etapa 7 do desenvolvimento - Implementação do joystick e tela cheia
@@ -871,8 +878,8 @@ this.joystick.setScrollFactor(0); // Faz com que o joystick não se mova com a c
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;Na biblioteca do joystick, dois atributos são retornados: o `angle` e o `force`. Esse atributos estão sendo utilizados para a movimentação vetorial. O cálculo foi feito usando a decomposição vetorial, da seguinte forma:
 
-<p align=center style="font-size:1em">Figura X: Cálculo da velocidade em X e Y</p>
-<p align=center><img src="other\sprint_2_item_4.2_files\vetores.png" alt="Figura X" width="400"/></p>
+<p align=center style="font-size:1em">Figura 27 - Cálculo da velocidade em X e Y</p>
+<p align=center><img src="other\sprint_2_item_4.2_files\vetores.png" width="400"/></p>
 <p align=center style="font-size:1em">Fonte: Autores</p>
 
 &nbsp;&nbsp;&nbsp;&nbsp;Os vetores da velocidade do personagem são decompostos, o que faz com que ele, além de não andar mais rápido na diagonal, siga o ângulo que o usuário coloca no joystick virtual.
@@ -900,8 +907,8 @@ const velocityDoctorY = -(this.defaultVelocity * Math.sin(this.radiansAngleJoyst
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;Após isso, basta implementar a velocidade do personagem para que a movimentação vetorial funcione.
 
-<p align=center style="font-size:1em">Figura X: Movimentação vetorial com o joystick</p>
-<p align=center><img src="other\sprint_2_item_4.2_files\movimentacao_vetorial.png" alt="Figura X" width="400"/></p>
+<p align=center style="font-size:1em">Figura 28 - Movimentação vetorial com o joystick</p>
+<p align=center><img src="other\sprint_2_item_4.2_files\movimentacao_vetorial.png" width="400"/></p>
 <p align=center style="font-size:1em">Fonte: Autores</p>
 
 &nbsp;&nbsp;&nbsp;&nbsp;Para a tela cheia, quando o jogador clica no botão 'jogar' uma função que acessa o elemento principal do HTML e deixa ele em tela cheia.
@@ -921,8 +928,8 @@ openFullScreen() {
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;Esse método deixa a página em tela cheia, assim que o botão de jogar é clicado.
 
-<p align=center style="font-size:1em">Figura X: Joystick no jogo e tela cheia</p>
-<p align=center><img src="other\sprint_2_item_4.2_files\joystick.png" alt="Figura X" width="400"/></p>
+<p align=center style="font-size:1em">Figura 29 - Joystick no jogo e tela cheia</p>
+<p align=center><img src="other\sprint_2_item_4.2_files\joystick.png" width="400"/></p>
 <p align=center style="font-size:1em">Fonte: Material produzido pelos</p>
 
 
@@ -958,10 +965,10 @@ openFullScreen() {
 
 &nbsp;&nbsp;&nbsp;&nbsp;O presente projeto, ao adotar o paradigma de programação orientada a objetos, torna essencial a criação de casos de teste para garantir que as classes, métodos e interações entre os objetos funcionem corretamente e atendam aos requisitos do sistema. Os testes devem abranger também diversas situações e cenários possíveis de uso do sistema, verificando se os objetos interagem corretamente entre si e se os métodos produzem os resultados esperados.
 
-&nbsp;&nbsp;&nbsp;&nbsp;A tabela abaixo representa os casos de teste que podem ser realizados na cena "main.js". Entre eles, podemos destacar a verificação se as dimensões de inicialização da tela do jogo estão corretas, se a tela está com o ajuste configurado para dispositivos mobile e se existem duas cenas sendo adicionadas ao jogo.
+&nbsp;&nbsp;&nbsp;&nbsp;A tabela abaixo representa os casos de teste que podem ser realizados na cena `main.js`. Entre eles, podemos destacar a verificação se as dimensões de inicialização da tela do jogo estão corretas, se a tela está com o ajuste configurado para dispositivos mobile e se existem duas cenas sendo adicionadas ao jogo.
 
 <div align="center">
-<sub>Tabela X - Casos de Testes da Cena main.js</sub>
+<sub>Tabela 4: Casos de Testes da Cena main.js</sub>
 </div>
 
 \# | Pré-condição | Descrição do Teste | Pós-condição
@@ -969,23 +976,23 @@ openFullScreen() {
 1 |  As dimensões da tela do jogo estão definidas | Verificar se as dimensões do jogo estão corretamente configuradas | A tela do jogo possui as dimensões corretas
 2 |  O sistema de centralização automática está funcionando | Verificar se a tela do jogo é centralizada automaticamente em ambos os eixos | A tela do jogo está centralizada corretamente
 3 |  Carregar o jogo em ambiente mobile | Verificar se a tela se ajusta à dispositivos móveis | A tela do jogo carrega sem problemas em dispositivos móveis
-4 | Duas cenas criadas | Verificar se existem duas cenas adicionadas ao jogo: MenuPrincipal e CenaHospital | Existem duas cenas adicionadas corretamente ao jogo
+4 | Main.js foi corretamente inicializado| Verificar se existem duas cenas adicionadas ao jogo: MenuPrincipal e CenaHospital | Existem duas cenas adicionadas corretamente ao jogo
 <div align="center">
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp; A tabela acima apresenta os casos de testes iniciais que podemos aplicar à cena "main.js" para começarmos a trabalhar na gestão da qualidade e funcionamento do software.
+&nbsp;&nbsp;&nbsp;&nbsp; A tabela acima apresenta os casos de testes iniciais que podemos aplicar à cena `main.js` para começarmos a trabalhar na gestão da qualidade e funcionamento do software.
 
-&nbsp;&nbsp;&nbsp;&nbsp; Outro arquivo em que deve-se criar casos de teste é a cena chamada menu.js. Aqui estão os testes relacionados com o carregamento do jogo e posicionamento das imagens na tela. Além disso, criamos testes também para testar a funcionalidade do botão "Jogar".
+&nbsp;&nbsp;&nbsp;&nbsp; Outro arquivo em que deve-se criar casos de teste é a cena chamada `menu.js`. Aqui estão os testes relacionados com o carregamento do jogo e posicionamento das imagens na tela. Além disso, criamos testes também para testar a funcionalidade do botão "Jogar".
 
 <div align="center">
-<sub>Tabela X - Casos de Testes da Cena menu.js</sub>
+<sub>Tabela 5: Casos de Testes da Cena menu.js</sub>
 </div>
 
 \# | Pré-condição | Descrição do Teste | Pós-condição
 |------|---------|--- |--- |
-1 | Carregar assets | Verificar se os assets são carregados corretamente sem erros | Todos os assets são carregados sem erros                                                    |
-2 | Clicar no botão "Jogar" | Simular um clique no botão "Jogar"  | A cena "hospital" é iniciada e a cena "menu" é parada, o cursor do mouse retorna para a setinha |
+1 | Menu.js inicializou e carregou o método preload( )| Verificar se os assets são carregados corretamente sem erros | Todos os assets são carregados sem erros                                                    |
+2 | Clicar no botão "Jogar" | Simular um clique no botão "Jogar"  | A cena "hospital.js" é iniciada e a cena "menu.js" é parada, o cursor do mouse retorna para a setinha |
 3 | Passar o mouse sobre o botão "Jogar" | Mover o cursor do mouse sobre o botão "Jogar" | O cursor do mouse muda para uma mãozinha                                                     |
 4 | Retirar o mouse do botão "Jogar"  | Mover o cursor do mouse para fora do botão "Jogar" | O cursor do mouse retorna para a setinha                                               |
 5 | Animar o botão "Jogar"   | Verificar se a animação do botão "Jogar" é executada corretamente | O botão jogar é animado sem erros   |
@@ -1000,7 +1007,7 @@ openFullScreen() {
 
 
 <div align="center">
-<sub>Tabela X - Casos de Testes da Cena hospital.js</sub>
+<sub>Tabela 6: Casos de Testes da Cena hospital.js</sub>
 </div>
 
 \# | Pré-condição | Descrição do Teste | Pós-condição
@@ -1008,12 +1015,13 @@ openFullScreen() {
 1 | Cena hospital.js carregada | Verificar se a cena do hospital foi carregada corretamente | Os assets da cena do hospital estão carregados e prontos para uso |
 2 | Mapa carregado | Verificar se o mapa foi carregado corretamente | O mapa está carregado e pronto para ser utilizado na cena |
 3 | Joystick criado | Verificar se o joystick foi criado corretamente na cena do hospital.js | O joystick está presente e funcional na cena |
-4 | Colisão com paredes | Testar colisão do personagem com as paredes do mapa | O personagem não atravessa as paredes e colide corretamente |
-5 | O personagem está parado | Testar se o personagem se move corretamente | O personagem se move com o clique de teclas de input |
-6 | O personagem está carregado | Verificar se a orientação do personagem muda corretamente com o movimento horizontal | A orientação do personagem está correta de acordo com a direção do movimento |
-7 | Parada do personagem | Testar se o personagem para de se mover quando nenhuma tecla de movimento é pressionada | O personagem para |
-8 | Posição do Joystick definida | Verificar se a posição do joystick é ajustada corretamente de acordo com a posição da câmera | A posição do joystick está sincronizada com a posição da câmera |
-9 | Verificar a posição do personagem | Testar se a posição do personagem é atualizada corretamente | A posição do personagem é atualizada de acordo com o movimento |
+4 | Colisão com paredes inicializada | Testar colisão do personagem com as paredes do mapa | O personagem não atravessa as paredes e colide corretamente |
+5 | O personagem está carregado | Verificar se o personagem carregou corretamente | O personagem está carregado e funcional na cena |
+5 | O personagem carregou e está parado | Testar se o personagem se move corretamente | O personagem se move com o clique de teclas de input/joystick |
+7 | Parada do personagem em movimentação | Testar se o personagem para de se mover quando nenhuma tecla de movimento é pressionada | O personagem para |
+8 | Verificar a posição do personagem | Testar se a posição do personagem é atualizada corretamente | A posição do personagem é atualizada de acordo com o movimento |
+9 | Posição do Joystick definida | Verificar se a posição do joystick é ajustada corretamente de acordo com a posição da câmera | A posição do joystick está sincronizada com a posição da câmera |
+
 
 <div align="center">
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
