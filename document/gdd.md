@@ -394,15 +394,13 @@ Figura 8: Concept Art da Página do Livro.
 
 ## 3.5. Gameflow (Diagrama de cenas) (sprint 2)
 
-*Posicione aqui seu "storyboard de programação" - o diagrama de cenas do jogo. Indique, por exemplo, como o jogo começa, quais opções o jogador tem, como ele avança nas fases, quais as condições de 'game over', como o jogo reinicia. Seu diagrama deve representar as classes, atributos e métodos usados no jogo.*
-
 &nbsp;&nbsp;&nbsp;&nbsp;Um Diagrama de Cenas é uma ferramenta utilizada para auxiliar na organização do desenvolvimento técnico do jogo, apresentando as cenas do projeto e suas relações com outras cenas, exibindo os caminhos possíveis e bloqueios.
 
 <div align="center">
 
 <sub>Figura 9 - Visão geral do Diagrama de Cenas</sub>
 
-<img src="./other/diagrama_geral.png" width="80%">
+<img src="./other/diagrama_cenas.png" width="80%">
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
@@ -468,7 +466,7 @@ Figura 8: Concept Art da Página do Livro.
 
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;6 - Adquirindo o remédio, o médico deverá entregá-lo ao paciente, que estará na Sala de Espera, concluindo o ciclo de vida deste NPC no jogo e rendendo pontos ao jogador.
+&nbsp;&nbsp;&nbsp;&nbsp;6 - Adquirindo o remédio, o médico deverá entregá-lo ao paciente, que estará na Sala de Espera, concluindo o ciclo de vida deste NPC no jogo e rendendo pontos ao jogador. Após conclusão do ciclo, o jogador deve inicia-lo novamente.
 
 <div align="center">
 
@@ -486,7 +484,7 @@ Figura 8: Concept Art da Página do Livro.
 
 <sub>Figura 16 - Caminho a Biblioteca</sub>
 
-<img src="./other/biblioteca_7.png" width="80%">
+<img src="./other/bib_7.png" width="80%">
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
@@ -498,7 +496,7 @@ Figura 8: Concept Art da Página do Livro.
 
 <sub>Figura 17 - Farmácia Bloqueada</sub>
 
-<img src="./other/farmacia_block.png" width="80%">
+<img src="./other/farm_block.png" width="80%">
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
