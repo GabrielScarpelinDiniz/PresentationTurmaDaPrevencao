@@ -22,6 +22,7 @@ const config = {
     scene: [
         MenuPrincipal, CenaHospital
     ],
+    pixelArt: true,
     
 };
 
