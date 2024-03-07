@@ -21,6 +21,7 @@ class CenaHospital extends Phaser.Scene {
     this.load.image("medico", "assets/medico.png"); // Imagem para medico
 
     this.load.image('parede', 'assets/tilemaps/parede.png'); // Paredes do Mapa
+    this.load.image('logo', 'assets/inteli.png'); // Paredes do Mapa
     this.load.image('piso-atendimento', 'assets/tilemaps/piso-atendimento.png'); // Piso do mapa
     this.load.image('piso-corredor', 'assets/tilemaps/piso-corredor.png'); // Piso do corredor do Mapa
     this.load.image('piso-madeira', 'assets/tilemaps/piso-madeira.png'); // Piso da biblioteca do Mapa
@@ -73,6 +74,38 @@ class CenaHospital extends Phaser.Scene {
       }
     );
     this.joystick.setScrollFactor(0); // Faz com que o joystick não se mova com a câmera
+    this.logo = this.physics.add.sprite(1200, 200, 'logo');
+    this.logo.setCollideWorldBounds(true).setScale(0.1).refreshBody();
+      this.physics.add.overlap(this.medico, this.logo, () => {  
+      abrirQuiz()
+      });
+    
+    this.botaoFecharQuiz.on("pointerdown", () => {
+    this.time.addEvent({ 
+      delay: 1000, // 1000 ms = 1 segundo
+      callback: () => {
+        this.fundoTimer.setVisible(true);
+        this.textoTempo.setVisible(true);
+        this.tempoInicial -= 1; // Decrementa o contador
+        this.textoTempo.setText(this.tempoInicial + 's'); 
+        if (this.tempoInicial <100) {
+            this.textoTempo.setPosition(70,80);
+        }
+        
+        if (this.tempoInicial < 10) {
+            this.textoTempo.setPosition(77,80);
+            this.textoTempo.setColor('#ff0000');
+        }
+      },
+      loop: true // Atualiza o texto
+    })
+    })
+    this.physics.add.collider(this.medico, this.logo); // Adiciona a colisão entre o astronauta e as plataformas.
+    this.physics.add.collider(this.logo, this.wallsLayer)
+
+    this.fundoTimer = this.add.image(100,100, 'azul').setScale(0.3).setVisible(false);
+    this.tempoInicial = 15;
+    this.textoTempo = this.add.text(55,80, this.tempoInicial + 's', { fontSize: '40px', fill: '#000000'}).setVisible(false);
   }
   update() {
     this.radiansAngleJoystick = this.fixAngle(this.joystick.angle)*Math.PI/180 || 0; // Converte o ângulo do joystick para radianos e normaliza o input para 0 até 360 graus no joystick
