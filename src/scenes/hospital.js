@@ -25,6 +25,8 @@ class CenaHospital extends Phaser.Scene {
     this.load.image('piso-corredor', 'assets/tilemaps/piso-corredor.png'); // Piso do corredor do Mapa
     this.load.image('piso-madeira', 'assets/tilemaps/piso-madeira.png'); // Piso da biblioteca do Mapa
     this.load.spritesheet('tina', 'assets/spritesheets/drTina.png', { frameWidth: 32, frameHeight: 32}); // Piso da biblioteca do Mapa
+    this.load.image('case1', 'assets/spritesheets/prontuario1.png'); // Piso da biblioteca do Mapa
+
 
     this.load.tilemapTiledJSON('mapa', 'assets/tilemaps/main_map.json'); //Carrega o tiled do mapa
     }
@@ -74,7 +76,7 @@ class CenaHospital extends Phaser.Scene {
     this.joystick.setScrollFactor(0); // Faz com que o joystick não se mova com a câmera
 
 
-    this.tina = this.physics.add.sprite(1200, 200, 'tina').setScale(2).refreshBody();
+    this.tina = this.physics.add.sprite(1200, 200, 'tina').setScale(2).refreshBody().setImmovable();
 
     this.anims.create({
       key: 'tinaIdle', // Indica que essa animação será usada quando o astronauta se mover para a direita.
@@ -107,7 +109,8 @@ class CenaHospital extends Phaser.Scene {
 
     this.tina.setCollideWorldBounds(true);
     this.physics.add.overlap(this.player, this.tina, () => {  
-      abrirCase()
+      this.add.image(1200, 250, 'case1').setScale(0.50);
+      console.log('teste');
       });
     
     //this.botaoFecharCase.on("pointerdown", () => {
@@ -177,9 +180,6 @@ class CenaHospital extends Phaser.Scene {
       return 360 - angle
     }
   }
-abrirCase() {
-
-}
 
 }
 
