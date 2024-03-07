@@ -74,32 +74,34 @@ class CenaHospital extends Phaser.Scene {
       }
     );
     this.joystick.setScrollFactor(0); // Faz com que o joystick não se mova com a câmera
+
+
     this.logo = this.physics.add.sprite(1200, 200, 'logo');
     this.logo.setCollideWorldBounds(true).setScale(0.1).refreshBody();
       this.physics.add.overlap(this.medico, this.logo, () => {  
-      abrirQuiz()
+      abrirCase()
       });
     
-    this.botaoFecharQuiz.on("pointerdown", () => {
-    this.time.addEvent({ 
-      delay: 1000, // 1000 ms = 1 segundo
-      callback: () => {
-        this.fundoTimer.setVisible(true);
-        this.textoTempo.setVisible(true);
-        this.tempoInicial -= 1; // Decrementa o contador
-        this.textoTempo.setText(this.tempoInicial + 's'); 
-        if (this.tempoInicial <100) {
-            this.textoTempo.setPosition(70,80);
-        }
+    //this.botaoFecharCase.on("pointerdown", () => {
+    //this.time.addEvent({ 
+    //  delay: 1000, // 1000 ms = 1 segundo
+    //  callback: () => {
+    //    this.fundoTimer.setVisible(true);
+    //    this.textoTempo.setVisible(true);
+    //    this.tempoInicial -= 1; // Decrementa o contador
+    //    this.textoTempo.setText(this.tempoInicial + 's'); 
+    //    if (this.tempoInicial <100) {
+    //        this.textoTempo.setPosition(70,80);
+    //    }
         
-        if (this.tempoInicial < 10) {
-            this.textoTempo.setPosition(77,80);
-            this.textoTempo.setColor('#ff0000');
-        }
-      },
-      loop: true // Atualiza o texto
-    })
-    })
+    //    if (this.tempoInicial < 10) {
+    //        this.textoTempo.setPosition(77,80);
+    //        this.textoTempo.setColor('#ff0000');
+    //    }
+    //  },
+    //  loop: true // Atualiza o texto
+    //})
+   // })
     this.physics.add.collider(this.medico, this.logo); // Adiciona a colisão entre o astronauta e as plataformas.
     this.physics.add.collider(this.logo, this.wallsLayer)
 
