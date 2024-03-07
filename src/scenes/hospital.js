@@ -18,7 +18,7 @@ class CenaHospital extends Phaser.Scene {
       "/src/plugins/rexvirtualjoystickplugin.min.js",
       true
     ); //Carrega a biblioteca do joystick
-    this.load.image("player", "assets/spritesheet/player.png"); // Imagem para player
+    this.load.spritesheet("player", "assets/spritesheets/playerPrincipal.png", { frameWidth: 32, frameHeight: 32}); // Imagem para player
 
     this.load.image('parede', 'assets/tilemaps/parede.png'); // Paredes do Mapa
     this.load.image('piso-atendimento', 'assets/tilemaps/piso-atendimento.png'); // Piso do mapa
@@ -40,13 +40,11 @@ class CenaHospital extends Phaser.Scene {
 
     this.groundLayer = this.map.createLayer("Ground", [this.tileset2,this.tileset3,this.tileset4]); //Cria a camada do chão, passando o tileset e o nome que definimos no tiled map editor
     this.wallsLayer = this.map.createLayer("Walls", [this.tileset1], 0 , 0); //Cria a camada de paredes, passando o tileset e o nome que definimos no tiled map editor
-    this.player = this.physics.add.sprite(1200, 300, "player"); // Cria e posiciona o player
-
+    this.player = this.physics.add.sprite(1200, 300, "player").setScale(1.5).refreshBody(); // Cria e posiciona o player
 
     this.wallsLayer.setCollisionByProperty({ collider: true }) //Seta as colisões onde tem a propriedade collider: true no tiled map
     this.physics.add.collider(this.player, this.wallsLayer, () => console.log("Colidiu")) //Adiciona colisão entre o médico e a camada de parede
 
-    this.player.setFlip(true, false).setScale(0.15); // Ajusta a orientação do player
     this.cameras.main.startFollow(this.player, true); //camera inicia o follow no personagem principal
 
     // this.cameras.main.setDeadzone(400, 200);
@@ -79,13 +77,32 @@ class CenaHospital extends Phaser.Scene {
     this.tina = this.physics.add.sprite(1200, 200, 'tina').setScale(2).refreshBody();
 
     this.anims.create({
-      key: 'idle', // Indica que essa animação será usada quando o astronauta se mover para a direita.
+      key: 'tinaIdle', // Indica que essa animação será usada quando o astronauta se mover para a direita.
       frames: this.anims.generateFrameNumbers('tina', {start: 0, end: 15}), // Define quais frames serão utilizados nessa animação.
       frameRate: 10, // Velocidade da animação em frames por segundo.
       repeat: -1 // Indica um loop.
   });
 
-     this.tina.anims.play('idle', true); // Indica que o personagem está se movendo para a direita.
+     this.tina.anims.play('tinaIdle', true); // Indica que o personagem está se movendo para a direita.
+
+
+     this.anims.create({
+      key: 'playerWalkingLeft', // Indica que essa animação será usada quando o astronauta se mover para a direita.
+      frames: this.anims.generateFrameNumbers('player', {start: 8, end: 15}), // Define quais frames serão utilizados nessa animação.
+      frameRate: 10, // Velocidade da animação em frames por segundo.
+      repeat: -1 // Indica um loop.
+  });
+     this.anims.create({
+      key: 'playerWalkingRight', // Indica que essa animação será usada quando o astronauta se mover para a direita.
+      frames: this.anims.generateFrameNumbers('player', {start: 0, end: 7}), // Define quais frames serão utilizados nessa animação.
+      frameRate: 10, // Velocidade da animação em frames por segundo.
+      repeat: -1 // Indica um loop.
+  });
+  this.anims.create({
+    key: 'playerIdle', // Indica que essa animação será usada quando o astronauta se mover para a direita.
+    frames: this.anims.generateFrameNumbers('player', {frame: 0}), // Define quais frames serão utilizados nessa animação.
+    frameRate: 10, // Velocidade da animação em frames por segundo.
+});
 
 
     this.tina.setCollideWorldBounds(true);
@@ -131,17 +148,24 @@ class CenaHospital extends Phaser.Scene {
     // Mapeamento de Inputs (Normalizar o movimento diagonal futuramente)
     if (this.keyA.isDown) {
       this.player.setVelocityX(-this.defaultVelocity * 50);
-      this.player.setFlip(false, false); // Ajusta orientação do personagem   
+      //this.player.setFlip(false, false); // Ajusta orientação do personagem  
+      this.player.anims.play('playerWalkingRight', true); // Indica que o personagem está se movendo para a direita. 
     }
     else if (this.keyD.isDown) {
       this.player.setVelocityX(this.defaultVelocity * 50);
-      this.player.setFlip(true, false); // Ajusta orientação do personagem    
+      //this.player.setFlip(true, false); // Ajusta orientação do personagem 
+      this.player.anims.play('playerWalkingLeft', true); // Indica que o personagem está se movendo para a direita.    
     }
-    if (this.keyS.isDown) {
-      this.player.setVelocityY(this.defaultVelocity * 50)    
+    else if (this.keyS.isDown) {
+      this.player.setVelocityY(this.defaultVelocity * 50)  
+      this.player.anims.play('playerWalkingLeft', true); // Indica que o personagem está se movendo para a direita.   
     }
     else if (this.keyW.isDown) {
       this.player.setVelocityY(-this.defaultVelocity * 50)
+      this.player.anims.play('playerWalkingRight', true); // Indica que o personagem está se movendo para a direita. 
+    }
+    else {
+      this.player.anims.play('playerWalkingRight', false); // Indica que o personagem está se movendo para a direita. 
     }
   }
   fixAngle(angle) {
@@ -158,3 +182,6 @@ abrirCase() {
 }
 
 }
+
+
+
