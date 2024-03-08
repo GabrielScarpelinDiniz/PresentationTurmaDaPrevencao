@@ -38,6 +38,7 @@ class CenaHospital extends Phaser.Scene {
     this.load.image('rua', 'assets/tilemaps/rua.png'); 
     this.load.image('tenda', 'assets/tilemaps/tenda.png'); 
     this.load.image('Tree-Sheet', 'assets/tilemaps/Tree-Sheet.png'); 
+    this.load.image('botaoX', 'assets/botaoX.png'); 
     // this.load.image('arvore2', 'assets/tilemaps/Trees_Alt.png'); 
 
 
@@ -77,7 +78,7 @@ class CenaHospital extends Phaser.Scene {
     // this.groundLayer = this.map.createLayer("Ground", [this.tileset2,this.tileset3,this.tileset4]); //Cria a camada do chão, passando o tileset e o nome que definimos no tiled map editor
     // this.wallsLayer = this.map.createLayer("Walls", [this.tileset1], 0 , 0); //Cria a camada de paredes, passando o tileset e o nome que definimos no tiled map editor
     
-    this.player = this.physics.add.sprite(550, 800, "player").setScale(1.5).refreshBody(); // Cria e posiciona o player
+    this.player = this.physics.add.sprite(560, 800, "player").setScale(1.5).refreshBody(); // Cria e posiciona o player
 
     // this.wallsLayer.setCollisionByProperty({ collider: true }) //Seta as colisões onde tem a propriedade collider: true no tiled map
     // this.physics.add.collider(this.player, this.wallsLayer, () => console.log("Colidiu")) //Adiciona colisão entre o médico e a camada de parede
@@ -94,7 +95,7 @@ class CenaHospital extends Phaser.Scene {
     this.cameras.main.startFollow(this.player, true); //camera inicia o follow no personagem principal
 
     // this.cameras.main.setDeadzone(400, 200);
-    this.cameras.main.setZoom(2);
+    this.cameras.main.setZoom(2.5);
 
     // Inicializa as variáveis para movimentação do personagem
     this.keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A);
@@ -120,70 +121,86 @@ class CenaHospital extends Phaser.Scene {
     this.joystick.setScrollFactor(0); // Faz com que o joystick não se mova com a câmera
 
 
-    this.tina = this.physics.add.sprite(550, 400, 'tina').setScale(2).refreshBody().setImmovable();
+    this.tina = this.physics.add.sprite(560, 400, 'tina').setScale(2).refreshBody().setImmovable(); // Adiciona o sprite da Tina
 
-    this.anims.create({
-      key: 'tinaIdle', // Indica que essa animação será usada quando o astronauta se mover para a direita.
-      frames: this.anims.generateFrameNumbers('tina', {start: 0, end: 15}), // Define quais frames serão utilizados nessa animação.
-      frameRate: 10, // Velocidade da animação em frames por segundo.
-      repeat: -1 // Indica um loop.
+    this.anims.create({ // Cria a animação para a personagem Tina
+      key: 'tinaIdle', // Chave que cria o nome para iniciar a animação
+      frames: this.anims.generateFrameNumbers('tina', {start: 0, end: 15}), // Define quais frames serão utilizados nessa animação
+      frameRate: 10, // Velocidade da animação em frames por segundo
+      repeat: -1 // Indica um loop
   });
 
-     this.tina.anims.play('tinaIdle', true); // Indica que o personagem está se movendo para a direita.
+     this.tina.anims.play('tinaIdle', true); // Inicia a animação tinaIdle
 
 
      this.anims.create({
-      key: 'playerWalkingLeft', // Indica que essa animação será usada quando o astronauta se mover para a direita.
-      frames: this.anims.generateFrameNumbers('player', {start: 8, end: 15}), // Define quais frames serão utilizados nessa animação.
-      frameRate: 10, // Velocidade da animação em frames por segundo.
-      repeat: -1 // Indica um loop.
+      key: 'playerWalkingLeft', // Chave que cria o nome para iniciar a animação
+      frames: this.anims.generateFrameNumbers('player', {start: 8, end: 15}), // Define quais frames serão utilizados nessa animação
+      frameRate: 10, // Velocidade da animação em frames por segundo
+      repeat: -1 // Indica um loop
   });
      this.anims.create({
-      key: 'playerWalkingRight', // Indica que essa animação será usada quando o astronauta se mover para a direita.
-      frames: this.anims.generateFrameNumbers('player', {start: 0, end: 7}), // Define quais frames serão utilizados nessa animação.
-      frameRate: 10, // Velocidade da animação em frames por segundo.
-      repeat: -1 // Indica um loop.
+      key: 'playerWalkingRight', // Chave que cria o nome para iniciar a animação
+      frames: this.anims.generateFrameNumbers('player', {start: 0, end: 7}), // Define quais frames serão utilizados nessa animação
+      frameRate: 10, // Velocidade da animação em frames por segundo
+      repeat: -1 // Indica um loop
   });
   this.anims.create({
-    key: 'playerIdle', // Indica que essa animação será usada quando o astronauta se mover para a direita.
-    frames: this.anims.generateFrameNumbers('player', {frame: 0}), // Define quais frames serão utilizados nessa animação.
-    frameRate: 10, // Velocidade da animação em frames por segundo.
-});
+    key: 'playerIdle', // Chave que cria o nome para iniciar a animação
+    frames: this.anims.generateFrameNumbers('player', {frame: 0}), // Define quais frames serão utilizados nessa animação
+    frameRate: 10, // Velocidade da animação em frames por segundo
+  });
 
+  this.case1 = this.add.image(550, 430, 'case1').setScale(0.50).setVisible(false); // Adiciona a imagem do case, quando ocorre esse overlap
+  this.botaoX = this.add.sprite(615, 535, 'botaoX').setInteractive().setScale(0.1).setVisible(false); // Adiciona a imagem do botao, quando ocorre esse overlap
+    
 
     // this.tina.setCollideWorldBounds(true);
-    this.physics.add.overlap(this.player, this.tina, () => {  
-      this.add.image(550, 430, 'case1').setScale(0.50);
-      console.log('teste');
-      });
-    
+    this.physics.add.overlap(this.player, this.tina, () => {  // Cria o overlap entre o jogador principal e a Tina
+      console.log('teste'); // Console log para verificar o funcionamento do overlap
+
+    this.botaoX.on("pointerover", () => {
+      // Evento de passar o mouse sobre o botaoJogar
+      this.input.setDefaultCursor("pointer") // Cursor vira mãozinha
+    })
+    this.botaoX.on("pointerout", () => {
+      // Evento de retirar o mouse do botaoJogar
+      this.input.setDefaultCursor("default") // Cursor vira setinha
+    })
+
+    // Evento disparado ao clicar no botão (Código temporário apenas para demonstração da funcionalidade na sprint 1)
+    this.botaoX.on("pointerdown", () => {
+      this.case1.setVisible(false);
+      this.botaoX.setVisible(false);
+      this.time.addEvent({ 
+      delay: 1000, // 1000 ms = 1 segundo
+      callback: () => {
+        this.fundoTimer.setVisible(true);
+        this.textoTempo.setVisible(true);
+        this.tempoInicial -= 1; // Decrementa o contador
+        this.textoTempo.setText(this.tempoInicial + 's'); 
+        if (this.tempoInicial <100) {
+            this.textoTempo.setPosition(70,80);
+        }
+        
+        if (this.tempoInicial < 10) {
+            this.textoTempo.setPosition(77,80);
+            this.textoTempo.setColor('#ff0000');
+        }
+      },
+      loop: true // Atualiza o texto
+    })
+    })
+  });
     
     //this.botaoFecharCase.on("pointerdown", () => {
-    //this.time.addEvent({ 
-    //  delay: 1000, // 1000 ms = 1 segundo
-    //  callback: () => {
-    //    this.fundoTimer.setVisible(true);
-    //    this.textoTempo.setVisible(true);
-    //    this.tempoInicial -= 1; // Decrementa o contador
-    //    this.textoTempo.setText(this.tempoInicial + 's'); 
-    //    if (this.tempoInicial <100) {
-    //        this.textoTempo.setPosition(70,80);
-    //    }
-        
-    //    if (this.tempoInicial < 10) {
-    //        this.textoTempo.setPosition(77,80);
-    //        this.textoTempo.setColor('#ff0000');
-    //    }
-    //  },
-    //  loop: true // Atualiza o texto
-    //})
-   // })
-    this.physics.add.collider(this.player, this.tina); // Adiciona a colisão entre o astronauta e as plataformas.
+    
+  this.physics.add.collider(this.player, this.tina); // Adiciona a colisão entre o persoangem e a Tina
     // this.physics.add.collider(this.tina, this.wallsLayer)
 
-    this.fundoTimer = this.add.image(100,100, 'azul').setScale(0.3).setVisible(false);
-    this.tempoInicial = 15;
-    this.textoTempo = this.add.text(55,80, this.tempoInicial + 's', { fontSize: '40px', fill: '#000000'}).setVisible(false);
+  this.fundoTimer = this.add.image(100,100, 'azul').setScale(0.3).setVisible(false); // Adiciona o fundo de imagem do timer
+  this.tempoInicial = 120; // Define o tempo do timer
+  this.textoTempo = this.add.text(55,80, this.tempoInicial + 's', { fontSize: '40px', fill: '#000000'}).setVisible(false); // Adiciona o texto do tempo na tela do jogo
   }
   update() {
     this.radiansAngleJoystick = this.fixAngle(this.joystick.angle)*Math.PI/180 || 0; // Converte o ângulo do joystick para radianos e normaliza o input para 0 até 360 graus no joystick
@@ -194,25 +211,24 @@ class CenaHospital extends Phaser.Scene {
     this.player.setVelocityX(velocityDoctorX) // Atribui a velocidade calculada ao médico
     this.player.setVelocityY(velocityDoctorY) // Atribui a velocidade calculada ao médico
     // Mapeamento de Inputs (Normalizar o movimento diagonal futuramente)
-    if (this.keyA.isDown) {
-      this.player.setVelocityX(-this.defaultVelocity * 50);
-      //this.player.setFlip(false, false); // Ajusta orientação do personagem  
+    if (this.keyA.isDown) { // Verifica se a tecla A está pressionada
+      this.player.setVelocityX(-this.defaultVelocity * 50); // Define a velocidade do personagem no eixo X, quando a condição é verdadeira
       this.player.anims.play('playerWalkingRight', true); // Indica que o personagem está se movendo para a direita. 
     }
-    else if (this.keyD.isDown) {
+    else if (this.keyD.isDown) { // Verifica se a tecla D está pressionada
       this.player.setVelocityX(this.defaultVelocity * 50);
       //this.player.setFlip(true, false); // Ajusta orientação do personagem 
       this.player.anims.play('playerWalkingLeft', true); // Indica que o personagem está se movendo para a direita.    
     }
-    else if (this.keyS.isDown) {
+    else if (this.keyS.isDown) { // Verifica se a tecla S está pressionada
       this.player.setVelocityY(this.defaultVelocity * 50)  
       this.player.anims.play('playerWalkingLeft', true); // Indica que o personagem está se movendo para a direita.   
     }
-    else if (this.keyW.isDown) {
+    else if (this.keyW.isDown) { // Verifica se a tecla W está pressionada
       this.player.setVelocityY(-this.defaultVelocity * 50)
       this.player.anims.play('playerWalkingRight', true); // Indica que o personagem está se movendo para a direita. 
     }
-    else {
+    else { // Se nehuma das condições forem verdadeiras interrompe a animação
       this.player.anims.play('playerWalkingRight', false); // Indica que o personagem está se movendo para a direita. 
     }
   }
