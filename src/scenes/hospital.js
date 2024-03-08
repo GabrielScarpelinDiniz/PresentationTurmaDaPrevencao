@@ -93,7 +93,7 @@ class CenaHospital extends Phaser.Scene {
 
 
     this.cameras.main.startFollow(this.player, true); //camera inicia o follow no personagem principal
-
+    this.cameras.main.setBounds(0, 0, 1120, 1120)
     // this.cameras.main.setDeadzone(400, 200);
     this.cameras.main.setZoom(2.5);
 
