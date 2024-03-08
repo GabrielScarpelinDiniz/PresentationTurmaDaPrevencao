@@ -78,8 +78,10 @@ class CenaHospital extends Phaser.Scene {
     // this.groundLayer = this.map.createLayer("Ground", [this.tileset2,this.tileset3,this.tileset4]); //Cria a camada do chão, passando o tileset e o nome que definimos no tiled map editor
     // this.wallsLayer = this.map.createLayer("Walls", [this.tileset1], 0 , 0); //Cria a camada de paredes, passando o tileset e o nome que definimos no tiled map editor
     
-    this.player = this.physics.add.sprite(560, 800, "player").setScale(1.5).refreshBody(); // Cria e posiciona o player
-
+    this.player = this.physics.add.sprite(550, 800, "player").setScale(1.5).refreshBody(); // Cria e posiciona o player
+    this.add.text(400, 240, "Mova nas teclas WASD ou pelo Joystick", { fontSize: '16px', fill: '#000' }).setScrollFactor(0); // Adiciona um texto na tela
+    this.add.text(400, 260, "Procure pela doutora Tina", { fontSize: '16px', fill: '#000' }).setScrollFactor(0); // Adiciona um texto na tela
+ 
     // this.wallsLayer.setCollisionByProperty({ collider: true }) //Seta as colisões onde tem a propriedade collider: true no tiled map
     // this.physics.add.collider(this.player, this.wallsLayer, () => console.log("Colidiu")) //Adiciona colisão entre o médico e a camada de parede
     this.arvores.setCollisionByProperty({ collider: true }) //Seta as colisões onde tem a propriedade collider: true no tiled map
@@ -93,7 +95,7 @@ class CenaHospital extends Phaser.Scene {
 
 
     this.cameras.main.startFollow(this.player, true); //camera inicia o follow no personagem principal
-
+    this.cameras.main.setBounds(0, 0, 1120, 1120)
     // this.cameras.main.setDeadzone(400, 200);
     this.cameras.main.setZoom(2.5);
 
@@ -110,8 +112,8 @@ class CenaHospital extends Phaser.Scene {
     this.joystick = this.plugins.get("rexvirtualjoystickplugin").add(
       this,
       {
-        x: 500,
-        y: this.player.y + 120,
+        x: 470,
+        y: 430,
         radius: 30,
         base: this.add.circle(0, 0, 30, 0xff0000),
         thumb: this.add.circle(0, 0, 15, 0xcccccc),
@@ -150,6 +152,7 @@ class CenaHospital extends Phaser.Scene {
     frames: this.anims.generateFrameNumbers('player', {frame: 0}), // Define quais frames serão utilizados nessa animação
     frameRate: 10, // Velocidade da animação em frames por segundo
   });
+
 
   this.case1 = this.add.image(550, 430, 'case1').setScale(0.50).setVisible(false); // Adiciona a imagem do case, quando ocorre esse overlap
   this.botaoX = this.add.sprite(615, 535, 'botaoX').setInteractive().setScale(0.1).setVisible(false); // Adiciona a imagem do botao, quando ocorre esse overlap
@@ -203,33 +206,73 @@ class CenaHospital extends Phaser.Scene {
   this.textoTempo = this.add.text(55,80, this.tempoInicial + 's', { fontSize: '40px', fill: '#000000'}).setVisible(false); // Adiciona o texto do tempo na tela do jogo
   }
   update() {
-    this.radiansAngleJoystick = this.fixAngle(this.joystick.angle)*Math.PI/180 || 0; // Converte o ângulo do joystick para radianos e normaliza o input para 0 até 360 graus no joystick
-    this.joystickForce = this.joystick.force < 75 ? this.joystick.force : 75; // Limita a força do joystick para 75
-    const velocityDoctorX = (this.defaultVelocity * Math.cos(this.radiansAngleJoystick) * this.joystickForce) // Calcula a velocidade do médico no eixo X
-    velocityDoctorX < 0 ? this.player.setFlip(false, false) : this.player.setFlip(true, false) // Ajusta orientação do personagem
-    const velocityDoctorY = -(this.defaultVelocity * Math.sin(this.radiansAngleJoystick) * this.joystickForce) // Calcula a velocidade do médico no eixo Y
-    this.player.setVelocityX(velocityDoctorX) // Atribui a velocidade calculada ao médico
-    this.player.setVelocityY(velocityDoctorY) // Atribui a velocidade calculada ao médico
+    if (this.joystick.visible) {
+      this.radiansAngleJoystick = this.fixAngle(this.joystick.angle)*Math.PI/180 || 0;
+      this.joystickForce = this.joystick.force < 50 ? this.joystick.force : 50;
+      const velocityDoctorX = (this.defaultVelocity * Math.cos(this.radiansAngleJoystick) * this.joystickForce)
+      const velocityDoctorY = -(this.defaultVelocity * Math.sin(this.radiansAngleJoystick) * this.joystickForce)
+      if (velocityDoctorX > 0) this.player.anims.play('playerWalkingRight', true);
+      else if (velocityDoctorX < 0) this.player.anims.play('playerWalkingLeft', true);
+      else if (velocityDoctorY == 0) this.player.anims.play('playerIdle', true); 
+      this.player.setVelocityX(velocityDoctorX)
+      this.player.setVelocityY(velocityDoctorY)
+    }
     // Mapeamento de Inputs (Normalizar o movimento diagonal futuramente)
     if (this.keyA.isDown) { // Verifica se a tecla A está pressionada
       this.player.setVelocityX(-this.defaultVelocity * 50); // Define a velocidade do personagem no eixo X, quando a condição é verdadeira
       this.player.anims.play('playerWalkingRight', true); // Indica que o personagem está se movendo para a direita. 
+
     }
     else if (this.keyD.isDown) { // Verifica se a tecla D está pressionada
       this.player.setVelocityX(this.defaultVelocity * 50);
-      //this.player.setFlip(true, false); // Ajusta orientação do personagem 
-      this.player.anims.play('playerWalkingLeft', true); // Indica que o personagem está se movendo para a direita.    
+      this.player.anims.play('playerWalkingRight', true);
+      this.joystick.setVisible(false);
+    }
+    else {
+      if (!this.joystick.visible) {
+        this.player.setVelocityX(0);
+      }
     }
     else if (this.keyS.isDown) { // Verifica se a tecla S está pressionada
       this.player.setVelocityY(this.defaultVelocity * 50)  
       this.player.anims.play('playerWalkingLeft', true); // Indica que o personagem está se movendo para a direita.   
+      this.joystick.setVisible(false);
     }
     else if (this.keyW.isDown) { // Verifica se a tecla W está pressionada
       this.player.setVelocityY(-this.defaultVelocity * 50)
-      this.player.anims.play('playerWalkingRight', true); // Indica que o personagem está se movendo para a direita. 
+      this.player.anims.play('playerWalkingRight', true);
+      this.joystick.setVisible(false);
     }
-    else { // Se nehuma das condições forem verdadeiras interrompe a animação
-      this.player.anims.play('playerWalkingRight', false); // Indica que o personagem está se movendo para a direita. 
+
+    else {
+      if (!this.joystick.visible) {
+        this.player.setVelocityY(0);
+      }
+    }
+
+    if (this.keyA.isDown && this.keyW.isDown) {
+      this.player.setVelocityX(-this.defaultVelocity * 30);
+      this.player.setVelocityY(-this.defaultVelocity * 30);
+      this.player.anims.play('playerWalkingLeft', true);
+    }
+    if (this.keyD.isDown && this.keyW.isDown) {
+      this.player.setVelocityX(this.defaultVelocity * 30);
+      this.player.setVelocityY(-this.defaultVelocity * 30);
+      this.player.anims.play('playerWalkingRight', true);
+    }
+    if (this.keyA.isDown && this.keyS.isDown) {
+      this.player.setVelocityX(-this.defaultVelocity * 30);
+      this.player.setVelocityY(this.defaultVelocity * 30);
+      this.player.anims.play('playerWalkingLeft', true);
+    }
+    if (this.keyD.isDown && this.keyS.isDown) {
+      this.player.setVelocityX(this.defaultVelocity * 30);
+      this.player.setVelocityY(this.defaultVelocity * 30);
+      this.player.anims.play('playerWalkingRight', true);
+    }
+
+    if (this.player.body.velocity.x === 0 && this.player.body.velocity.y === 0) {
+      this.player.anims.play('playerIdle', true);
     }
   }
   fixAngle(angle) {
