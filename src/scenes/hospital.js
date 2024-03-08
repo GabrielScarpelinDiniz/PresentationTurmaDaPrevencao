@@ -38,6 +38,10 @@ class CenaHospital extends Phaser.Scene {
     this.load.image('rua', 'assets/tilemaps/rua.png'); 
     this.load.image('tenda', 'assets/tilemaps/tenda.png'); 
     this.load.image('Tree-Sheet', 'assets/tilemaps/Tree-Sheet.png'); 
+    this.load.image('grade-lateral-left', 'assets/tilemaps/grade-lateral-left.png'); 
+    this.load.image('grade-lateral-left-01', 'assets/tilemaps/grade-lateral-left-01.png'); 
+    this.load.image('grade-lateral-right', 'assets/tilemaps/grade-lateral-right.png'); 
+    this.load.image('grade-lateral-right-01', 'assets/tilemaps/grade-lateral-right-01.png'); 
     // this.load.image('arvore2', 'assets/tilemaps/Trees_Alt.png'); 
 
 
@@ -64,13 +68,17 @@ class CenaHospital extends Phaser.Scene {
     this.tileset7 = this.map.addTilesetImage('portao2'); 
     this.tileset8 = this.map.addTilesetImage('rua'); 
     this.tileset9 = this.map.addTilesetImage('tenda'); 
-    this.tileset10 = this.map.addTilesetImage('Tree-Sheet'); 
+    this.tileset10 = this.map.addTilesetImage('Tree-Sheet');
+    this.tileset11 = this.map.addTilesetImage('grade-lateral-left');
+    this.tileset12 = this.map.addTilesetImage('grade-lateral-left-01');
+    this.tileset13 = this.map.addTilesetImage('grade-lateral-right');
+    this.tileset14 = this.map.addTilesetImage('grade-lateral-right-01');
     // this.tileset11 = this.map.addTilesetImage('arvore2'); 
 
     this.chao = this.map.createLayer("Chao", [this.tileset1,this.tileset4,this.tileset5,this.tileset8]); 
     this.arvores = this.map.createLayer("Arvores", [this.tileset10,this.tileset11]); 
     this.faculdade = this.map.createLayer("Faculdade", [this.tileset2]); 
-    this.fonte = this.map.createLayer("Fonte", [this.tileset3,this.tileset9]); 
+    this.fonte = this.map.createLayer("Fonte", [this.tileset3,this.tileset9, this.tileset11, this.tileset12, this.tileset13, this.tileset14]); 
     this.cerca = this.map.createLayer("Cerca", [this.tileset6,this.tileset7]); 
 
 
@@ -90,8 +98,9 @@ class CenaHospital extends Phaser.Scene {
     this.physics.add.collider(this.player, this.faculdade, () => console.log("Colidiu")) //Adiciona colisão entre o médico e a camada de parede
     this.physics.add.collider(this.player, this.fonte, () => console.log("Colidiu")) //Adiciona colisão entre o médico e a camada de parede
     this.physics.add.collider(this.player, this.cerca, () => console.log("Colidiu")) //Adiciona colisão entre o médico e a camada de parede
-
-
+    this.fonteCollider = this.add.ellipse(560, 570, 140, 115,0xFFFF00, 0.5) // Adiciona um círculo na tela
+    this.player.body.setSize(this.player.width - 18, this.player.height - 12); // Ajusta o tamanho do hitbox do personagem
+    this.player.body.setOffset(9, 12); // Ajusta o offset do hitbox do personagem
     this.cameras.main.startFollow(this.player, true); //camera inicia o follow no personagem principal
     this.cameras.main.setBounds(0, 0, 1120, 1120)
     // this.cameras.main.setDeadzone(400, 200);
@@ -119,8 +128,8 @@ class CenaHospital extends Phaser.Scene {
       }
     );
     this.joystick.setScrollFactor(0); // Faz com que o joystick não se mova com a câmera
-
-
+    
+   
     this.tina = this.physics.add.sprite(550, 400, 'tina').setScale(2).refreshBody().setImmovable();
 
     this.anims.create({
