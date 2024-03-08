@@ -78,7 +78,8 @@ class CenaHospital extends Phaser.Scene {
     // this.wallsLayer = this.map.createLayer("Walls", [this.tileset1], 0 , 0); //Cria a camada de paredes, passando o tileset e o nome que definimos no tiled map editor
     
     this.player = this.physics.add.sprite(550, 800, "player").setScale(1.5).refreshBody(); // Cria e posiciona o player
-
+    this.add.text(400, 240, "Mova nas teclas WASD ou pelo Joystick", { fontSize: '16px', fill: '#000' }).setScrollFactor(0); // Adiciona um texto na tela
+    this.add.text(400, 260, "Procure pela doutora Tina", { fontSize: '16px', fill: '#000' }).setScrollFactor(0); // Adiciona um texto na tela
     // this.wallsLayer.setCollisionByProperty({ collider: true }) //Seta as colisões onde tem a propriedade collider: true no tiled map
     // this.physics.add.collider(this.player, this.wallsLayer, () => console.log("Colidiu")) //Adiciona colisão entre o médico e a camada de parede
     this.arvores.setCollisionByProperty({ collider: true }) //Seta as colisões onde tem a propriedade collider: true no tiled map
@@ -94,7 +95,7 @@ class CenaHospital extends Phaser.Scene {
     this.cameras.main.startFollow(this.player, true); //camera inicia o follow no personagem principal
 
     // this.cameras.main.setDeadzone(400, 200);
-    this.cameras.main.setZoom(2);
+    this.cameras.main.setZoom(2.5);
 
     // Inicializa as variáveis para movimentação do personagem
     this.keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A);
@@ -109,8 +110,8 @@ class CenaHospital extends Phaser.Scene {
     this.joystick = this.plugins.get("rexvirtualjoystickplugin").add(
       this,
       {
-        x: 500,
-        y: this.player.y + 120,
+        x: 470,
+        y: 430,
         radius: 30,
         base: this.add.circle(0, 0, 30, 0xff0000),
         thumb: this.add.circle(0, 0, 15, 0xcccccc),
@@ -146,7 +147,7 @@ class CenaHospital extends Phaser.Scene {
   });
   this.anims.create({
     key: 'playerIdle', // Indica que essa animação será usada quando o astronauta se mover para a direita.
-    frames: this.anims.generateFrameNumbers('player', {frame: 0}), // Define quais frames serão utilizados nessa animação.
+    frames: this.anims.generateFrameNumbers('player', {start: 0, end: 0}), // Define quais frames serão utilizados nessa animação.
     frameRate: 10, // Velocidade da animação em frames por segundo.
 });
 
@@ -186,34 +187,72 @@ class CenaHospital extends Phaser.Scene {
     this.textoTempo = this.add.text(55,80, this.tempoInicial + 's', { fontSize: '40px', fill: '#000000'}).setVisible(false);
   }
   update() {
-    this.radiansAngleJoystick = this.fixAngle(this.joystick.angle)*Math.PI/180 || 0; // Converte o ângulo do joystick para radianos e normaliza o input para 0 até 360 graus no joystick
-    this.joystickForce = this.joystick.force < 75 ? this.joystick.force : 75; // Limita a força do joystick para 75
-    const velocityDoctorX = (this.defaultVelocity * Math.cos(this.radiansAngleJoystick) * this.joystickForce) // Calcula a velocidade do médico no eixo X
-    velocityDoctorX < 0 ? this.player.setFlip(false, false) : this.player.setFlip(true, false) // Ajusta orientação do personagem
-    const velocityDoctorY = -(this.defaultVelocity * Math.sin(this.radiansAngleJoystick) * this.joystickForce) // Calcula a velocidade do médico no eixo Y
-    this.player.setVelocityX(velocityDoctorX) // Atribui a velocidade calculada ao médico
-    this.player.setVelocityY(velocityDoctorY) // Atribui a velocidade calculada ao médico
+    if (this.joystick.visible) {
+      this.radiansAngleJoystick = this.fixAngle(this.joystick.angle)*Math.PI/180 || 0;
+      this.joystickForce = this.joystick.force < 50 ? this.joystick.force : 50;
+      const velocityDoctorX = (this.defaultVelocity * Math.cos(this.radiansAngleJoystick) * this.joystickForce)
+      const velocityDoctorY = -(this.defaultVelocity * Math.sin(this.radiansAngleJoystick) * this.joystickForce)
+      if (velocityDoctorX > 0) this.player.anims.play('playerWalkingRight', true);
+      else if (velocityDoctorX < 0) this.player.anims.play('playerWalkingLeft', true);
+      else if (velocityDoctorY == 0) this.player.anims.play('playerIdle', true); 
+      this.player.setVelocityX(velocityDoctorX)
+      this.player.setVelocityY(velocityDoctorY)
+    }
     // Mapeamento de Inputs (Normalizar o movimento diagonal futuramente)
     if (this.keyA.isDown) {
       this.player.setVelocityX(-this.defaultVelocity * 50);
-      //this.player.setFlip(false, false); // Ajusta orientação do personagem  
-      this.player.anims.play('playerWalkingRight', true); // Indica que o personagem está se movendo para a direita. 
+      this.player.anims.play('playerWalkingLeft', true);
     }
     else if (this.keyD.isDown) {
       this.player.setVelocityX(this.defaultVelocity * 50);
-      //this.player.setFlip(true, false); // Ajusta orientação do personagem 
-      this.player.anims.play('playerWalkingLeft', true); // Indica que o personagem está se movendo para a direita.    
+      this.player.anims.play('playerWalkingRight', true);
+      this.joystick.setVisible(false);
     }
-    else if (this.keyS.isDown) {
-      this.player.setVelocityY(this.defaultVelocity * 50)  
-      this.player.anims.play('playerWalkingLeft', true); // Indica que o personagem está se movendo para a direita.   
+    else {
+      if (!this.joystick.visible) {
+        this.player.setVelocityX(0);
+      }
+    }
+    if (this.keyS.isDown) {
+      this.player.setVelocityY(this.defaultVelocity * 50)
+      this.player.anims.play('playerWalkingLeft', true);
+      this.joystick.setVisible(false);
     }
     else if (this.keyW.isDown) {
       this.player.setVelocityY(-this.defaultVelocity * 50)
-      this.player.anims.play('playerWalkingRight', true); // Indica que o personagem está se movendo para a direita. 
+      this.player.anims.play('playerWalkingRight', true);
+      this.joystick.setVisible(false);
     }
     else {
-      this.player.anims.play('playerWalkingRight', false); // Indica que o personagem está se movendo para a direita. 
+      if (!this.joystick.visible) {
+        this.player.setVelocityY(0);
+      }
+    }
+
+    if (this.keyA.isDown && this.keyW.isDown) {
+      this.player.setVelocityX(-this.defaultVelocity * 30);
+      this.player.setVelocityY(-this.defaultVelocity * 30);
+      this.player.anims.play('playerWalkingLeft', true);
+    }
+    if (this.keyD.isDown && this.keyW.isDown) {
+      this.player.setVelocityX(this.defaultVelocity * 30);
+      this.player.setVelocityY(-this.defaultVelocity * 30);
+      this.player.anims.play('playerWalkingRight', true);
+    }
+    if (this.keyA.isDown && this.keyS.isDown) {
+      this.player.setVelocityX(-this.defaultVelocity * 30);
+      this.player.setVelocityY(this.defaultVelocity * 30);
+      this.player.anims.play('playerWalkingLeft', true);
+    }
+    if (this.keyD.isDown && this.keyS.isDown) {
+      this.player.setVelocityX(this.defaultVelocity * 30);
+      this.player.setVelocityY(this.defaultVelocity * 30);
+      this.player.anims.play('playerWalkingRight', true);
+    }
+
+
+    if (this.player.body.velocity.x === 0 && this.player.body.velocity.y === 0) {
+      this.player.anims.play('playerIdle', true);
     }
   }
   fixAngle(angle) {
