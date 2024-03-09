@@ -47,7 +47,7 @@ class CenaHospital extends Phaser.Scene {
         
    }
 
-  create() {
+  create(time) {
     // this.cameras.main.fadeIn(6000);
     // Cena Hospital
     this.map = this.make.tilemap({ key: "mapa", tileWidth: 32, tileHeight: 32}); //Cria o mapa colocando o tamanho de cada "azulejo", que no nosso tiled foi 32x32
@@ -78,9 +78,9 @@ class CenaHospital extends Phaser.Scene {
     // this.groundLayer = this.map.createLayer("Ground", [this.tileset2,this.tileset3,this.tileset4]); //Cria a camada do chão, passando o tileset e o nome que definimos no tiled map editor
     // this.wallsLayer = this.map.createLayer("Walls", [this.tileset1], 0 , 0); //Cria a camada de paredes, passando o tileset e o nome que definimos no tiled map editor
     
-    this.player = this.physics.add.sprite(550, 800, "player").setScale(1.5).refreshBody(); // Cria e posiciona o player
-    this.add.text(400, 240, "Mova nas teclas WASD ou pelo Joystick", { fontSize: '16px', fill: '#000' }).setScrollFactor(0); // Adiciona um texto na tela
-    this.add.text(400, 260, "Procure pela doutora Tina", { fontSize: '16px', fill: '#000' }).setScrollFactor(0); // Adiciona um texto na tela
+    this.player = this.physics.add.sprite(650, 450, "player").setScale(1.5).refreshBody(); // Cria e posiciona o player
+    // this.add.text(400, 240, "Mova nas teclas WASD ou pelo Joystick", { fontSize: '16px', fill: '#000' }).setScrollFactor(0); // Adiciona um texto na tela
+    // this.add.text(400, 260, "Procure pela doutora Tina", { fontSize: '16px', fill: '#000' }).setScrollFactor(0); // Adiciona um texto na tela
  
     // this.wallsLayer.setCollisionByProperty({ collider: true }) //Seta as colisões onde tem a propriedade collider: true no tiled map
     // this.physics.add.collider(this.player, this.wallsLayer, () => console.log("Colidiu")) //Adiciona colisão entre o médico e a camada de parede
@@ -89,7 +89,7 @@ class CenaHospital extends Phaser.Scene {
     this.fonte.setCollisionByProperty({ collider: true }) //Seta as colisões onde tem a propriedade collider: true no tiled map
     this.cerca.setCollisionByProperty({ collider: true }) //Seta as colisões onde tem a propriedade collider: true no tiled map
     this.physics.add.collider(this.player, this.arvores, () => console.log("Colidiu")) //Adiciona colisão entre o médico e a camada de parede
-    this.physics.add.collider(this.player, this.faculdade, () => console.log("Colidiu")) //Adiciona colisão entre o médico e a camada de parede
+    // this.physics.add.collider(this.player, this.faculdade, () => console.log("Colidiu")) //Adiciona colisão entre o médico e a camada de parede
     this.physics.add.collider(this.player, this.fonte, () => console.log("Colidiu")) //Adiciona colisão entre o médico e a camada de parede
     this.physics.add.collider(this.player, this.cerca, () => console.log("Colidiu")) //Adiciona colisão entre o médico e a camada de parede
 
@@ -157,57 +157,51 @@ class CenaHospital extends Phaser.Scene {
   this.case1 = this.add.image(550, 430, 'case1').setScale(0.50).setVisible(false); // Adiciona a imagem do case, quando ocorre esse overlap
   this.botaoX = this.add.sprite(615, 535, 'botaoX').setInteractive().setScale(0.1).setVisible(false); // Adiciona a imagem do botao, quando ocorre esse overlap
     
+  this.overlapCollider;
+  this.overlapTriggered = false;
 
   // this.tina.setCollideWorldBounds(true);
-  this.physics.add.overlap(this.player, this.tina, () => {  // Cria o overlap entre o jogador principal e a Tina
+  this.tinaCollider = this.physics.add.overlap(this.tina, this.player, () => {  // Cria o overlap entre o jogador principal e a Tina
     console.log('teste'); // Console log para verificar o funcionamento do overlap
+    this.physics.pause()
     this.case1.setVisible(true)
-    this.bo.setVisible(true)
+    this.botaoX.setVisible(true)
 
     this.botaoX.on("pointerover", () => {
       // Evento de passar o mouse sobre o botaoJogar
       this.input.setDefaultCursor("pointer") // Cursor vira mãozinha
-    })
+    });
     this.botaoX.on("pointerout", () => {
       // Evento de retirar o mouse do botaoJogar
       this.input.setDefaultCursor("default") // Cursor vira setinha
-    })
+    });
 
     // Evento disparado ao clicar no botão (Código temporário apenas para demonstração da funcionalidade na sprint 1)
     this.botaoX.on("pointerdown", () => {
+      this.physics.resume()
+      
+      //  Dispatch a Scene event
+      this.events.emit('showTimer');
+
       this.case1.setVisible(false);
       this.botaoX.setVisible(false);
-      this.time.addEvent({ 
-        delay: 1000, // 1000 ms = 1 segundo
-        callback: () => {
-          this.fundoTimer.setVisible(true);
-          this.textoTempo.setVisible(true);
-          this.tempoInicial -= 1; // Decrementa o contador
-          this.textoTempo.setText(this.tempoInicial + 's'); 
-            if (this.tempoInicial <100) {
-                this.textoTempo.setPosition(70,80);
-            }
-            
-            if (this.tempoInicial < 10) {
-                this.textoTempo.setPosition(77,80);
-                this.textoTempo.setColor('#ff0000');
-            }
-        },
-        loop: true // Atualiza o texto
-      })
-    })
+      console.log("teste");
+      
+    },this.physics.world.removeCollider(this.tinaCollider));
   });
     
+  // console.log('this.sys.game.loop.time.toString(): ',this.sys.game.loop.time.toString())
     //this.botaoFecharCase.on("pointerdown", () => {
     
   this.physics.add.collider(this.player, this.tina); // Adiciona a colisão entre o persoangem e a Tina
     // this.physics.add.collider(this.tina, this.wallsLayer)
 
   this.fundoTimer = this.add.image(100,100, 'azul').setScale(0.3).setVisible(false); // Adiciona o fundo de imagem do timer
-  this.tempoInicial = 120; // Define o tempo do timer
+  this.tempoInicial = 1200; // Define o tempo do timer
   this.textoTempo = this.add.text(55,80, this.tempoInicial + 's', { fontSize: '40px', fill: '#000000'}).setVisible(false); // Adiciona o texto do tempo na tela do jogo
   }
   update() {
+    
     if (this.joystick.visible) {
       this.radiansAngleJoystick = this.fixAngle(this.joystick.angle)*Math.PI/180 || 0;
       this.joystickForce = this.joystick.force < 50 ? this.joystick.force : 50;
@@ -277,6 +271,18 @@ class CenaHospital extends Phaser.Scene {
       this.player.anims.play('playerIdle', true);
     }
   }
+
+  goal(){
+
+    if(this.overlapTriggered){
+      this.physics.world.removeCollider(this.overlapCollider);
+      return;
+    };
+
+    console.log('overlap');
+    this.overlapTriggered=true;
+  };
+
   fixAngle(angle) {
     // Corrige o ângulo do joystick para que ele vá de 0 a 360 graus
     if (angle < 0) {
@@ -288,6 +294,3 @@ class CenaHospital extends Phaser.Scene {
   }
 
 }
-
-
-
