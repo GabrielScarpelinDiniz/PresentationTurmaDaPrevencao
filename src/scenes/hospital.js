@@ -74,7 +74,6 @@ class CenaHospital extends Phaser.Scene {
     this.fonte = this.map.createLayer("Fonte", [this.tileset3,this.tileset9]); 
     this.cerca = this.map.createLayer("Cerca", [this.tileset6,this.tileset7]); 
 
-
     // this.groundLayer = this.map.createLayer("Ground", [this.tileset2,this.tileset3,this.tileset4]); //Cria a camada do chão, passando o tileset e o nome que definimos no tiled map editor
     // this.wallsLayer = this.map.createLayer("Walls", [this.tileset1], 0 , 0); //Cria a camada de paredes, passando o tileset e o nome que definimos no tiled map editor
     
@@ -92,7 +91,6 @@ class CenaHospital extends Phaser.Scene {
     // this.physics.add.collider(this.player, this.faculdade, () => console.log("Colidiu")) //Adiciona colisão entre o médico e a camada de parede
     this.physics.add.collider(this.player, this.fonte, () => console.log("Colidiu")) //Adiciona colisão entre o médico e a camada de parede
     this.physics.add.collider(this.player, this.cerca, () => console.log("Colidiu")) //Adiciona colisão entre o médico e a camada de parede
-
 
     this.cameras.main.startFollow(this.player, true); //camera inicia o follow no personagem principal
     this.cameras.main.setBounds(0, 0, 1120, 1120)
