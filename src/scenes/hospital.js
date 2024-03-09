@@ -158,9 +158,11 @@ class CenaHospital extends Phaser.Scene {
   this.botaoX = this.add.sprite(615, 535, 'botaoX').setInteractive().setScale(0.1).setVisible(false); // Adiciona a imagem do botao, quando ocorre esse overlap
     
 
-    // this.tina.setCollideWorldBounds(true);
-    this.physics.add.overlap(this.player, this.tina, () => {  // Cria o overlap entre o jogador principal e a Tina
-      console.log('teste'); // Console log para verificar o funcionamento do overlap
+  // this.tina.setCollideWorldBounds(true);
+  this.physics.add.overlap(this.player, this.tina, () => {  // Cria o overlap entre o jogador principal e a Tina
+    console.log('teste'); // Console log para verificar o funcionamento do overlap
+    this.case1.setVisible(true)
+    this.bo.setVisible(true)
 
     this.botaoX.on("pointerover", () => {
       // Evento de passar o mouse sobre o botaoJogar
@@ -176,23 +178,23 @@ class CenaHospital extends Phaser.Scene {
       this.case1.setVisible(false);
       this.botaoX.setVisible(false);
       this.time.addEvent({ 
-      delay: 1000, // 1000 ms = 1 segundo
-      callback: () => {
-        this.fundoTimer.setVisible(true);
-        this.textoTempo.setVisible(true);
-        this.tempoInicial -= 1; // Decrementa o contador
-        this.textoTempo.setText(this.tempoInicial + 's'); 
-        if (this.tempoInicial <100) {
-            this.textoTempo.setPosition(70,80);
-        }
-        
-        if (this.tempoInicial < 10) {
-            this.textoTempo.setPosition(77,80);
-            this.textoTempo.setColor('#ff0000');
-        }
-      },
-      loop: true // Atualiza o texto
-    })
+        delay: 1000, // 1000 ms = 1 segundo
+        callback: () => {
+          this.fundoTimer.setVisible(true);
+          this.textoTempo.setVisible(true);
+          this.tempoInicial -= 1; // Decrementa o contador
+          this.textoTempo.setText(this.tempoInicial + 's'); 
+            if (this.tempoInicial <100) {
+                this.textoTempo.setPosition(70,80);
+            }
+            
+            if (this.tempoInicial < 10) {
+                this.textoTempo.setPosition(77,80);
+                this.textoTempo.setColor('#ff0000');
+            }
+        },
+        loop: true // Atualiza o texto
+      })
     })
   });
     
@@ -233,7 +235,7 @@ class CenaHospital extends Phaser.Scene {
         this.player.setVelocityX(0);
       }
     }
-    else if (this.keyS.isDown) { // Verifica se a tecla S está pressionada
+    if (this.keyS.isDown) { // Verifica se a tecla S está pressionada
       this.player.setVelocityY(this.defaultVelocity * 50)  
       this.player.anims.play('playerWalkingLeft', true); // Indica que o personagem está se movendo para a direita.   
       this.joystick.setVisible(false);
