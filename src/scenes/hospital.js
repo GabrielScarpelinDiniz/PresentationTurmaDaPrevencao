@@ -1,6 +1,6 @@
 
 class CenaHospital extends Phaser.Scene {
-  defaultVelocity = 2;
+  defaultVelocity = 3;
   radiansAngleJoystick = 0;
   joystickForce = 0;
   constructor() {

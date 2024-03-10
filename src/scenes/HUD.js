@@ -12,8 +12,8 @@ class UIScene extends Phaser.Scene
         //  Our Text object to display the Score
         //const info = this.add.text(10, 10, 'Score: 0', { font: '48px Arial', fill: '#000000' }).setVisible(false);
         this.tempoInicial = 300;
-        this.fundo = this.add.rectangle(630, 30, 150, 50, 0xadd8e6).setVisible(false).setAlpha(0.7);
-        this.textoTempo = this.add.text(585,10,  this.tempoInicial + 's', { fontSize: '40px', fill: '#000000'}).setVisible(false); // Adiciona o texto do tempo na tela do jogo
+        this.fundo = this.add.rectangle(635, 30, 210, 50, 0xadd8e6).setVisible(false).setAlpha(0.8);
+        this.textoTempo = this.add.text(545, 10,  (this.tempoInicial - this.tempoInicial %60)/60 + 'min ' + this.tempoInicial %60 + 's', { fontSize: '40px', fill: '#000000'}).setVisible(false); // Adiciona o texto do tempo na tela do jogo
         
         //  Grab a reference to the Game Scene
         const ourGame = this.scene.get('hospital');
@@ -30,13 +30,13 @@ class UIScene extends Phaser.Scene
                     //   this.fundoTimer.setVisible(true);
                     this.textoTempo.setVisible(true);
                     this.tempoInicial -= 1; // Decrementa o contador
-                    this.textoTempo.setText(this.tempoInicial + 's')
+                    this.textoTempo.setText((this.tempoInicial - this.tempoInicial %60)/60 + 'min ' + this.tempoInicial %60 + 's')
                     // console.log('time: ',time/1000)
                     if (this.tempoInicial == 99) {
                         //this.textoTempo.setPosition(this.player.x, 100);
                     };
                        
-                    if (this.tempoInicial < 10) {
+                    if ((this.tempoInicial - this.tempoInicial %60)/60 === 0 && this.tempoInicial <= 30) {
                         //this.textoTempo.setPosition(550, 400);
                         this.textoTempo.setColor('#ff0000');
                     };
