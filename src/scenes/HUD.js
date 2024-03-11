@@ -14,6 +14,7 @@ class UIScene extends Phaser.Scene
         this.tempoInicial = 300;
         this.fundo = this.add.rectangle(635, 30, 210, 50, 0xadd8e6).setVisible(false).setAlpha(0.8);
         this.textoTempo = this.add.text(545, 10,  (this.tempoInicial - this.tempoInicial %60)/60 + 'min ' + this.tempoInicial %60 + 's', { fontSize: '40px', fill: '#000000'}).setVisible(false); // Adiciona o texto do tempo na tela do jogo
+        this.botaoCase = this.add.circle(100, 100, 50, 0xffffff, 1).setVisible(false).setInteractive();
         
         //  Grab a reference to the Game Scene
         const ourGame = this.scene.get('hospital');
@@ -44,5 +45,17 @@ class UIScene extends Phaser.Scene
                 loop: true // Atualiza o texto
               });
         }, this);
+
+
+        ourGame.events.on('botaoCase', function ()
+        {
+            this.botaoCase.setVisible(true);
+            console.log("teste1");
+            this.botaoCase.on("pointerdown", () => {
+                this.events.emit('abrirCase');
+                console.log("teste2");
+            })
+        }, this);
+        
     }
 }
