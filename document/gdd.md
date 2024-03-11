@@ -998,7 +998,70 @@ openFullScreen() {
 
 ## 4.3. Desenvolvimento intermediário do jogo (sprint 3)
 
-*Descreva e ilustre aqui o desenvolvimento da versão intermediária do jogo, explicando brevemente o que foi entregue em termos de código e jogo. Utilize prints de tela para ilustrar. Indique as eventuais dificuldades e próximos passos.*
+&nbsp;&nbsp;&nbsp;&nbsp;Na terceira sprint, o foco da codificação foi reformular a dinâmica do jogo para se adaptar ao novo design de cenário requisitado pelo cliente. Além disso, aprofundamos o desenvolvimento para o nível intermediário do projeto, ou seja, foram implementados estruturas lógicas para a demonstração de, pelo menos, um ciclo do jogo.
+
+&nbsp;&nbsp;&nbsp;&nbsp;A organização dessa sprint, assim como a da sprint passada, foi dividir as tarefas de programação em pequenas etapas, fragmentando o que era necessário e distribuindo para diferentes pessoas. Isso foi feito com o intuito de evitar sobrecarga dos membros da equipe e impulsionar o aprendizado, pois aqueles que não têm afinidade com programação foram os resposáveis pelo desenvolvimento nessas duas semanas.  
+
+&nbsp;&nbsp;&nbsp;&nbsp;As estruturas implementadas no jogo foram os aprimoramentos dos overlaps e colisões, a criação de um novo cenário, a implementação do HUD, que inclui elementos como o timer, a pontuação e as missões a serem realizadas pelo personagem. As ferramentas utilizadas nessa sprint foram o Tiled Map Editor, para a criação do novo mapa; Piskel, para o design dos livros, quiz e personagens; e PixilArt para a elaboração do edifício da Faculdade de Medicina da USP.
+
+
+### Etapa 1 do desenvolvimento - Criação do novo cenário
+
+&nbsp;&nbsp;&nbsp;&nbsp;Na sprint anterior, o jogo se passava em um ambiente hospitalar, onde o personagem principal era o médico residente. Com a mudança de cenário, o local passou a ser o pátio da FMUSP e os elementos do jogo foram adaptados para o novo espaço, como o menu, os personagens e os espaços de interação. O modo de uso do Tiled Map Editor para a criação do novo mapa foi o mesmo descrito no tópico 4.2.
+
+*inserir foto do mapa* figura 30 e fonte:
+
+
+
+### Etapa 2 do desenvolvimento - Colisões e Overlaps
+
+&nbsp;&nbsp;&nbsp;&nbsp;Foi realizado, inicialmente, as colisões necessárias para a dinâmica do jogo, configuradas no próprio Piskel e adicionadas, com o auxílio de um documento .JSON e do framework Phaser, no código. Na implementação das colisões, utilizamos, dentro do `create()`, o método do Phaser `.setCollisionByProperty()`, que adiciona colisão entre objetos por meio das propriedades adicionadas a eles no Piskel, como descrito a seguir:
+
+```js
+	89this.arvores.setCollisionByProperty({ collider: true }) //Seta as colisões onde tem a propriedade collider: true no tiled map
+    	this.faculdade.setCollisionByProperty({ collider: true }) //Seta as colisões onde tem a propriedade collider: true no tiled map
+    	this.fonte.setCollisionByProperty({ collider: true }) //Seta as colisões onde tem a propriedade collider: true no tiled map
+    	this.cerca.setCollisionByProperty({ collider: true }) //Seta as colisões onde tem a propriedade collider: true no tiled map
+    	this.physics.add.collider(this.player, this.arvores, () => console.log("Colidiu")) //Adiciona colisão entre o médico e a camada de parede
+    	this.physics.add.collider(this.player, this.faculdade, () => console.log("Colidiu")) //Adiciona colisão entre o médico e a camada de parede
+    	this.physics.add.collider(this.player, this.fonte, () => console.log("Colidiu")) //Adiciona colisão entre o médico e a camada de parede
+    	97this.physics.add.collider(this.player, this.cerca, () => console.log("Colidiu")) //Adiciona colisão entre o médico e a camada de parede 
+	this.physics.add.collider(this.player, this.tina); // Adiciona a colisão entre o persoangem e a Tina
+```
+     
+&nbsp;&nbsp;&nbsp;&nbsp;Após a implementação das colisões, o próximo passo foi construir o overlap do aluno com a Tina no método `create()`, feito da seguinte forma:
+
+```js
+	166this.tinaCollider = this.physics.add.overlap(this.tina, this.player, () => {  // Cria o overlap entre o jogador principal e a Tina
+    	console.log('teste'); // Console log para verificar o funcionamento do overlap
+   	 this.physics.pause()
+    	this.case1.setVisible(true)
+    	this.botaoX.setVisible(true)
+
+    this.botaoX.on("pointerover", () => {
+      // Evento de passar o mouse sobre o botaoJogar
+      this.input.setDefaultCursor("pointer") // Cursor vira mãozinha
+    });
+    this.botaoX.on("pointerout", () => {
+      // Evento de retirar o mouse do botaoJogar
+      this.input.setDefaultCursor("default") // Cursor vira setinha
+    });
+
+    // Evento disparado ao clicar no botão (Código temporário apenas para demonstração da funcionalidade na sprint 1)
+    this.botaoX.on("pointerdown", () => {
+      this.physics.resume()
+      
+      //  Dispatch a Scene event
+      this.events.emit('showTimer');
+
+      this.case1.setVisible(false);
+      this.botaoX.setVisible(false);
+      console.log("teste");
+      
+    },this.physics.world.removeCollider(this.tinaCollider));
+  });
+
+```
 
 ## 4.4. Desenvolvimento final do MVP (sprint 4)
 
