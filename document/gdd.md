@@ -89,11 +89,9 @@
 
 ### 1.1.5. Matriz de Riscos (sprints 1 e 4)
 
-&nbsp;&nbsp;&nbsp;&nbsp;A Matriz de Riscos, também chamada de Matriz de Probabilidade e Impacto, é uma ferramenta utilizada para avaliar qual a probabilidade de um evento acontecer e qual o impacto que ele teria na empresa ou projeto.
+&nbsp;&nbsp;&nbsp;&nbsp;A Matriz de Riscos, também chamada de Matriz de Probabilidade e Impacto, é uma ferramenta utilizada, majoritariamente em empresas, para avaliar qual a probabilidade de um evento acontecer e qual o impacto que ele teria no empreendimento ou em um projeto⁴. A matriz é eficiente quando há necessidade de priorizar os riscos, sejam eles negativos (as ameaças) ou positivos (as oportunidades), ou seja, analisar e visualizar quais riscos merecem mais atenção no momento, auxiliando na criação de planos de ação para prevenir ou potencializar tal risco⁵.
 
 &nbsp;&nbsp;&nbsp;&nbsp;A fim de gerenciar os riscos do nosso produto, a equipe construiu os gráficos que representam potenciais ameaças e oportunidades no projeto (figura 3 e figura 4, respectivamente), contribuindo efetivamente para a tomada de decisões estratégicas e planejamento de planos de ação. 
-
-&nbsp;&nbsp;&nbsp;&nbsp;A fim de gerenciar os riscos do nosso produto, a equipe construiu os gráficos (Imagem XX e Imagem YY) que representam nossas ameaças e oportunidades e, contribuem efetivamente para o planejamento de planos de ação.
 
 <div align="center">
 
