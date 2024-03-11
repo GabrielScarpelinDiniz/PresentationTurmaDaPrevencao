@@ -289,7 +289,7 @@ Posto isso, foi entendido que a definição adequada do público alvo aumenta a 
 
 <sub>Figura 5 - Mapa do Jogo</sub>
 
-<img src="./other/mapa1.png" width="60%">
+<img src="./other/mapa1.png" width="50%">
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 </div>
@@ -356,7 +356,7 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 </div>
 
-Figura 8: Concept Art da Página do Livro.
+&nbsp;&nbsp;&nbsp;&nbsp;Figura 8: Concept Art da Página do Livro.
 
 ### 3.3.5. Trilha sonora (sprint 3)
 
@@ -525,48 +525,45 @@ Figura 8: Concept Art da Página do Livro.
 
 &nbsp;&nbsp;&nbsp;&nbsp;A primeira versão do jogo possui duas cenas, uma de início e uma de jogo. Ambas possuem arte gráfica provisória e foram desenvolvidas com o intuito de serem apresentadas na reunião com o parceiro ao final do Sprint 1.
 
-<!-- <p align=center><img src="other\sprint_1_item_4.1_files\figura1.png" alt="Figura 1" width="400"/></p>
-<p align=center style="font-size:1em">Figura 1: Cena de início</p>
-<p align=center><img src="other\sprint_1_item_4.1_files\figura2.png" alt="Figura 2" width="400"/></p>
-<p align=center style="font-size:1em">Figura 2: Cena de jogo</p> -->
+<div align="center">
 
-<p align=center style="font-size:1em">Figura 18 - Cenas de jogo</p>
+<sub>Figura 18 - Cenas de jogo</sub>
 
 <p align="middle">
-  <img src="other\sprint_1_item_4.1_files\figura1.png" width="400" />
-
-  <img src="other\sprint_1_item_4.1_files\figura2.png" width="400" /> 
-
+    <img src="other\sprint_1_item_4.1_files\figura1.png" width="40%">
+    <img src="other\sprint_1_item_4.1_files\figura2.png" width="40%">
 </p>
-<p align=center style="font-size:1em">Fonte: Material produzido pelos autores (2024)</p>
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+
+</div>
 
 &nbsp;&nbsp;&nbsp;&nbsp;A cena de início é uma artimanha de programação e será transformada futuramente em um arquivo JavaScript separado ao adquirirmos o conhecimento para tal. De momento, criamos duas imagens, um layer a frente das outras, e as removemos por um evento acionado pelo clique do mouse no botão “Jogar”.
-<!-- 
-<p align=center><img src="other\sprint_1_item_4.1_files\figura3.png" alt="Figura 3" width="400"/></p>
-<p align=center style="font-size:1em">Figura 3: Fundo da Cena de início</p>
-<p align=center><img src="other\sprint_1_item_4.1_files\figura4.png" alt="Figura 4" width="400"/></p>
-<p align=center style="font-size:1em">Figura 4: Botão de Jogar</p> -->
 
-<p align=center style="font-size:1em">Figura 19 - Cena de início</p>
+<div align="center">
+
+<sub>Figura 19 - Cena de início</sub>
+
 <p align="middle">
-  <img src="other\sprint_1_item_4.1_files\figura3.png" width="400" />
-  <img src="other\sprint_1_item_4.1_files\figura4.png" width="400" /> 
+    <img src="other\sprint_1_item_4.1_files\figura3.png" width="40%">
+    <img src="other\sprint_1_item_4.1_files\figura4.png" width="40%">
 </p>
-<p align=center style="font-size:1em">Fonte: Material produzido pelos autores (2024)</p>
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+
+</div>
 
 &nbsp;&nbsp;&nbsp;&nbsp;A cena de jogo é composta por duas imagens também, uma simulando o cenário do jogo e outra, o personagem jogável, uma figura de médico. O personagem possui movimento direcional controlado pelas teclas WASD, como será exposto abaixo. Adaptações para os _inputs_ estão listados abaixo.
 
-<!-- <p align=center><img src="other\sprint_1_item_4.1_files\figura5.png" alt="Figura 5" width="400"/></p>
-<p align=center style="font-size:1em">Figura 5: Imagem do Cenário</p>
-<p align=center><img src="other\sprint_1_item_4.1_files\figura6.png" alt="Figura 6" width="80"/></p>
-<p align=center style="font-size:1em">Figura 6: Imagem do Personagem</p> -->
+<div align="center">
 
-<p align=center style="font-size:1em">Figura 20 - Cena de jogo</p>
+<sub>Figura 20 - Cena de jogo</sub>
+
 <p align="middle">
-  <img src="other\sprint_1_item_4.1_files\figura5.png" width="400" />
-  <img src="other\sprint_1_item_4.1_files\figura6.png" width="100" /> 
+    <img src="other\sprint_1_item_4.1_files\figura5.png" width="40%">
+    <img src="other\sprint_1_item_4.1_files\figura6.png" width="10%">
 </p>
-<p align=center style="font-size:1em">Fonte: Material produzido pelos autores (2024)</p>
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+
+</div>
 
 &nbsp;&nbsp;&nbsp;&nbsp;Para iniciar a explicação do código, dentro do arquivo `“cena1.js”`, carregamos as imagens na função `preload()` e as criamos na função `create()`, como mostrado a seguir.
 
@@ -681,11 +678,17 @@ var config = {
 - Implementar mudança de cenas;
 - Adicionar um objeto médico com animação (spritesheet);
 - Adicionar lógica de colisão ao personagem para interação com outros objetos ou NPCs;
-- Começar a implementação do quiz ao acessar o Farmácia (vide abaixo).
+- Começar a implementação do quiz ao acessar a Farmácia (vide abaixo).
 
-<p align=center style="font-size:1em">Figura 21 - Protótipo do Quiz</p>
-<p align=center><img src="other\sprint_1_item_4.1_files\figura7.jpg" width="400"/></p>
-<p align=center style="font-size:1em">Fonte: Material produzido pelos autores (2024)</p>
+<div align="center">
+
+<sub>Figura 21 - Protótipo do Quiz</sub>
+
+<img src="other\sprint_1_item_4.1_files\figura7.jpg" width="40%">
+
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+
+</div>
 
 ## 4.2. Desenvolvimento básico do jogo (sprint 2)
 
@@ -748,13 +751,26 @@ class CenaHospital extends Phaser.Scene {
 ### Etapa 2 do desenvolvimento - Novo menu em *pixel art*
 
 &nbsp;&nbsp;&nbsp;&nbsp;O primeiro passo foi fazer o desenho do novo menu, com uma cara parecida, porém em *pixel art* feita no Piskel.
-<p align=center style="font-size:1em">Figura 22 - Novo menu desenvolvido no Piskel</p>
-<p align=center><img src="other\sprint_2_item_4.2_files\figura1.png" width="400"/></p>
-<p align=center style="font-size:1em">Fonte: Autores</p>
-<br>
-<p align=center style="font-size:1em">Figura 23 - Spritesheet do botão para animação</p>
-<p align=center><img src="other\sprint_2_item_4.2_files\button.png" width="400"/></p>
-<p align=center style="font-size:1em">Fonte: Autores (2024)</p>
+
+<div align="center">
+
+<sub>Figura 22 - Novo menu desenvolvido no Piskel</sub>
+
+<img src="other\sprint_2_item_4.2_files\figura1.png" width="60%">
+
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+
+</div>
+
+<div align="center">
+
+<sub>Figura 23 - Spritesheet do botão para animação</sub>
+
+<img src="other\sprint_2_item_4.2_files\button.png" width="60%">
+
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+
+</div>
 
 &nbsp;&nbsp;&nbsp;&nbsp;Após o design desenvolvido, o próximo passo foi implementar no Phaser
 no método `preload()`: 
@@ -796,9 +812,15 @@ const config = {
 
 &nbsp;&nbsp;&nbsp;&nbsp;Nesta etapa, foi realizado a implementação do Mapa através de um arquivo JSON, localizado em `"src/assets/tilemaps/main_map.json"`. Este arquivo é exportado do Tiled Map Editor, que é um editor de mapas em blocos e por camadas
 
-<p align=center style="font-size:1em">Figura 24 - Mapa no Tiled Map Editor</p>
-<p align=center><img src="other\sprint_2_item_4.2_files\tiled_map_editor.png" width="400"/></p>
-<p align=center style="font-size:1em">Fonte: Autores</p>
+<div align="center">
+
+<sub>Figura 24 - Mapa no Tiled Map Editor</sub>
+
+<img src="other\sprint_2_item_4.2_files\tiled_map_editor.png" width="40%">
+
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+
+</div>
 
 &nbsp;&nbsp;&nbsp;&nbsp;Após isso, foi preciso importar o JSON para a classe `CenaHospital` e definir as camadas presentes nele que, nessa figura, são as paredes e o chão.
 
@@ -829,9 +851,15 @@ create(){
 this.cameras.main.startFollow(this.medico, true); //camera inicia o follow no personagem principal
 this.cameras.main.setZoom(2);
 ````
-<p align=center style="font-size:1em">Figura 25 - Mapa implementado no phaser com câmera</p>
-<p align=center><img src="other\sprint_2_item_4.2_files\camera_and_tiled_map.png" width="400"/></p>
-<p align=center style="font-size:1em">Fonte: Autores</p>
+<div align="center">
+
+<sub>Figura 25 - Mapa implementado no phaser com câmera</sub>
+
+<img src="other\sprint_2_item_4.2_files\camera_and_tiled_map.png" width="40%">
+
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+
+</div>
 
 ### Etapa 6 do desenvolvimento - Colisões com as paredes
 
@@ -848,9 +876,15 @@ this.physics.add.collider(this.medico, this.wallsLayer, () => console.log("Colid
 this.medico.setVelocityX(velocidadeEmX)
 this.medico.setVelocityY(velocidadeEmY)
 ````
-<p align=center style="font-size:1em">Figura 26 - Colisão entre o personagem e a parede</p>
-<p align=center><img src="other\sprint_2_item_4.2_files\collision.png" width="400"/></p>
-<p align=center style="font-size:1em">Fonte: Autores</p>
+<div align="center">
+
+<sub>Figura 26 - Colisão entre o personagem e a parede</sub>
+
+<img src="other\sprint_2_item_4.2_files\collision.png" width="40%">
+
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+
+</div>
 
 ### Etapa 7 do desenvolvimento - Implementação do joystick e tela cheia
 
@@ -875,9 +909,15 @@ this.joystick.setScrollFactor(0); // Faz com que o joystick não se mova com a c
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;Na biblioteca do joystick, dois atributos são retornados: o `angle` e o `force`. Esse atributos estão sendo utilizados para a movimentação vetorial. O cálculo foi feito usando a decomposição vetorial, da seguinte forma:
 
-<p align=center style="font-size:1em">Figura 27 - Cálculo da velocidade em X e Y</p>
-<p align=center><img src="other\sprint_2_item_4.2_files\vetores.png" width="400"/></p>
-<p align=center style="font-size:1em">Fonte: Autores</p>
+<div align="center">
+
+<sub>Figura 27 - Cálculo da velocidade em X e Y</sub>
+
+<img src="other\sprint_2_item_4.2_files\vetores.png" width="40%">
+
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+
+</div>
 
 &nbsp;&nbsp;&nbsp;&nbsp;Os vetores da velocidade do personagem são decompostos, o que faz com que ele, além de não andar mais rápido na diagonal, siga o ângulo que o usuário coloca no joystick virtual.
 
@@ -904,9 +944,15 @@ const velocityDoctorY = -(this.defaultVelocity * Math.sin(this.radiansAngleJoyst
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;Após isso, basta implementar a velocidade do personagem para que a movimentação vetorial funcione.
 
-<p align=center style="font-size:1em">Figura 28 - Movimentação vetorial com o joystick</p>
-<p align=center><img src="other\sprint_2_item_4.2_files\movimentacao_vetorial.png" width="400"/></p>
-<p align=center style="font-size:1em">Fonte: Autores</p>
+<div align="center">
+
+<sub>Figura 28 - Movimentação vetorial com o controle joystick</sub>
+
+<img src="other\sprint_2_item_4.2_files\movimentacao_vetorial.png" width="40%">
+
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+
+</div>
 
 &nbsp;&nbsp;&nbsp;&nbsp;Para a tela cheia, quando o jogador clica no botão 'jogar' uma função que acessa o elemento principal do HTML e deixa ele em tela cheia.
 ````js
@@ -925,10 +971,15 @@ openFullScreen() {
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;Esse método deixa a página em tela cheia, assim que o botão de jogar é clicado.
 
-<p align=center style="font-size:1em">Figura 29 - Joystick no jogo e tela cheia</p>
-<p align=center><img src="other\sprint_2_item_4.2_files\joystick.png" width="400"/></p>
-<p align=center style="font-size:1em">Fonte: Material produzido pelos</p>
+<div align="center">
 
+<sub>Figura 29 - Joystick no jogo e tela cheia</sub>
+
+<img src="other\sprint_2_item_4.2_files\joystick.png" width="40%">
+
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+
+</div>
 
 ### Dificuldades
 - Implementação da colisão;

@@ -20,8 +20,9 @@ const config = {
         mode: Phaser.Scale.FIT, // Ajusta a tela para mobile
     },
     scene: [
-        MenuPrincipal, CenaHospital
+        MenuPrincipal, CenaHospital, UIScene
     ],
+    pixelArt: true,
     
 };
 
