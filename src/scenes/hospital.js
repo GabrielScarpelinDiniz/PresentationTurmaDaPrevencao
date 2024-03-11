@@ -77,7 +77,7 @@ class CenaHospital extends Phaser.Scene {
     // this.groundLayer = this.map.createLayer("Ground", [this.tileset2,this.tileset3,this.tileset4]); //Cria a camada do chão, passando o tileset e o nome que definimos no tiled map editor
     // this.wallsLayer = this.map.createLayer("Walls", [this.tileset1], 0 , 0); //Cria a camada de paredes, passando o tileset e o nome que definimos no tiled map editor
     
-    this.player = this.physics.add.sprite(650, 450, "player").setScale(1.5).refreshBody(); // Cria e posiciona o player
+    this.player = this.physics.add.sprite(650, 450, "player").setOffset(9, 12).setCircle(7).setScale(1.5).refreshBody(); // Cria e posiciona o player
     // this.add.text(400, 240, "Mova nas teclas WASD ou pelo Joystick", { fontSize: '16px', fill: '#000' }).setScrollFactor(0); // Adiciona um texto na tela
     // this.add.text(400, 260, "Procure pela doutora Tina", { fontSize: '16px', fill: '#000' }).setScrollFactor(0); // Adiciona um texto na tela
  
@@ -121,7 +121,7 @@ class CenaHospital extends Phaser.Scene {
     this.joystick.setScrollFactor(0); // Faz com que o joystick não se mova com a câmera
 
 
-    this.tina = this.physics.add.sprite(560, 400, 'tina').setScale(2).refreshBody().setImmovable(); // Adiciona o sprite da Tina
+    this.tina = this.physics.add.sprite(560, 400, 'tina').setOffset(8, 12).setCircle(8).setScale(2).refreshBody().setImmovable(); // Adiciona o sprite da Tina
 
     this.anims.create({ // Cria a animação para a personagem Tina
       key: 'tinaIdle', // Chave que cria o nome para iniciar a animação
