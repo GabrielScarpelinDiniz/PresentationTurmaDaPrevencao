@@ -238,7 +238,7 @@ class CenaHospital extends Phaser.Scene {
     // Mapeamento de Inputs (Normalizar o movimento diagonal futuramente)
     if (this.keyA.isDown || this.cursors.left.isDown) { // Verifica se a tecla A está pressionada
       this.player.setVelocityX(-this.defaultVelocity * 50); // Define a velocidade do personagem no eixo X, quando a condição é verdadeira
-      this.player.anims.play('playerWalkingRight', true); // Indica que o personagem está se movendo para a direita. 
+      this.player.anims.play('playerWalkingLeft', true); // Indica que o personagem está se movendo para a direita. 
 
     }
     else if (this.keyD.isDown || this.cursors.right.isDown) { // Verifica se a tecla D está pressionada
@@ -251,12 +251,12 @@ class CenaHospital extends Phaser.Scene {
         this.player.setVelocityX(0);
       }
     }
-    if (this.keyS.isDown || this.cursors.up.isDown) { // Verifica se a tecla S está pressionada
+    if (this.keyS.isDown || this.cursors.down.isDown) { // Verifica se a tecla S está pressionada
       this.player.setVelocityY(this.defaultVelocity * 50)  
       this.player.anims.play('playerWalkingLeft', true); // Indica que o personagem está se movendo para a direita.   
       this.joystick.setVisible(false);
     }
-    else if (this.keyW.isDown || this.cursors.down.isDown) { // Verifica se a tecla W está pressionada
+    else if (this.keyW.isDown || this.cursors.up.isDown) { // Verifica se a tecla W está pressionada
       this.player.setVelocityY(-this.defaultVelocity * 50)
       this.player.anims.play('playerWalkingRight', true);
       this.joystick.setVisible(false);
