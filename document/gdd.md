@@ -384,14 +384,7 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 ### 3.4.2. Bestiário
 
-*\<opcional\> Caso seu jogo tenha inimigos, descreva-os aqui, indicando nomes, imagens, momentos de aparição, funções e impactos no jogo. Utilize listas ou tabelas para organizar esta seção. Caso utilize material de terceiros em licença Creative Commons, não deixe de citar os autores/fontes.* 
-
-*Exemplo de tabela*
-\# | inimigo |  | ocorrências | função | impacto | efeito sonoro
---- | --- | --- | --- | --- | --- | ---
-1 | robô terrestre | <img src="../assets/inimigo2.PNG"> |  a partir da fase 1 | ataca o personagem vindo pelo chão em sua direção, com velocidade constante, atirando parafusos | se encostar no inimigo ou no parafuso arremessado, o personagem perde 1 ponto de vida | sons de tiros e engrenagens girando
-2 | robô voador | <img src="../assets/inimigo1.PNG"> | a partir da fase 2 | ataca o personagem vindo pelo ar, fazendo movimento em 'V' quando se aproxima | se encostar, o personagem perde 3 pontos de vida | som de hélice
-3 | ... 
+&nbsp;&nbsp;&nbsp;&nbsp; Não se aplica.
 
 ## 3.5. Gameflow (Diagrama de cenas) (sprint 2)
 
