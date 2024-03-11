@@ -93,7 +93,6 @@ class CenaHospital extends Phaser.Scene {
     this.physics.add.collider(this.player, this.circuloFonte);
     this.physics.add.collider(this.player, this.arvores, () => console.log("Colidiu")) //Adiciona colisão entre o médico e a camada de parede
     // this.physics.add.collider(this.player, this.faculdade, () => console.log("Colidiu")) //Adiciona colisão entre o médico e a camada de parede
-    this.physics.add.collider(this.player, this.fonte, () => console.log("Colidiu")) //Adiciona colisão entre o médico e a camada de parede
     this.physics.add.collider(this.player, this.cerca, () => console.log("Colidiu")) //Adiciona colisão entre o médico e a camada de parede
 
     this.cameras.main.startFollow(this.player, true); //camera inicia o follow no personagem principal
@@ -184,12 +183,39 @@ class CenaHospital extends Phaser.Scene {
       //  Dispatch a Scene event
       this.events.emit('showTimer');
 
+      
       this.case1.setVisible(false);
       this.botaoX.setVisible(false);
+      
+      this.events.emit('botaoCase');
       console.log("teste");
       
     },this.physics.world.removeCollider(this.tinaCollider));
   });
+
+  this.cenaAtual = this.scene.get('UIScene');
+
+  this.cenaAtual.events.on('abrirCase', function ()
+  {
+    this.physics.pause()
+    this.case1.setVisible(true)
+    this.botaoX.setVisible(true)
+
+    this.botaoX.on("pointerover", () => {
+      // Evento de passar o mouse sobre o botaoJogar
+      this.input.setDefaultCursor("pointer") // Cursor vira mãozinha
+    });
+
+    this.botaoX.on("pointerout", () => {
+      // Evento de retirar o mouse do botaoJogar
+      this.input.setDefaultCursor("default") // Cursor vira setinha
+    });
+
+    // Evento disparado ao clicar no botão (Código temporário apenas para demonstração da funcionalidade na sprint 1)
+    this.botaoX.on("pointerdown", () => {
+      this.physics.resume()
+    });
+  }, this);
     
   // console.log('this.sys.game.loop.time.toString(): ',this.sys.game.loop.time.toString())
     //this.botaoFecharCase.on("pointerdown", () => {
