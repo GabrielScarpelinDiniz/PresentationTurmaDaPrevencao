@@ -103,8 +103,7 @@ class CenaHospital extends Phaser.Scene {
     this.keyS = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S); // encontram-se na linha 115000 do arquivo "phaser.js"
     this.keyD = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D);
 
-    // Adiciona um touch input a mais (para adaptação mobile de multitouch)
-    this.input.addPointer(1);
+    this.cursors = this.input.keyboard.createCursorKeys();
 
     //Cria o joystick na cena do hospital
     this.joystick = this.plugins.get("rexvirtualjoystickplugin").add(
@@ -147,7 +146,7 @@ class CenaHospital extends Phaser.Scene {
   });
   this.anims.create({
     key: 'playerIdle', // Chave que cria o nome para iniciar a animação
-    frames: this.anims.generateFrameNumbers('player', {frame: 0}), // Define quais frames serão utilizados nessa animação
+    frames: this.anims.generateFrameNumbers('player', {start: 0,end: 0}), // Define quais frames serão utilizados nessa animação
     frameRate: 10, // Velocidade da animação em frames por segundo
   });
 
@@ -183,11 +182,36 @@ class CenaHospital extends Phaser.Scene {
 
       this.case1.setVisible(false);
       this.botaoX.setVisible(false);
-      console.log("teste");
+
+      this.events.emit('botaoCase');
       
     },this.physics.world.removeCollider(this.tinaCollider));
   });
-    
+  
+  this.cenaAtual = this.scene.get('UIScene');
+
+  this.cenaAtual.events.on('abrirCase', function ()
+  {
+    this.physics.pause()
+    this.case1.setVisible(true)
+    this.botaoX.setVisible(true)
+
+    this.botaoX.on("pointerover", () => {
+      // Evento de passar o mouse sobre o botaoJogar
+      this.input.setDefaultCursor("pointer") // Cursor vira mãozinha
+    });
+
+    this.botaoX.on("pointerout", () => {
+      // Evento de retirar o mouse do botaoJogar
+      this.input.setDefaultCursor("default") // Cursor vira setinha
+    });
+
+    // Evento disparado ao clicar no botão (Código temporário apenas para demonstração da funcionalidade na sprint 1)
+    this.botaoX.on("pointerdown", () => {
+      this.physics.resume()
+    });
+  }, this);
+
   // console.log('this.sys.game.loop.time.toString(): ',this.sys.game.loop.time.toString())
     //this.botaoFecharCase.on("pointerdown", () => {
     
@@ -212,12 +236,12 @@ class CenaHospital extends Phaser.Scene {
       this.player.setVelocityY(velocityDoctorY)
     }
     // Mapeamento de Inputs (Normalizar o movimento diagonal futuramente)
-    if (this.keyA.isDown) { // Verifica se a tecla A está pressionada
+    if (this.keyA.isDown || this.cursors.left.isDown) { // Verifica se a tecla A está pressionada
       this.player.setVelocityX(-this.defaultVelocity * 50); // Define a velocidade do personagem no eixo X, quando a condição é verdadeira
       this.player.anims.play('playerWalkingRight', true); // Indica que o personagem está se movendo para a direita. 
 
     }
-    else if (this.keyD.isDown) { // Verifica se a tecla D está pressionada
+    else if (this.keyD.isDown || this.cursors.right.isDown) { // Verifica se a tecla D está pressionada
       this.player.setVelocityX(this.defaultVelocity * 50);
       this.player.anims.play('playerWalkingRight', true);
       this.joystick.setVisible(false);
@@ -227,12 +251,12 @@ class CenaHospital extends Phaser.Scene {
         this.player.setVelocityX(0);
       }
     }
-    if (this.keyS.isDown) { // Verifica se a tecla S está pressionada
+    if (this.keyS.isDown || this.cursors.up.isDown) { // Verifica se a tecla S está pressionada
       this.player.setVelocityY(this.defaultVelocity * 50)  
       this.player.anims.play('playerWalkingLeft', true); // Indica que o personagem está se movendo para a direita.   
       this.joystick.setVisible(false);
     }
-    else if (this.keyW.isDown) { // Verifica se a tecla W está pressionada
+    else if (this.keyW.isDown || this.cursors.down.isDown) { // Verifica se a tecla W está pressionada
       this.player.setVelocityY(-this.defaultVelocity * 50)
       this.player.anims.play('playerWalkingRight', true);
       this.joystick.setVisible(false);
@@ -244,22 +268,22 @@ class CenaHospital extends Phaser.Scene {
       }
     }
 
-    if (this.keyA.isDown && this.keyW.isDown) {
+    if ((this.keyA.isDown || this.cursors.left.isDown) && (this.keyW.isDown || this.cursors.up.isDown)) {
       this.player.setVelocityX(-this.defaultVelocity * 30);
       this.player.setVelocityY(-this.defaultVelocity * 30);
       this.player.anims.play('playerWalkingLeft', true);
     }
-    if (this.keyD.isDown && this.keyW.isDown) {
+    if ((this.keyD.isDown || this.cursors.right.isDown) && (this.keyW.isDow || this.cursors.up.isDown)) {
       this.player.setVelocityX(this.defaultVelocity * 30);
       this.player.setVelocityY(-this.defaultVelocity * 30);
       this.player.anims.play('playerWalkingRight', true);
     }
-    if (this.keyA.isDown && this.keyS.isDown) {
+    if ((this.keyA.isDown || this.cursors.left.isDown) && (this.keyS.isDown || this.cursors.down.isDown)) {
       this.player.setVelocityX(-this.defaultVelocity * 30);
       this.player.setVelocityY(this.defaultVelocity * 30);
       this.player.anims.play('playerWalkingLeft', true);
     }
-    if (this.keyD.isDown && this.keyS.isDown) {
+    if ((this.keyD.isDown || this.cursors.right.isDown) && (this.keyS.isDown || this.cursors.down.isDown)) {
       this.player.setVelocityX(this.defaultVelocity * 30);
       this.player.setVelocityY(this.defaultVelocity * 30);
       this.player.anims.play('playerWalkingRight', true);
