@@ -81,12 +81,16 @@ class CenaHospital extends Phaser.Scene {
     // this.add.text(400, 240, "Mova nas teclas WASD ou pelo Joystick", { fontSize: '16px', fill: '#000' }).setScrollFactor(0); // Adiciona um texto na tela
     // this.add.text(400, 260, "Procure pela doutora Tina", { fontSize: '16px', fill: '#000' }).setScrollFactor(0); // Adiciona um texto na tela
  
+    this.circuloFonte = this.add.circle(560, 570, 70, 0xffffff, 0); //Adiciona círculo sob a fonte
+    this.physics.add.existing(this.circuloFonte); //Adiciona física ao círculo adicionado
+    this.circuloFonte.body.setCircle(70).setImmovable(); //Define a hitbox do objeto criado como um círculo imóvel
     // this.wallsLayer.setCollisionByProperty({ collider: true }) //Seta as colisões onde tem a propriedade collider: true no tiled map
     // this.physics.add.collider(this.player, this.wallsLayer, () => console.log("Colidiu")) //Adiciona colisão entre o médico e a camada de parede
     this.arvores.setCollisionByProperty({ collider: true }) //Seta as colisões onde tem a propriedade collider: true no tiled map
     this.faculdade.setCollisionByProperty({ collider: true }) //Seta as colisões onde tem a propriedade collider: true no tiled map
-    this.fonte.setCollisionByProperty({ collider: true }) //Seta as colisões onde tem a propriedade collider: true no tiled map
+    // this.fonte.setCollisionByProperty({ collider: false }) //Seta as colisões onde tem a propriedade collider: true no tiled map
     this.cerca.setCollisionByProperty({ collider: true }) //Seta as colisões onde tem a propriedade collider: true no tiled map
+    this.physics.add.collider(this.player, this.circuloFonte);
     this.physics.add.collider(this.player, this.arvores, () => console.log("Colidiu")) //Adiciona colisão entre o médico e a camada de parede
     // this.physics.add.collider(this.player, this.faculdade, () => console.log("Colidiu")) //Adiciona colisão entre o médico e a camada de parede
     this.physics.add.collider(this.player, this.fonte, () => console.log("Colidiu")) //Adiciona colisão entre o médico e a camada de parede
