@@ -112,7 +112,7 @@ class CenaPrincipal extends Phaser.Scene {
 
 
     // Configuração de câmeras para seguir o personagem principal
-    // this.cameras.main.startFollow(this.jogador, true); //camera inicia o follow no personagem principal
+    this.cameras.main.startFollow(this.jogador, true); //camera inicia o follow no personagem principal
     this.cameras.main.setBounds(0, 0, 1120, 1120)
     this.cameras.main.centerOn(0, 0)
     // this.cameras.main.setDeadzone(400, 200);
@@ -214,41 +214,15 @@ class CenaPrincipal extends Phaser.Scene {
       this.botaoX.on("pointerdown", () => {
         this.physics.resume()
 
-        //  Dispatch a Scene event
-        this.events.emit('showTimer');
-
         this.case1.setVisible(false);
         this.botaoX.setVisible(false);
-
+        
+        //  Dispatch a Scene event
+        this.events.emit('showTimer');
         this.events.emit('botaoCase');
-        console.log("apertou");
 
       }, this.physics.world.removeCollider(this.tinaCollider));
     });
-
-    // this.cenaAtual = this.scene.get('cenaCases');
-
-    // this.cenaAtual.events.on('abrirCase', function () {
-    //   this.physics.pause()
-    //   this.case1.setVisible(true)
-    //   this.botaoX.setVisible(true)
-
-    //   this.botaoX.on("pointerover", () => {
-    //     // Evento de passar o mouse sobre o botaoJogar
-    //     this.input.setDefaultCursor("pointer") // Cursor vira mãozinha
-    //   });
-
-    //   this.botaoX.on("pointerout", () => {
-    //     // Evento de retirar o mouse do botaoJogar
-    //     this.input.setDefaultCursor("default") // Cursor vira setinha
-    //   });
-
-    //   // Evento disparado ao clicar no botão (Código temporário apenas para demonstração da funcionalidade na sprint 1)
-    //   this.botaoX.on("pointerdown", () => {
-    //     this.physics.resume()
-    //   });
-    // }, this);
-
 
     this.physics.add.collider(this.jogador, this.tina); // Adiciona a colisão entre o persoangem e a Tina
     // this.physics.add.collider(this.tina, this.wallsLayer)

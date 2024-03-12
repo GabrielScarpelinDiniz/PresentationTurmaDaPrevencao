@@ -53,6 +53,7 @@ class CenaHUD extends Phaser.Scene
             this.botaoCase.setVisible(true);
             console.log("teste1");
             this.botaoCase.on("pointerdown", () => {
+                cenaAtual.physics.pause();
                 this.events.emit('abrirCase');
                 console.log("teste2");
             })
