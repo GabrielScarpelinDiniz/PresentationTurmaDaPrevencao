@@ -121,7 +121,7 @@ class CenaPrincipal extends Phaser.Scene {
     // // Evento que ativa ao completar o Pan
     // this.cameras.main.on('camerapancomplete', () => {
     //   // Câmera começa a seguir personagem
-    //   this.cameras.main.startFollow(this.jogador, true);
+      this.cameras.main.startFollow(this.jogador, true);
     //   this.physics.resume()
     // });
     // // this.cameras.main.setBounds(0, 0, 1120, 1120)
