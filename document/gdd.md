@@ -999,7 +999,16 @@ openFullScreen() {
 
 &nbsp;&nbsp;&nbsp;&nbsp;Na sprint anterior, o jogo se passava em um ambiente hospitalar, onde o personagem principal era o médico residente. Com a mudança de cenário, o local passou a ser o pátio da FMUSP e os elementos do jogo foram adaptados para o novo espaço, como o menu, os personagens e os espaços de interação. O modo de uso do Tiled Map Editor para a criação do novo mapa foi o mesmo descrito no tópico 4.2.
 
-*inserir foto do mapa* figura 30 e fonte:
+<div align="center">
+
+<sub>Figura 30 - Mapa</sub>
+
+<img src="other\mapaZoomOut.png">
+
+
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+
+</div>
 
 
 
