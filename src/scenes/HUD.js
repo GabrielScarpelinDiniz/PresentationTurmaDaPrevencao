@@ -19,6 +19,7 @@ class UIScene extends Phaser.Scene
         //  Grab a reference to the Game Scene
         const ourGame = this.scene.get('hospital');
 
+
         //  Listen for events from it
         ourGame.events.on('showTimer', function ()
         {
@@ -46,6 +47,7 @@ class UIScene extends Phaser.Scene
               });
         }, this);
 
+        
 
         ourGame.events.on('botaoCase', function ()
         {
