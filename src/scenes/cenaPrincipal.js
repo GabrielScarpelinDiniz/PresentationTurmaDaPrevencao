@@ -78,6 +78,8 @@ class CenaPrincipal extends Phaser.Scene {
 
     // Cria e posiciona o player
     this.jogador = this.physics.add.sprite(650, 450, "jogador").setOffset(9, 12).setCircle(7).setScale(1.5).refreshBody();
+    // Local exato do final da posição da câmera
+    // this.jogador = this.physics.add.sprite(550, 800, "jogador").setOffset(9, 12).setCircle(7).setScale(1.5).refreshBody();
 
 
     // Cria colisões com a fonte no mapa
@@ -111,11 +113,19 @@ class CenaPrincipal extends Phaser.Scene {
     this.physics.add.collider(this.jogador, this.cerca, () => console.log("Colidiu"))
 
 
-    // Configuração de câmeras para seguir o personagem principal
-    // this.cameras.main.startFollow(this.jogador, true); //camera inicia o follow no personagem principal
-    this.cameras.main.setBounds(0, 0, 1120, 1120)
-    this.cameras.main.centerOn(0, 0)
-    // this.cameras.main.setDeadzone(400, 200);
+    // // Configuração de câmeras
+    // this.physics.pause()
+    // // Move a câmera da faculdade para o personagem
+    // this.cameras.main.centerOn(550, 200);
+    // this.cameras.main.pan(550, 800, 6000);
+    // // Evento que ativa ao completar o Pan
+    // this.cameras.main.on('camerapancomplete', () => {
+    //   // Câmera começa a seguir personagem
+    //   this.cameras.main.startFollow(this.jogador, true);
+    //   this.physics.resume()
+    // });
+    // // this.cameras.main.setBounds(0, 0, 1120, 1120)
+    // // this.cameras.main.setDeadzone(400, 200);
     this.cameras.main.setZoom(2.5);
 
 
@@ -124,7 +134,7 @@ class CenaPrincipal extends Phaser.Scene {
     this.keyW = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W); // O código de cada tecla e o modo pelo qual devemos "chamá-la"
     this.keyS = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S); // encontram-se na linha 115000 do arquivo "phaser.js"
     this.keyD = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D);
-    this.cursors = this.input.keyboard.createCursorKeys();
+    this.cursors = this.input.keyboard.createCursorKeys(); // Adiciona as setas do teclado
 
 
     //Cria o joystick na cena do principal
