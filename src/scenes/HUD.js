@@ -48,7 +48,7 @@ class CenaHUD extends Phaser.Scene
 
         
 
-        ourGame.events.on('botaoCase', function ()
+        cenaAtual.events.on('botaoCase', function ()
         {
             this.botaoCase.setVisible(true);
             console.log("teste1");
