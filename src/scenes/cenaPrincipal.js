@@ -1,10 +1,10 @@
-class CenaHospital extends Phaser.Scene {
+class CenaPrincipal extends Phaser.Scene {
   defaultVelocity = 3;
   radiansAngleJoystick = 0;
   joystickForce = 0;
   constructor() {
     super({
-      key: "hospital",
+      key: "cenaPrincipal",
     });
     this.gameDimensions = {
       width: 1280,
@@ -112,8 +112,9 @@ class CenaHospital extends Phaser.Scene {
 
 
     // Configuração de câmeras para seguir o personagem principal
-    this.cameras.main.startFollow(this.jogador, true); //camera inicia o follow no personagem principal
+    // this.cameras.main.startFollow(this.jogador, true); //camera inicia o follow no personagem principal
     this.cameras.main.setBounds(0, 0, 1120, 1120)
+    this.cameras.main.centerOn(0, 0)
     // this.cameras.main.setDeadzone(400, 200);
     this.cameras.main.setZoom(2.5);
 
@@ -126,7 +127,7 @@ class CenaHospital extends Phaser.Scene {
     this.cursors = this.input.keyboard.createCursorKeys();
 
 
-    //Cria o joystick na cena do hospital
+    //Cria o joystick na cena do principal
     this.joystick = this.plugins.get("rexvirtualjoystickplugin").add(
       this, {
         x: 470,
@@ -329,18 +330,6 @@ class CenaHospital extends Phaser.Scene {
       this.jogador.anims.play('playerIdle', true);
     }
   }
-
-  // Não entendi
-  goal() {
-
-    if (this.overlapTriggered) {
-      this.physics.world.removeCollider(this.overlapCollider);
-      return;
-    };
-
-    console.log('overlap');
-    this.overlapTriggered = true;
-  };
 
   fixAngle(angle) {
     // Corrige o ângulo do joystick para que ele vá de 0 a 360 graus

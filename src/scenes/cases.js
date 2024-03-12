@@ -1,4 +1,4 @@
-class cenaCases extends Phaser.Scene {
+class CenaCases extends Phaser.Scene {
     constructor() {
         super({ key: 'cenaCases', active: true });
     }

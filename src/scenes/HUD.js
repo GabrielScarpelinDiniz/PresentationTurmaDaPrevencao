@@ -1,8 +1,8 @@
-class UIScene extends Phaser.Scene
+class CenaHUD extends Phaser.Scene
 {
     constructor ()
     {
-        super({ key: 'UIScene', active: true}); //
+        super({ key: 'cenaHUD', active: true}); //
 
         this.score = 0;
     }
@@ -17,11 +17,10 @@ class UIScene extends Phaser.Scene
         this.botaoCase = this.add.circle(100, 100, 50, 0xffffff, 1).setVisible(false).setInteractive();
         
         //  Grab a reference to the Game Scene
-        const ourGame = this.scene.get('hospital');
-
+        const cenaAtual = this.scene.get('cenaPrincipal');
 
         //  Listen for events from it
-        ourGame.events.on('showTimer', function ()
+        cenaAtual.events.on('showTimer', function ()
         {
             this.fundo.setVisible(true).setStrokeStyle(2, 0x1a65ac)
 
