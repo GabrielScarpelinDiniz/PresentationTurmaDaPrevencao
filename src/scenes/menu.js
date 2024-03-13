@@ -43,8 +43,10 @@ class MenuPrincipal extends Phaser.Scene {
     this.botaoJogar.on("pointerdown", () => {
       // Evento de click do mouse
       this.scene.start("cenaPrincipal")
+      this.scene.start("HUD")
       this.scene.stop('menu')
       this.input.setDefaultCursor("default") // Retorno do cursor do mouse para setinha
+      this.events.emit('mostraTarefaInicial');
       // this.openFullScreen()
     })
   }
