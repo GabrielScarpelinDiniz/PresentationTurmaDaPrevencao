@@ -11,7 +11,7 @@ class CenaHUD extends Phaser.Scene
     {
         //  Our Text object to display the Score
         //const info = this.add.text(10, 10, 'Score: 0', { font: '48px Arial', fill: '#000000' }).setVisible(false);
-        this.tempoInicial = 300;
+        this.tempoInicial = 10;
         this.fundo = this.add.rectangle(635, 30, 210, 50, 0xadd8e6).setVisible(false).setAlpha(0.8);
         this.textoTempo = this.add.text(545, 10,  (this.tempoInicial - this.tempoInicial %60)/60 + 'min ' + this.tempoInicial %60 + 's', { fontSize: '40px', fill: '#000000'}).setVisible(false); // Adiciona o texto do tempo na tela do jogo
         this.botaoCase = this.add.circle(100, 100, 50, 0xffffff, 1).setVisible(false).setInteractive();
@@ -22,6 +22,9 @@ class CenaHUD extends Phaser.Scene
         //  Listen for events from it
         cenaAtual.events.on('showTimer', function ()
         {
+            setTimeout( () => {
+            }, this.tempoInicial * 1000); // função para chamar tela final após o tempo de jogo
+
             this.fundo.setVisible(true).setStrokeStyle(2, 0x1a65ac)
 
             this.textoTempo.setVisible(true)
@@ -30,7 +33,9 @@ class CenaHUD extends Phaser.Scene
                 callback: () => {
                     //   this.fundoTimer.setVisible(true);
                     this.textoTempo.setVisible(true);
-                    this.tempoInicial -= 1; // Decrementa o contador
+                    if(this.tempoInicial >0) {
+                        this.tempoInicial -= 1; // Decrementa o contador
+                    }
                     this.textoTempo.setText((this.tempoInicial - this.tempoInicial %60)/60 + 'min ' + this.tempoInicial %60 + 's')
                     // console.log('time: ',time/1000)
                     if (this.tempoInicial == 99) {
@@ -46,8 +51,6 @@ class CenaHUD extends Phaser.Scene
               });
         }, this);
 
-        
-
         cenaAtual.events.on('botaoCase', function ()
         {
             this.botaoCase.setVisible(true);
@@ -58,6 +61,5 @@ class CenaHUD extends Phaser.Scene
                 console.log("teste2");
             })
         }, this);
-        
     }
 }
