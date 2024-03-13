@@ -1,10 +1,10 @@
-class CenaHospital extends Phaser.Scene {
+class CenaPrincipal extends Phaser.Scene {
   defaultVelocity = 3;
   radiansAngleJoystick = 0;
   joystickForce = 0;
   constructor() {
     super({
-      key: "hospital",
+      key: "cenaPrincipal",
     });
     this.gameDimensions = {
       width: 1280,
@@ -78,6 +78,8 @@ class CenaHospital extends Phaser.Scene {
 
     // Cria e posiciona o player
     this.jogador = this.physics.add.sprite(650, 450, "jogador").setOffset(9, 12).setCircle(7).setScale(1.5).refreshBody();
+    // Local exato do final da posição da câmera
+    // this.jogador = this.physics.add.sprite(550, 800, "jogador").setOffset(9, 12).setCircle(7).setScale(1.5).refreshBody();
 
 
     // Cria colisões com a fonte no mapa
@@ -112,8 +114,18 @@ class CenaHospital extends Phaser.Scene {
 
 
     // Configuração de câmeras para seguir o personagem principal
-    this.cameras.main.startFollow(this.jogador, true); //camera inicia o follow no personagem principal
-    this.cameras.main.setBounds(0, 0, 1120, 1120)
+    // // Configuração de câmeras
+    // this.physics.pause()
+    // // Move a câmera da faculdade para o personagem
+    // this.cameras.main.centerOn(550, 200);
+    // this.cameras.main.pan(550, 800, 6000);
+    // // Evento que ativa ao completar o Pan
+    // this.cameras.main.on('camerapancomplete', () => {
+    //   // Câmera começa a seguir personagem
+      this.cameras.main.startFollow(this.jogador, true);
+    //   this.physics.resume()
+    // });
+    // this.cameras.main.setBounds(0, 0, 1120, 1120)
     // this.cameras.main.setDeadzone(400, 200);
     this.cameras.main.setZoom(2.5);
 
@@ -123,10 +135,10 @@ class CenaHospital extends Phaser.Scene {
     this.keyW = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W); // O código de cada tecla e o modo pelo qual devemos "chamá-la"
     this.keyS = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S); // encontram-se na linha 115000 do arquivo "phaser.js"
     this.keyD = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D);
-    this.cursors = this.input.keyboard.createCursorKeys();
+    this.cursors = this.input.keyboard.createCursorKeys(); // Adiciona as setas do teclado
 
 
-    //Cria o joystick na cena do hospital
+    //Cria o joystick na cena do principal
     this.joystick = this.plugins.get("rexvirtualjoystickplugin").add(
       this, {
         x: 470,
@@ -183,8 +195,13 @@ class CenaHospital extends Phaser.Scene {
     });
 
 
-    this.case1 = this.add.image(550, 430, 'case1').setScale(0.50).setVisible(false); // Adiciona a imagem do case, quando ocorre esse overlap
-    this.botaoX = this.add.sprite(615, 535, 'botaoX').setInteractive().setScale(0.1).setVisible(false); // Adiciona a imagem do botao, quando ocorre esse overlap
+    // Reserva as posições de X e Y da câmera
+    this.centroX = this.cameras.main.worldView.x + this.cameras.main.width / 2;
+    this.centroY = this.cameras.main.worldView.y + this.cameras.main.height / 2;
+
+    // Adiciona o case e botão para fechar nas coordenadas específicas tendo como referência centro X e Y
+    this.case1 = this.add.image(this.centroX, this.centroY, 'case1').setScale(0.50).setVisible(false).setScrollFactor(0); // Adiciona a imagem do case, quando ocorre esse overlap
+    this.botaoX = this.add.sprite(this.case1.x + 75, this.case1.y - 92, 'botaoX').setInteractive().setScale(0.1).setVisible(false).setScrollFactor(0); // Adiciona a imagem do botao, quando ocorre esse overlap
 
     this.overlapCollider;
     this.overlapTriggered = false;
@@ -208,40 +225,15 @@ class CenaHospital extends Phaser.Scene {
       this.botaoX.on("pointerdown", () => {
         this.physics.resume()
 
-        //  Dispatch a Scene event
-        this.events.emit('showTimer');
-
         this.case1.setVisible(false);
         this.botaoX.setVisible(false);
-
+        
+        //  Dispatch a Scene event
+        this.events.emit('showTimer');
         this.events.emit('botaoCase');
 
       }, this.physics.world.removeCollider(this.tinaCollider));
     });
-
-    this.cenaAtual = this.scene.get('UIScene');
-
-    this.cenaAtual.events.on('abrirCase', function () {
-      this.physics.pause()
-      this.case1.setVisible(true)
-      this.botaoX.setVisible(true)
-
-      this.botaoX.on("pointerover", () => {
-        // Evento de passar o mouse sobre o botaoJogar
-        this.input.setDefaultCursor("pointer") // Cursor vira mãozinha
-      });
-
-      this.botaoX.on("pointerout", () => {
-        // Evento de retirar o mouse do botaoJogar
-        this.input.setDefaultCursor("default") // Cursor vira setinha
-      });
-
-      // Evento disparado ao clicar no botão (Código temporário apenas para demonstração da funcionalidade na sprint 1)
-      this.botaoX.on("pointerdown", () => {
-        this.physics.resume()
-      });
-    }, this);
-
 
     this.physics.add.collider(this.jogador, this.tina); // Adiciona a colisão entre o persoangem e a Tina
     // this.physics.add.collider(this.tina, this.wallsLayer)
@@ -323,18 +315,6 @@ class CenaHospital extends Phaser.Scene {
       this.jogador.anims.play('playerIdle', true);
     }
   }
-
-  // Não entendi
-  goal() {
-
-    if (this.overlapTriggered) {
-      this.physics.world.removeCollider(this.overlapCollider);
-      return;
-    };
-
-    console.log('overlap');
-    this.overlapTriggered = true;
-  };
 
   fixAngle(angle) {
     // Corrige o ângulo do joystick para que ele vá de 0 a 360 graus

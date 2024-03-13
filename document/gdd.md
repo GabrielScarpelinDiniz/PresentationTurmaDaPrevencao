@@ -501,11 +501,13 @@ Tendo em vista o artigo citado, as músicas escolhidas buscam passar o que está
 
 ## 3.6. Regras do jogo (sprint 3)
 
-*Descreva aqui as regras do seu jogo: objetivos/desafios, meios para se conseguir alcançar*
+&nbsp;&nbsp;&nbsp;&nbsp;As regras de um jogo, segundo o livro “Regras do Jogo: Fundamentos do Design de Jogos (Volume 1)”, moldam a experiência do jogador, fornecem estrutura e significado, e promovem a interatividade ao definirem limites, objetivos e desafios, com isso o jogador é, de certa forma, guiado a seguir a lógica (gameflow) própria daquele jogo.
 
-*Ex. O jogador deve pilotar o carro e conseguir terminar a corrida dentro de um minuto sem bater em nenhum obstáculo.*
 
-*Ex. O jogador deve concluir a fase dentro do tempo, para obter uma estrela. Se além disso ele coletar todas as moedas, ganha mais uma estrela. E se além disso ele coletar os três medalhões espalhados, ganha mais uma estrela, totalizando três. Ao final do jogo, obtendo três estrelas em todas as fases, desbloqueia o mundo secreto.*  
+&nbsp;&nbsp;&nbsp;&nbsp;Em nosso jogo, o personagem principal deve concluir o máximo de ciclos em um determinado tempo, obtendo assim uma pontuação, que o jogador deve tentar superar a cada vez que jogar. Esses ciclos seguem uma lógica que consiste na apresentação do problema, auto estudo e teste do conhecimento adquirido; que ocorrerão, respectivamente, no encontro com a doutora Tina, na biblioteca e na barraca do quiz. 
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;Ao interagir com a doutora, será apresentado ao jogador um caso de uma pessoa que sofreu uma queimadura. Após obter as informações do caso, o jogador deve se dirigir para a biblioteca, onde irá ler sobre aquele caso para adquirir conhecimento e por fim colocará isso em prática no local do quiz, em que será feita uma pergunta e, com base nos acertos e no tempo que o jogador demorar em cada ciclo, obterá uma pontuação.
 
 ## 3.7. Mecânicas do jogo (sprint 3)
 
@@ -804,7 +806,7 @@ const config = {
 ```
 &nbsp;&nbsp;&nbsp;&nbsp;Colocando esse trecho de código, habilitamos a física no jogo, sem gravidade pois o nosso jogo é no estilo *top down*: vista de cima para baixo.
 
-### Etapa 5 do desenvolvimento - Câmeras e cenário do Tiled Map Editor
+### Etapa 4 do desenvolvimento - Câmeras e cenário do Tiled Map Editor
 
 &nbsp;&nbsp;&nbsp;&nbsp;Nesta etapa, foi realizado a implementação do Mapa através de um arquivo JSON, localizado em `"src/assets/tilemaps/main_map.json"`. Este arquivo é exportado do Tiled Map Editor, que é um editor de mapas em blocos e por camadas
 
@@ -857,7 +859,7 @@ this.cameras.main.setZoom(2);
 
 </div>
 
-### Etapa 6 do desenvolvimento - Colisões com as paredes
+### Etapa 5 do desenvolvimento - Colisões com as paredes
 
 &nbsp;&nbsp;&nbsp;&nbsp;De início, foi preciso fazer algumas alterações no Tiled Map Editor, precisamos atribuir a todos os blocos que têm colisão uma propriedade personalizada que chamamos de `Collider`. Essa propriedade precisa ser do tipo `boolean` (verdadeiro ou falso). Com essa propriedade definida nos blocos, foi o momento de implementar a colisão. E com apenas duas linhas, graças ao Tiled Map Editor e às suas facilidades, foi possível definir colisão entre as paredes e o jogador.
 
@@ -882,7 +884,7 @@ this.medico.setVelocityY(velocidadeEmY)
 
 </div>
 
-### Etapa 7 do desenvolvimento - Implementação do joystick e tela cheia
+### Etapa 6 do desenvolvimento - Implementação do joystick e tela cheia
 
 &nbsp;&nbsp;&nbsp;&nbsp;No projeto foi utilizada uma biblioteca chamada *Rex Virtual Joystick*, que está localizada em `src/plugins/rexvirtualjoystickplugin.min.js` sendo importada na cena do hospital na função `preload()`.
 ````js
@@ -1002,7 +1004,16 @@ openFullScreen() {
 
 &nbsp;&nbsp;&nbsp;&nbsp;Na sprint anterior, o jogo se passava em um ambiente hospitalar, onde o personagem principal era o médico residente. Com a mudança de cenário, o local passou a ser o pátio da FMUSP e os elementos do jogo foram adaptados para o novo espaço, como o menu, os personagens e os espaços de interação. O modo de uso do Tiled Map Editor para a criação do novo mapa foi o mesmo descrito no tópico 4.2.
 
-*inserir foto do mapa* figura 30 e fonte:
+<div align="center">
+
+<sub>Figura 30 - Mapa</sub>
+
+<img src="other\mapaZoomOut.png">
+
+
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+
+</div>
 
 
 
@@ -1055,6 +1066,77 @@ openFullScreen() {
   });
 
 ```
+### Etapa 3 do desenvolvimento - Implementação do HUD
+
+&nbsp;&nbsp;&nbsp;&nbsp;O HUD do jogo foi criado em uma nova cena situada na classe CenaHUD, contendo os seguintes elementos: timer, pontuação e um quadro de orientação das missões. A seguir é possível visualizar o modo como foi implementado:
+
+```js
+class CenaHUD extends Phaser.Scene
+{
+    constructor ()
+    {
+        super({ key: 'cenaHUD', active: true}); //
+
+        this.score = 0;
+    }
+
+    create ()
+    {
+        //  Our Text object to display the Score
+        //const info = this.add.text(10, 10, 'Score: 0', { font: '48px Arial', fill: '#000000' }).setVisible(false);
+        this.tempoInicial = 300;
+        this.fundo = this.add.rectangle(635, 30, 210, 50, 0xadd8e6).setVisible(false).setAlpha(0.8);
+        this.textoTempo = this.add.text(545, 10,  (this.tempoInicial - this.tempoInicial %60)/60 + 'min ' + this.tempoInicial %60 + 's', { fontSize: '40px', fill: '#000000'}).setVisible(false); // Adiciona o texto do tempo na tela do jogo
+        this.botaoCase = this.add.circle(100, 100, 50, 0xffffff, 1).setVisible(false).setInteractive();
+        
+        //  Grab a reference to the Game Scene
+        const cenaAtual = this.scene.get('cenaPrincipal');
+
+        //  Listen for events from it
+        cenaAtual.events.on('showTimer', function ()
+        {
+            this.fundo.setVisible(true).setStrokeStyle(2, 0x1a65ac)
+
+            this.textoTempo.setVisible(true)
+            this.time.addEvent({ 
+                delay: 1000, // delay de 1000 ms = 1 segundo
+                callback: () => {
+                    //   this.fundoTimer.setVisible(true);
+                    this.textoTempo.setVisible(true);
+                    this.tempoInicial -= 1; // Decrementa o contador
+                    this.textoTempo.setText((this.tempoInicial - this.tempoInicial %60)/60 + 'min ' + this.tempoInicial %60 + 's')
+                    // console.log('time: ',time/1000)
+                    if (this.tempoInicial == 99) {
+                        //this.textoTempo.setPosition(this.player.x, 100);
+                    };
+                       
+                    if ((this.tempoInicial - this.tempoInicial %60)/60 === 0 && this.tempoInicial <= 30) {
+                        //this.textoTempo.setPosition(550, 400);
+                        this.textoTempo.setColor('#ff0000');
+                    };
+                },
+                loop: true // Atualiza o texto
+              });
+        }, this);
+
+        
+
+        cenaAtual.events.on('botaoCase', function ()
+        {
+            this.botaoCase.setVisible(true);
+            console.log("teste1");
+            this.botaoCase.on("pointerdown", () => {
+                this.events.emit('abrirCase');
+                console.log("teste2");
+            })
+        }, this);
+        
+    }
+}
+``` 
+
+## Etapa 4 do desenvolvimento - Refatoramento do Código
+## Etapa 5 do desenvolvimento - Implementação da Trilha e Efeitos Sonoros
 
 ## 4.4. Desenvolvimento final do MVP (sprint 4)
 
