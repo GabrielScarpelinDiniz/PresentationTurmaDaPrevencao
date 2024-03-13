@@ -47,6 +47,7 @@ class CenaPrincipal extends Phaser.Scene {
     this.load.image('grade-lateral-left-01', 'assets/tilemaps/grade-lateral-left-01.png');
     this.load.image('rua', 'assets/tilemaps/rua.png');
     this.load.image('tenda_livro', 'assets/tilemaps/tenda_livro.png');
+    this.load.image('tenda_quiz', 'assets/tilemaps/tenda_quiz.png');
     this.load.image('Tree-Sheet', 'assets/tilemaps/Tree-Sheet.png');
     this.load.image('botaoX', 'assets/botaoX.png');
 
@@ -78,11 +79,14 @@ class CenaPrincipal extends Phaser.Scene {
     this.tileset12 = this.map.addTilesetImage('grade-lateral-right');
     this.tileset13 = this.map.addTilesetImage('grade-lateral-right-01');
     this.tileset14 = this.map.addTilesetImage('grade-lateral-left-01');
+    this.tileset15 = this.map.addTilesetImage('tenda_quiz');
+
     this.chao = this.map.createLayer("Chao", [this.tileset1, this.tileset4, this.tileset5, this.tileset8]);
     this.arvores = this.map.createLayer("Arvores", [this.tileset10, this.tileset11]);
     this.faculdade = this.map.createLayer("Faculdade", [this.tileset2]);
     this.fonte = this.map.createLayer("Fonte", [this.tileset3]);
-    this.tenda = this.map.createLayer("Tenda", [this.tileset9]);
+    this.tendaLivro = this.map.createLayer("TendaLivro", [this.tileset9]);
+    this.tendaQuiz = this.map.createLayer("TendaQuiz", [this.tileset15]);
     this.cerca = this.map.createLayer("Cerca", [this.tileset6, this.tileset7, this.tileset11, this.tileset12, this.tileset13, this.tileset14]);
 
     this.worldBounds = this.physics.add.staticGroup().add(this.add.rectangle(0, 560, 3, 1120, 0x000000, 0)).add(this.add.rectangle(1120, 560, 3, 1120, 0x000000, 0)).add(this.add.rectangle(560, 0, 1120, 3, 0x000000, 0));
@@ -109,10 +113,14 @@ class CenaPrincipal extends Phaser.Scene {
     this.physics.add.collider(this.jogador, this.arvores, () => console.log("Colidiu")) //Adiciona colisão entre o jogador e as árvores
     
     //Cria colisão com a tenda
-    this.tenda.setCollisionByProperty({
+    this.tendaQuiz.setCollisionByProperty({
       collider: true
     }) //Seta as colisões onde tem a propriedade collider: true no tiled map
-    this.physics.add.collider(this.jogador, this.tenda, () => console.log("Colidiu com a tenda")) //Adiciona colisão entre o jogador e a tenda
+    this.tendaLivro.setCollisionByProperty({
+      collider: true
+    }) //Seta as colisões onde tem a propriedade collider: true no tiled map
+    this.physics.add.collider(this.jogador, this.tendaLivro, () => console.log("Colidiu com a tenda do livro")) //Adiciona colisão entre o jogador e a tenda
+    this.physics.add.collider(this.jogador, this.tendaQuiz, () => console.log("Colidiu com a tenda do quiz")) //Adiciona colisão entre o jogador e a tenda
 
     // Cria colisão com a faculdade
     this.faculdade.setCollisionByProperty({
