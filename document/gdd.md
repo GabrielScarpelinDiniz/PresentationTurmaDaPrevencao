@@ -269,7 +269,7 @@ Posto isso, foi entendido que a definição adequada do público alvo aumenta a 
 
 ### 3.2.3. Diversidade e Representatividade dos Personagens
 
-&nbsp;&nbsp;&nbsp;&nbsp;Considerando as personagens do game, analise se estas estão alinhadas ao público-alvo do jogo (seção 1.3), e compare-as dentro da realidade da sociedade brasileira. Por fim, discorra sobre qual é o impacto esperado da escolha dessas personagens.
+&nbsp;&nbsp;&nbsp;&nbsp; De acordo com o nosso público-alvo, o jogo em questão não apenas oferecerá uma variedade de personagens, mas também buscará causar um impacto social por meio da inclusão e diversidade. A personagem Dra. Tina foi criada para representar uma parcela significativa da população brasileira: pessoas pardas/pretas, conforme indicado pelo Censo de 2022. Nossa abordagem visa não apenas incluir personagens pretos como secundários, mas também posicioná-los como protagonistas da história. Assim, a Dra. Tina desempenha o papel principal ao guiar o personagem principal durante toda a jornada, fornecendo instruções e sendo a figura central por trás de todos os eventos que ocorrem dentro do jogo.
 
 ## 3.3. Mundo do jogo (sprints 2 e 3)
 
@@ -360,14 +360,17 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 ### 3.3.5. Trilha sonora (sprint 3)
 
-*Descreva a trilha sonora do jogo, indicando quais músicas serão utilizadas no mundo e nas fases. Utilize listas ou tabelas para organizar esta seção. Caso utilize material de terceiros em licença Creative Commons, não deixe de citar os autores/fontes.*
+As trilhas sonoras são meios de envolver o usuário no jogo, segundo o artigo 'The Role of Music in Videogames' - O papel da musica nos videogames - o autor, citado no artigo da BBC ¹⁴, diz que a trilha sonora nos jogos são multifuncionais, pois, significam várias coisas para o jogador. Como o aumento da imersão, brechas para mudança na história além de contribuir também para a estética do jogo. Logo, se tornando um fator muito importante para o envolvimento do jogador na história.
 
-*Exemplo de tabela*
+<div align="center">
+<sub>Tabela X: Lista de músicas</sub>
+</div>
 \# | titulo | ocorrência | autoria
 --- | --- | --- | ---
-1 | tema de abertura | tela de início | própria
-2 | tema de combate | cena de combate com inimigos comuns | Hans Zimmer
-3 | ... 
+1 | tema de abertura e durante o tutorial | tela de início e cena da faculdade | FoolBoyMedia (CC BY-NC 4.0)
+2 | tema principal | cena da faculdade após a introdução | BloodPixelHero (CC BY 4.0)
+
+Tendo em vista o artigo citado, as músicas escolhidas buscam passar o que está acontecendo dentro do jogo, para uma maior imersão do jogador. No menu e no tutorial, a música escolhida tem um ritmo mais lento. No entanto, quando a dinâmica do jogo se inicia, que por sua vez, inicia o cronômetro e o jogo passa a ser mais dinâmico, uma música com mais batidas é acionada.
 
 ## 3.4. Inventário e Bestiário (sprint 3)
 
@@ -1191,6 +1194,8 @@ O que poderia melhorar no jogo? | A responsividade do personagem aos controles, 
 ¹² What is a UML Diagram? Miro. Disponível em: https://miro.com/diagramming/what-is-a-uml-diagram/. Acesso em 28 fev. 2024.<br>
 
 ¹³SCHWERING, Ramona. Como definir casos de teste e prioridades. Disponível em: https://web.dev/articles/ta-test-cases?hl=pt-br. Acesso em 28 fev. 2024.<br>
+
+¹⁴ HAIDER, Arwa. The music most embedded in our psyches? Disponível em: https://www.bbc.com/culture/article/20220608-the-music-most-embedded-in-our-psyches. Acesso em 13 mar. 2024.<br>
 
 
 
