@@ -41,8 +41,12 @@ class CenaPrincipal extends Phaser.Scene {
     this.load.image('pedra', 'assets/tilemaps/pedra.png');
     this.load.image('portao', 'assets/tilemaps/portao.png');
     this.load.image('portao2', 'assets/tilemaps/portao2.png');
+    this.load.image('grade-lateral-left', 'assets/tilemaps/grade-lateral-left.png');
+    this.load.image('grade-lateral-right', 'assets/tilemaps/grade-lateral-right.png');
+    this.load.image('grade-lateral-right-01', 'assets/tilemaps/grade-lateral-right-01.png');
+    this.load.image('grade-lateral-left-01', 'assets/tilemaps/grade-lateral-left-01.png');
     this.load.image('rua', 'assets/tilemaps/rua.png');
-    this.load.image('tenda', 'assets/tilemaps/tenda.png');
+    this.load.image('tenda_livro', 'assets/tilemaps/tenda_livro.png');
     this.load.image('Tree-Sheet', 'assets/tilemaps/Tree-Sheet.png');
     this.load.image('botaoX', 'assets/botaoX.png');
 
@@ -68,20 +72,26 @@ class CenaPrincipal extends Phaser.Scene {
     this.tileset6 = this.map.addTilesetImage('portao');
     this.tileset7 = this.map.addTilesetImage('portao2');
     this.tileset8 = this.map.addTilesetImage('rua');
-    this.tileset9 = this.map.addTilesetImage('tenda');
+    this.tileset9 = this.map.addTilesetImage('tenda_livro');
     this.tileset10 = this.map.addTilesetImage('Tree-Sheet');
+    this.tileset11 = this.map.addTilesetImage('grade-lateral-left');
+    this.tileset12 = this.map.addTilesetImage('grade-lateral-right');
+    this.tileset13 = this.map.addTilesetImage('grade-lateral-right-01');
+    this.tileset14 = this.map.addTilesetImage('grade-lateral-left-01');
     this.chao = this.map.createLayer("Chao", [this.tileset1, this.tileset4, this.tileset5, this.tileset8]);
     this.arvores = this.map.createLayer("Arvores", [this.tileset10, this.tileset11]);
     this.faculdade = this.map.createLayer("Faculdade", [this.tileset2]);
-    this.fonte = this.map.createLayer("Fonte", [this.tileset3, this.tileset9]);
-    this.cerca = this.map.createLayer("Cerca", [this.tileset6, this.tileset7]);
+    this.fonte = this.map.createLayer("Fonte", [this.tileset3]);
+    this.tenda = this.map.createLayer("Tenda", [this.tileset9]);
+    this.cerca = this.map.createLayer("Cerca", [this.tileset6, this.tileset7, this.tileset11, this.tileset12, this.tileset13, this.tileset14]);
 
+    this.worldBounds = this.physics.add.staticGroup().add(this.add.rectangle(0, 560, 3, 1120, 0x000000, 0)).add(this.add.rectangle(1120, 560, 3, 1120, 0x000000, 0)).add(this.add.rectangle(560, 0, 1120, 3, 0x000000, 0));
     // Cria e posiciona o player
     this.jogador = this.physics.add.sprite(650, 450, "jogador").setOffset(9, 12).setCircle(7).setScale(1.5).refreshBody();
     // Local exato do final da posição da câmera
     // this.jogador = this.physics.add.sprite(550, 800, "jogador").setOffset(9, 12).setCircle(7).setScale(1.5).refreshBody();
 
-
+    this.physics.add.collider(this.jogador, this.worldBounds);
     // Cria colisões com a fonte no mapa
     this.circuloFonte = this.add.circle(560, 570, 70, 0xffffff, 0); //Adiciona círculo sob a fonte
     this.physics.add.existing(this.circuloFonte); //Adiciona física ao círculo adicionado
@@ -96,8 +106,13 @@ class CenaPrincipal extends Phaser.Scene {
     this.arvores.setCollisionByProperty({
       collider: true
     }) //Seta as colisões onde tem a propriedade collider: true no tiled map
-    this.physics.add.collider(this.jogador, this.arvores, () => console.log("Colidiu")) //Adiciona colisão entre o médico e a camada de parede
-
+    this.physics.add.collider(this.jogador, this.arvores, () => console.log("Colidiu")) //Adiciona colisão entre o jogador e as árvores
+    
+    //Cria colisão com a tenda
+    this.tenda.setCollisionByProperty({
+      collider: true
+    }) //Seta as colisões onde tem a propriedade collider: true no tiled map
+    this.physics.add.collider(this.jogador, this.tenda, () => console.log("Colidiu com a tenda")) //Adiciona colisão entre o jogador e a tenda
 
     // Cria colisão com a faculdade
     this.faculdade.setCollisionByProperty({
@@ -125,7 +140,7 @@ class CenaPrincipal extends Phaser.Scene {
       this.cameras.main.startFollow(this.jogador, true);
     //   this.physics.resume()
     // });
-    // this.cameras.main.setBounds(0, 0, 1120, 1120)
+    this.cameras.main.setBounds(0, 0, 1120, 1120)
     // this.cameras.main.setDeadzone(400, 200);
     this.cameras.main.setZoom(2.5);
 
