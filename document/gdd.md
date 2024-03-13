@@ -365,12 +365,13 @@ As trilhas sonoras são meios de envolver o usuário no jogo, segundo o artigo '
 <div align="center">
 <sub>Tabela X: Lista de músicas</sub>
 </div>
+
 \# | titulo | ocorrência | autoria
 --- | --- | --- | ---
 1 | tema de abertura e durante o tutorial | tela de início e cena da faculdade | FoolBoyMedia (CC BY-NC 4.0)
 2 | tema principal | cena da faculdade após a introdução | BloodPixelHero (CC BY 4.0)
 
-Tendo em vista o artigo citado, as músicas escolhidas buscam passar o que está acontecendo dentro do jogo, para uma maior imersão do jogador. No menu e no tutorial, a música escolhida tem um ritmo mais lento. No entanto, quando a dinâmica do jogo se inicia, que por sua vez, inicia o cronômetro e o jogo passa a ser mais dinâmico, uma música com mais batidas é acionada.
+Tendo como referência o artigo mencionado, as músicas selecionadas foram cuidadosamente escolhidas para transmitir a atmosfera do jogo, visando uma imersão mais profunda por parte do jogador. No menu e no tutorial, optamos por músicas com ritmo mais lento, proporcionando uma introdução tranquila e acolhedora ao universo do jogo. No entanto, à medida que a dinâmica do jogo se intensifica, marcada pelo início do cronômetro e o aumento da velocidade das ações, uma trilha sonora com batidas mais pulsantes é ativada, elevando a energia e a intensidade da experiência de jogo.
 
 ## 3.4. Inventário e Bestiário (sprint 3)
 
