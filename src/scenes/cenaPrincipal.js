@@ -286,6 +286,7 @@ class CenaPrincipal extends Phaser.Scene {
     this.physics.add.collider(this.jogador, this.tina); // Adiciona a colisão entre o persoangem e a Tina
     // this.physics.add.collider(this.tina, this.wallsLayer)
 
+    this.events.emit("mostraTarefaInicial");
     this.fundoTimer = this.add.image(100, 100, 'azul').setScale(0.3).setVisible(false); // Adiciona o fundo de imagem do timer
     this.tempoInicial = 1200; // Define o tempo do timer
     this.textoTempo = this.add.text(55, 80, this.tempoInicial + 's', {

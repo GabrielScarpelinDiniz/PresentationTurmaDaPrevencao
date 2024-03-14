@@ -33,10 +33,9 @@ class CenaHUD extends Phaser.Scene
 
         //  Grab a reference to the Game Scene
         const cenaAtual = this.scene.get('cenaPrincipal');
-        const cenaMenu = this.scene.get('menu');
 
         //Cria evento para mostrar parte da HUD
-        cenaMenu.events.on('mostraTarefaInicial', function () 
+        cenaAtual.events.on('mostraTarefaInicial', function () 
         {
             this.fundoTarefa.setStrokeStyle(2, 0x1a65ac).setVisible(true);
             this.textoTarefa.setVisible(true);
