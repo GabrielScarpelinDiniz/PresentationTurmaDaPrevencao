@@ -55,6 +55,7 @@ class Livros extends Phaser.Scene {
         this.botaoFechar.on('pointerdown', () => {
             // Inicie a cena principal passando os dados relevantes do estado da cena principal
             this.scene.sleep('livros');
+            this.scene.restart();
             this.primeiraCena.physics.resume()
         });
 
