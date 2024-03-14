@@ -502,7 +502,7 @@ Tendo como referência o artigo mencionado, as músicas selecionadas foram cuida
 
 ## 3.6. Regras do jogo (sprint 3)
 
-&nbsp;&nbsp;&nbsp;&nbsp;As regras de um jogo, segundo o livro “Regras do Jogo: Fundamentos do Design de Jogos (Volume 1)”, moldam a experiência do jogador, fornecem estrutura e significado, e promovem a interatividade ao definirem limites, objetivos e desafios, com isso o jogador é, de certa forma, guiado a seguir a lógica (gameflow) própria daquele jogo.
+&nbsp;&nbsp;&nbsp;&nbsp;As regras de um jogo, segundo o livro “Regras do Jogo: Fundamentos do Design de Jogos (Volume 1)”, moldam a experiência do jogador, fornecem estrutura e significado, e promovem a interatividade ao definirem limites, objetivos e desafios. Com isso o jogador é, de certa forma, guiado a seguir a lógica (gameflow) própria daquele jogo.
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;Em nosso jogo, o personagem principal deve concluir o máximo de ciclos em um determinado tempo, obtendo assim uma pontuação, que o jogador deve tentar superar a cada vez que jogar. Esses ciclos seguem uma lógica que consiste na apresentação do problema, auto estudo e teste do conhecimento adquirido; que ocorrerão, respectivamente, no encontro com a doutora Tina, na biblioteca e na barraca do quiz. 
@@ -1145,8 +1145,8 @@ class CenaHUD extends Phaser.Scene
 }
 ``` 
 
-## Etapa 4 do desenvolvimento - Refatoramento do Código
-## Etapa 5 do desenvolvimento - Implementação da Trilha e Efeitos Sonoros
+## Etapa 4 do desenvolvimento - Refatoração do Código - isa
+## Etapa 5 do desenvolvimento - Implementação da Trilha e Efeitos Sonoros - GAB S
 
 ## 4.4. Desenvolvimento final do MVP (sprint 4)
 
