@@ -54,10 +54,13 @@ class Livros extends Phaser.Scene {
         this.botaoFechar = this.add.sprite(1200, 50, 'botaoX').setScale(0.5).setInteractive().setScrollFactor(0);
         this.botaoFechar.on('pointerdown', () => {
             // Inicie a cena principal passando os dados relevantes do estado da cena principal
+            this.events.emit('mudaTarefaParaQuiz');
             this.scene.sleep('livros');
             this.scene.restart();
             this.primeiraCena.physics.resume()
         });
+
+        
 
     }
 
