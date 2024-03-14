@@ -12,7 +12,8 @@ class CenaPrincipal extends Phaser.Scene {
     }
   }
   preload() {
-
+    this.load.audio('musicaIntroducao', 'assets/sounds/IntroMusic.wav') // Música de introdução
+    this.load.audio('musicaJogo', 'assets/sounds/gameMusicLoopWithEndGame.mp3')
     //Carrega a biblioteca do joystick
     this.load.plugin(
       "rexvirtualjoystickplugin",
@@ -57,6 +58,11 @@ class CenaPrincipal extends Phaser.Scene {
   }
 
   create(time) {
+    // Adiciona a música de introdução
+    this.musicaIntroducao = this.sound.add('musicaIntroducao', {loop: true});
+    this.musicaJogo = this.sound.add('musicaJogo', {loop: false, volume: 0.5});
+    this.musicaIntroducao.play();
+
 
     this.map = this.make.tilemap({
       key: "mapa",
@@ -254,6 +260,8 @@ class CenaPrincipal extends Phaser.Scene {
         //  Dispatch a Scene event
         this.events.emit('showTimer');
         this.events.emit('botaoCase');
+        this.musicaIntroducao.stop();
+        this.musicaJogo.play();
 
       }, this.physics.world.removeCollider(this.tinaCollider));
     });
@@ -271,7 +279,7 @@ class CenaPrincipal extends Phaser.Scene {
   }
 
   update() {
-
+    
     // Configuração Joystick
     if (this.joystick.visible) {
       this.radiansAngleJoystick = this.fixAngle(this.joystick.angle) * Math.PI / 180 || 0;
@@ -289,11 +297,9 @@ class CenaPrincipal extends Phaser.Scene {
     // Mapeamento de Inputs (Normalizar o movimento diagonal futuramente)
     if (this.keyA.isDown || this.cursors.left.isDown) { // Verifica se a tecla A está pressionada
       this.jogador.setVelocityX(-this.defaultVelocity * 50); // Define a velocidade do personagem no eixo X, quando a condição é verdadeira
-      this.jogador.anims.play('playerWalkingLeft', true); // Indica que o personagem está se movendo para a direita. 
 
     } else if (this.keyD.isDown || this.cursors.right.isDown) { // Verifica se a tecla D está pressionada
       this.jogador.setVelocityX(this.defaultVelocity * 50);
-      this.jogador.anims.play('playerWalkingRight', true);
       this.joystick.setVisible(false);
     } else {
       if (!this.joystick.visible) {
@@ -301,12 +307,10 @@ class CenaPrincipal extends Phaser.Scene {
       }
     }
     if (this.keyS.isDown || this.cursors.down.isDown) { // Verifica se a tecla S está pressionada
-      this.jogador.setVelocityY(this.defaultVelocity * 50)
-      this.jogador.anims.play('playerWalkingLeft', true); // Indica que o personagem está se movendo para a direita.   
+      this.jogador.setVelocityY(this.defaultVelocity * 50) 
       this.joystick.setVisible(false);
     } else if (this.keyW.isDown || this.cursors.up.isDown) { // Verifica se a tecla W está pressionada
       this.jogador.setVelocityY(-this.defaultVelocity * 50)
-      this.jogador.anims.play('playerWalkingRight', true);
       this.joystick.setVisible(false);
     } else {
       if (!this.joystick.visible) {
@@ -317,26 +321,25 @@ class CenaPrincipal extends Phaser.Scene {
     if ((this.keyA.isDown || this.cursors.left.isDown) && (this.keyW.isDown || this.cursors.up.isDown)) {
       this.jogador.setVelocityX(-this.defaultVelocity * 30);
       this.jogador.setVelocityY(-this.defaultVelocity * 30);
-      this.jogador.anims.play('playerWalkingLeft', true);
     }
-    if ((this.keyD.isDown || this.cursors.right.isDown) && (this.keyW.isDow || this.cursors.up.isDown)) {
+    if ((this.keyD.isDown || this.cursors.right.isDown) && (this.keyW.isDown || this.cursors.up.isDown)) {
       this.jogador.setVelocityX(this.defaultVelocity * 30);
       this.jogador.setVelocityY(-this.defaultVelocity * 30);
-      this.jogador.anims.play('playerWalkingRight', true);
     }
     if ((this.keyA.isDown || this.cursors.left.isDown) && (this.keyS.isDown || this.cursors.down.isDown)) {
       this.jogador.setVelocityX(-this.defaultVelocity * 30);
       this.jogador.setVelocityY(this.defaultVelocity * 30);
-      this.jogador.anims.play('playerWalkingLeft', true);
     }
     if ((this.keyD.isDown || this.cursors.right.isDown) && (this.keyS.isDown || this.cursors.down.isDown)) {
       this.jogador.setVelocityX(this.defaultVelocity * 30);
       this.jogador.setVelocityY(this.defaultVelocity * 30);
-      this.jogador.anims.play('playerWalkingRight', true);
     }
     if (this.jogador.body.velocity.x === 0 && this.jogador.body.velocity.y === 0) {
       this.jogador.anims.play('playerIdle', true);
     }
+    if (this.jogador.body.velocity.x > 0) this.jogador.anims.play('playerWalkingRight', true);
+    else if (this.jogador.body.velocity.x < 0) this.jogador.anims.play('playerWalkingLeft', true);
+    else if (this.jogador.body.velocity.y !== 0 && this.jogador.body.velocity.x === 0) this.jogador.anims.play('playerWalkingRight', true);
   }
 
   fixAngle(angle) {
