@@ -18,10 +18,14 @@ class CenaCases extends Phaser.Scene {
         this.case1 = this.add.image(this.centroX, this.centroY, 'case1').setScale(1.25).setVisible(false).setScrollFactor(0); // Adiciona a imagem do case, quando ocorre esse overlap
         this.botaoX = this.add.sprite(this.case1.x + 183, this.case1.y - 225, 'botaoX').setInteractive().setScale(0.25).setVisible(false).setScrollFactor(0); // Adiciona a imagem do botao, quando ocorre esse overlap
 
-        this.abrirTrigger = this.scene.get('cenaHUD');
+        // Requisições de informações de outras cenas
+
+        this.abrirCase = this.scene.get('cenaHUD');
         this.primeiraCena = this.scene.get('cenaPrincipal');
         
-        this.abrirTrigger.events.on('abrirCase', function ()
+
+
+        this.abrirCase.events.on('abrirCase', function ()
         {
             this.physics.pause();
             this.case1.setVisible(true);

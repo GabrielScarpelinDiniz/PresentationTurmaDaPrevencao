@@ -2,9 +2,13 @@ class CenaHUD extends Phaser.Scene
 {
     constructor ()
     {
-        super({ key: 'cenaHUD', active: true}); //
+        super({ key: 'cenaHUD', active: true}); // Define a key da cena e a mantém ativada desde o início do ciclo de jogo
 
         this.score = 0;
+    }
+    preload () {
+        this.load.image('botaoCaseBaixo', 'assets/botaoCase_baixo.png');
+        this.load.image('botaoCaseAlto', 'assets/botaoCase_alto.png');
     }
 
     create ()
@@ -15,7 +19,9 @@ class CenaHUD extends Phaser.Scene
         // Cria os elementos do timer
         this.fundo = this.add.rectangle(635, 30, 210, 50, 0xadd8e6).setVisible(false).setAlpha(0.8);
         this.textoTempo = this.add.text(545, 15,  (this.tempoInicial - this.tempoInicial %60)/60 + 'min ' + this.tempoInicial %60 + 's', { fontSize: '40px', fill: '#000000'}).setVisible(false); // Adiciona o texto do tempo na tela do jogo
-        this.botaoCase = this.add.circle(100, 100, 50, 0xffffff, 1).setVisible(false).setInteractive();
+        this.botaoCaseBaixo = this.add.image(100, 100, 'botaoCaseBaixo').setScale(3).setVisible(false).setInteractive();
+        this.botaoCaseAlto = this.add.image(100, 100, 'botaoCaseAlto').setScale(3).setVisible(false).setInteractive();
+        this.botaoCase = this.add.circle(100, 100, 70, 0xffffff, 1).setVisible(false).setInteractive().setAlpha(0.1);
         
         // Cria os elementos da tarefas
         this.fundoTarefa = this.add.rectangle(5, 5, 450, 50, 0xadd8e6).setVisible(false).setAlpha(0.9).setOrigin(0,0);
@@ -75,15 +81,27 @@ class CenaHUD extends Phaser.Scene
               });
         }, this);
 
-        cenaAtual.events.on('botaoCase', function ()
+        cenaAtual.events.on('botaoCase', function () // Define o evento 'botaoCase'
         {
             this.botaoCase.setVisible(true);
+            this.botaoCaseBaixo.setVisible(true);
+            this.botaoCase.on("pointerover", () => { // Troca o ícone de reabertura do case quando o mouse está em cima
+                this.botaoCaseBaixo.setVisible(false);
+                this.botaoCaseAlto.setVisible(true);
+            });
+
+            this.botaoCaseBaixo.setVisible(true);
             console.log("teste1");
-            this.botaoCase.on("pointerdown", () => {
+            this.botaoCase.on("pointerout", () => { // Retorna o ícone de reabertura do case quando o mouse está em cima
+                this.botaoCaseBaixo.setVisible(true);
+                this.botaoCaseAlto.setVisible(false);
+            });
+
+            this.botaoCase.on("pointerdown", () => { // Disparo da cena 'abrirCase' quando clicar no botão do case
                 cenaAtual.physics.pause();
                 this.events.emit('abrirCase');
                 console.log("teste2");
-            })
+            });
         }, this);
     }
 }
