@@ -49,6 +49,8 @@ class CenaPrincipal extends Phaser.Scene {
     this.load.image('tenda_livro', 'assets/tilemaps/tenda_livro.png');
     this.load.image('Tree-Sheet', 'assets/tilemaps/Tree-Sheet.png');
     this.load.image('botaoX', 'assets/botaoX.png');
+    this.load.image('botaoCase_baixo', 'assets/botaoCase_baixo.png');
+    this.load.image('botaoCase_alto', 'assets/botaoCase_alto.png');
 
     //Carrega o tiled do mapa
     this.load.tilemapTiledJSON('mapa', 'assets/tilemaps/novoMapa.json');
@@ -306,6 +308,7 @@ class CenaPrincipal extends Phaser.Scene {
       }
     }
     
+    // Lógica de movimentação do personagem
     if ((this.keyA.isDown || this.cursors.left.isDown) && (this.keyW.isDown || this.cursors.up.isDown)) {
       this.jogador.setVelocityX(-this.defaultVelocity * 30);
       this.jogador.setVelocityY(-this.defaultVelocity * 30);

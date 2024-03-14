@@ -20,7 +20,7 @@ const config = {
         mode: Phaser.Scale.FIT, // Ajusta a tela para mobile
     },
     scene: [
-        MenuPrincipal, CenaPrincipal, CenaHUD, CenaCases
+        MenuPrincipal, CenaPrincipal, CenaHUD, CenaCases, Livros
     ],
     pixelArt: true,
     
