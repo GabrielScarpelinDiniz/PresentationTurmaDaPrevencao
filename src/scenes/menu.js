@@ -42,7 +42,7 @@ class MenuPrincipal extends Phaser.Scene {
     // Evento disparado ao clicar no botão (Código temporário apenas para demonstração da funcionalidade na sprint 1)
     this.botaoJogar.on("pointerdown", () => {
       // Evento de click do mouse
-      this.scene.start('livros')
+      this.scene.start('cenaPrincipal')
       this.scene.stop('menu')
       this.input.setDefaultCursor("default") // Retorno do cursor do mouse para setinha
       // this.openFullScreen()
