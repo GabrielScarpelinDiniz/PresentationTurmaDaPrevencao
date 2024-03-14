@@ -12,6 +12,7 @@ class MenuPrincipal extends Phaser.Scene {
   }
 
   create() {
+
     // Carrega a cena Main Menu
     this.mainMenu = this.add.image(630, 365, "background").setScale(2.1)
     this.logoInteli = this.add.image(1200, 690, "inteliLogo").setScale(1)
