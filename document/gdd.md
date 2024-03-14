@@ -1078,33 +1078,40 @@ openFullScreen() {
 ```
 ### Etapa 3 do desenvolvimento - Implementação do HUD
 
-&nbsp;&nbsp;&nbsp;&nbsp;O HUD do jogo foi criado em uma nova cena situada na classe CenaHUD, contendo os seguintes elementos: timer, pontuação e um quadro de orientação das missões. A seguir é possível visualizar o modo como foi implementado:
+&nbsp;&nbsp;&nbsp;&nbsp;O HUD do jogo foi criado em uma nova cena situada na classe CenaHUD, contendo os seguintes elementos: timer, pontuação, botão de reabertura do case e um quadro de orientação das missões. A seguir é possível visualizar o modo como foi implementado:
 
 ```js
 class CenaHUD extends Phaser.Scene
 {
     constructor ()
     {
-        super({ key: 'cenaHUD', active: true}); //
+        super({ key: 'cenaHUD', active: true}); // Define a key da cena e a mantém ativada desde o início do ciclo de jogo
 
         this.score = 0;
+    }
+    preload () {
+        this.load.image('botaoCaseBaixo', 'assets/botaoCase_baixo.png');
+        this.load.image('botaoCaseAlto', 'assets/botaoCase_alto.png');
     }
 
     create ()
     {
-        //  Our Text object to display the Score
-        //const info = this.add.text(10, 10, 'Score: 0', { font: '48px Arial', fill: '#000000' }).setVisible(false);
-        this.tempoInicial = 300;
-        this.fundo = this.add.rectangle(635, 30, 210, 50, 0xadd8e6).setVisible(false).setAlpha(0.8);
+        this.tempoInicial = 300; // Define o tempo de um ciclo em segundos
+        this.fundo = this.add.rectangle(635, 30, 210, 50, 0xadd8e6).setVisible(false).setAlpha(0.8); 
         this.textoTempo = this.add.text(545, 10,  (this.tempoInicial - this.tempoInicial %60)/60 + 'min ' + this.tempoInicial %60 + 's', { fontSize: '40px', fill: '#000000'}).setVisible(false); // Adiciona o texto do tempo na tela do jogo
-        this.botaoCase = this.add.circle(100, 100, 50, 0xffffff, 1).setVisible(false).setInteractive();
-        
-        //  Grab a reference to the Game Scene
+        this.botaoCaseBaixo = this.add.image(100, 100, 'botaoCaseBaixo').setScale(3).setVisible(false).setInteractive(); // Adiciona o ícone do case abaixado
+        this.botaoCaseAlto = this.add.image(100, 100, 'botaoCaseAlto').setScale(3).setVisible(false).setInteractive(); // Adiciona o ícone do case levantado
+        this.botaoCase = this.add.circle(100, 100, 70, 0xffffff, 1).setVisible(false).setInteractive().setAlpha(0.1); // Adiciona um círculo para interação com os ícones
+
+        //  Busca a cenaPrincipal como referência 
         const cenaAtual = this.scene.get('cenaPrincipal');
 
-        //  Listen for events from it
+        //  Monitora eventos da cenaPrincipal
         cenaAtual.events.on('showTimer', function ()
         {
+            // setTimeout( () => {
+            // }, this.tempoInicial * 1000); // função para chamar tela final após o tempo de jogo (A SER IMPLEMENTADO)
+
             this.fundo.setVisible(true).setStrokeStyle(2, 0x1a65ac)
 
             this.textoTempo.setVisible(true)
@@ -1113,7 +1120,9 @@ class CenaHUD extends Phaser.Scene
                 callback: () => {
                     //   this.fundoTimer.setVisible(true);
                     this.textoTempo.setVisible(true);
-                    this.tempoInicial -= 1; // Decrementa o contador
+                    if(this.tempoInicial >0) {
+                        this.tempoInicial -= 1; // Decrementa o contador
+                    }
                     this.textoTempo.setText((this.tempoInicial - this.tempoInicial %60)/60 + 'min ' + this.tempoInicial %60 + 's')
                     // console.log('time: ',time/1000)
                     if (this.tempoInicial == 99) {
@@ -1129,24 +1138,152 @@ class CenaHUD extends Phaser.Scene
               });
         }, this);
 
-        
-
-        cenaAtual.events.on('botaoCase', function ()
+        cenaAtual.events.on('botaoCase', function () // Define o evento 'botaoCase'
         {
             this.botaoCase.setVisible(true);
+            this.botaoCaseBaixo.setVisible(true);
+            this.botaoCase.on("pointerover", () => { // Troca o ícone de reabertura do case quando o mouse está em cima
+                this.botaoCaseBaixo.setVisible(false);
+                this.botaoCaseAlto.setVisible(true);
+            });
+
+            this.botaoCaseBaixo.setVisible(true);
             console.log("teste1");
-            this.botaoCase.on("pointerdown", () => {
+            this.botaoCase.on("pointerout", () => { // Retorna o ícone de reabertura do case quando o mouse está em cima
+                this.botaoCaseBaixo.setVisible(true);
+                this.botaoCaseAlto.setVisible(false);
+            });
+
+            this.botaoCase.on("pointerdown", () => { // Disparo da cena 'abrirCase' quando clicar no botão do case
+                cenaAtual.physics.pause();
                 this.events.emit('abrirCase');
                 console.log("teste2");
-            })
+            });
         }, this);
-        
     }
 }
+
 ``` 
 
 ## Etapa 4 do desenvolvimento - Refatoramento do Código
 ## Etapa 5 do desenvolvimento - Implementação da Trilha e Efeitos Sonoros
+## Etapa 6 do desenvolvimento - Tendas
+
+&nbsp;&nbsp;&nbsp;&nbsp;Nesta sprint, adicionamos cenas `livros.js` e `quiz.js` para implementarmos as mecânicas necessárias para a dinâmica do jogo. Estas cenas são chamadas na `cenaPrincipal.js` com a interação do jogador com o ambiente.
+
+&nbsp;&nbsp;&nbsp;&nbsp;Vejamos a implementação da cena `livros.js`, chamada quando o jogador entra em contato com a tenda de livros, a seguir: 
+
+``` js
+class Livros extends Phaser.Scene {
+    constructor() {
+        super({
+            key: 'livros',
+        })
+    }
+
+    preload() {
+        // Carrega as imagens a serem utilizadas
+        this.load.image('livroVerde', 'assets/livroVerde.png');
+        this.load.image('livroAmarelo', 'assets/livroAmarelo.png');
+        this.load.image('livroVermelho', 'assets/livroVermelho.png');
+        this.load.image('livroVerdeAberto', 'assets/livroVerdeAberto.png');
+        this.load.image('livroAmareloAberto', 'assets/livroAmareloAberto.png');
+        this.load.image('livroVermelhoAberto', 'assets/livroVermelhoAberto.png');
+        this.load.image('backgroundLivros', 'assets/backgroundLivros.png');
+    }
+
+    create() {
+            // Adiciona o background e livros a serem apresentados na cena
+            this.add.image(0, 0, 'backgroundLivros').setOrigin(0, 0).setScale(2);
+            this.livroVerde = this.add.image(100, 200, 'livroVerde').setOrigin(0,0).setScale(1.6).setInteractive();
+            this.livroAmarelo = this.add.image(500, 200, 'livroAmarelo').setOrigin(0,0).setScale(1.6).setInteractive();
+            this.livroVermelho = this.add.image(900, 200, 'livroVermelho').setOrigin(0,0).setScale(1.6).setInteractive();
+
+            this.livroVerde.on("pointerdown", () => { // Define função que chama o livro verde aberto quando clicar no livro verde fechado
+                this.livroVerde.setVisible(false);
+                this.livroAmarelo.setVisible(false);
+                this.livroVermelho.setVisible(false);
+                this.livroVerdeAberto = this.add.image(640, 350, 'livroVerdeAberto').setScale(2.6);
+            });
+
+            this.livroAmarelo.on("pointerdown", () => { // Define função que chama o livro amarelo aberto quando clicar no livro amarelo fechado
+                this.livroVerde.setVisible(false);
+                this.livroAmarelo.setVisible(false);
+                this.livroVermelho.setVisible(false);
+                this.livroAmareloAberto = this.add.image(640, 350, 'livroAmareloAberto').setScale(2.6);
+            });
+
+            this.livroVermelho.on("pointerdown", () => { // Define função que chama o livro vermelho aberto quando clicar no livro vermelho fechado
+                this.livroVerde.setVisible(false);
+                this.livroAmarelo.setVisible(false);
+                this.livroVermelho.setVisible(false);
+                this.livroVermelhoAberto = this.add.image(640, 350, 'livroVermelhoAberto').setScale(2.6);
+            });
+    }        
+}
+```
+&nbsp;&nbsp;&nbsp;&nbsp;O código de cena se inicia com a criação de uma classe Livros e definição de sua key para referenciação:
+
+``` js
+class Livros extends Phaser.Scene {
+    constructor() {
+        super({
+            key: 'livros',
+        })
+    }
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;Partimos para o carregamento das imagens a serem utilizadas nesta cena:
+``` js
+preload() {
+        // Carrega as imagens a serem utilizadas
+        this.load.image('livroVerde', 'assets/livroVerde.png');
+        this.load.image('livroAmarelo', 'assets/livroAmarelo.png');
+        this.load.image('livroVermelho', 'assets/livroVermelho.png');
+        this.load.image('livroVerdeAberto', 'assets/livroVerdeAberto.png');
+        this.load.image('livroAmareloAberto', 'assets/livroAmareloAberto.png');
+        this.load.image('livroVermelhoAberto', 'assets/livroVermelhoAberto.png');
+        this.load.image('backgroundLivros', 'assets/backgroundLivros.png');
+    }
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;Com as imagens carregadas, seguimos para a implementação dessas imagens dentro do jogo através do método `this.add.image()` e os atribuindo às variáveis `livroVerde`, `livroAmarelo`, `livroVermelho`, responsáveis por segurar suas informações. Vemos como isso é feito abaixo:
+
+``` js
+create() {
+            // Adiciona o background e livros a serem apresentados na cena
+            this.add.image(0, 0, 'backgroundLivros').setOrigin(0, 0).setScale(2);
+            this.livroVerde = this.add.image(100, 200, 'livroVerde').setOrigin(0,0).setScale(1.6).setInteractive();
+            this.livroAmarelo = this.add.image(500, 200, 'livroAmarelo').setOrigin(0,0).setScale(1.6).setInteractive();
+            this.livroVermelho = this.add.image(900, 200, 'livroVermelho').setOrigin(0,0).setScale(1.6).setInteractive();
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;Ainda no método `create()` da classe `Livros`, atribuímos funções para as interações de clique entre o jogador e os livros criados em `livroVerde`, `livroAmarelo`, `livroVermelho`. Nestas funções, definidas em `() => {}`, um livro é aberto, a depender do selecionado. Segue a implementação da lógica:
+
+``` js
+this.livroVerde.on("pointerdown", () => { // Define função que chama o livro verde aberto quando clicar no livro verde fechado
+                this.livroVerde.setVisible(false);
+                this.livroAmarelo.setVisible(false);
+                this.livroVermelho.setVisible(false);
+                this.livroVerdeAberto = this.add.image(640, 350, 'livroVerdeAberto').setScale(2.6);
+            });
+
+            this.livroAmarelo.on("pointerdown", () => { // Define função que chama o livro amarelo aberto quando clicar no livro amarelo fechado
+                this.livroVerde.setVisible(false);
+                this.livroAmarelo.setVisible(false);
+                this.livroVermelho.setVisible(false);
+                this.livroAmareloAberto = this.add.image(640, 350, 'livroAmareloAberto').setScale(2.6);
+            });
+
+            this.livroVermelho.on("pointerdown", () => { // Define função que chama o livro vermelho aberto quando clicar no livro vermelho fechado
+                this.livroVerde.setVisible(false);
+                this.livroAmarelo.setVisible(false);
+                this.livroVermelho.setVisible(false);
+                this.livroVermelhoAberto = this.add.image(640, 350, 'livroVermelhoAberto').setScale(2.6);
+            });
+```
+
+
 
 ## 4.4. Desenvolvimento final do MVP (sprint 4)
 

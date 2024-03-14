@@ -17,9 +17,6 @@ class Livros extends Phaser.Scene {
     }
 
     create() {
-        // this.eventoGatilho = this.scene.get('cenaPrincipal');
-        
-        // this.eventoGatilho.on("tendaLivros", () => {
             // Adiciona o background e livros a serem apresentados na cena
             this.add.image(0, 0, 'backgroundLivros').setOrigin(0, 0).setScale(2);
             this.livroVerde = this.add.image(100, 200, 'livroVerde').setOrigin(0,0).setScale(1.6).setInteractive();
@@ -46,8 +43,5 @@ class Livros extends Phaser.Scene {
                 this.livroVermelho.setVisible(false);
                 this.livroVermelhoAberto = this.add.image(640, 350, 'livroVermelhoAberto').setScale(2.6);
             });
-        // });
-
-    }
-        
+    }        
 }
