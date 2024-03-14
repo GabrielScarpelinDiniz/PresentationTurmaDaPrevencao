@@ -13,7 +13,7 @@ class CenaPrincipal extends Phaser.Scene {
   }
   preload() {
     this.load.audio('musicaIntroducao', 'assets/sounds/IntroMusic.wav') // Música de introdução
-    this.load.audio('musicaJogo', 'assets/sounds/gameMusicLoopWithEndGame.mp3')
+    this.load.audio('musicaJogo', 'assets/sounds/gameMusicLoopWithEndGame.mp3') // Música de jogo quando o cronometro está ativo
     //Carrega a biblioteca do joystick
     this.load.plugin(
       "rexvirtualjoystickplugin",
@@ -59,9 +59,9 @@ class CenaPrincipal extends Phaser.Scene {
 
   create(time) {
     // Adiciona a música de introdução
-    this.musicaIntroducao = this.sound.add('musicaIntroducao', {loop: true});
-    this.musicaJogo = this.sound.add('musicaJogo', {loop: false, volume: 0.5});
-    this.musicaIntroducao.play();
+    this.musicaIntroducao = this.sound.add('musicaIntroducao', {loop: true}); // Adiciona a música de introdução
+    this.musicaJogo = this.sound.add('musicaJogo', {loop: false, volume: 0.5}); // Adiciona a música de jogo
+    this.musicaIntroducao.play(); // Inicia a música de introdução
 
 
     this.map = this.make.tilemap({
@@ -260,8 +260,8 @@ class CenaPrincipal extends Phaser.Scene {
         //  Dispatch a Scene event
         this.events.emit('showTimer');
         this.events.emit('botaoCase');
-        this.musicaIntroducao.stop();
-        this.musicaJogo.play();
+        this.musicaIntroducao.stop(); // Para a música de introdução
+        this.musicaJogo.play(); // Inicia a música de jogo
 
       }, this.physics.world.removeCollider(this.tinaCollider));
     });
@@ -294,13 +294,15 @@ class CenaPrincipal extends Phaser.Scene {
     }
 
 
-    // Mapeamento de Inputs (Normalizar o movimento diagonal futuramente)
+
+    // Mapeamento de Inputs
     if (this.keyA.isDown || this.cursors.left.isDown) { // Verifica se a tecla A está pressionada
       this.jogador.setVelocityX(-this.defaultVelocity * 50); // Define a velocidade do personagem no eixo X, quando a condição é verdadeira
+      this.joystick.setVisible(false); // Esconde o joystick
 
     } else if (this.keyD.isDown || this.cursors.right.isDown) { // Verifica se a tecla D está pressionada
       this.jogador.setVelocityX(this.defaultVelocity * 50);
-      this.joystick.setVisible(false);
+      this.joystick.setVisible(false); // Esconde o joystick
     } else {
       if (!this.joystick.visible) {
         this.jogador.setVelocityX(0);
@@ -317,7 +319,7 @@ class CenaPrincipal extends Phaser.Scene {
         this.jogador.setVelocityY(0);
       }
     }
-    
+    // Movimentação diagonal do personagem, para ele não andar mais rápido que o normal
     if ((this.keyA.isDown || this.cursors.left.isDown) && (this.keyW.isDown || this.cursors.up.isDown)) {
       this.jogador.setVelocityX(-this.defaultVelocity * 30);
       this.jogador.setVelocityY(-this.defaultVelocity * 30);
@@ -334,9 +336,13 @@ class CenaPrincipal extends Phaser.Scene {
       this.jogador.setVelocityX(this.defaultVelocity * 30);
       this.jogador.setVelocityY(this.defaultVelocity * 30);
     }
+
+
+    // Verifica se o jogador está parado e roda animação de idle quando ele está
     if (this.jogador.body.velocity.x === 0 && this.jogador.body.velocity.y === 0) {
       this.jogador.anims.play('playerIdle', true);
     }
+    // Verifica se o jogador está se movendo e roda animação de movimento quando ele está, considerando a direção que ele está indo
     if (this.jogador.body.velocity.x > 0) this.jogador.anims.play('playerWalkingRight', true);
     else if (this.jogador.body.velocity.x < 0) this.jogador.anims.play('playerWalkingLeft', true);
     else if (this.jogador.body.velocity.y !== 0 && this.jogador.body.velocity.x === 0) this.jogador.anims.play('playerWalkingRight', true);
