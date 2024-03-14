@@ -15,6 +15,7 @@ class MenuPrincipal extends Phaser.Scene {
   }
 
   create() {
+
     // Carrega a cena Main Menu
     this.mainMenu = this.add.image(630, 365, "background").setScale(2.1)
     this.logoInteli = this.add.image(1200, 690, "inteliLogo").setScale(1)
@@ -48,8 +49,9 @@ class MenuPrincipal extends Phaser.Scene {
     // Evento disparado ao clicar no botão (Código temporário apenas para demonstração da funcionalidade na sprint 1)
     this.botaoJogar.on("pointerdown", () => {
       // Evento de click do mouse
-      this.scene.start('cenaPrincipal')
-      this.scene.stop('menu')
+      this.scene.start("cenaPrincipal")
+      this.scene.start("HUD")
+      this.scene.stop("menu")
       this.input.setDefaultCursor("default") // Retorno do cursor do mouse para setinha
       // this.openFullScreen()
     })
