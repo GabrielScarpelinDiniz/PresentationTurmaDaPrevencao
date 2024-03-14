@@ -12,6 +12,22 @@ class CenaPrincipal extends Phaser.Scene {
     }
   }
   preload() {
+    //Cria a lógica de carregamento enquanto as assets são carregadas
+    this.boxBarraDeCarregamento = this.add.rectangle( 240, 600, 800, 100, 0x000000, 0.8).setStrokeStyle(4, 0xFFFFFF).setOrigin(0, 0);
+    this.barraCarregamento = this.add.rectangle( 250, 610, 0, 80, 0xFFFFFF, 0.8).setOrigin(0, 0);
+    this.carregandoTexto = this.add.text( 240, 550, 'Carregando...', {fontSize: '40px', fill: '#FFFFFF'}).setOrigin(0, 0);
+    this.load.on('complete', (params) => {
+      this.boxBarraDeCarregamento.destroy();
+      this.barraCarregamento.destroy();
+      this.carregandoTexto.destroy();
+    });
+    this.load.on('progress', (value) => {
+      this.barraCarregamento.width = 780 * value;
+    });
+    
+    //Carrega os assets do jogo
+
+
     this.load.audio('musicaIntroducao', 'assets/sounds/IntroMusic.wav') // Música de introdução
     this.load.audio('musicaJogo', 'assets/sounds/gameMusicLoopWithEndGame.mp3') // Música de jogo quando o cronometro está ativo
     //Carrega a biblioteca do joystick
@@ -54,7 +70,6 @@ class CenaPrincipal extends Phaser.Scene {
 
     //Carrega o tiled do mapa
     this.load.tilemapTiledJSON('mapa', 'assets/tilemaps/novoMapa.json');
-
   }
 
   create(time) {
