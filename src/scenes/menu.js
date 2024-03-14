@@ -7,7 +7,10 @@ class MenuPrincipal extends Phaser.Scene {
   preload() {
     this.load.image("background", "assets/background.png") // Fundo da cena do Main Menu
     this.load.image("inteliLogo", "assets/logointeli.png") // Fundo da cena do Main Menu
-    this.load.spritesheet("botaoJogar", "assets/button.png", { frameWidth: 138, frameHeight: 46 }) // Imagem para botaoJogar
+    this.load.spritesheet("botaoJogar", "assets/button.png", {
+      frameWidth: 138,
+      frameHeight: 46
+    }) // Imagem para botaoJogar
 
   }
 
@@ -20,7 +23,10 @@ class MenuPrincipal extends Phaser.Scene {
     // Cria a animação de botaoJogar
     this.anims.create({
       key: 'animar',
-      frames: this.anims.generateFrameNumbers('botaoJogar', { start: 0, end: 1 }),
+      frames: this.anims.generateFrameNumbers('botaoJogar', {
+        start: 0,
+        end: 1
+      }),
       frameRate: 4,
       repeat: -1
     });
@@ -47,19 +53,21 @@ class MenuPrincipal extends Phaser.Scene {
       this.input.setDefaultCursor("default") // Retorno do cursor do mouse para setinha
       // this.openFullScreen()
     })
+
+    this.scene.sleep('livros');
   }
 
   update() {}
   openFullScreen() {
     const page = document.documentElement //Pega o documento inteiro
-    if (page.requestFullscreen){ //Se o navegador suportar o Fullscreen
-        page.requestFullscreen() //Ativa o Fullscreen
-    } else if (page.mozRequestFullScreen){ //Se o navegador suportar o Fullscreen do Mozila
-        page.mozRequestFullScreen() //Ativa o Fullscreen
-    } else if (page.webkitRequestFullscreen){ //Se o navegador suportar o Fullscreen do Webkit
-        page.webkitRequestFullscreen() //Ativa o Fullscreen
-    } else if (page.msRequestFullscreen){ //Se o navegador suportar o Fullscreen do Microsoft
-        page.msRequestFullscreen() //Ativa o Fullscreen
+    if (page.requestFullscreen) { //Se o navegador suportar o Fullscreen
+      page.requestFullscreen() //Ativa o Fullscreen
+    } else if (page.mozRequestFullScreen) { //Se o navegador suportar o Fullscreen do Mozila
+      page.mozRequestFullScreen() //Ativa o Fullscreen
+    } else if (page.webkitRequestFullscreen) { //Se o navegador suportar o Fullscreen do Webkit
+      page.webkitRequestFullscreen() //Ativa o Fullscreen
+    } else if (page.msRequestFullscreen) { //Se o navegador suportar o Fullscreen do Microsoft
+      page.msRequestFullscreen() //Ativa o Fullscreen
     }
   }
 }
