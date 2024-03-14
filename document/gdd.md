@@ -1029,7 +1029,7 @@ openFullScreen() {
 
 ### Etapa 2 do desenvolvimento - Colisões e Overlaps
 
-&nbsp;&nbsp;&nbsp;&nbsp;Foi realizado, inicialmente, as colisões necessárias para a dinâmica do jogo, configuradas no próprio Piskel e adicionadas, com o auxílio de um documento .JSON e do framework Phaser, no código. Na implementação das colisões, utilizamos, dentro do `create()`, o método do Phaser `.setCollisionByProperty()`, que adiciona colisão entre objetos por meio das propriedades adicionadas a eles no Piskel, como descrito a seguir:
+&nbsp;&nbsp;&nbsp;&nbsp;Foi realizado, inicialmente, as colisões necessárias para a dinâmica do jogo, configuradas no próprio Tiled Map Editor e adicionadas, com o auxílio de um documento .JSON e do framework Phaser, no código. Na implementação das colisões, utilizamos, dentro do `create()`, o método do Phaser `.setCollisionByProperty()`, que adiciona colisão entre objetos por meio das propriedades adicionadas a eles no Tiled Map Editor, como descrito a seguir:
 
 ```js
 	89this.arvores.setCollisionByProperty({ collider: true }) //Seta as colisões onde tem a propriedade collider: true no tiled map
