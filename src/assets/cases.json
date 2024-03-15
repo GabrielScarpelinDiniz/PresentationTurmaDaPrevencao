@@ -1,8 +1,9 @@
 [
     {
         "nome": "RONALD MEQUI DONALD",
-        "fotoSrc": "https://avatars.githubusercontent.com/u/62800000?v=4",
-        "desc": "O <bold>Cozinheiro</bold> de uma de uma hamburgueria, durante a preparação de uma receita, teve <bold>contato</bold> com a frigideira <bold>quente</bold>, queimando a palma da mão.",
+        "fotoKey": "ronald",
+        "desc": "O Cozinheiro de uma de uma hamburgueria, durante a preparação de uma receita, teve contato com a frigideira quente, queimando a palma da mão.",
+        "colored": [[2, 10], [84, 7], [109, 6]],
         "sintomas": "Apresenta vermelhidão na região, inchaço e dor local suportável.",
         "classificacao": "PRIMEIRO GRAU",
         "quiz": {
