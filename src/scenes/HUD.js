@@ -13,12 +13,12 @@ class CenaHUD extends Phaser.Scene
 
     create ()
     {
-        //  Our Text object to display the Score
-        //const info = this.add.text(10, 10, 'Score: 0', { font: '48px Arial', fill: '#000000' }).setVisible(false);
+        // Define um tempo inicial para o timer
         this.tempoInicial = 240;
         // Cria os elementos do timer
-        this.fundo = this.add.rectangle(635, 30, 210, 50, 0xadd8e6).setVisible(false).setAlpha(0.8);
+        this.fundoTimer = this.add.rectangle(635, 30, 210, 50, 0xadd8e6).setVisible(false).setAlpha(0.8);
         this.textoTempo = this.add.text(545, 15,  (this.tempoInicial - this.tempoInicial %60)/60 + 'min ' + this.tempoInicial %60 + 's', { fontSize: '40px', fill: '#000000'}).setVisible(false); // Adiciona o texto do tempo na tela do jogo
+        // Cria botão para reabrir o case
         this.botaoCaseBaixo = this.add.image(100, 150, 'botaoCaseBaixo').setScale(3).setVisible(false).setInteractive();
         this.botaoCaseAlto = this.add.image(100, 150, 'botaoCaseAlto').setScale(3).setVisible(false).setInteractive();
         this.botaoCase = this.add.circle(100, 150, 70, 0xffffff, 1).setVisible(false).setInteractive().setAlpha(0.1);
@@ -31,11 +31,11 @@ class CenaHUD extends Phaser.Scene
         this.fundoPontos = this.add.rectangle(1140, 30, 260, 50, 0xadd8e6).setVisible(false).setAlpha(0.9);
         this.textoPontos = this.add.text(1020, 15, "Pontos: 000", { fontSize: '36px', fill: '#000000'}).setVisible(false);
 
-        //  Grab a reference to the Game Scene
+        //  Define variáveis de chamada das cenas
         const cenaAtual = this.scene.get('cenaPrincipal');
         const cenaLivros = this.scene.get('livros');
 
-        //Cria evento para mostrar parte da HUD
+        // Cria evento para mostrar parte da HUD (Tarefas)
         cenaAtual.events.on('mostraTarefaInicial', function () 
         {
             this.fundoTarefa.setStrokeStyle(2, 0x1a65ac).setVisible(true);
@@ -46,14 +46,14 @@ class CenaHUD extends Phaser.Scene
             
         }, this);
         
-        //  Listen for events from it
+        // Cria evento para mostrar parte da HUD (Timer)
         cenaAtual.events.on('showTimer', function ()
         {
             setTimeout( () => {
             }, this.tempoInicial * 1000); // função para chamar tela final após o tempo de jogo
 
-            this.fundo.setVisible(true).setStrokeStyle(2, 0x1a65ac)
-
+            // Redefine alguns elementos do HUD
+            this.fundoTimer.setVisible(true).setStrokeStyle(2, 0x1a65ac)
             this.textoTempo.setVisible(true)
             this.textoTarefa.setVisible(true).setText("Tenda de livros?")
             this.textoPontos.setText("Pontos: 050");
@@ -81,6 +81,7 @@ class CenaHUD extends Phaser.Scene
               });
         }, this);
 
+        // Cria evento para mostrar o case por um botão
         cenaAtual.events.on('botaoCase', function () // Define o evento 'botaoCase'
         {
             this.botaoCase.setVisible(true);
@@ -104,6 +105,7 @@ class CenaHUD extends Phaser.Scene
             });
         }, this);
 
+        // Cria evento para mudar o texto de elementos do HUD
         cenaLivros.events.on('mudaTarefaParaQuiz', function () // Define o evento 'botaoCase'
         {
             this.textoTarefa.setText("Tenda do Quiz?")
