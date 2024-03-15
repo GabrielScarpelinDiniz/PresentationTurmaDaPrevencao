@@ -84,7 +84,7 @@ class CenaPrincipal extends Phaser.Scene {
     }); // Adiciona a música de introdução
     this.musicaJogo = this.sound.add('musicaJogo', {
       loop: false,
-      volume: 0.5
+      volume: 0.1
     }); // Adiciona a música de jogo
     this.musicaIntroducao.play(); // Inicia a música de introdução
 
