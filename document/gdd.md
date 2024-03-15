@@ -1601,8 +1601,10 @@ class Quiz extends Phaser.Scene {
 --- | --- | --- | --- 
 1 |  As dimensões da tela do jogo estão definidas | Verificar se as dimensões do jogo estão corretamente configuradas | A tela do jogo possui as dimensões corretas
 2 |  O sistema de centralização automática está funcionando | Verificar se a tela do jogo é centralizada automaticamente em ambos os eixos | A tela do jogo está centralizada corretamente
-3 |  Carregar o jogo em ambiente mobile | Verificar se a tela se ajusta à dispositivos móveis | A tela do jogo carrega sem problemas em dispositivos móveis
-4 | Main.js foi corretamente inicializado| Verificar se existem duas cenas adicionadas ao jogo: MenuPrincipal e CenaHospital | Existem duas cenas adicionadas corretamente ao jogo
+3 |  Carregar o jogo em ambiente mobile | Verificar se a tela se ajusta aos dispositivos móveis | A tela do jogo carrega sem problemas em dispositivos móveis
+4 | Main.js foi corretamente inicializada | Verificar se existem seis cenas adicionadas ao jogo: MenuPrincipal, CenaPrincipal, CenaHUD, CenaCases, Livros e Quiz | Existem seis cenas adicionadas corretamente ao jogo
+5 | Main.js foi corretamente inicializado | Verificar se a primeira cena inicializada é a MenuPrincipal | O jogo carrega na cena principal como primeira cena
+
 <div align="center">
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 </div>
@@ -1618,34 +1620,35 @@ class Quiz extends Phaser.Scene {
 \# | Pré-condição | Descrição do Teste | Pós-condição
 |------|---------|--- |--- |
 1 | Menu.js inicializou e carregou o método preload( )| Verificar se os assets são carregados corretamente sem erros | Todos os assets são carregados sem erros                                                    |
-2 | Clicar no botão "Jogar" | Simular um clique no botão "Jogar"  | A cena "hospital.js" é iniciada e a cena "menu.js" é parada, o cursor do mouse retorna para a setinha |
-3 | Passar o mouse sobre o botão "Jogar" | Mover o cursor do mouse sobre o botão "Jogar" | O cursor do mouse muda para uma mãozinha                                                     |
-4 | Retirar o mouse do botão "Jogar"  | Mover o cursor do mouse para fora do botão "Jogar" | O cursor do mouse retorna para a setinha                                               |
-5 | Animar o botão "Jogar"   | Verificar se a animação do botão "Jogar" é executada corretamente | O botão jogar é animado sem erros   |
-6 | Verificar a posição dos elementos      | Verificar se os elementos (background, logo, botão "Jogar") estão posicionados corretamente na tela | Os elementos estão posicionados corretamente na tela                                         |
+2 | O botão "Jogar" está clicável | Simular um clique no botão "Jogar"  | A cena "cenaPrincipal.js" e "HUD" são iniciadas e a cena "menu.js" é parada, o cursor do mouse retorna para a setinha |
+3 | O botão "Jogar" está clicável e o mouse está fora do botão | Mover o cursor do mouse sobre o botão "Jogar" | O cursor do mouse muda para uma mãozinha                                                     |
+4 | O botão "Jogar" está clicável e o mouse está sobre o botão  | Mover o cursor do mouse para fora do botão "Jogar" | O cursor do mouse retorna para a setinha                                               |
+5 | O botão "Jogar" carregou e está animado  | Verificar se a animação do botão "Jogar" é executada corretamente | O botão jogar é animado sem erros   |
+6 | Os assets da cena estão carregados | Verificar se os elementos (background, logo, botão "Jogar") estão posicionados corretamente na tela | Os elementos estão posicionados corretamente na tela  |
+7 | Está acontecendo a transição de cena de "menu.js" para "cenaPrincipal.js" | Verificar se as cenas "livros.js" e "quiz.js" aparecem na tela | As cenas carregaram e estão em modo adormecido  |
 <div align="center">
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;Após a interação com o botão "Jogar" da tela anterior, "menu.js", a tela "hospital.js" é carregada e a lógica do jogo é inicializada. Nessa etapa também existem testes para o précarregamento de assets, mas o foco está mais nas mecânicas do personagem e em como o mundo interage com ele.
+&nbsp;&nbsp;&nbsp;&nbsp;Após a interação com o botão "Jogar" da tela anterior, "menu.js", a tela "cenaPrincipal.js" é carregada e a lógica do jogo é inicializada. Nessa etapa também existem testes para o précarregamento de assets, mas o foco está mais nas mecânicas do personagem e em como o mundo interage com ele.
 
-&nbsp;&nbsp;&nbsp;&nbsp;Testes como a verificação do carregamento do mapa, a criação do joystick virtual e a colisão com paredes são feitos nessa parte. Como "hospital.js" será um arquivo com mais código do que os outros, mais testes serão adicionados com a implementação de novas mecânicas.
+&nbsp;&nbsp;&nbsp;&nbsp;Testes como a verificação do carregamento do mapa, a criação do joystick virtual e a colisão com paredes são feitos nessa parte. Como "cenaPrincipal.js" será um arquivo com mais código do que os outros, mais testes serão adicionados com a implementação de novas mecânicas.
 
 
 <div align="center">
-<sub>Tabela 6: Casos de Testes da Cena hospital.js</sub>
+<sub>Tabela 6: Casos de Testes da Cena cenaPrincipal.js</sub>
 </div>
 
 \# | Pré-condição | Descrição do Teste | Pós-condição
 |------|---------|--- |--- |
-1 | Cena hospital.js carregada | Verificar se a cena do hospital foi carregada corretamente | Os assets da cena do hospital estão carregados e prontos para uso |
+1 | Cena cenaPrincipal.js carregada | Verificar se a cena do cenaPrincipal.js foi carregada corretamente | Os assets da cena cenaPrincipal.js estão carregados e prontos para uso |
 2 | Mapa carregado | Verificar se o mapa foi carregado corretamente | O mapa está carregado e pronto para ser utilizado na cena |
-3 | Joystick criado | Verificar se o joystick foi criado corretamente na cena do hospital.js | O joystick está presente e funcional na cena |
-4 | Colisão com paredes inicializada | Testar colisão do personagem com as paredes do mapa | O personagem não atravessa as paredes e colide corretamente |
+3 | Joystick está visível | Verificar se o joystick foi criado corretamente na cena do cenaPrincipal.js | O joystick está presente e funcional na cena |
+4 | Colisão com cenário inicializada | Testar colisão do personagem com as partes do cenário | O personagem não atravessa partes do cenário e colide corretamente |
 5 | O personagem está carregado | Verificar se o personagem carregou corretamente | O personagem está carregado e funcional na cena |
-5 | O personagem carregou e está parado | Testar se o personagem se move corretamente | O personagem se move com o clique de teclas de input/joystick |
-7 | Parada do personagem em movimentação | Testar se o personagem para de se mover quando nenhuma tecla de movimento é pressionada | O personagem para |
-8 | Verificar a posição do personagem | Testar se a posição do personagem é atualizada corretamente | A posição do personagem é atualizada de acordo com o movimento |
+6 | O personagem carregou e está parado | Testar se o personagem se move corretamente | O personagem se move com o clique de teclas de input/joystick |
+7 | O personagem está em movimentação | Testar se o personagem para de se mover quando nenhuma tecla de movimento é pressionada | O personagem fica parado |
+8 | O personagem está na posição inicial | Verificar se a posição inicial do personagem está correta | O personagem está na posição inicial correta |
 9 | Posição do Joystick definida | Verificar se a posição do joystick é ajustada corretamente de acordo com a posição da câmera | A posição do joystick está sincronizada com a posição da câmera |
 
 
