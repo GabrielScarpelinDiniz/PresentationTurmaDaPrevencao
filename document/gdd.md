@@ -1069,6 +1069,44 @@ openFullScreen() {
   });
 
 ```
+
+&nbsp;&nbsp;&nbsp;&nbsp;Avançando para o desenvolvimento da dinâmica de nosso jogo, adicionamos colisões entre as tendas de livros e quiz e o personagem principal.
+
+#### Tenda de Livros
+
+&nbsp;&nbsp;&nbsp;&nbsp;Para adicionarmos a colisão entre a tenda de livros e o personagem, foram adicionados `this.physics.add.collider` entre o jogador `this.jogador` e a tenda `this.tendaLivro` no método `create()` da `cenaPrincipal.js`. Uma função é definida logo após estabelecermos a colisão entre os elementos através de `() => {}`, retomando a cena dos livros `livros.js` através de `this.scene.wake('livros')` e pausando a física da cena atual com `this.physics.pause()`, como demonstrado abaixo:
+
+``` js
+this.physics.add.collider(this.jogador, this.tendaLivro, () => {
+      console.log("Colidiu com a tenda do livro") //Adiciona colisão entre o jogador e a tenda de livros
+
+      //chama a cena para mostrar os 3 livros
+      this.scene.wake('livros');
+      // pausa a física do jogo enquanto a cena livros estiver exposta
+      this.physics.pause()
+});
+
+```
+
+#### Tenda de Quiz
+
+&nbsp;&nbsp;&nbsp;&nbsp;Similarmente, na tenda de quiz, a colisão com o personagem foi adicionada como anteriormente. Estabelecemos colisão entre o jogador `this.jogador` e a tenda de quiz `this.tendaQuiz`, também definindo uma função após este evento através de `() => {}`, retomando a cena de quiz `quiz.js` por `this.scene.wake('quiz')` e pausando a física da cena atual por `this.physics.pause()`.
+
+&nbsp;&nbsp;&nbsp;&nbsp;O código descrito pode ser conferido abaixo:
+
+``` js
+this.physics.add.collider(this.jogador, this.tendaQuiz, () => {
+      console.log("Colidiu com a tenda do quiz") //Adiciona colisão entre o jogador e a tenda
+
+      //chama a cena para mostrar o quiz
+      this.scene.wake('quiz');
+      // pausa a física do jogo enquanto a cena do quiz estiver exposta
+      this.physics.pause()
+
+    });
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;As cenas `livros.js` e `quiz.js` citadas acima serão abordadas na Etapa 6 do desenvolvimento - Tendas
 ### Etapa 3 do desenvolvimento - Implementação do HUD
 
 &nbsp;&nbsp;&nbsp;&nbsp;O HUD do jogo foi criado em uma nova cena situada na classe CenaHUD, contendo os seguintes elementos: timer, pontuação, botão de reabertura do case e um quadro de orientação das missões. A seguir é possível visualizar o modo como foi implementado:
@@ -1269,7 +1307,8 @@ class Livros extends Phaser.Scene {
 }
 ```
 
-&nbsp;&nbsp;&nbsp;&nbsp;Partimos para o carregamento das imagens a serem utilizadas nesta cena:
+&nbsp;&nbsp;&nbsp;&nbsp;Nesta cena, algumas imagens são utilizadas. Na função `preload()`, partimos para o carregamento das imagens de plano de fundo, livros fechados e livros abertos a serem utilizadas posteriormente. Na cena, 3 livros fechados são apresentados, um verde, um amarelo e um vermelho, carregados através de `this.load.image()` nas referências `livroVerde`, `livroAmarelo` e `livroVermelho`, respectivamente. Portanto, 3 imagens de livros abertos também são carregados, `livroVerdeAberto`, `livroAmareloAberto` e `livroVermelhoAberto` respeitando as cores dos livros incluídos até então. Segue o código de carregamento destes *assets*.
+
 ``` js
 preload() {
         // Carrega as imagens a serem utilizadas
@@ -1294,7 +1333,7 @@ create() {
             this.livroVermelho = this.add.image(900, 200, 'livroVermelho').setOrigin(0,0).setScale(1.6).setInteractive();
 ```
 
-&nbsp;&nbsp;&nbsp;&nbsp;Ainda no método `create()` da classe `Livros`, atribuímos funções para as interações de clique entre o jogador e os livros criados em `livroVerde`, `livroAmarelo`, `livroVermelho`. Nestas funções, definidas em `() => {}`, um livro é aberto, a depender do selecionado. Segue a implementação da lógica:
+&nbsp;&nbsp;&nbsp;&nbsp;Ainda no método `create()` da classe `Livros`, recebemos a interação de clique entre o jogador com os livros através de `this.livro.on("pointerdown")` e atribuímos funções para tais interações. Nestas funções, definidas em `() => {}`, uma imagem do respectivo livro selecionado é adicionada, mas desta vez com o livro aberto. Por exemplo, caso o livro amarelo `livroAmarelo` seja selecionado, `livroAmareloAberto` é adicionado e os livros fechados visíveis se tornam invisíveis. Segue a implementação da lógica:
 
 ``` js
 this.livroVerde.on("pointerdown", () => { // Define função que chama o livro verde aberto quando clicar no livro verde fechado
