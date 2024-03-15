@@ -1159,7 +1159,49 @@ class CenaHUD extends Phaser.Scene
 ``` 
 
 ## Etapa 4 do desenvolvimento - Refatoramento do Código
-## Etapa 5 do desenvolvimento - Implementação da Trilha e Efeitos Sonoros
+## Etapa 5 do desenvolvimento - Implementação da Trilha e Efeitos Sonoros / Tela de loading
+Para implementar o som, primeiramente foi preciso escolher os sons. Para isso, foi baixados sons do site "FreeSound" com licenças Creative Commons. Os sons Creative Commons são importantes para evitar problemas com direitos autorais.
+Após isso, o aúdio foi editado no software "Audacity", para que o som fique mais rápido nos segundos finais do jogo. Em seguida, os assets de som foram carregados no método `preload()`
+````js
+    this.load.audio('musicaIntroducao', 'assets/sounds/IntroMusic.wav') // Música de introdução
+    this.load.audio('musicaJogo', 'assets/sounds/gameMusicLoopWithEndGame.mp3') // Música de jogo quando o 
+````
+Com essas alterações, o tempo de carregamento do jogo aumentou consideravelmente, por conta das músicas serem mais pesadas que as imagens. Para resolver isso, uma tela de carregamento foi implementada utilizando os eventos `this.load.on('progress', callback(value))` e `this.load.on('complete', callback(loadInfos))`. A função de 'callback' no progresso recebe como parâmetro um valor de 0 até 1, que, no nosso caso, foi multiplicado pela largura da barra de progresso para montar a animação. Já o evento 'complete' destrói os elementos da tela de carregamento.
+````js
+    this.boxBarraDeCarregamento = this.add.rectangle(240, 600, 800, 100, 0x000000, 0.8).setStrokeStyle(4, 0xFFFFFF).setOrigin(0, 0);
+    this.barraCarregamento = this.add.rectangle(250, 610, 0, 80, 0xFFFFFF, 0.8).setOrigin(0, 0);
+    this.carregandoTexto = this.add.text(240, 550, 'Carregando...', {
+      fontSize: '40px',
+      fill: '#FFFFFF'
+    }).setOrigin(0, 0);
+    this.load.on('complete', (params) => {
+      this.boxBarraDeCarregamento.destroy();
+      this.barraCarregamento.destroy();
+      this.carregandoTexto.destroy();
+    });
+    this.load.on('progress', (value) => {
+      this.barraCarregamento.width = 780 * value;
+    });
+````
+Após isso, o jogo inicia com a música de introdução e quando o primeiro ciclo de jogo - após fechar o caso dado pela Dra. Tina - começa, a música de introdução é pausada e a música com mais batidas é iniciada.
+````js
+this.musicaIntroducao = this.sound.add('musicaIntroducao', {
+    loop: true
+}); // Adiciona a música de introdução
+this.musicaJogo = this.sound.add('musicaJogo', {
+    loop: false,
+    volume: 0.5 //Volume ajustado porque essa música é mais alta
+}); // Adiciona a música de jogo
+this.musicaIntroducao.play(); // Inicia a música de introdução
+````
+Por fim, quando o caso é fechado a música atual é pausada e a nova música se inicia
+````js
+this.botaoX.on("pointerdown", () => {
+    this.musicaIntroducao.stop(); // Para a música de introdução
+    this.musicaJogo.play(); // Inicia a música de jogo
+
+});
+````
 ## Etapa 6 do desenvolvimento - Tendas
 
 &nbsp;&nbsp;&nbsp;&nbsp;Nesta sprint, adicionamos cenas `livros.js` e `quiz.js` para implementarmos as mecânicas necessárias para a dinâmica do jogo. Estas cenas são chamadas na `cenaPrincipal.js` com a interação do jogador com o ambiente.
