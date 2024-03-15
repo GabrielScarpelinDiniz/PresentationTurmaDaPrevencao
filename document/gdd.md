@@ -377,18 +377,11 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 ### 3.4.1. Inventário
 
-*\<opcional\> Caso seu jogo utilize itens ou poderes para os personagens obterem, descreva-os aqui, indicando títulos, imagens, meios de obtenção e funções no jogo. Utilize listas ou tabelas para organizar esta seção. Caso utilize material de terceiros em licença Creative Commons, não deixe de citar os autores/fontes.* 
-
-*Exemplo de tabela*
-\# | item |  | como obter | função | efeito sonoro
---- | --- | --- | --- | --- | ---
-1 | moeda | <img src="../assets/coin.png"> | há muitas espalhadas em todas as fases | acumula dinheiro para comprar outros itens | som de moeda
-2 | madeira | <img src="../assets/wood.png"> | há muitas espalhadas em todas as fases | acumula madeira para construir casas | som de madeiras
-3 | ... 
+&nbsp;&nbsp;&nbsp;&nbsp;Não se aplica.
 
 ### 3.4.2. Bestiário
 
-&nbsp;&nbsp;&nbsp;&nbsp; Não se aplica.
+&nbsp;&nbsp;&nbsp;&nbsp;Não se aplica.
 
 ## 3.5. Gameflow (Diagrama de cenas) (sprint 2)
 
