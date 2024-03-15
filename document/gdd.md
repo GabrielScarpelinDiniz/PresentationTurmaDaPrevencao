@@ -360,7 +360,7 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 ### 3.3.5. Trilha sonora (sprint 3)
 
-As trilhas sonoras são meios de envolver o usuário no jogo, segundo o artigo 'The Role of Music in Videogames' - O papel da musica nos videogames - o autor, citado no artigo da BBC ¹⁴, diz que a trilha sonora nos jogos são multifuncionais, pois, significam várias coisas para o jogador. Como o aumento da imersão, brechas para mudança na história além de contribuir também para a estética do jogo. Logo, se tornando um fator muito importante para o envolvimento do jogador na história.
+&nbsp;&nbsp;&nbsp;&nbsp;As trilhas sonoras são meios de envolver o usuário no jogo, segundo o artigo "The Role of Music in Videogames" - O papel da música nos videogames - cujo autor, citado no artigo da BBC ¹⁴, afirma que as trilhas sonoras nos jogos são multifuncionais, pois significam várias coisas para o jogador. Isso inclui o aumento da imersão, as brechas para mudanças na história, além de contribuírem também para a estética do jogo, tornando-se assim um fator muito importante para o envolvimento do jogador na narrativa.
 
 <div align="center">
 <sub>Tabela X: Lista de músicas</sub>
@@ -368,10 +368,10 @@ As trilhas sonoras são meios de envolver o usuário no jogo, segundo o artigo '
 
 \# | titulo | ocorrência | autoria
 --- | --- | --- | ---
-1 | tema de abertura e durante o tutorial | tela de início e cena da faculdade | FoolBoyMedia (CC BY-NC 4.0)
-2 | tema principal | cena da faculdade após a introdução | BloodPixelHero (CC BY 4.0)
+1 | Tema de abertura e durante o tutorial | Tela de início e Cena da faculdade | FoolBoyMedia (CC BY-NC 4.0)
+2 | Tema principal | Cena da faculdade após a introdução | BloodPixelHero (CC BY 4.0)
 
-Tendo como referência o artigo mencionado, as músicas selecionadas foram cuidadosamente escolhidas para transmitir a atmosfera do jogo, visando uma imersão mais profunda por parte do jogador. No menu e no tutorial, optamos por músicas com ritmo mais lento, proporcionando uma introdução tranquila e acolhedora ao universo do jogo. No entanto, à medida que a dinâmica do jogo se intensifica, marcada pelo início do cronômetro e o aumento da velocidade das ações, uma trilha sonora com batidas mais pulsantes é ativada, elevando a energia e a intensidade da experiência de jogo.
+&nbsp;&nbsp;&nbsp;&nbsp;Tendo como referência o artigo mencionado, as músicas selecionadas foram cuidadosamente escolhidas para transmitir a atmosfera do jogo, com o objetivo de proporcionar uma imersão mais profunda por parte do jogador. No menu e no tutorial, optamos por músicas com ritmo mais lento, oferecendo uma introdução tranquila e acolhedora ao universo do jogo. No entanto, à medida que a dinâmica do jogo se intensifica, marcada pelo início do cronômetro e pelo aumento da velocidade das ações, uma trilha sonora com batidas mais pulsantes é ativada, elevando a energia e a intensidade da experiência de jogo.
 
 ## 3.4. Inventário e Bestiário (sprint 3)
 
