@@ -1076,6 +1076,44 @@ openFullScreen() {
   });
 
 ```
+
+&nbsp;&nbsp;&nbsp;&nbsp;Avançando para o desenvolvimento da dinâmica de nosso jogo, adicionamos colisões entre as tendas de livros e quiz e o personagem principal.
+
+#### Tenda de Livros
+
+&nbsp;&nbsp;&nbsp;&nbsp;Para adicionarmos a colisão entre a tenda de livros e o personagem, foram adicionados `this.physics.add.collider` entre o jogador `this.jogador` e a tenda `this.tendaLivro` no método `create()` da `cenaPrincipal.js`. Uma função é definida logo após estabelecermos a colisão entre os elementos através de `() => {}`, retomando a cena dos livros `livros.js` através de `this.scene.wake('livros')` e pausando a física da cena atual com `this.physics.pause()`, como demonstrado abaixo:
+
+``` js
+this.physics.add.collider(this.jogador, this.tendaLivro, () => {
+      console.log("Colidiu com a tenda do livro") //Adiciona colisão entre o jogador e a tenda de livros
+
+      //chama a cena para mostrar os 3 livros
+      this.scene.wake('livros');
+      // pausa a física do jogo enquanto a cena livros estiver exposta
+      this.physics.pause()
+});
+
+```
+
+#### Tenda de Quiz
+
+&nbsp;&nbsp;&nbsp;&nbsp;Similarmente, na tenda de quiz, a colisão com o personagem foi adicionada como anteriormente. Estabelecemos colisão entre o jogador `this.jogador` e a tenda de quiz `this.tendaQuiz`, também definindo uma função após este evento através de `() => {}`, retomando a cena de quiz `quiz.js` por `this.scene.wake('quiz')` e pausando a física da cena atual por `this.physics.pause()`.
+
+&nbsp;&nbsp;&nbsp;&nbsp;O código descrito pode ser conferido abaixo:
+
+``` js
+this.physics.add.collider(this.jogador, this.tendaQuiz, () => {
+      console.log("Colidiu com a tenda do quiz") //Adiciona colisão entre o jogador e a tenda
+
+      //chama a cena para mostrar o quiz
+      this.scene.wake('quiz');
+      // pausa a física do jogo enquanto a cena do quiz estiver exposta
+      this.physics.pause()
+
+    });
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;As cenas `livros.js` e `quiz.js` citadas acima serão abordadas na Etapa 6 do desenvolvimento - Tendas
 ### Etapa 3 do desenvolvimento - Implementação do HUD
 
 &nbsp;&nbsp;&nbsp;&nbsp;O HUD do jogo foi criado em uma nova cena situada na classe CenaHUD, contendo os seguintes elementos: timer, pontuação, botão de reabertura do case e um quadro de orientação das missões. A seguir é possível visualizar o modo como foi implementado:
