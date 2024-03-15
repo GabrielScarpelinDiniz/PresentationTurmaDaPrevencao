@@ -269,7 +269,7 @@ Posto isso, foi entendido que a definição adequada do público alvo aumenta a 
 
 ### 3.2.3. Diversidade e Representatividade dos Personagens
 
-&nbsp;&nbsp;&nbsp;&nbsp; De acordo com o nosso público-alvo, o jogo em questão não apenas oferecerá uma variedade de personagens, mas também buscará causar um impacto social por meio da inclusão e diversidade. A personagem Dra. Tina foi criada para representar uma parcela significativa da população brasileira: pessoas pardas/pretas, conforme indicado pelo Censo de 2022. Nossa abordagem visa não apenas incluir personagens pretos como secundários, mas também posicioná-los como protagonistas da história. Assim, a Dra. Tina desempenha o papel principal ao guiar o personagem principal durante toda a jornada, fornecendo instruções e sendo a figura central por trás de todos os eventos que ocorrem dentro do jogo.
+&nbsp;&nbsp;&nbsp;&nbsp; De acordo com o nosso público-alvo, o jogo em questão não apenas oferecerá uma variedade de personagens, mas também buscará causar um impacto social por meio da inclusão e diversidade. A personagem Dra. Tina foi criada para representar uma parcela significativa da população brasileira: pessoas pardas/pretas, conforme indicado pelo Censo de 2022. Nossa abordagem visa não apenas incluir personagens pretos como secundários, mas também posicioná-los como protagonistas da história. Assim, a Dra. Tina desempenha o papel principal ao guiar o personagem principal durante toda a jornada, fornecendo instruções e sendo a figura central por trás de todos os eventos que ocorrem dentro do jogo. Além disso, o projeto visa abordar outras raças e diferentes culturas nos personagens, e a expectativa é que, com o avanço do projeto, os NPCs sejam desenvolvidos para representar ainda mais parcelas da população sub-representadas.
 
 ## 3.3. Mundo do jogo (sprints 2 e 3)
 
@@ -377,18 +377,11 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 ### 3.4.1. Inventário
 
-*\<opcional\> Caso seu jogo utilize itens ou poderes para os personagens obterem, descreva-os aqui, indicando títulos, imagens, meios de obtenção e funções no jogo. Utilize listas ou tabelas para organizar esta seção. Caso utilize material de terceiros em licença Creative Commons, não deixe de citar os autores/fontes.* 
-
-*Exemplo de tabela*
-\# | item |  | como obter | função | efeito sonoro
---- | --- | --- | --- | --- | ---
-1 | moeda | <img src="../assets/coin.png"> | há muitas espalhadas em todas as fases | acumula dinheiro para comprar outros itens | som de moeda
-2 | madeira | <img src="../assets/wood.png"> | há muitas espalhadas em todas as fases | acumula madeira para construir casas | som de madeiras
-3 | ... 
+&nbsp;&nbsp;&nbsp;&nbsp;Não se aplica.
 
 ### 3.4.2. Bestiário
 
-&nbsp;&nbsp;&nbsp;&nbsp; Não se aplica.
+&nbsp;&nbsp;&nbsp;&nbsp;Não se aplica.
 
 ## 3.5. Gameflow (Diagrama de cenas) (sprint 2)
 
@@ -1166,7 +1159,49 @@ class CenaHUD extends Phaser.Scene
 ``` 
 
 ## Etapa 4 do desenvolvimento - Refatoramento do Código
-## Etapa 5 do desenvolvimento - Implementação da Trilha e Efeitos Sonoros
+## Etapa 5 do desenvolvimento - Implementação da Trilha e Efeitos Sonoros / Tela de loading
+Para implementar o som, primeiramente foi preciso escolher os sons. Para isso, foi baixados sons do site "FreeSound" com licenças Creative Commons. Os sons Creative Commons são importantes para evitar problemas com direitos autorais.
+Após isso, o aúdio foi editado no software "Audacity", para que o som fique mais rápido nos segundos finais do jogo. Em seguida, os assets de som foram carregados no método `preload()`
+````js
+    this.load.audio('musicaIntroducao', 'assets/sounds/IntroMusic.wav') // Música de introdução
+    this.load.audio('musicaJogo', 'assets/sounds/gameMusicLoopWithEndGame.mp3') // Música de jogo quando o 
+````
+Com essas alterações, o tempo de carregamento do jogo aumentou consideravelmente, por conta das músicas serem mais pesadas que as imagens. Para resolver isso, uma tela de carregamento foi implementada utilizando os eventos `this.load.on('progress', callback(value))` e `this.load.on('complete', callback(loadInfos))`. A função de 'callback' no progresso recebe como parâmetro um valor de 0 até 1, que, no nosso caso, foi multiplicado pela largura da barra de progresso para montar a animação. Já o evento 'complete' destrói os elementos da tela de carregamento.
+````js
+    this.boxBarraDeCarregamento = this.add.rectangle(240, 600, 800, 100, 0x000000, 0.8).setStrokeStyle(4, 0xFFFFFF).setOrigin(0, 0);
+    this.barraCarregamento = this.add.rectangle(250, 610, 0, 80, 0xFFFFFF, 0.8).setOrigin(0, 0);
+    this.carregandoTexto = this.add.text(240, 550, 'Carregando...', {
+      fontSize: '40px',
+      fill: '#FFFFFF'
+    }).setOrigin(0, 0);
+    this.load.on('complete', (params) => {
+      this.boxBarraDeCarregamento.destroy();
+      this.barraCarregamento.destroy();
+      this.carregandoTexto.destroy();
+    });
+    this.load.on('progress', (value) => {
+      this.barraCarregamento.width = 780 * value;
+    });
+````
+Após isso, o jogo inicia com a música de introdução e quando o primeiro ciclo de jogo - após fechar o caso dado pela Dra. Tina - começa, a música de introdução é pausada e a música com mais batidas é iniciada.
+````js
+this.musicaIntroducao = this.sound.add('musicaIntroducao', {
+    loop: true
+}); // Adiciona a música de introdução
+this.musicaJogo = this.sound.add('musicaJogo', {
+    loop: false,
+    volume: 0.5 //Volume ajustado porque essa música é mais alta
+}); // Adiciona a música de jogo
+this.musicaIntroducao.play(); // Inicia a música de introdução
+````
+Por fim, quando o caso é fechado a música atual é pausada e a nova música se inicia
+````js
+this.botaoX.on("pointerdown", () => {
+    this.musicaIntroducao.stop(); // Para a música de introdução
+    this.musicaJogo.play(); // Inicia a música de jogo
+
+});
+````
 ## Etapa 6 do desenvolvimento - Tendas
 
 &nbsp;&nbsp;&nbsp;&nbsp;Nesta sprint, adicionamos cenas `livros.js` e `quiz.js` para implementarmos as mecânicas necessárias para a dinâmica do jogo. Estas cenas são chamadas na `cenaPrincipal.js` com a interação do jogador com o ambiente.
