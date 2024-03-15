@@ -366,7 +366,7 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 <sub>Tabela X: Lista de músicas</sub>
 </div>
 
-\# | titulo | ocorrência | autoria
+\# | Título | Ocorrência | Autoria
 --- | --- | --- | ---
 1 | Tema de abertura e durante o tutorial | Tela de início e Cena da faculdade | FoolBoyMedia (CC BY-NC 4.0)
 2 | Tema principal | Cena da faculdade após a introdução | BloodPixelHero (CC BY 4.0)
