@@ -57,6 +57,8 @@ class MenuPrincipal extends Phaser.Scene {
     })
 
     this.scene.sleep('livros');
+    this.scene.sleep('quiz');
+
   }
 
   update() {}

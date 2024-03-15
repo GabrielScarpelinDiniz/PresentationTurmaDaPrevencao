@@ -119,14 +119,18 @@ class CenaPrincipal extends Phaser.Scene {
     this.tendaLivro = this.map.createLayer("TendaLivro", [this.tileset9]);
     this.tendaQuiz = this.map.createLayer("TendaQuiz", [this.tileset15]);
 
+    // define os limites do mundo do jogo,
     this.worldBounds = this.physics.add.staticGroup().add(this.add.rectangle(0, 560, 3, 1120, 0x000000, 0)).add(this.add.rectangle(1120, 560, 3, 1120, 0x000000, 0)).add(this.add.rectangle(560, 0, 1120, 3, 0x000000, 0)).add(this.add.rectangle(560, 885, 1120, 3, 0x000000, 0));
+    
     // Cria e posiciona o player
     this.jogador = this.physics.add.sprite(650, 450, "jogador").setOffset(9, 12).setCircle(7).setScale(1.5).refreshBody();
-    this.cerca = this.map.createLayer("Cerca", [this.tileset6, this.tileset7, this.tileset11, this.tileset12, this.tileset13, this.tileset14]);
-    // Local exato do final da posição da câmera
-    // this.jogador = this.physics.add.sprite(550, 800, "jogador").setOffset(9, 12).setCircle(7).setScale(1.5).refreshBody();
 
+    // criando a camada da cerca
+    this.cerca = this.map.createLayer("Cerca", [this.tileset6, this.tileset7, this.tileset11, this.tileset12, this.tileset13, this.tileset14]);
+
+    //configurando um colisor entre o jogador e os limites do mundo do jogo
     this.physics.add.collider(this.jogador, this.worldBounds);
+
     // Cria colisões com a fonte no mapa
     this.circuloFonte = this.add.circle(560, 570, 70, 0xffffff, 0); //Adiciona círculo sob a fonte
     this.physics.add.existing(this.circuloFonte); //Adiciona física ao círculo adicionado
@@ -291,15 +295,24 @@ class CenaPrincipal extends Phaser.Scene {
     }).setVisible(false); // Adiciona o texto do tempo na tela do jogo
 
     this.physics.add.collider(this.jogador, this.tendaLivro, () => {
-      console.log("Colidiu com a tenda do livro") //Adiciona colisão entre o jogador e a tenda
+      console.log("Colidiu com a tenda do livro") //Adiciona colisão entre o jogador e a tenda de livros
 
+      //chama a cena para mostrar os 3 livros
       this.scene.wake('livros');
+      // pausa a física do jogo enquanto a cena livros estiver exposta
       this.physics.pause()
 
     });
 
-    this.physics.add.collider(this.jogador, this.tendaQuiz);
+    this.physics.add.collider(this.jogador, this.tendaQuiz, () => {
+      console.log("Colidiu com a tenda do quiz") //Adiciona colisão entre o jogador e a tenda
 
+      //chama a cena para mostrar o quiz
+      this.scene.wake('quiz');
+      // pausa a física do jogo enquanto a cena do quiz estiver exposta
+      this.physics.pause()
+
+    });
   }
 
   update() {
