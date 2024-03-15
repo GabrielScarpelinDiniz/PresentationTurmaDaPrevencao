@@ -13,9 +13,12 @@ class CenaPrincipal extends Phaser.Scene {
   }
   preload() {
     //Cria a lógica de carregamento enquanto as assets são carregadas
-    this.boxBarraDeCarregamento = this.add.rectangle( 240, 600, 800, 100, 0x000000, 0.8).setStrokeStyle(4, 0xFFFFFF).setOrigin(0, 0);
-    this.barraCarregamento = this.add.rectangle( 250, 610, 0, 80, 0xFFFFFF, 0.8).setOrigin(0, 0);
-    this.carregandoTexto = this.add.text( 240, 550, 'Carregando...', {fontSize: '40px', fill: '#FFFFFF'}).setOrigin(0, 0);
+    this.boxBarraDeCarregamento = this.add.rectangle(240, 600, 800, 100, 0x000000, 0.8).setStrokeStyle(4, 0xFFFFFF).setOrigin(0, 0);
+    this.barraCarregamento = this.add.rectangle(250, 610, 0, 80, 0xFFFFFF, 0.8).setOrigin(0, 0);
+    this.carregandoTexto = this.add.text(240, 550, 'Carregando...', {
+      fontSize: '40px',
+      fill: '#FFFFFF'
+    }).setOrigin(0, 0);
     this.load.on('complete', (params) => {
       this.boxBarraDeCarregamento.destroy();
       this.barraCarregamento.destroy();
@@ -24,7 +27,7 @@ class CenaPrincipal extends Phaser.Scene {
     this.load.on('progress', (value) => {
       this.barraCarregamento.width = 780 * value;
     });
-    
+
     //Carrega os assets do jogo
 
 
@@ -76,8 +79,13 @@ class CenaPrincipal extends Phaser.Scene {
 
   create(time) {
     // Adiciona a música de introdução
-    this.musicaIntroducao = this.sound.add('musicaIntroducao', {loop: true}); // Adiciona a música de introdução
-    this.musicaJogo = this.sound.add('musicaJogo', {loop: false, volume: 0.5}); // Adiciona a música de jogo
+    this.musicaIntroducao = this.sound.add('musicaIntroducao', {
+      loop: true
+    }); // Adiciona a música de introdução
+    this.musicaJogo = this.sound.add('musicaJogo', {
+      loop: false,
+      volume: 0.5
+    }); // Adiciona a música de jogo
     this.musicaIntroducao.play(); // Inicia a música de introdução
 
 
@@ -110,11 +118,11 @@ class CenaPrincipal extends Phaser.Scene {
     this.fonte = this.map.createLayer("Fonte", [this.tileset3]);
     this.tendaLivro = this.map.createLayer("TendaLivro", [this.tileset9]);
     this.tendaQuiz = this.map.createLayer("TendaQuiz", [this.tileset15]);
-    this.cerca = this.map.createLayer("Cerca", [this.tileset6, this.tileset7, this.tileset11, this.tileset12, this.tileset13, this.tileset14]);
 
-    this.worldBounds = this.physics.add.staticGroup().add(this.add.rectangle(0, 560, 3, 1120, 0x000000, 0)).add(this.add.rectangle(1120, 560, 3, 1120, 0x000000, 0)).add(this.add.rectangle(560, 0, 1120, 3, 0x000000, 0));
+    this.worldBounds = this.physics.add.staticGroup().add(this.add.rectangle(0, 560, 3, 1120, 0x000000, 0)).add(this.add.rectangle(1120, 560, 3, 1120, 0x000000, 0)).add(this.add.rectangle(560, 0, 1120, 3, 0x000000, 0)).add(this.add.rectangle(560, 885, 1120, 3, 0x000000, 0));
     // Cria e posiciona o player
     this.jogador = this.physics.add.sprite(650, 450, "jogador").setOffset(9, 12).setCircle(7).setScale(1.5).refreshBody();
+    this.cerca = this.map.createLayer("Cerca", [this.tileset6, this.tileset7, this.tileset11, this.tileset12, this.tileset13, this.tileset14]);
     // Local exato do final da posição da câmera
     // this.jogador = this.physics.add.sprite(550, 800, "jogador").setOffset(9, 12).setCircle(7).setScale(1.5).refreshBody();
 
@@ -134,7 +142,7 @@ class CenaPrincipal extends Phaser.Scene {
       collider: true
     }) //Seta as colisões onde tem a propriedade collider: true no tiled map
     this.physics.add.collider(this.jogador, this.arvores, () => console.log("Colidiu")) //Adiciona colisão entre o jogador e as árvores
-    
+
     //Cria colisão com a tenda
     this.tendaQuiz.setCollisionByProperty({
       collider: true
@@ -142,8 +150,6 @@ class CenaPrincipal extends Phaser.Scene {
     this.tendaLivro.setCollisionByProperty({
       collider: true
     }) //Seta as colisões onde tem a propriedade collider: true no tiled map
-    this.physics.add.collider(this.jogador, this.tendaLivro, () => console.log("Colidiu com a tenda do livro")) //Adiciona colisão entre o jogador e a tenda
-    this.physics.add.collider(this.jogador, this.tendaQuiz, () => console.log("Colidiu com a tenda do quiz")) //Adiciona colisão entre o jogador e a tenda
 
     // Cria colisão com a faculdade
     this.faculdade.setCollisionByProperty({
@@ -158,17 +164,7 @@ class CenaPrincipal extends Phaser.Scene {
     }) //Seta as colisões onde tem a propriedade collider: true no tiled map
     this.physics.add.collider(this.jogador, this.cerca, () => console.log("Colidiu"))
 
-
-    // Configuração de câmeras para seguir o personagem principal
-    // // Configuração de câmeras
-    // this.physics.pause()
-    // // Move a câmera da faculdade para o personagem
-    // this.cameras.main.centerOn(550, 200);
-    // this.cameras.main.pan(550, 800, 6000);
-    // // Evento que ativa ao completar o Pan
-    // this.cameras.main.on('camerapancomplete', () => {
-    //   // Câmera começa a seguir personagem
-      this.cameras.main.startFollow(this.jogador, true);
+    this.cameras.main.startFollow(this.jogador, true);
     //   this.physics.resume()
     // });
     this.cameras.main.setBounds(0, 0, 1120, 1120)
@@ -273,7 +269,7 @@ class CenaPrincipal extends Phaser.Scene {
 
         this.case1.setVisible(false);
         this.botaoX.setVisible(false);
-        
+
         //  Dispatch a Scene event
         this.events.emit('showTimer');
         this.events.emit('botaoCase');
@@ -286,6 +282,7 @@ class CenaPrincipal extends Phaser.Scene {
     this.physics.add.collider(this.jogador, this.tina); // Adiciona a colisão entre o persoangem e a Tina
     // this.physics.add.collider(this.tina, this.wallsLayer)
 
+    this.events.emit("mostraTarefaInicial");
     this.fundoTimer = this.add.image(100, 100, 'azul').setScale(0.3).setVisible(false); // Adiciona o fundo de imagem do timer
     this.tempoInicial = 1200; // Define o tempo do timer
     this.textoTempo = this.add.text(55, 80, this.tempoInicial + 's', {
@@ -293,10 +290,20 @@ class CenaPrincipal extends Phaser.Scene {
       fill: '#000000'
     }).setVisible(false); // Adiciona o texto do tempo na tela do jogo
 
+    this.physics.add.collider(this.jogador, this.tendaLivro, () => {
+      console.log("Colidiu com a tenda do livro") //Adiciona colisão entre o jogador e a tenda
+
+      this.scene.wake('livros');
+      this.physics.pause()
+
+    });
+
+    this.physics.add.collider(this.jogador, this.tendaQuiz);
+
   }
 
   update() {
-    
+
     // Configuração Joystick
     if (this.joystick.visible) {
       this.radiansAngleJoystick = this.fixAngle(this.joystick.angle) * Math.PI / 180 || 0;
@@ -326,7 +333,7 @@ class CenaPrincipal extends Phaser.Scene {
       }
     }
     if (this.keyS.isDown || this.cursors.down.isDown) { // Verifica se a tecla S está pressionada
-      this.jogador.setVelocityY(this.defaultVelocity * 50) 
+      this.jogador.setVelocityY(this.defaultVelocity * 50)
       this.joystick.setVisible(false);
     } else if (this.keyW.isDown || this.cursors.up.isDown) { // Verifica se a tecla W está pressionada
       this.jogador.setVelocityY(-this.defaultVelocity * 50)

@@ -23,8 +23,6 @@ class CenaCases extends Phaser.Scene {
         this.abrirCase = this.scene.get('cenaHUD');
         this.primeiraCena = this.scene.get('cenaPrincipal');
         
-
-
         this.abrirCase.events.on('abrirCase', function ()
         {
             this.physics.pause();
