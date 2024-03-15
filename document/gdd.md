@@ -269,7 +269,7 @@ Posto isso, foi entendido que a definição adequada do público alvo aumenta a 
 
 ### 3.2.3. Diversidade e Representatividade dos Personagens
 
-&nbsp;&nbsp;&nbsp;&nbsp; De acordo com o nosso público-alvo, o jogo em questão não apenas oferecerá uma variedade de personagens, mas também buscará causar um impacto social por meio da inclusão e diversidade. A personagem Dra. Tina foi criada para representar uma parcela significativa da população brasileira: pessoas pardas/pretas, conforme indicado pelo Censo de 2022. Nossa abordagem visa não apenas incluir personagens pretos como secundários, mas também posicioná-los como protagonistas da história. Assim, a Dra. Tina desempenha o papel principal ao guiar o personagem principal durante toda a jornada, fornecendo instruções e sendo a figura central por trás de todos os eventos que ocorrem dentro do jogo.
+&nbsp;&nbsp;&nbsp;&nbsp; De acordo com o nosso público-alvo, o jogo em questão não apenas oferecerá uma variedade de personagens, mas também buscará causar um impacto social por meio da inclusão e diversidade. A personagem Dra. Tina foi criada para representar uma parcela significativa da população brasileira: pessoas pardas/pretas, conforme indicado pelo Censo de 2022. Nossa abordagem visa não apenas incluir personagens pretos como secundários, mas também posicioná-los como protagonistas da história. Assim, a Dra. Tina desempenha o papel principal ao guiar o personagem principal durante toda a jornada, fornecendo instruções e sendo a figura central por trás de todos os eventos que ocorrem dentro do jogo. Além disso, o projeto visa abordar outras raças e diferentes culturas nos personagens, e a expectativa é que, com o avanço do projeto, os NPCs sejam desenvolvidos para representar ainda mais parcelas da população sub-representadas.
 
 ## 3.3. Mundo do jogo (sprints 2 e 3)
 
@@ -360,35 +360,28 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 ### 3.3.5. Trilha sonora (sprint 3)
 
-As trilhas sonoras são meios de envolver o usuário no jogo, segundo o artigo 'The Role of Music in Videogames' - O papel da musica nos videogames - o autor, citado no artigo da BBC ¹⁴, diz que a trilha sonora nos jogos são multifuncionais, pois, significam várias coisas para o jogador. Como o aumento da imersão, brechas para mudança na história além de contribuir também para a estética do jogo. Logo, se tornando um fator muito importante para o envolvimento do jogador na história.
+&nbsp;&nbsp;&nbsp;&nbsp;As trilhas sonoras são meios de envolver o usuário no jogo, segundo o artigo "The Role of Music in Videogames" - O papel da música nos videogames - cujo autor, citado no artigo da BBC ¹⁴, afirma que as trilhas sonoras nos jogos são multifuncionais, pois significam várias coisas para o jogador. Isso inclui o aumento da imersão, as brechas para mudanças na história, além de contribuírem também para a estética do jogo, tornando-se assim um fator muito importante para o envolvimento do jogador na narrativa.
 
 <div align="center">
 <sub>Tabela X: Lista de músicas</sub>
 </div>
 
-\# | titulo | ocorrência | autoria
+\# | Título | Ocorrência | Autoria
 --- | --- | --- | ---
-1 | tema de abertura e durante o tutorial | tela de início e cena da faculdade | FoolBoyMedia (CC BY-NC 4.0)
-2 | tema principal | cena da faculdade após a introdução | BloodPixelHero (CC BY 4.0)
+1 | Tema de abertura e durante o tutorial | Tela de início e Cena da faculdade | FoolBoyMedia (CC BY-NC 4.0)
+2 | Tema principal | Cena da faculdade após a introdução | BloodPixelHero (CC BY 4.0)
 
-Tendo como referência o artigo mencionado, as músicas selecionadas foram cuidadosamente escolhidas para transmitir a atmosfera do jogo, visando uma imersão mais profunda por parte do jogador. No menu e no tutorial, optamos por músicas com ritmo mais lento, proporcionando uma introdução tranquila e acolhedora ao universo do jogo. No entanto, à medida que a dinâmica do jogo se intensifica, marcada pelo início do cronômetro e o aumento da velocidade das ações, uma trilha sonora com batidas mais pulsantes é ativada, elevando a energia e a intensidade da experiência de jogo.
+&nbsp;&nbsp;&nbsp;&nbsp;Tendo como referência o artigo mencionado, as músicas selecionadas foram cuidadosamente escolhidas para transmitir a atmosfera do jogo, com o objetivo de proporcionar uma imersão mais profunda por parte do jogador. No menu e no tutorial, optamos por músicas com ritmo mais lento, oferecendo uma introdução tranquila e acolhedora ao universo do jogo. No entanto, à medida que a dinâmica do jogo se intensifica, marcada pelo início do cronômetro e pelo aumento da velocidade das ações, uma trilha sonora com batidas mais pulsantes é ativada, elevando a energia e a intensidade da experiência de jogo.
 
 ## 3.4. Inventário e Bestiário (sprint 3)
 
 ### 3.4.1. Inventário
 
-*\<opcional\> Caso seu jogo utilize itens ou poderes para os personagens obterem, descreva-os aqui, indicando títulos, imagens, meios de obtenção e funções no jogo. Utilize listas ou tabelas para organizar esta seção. Caso utilize material de terceiros em licença Creative Commons, não deixe de citar os autores/fontes.* 
-
-*Exemplo de tabela*
-\# | item |  | como obter | função | efeito sonoro
---- | --- | --- | --- | --- | ---
-1 | moeda | <img src="../assets/coin.png"> | há muitas espalhadas em todas as fases | acumula dinheiro para comprar outros itens | som de moeda
-2 | madeira | <img src="../assets/wood.png"> | há muitas espalhadas em todas as fases | acumula madeira para construir casas | som de madeiras
-3 | ... 
+&nbsp;&nbsp;&nbsp;&nbsp;Não se aplica.
 
 ### 3.4.2. Bestiário
 
-&nbsp;&nbsp;&nbsp;&nbsp; Não se aplica.
+&nbsp;&nbsp;&nbsp;&nbsp;Não se aplica.
 
 ## 3.5. Gameflow (Diagrama de cenas) (sprint 2)
 
@@ -1078,33 +1071,40 @@ openFullScreen() {
 ```
 ### Etapa 3 do desenvolvimento - Implementação do HUD
 
-&nbsp;&nbsp;&nbsp;&nbsp;O HUD do jogo foi criado em uma nova cena situada na classe CenaHUD, contendo os seguintes elementos: timer, pontuação e um quadro de orientação das missões. A seguir é possível visualizar o modo como foi implementado:
+&nbsp;&nbsp;&nbsp;&nbsp;O HUD do jogo foi criado em uma nova cena situada na classe CenaHUD, contendo os seguintes elementos: timer, pontuação, botão de reabertura do case e um quadro de orientação das missões. A seguir é possível visualizar o modo como foi implementado:
 
 ```js
 class CenaHUD extends Phaser.Scene
 {
     constructor ()
     {
-        super({ key: 'cenaHUD', active: true}); //
+        super({ key: 'cenaHUD', active: true}); // Define a key da cena e a mantém ativada desde o início do ciclo de jogo
 
         this.score = 0;
+    }
+    preload () {
+        this.load.image('botaoCaseBaixo', 'assets/botaoCase_baixo.png');
+        this.load.image('botaoCaseAlto', 'assets/botaoCase_alto.png');
     }
 
     create ()
     {
-        //  Our Text object to display the Score
-        //const info = this.add.text(10, 10, 'Score: 0', { font: '48px Arial', fill: '#000000' }).setVisible(false);
-        this.tempoInicial = 300;
-        this.fundo = this.add.rectangle(635, 30, 210, 50, 0xadd8e6).setVisible(false).setAlpha(0.8);
+        this.tempoInicial = 300; // Define o tempo de um ciclo em segundos
+        this.fundo = this.add.rectangle(635, 30, 210, 50, 0xadd8e6).setVisible(false).setAlpha(0.8); 
         this.textoTempo = this.add.text(545, 10,  (this.tempoInicial - this.tempoInicial %60)/60 + 'min ' + this.tempoInicial %60 + 's', { fontSize: '40px', fill: '#000000'}).setVisible(false); // Adiciona o texto do tempo na tela do jogo
-        this.botaoCase = this.add.circle(100, 100, 50, 0xffffff, 1).setVisible(false).setInteractive();
-        
-        //  Grab a reference to the Game Scene
+        this.botaoCaseBaixo = this.add.image(100, 100, 'botaoCaseBaixo').setScale(3).setVisible(false).setInteractive(); // Adiciona o ícone do case abaixado
+        this.botaoCaseAlto = this.add.image(100, 100, 'botaoCaseAlto').setScale(3).setVisible(false).setInteractive(); // Adiciona o ícone do case levantado
+        this.botaoCase = this.add.circle(100, 100, 70, 0xffffff, 1).setVisible(false).setInteractive().setAlpha(0.1); // Adiciona um círculo para interação com os ícones
+
+        //  Busca a cenaPrincipal como referência 
         const cenaAtual = this.scene.get('cenaPrincipal');
 
-        //  Listen for events from it
+        //  Monitora eventos da cenaPrincipal
         cenaAtual.events.on('showTimer', function ()
         {
+            // setTimeout( () => {
+            // }, this.tempoInicial * 1000); // função para chamar tela final após o tempo de jogo (A SER IMPLEMENTADO)
+
             this.fundo.setVisible(true).setStrokeStyle(2, 0x1a65ac)
 
             this.textoTempo.setVisible(true)
@@ -1113,7 +1113,9 @@ class CenaHUD extends Phaser.Scene
                 callback: () => {
                     //   this.fundoTimer.setVisible(true);
                     this.textoTempo.setVisible(true);
-                    this.tempoInicial -= 1; // Decrementa o contador
+                    if(this.tempoInicial >0) {
+                        this.tempoInicial -= 1; // Decrementa o contador
+                    }
                     this.textoTempo.setText((this.tempoInicial - this.tempoInicial %60)/60 + 'min ' + this.tempoInicial %60 + 's')
                     // console.log('time: ',time/1000)
                     if (this.tempoInicial == 99) {
@@ -1129,24 +1131,410 @@ class CenaHUD extends Phaser.Scene
               });
         }, this);
 
-        
-
-        cenaAtual.events.on('botaoCase', function ()
+        cenaAtual.events.on('botaoCase', function () // Define o evento 'botaoCase'
         {
             this.botaoCase.setVisible(true);
+            this.botaoCaseBaixo.setVisible(true);
+            this.botaoCase.on("pointerover", () => { // Troca o ícone de reabertura do case quando o mouse está em cima
+                this.botaoCaseBaixo.setVisible(false);
+                this.botaoCaseAlto.setVisible(true);
+            });
+
+            this.botaoCaseBaixo.setVisible(true);
             console.log("teste1");
-            this.botaoCase.on("pointerdown", () => {
+            this.botaoCase.on("pointerout", () => { // Retorna o ícone de reabertura do case quando o mouse está em cima
+                this.botaoCaseBaixo.setVisible(true);
+                this.botaoCaseAlto.setVisible(false);
+            });
+
+            this.botaoCase.on("pointerdown", () => { // Disparo da cena 'abrirCase' quando clicar no botão do case
+                cenaAtual.physics.pause();
                 this.events.emit('abrirCase');
                 console.log("teste2");
-            })
+            });
         }, this);
-        
     }
 }
+
 ``` 
 
-## Etapa 4 do desenvolvimento - Refatoração do Código - isa
-## Etapa 5 do desenvolvimento - Implementação da Trilha e Efeitos Sonoros - GAB S
+## Etapa 4 do desenvolvimento - Refatoramento do Código
+## Etapa 5 do desenvolvimento - Implementação da Trilha e Efeitos Sonoros / Tela de loading
+Para implementar o som, primeiramente foi preciso escolher os sons. Para isso, foi baixados sons do site "FreeSound" com licenças Creative Commons. Os sons Creative Commons são importantes para evitar problemas com direitos autorais.
+Após isso, o aúdio foi editado no software "Audacity", para que o som fique mais rápido nos segundos finais do jogo. Em seguida, os assets de som foram carregados no método `preload()`
+````js
+    this.load.audio('musicaIntroducao', 'assets/sounds/IntroMusic.wav') // Música de introdução
+    this.load.audio('musicaJogo', 'assets/sounds/gameMusicLoopWithEndGame.mp3') // Música de jogo quando o 
+````
+Com essas alterações, o tempo de carregamento do jogo aumentou consideravelmente, por conta das músicas serem mais pesadas que as imagens. Para resolver isso, uma tela de carregamento foi implementada utilizando os eventos `this.load.on('progress', callback(value))` e `this.load.on('complete', callback(loadInfos))`. A função de 'callback' no progresso recebe como parâmetro um valor de 0 até 1, que, no nosso caso, foi multiplicado pela largura da barra de progresso para montar a animação. Já o evento 'complete' destrói os elementos da tela de carregamento.
+````js
+    this.boxBarraDeCarregamento = this.add.rectangle(240, 600, 800, 100, 0x000000, 0.8).setStrokeStyle(4, 0xFFFFFF).setOrigin(0, 0);
+    this.barraCarregamento = this.add.rectangle(250, 610, 0, 80, 0xFFFFFF, 0.8).setOrigin(0, 0);
+    this.carregandoTexto = this.add.text(240, 550, 'Carregando...', {
+      fontSize: '40px',
+      fill: '#FFFFFF'
+    }).setOrigin(0, 0);
+    this.load.on('complete', (params) => {
+      this.boxBarraDeCarregamento.destroy();
+      this.barraCarregamento.destroy();
+      this.carregandoTexto.destroy();
+    });
+    this.load.on('progress', (value) => {
+      this.barraCarregamento.width = 780 * value;
+    });
+````
+Após isso, o jogo inicia com a música de introdução e quando o primeiro ciclo de jogo - após fechar o caso dado pela Dra. Tina - começa, a música de introdução é pausada e a música com mais batidas é iniciada.
+````js
+this.musicaIntroducao = this.sound.add('musicaIntroducao', {
+    loop: true
+}); // Adiciona a música de introdução
+this.musicaJogo = this.sound.add('musicaJogo', {
+    loop: false,
+    volume: 0.5 //Volume ajustado porque essa música é mais alta
+}); // Adiciona a música de jogo
+this.musicaIntroducao.play(); // Inicia a música de introdução
+````
+Por fim, quando o caso é fechado a música atual é pausada e a nova música se inicia
+````js
+this.botaoX.on("pointerdown", () => {
+    this.musicaIntroducao.stop(); // Para a música de introdução
+    this.musicaJogo.play(); // Inicia a música de jogo
+
+});
+````
+## Etapa 6 do desenvolvimento - Tendas
+
+&nbsp;&nbsp;&nbsp;&nbsp;Nesta sprint, adicionamos cenas `livros.js` e `quiz.js` para implementarmos as mecânicas necessárias para a dinâmica do jogo. Estas cenas são chamadas na `cenaPrincipal.js` com a interação do jogador com o ambiente.
+
+&nbsp;&nbsp;&nbsp;&nbsp;Vejamos a implementação da cena `livros.js`, chamada quando o jogador entra em contato com a tenda de livros, a seguir: 
+
+``` js
+class Livros extends Phaser.Scene {
+    constructor() {
+        super({
+            key: 'livros',
+        })
+    }
+
+    preload() {
+        // Carrega as imagens a serem utilizadas
+        this.load.image('livroVerde', 'assets/livroVerde.png');
+        this.load.image('livroAmarelo', 'assets/livroAmarelo.png');
+        this.load.image('livroVermelho', 'assets/livroVermelho.png');
+        this.load.image('livroVerdeAberto', 'assets/livroVerdeAberto.png');
+        this.load.image('livroAmareloAberto', 'assets/livroAmareloAberto.png');
+        this.load.image('livroVermelhoAberto', 'assets/livroVermelhoAberto.png');
+        this.load.image('backgroundLivros', 'assets/backgroundLivros.png');
+    }
+
+    create() {
+            // Adiciona o background e livros a serem apresentados na cena
+            this.add.image(0, 0, 'backgroundLivros').setOrigin(0, 0).setScale(2);
+            this.livroVerde = this.add.image(100, 200, 'livroVerde').setOrigin(0,0).setScale(1.6).setInteractive();
+            this.livroAmarelo = this.add.image(500, 200, 'livroAmarelo').setOrigin(0,0).setScale(1.6).setInteractive();
+            this.livroVermelho = this.add.image(900, 200, 'livroVermelho').setOrigin(0,0).setScale(1.6).setInteractive();
+
+            this.livroVerde.on("pointerdown", () => { // Define função que chama o livro verde aberto quando clicar no livro verde fechado
+                this.livroVerde.setVisible(false);
+                this.livroAmarelo.setVisible(false);
+                this.livroVermelho.setVisible(false);
+                this.livroVerdeAberto = this.add.image(640, 350, 'livroVerdeAberto').setScale(2.6);
+            });
+
+            this.livroAmarelo.on("pointerdown", () => { // Define função que chama o livro amarelo aberto quando clicar no livro amarelo fechado
+                this.livroVerde.setVisible(false);
+                this.livroAmarelo.setVisible(false);
+                this.livroVermelho.setVisible(false);
+                this.livroAmareloAberto = this.add.image(640, 350, 'livroAmareloAberto').setScale(2.6);
+            });
+
+            this.livroVermelho.on("pointerdown", () => { // Define função que chama o livro vermelho aberto quando clicar no livro vermelho fechado
+                this.livroVerde.setVisible(false);
+                this.livroAmarelo.setVisible(false);
+                this.livroVermelho.setVisible(false);
+                this.livroVermelhoAberto = this.add.image(640, 350, 'livroVermelhoAberto').setScale(2.6);
+            });
+    }        
+}
+```
+&nbsp;&nbsp;&nbsp;&nbsp;O código de cena se inicia com a criação de uma classe Livros e definição de sua key para referenciação:
+
+``` js
+class Livros extends Phaser.Scene {
+    constructor() {
+        super({
+            key: 'livros',
+        })
+    }
+}
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;Partimos para o carregamento das imagens a serem utilizadas nesta cena:
+``` js
+preload() {
+        // Carrega as imagens a serem utilizadas
+        this.load.image('livroVerde', 'assets/livroVerde.png');
+        this.load.image('livroAmarelo', 'assets/livroAmarelo.png');
+        this.load.image('livroVermelho', 'assets/livroVermelho.png');
+        this.load.image('livroVerdeAberto', 'assets/livroVerdeAberto.png');
+        this.load.image('livroAmareloAberto', 'assets/livroAmareloAberto.png');
+        this.load.image('livroVermelhoAberto', 'assets/livroVermelhoAberto.png');
+        this.load.image('backgroundLivros', 'assets/backgroundLivros.png');
+    }
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;Com as imagens carregadas, seguimos para a implementação dessas imagens dentro do jogo através do método `this.add.image()` e os atribuindo às variáveis `livroVerde`, `livroAmarelo`, `livroVermelho`, responsáveis por segurar suas informações. Vemos como isso é feito abaixo:
+
+``` js
+create() {
+            // Adiciona o background e livros a serem apresentados na cena
+            this.add.image(0, 0, 'backgroundLivros').setOrigin(0, 0).setScale(2);
+            this.livroVerde = this.add.image(100, 200, 'livroVerde').setOrigin(0,0).setScale(1.6).setInteractive();
+            this.livroAmarelo = this.add.image(500, 200, 'livroAmarelo').setOrigin(0,0).setScale(1.6).setInteractive();
+            this.livroVermelho = this.add.image(900, 200, 'livroVermelho').setOrigin(0,0).setScale(1.6).setInteractive();
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;Ainda no método `create()` da classe `Livros`, atribuímos funções para as interações de clique entre o jogador e os livros criados em `livroVerde`, `livroAmarelo`, `livroVermelho`. Nestas funções, definidas em `() => {}`, um livro é aberto, a depender do selecionado. Segue a implementação da lógica:
+
+``` js
+this.livroVerde.on("pointerdown", () => { // Define função que chama o livro verde aberto quando clicar no livro verde fechado
+                this.livroVerde.setVisible(false);
+                this.livroAmarelo.setVisible(false);
+                this.livroVermelho.setVisible(false);
+                this.livroVerdeAberto = this.add.image(640, 350, 'livroVerdeAberto').setScale(2.6);
+            });
+
+            this.livroAmarelo.on("pointerdown", () => { // Define função que chama o livro amarelo aberto quando clicar no livro amarelo fechado
+                this.livroVerde.setVisible(false);
+                this.livroAmarelo.setVisible(false);
+                this.livroVermelho.setVisible(false);
+                this.livroAmareloAberto = this.add.image(640, 350, 'livroAmareloAberto').setScale(2.6);
+            });
+
+            this.livroVermelho.on("pointerdown", () => { // Define função que chama o livro vermelho aberto quando clicar no livro vermelho fechado
+                this.livroVerde.setVisible(false);
+                this.livroAmarelo.setVisible(false);
+                this.livroVermelho.setVisible(false);
+                this.livroVermelhoAberto = this.add.image(640, 350, 'livroVermelhoAberto').setScale(2.6);
+            });
+```
+&nbsp;&nbsp;&nbsp;&nbsp;Agora, analisaremos a implementação da cena `quiz.js`, exposta quando o jogador entra em contato com a tenda de quiz, a seguir: 
+
+``` js
+class Quiz extends Phaser.Scene {
+    constructor() {
+        super({
+            key: 'quiz', // Chave da cena
+            active: true // Define a cena como ativa
+        })
+    }
+
+    preload() {
+        // Pré-carregamento de imagens
+        this.load.image('x', 'assets/botaoX.png'); // Carrega a imagem do botão "X"
+        this.load.image('simbolo', 'assets/simboloquiz.png'); // Carrega a imagem do símbolo do quiz
+    }
+
+    create() {
+        this.primeiraCena = this.scene.get('cenaPrincipal'); // Obtém a referência para a cena 'cenaPrincipal'
+        this.scene.sleep('quiz'); // Pausa a execução da cena atual ('quiz')
+
+        // Adicionando o fundo branco e a borda retangulas
+        const bgWhite = this.add.rectangle(gameDimensions.width / 2, gameDimensions.height / 2, 700, 500, 0xffffff).setStrokeStyle(2, 0x000000);
+
+        // Centralizando a imagem do símbolo
+        this.add.image(bgWhite.x, bgWhite.y - 130, 'simbolo').setScale(0.5);
+
+        // Adicionando a pergunta à cena
+        this.add.text(bgWhite.x, bgWhite.y - 40, 'O que deve ser feito para evitar uma queimadura na pele ao encostar em uma superfície quente na cozinha?', {
+            fontSize: '20px',
+            color: '#000',
+            fontFamily: 'Arial',
+            align: 'center',
+            wordWrap: {
+                width: 500
+            }
+        }).setOrigin(0.5);
+
+        // Adicionando as alternativas à cena e suas aparências na interface
+        const alternativa1 = this.add.text(bgWhite.x, bgWhite.y + 60, 'Cozinhar enquanto conversa distraidamente com alguém', {
+            fontSize: '23px',
+            color: '#000',
+            fontFamily: 'Arial',
+            backgroundColor: '#008CCC',
+            padding: {
+                x: 10,
+                y: 10
+            },
+            wordWrap: {
+                width: 500
+            },
+            align: 'center'
+        }).setOrigin(0.5).setInteractive().on('pointerdown', () => this.verificarResposta('Cozinhar enquanto conversa distraidamente com alguém'));
+
+        const alternativa2 = this.add.text(bgWhite.x, bgWhite.y + 140, 'Usar luvas de proteção térmica de alta qualidade', {
+            fontSize: '21px',
+            color: '#000',
+            fontFamily: 'Arial',
+            backgroundColor: '#FFC107',
+            padding: {
+                x: 10,
+                y: 10
+            },
+            wordWrap: {
+                width: 500
+            },
+            align: 'center'
+        }).setOrigin(0.5).setInteractive().on('pointerdown', () => this.verificarResposta('Usar luvas de proteção térmica de alta qualidade'));
+
+        // Adicionando a explicação à cena e configurações estéticas
+        this.explicacaoText = this.add.text(bgWhite.x, bgWhite.y + 200, '', {
+            fontSize: '16px',
+            color: '#000',
+            fontFamily: 'Arial',
+            align: 'center',
+            wordWrap: {
+                width: 500
+            }
+        }).setOrigin(0.5);
+
+        // Adicionando o botão "X" para voltar à cena principal
+        const botaoX = this.add.image(bgWhite.x + 300, bgWhite.y - 200, 'x').setScale(0.3).setInteractive();
+        botaoX.on('pointerdown', () => {
+            // Pausa a cena atual ('quiz')
+            this.scene.sleep('quiz');
+            // Reinicia a cena para cada vez que ocorre o overlap com a tenda o quiz voltar a sua forma padrão para que o jogador possa jogar de novo
+            this.scene.restart();
+            // Resume a física na cena 'cenaPrincipal', é útil se a cena principal contiver objetos físicos em movimento ou interações físicas que precisem ser retomadas após o término do quiz
+            this.primeiraCena.physics.resume();
+        });
+    }
+
+    verificarResposta(resposta) {
+        // Verifica se a resposta está correta
+        if (resposta === 'Usar luvas de proteção térmica de alta qualidade') {
+            // Define a mensagem de explicação para resposta correta
+            this.explicacaoText.setText('Parabéns! Usar luvas de proteção térmica de alta qualidade evita acidentes graves na cozinha');
+            // Define a cor do texto como verde
+            this.explicacaoText.setColor('#008000');
+        } else {
+            // Define a mensagem de explicação para resposta incorreta
+            this.explicacaoText.setText('Ops! Essa resposta está incorreta. Estar distraído enquanto cozinha pode gerar acidentes graves.');
+            // Define a cor do texto como vermelho
+            this.explicacaoText.setColor('#FF0000');
+        }
+    }
+}
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;Nesta parte, uma nova classe `Quiz` é definida, estendendo a classe `Phaser.Scene`. O construtor é utilizado para configurar a cena do jogo, onde a chave da cena é definida como 'quiz' e a cena é configurada como ativa:
+
+
+``` js
+class Quiz extends Phaser.Scene {
+    constructor() {
+        super({
+            key: 'quiz', // Chave da cena
+            active: true // Define a cena como ativa
+        })
+    }
+}
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;Na próxima seção, os recursos necessários para a cena do quiz são pré-carregados. Aqui, duas imagens são carregadas: uma para o botão "X" e outra para o símbolo do quiz.
+
+``` js
+    preload() {
+        // Pré-carregamento de imagens
+        this.load.image('x', 'assets/botaoX.png'); // Carrega a imagem do botão "X"
+        this.load.image('simbolo', 'assets/simboloquiz.png'); // Carrega a imagem do símbolo do quiz
+    }
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;Nesta parte, a cena do quiz é criada. Isso inclui a definição da estética visual, como cores e detalhes de aparência, a exibição da pergunta, as opções de resposta e a interatividade para verificar as respostas dos jogadores.
+
+&nbsp;&nbsp;&nbsp;&nbsp;No método `create()`, primeiro, é obtida uma referência para a cena chamada `'cenaPrincipal'` utilizando o método `this.scene.get()`. Em seguida, a execução da cena atual, identificada como `'quiz'`, é pausada usando `this.scene.sleep('quiz')`. Essa pausa interrompe temporariamente a renderização e a lógica associada à cena do quiz.
+
+``` js
+    create() {
+        this.primeiraCena = this.scene.get('cenaPrincipal'); // Obtém a referência para a cena 'cenaPrincipal'
+        this.scene.sleep('quiz'); // Pausa a execução da cena atual ('quiz')
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;Neste código, é criado um fundo branco retangular com uma borda preta no centro da tela, com dimensões de 700 por 500 pixels. Em seguida, uma imagem do símbolo é adicionada à cena, centralizada verticalmente acima do fundo branco. Por fim, um texto contendo a pergunta é exibido verticalmente centralizado acima do fundo branco, com formatação de fonte apropriada e quebra de linha configurada para 500 pixels.
+
+``` js
+        // Adicionando o fundo branco e a borda retangulas
+        const bgWhite = this.add.rectangle(gameDimensions.width / 2, gameDimensions.height / 2, 700, 500, 0xffffff).setStrokeStyle(2, 0x000000);
+
+        // Centralizando a imagem do símbolo
+        this.add.image(bgWhite.x, bgWhite.y - 130, 'simbolo').setScale(0.5);
+
+        // Adicionando a pergunta à cena
+        this.add.text(bgWhite.x, bgWhite.y - 40, 'O que deve ser feito para evitar uma queimadura na pele ao encostar em uma superfície quente na cozinha?', {
+            fontSize: '20px',
+            color: '#000',
+            fontFamily: 'Arial',
+            align: 'center',
+            wordWrap: {
+                width: 500
+            }
+        }).setOrigin(0.5);
+```
+&nbsp;&nbsp;&nbsp;&nbsp;São adicionadas duas opções de resposta à cena do quiz. Cada opção é representada por um texto exibido na interface. As opções são estilizadas com diferentes tamanhos de fonte, cores de texto e de fundo, além de um espaçamento interno. O texto é centralizado na tela e possui quebra de linha configurada para 500 pixels. Além disso, as opções são configuradas como interativas, permitindo que o jogador clique nelas. Quando uma opção é clicada, a função `verificarResposta()` é chamada, passando o texto da opção como argumento para determinar se a resposta é correta ou não.
+``` js
+        // Adicionando as alternativas à cena e suas aparências na interface
+        const alternativa1 = this.add.text(bgWhite.x, bgWhite.y + 60, 'Cozinhar enquanto conversa distraidamente com alguém', {
+            fontSize: '23px',
+            color: '#000',
+            fontFamily: 'Arial',
+            backgroundColor: '#008CCC',
+            padding: {
+                x: 10,
+                y: 10
+            },
+            wordWrap: {
+                width: 500
+            },
+            align: 'center'
+        }).setOrigin(0.5).setInteractive().on('pointerdown', () => this.verificarResposta('Cozinhar enquanto conversa distraidamente com alguém'));
+
+        const alternativa2 = this.add.text(bgWhite.x, bgWhite.y + 140, 'Usar luvas de proteção térmica de alta qualidade', {
+            fontSize: '21px',
+            color: '#000',
+            fontFamily: 'Arial',
+            backgroundColor: '#FFC107',
+            padding: {
+                x: 10,
+                y: 10
+            },
+            wordWrap: {
+                width: 500
+            },
+            align: 'center'
+        }).setOrigin(0.5).setInteractive().on('pointerdown', () => this.verificarResposta('Usar luvas de proteção térmica de alta qualidade'));
+    }
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;Por fim, a função `verificarResposta` é chamada quando uma resposta é selecionada pelo jogador. Ela verifica se a resposta está correta e exibe uma mensagem correspondente na tela, indicando se a resposta está correta ou incorreta.
+
+
+``` js
+    verificarResposta(resposta) {
+        // Verifica se a resposta está correta
+        if (resposta === 'Usar luvas de proteção térmica de alta qualidade') {
+            // Define a mensagem de explicação para resposta correta
+            this.explicacaoText.setText('Parabéns! Usar luvas de proteção térmica de alta qualidade evita acidentes graves na cozinha');
+            // Define a cor do texto como verde
+            this.explicacaoText.setColor('#008000');
+        } else {
+            // Define a mensagem de explicação para resposta incorreta
+            this.explicacaoText.setText('Ops! Essa resposta está incorreta. Estar distraído enquanto cozinha pode gerar acidentes graves.');
+            // Define a cor do texto como vermelho
+            this.explicacaoText.setColor('#FF0000');
+        }
+    }
+```
 
 ## 4.4. Desenvolvimento final do MVP (sprint 4)
 

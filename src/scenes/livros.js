@@ -56,6 +56,7 @@ class Livros extends Phaser.Scene {
             // Inicie a cena principal passando os dados relevantes do estado da cena principal
             this.events.emit('mudaTarefaParaQuiz');
             this.scene.sleep('livros');
+            this.scene.restart();
             this.primeiraCena.physics.resume()
         });
 
