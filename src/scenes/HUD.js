@@ -4,7 +4,6 @@ class CenaHUD extends Phaser.Scene
     {
         super({ key: 'cenaHUD', active: true}); // Define a key da cena e a mantém ativada desde o início do ciclo de jogo
 
-        this.score = 0;
     }
     preload () {
         this.load.image('botaoCaseBaixo', 'assets/botaoCase_baixo.png');

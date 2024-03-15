@@ -1629,8 +1629,7 @@ class Quiz extends Phaser.Scene {
 
 &nbsp;&nbsp;&nbsp;&nbsp;Após a interação com o botão "Jogar" da tela anterior, "menu.js", a tela "cenaPrincipal.js" é carregada e a lógica do jogo é inicializada. Nessa etapa também existem testes para o précarregamento de assets, mas o foco está mais nas mecânicas do personagem e em como o mundo interage com ele.
 
-&nbsp;&nbsp;&nbsp;&nbsp;Testes como a verificação do carregamento do mapa, a criação do joystick virtual e a colisão com paredes são feitos nessa parte. Como "cenaPrincipal.js" será um arquivo com mais código do que os outros, mais testes serão adicionados com a implementação de novas mecânicas.
-
+&nbsp;&nbsp;&nbsp;&nbsp;Testes como a verificação do carregamento do mapa, a criação do joystick virtual e a colisão com o cenário são feitos nessa parte. Como "cenaPrincipal.js" será um arquivo com mais código do que os outros, mais testes serão adicionados com a implementação de novas mecânicas.
 
 <div align="center">
 <sub>Tabela 6: Casos de Testes da Cena cenaPrincipal.js</sub>
@@ -1648,10 +1647,35 @@ class Quiz extends Phaser.Scene {
 8 | O personagem está na posição inicial | Verificar se a posição inicial do personagem está correta | O personagem está na posição inicial correta |
 9 | Posição do Joystick definida | Verificar se a posição do joystick é ajustada corretamente de acordo com a posição da câmera | A posição do joystick está sincronizada com a posição da câmera |
 
+<div align="center">
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;Com o progressivo desenvolvimento do código, cenas extras foram adicionadas: "HUD.js", para carregar elemenentos do HUD, "cases.js", para processar a lógica dos cases, "livros.js", para processar a lógica da tenda de livros e "quiz.js" para processar a lógica do quiz da tenda de quiz. Com isso, surge a necessidade de atualizar os casos de teste.
+
+&nbsp;&nbsp;&nbsp;&nbsp;Começando a falar do HUD, elementos essenciais do nosso jogo, alguns casos de teste possuem uma importância maior como verificar o carregamento do elementos, sua posição e atualização dinâmica de seus valores.
+
+<div align="center">
+<sub>Tabela 7: Casos de Testes da Cena HUD.js</sub>
+</div>
+
+\# | Pré-condição | Descrição do Teste | Pós-condição
+|------|---------|--- |--- |
+1 | Carregamento de imagens bem-sucedido |	Verificar se as imagens foram carregadas corretamente |	Imagens carregadas corretamente |
+2 | Elementos de HUD criados corretamente |	Verificar se os elementos de HUD estão posicionados e visíveis corretamente | Elementos de HUD estão criados e posicionados corretamente |
+3 | Eventos de exibição da Tarefa funcionando |	Verificar se o evento 'mostraTarefaInicial' exibe corretamente as informações da tarefa | Eventos de exibição da Tarefa funcionam corretamente |
+4 | Colisão com cenário inicializada | Testar colisão do personagem com as partes do cenário | O personagem não atravessa partes do cenário e colide corretamente |
+5 | Evento de exibição do Timer funcionando | Verificar se o evento 'showTimer' atualiza corretamente o timer e mostra os elementos relacionados ao tempo |	Evento de exibição do Timer funciona corretamente |
+6 | Evento do botão Case foi carregado |	Verificar se o botão 'botaoCase' exibe corretamente as imagens e responde aos cliques corretamente |	Botão 'botaoCase' foi carregado corretamente e está interativo |
+
+&nbsp;&nbsp;&nbsp;&nbsp;Começando a falar do HUD, elementos essenciais do nosso jogo, alguns casos de teste possuem uma importância maior como verificar o carregamento do elementos, sua posição e atualização dinâmica de seus valores.
 
 <div align="center">
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 </div>
+
+
+
 
 &nbsp;&nbsp;&nbsp;&nbsp;Por fim, a criação dos casos de teste é muito importante ao longo de um projeto de software e trás vários benefícios, como: auxiliar na garantia de qualidade, reduzir erros, facilitar a manutenção e promover a evolução do código garantindo estabilidade e integridade.
 
