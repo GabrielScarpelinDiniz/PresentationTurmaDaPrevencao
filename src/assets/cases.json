@@ -1,8 +1,17 @@
 [
     {
-        "nome": "Matheus"
-    },
-    {
-        
+        "nome": "RONALD MEQUI DONALD",
+        "fotoSrc": "https://avatars.githubusercontent.com/u/62800000?v=4",
+        "desc": "O <bold>Cozinheiro</bold> de uma de uma hamburgueria, durante a preparação de uma receita, teve <bold>contato</bold> com a frigideira <bold>quente</bold>, queimando a palma da mão.",
+        "sintomas": "Apresenta vermelhidão na região, inchaço e dor local suportável.",
+        "classificacao": "PRIMEIRO GRAU",
+        "quiz": {
+            "pergunta": "O que deve ser feito para evitar uma queimadura na pele ao encostar em uma superfície quente na cozinha?",
+            "alternativas": [
+                "Cozinhar enquanto conversa distraidamente com alguém",
+                "Usar luvas de proteção térmica de alta qualidade"
+            ],
+            "alternativaCorreta": 1
+        }
     }
 ]

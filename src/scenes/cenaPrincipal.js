@@ -50,7 +50,7 @@ class CenaPrincipal extends Phaser.Scene {
       frameHeight: 32
     });
 
-
+    this.load.json('casesData', 'assets/cases.json');
     this.load.image('case1', 'assets/spritesheets/prontuario1.png');
 
     //Carrega elementos principais do mapa
@@ -77,7 +77,9 @@ class CenaPrincipal extends Phaser.Scene {
     this.load.tilemapTiledJSON('mapa', 'assets/tilemaps/novoMapa.json');
   }
 
-  create(time) {
+  create() {
+    this.caseData = this.cache.json.get('casesData');
+
     // Adiciona a música de introdução
     this.musicaIntroducao = this.sound.add('musicaIntroducao', {
       loop: true
@@ -250,37 +252,43 @@ class CenaPrincipal extends Phaser.Scene {
     this.botaoX = this.add.sprite(this.case1.x + 75, this.case1.y - 92, 'botaoX').setInteractive().setScale(0.1).setVisible(false).setScrollFactor(0); // Adiciona a imagem do botao, quando ocorre esse overlap
 
     this.overlapCollider;
-    this.overlapTriggered = false;
+    this.objetoCaso = {
+      caso: null,
+      status: false
+    };
 
     this.tinaCollider = this.physics.add.overlap(this.tina, this.jogador, () => { // Cria o overlap entre o jogador principal e a Tina
       console.log('teste'); // Console log para verificar o funcionamento do overlap
-      this.physics.pause()
-      this.case1.setVisible(true)
-      this.botaoX.setVisible(true)
+      if (this.objetoCaso.status === false) {
+        console.log(this.caseData)
+        this.physics.pause()
+        this.case1.setVisible(true)
+        this.botaoX.setVisible(true)
 
-      this.botaoX.on("pointerover", () => {
-        // Evento de passar o mouse sobre o botaoJogar
-        this.input.setDefaultCursor("pointer") // Cursor vira mãozinha
-      });
-      this.botaoX.on("pointerout", () => {
-        // Evento de retirar o mouse do botaoJogar
-        this.input.setDefaultCursor("default") // Cursor vira setinha
-      });
+        this.botaoX.on("pointerover", () => {
+          // Evento de passar o mouse sobre o botaoJogar
+          this.input.setDefaultCursor("pointer") // Cursor vira mãozinha
+        });
+        this.botaoX.on("pointerout", () => {
+          // Evento de retirar o mouse do botaoJogar
+          this.input.setDefaultCursor("default") // Cursor vira setinha
+        });
 
-      // Evento disparado ao clicar no botão (Código temporário apenas para demonstração da funcionalidade na sprint 1)
-      this.botaoX.on("pointerdown", () => {
-        this.physics.resume()
+        // Evento disparado ao clicar no botão (Código temporário apenas para demonstração da funcionalidade na sprint 1)
+        this.botaoX.on("pointerdown", () => {
+          this.physics.resume()
 
-        this.case1.setVisible(false);
-        this.botaoX.setVisible(false);
+          this.case1.setVisible(false);
+          this.botaoX.setVisible(false);
 
-        //  Dispatch a Scene event
-        this.events.emit('showTimer');
-        this.events.emit('botaoCase');
-        this.musicaIntroducao.stop(); // Para a música de introdução
-        this.musicaJogo.play(); // Inicia a música de jogo
-
-      }, this.physics.world.removeCollider(this.tinaCollider));
+          //  Dispatch a Scene event
+          this.events.emit('showTimer');
+          this.events.emit('botaoCase');
+          this.musicaIntroducao.stop(); // Para a música de introdução
+          this.musicaJogo.play(); // Inicia a música de jogo
+          this.objetoCaso.status = true;
+        });
+      }
     });
 
     this.physics.add.collider(this.jogador, this.tina); // Adiciona a colisão entre o persoangem e a Tina
@@ -306,12 +314,12 @@ class CenaPrincipal extends Phaser.Scene {
 
     this.physics.add.collider(this.jogador, this.tendaQuiz, () => {
       console.log("Colidiu com a tenda do quiz") //Adiciona colisão entre o jogador e a tenda
-
-      //chama a cena para mostrar o quiz
-      this.scene.wake('quiz');
-      // pausa a física do jogo enquanto a cena do quiz estiver exposta
-      this.physics.pause()
-
+      if (this.objetoCaso.status === true){
+        //chama a cena para mostrar o quiz
+        this.scene.wake('quiz');
+        // pausa a física do jogo enquanto a cena do quiz estiver exposta
+        this.physics.pause()
+      }
     });
   }
 
