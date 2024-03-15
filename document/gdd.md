@@ -1231,6 +1231,7 @@ class Livros extends Phaser.Scene {
             key: 'livros',
         })
     }
+}
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;Partimos para o carregamento das imagens a serem utilizadas nesta cena:
@@ -1282,8 +1283,223 @@ this.livroVerde.on("pointerdown", () => { // Define função que chama o livro v
                 this.livroVermelhoAberto = this.add.image(640, 350, 'livroVermelhoAberto').setScale(2.6);
             });
 ```
+&nbsp;&nbsp;&nbsp;&nbsp;Agora, analisaremos a implementação da cena `quiz.js`, exposta quando o jogador entra em contato com a tenda de quiz, a seguir: 
+
+``` js
+class Quiz extends Phaser.Scene {
+    constructor() {
+        super({
+            key: 'quiz', // Chave da cena
+            active: true // Define a cena como ativa
+        })
+    }
+
+    preload() {
+        // Pré-carregamento de imagens
+        this.load.image('x', 'assets/botaoX.png'); // Carrega a imagem do botão "X"
+        this.load.image('simbolo', 'assets/simboloquiz.png'); // Carrega a imagem do símbolo do quiz
+    }
+
+    create() {
+        this.primeiraCena = this.scene.get('cenaPrincipal'); // Obtém a referência para a cena 'cenaPrincipal'
+        this.scene.sleep('quiz'); // Pausa a execução da cena atual ('quiz')
+
+        // Adicionando o fundo branco e a borda retangulas
+        const bgWhite = this.add.rectangle(gameDimensions.width / 2, gameDimensions.height / 2, 700, 500, 0xffffff).setStrokeStyle(2, 0x000000);
+
+        // Centralizando a imagem do símbolo
+        this.add.image(bgWhite.x, bgWhite.y - 130, 'simbolo').setScale(0.5);
+
+        // Adicionando a pergunta à cena
+        this.add.text(bgWhite.x, bgWhite.y - 40, 'O que deve ser feito para evitar uma queimadura na pele ao encostar em uma superfície quente na cozinha?', {
+            fontSize: '20px',
+            color: '#000',
+            fontFamily: 'Arial',
+            align: 'center',
+            wordWrap: {
+                width: 500
+            }
+        }).setOrigin(0.5);
+
+        // Adicionando as alternativas à cena e suas aparências na interface
+        const alternativa1 = this.add.text(bgWhite.x, bgWhite.y + 60, 'Cozinhar enquanto conversa distraidamente com alguém', {
+            fontSize: '23px',
+            color: '#000',
+            fontFamily: 'Arial',
+            backgroundColor: '#008CCC',
+            padding: {
+                x: 10,
+                y: 10
+            },
+            wordWrap: {
+                width: 500
+            },
+            align: 'center'
+        }).setOrigin(0.5).setInteractive().on('pointerdown', () => this.verificarResposta('Cozinhar enquanto conversa distraidamente com alguém'));
+
+        const alternativa2 = this.add.text(bgWhite.x, bgWhite.y + 140, 'Usar luvas de proteção térmica de alta qualidade', {
+            fontSize: '21px',
+            color: '#000',
+            fontFamily: 'Arial',
+            backgroundColor: '#FFC107',
+            padding: {
+                x: 10,
+                y: 10
+            },
+            wordWrap: {
+                width: 500
+            },
+            align: 'center'
+        }).setOrigin(0.5).setInteractive().on('pointerdown', () => this.verificarResposta('Usar luvas de proteção térmica de alta qualidade'));
+
+        // Adicionando a explicação à cena e configurações estéticas
+        this.explicacaoText = this.add.text(bgWhite.x, bgWhite.y + 200, '', {
+            fontSize: '16px',
+            color: '#000',
+            fontFamily: 'Arial',
+            align: 'center',
+            wordWrap: {
+                width: 500
+            }
+        }).setOrigin(0.5);
+
+        // Adicionando o botão "X" para voltar à cena principal
+        const botaoX = this.add.image(bgWhite.x + 300, bgWhite.y - 200, 'x').setScale(0.3).setInteractive();
+        botaoX.on('pointerdown', () => {
+            // Pausa a cena atual ('quiz')
+            this.scene.sleep('quiz');
+            // Reinicia a cena para cada vez que ocorre o overlap com a tenda o quiz voltar a sua forma padrão para que o jogador possa jogar de novo
+            this.scene.restart();
+            // Resume a física na cena 'cenaPrincipal', é útil se a cena principal contiver objetos físicos em movimento ou interações físicas que precisem ser retomadas após o término do quiz
+            this.primeiraCena.physics.resume();
+        });
+    }
+
+    verificarResposta(resposta) {
+        // Verifica se a resposta está correta
+        if (resposta === 'Usar luvas de proteção térmica de alta qualidade') {
+            // Define a mensagem de explicação para resposta correta
+            this.explicacaoText.setText('Parabéns! Usar luvas de proteção térmica de alta qualidade evita acidentes graves na cozinha');
+            // Define a cor do texto como verde
+            this.explicacaoText.setColor('#008000');
+        } else {
+            // Define a mensagem de explicação para resposta incorreta
+            this.explicacaoText.setText('Ops! Essa resposta está incorreta. Estar distraído enquanto cozinha pode gerar acidentes graves.');
+            // Define a cor do texto como vermelho
+            this.explicacaoText.setColor('#FF0000');
+        }
+    }
+}
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;Nesta parte, uma nova classe `Quiz` é definida, estendendo a classe `Phaser.Scene`. O construtor é utilizado para configurar a cena do jogo, onde a chave da cena é definida como 'quiz' e a cena é configurada como ativa:
 
 
+``` js
+class Quiz extends Phaser.Scene {
+    constructor() {
+        super({
+            key: 'quiz', // Chave da cena
+            active: true // Define a cena como ativa
+        })
+    }
+}
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;Na próxima seção, os recursos necessários para a cena do quiz são pré-carregados. Aqui, duas imagens são carregadas: uma para o botão "X" e outra para o símbolo do quiz.
+
+``` js
+    preload() {
+        // Pré-carregamento de imagens
+        this.load.image('x', 'assets/botaoX.png'); // Carrega a imagem do botão "X"
+        this.load.image('simbolo', 'assets/simboloquiz.png'); // Carrega a imagem do símbolo do quiz
+    }
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;Nesta parte, a cena do quiz é criada. Isso inclui a definição da estética visual, como cores e detalhes de aparência, a exibição da pergunta, as opções de resposta e a interatividade para verificar as respostas dos jogadores.
+
+&nbsp;&nbsp;&nbsp;&nbsp;No método `create()`, primeiro, é obtida uma referência para a cena chamada `'cenaPrincipal'` utilizando o método `this.scene.get()`. Em seguida, a execução da cena atual, identificada como `'quiz'`, é pausada usando `this.scene.sleep('quiz')`. Essa pausa interrompe temporariamente a renderização e a lógica associada à cena do quiz.
+
+``` js
+    create() {
+        this.primeiraCena = this.scene.get('cenaPrincipal'); // Obtém a referência para a cena 'cenaPrincipal'
+        this.scene.sleep('quiz'); // Pausa a execução da cena atual ('quiz')
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;Neste código, é criado um fundo branco retangular com uma borda preta no centro da tela, com dimensões de 700 por 500 pixels. Em seguida, uma imagem do símbolo é adicionada à cena, centralizada verticalmente acima do fundo branco. Por fim, um texto contendo a pergunta é exibido verticalmente centralizado acima do fundo branco, com formatação de fonte apropriada e quebra de linha configurada para 500 pixels.
+
+``` js
+        // Adicionando o fundo branco e a borda retangulas
+        const bgWhite = this.add.rectangle(gameDimensions.width / 2, gameDimensions.height / 2, 700, 500, 0xffffff).setStrokeStyle(2, 0x000000);
+
+        // Centralizando a imagem do símbolo
+        this.add.image(bgWhite.x, bgWhite.y - 130, 'simbolo').setScale(0.5);
+
+        // Adicionando a pergunta à cena
+        this.add.text(bgWhite.x, bgWhite.y - 40, 'O que deve ser feito para evitar uma queimadura na pele ao encostar em uma superfície quente na cozinha?', {
+            fontSize: '20px',
+            color: '#000',
+            fontFamily: 'Arial',
+            align: 'center',
+            wordWrap: {
+                width: 500
+            }
+        }).setOrigin(0.5);
+```
+&nbsp;&nbsp;&nbsp;&nbsp;São adicionadas duas opções de resposta à cena do quiz. Cada opção é representada por um texto exibido na interface. As opções são estilizadas com diferentes tamanhos de fonte, cores de texto e de fundo, além de um espaçamento interno. O texto é centralizado na tela e possui quebra de linha configurada para 500 pixels. Além disso, as opções são configuradas como interativas, permitindo que o jogador clique nelas. Quando uma opção é clicada, a função `verificarResposta()` é chamada, passando o texto da opção como argumento para determinar se a resposta é correta ou não.
+``` js
+        // Adicionando as alternativas à cena e suas aparências na interface
+        const alternativa1 = this.add.text(bgWhite.x, bgWhite.y + 60, 'Cozinhar enquanto conversa distraidamente com alguém', {
+            fontSize: '23px',
+            color: '#000',
+            fontFamily: 'Arial',
+            backgroundColor: '#008CCC',
+            padding: {
+                x: 10,
+                y: 10
+            },
+            wordWrap: {
+                width: 500
+            },
+            align: 'center'
+        }).setOrigin(0.5).setInteractive().on('pointerdown', () => this.verificarResposta('Cozinhar enquanto conversa distraidamente com alguém'));
+
+        const alternativa2 = this.add.text(bgWhite.x, bgWhite.y + 140, 'Usar luvas de proteção térmica de alta qualidade', {
+            fontSize: '21px',
+            color: '#000',
+            fontFamily: 'Arial',
+            backgroundColor: '#FFC107',
+            padding: {
+                x: 10,
+                y: 10
+            },
+            wordWrap: {
+                width: 500
+            },
+            align: 'center'
+        }).setOrigin(0.5).setInteractive().on('pointerdown', () => this.verificarResposta('Usar luvas de proteção térmica de alta qualidade'));
+    }
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;Por fim, a função `verificarResposta` é chamada quando uma resposta é selecionada pelo jogador. Ela verifica se a resposta está correta e exibe uma mensagem correspondente na tela, indicando se a resposta está correta ou incorreta.
+
+
+``` js
+    verificarResposta(resposta) {
+        // Verifica se a resposta está correta
+        if (resposta === 'Usar luvas de proteção térmica de alta qualidade') {
+            // Define a mensagem de explicação para resposta correta
+            this.explicacaoText.setText('Parabéns! Usar luvas de proteção térmica de alta qualidade evita acidentes graves na cozinha');
+            // Define a cor do texto como verde
+            this.explicacaoText.setColor('#008000');
+        } else {
+            // Define a mensagem de explicação para resposta incorreta
+            this.explicacaoText.setText('Ops! Essa resposta está incorreta. Estar distraído enquanto cozinha pode gerar acidentes graves.');
+            // Define a cor do texto como vermelho
+            this.explicacaoText.setColor('#FF0000');
+        }
+    }
+```
 
 ## 4.4. Desenvolvimento final do MVP (sprint 4)
 
