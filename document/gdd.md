@@ -1307,7 +1307,8 @@ class Livros extends Phaser.Scene {
 }
 ```
 
-&nbsp;&nbsp;&nbsp;&nbsp;Partimos para o carregamento das imagens a serem utilizadas nesta cena:
+&nbsp;&nbsp;&nbsp;&nbsp;Nesta cena, algumas imagens são utilizadas. Na função `preload()`, partimos para o carregamento das imagens de plano de fundo, livros fechados e livros abertos a serem utilizadas posteriormente. Na cena, 3 livros fechados são apresentados, um verde, um amarelo e um vermelho, carregados através de `this.load.image()` nas referências `livroVerde`, `livroAmarelo` e `livroVermelho`, respectivamente. Portanto, 3 imagens de livros abertos também são carregados, `livroVerdeAberto`, `livroAmareloAberto` e `livroVermelhoAberto` respeitando as cores dos livros incluídos até então. Segue o código de carregamento destes *assets*.
+
 ``` js
 preload() {
         // Carrega as imagens a serem utilizadas
@@ -1332,7 +1333,7 @@ create() {
             this.livroVermelho = this.add.image(900, 200, 'livroVermelho').setOrigin(0,0).setScale(1.6).setInteractive();
 ```
 
-&nbsp;&nbsp;&nbsp;&nbsp;Ainda no método `create()` da classe `Livros`, atribuímos funções para as interações de clique entre o jogador e os livros criados em `livroVerde`, `livroAmarelo`, `livroVermelho`. Nestas funções, definidas em `() => {}`, um livro é aberto, a depender do selecionado. Segue a implementação da lógica:
+&nbsp;&nbsp;&nbsp;&nbsp;Ainda no método `create()` da classe `Livros`, recebemos a interação de clique entre o jogador com os livros através de `this.livro.on("pointerdown")` e atribuímos funções para tais interações. Nestas funções, definidas em `() => {}`, uma imagem do respectivo livro selecionado é adicionada, mas desta vez com o livro aberto. Por exemplo, caso o livro amarelo `livroAmarelo` seja selecionado, `livroAmareloAberto` é adicionado e os livros fechados visíveis se tornam invisíveis. Segue a implementação da lógica:
 
 ``` js
 this.livroVerde.on("pointerdown", () => { // Define função que chama o livro verde aberto quando clicar no livro verde fechado
