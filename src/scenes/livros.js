@@ -59,9 +59,5 @@ class Livros extends Phaser.Scene {
             this.scene.restart();
             this.primeiraCena.physics.resume()
         });
-
-        
-
     }
-
 }

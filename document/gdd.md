@@ -1104,12 +1104,12 @@ openFullScreen() {
 
 ``` js
 this.physics.add.collider(this.jogador, this.tendaLivro, () => {
-      console.log("Colidiu com a tenda do livro") //Adiciona colisão entre o jogador e a tenda de livros
+    console.log("Colidiu com a tenda do livro") //Adiciona colisão entre o jogador e a tenda de livros
 
-      //chama a cena para mostrar os 3 livros
-      this.scene.wake('livros');
-      // pausa a física do jogo enquanto a cena livros estiver exposta
-      this.physics.pause()
+    //chama a cena para mostrar os 3 livros
+    this.scene.wake('livros');
+    // pausa a física do jogo enquanto a cena livros estiver exposta
+    this.physics.pause()
 });
 
 ```
@@ -1122,14 +1122,13 @@ this.physics.add.collider(this.jogador, this.tendaLivro, () => {
 
 ``` js
 this.physics.add.collider(this.jogador, this.tendaQuiz, () => {
-      console.log("Colidiu com a tenda do quiz") //Adiciona colisão entre o jogador e a tenda
+    console.log("Colidiu com a tenda do quiz") //Adiciona colisão entre o jogador e a tenda
 
-      //chama a cena para mostrar o quiz
-      this.scene.wake('quiz');
-      // pausa a física do jogo enquanto a cena do quiz estiver exposta
-      this.physics.pause()
-
-    });
+    //chama a cena para mostrar o quiz
+    this.scene.wake('quiz');
+    // pausa a física do jogo enquanto a cena do quiz estiver exposta
+    this.physics.pause()
+});
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;As cenas `livros.js` e `quiz.js` citadas acima serão abordadas na Etapa 6 do desenvolvimento - Tendas
@@ -1140,12 +1139,12 @@ this.physics.add.collider(this.jogador, this.tendaQuiz, () => {
 ```js
 class CenaHUD extends Phaser.Scene
 {
-    constructor ()
-    {
+    constructor (){
         super({ key: 'cenaHUD', active: true}); // Define a key da cena e a mantém ativada desde o início do ciclo de jogo
 
         this.score = 0;
     }
+    
     preload () {
         this.load.image('botaoCaseBaixo', 'assets/botaoCase_baixo.png');
         this.load.image('botaoCaseAlto', 'assets/botaoCase_alto.png');
@@ -1295,32 +1294,32 @@ class Livros extends Phaser.Scene {
     }
 
     create() {
-            // Adiciona o background e livros a serem apresentados na cena
-            this.add.image(0, 0, 'backgroundLivros').setOrigin(0, 0).setScale(2);
-            this.livroVerde = this.add.image(100, 200, 'livroVerde').setOrigin(0,0).setScale(1.6).setInteractive();
-            this.livroAmarelo = this.add.image(500, 200, 'livroAmarelo').setOrigin(0,0).setScale(1.6).setInteractive();
-            this.livroVermelho = this.add.image(900, 200, 'livroVermelho').setOrigin(0,0).setScale(1.6).setInteractive();
+        // Adiciona o background e livros a serem apresentados na cena
+        this.add.image(0, 0, 'backgroundLivros').setOrigin(0, 0).setScale(2);
+        this.livroVerde = this.add.image(100, 200, 'livroVerde').setOrigin(0,0).setScale(1.6).setInteractive();
+        this.livroAmarelo = this.add.image(500, 200, 'livroAmarelo').setOrigin(0,0).setScale(1.6).setInteractive();
+        this.livroVermelho = this.add.image(900, 200, 'livroVermelho').setOrigin(0,0).setScale(1.6).setInteractive();
 
-            this.livroVerde.on("pointerdown", () => { // Define função que chama o livro verde aberto quando clicar no livro verde fechado
-                this.livroVerde.setVisible(false);
-                this.livroAmarelo.setVisible(false);
-                this.livroVermelho.setVisible(false);
-                this.livroVerdeAberto = this.add.image(640, 350, 'livroVerdeAberto').setScale(2.6);
-            });
+        this.livroVerde.on("pointerdown", () => { // Define função que chama o livro verde aberto quando clicar no livro verde fechado
+            this.livroVerde.setVisible(false);
+            this.livroAmarelo.setVisible(false);
+            this.livroVermelho.setVisible(false);
+            this.livroVerdeAberto = this.add.image(640, 350, 'livroVerdeAberto').setScale(2.6);
+        });
 
-            this.livroAmarelo.on("pointerdown", () => { // Define função que chama o livro amarelo aberto quando clicar no livro amarelo fechado
-                this.livroVerde.setVisible(false);
-                this.livroAmarelo.setVisible(false);
-                this.livroVermelho.setVisible(false);
-                this.livroAmareloAberto = this.add.image(640, 350, 'livroAmareloAberto').setScale(2.6);
-            });
+        this.livroAmarelo.on("pointerdown", () => { // Define função que chama o livro amarelo aberto quando clicar no livro amarelo fechado
+            this.livroVerde.setVisible(false);
+            this.livroAmarelo.setVisible(false);
+            this.livroVermelho.setVisible(false);
+            this.livroAmareloAberto = this.add.image(640, 350, 'livroAmareloAberto').setScale(2.6);
+        });
 
-            this.livroVermelho.on("pointerdown", () => { // Define função que chama o livro vermelho aberto quando clicar no livro vermelho fechado
-                this.livroVerde.setVisible(false);
-                this.livroAmarelo.setVisible(false);
-                this.livroVermelho.setVisible(false);
-                this.livroVermelhoAberto = this.add.image(640, 350, 'livroVermelhoAberto').setScale(2.6);
-            });
+        this.livroVermelho.on("pointerdown", () => { // Define função que chama o livro vermelho aberto quando clicar no livro vermelho fechado
+            this.livroVerde.setVisible(false);
+            this.livroAmarelo.setVisible(false);
+            this.livroVermelho.setVisible(false);
+            this.livroVermelhoAberto = this.add.image(640, 350, 'livroVermelhoAberto').setScale(2.6);
+        });
     }        
 }
 ```
