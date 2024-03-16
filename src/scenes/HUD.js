@@ -41,7 +41,6 @@ class CenaHUD extends Phaser.Scene
             this.fundoPontos.setStrokeStyle(2, 0x1a65ac).setVisible(true);
             this.textoPontos.setVisible(true);
             
-            
         }, this);
         
         // Cria evento para mostrar parte da HUD (Timer)
@@ -76,7 +75,7 @@ class CenaHUD extends Phaser.Scene
                     };
                 },
                 loop: true // Atualiza o texto
-              });
+            });
         }, this);
 
         // Cria evento para mostrar o case por um botão

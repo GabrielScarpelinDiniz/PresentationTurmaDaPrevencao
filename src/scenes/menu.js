@@ -62,6 +62,7 @@ class MenuPrincipal extends Phaser.Scene {
   }
 
   update() {}
+  
   openFullScreen() {
     const page = document.documentElement //Pega o documento inteiro
     if (page.requestFullscreen) { //Se o navegador suportar o Fullscreen
