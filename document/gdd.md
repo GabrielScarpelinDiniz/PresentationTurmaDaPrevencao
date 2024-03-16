@@ -1653,7 +1653,7 @@ class Quiz extends Phaser.Scene {
 
 &nbsp;&nbsp;&nbsp;&nbsp;Com o progressivo desenvolvimento do código, cenas extras foram adicionadas: "HUD.js", para carregar elemenentos do HUD, "cases.js", para processar a lógica dos cases, "livros.js", para processar a lógica da tenda de livros e "quiz.js" para processar a lógica do quiz da tenda de quiz. Com isso, surge a necessidade de atualizar os casos de teste.
 
-&nbsp;&nbsp;&nbsp;&nbsp;Começando a falar do HUD, elementos essenciais do nosso jogo, alguns casos de teste possuem uma importância maior como verificar o carregamento do elementos, sua posição e atualização dinâmica de seus valores.
+&nbsp;&nbsp;&nbsp;&nbsp;Começando a falar do HUD, elementos essenciais do nosso jogo, alguns casos de teste possuem uma importância maior como verificar o carregamento do elementos, sua posição e atualização dinâmica de seus valores. A tabela abaixo lista outros testes.
 
 <div align="center">
 <sub>Tabela 7: Casos de Testes da Cena HUD.js</sub>
@@ -1663,19 +1663,56 @@ class Quiz extends Phaser.Scene {
 |------|---------|--- |--- |
 1 | Carregamento de imagens bem-sucedido |	Verificar se as imagens foram carregadas corretamente |	Imagens carregadas corretamente |
 2 | Elementos de HUD criados corretamente |	Verificar se os elementos de HUD estão posicionados e visíveis corretamente | Elementos de HUD estão criados e posicionados corretamente |
-3 | Eventos de exibição da Tarefa funcionando |	Verificar se o evento 'mostraTarefaInicial' exibe corretamente as informações da tarefa | Eventos de exibição da Tarefa funcionam corretamente |
+3 | Eventos de exibição da Tarefa funcionando |	Verificar se o evento "mostraTarefaInicial" exibe corretamente as informações da tarefa | Eventos de exibição da Tarefa funcionam corretamente |
 4 | Colisão com cenário inicializada | Testar colisão do personagem com as partes do cenário | O personagem não atravessa partes do cenário e colide corretamente |
-5 | Evento de exibição do Timer funcionando | Verificar se o evento 'showTimer' atualiza corretamente o timer e mostra os elementos relacionados ao tempo |	Evento de exibição do Timer funciona corretamente |
-6 | Evento do botão Case foi carregado |	Verificar se o botão 'botaoCase' exibe corretamente as imagens e responde aos cliques corretamente |	Botão 'botaoCase' foi carregado corretamente e está interativo |
-
-&nbsp;&nbsp;&nbsp;&nbsp;Começando a falar do HUD, elementos essenciais do nosso jogo, alguns casos de teste possuem uma importância maior como verificar o carregamento do elementos, sua posição e atualização dinâmica de seus valores.
+5 | Evento de exibição do Timer funcionando | Verificar se o evento "showTimer" atualiza corretamente o timer e mostra os elementos relacionados ao tempo |	Evento de exibição do Timer funciona corretamente |
+6 | Evento do botão Case foi carregado |	Verificar se o botão "botaoCase" exibe corretamente as imagens e responde aos cliques corretamente |	Botão "botaoCase" foi carregado corretamente e está interativo |
 
 <div align="center">
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 </div>
 
+&nbsp;&nbsp;&nbsp;&nbsp;Após o HUD, as cenas "cases.js", "livros.js" e "quiz.js" foram agrupadas na tabela abaixo (mas podem ser postas em tabelas diferentes caso surja um número elevado de testes a serem feitos). A justificativa desse agrupamento origina-se das características semelhantes das três cenas.
 
+<div align="center">
+<sub>Tabela 8: Casos de Testes das Cenas cases.js, livros.js e quiz.js</sub>
+</div>
 
+\# | Pré-condição | Descrição do Teste | Pós-condição
+|------|---------|--- |--- |
+1 | Carregamento de imagens bem-sucedido |	Verificar se as imagens foram carregadas corretamente |	Imagens carregadas corretamente |
+2 | Elementos das cenas criados corretamente |	Verificar se os elementos das cenas estão posicionados e visíveis corretamente | Elementos das cenas foram criados e posicionados corretamente |
+3 | Verificar se o evento "abrirCase" é acionado na cena cases.js |	Verificar se o evento "abrirCase" pausa a física e torna o caso e o botão visíveis | O evento "abrirCase" pausa a física e torna o caso e o botão visíveis |
+4 | O cursor está fora do "botãoX" no cases.js | Verificar se o cursor muda para uma mãozinha ao passar sobre o botão "botaoX" | O cursor muda para uma mãozinha ao passar sobre o botão "botaoX" |
+5 | O cursor está sobre o "botãoX" no cases.js | Verificar se o cursor muda para uma setinha ao sair do botão "botaoX" |	O cursor volta ao seu estado padrão ao sair do botão "botaoX" |
+6 | O "botãoX" foi clicado no cases.js |	Verificar se ao clicar no botão "botaoX", o caso e o botão tornam-se invisíveis e a física é retomada |	Ao clicar no botão "botaoX", o caso e o botão se tornam invisíveis e a física é retomada |
+7 | A tenda de livros foi ativada em "cenaPrincipal.js"  |	Verificar se a ação de clicar e abrir livros funciona |	Livro correspondente é aberto |
+8 | O "botaoFechar" foi clicado em livros.js |	Verificar se ao clicar no botão "botaoFechar", o livro e o botão tornam-se invisíveis e a física é retomada |	Ao clicar no botão "botaoFechar", o livro e o botão se tornam invisíveis e a física é retomada |
+9 | O "botãoX" foi clicado em quiz.js |	Verificar se ao clicar no botão "botaoX", o caso e o botão tornam-se invisíveis e a física é retomada |	Ao clicar no botão "botaoX", o caso e o botão se tornam invisíveis e a física é retomada |
+9 | O quiz está aberto |	Verificar resposta do usuário |	Retorno de mensagem de parabéns ou de erro e feedback |
+
+<div align="center">
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;Os testes anteriores refletem a verificação do carregamento de assets e seu posicioamento, da mecânica do jogo, de algumas interações com botões e de alguns eventos criados entre cenas. Não abordamos, porém, cenários de erros que possam a vir surgir de entradas inválidas do usuário ou de situações inesperadas. A tabela a seguir caminha inicialmente para essa direção enquanto vamos refinando o código e descobrindo novas formas que o jogo pode ficar com a lógica inoperante.
+
+<div align="center">
+<sub>Tabela 9: Cenários de Erro Gerais</sub>
+</div>
+
+\# | Pré-condição | Descrição do Teste | Pós-condição
+|------|---------|--- |--- |
+1 | Qualquer inicialização de imagens |	Verificar se a imagem existe no diretório indicado |	A imagem existe e está com o caminho correto |
+2 | Inicialização de cena ou transição entre elas |	Verificar se a cena existe e foi inicializada corretamente | A cena existe e está com o caminho correto |
+3 | O jogo estar carregado na cena menu.js ou cenaPrincipal.js |	Verificar se algum input do usuário ou clique fora da área interativa ocasiona erros | As cenas mantêm a sua lógica intacta |
+4 | O jogo está sendo inicializado ou executando | Verificar se existe algum código de erro no console sobre erro de sintaxe | Existe uma mensagem de erro no console do navegador |
+5 | O jogo está sendo inicializado ou executando | Verificar se existe algum código de erro no console sobre erro de variáveis, objetos ou métodos inexistentes | Existe uma mensagem de erro no console do navegador |
+6 | O jogador está interagindo com o mundo ou mudando de cenas | Verificar se existe algum código de erro no console sobre eventos não previamente definidos| Existe uma mensagem de erro no console do navegador |
+
+<div align="center">
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+</div>
 
 &nbsp;&nbsp;&nbsp;&nbsp;Por fim, a criação dos casos de teste é muito importante ao longo de um projeto de software e trás vários benefícios, como: auxiliar na garantia de qualidade, reduzir erros, facilitar a manutenção e promover a evolução do código garantindo estabilidade e integridade.
 
