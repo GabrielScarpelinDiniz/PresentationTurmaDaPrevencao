@@ -1603,6 +1603,21 @@ class Quiz extends Phaser.Scene {
     }
 ```
 
+### Dificuldades
+- Implementação da colisão;
+- Dificuldade em ajustar a animação do personagem principal;
+- Realizar a transição de cenas;
+- Inclusão de um quiz em HTML no jogo.
+
+### Próximos passos
+- Incluir o restante dos cases no jogo;
+- Incluir os conteúdos dos livros;
+- Incluir o restante das perguntas do quiz;
+- Finalização do mapa;
+- Incluir os NPCs no mapa;
+- Implementar elementos que visam mais diversidade.
+
+  
 ## 4.4. Desenvolvimento final do MVP (sprint 4)
 
 *Descreva e ilustre aqui o desenvolvimento da versão final do jogo, explicando brevemente o que foi entregue em termos de MVP. Utilize prints de tela para ilustrar. Indique as eventuais dificuldades e planos futuros.*
