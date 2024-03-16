@@ -1658,9 +1658,9 @@ class Quiz extends Phaser.Scene {
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;Após a interação com o botão "Jogar" da tela anterior, "menu.js", a tela "cenaPrincipal.js" é carregada e a lógica do jogo é inicializada. Nessa etapa também existem testes para o précarregamento de assets, mas o foco está mais nas mecânicas do personagem e em como o mundo interage com ele.
+&nbsp;&nbsp;&nbsp;&nbsp;Após a interação com o botão "Jogar" da tela anterior, `menu.js`, a tela `cenaPrincipal.js` é carregada e a lógica do jogo é inicializada. Nessa etapa também existem testes para o précarregamento de assets, mas o foco está mais nas mecânicas do personagem e em como o mundo interage com ele.
 
-&nbsp;&nbsp;&nbsp;&nbsp;Testes como a verificação do carregamento do mapa, a criação do joystick virtual e a colisão com o cenário são feitos nessa parte. Como "cenaPrincipal.js" será um arquivo com mais código do que os outros, mais testes serão adicionados com a implementação de novas mecânicas.
+&nbsp;&nbsp;&nbsp;&nbsp;Testes como a verificação do carregamento do mapa, a criação do joystick virtual e a colisão com o cenário são feitos nessa parte. Como ``cenaPrincipal.js`` será um arquivo com mais código do que os outros, mais testes serão adicionados com a implementação de novas mecânicas.
 
 <div align="center">
 <sub>Tabela 6: Casos de Testes da Cena cenaPrincipal.js</sub>
@@ -1682,7 +1682,7 @@ class Quiz extends Phaser.Scene {
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;Com o progressivo desenvolvimento do código, cenas extras foram adicionadas: "HUD.js", para carregar elemenentos do HUD, "cases.js", para processar a lógica dos cases, "livros.js", para processar a lógica da tenda de livros e "quiz.js" para processar a lógica do quiz da tenda de quiz. Com isso, surge a necessidade de atualizar os casos de teste.
+&nbsp;&nbsp;&nbsp;&nbsp;Com o progressivo desenvolvimento do código, cenas extras foram adicionadas: ``HUD.js``, para carregar elemenentos do HUD, ``cases.js``, para processar a lógica dos cases, ``livros.js``, para processar a lógica da tenda de livros e ``quiz.js`` para processar a lógica do quiz da tenda de quiz. Com isso, surge a necessidade de atualizar os casos de teste.
 
 &nbsp;&nbsp;&nbsp;&nbsp;Começando a falar do HUD, elementos essenciais do nosso jogo, alguns casos de teste possuem uma importância maior como verificar o carregamento do elementos, sua posição e atualização dinâmica de seus valores. A tabela abaixo lista outros testes.
 
@@ -1703,7 +1703,7 @@ class Quiz extends Phaser.Scene {
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;Após o HUD, as cenas "cases.js", "livros.js" e "quiz.js" foram agrupadas na tabela abaixo (mas podem ser postas em tabelas diferentes caso surja um número elevado de testes a serem feitos). A justificativa desse agrupamento origina-se das características semelhantes das três cenas.
+&nbsp;&nbsp;&nbsp;&nbsp;Após o HUD, as cenas ``cases.js``, ``livros.js`` e ``quiz.js`` foram agrupadas na tabela abaixo (mas podem ser postas em tabelas diferentes caso surja um número elevado de testes a serem feitos). A justificativa desse agrupamento origina-se das características semelhantes das três cenas.
 
 <div align="center">
 <sub>Tabela 8: Casos de Testes das Cenas cases.js, livros.js e quiz.js</sub>
