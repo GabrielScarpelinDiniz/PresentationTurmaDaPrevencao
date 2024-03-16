@@ -1016,51 +1016,83 @@ openFullScreen() {
 
 ### Etapa 2 do desenvolvimento - Colisões e Overlaps
 
-&nbsp;&nbsp;&nbsp;&nbsp;Foi realizado, inicialmente, as colisões necessárias para a dinâmica do jogo, configuradas no próprio Tiled Map Editor e adicionadas, com o auxílio de um documento .JSON e do framework Phaser, no código. Na implementação das colisões, utilizamos, dentro do `create()`, o método do Phaser `.setCollisionByProperty()`, que adiciona colisão entre objetos por meio das propriedades adicionadas a eles no Tiled Map Editor, como descrito a seguir:
+&nbsp;&nbsp;&nbsp;&nbsp;Foi realizado, inicialmente, as colisões necessárias para a dinâmica do jogo, configuradas no próprio Tiled Map Editor e adicionadas, com o auxílio de um documento .JSON e do framework Phaser, no código. Na implementação das colisões, utilizamos, dentro do `create()`, o método do Phaser `.setCollisionByProperty()`, que adiciona colisão entre objetos por meio das propriedades adicionadas a eles no Tiled Map Editor e, além disso, para obejtos circulares ou irregulares foi adicionada uma colisão especial em formato de círculo pela adição de um círculo com o método `this.add.circle()`, como descrito a seguir:
 
 ```js
-	89this.arvores.setCollisionByProperty({ collider: true }) //Seta as colisões onde tem a propriedade collider: true no tiled map
-    	this.faculdade.setCollisionByProperty({ collider: true }) //Seta as colisões onde tem a propriedade collider: true no tiled map
-    	this.fonte.setCollisionByProperty({ collider: true }) //Seta as colisões onde tem a propriedade collider: true no tiled map
-    	this.cerca.setCollisionByProperty({ collider: true }) //Seta as colisões onde tem a propriedade collider: true no tiled map
-    	this.physics.add.collider(this.player, this.arvores, () => console.log("Colidiu")) //Adiciona colisão entre o médico e a camada de parede
-    	this.physics.add.collider(this.player, this.faculdade, () => console.log("Colidiu")) //Adiciona colisão entre o médico e a camada de parede
-    	this.physics.add.collider(this.player, this.fonte, () => console.log("Colidiu")) //Adiciona colisão entre o médico e a camada de parede
-    	97this.physics.add.collider(this.player, this.cerca, () => console.log("Colidiu")) //Adiciona colisão entre o médico e a camada de parede 
-	this.physics.add.collider(this.player, this.tina); // Adiciona a colisão entre o persoangem e a Tina
+	//configurando um colisor entre o jogador e os limites do mundo do jogo
+    this.physics.add.collider(this.jogador, this.worldBounds);
+
+    // Cria colisões com a fonte no mapa
+    this.circuloFonte = this.add.circle(560, 570, 70, 0xffffff, 0); //Adiciona círculo sob a fonte
+    this.physics.add.existing(this.circuloFonte); //Adiciona física ao círculo adicionado
+    this.circuloFonte.body.setCircle(70).setImmovable(); //Define a hitbox do objeto criado como um círculo imóvel
+    this.fonte.setCollisionByProperty({
+      collider: false
+    }) //Seta as colisões onde tem a propriedade collider: true no tiled map
+    this.physics.add.collider(this.jogador, this.circuloFonte);
+
+
+    // Cria colisão com as árvores
+    this.arvores.setCollisionByProperty({
+      collider: true
+    }) //Seta as colisões onde tem a propriedade collider: true no tiled map
+    this.physics.add.collider(this.jogador, this.arvores, () => console.log("Colidiu")) //Adiciona colisão entre o jogador e as árvores
+
+    //Cria colisão com a tenda
+    this.tendaQuiz.setCollisionByProperty({
+      collider: true
+    }) //Seta as colisões onde tem a propriedade collider: true no tiled map
+    this.tendaLivro.setCollisionByProperty({
+      collider: true
+    }) //Seta as colisões onde tem a propriedade collider: true no tiled map
+
+    // Cria colisão com a faculdade
+    this.faculdade.setCollisionByProperty({
+      collider: true
+    }) //Seta as colisões onde tem a propriedade collider: true no tiled map
+    this.physics.add.collider(this.jogador, this.faculdade, () => console.log("Colidiu"))
+
+
+    // Cria colisão com a cerca
+    this.cerca.setCollisionByProperty({
+      collider: true
+    }) //Seta as colisões onde tem a propriedade collider: true no tiled map
+    this.physics.add.collider(this.jogador, this.cerca, () => console.log("Colidiu"))
 ```
      
-&nbsp;&nbsp;&nbsp;&nbsp;Após a implementação das colisões, o próximo passo foi construir o overlap do aluno com a Tina no método `create()`, feito da seguinte forma:
+&nbsp;&nbsp;&nbsp;&nbsp;Após a implementação das colisões, o próximo passo foi construir o *overlap* do aluno com a Tina no método `create()` e também desativá-lo assim que o aluno colidir com ela. Isso foi feito por meio dos métodos `this.physics.add.overlap ()` e `this.physics.world.removeCollider()`, respectivamente, como pode ser observado abaixo:
 
 ```js
-	166this.tinaCollider = this.physics.add.overlap(this.tina, this.player, () => {  // Cria o overlap entre o jogador principal e a Tina
-    	console.log('teste'); // Console log para verificar o funcionamento do overlap
-   	 this.physics.pause()
-    	this.case1.setVisible(true)
-    	this.botaoX.setVisible(true)
+	 this.tinaCollider = this.physics.add.overlap(this.tina, this.jogador, () => { // Cria o overlap entre o jogador principal e a Tina
+      console.log('teste'); // Console log para verificar o funcionamento do overlap
+      this.physics.pause()
+      this.case1.setVisible(true)
+      this.botaoX.setVisible(true)
 
-    this.botaoX.on("pointerover", () => {
-      // Evento de passar o mouse sobre o botaoJogar
-      this.input.setDefaultCursor("pointer") // Cursor vira mãozinha
+      this.botaoX.on("pointerover", () => {
+        // Evento de passar o mouse sobre o botaoJogar
+        this.input.setDefaultCursor("pointer") // Cursor vira mãozinha
+      });
+      this.botaoX.on("pointerout", () => {
+        // Evento de retirar o mouse do botaoJogar
+        this.input.setDefaultCursor("default") // Cursor vira setinha
+      });
+
+      // Evento disparado ao clicar no botão (Código temporário apenas para demonstração da funcionalidade na sprint 1)
+      this.botaoX.on("pointerdown", () => {
+        this.physics.resume()
+
+        this.case1.setVisible(false);
+        this.botaoX.setVisible(false);
+
+        //  Dispatch a Scene event
+        this.events.emit('showTimer');
+        this.events.emit('botaoCase');
+        this.musicaIntroducao.stop(); // Para a música de introdução
+        this.musicaJogo.play(); // Inicia a música de jogo
+
+      }, this.physics.world.removeCollider(this.tinaCollider));
     });
-    this.botaoX.on("pointerout", () => {
-      // Evento de retirar o mouse do botaoJogar
-      this.input.setDefaultCursor("default") // Cursor vira setinha
-    });
-
-    // Evento disparado ao clicar no botão (Código temporário apenas para demonstração da funcionalidade na sprint 1)
-    this.botaoX.on("pointerdown", () => {
-      this.physics.resume()
-      
-      //  Dispatch a Scene event
-      this.events.emit('showTimer');
-
-      this.case1.setVisible(false);
-      this.botaoX.setVisible(false);
-      console.log("teste");
-      
-    },this.physics.world.removeCollider(this.tinaCollider));
-  });
 
 ```
 &nbsp;&nbsp;&nbsp;&nbsp;Dentro dessa função, a física do jogo é pausada e o 'case' - onde contém o caso atual - é mostrado com as informações, que serão necessárias para estudar e responder o quiz. Nessa função de collider, alguns eventos são emitidos, eles foram utilizados para implementar o HUD posteriormente.
