@@ -2,8 +2,8 @@
     {
         "nome": "RONALD MEQUI DONALD",
         "fotoKey": "ronald",
-        "desc": "O Cozinheiro de uma hamburgueria, durante a preparação de uma receita, teve contato com a frigideira quente , queimando a palma da mão.",
-        "colored": ["Cozinheiro", "contato", "quente"],
+        "desc": "O cozinheiro de uma hamburgueria, durante a preparação de uma receita, teve contato com a frigideira quente , queimando a palma da mão.",
+        "colored": ["cozinheiro", "contato", "quente"],
         "sintomas": "Apresenta vermelhidão na região, inchaço e dor local suportável.",
         "classificacao": "PRIMEIRO GRAU",
         "classificacaoCor": "0x21FF21",

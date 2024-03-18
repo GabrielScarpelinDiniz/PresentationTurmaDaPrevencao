@@ -79,7 +79,7 @@ class CenaPrincipal extends Phaser.Scene {
 
   create() {
     this.caseData = this.cache.json.get('casesData');
-
+    this.primeiroCaso = true;
     // Adiciona a música de introdução
     this.musicaIntroducao = this.sound.add('musicaIntroducao', {
       loop: true
@@ -262,35 +262,22 @@ class CenaPrincipal extends Phaser.Scene {
       if (this.objetoCaso.status === false) {
         console.log(this.caseData)
         this.physics.pause()
-        this.case1.setVisible(true)
-        this.botaoX.setVisible(true)
+        this.events.emit('abrirCase');
 
-        this.botaoX.on("pointerover", () => {
-          // Evento de passar o mouse sobre o botaoJogar
-          this.input.setDefaultCursor("pointer") // Cursor vira mãozinha
-        });
-        this.botaoX.on("pointerout", () => {
-          // Evento de retirar o mouse do botaoJogar
-          this.input.setDefaultCursor("default") // Cursor vira setinha
-        });
-
-        // Evento disparado ao clicar no botão (Código temporário apenas para demonstração da funcionalidade na sprint 1)
-        this.botaoX.on("pointerdown", () => {
-          this.physics.resume()
-
-          this.case1.setVisible(false);
-          this.botaoX.setVisible(false);
-
-          //  Dispatch a Scene event
-          this.events.emit('showTimer');
-          this.events.emit('botaoCase');
-          this.musicaIntroducao.stop(); // Para a música de introdução
-          this.musicaJogo.play(); // Inicia a música de jogo
-          this.objetoCaso.status = true;
-        });
       }
+      
     });
-
+    this.events.on('fecharCase', () => {
+          //  Dispatch a Scene event
+          if (this.primeiroCaso === true){
+            this.events.emit('showTimer');
+            this.musicaIntroducao.stop(); // Para a música de introdução
+            this.musicaJogo.play(); // Inicia a música de jogo
+            this.primeiroCaso = false;
+          }
+          this.events.emit('botaoCase');
+          this.objetoCaso.status = true;
+    })
     this.physics.add.collider(this.jogador, this.tina); // Adiciona a colisão entre o persoangem e a Tina
     // this.physics.add.collider(this.tina, this.wallsLayer)
 

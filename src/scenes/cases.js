@@ -27,11 +27,10 @@ class CenaCases extends Phaser.Scene {
         // Requisições de informações de outras cenas
 
         this.abrirCase = this.scene.get('cenaHUD');        
-        this.abrirCase.events.on('abrirCase', function ()
-        {
+        const abrirCase = () => {
             const caseData = this.primeiraCena.caseData;
-
-
+            this.case1.setVisible(true);
+            this.botaoX.setVisible(true);
             this.nomeTexto = this.add.text(this.centroX - 210, this.centroY - 250, caseData[0].nome, { fontSize: '36px', fill: '#000000', backgroundColor: "#5CE1E6", padding: {x: 10, y: 10} }).setVisible(true);
             this.casoImage = this.add.image(this.centroX, this.centroY - 100, caseData[0].fotoKey).setScale(0.40).setVisible(true)
             this.casoTexto = this.add.bitmapText(this.centroX - 210, this.centroY, 'iosevka', caseData[0].desc, 28).setVisible(true).setMaxWidth(450);
@@ -42,8 +41,6 @@ class CenaCases extends Phaser.Scene {
             this.sintomasTexto = this.add.bitmapText(this.centroX - 210, this.centroY + this.casoTexto.height + 10, 'iosevka', "Sintomas: "+caseData[0].sintomas, 24).setVisible(true).setMaxWidth(450);
             this.classificacaoTexto = this.add.bitmapText(this.centroX - 210, this.centroY + this.casoTexto.height + this.sintomasTexto.height + 20, 'iosevka', "Classificação: "+caseData[0].classificacao, 24).setVisible(true).setMaxWidth(450).setWordTint(caseData[0].classificacao.split(" ")[0], 1, true, Number(caseData[0].classificacaoCor), Number(caseData[0].classificacaoCor), Number(caseData[0].classificacaoCor), Number(caseData[0].classificacaoCor));
             this.physics.pause();
-            this.case1.setVisible(true);
-            this.botaoX.setVisible(true);
             
             this.botaoX.on("pointerover", () => {
             // Evento de passar o mouse sobre o botaoJogar
@@ -57,17 +54,18 @@ class CenaCases extends Phaser.Scene {
             
             // Evento disparado ao clicar no botão (Código temporário apenas para demonstração da funcionalidade na sprint 1)
                 this.botaoX.on("pointerdown", () => {
-                this.case1.setVisible(false);
-                this.botaoX.setVisible(false);
-                this.casoTexto.setVisible(false);
-                this.casoImage.setVisible(false);
-                this.nomeTexto.setVisible(false);
-                this.sintomasTexto.setVisible(false);
-                this.classificacaoTexto.setVisible(false);
-                this.primeiraCena.physics.resume();
+                    this.nomeTexto.setVisible(false);
+                    this.casoTexto.setVisible(false);
+                    this.sintomasTexto.setVisible(false);
+                    this.classificacaoTexto.setVisible(false);
+                    this.casoImage.setVisible(false);
+                    this.botaoX.setVisible(false);
+                    this.case1.setVisible(false);
+                    this.primeiraCena.events.emit('fecharCase');    
+                    this.primeiraCena.physics.resume();
             });
-        }, this);
-    }  
-
-
+        }
+        this.abrirCase.events.on('abrirCase', abrirCase, this);
+        this.primeiraCena.events.on('abrirCase', abrirCase, this);
+    } 
 }
