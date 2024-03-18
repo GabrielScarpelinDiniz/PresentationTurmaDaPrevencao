@@ -277,13 +277,13 @@ Posto isso, foi entendido que a definição adequada do público alvo aumenta a 
 
 &nbsp;&nbsp;&nbsp;&nbsp;O jogo se passa em um fase única e cíclica composta pelos seguintes ambientes:
 
-&nbsp;&nbsp;&nbsp;&nbsp;Sala de Triagem: Onde os pacientes chegam ao hospital e são inicialmente avaliados pelo jogador, que, no papel do médico residente, avalia a gravidade das queimaduras dos pacientes. 
+&nbsp;&nbsp;&nbsp;&nbsp;Faculdade de Medicina da USP: localização onde o jogo se passa, inspirada no prédio real da Universidade de São Paulo, e sedia o dia de prevenção contra queimaduras.
 
-&nbsp;&nbsp;&nbsp;&nbsp;Consultório: Após a triagem, o paciente se desloca para o consultório, onde aguarda o médico voltar com seu tratamento.
+&nbsp;&nbsp;&nbsp;&nbsp;Dra. Tina: onde os cases são visualizados e atribuídos ao jogador, que, no papel de estudante, irá investigar sobre a situação.
 
-&nbsp;&nbsp;&nbsp;&nbsp;Biblioteca: Um ambiente onde o jogador pode acessar informações sobre prevenção de queimaduras e procedimentos de primeiros socorros de acordo com o paciente que está atendendo.
+&nbsp;&nbsp;&nbsp;&nbsp;Tenda de Livros: um ambiente onde o jogador pode acessar informações sobre prevenção de queimaduras e procedimentos de primeiros socorros de acordo com o case investigado.
 
-&nbsp;&nbsp;&nbsp;&nbsp;Farmácia: Lugar em que o jogador aplica os conhecimentos adquiridos para que consiga o remédio (representativo) correto para que consiga tratar o paciente.
+&nbsp;&nbsp;&nbsp;&nbsp;Tenda de Quiz: lugar em que o jogador aplica os conhecimentos adquiridos para que conclua a investigação do case atribuído a ele.
 
 <div align="center">
 
@@ -296,17 +296,17 @@ Posto isso, foi entendido que a definição adequada do público alvo aumenta a 
 
 ### 3.3.2. Navegação pelo mundo (sprints 2 e 3)
 
-&nbsp;&nbsp;&nbsp;&nbsp;O jogador controla o médico residente, utilizando controles direcionais de dispositivos móveis tocando na tela e arrastando o dedo na direção desejada, possibilitando a movimentação de uma área para outra dentro dos limites do hospital e interagindo com possíveis objetos e pacientes por meio de uma colisão.
+&nbsp;&nbsp;&nbsp;&nbsp;O jogador controla um estudante do ensino médio utilizando um controle direcional na tela de seu dispositivo móvel. Tocando no controle e arrastando o dedo na direção desejada, a movimentação do personagem é ativada e é possível navegar livremente dentro dos limites do cenário, além de interagir com objetos e personagens por meio de colisões.
 
-&nbsp;&nbsp;&nbsp;&nbsp;No jogo, o acesso às diferentes salas e ambientes é automático e não requer desbloqueio. No entanto, para interagir com objetos e pacientes e acessar certas funcionalidades, existem condições específicas a serem cumpridas.
+&nbsp;&nbsp;&nbsp;&nbsp;No jogo, não há separação de salas ou níveis, ou seja, o jogador pode navegar livremente pelo mapa. No entanto, para interagir com alguns objetos e acessar certas funcionalidades, existem condições específicas a serem cumpridas.
 
-&nbsp;&nbsp;&nbsp;&nbsp;Na sala de triagem, o jogador pode se mover livremente e deve se aproximar de um paciente para visualizar e avaliar seu prontuário. Após a avaliação, o paciente é transferido automaticamente para o consultório.
+&nbsp;&nbsp;&nbsp;&nbsp;Ao estudante encostar na Dra. Tina, um case é aberto para visualização e é atribuído ao jogador para ser solucionado. Após análise do case, o jogador deve se locomover à Tenda de Livros.
 
-&nbsp;&nbsp;&nbsp;&nbsp;A Biblioteca está disponível para o Residente a qualquer momento. Para acessar as informações, basta colidir com uma estante. O conteúdo da Biblioteca permanece o mesmo, independente do paciente sendo atendido.
+&nbsp;&nbsp;&nbsp;&nbsp;A Tenda de Livros está disponível para o jogador a qualquer momento. Para acessar as informações, basta colidir com a tenda. 
 
-&nbsp;&nbsp;&nbsp;&nbsp;Na Farmácia, o Residente deve colidir com um objeto para iniciar um jogo de perguntas. As perguntas variam de acordo com o histórico do paciente, tornando essa funcionalidade disponível apenas após a triagem. Ao responder corretamente, o jogador recebe uma pílula de tratamento.
+&nbsp;&nbsp;&nbsp;&nbsp;O jogador deve colidir com a Tenda de Quiz para iniciar um jogo de perguntas. As perguntas variam de acordo com o case fornecido, tornando essa funcionalidade disponível apenas após a atribuição de um case ao estudante. 
 
-&nbsp;&nbsp;&nbsp;&nbsp;O Residente retorna ao consultório, onde o paciente o espera, para administrar o tratamento após identificar a medicação correta. Esse procedimento só é possível se o médico tiver triado o paciente corretamente e recebido a medicação após o quiz.
+&nbsp;&nbsp;&nbsp;&nbsp;O jogador retorna a Dra. Tina para a entregar o case resolvido, dando início à um novo ciclo de jogo após a Dra. atribuir mais um case ao estudante.
 
 
 ### 3.3.3. Condições climáticas e temporais (sprints 2 e 3)
