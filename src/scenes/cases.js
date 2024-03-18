@@ -7,6 +7,8 @@ class CenaCases extends Phaser.Scene {
         this.load.image('base-case', 'assets/base-case.png');
         this.load.image('botaoX', 'assets/botaoX.png');
         this.load.image('ronald', 'assets/cases/ronald.png');
+        this.load.plugin('rexbbcodetextplugin', '/src/plugins/rexbbcodetextplugin.min.js', true);
+
     }
 
     create() {   
@@ -29,7 +31,7 @@ class CenaCases extends Phaser.Scene {
             console.log(caseData[0].nome, caseData[0].fotoKey, caseData[0].desc, caseData[0].sintomas, caseData[0].classificacao);
             this.nomeTexto = this.add.text(this.centroX - 210, this.centroY - 250, caseData[0].nome, { fontSize: '36px', fill: '#000000', backgroundColor: "#5CE1E6", padding: {x: 10, y: 10} }).setVisible(true).setScrollFactor(0);
             this.casoImage = this.add.image(this.centroX, this.centroY - 100, caseData[0].fotoKey).setScale(0.40).setVisible(true).setScrollFactor(0);
-            this.casoTexto = this.add.text(this.centroX - 210, this.centroY , caseData[0].desc, { fontSize: '18px', fill: '#000000', wordWrap: { width: 450 } }).setVisible(true).setScrollFactor(0);
+            this.casoTexto = this.add.rexBBCodeText(this.centroX - 210, this.centroY, caseData[0].desc, { fontFamily: 'Arial', fontSize: 18, color: '#000', wrap: {width: 450} })
             this.sintomasTexto = this.add.text(this.centroX - 210, this.centroY + 100, "Sintomas: "+caseData[0].sintomas, { fontSize: '16px', fill: '#000000', wordWrap: { width: 450 } }).setVisible(true).setScrollFactor(0);
             this.classificacaoTexto = this.add.text(this.centroX - 210, this.centroY + 150, "Classificação: ", { fontSize: '22px', fill: '#000000', wordWrap: { width: 450 } }).setVisible(true).setScrollFactor(0);
             this.classificacaoQueimaduraTexto = this.add.text(this.centroX - 15, this.centroY + 150, caseData[0].classificacao, { fontSize: '22px', fill: '#00FF00', wordWrap: { width: 450 } }).setVisible(true).setScrollFactor(0).setOrigin(0, 0);
@@ -51,6 +53,12 @@ class CenaCases extends Phaser.Scene {
                 this.botaoX.on("pointerdown", () => {
                 this.case1.setVisible(false);
                 this.botaoX.setVisible(false);
+                this.casoTexto.setVisible(false);
+                this.casoImage.setVisible(false);
+                this.nomeTexto.setVisible(false);
+                this.sintomasTexto.setVisible(false);
+                this.classificacaoTexto.setVisible(false);
+                this.classificacaoQueimaduraTexto.setVisible(false);
                 this.primeiraCena.physics.resume();
             });
         }, this);

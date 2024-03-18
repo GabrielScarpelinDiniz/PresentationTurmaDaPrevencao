@@ -50,7 +50,7 @@ class CenaPrincipal extends Phaser.Scene {
       frameHeight: 32
     });
 
-    this.load.json('casesData', 'assets/cases.json');
+    this.load.json('casesData', 'assets/cases/cases.json');
     this.load.image('case1', 'assets/spritesheets/prontuario1.png');
 
     //Carrega elementos principais do mapa
