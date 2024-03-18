@@ -2,10 +2,11 @@
     {
         "nome": "RONALD MEQUI DONALD",
         "fotoKey": "ronald",
-        "desc": "O [color=blue]Cozinheiro[/color] de uma de uma hamburgueria, durante a preparação de uma receita, teve [color=blue]contato[/color] com a frigideira [color=blue]quente[/color], queimando a palma da mão.",
-        "colored": [[2, 10], [84, 7], [109, 6]],
+        "desc": "O Cozinheiro de uma hamburgueria, durante a preparação de uma receita, teve contato com a frigideira quente , queimando a palma da mão.",
+        "colored": ["Cozinheiro", "contato", "quente"],
         "sintomas": "Apresenta vermelhidão na região, inchaço e dor local suportável.",
         "classificacao": "PRIMEIRO GRAU",
+        "classificacaoCor": "0x21FF21",
         "quiz": {
             "pergunta": "O que deve ser feito para evitar uma queimadura na pele ao encostar em uma superfície quente na cozinha?",
             "alternativas": [

@@ -5,8 +5,10 @@ class CenaCases extends Phaser.Scene {
 
     preload() {
         this.load.image('base-case', 'assets/base-case.png');
-        this.load.image('botaoX', 'assets/botaoX.png');
+        this.load.image('botao-fechar', 'assets/botaoX.png');
         this.load.image('ronald', 'assets/cases/ronald.png');
+        this.load.bitmapFont('pixelBitmapFont', 'assets/fonts/pixel_0.png', 'assets/fonts/pixel.fnt');
+        this.load.bitmapFont('iosevka', 'assets/fonts/iosevka_0.png', 'assets/fonts/iosevka.fnt');
         this.load.plugin('rexbbcodetextplugin', '/src/plugins/rexbbcodetextplugin.min.js', true);
 
     }
@@ -20,7 +22,7 @@ class CenaCases extends Phaser.Scene {
         // Adiciona o case e botão para fechar nas coordenadas específicas tendo como referência centro X e Y
         
         this.case1 = this.add.image(this.centroX, this.centroY, 'base-case').setScale(0.50).setVisible(false).setScrollFactor(0); // Adiciona a imagem do case, quando ocorre esse overlap
-        this.botaoX = this.add.sprite(this.case1.x + 210, this.case1.y - 275, 'botaoX').setInteractive().setScale(0.25).setVisible(false).setScrollFactor(0); // Adiciona a imagem do botao, quando ocorre esse overlap
+        this.botaoX = this.add.sprite(this.case1.x + 210, this.case1.y - 275, 'botao-fechar').setInteractive().setScale(0.25).setVisible(false).setScrollFactor(0); // Adiciona a imagem do botao, quando ocorre esse overlap
 
         // Requisições de informações de outras cenas
 
@@ -28,13 +30,17 @@ class CenaCases extends Phaser.Scene {
         this.abrirCase.events.on('abrirCase', function ()
         {
             const caseData = this.primeiraCena.caseData;
-            console.log(caseData[0].nome, caseData[0].fotoKey, caseData[0].desc, caseData[0].sintomas, caseData[0].classificacao);
-            this.nomeTexto = this.add.text(this.centroX - 210, this.centroY - 250, caseData[0].nome, { fontSize: '36px', fill: '#000000', backgroundColor: "#5CE1E6", padding: {x: 10, y: 10} }).setVisible(true).setScrollFactor(0);
-            this.casoImage = this.add.image(this.centroX, this.centroY - 100, caseData[0].fotoKey).setScale(0.40).setVisible(true).setScrollFactor(0);
-            this.casoTexto = this.add.rexBBCodeText(this.centroX - 210, this.centroY, caseData[0].desc, { fontFamily: 'Arial', fontSize: 18, color: '#000', wrap: {width: 450} })
-            this.sintomasTexto = this.add.text(this.centroX - 210, this.centroY + 100, "Sintomas: "+caseData[0].sintomas, { fontSize: '16px', fill: '#000000', wordWrap: { width: 450 } }).setVisible(true).setScrollFactor(0);
-            this.classificacaoTexto = this.add.text(this.centroX - 210, this.centroY + 150, "Classificação: ", { fontSize: '22px', fill: '#000000', wordWrap: { width: 450 } }).setVisible(true).setScrollFactor(0);
-            this.classificacaoQueimaduraTexto = this.add.text(this.centroX - 15, this.centroY + 150, caseData[0].classificacao, { fontSize: '22px', fill: '#00FF00', wordWrap: { width: 450 } }).setVisible(true).setScrollFactor(0).setOrigin(0, 0);
+
+
+            this.nomeTexto = this.add.text(this.centroX - 210, this.centroY - 250, caseData[0].nome, { fontSize: '36px', fill: '#000000', backgroundColor: "#5CE1E6", padding: {x: 10, y: 10} }).setVisible(true);
+            this.casoImage = this.add.image(this.centroX, this.centroY - 100, caseData[0].fotoKey).setScale(0.40).setVisible(true)
+            this.casoTexto = this.add.bitmapText(this.centroX - 210, this.centroY, 'iosevka', caseData[0].desc, 28).setVisible(true).setMaxWidth(450);
+            for (let i = 0; i < caseData[0].colored.length; i++){
+                console.log(caseData[0].colored[i]);
+                this.casoTexto.setWordTint(caseData[0].colored[i], 1, true, 0x0000ff, 0x0000ff, 0x0000ff, 0x0000ff)
+            }
+            this.sintomasTexto = this.add.bitmapText(this.centroX - 210, this.centroY + this.casoTexto.height + 10, 'iosevka', "Sintomas: "+caseData[0].sintomas, 24).setVisible(true).setMaxWidth(450);
+            this.classificacaoTexto = this.add.bitmapText(this.centroX - 210, this.centroY + this.casoTexto.height + this.sintomasTexto.height + 20, 'iosevka', "Classificação: "+caseData[0].classificacao, 24).setVisible(true).setMaxWidth(450).setWordTint(caseData[0].classificacao.split(" ")[0], 1, true, Number(caseData[0].classificacaoCor), Number(caseData[0].classificacaoCor), Number(caseData[0].classificacaoCor), Number(caseData[0].classificacaoCor));
             this.physics.pause();
             this.case1.setVisible(true);
             this.botaoX.setVisible(true);
@@ -58,7 +64,6 @@ class CenaCases extends Phaser.Scene {
                 this.nomeTexto.setVisible(false);
                 this.sintomasTexto.setVisible(false);
                 this.classificacaoTexto.setVisible(false);
-                this.classificacaoQueimaduraTexto.setVisible(false);
                 this.primeiraCena.physics.resume();
             });
         }, this);
