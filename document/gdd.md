@@ -246,13 +246,10 @@ Posto isso, foi entendido que a definição adequada do público alvo aumenta a 
 
 ## 3.1. Enredo do Jogo (sprints 2 e 3)
 
-&nbsp;&nbsp;&nbsp;&nbsp;O jogador encarna o papel de Residente, um jovem médico recentemente formado, prestes a iniciar sua jornada no desafiador mundo da medicina. Ao ingressar na equipe do pronto-socorro de queimaduras, ele é guiado pela experiente Dra. Tina, uma figura respeitada no campo da medicina de emergência.
+&nbsp;&nbsp;&nbsp;&nbsp;No jogo "SOS Queimaduras", os jogadores entram em uma aventura imersiva da vida de Lipe, um aluno de escola pública muito dedicado e competitivo. O sonho de Lipe é se tornar um médico e por isso participa da dinâmica proposta pela Dra. Tina, uma renomada médica do Hospital das Clínicas. 
 
-&nbsp;&nbsp;&nbsp;&nbsp;Inicialmente, o Residente é confrontado com situações desafiadoras e momentos de incerteza, nos quais sua inexperiência se manifesta de maneira evidente. No entanto, à medida que ele se envolve em diagnósticos, tratamentos de emergência e tomadas de decisão rápidas, ele começa a perceber que sua verdadeira jornada como médico está apenas começando.
+&nbsp;&nbsp;&nbsp;&nbsp;No Dia da Prevenção, a Faculdade de Medicina da USP abriu as portas para receber alunos de todas as escolas, com o objetivo de conscientizá-los acerca do tema das queimaduras. Durante a dinâmica, Lipe vai entrar em contato com casos reais de pessoas que sofreram lesões de queimadura e vai estudar cada um deles minuciosamente, desbravando a literatura acerca do tema. A dinâmica irá testar seus conhecimentos adquiridos por meio de um jogo desafiador de perguntas e respostas. À medida em que o jogo avança, Lipe vai compreendendo os perigos e cuidados relacionados às queimaduras, desmitificando crenças populares e absorvendo conhecimento valioso, além de entender a importância da prevenção.
 
-&nbsp;&nbsp;&nbsp;&nbsp;Ao longo do jogo, o Residente é confrontado com uma série de desafios que testam suas habilidades técnicas, sua eficiência e sua ética . Ele se encontra diante de pacientes cujas vidas dependem de suas decisões, exigindo coragem e determinação para superar obstáculos e salvar vidas.
-
-&nbsp;&nbsp;&nbsp;&nbsp;À medida que o Residente avança em sua jornada, ele não apenas ganha confiança em suas habilidades clínicas, mas também cresce como profissional. Ele aprende lições importantes sobre a prevenção de queimaduras e o domínio sobre os procedimentos de primeiros socorros.
 
 ## 3.2. Personagens (sprints 2 e 3)
 
