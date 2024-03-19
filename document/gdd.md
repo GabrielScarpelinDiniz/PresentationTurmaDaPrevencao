@@ -262,7 +262,8 @@ Posto isso, foi entendido que a definição adequada do público alvo aumenta a 
 ### 3.2.2. Non-Playable Characters (NPC)
 
 
-&nbsp;&nbsp;&nbsp;&nbsp;Personagens não controláveis (NPCs) são avatares que o jogador não possui controle direto, portanto não comandam seus movimentos e ações específicas⁹. Em nosso projeto, haverá vários NPCs, dos quais 6 representarão os pacientes a serem atendidos pelo jogador através do personagem principal e um será a Dra. Tina, NPC responsável por guiar o jogador sobre o fluxo de jogabilidade e tutoriais em pontos específicos.
+&nbsp;&nbsp;&nbsp;&nbsp;*Non-Playable Characters* (*NPCs*) são avatares os quais o jogador não possui controle sobre, portanto não comanda seus movimentos nem ações⁹. Porém, é possível interagir com eles se forem programados para isso, como é o caso da Dra. Tina. Em nosso projeto, utilizaremos 11 *NPCs*, dos quais 10 deles serão estudantes e, como o Lipe, participarão da dinâmica do jogo. Já a  Dra. Tina será uma *NPC* que ficará situada em somente um lugar, no entanto ela será a única com a qual é possível interagir, visto que ela é a responsável por entregar os cases aos alunos. 
+
 
 ### 3.2.3. Diversidade e Representatividade dos Personagens
 
