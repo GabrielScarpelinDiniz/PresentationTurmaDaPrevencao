@@ -246,7 +246,7 @@ Posto isso, foi entendido que a definição adequada do público alvo aumenta a 
 
 ## 3.1. Enredo do Jogo (sprints 2 e 3)
 
-&nbsp;&nbsp;&nbsp;&nbsp;No jogo "SOS Queimaduras", os jogadores entram em uma aventura imersiva da vida de Lipe, um aluno de escola pública muito dedicado e competitivo. O sonho de Lipe é se tornar um médico e por isso participa da dinâmica proposta pela Dra. Tina, uma renomada médica do Hospital das Clínicas. 
+&nbsp;&nbsp;&nbsp;&nbsp;No jogo "SOS Queimaduras", os jogadores entram em uma aventura imersiva da vida de Lipe, um estudante de ensino médio em uma escola pública muito dedicado e competitivo. O sonho de Lipe é se tornar um médico e por isso participa da dinâmica proposta pela Dra. Tina, uma renomada médica do Hospital das Clínicas. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;No Dia da Prevenção, a Faculdade de Medicina da USP abriu as portas para receber alunos de todas as escolas, com o objetivo de conscientizá-los acerca do tema das queimaduras. Durante a dinâmica, Lipe vai entrar em contato com casos reais de pessoas que sofreram lesões de queimadura e vai estudar cada um deles minuciosamente, desbravando a literatura acerca do tema. A dinâmica irá testar seus conhecimentos adquiridos por meio de um jogo desafiador de perguntas e respostas. À medida em que o jogo avança, Lipe vai compreendendo os perigos e cuidados relacionados às queimaduras, desmitificando crenças populares e absorvendo conhecimento valioso, além de entender a importância da prevenção.
 
@@ -257,7 +257,7 @@ Posto isso, foi entendido que a definição adequada do público alvo aumenta a 
 
 &nbsp;&nbsp;&nbsp;&nbsp;O termo "personagem controlável" refere-se àqueles avatares que são comandados pelo jogador através de comandos de movimento, ações, combate, dentre outros⁹.
 
-&nbsp;&nbsp;&nbsp;&nbsp;O jogo referido neste documento terá apenas um personagem controlável em jogo, porém o jogador poderá selecionar o sexo do protagonista, ou seja, haverá duas opções: O residente médico protagonista masculino e a residente médica protagonista feminina. Não será possível jogar com mais de um personagem controlável ao iniciar o jogo, portanto ele só poderá ser alterado quando o jogador retornar ao menu inicial. O nome do personagem controlável masculino é X e Y, o nome da protagonista feminina. O avatar controlável será um(a) residente médico(a) especializando-se na área de cirurgia plásticas, especialmente em casos de pacientes que sofreram queimaduras. X ou Y é guiado pela Dra. Tina durante seu expediente e possui habilidades para atender os pacientes, consultar livros na Biblioteca para adquirir conhecimento e responder às perguntas na Farmácia para receber o remédio (fictício) necessário para tratar o cliente.
+&nbsp;&nbsp;&nbsp;&nbsp;O jogo referido neste documento terá somente um único personagem controlável, o Lipe. Lipe é um aluno dedicado que está no ensino médio de uma escola pública e participará de uma dinâmica proposta pela Dra. Tina dentro do campus da Faculdade de Medicina da USP. O personagem sonha em um dia ser médico, então está animado para os desafios que lhe serão apresentados. Lipe irá estudar os cases que serão fornecidos pela Dra. Tina e terá como objetivo concluir o maior número de cases em um tempo estabelecido. 
 
 ### 3.2.2. Non-Playable Characters (NPC)
 
