@@ -78,6 +78,8 @@ class CenaPrincipal extends Phaser.Scene {
   }
 
   create() {
+    this.sorteados = [];
+    this.indiceSorteado;
     this.caseData = this.cache.json.get('casesData');
     this.primeiroCaso = true;
     // Adiciona a música de introdução
@@ -185,7 +187,7 @@ class CenaPrincipal extends Phaser.Scene {
     //   this.physics.resume()
     // });
     // // });
-    // this.cameras.main.setBounds(0, 0, 1120, 1120)
+    this.cameras.main.setBounds(0, 0, 1120, 1120)
     this.cameras.main.setZoom(2.5);
 
 
@@ -271,6 +273,7 @@ class CenaPrincipal extends Phaser.Scene {
     this.tinaCollider = this.physics.add.overlap(this.tina, this.jogador, () => { // Cria o overlap entre o jogador principal e a Tina
       console.log('teste'); // Console log para verificar o funcionamento do overlap
       if (this.objetoCaso.status === false) {
+        this.indiceSorteado = this.sortearNumero(0, this.caseData.length - 1);
         console.log(this.caseData)
         this.physics.pause()
         this.events.emit('abrirCase');
@@ -398,6 +401,16 @@ class CenaPrincipal extends Phaser.Scene {
     } else if (angle > 0) {
       return 360 - angle
     }
+  }
+
+  sortearNumero(min, max) {
+    const numeroSorteado = Phaser.Math.Between(min, max);
+    if (this.indiceSorteado in this.sorteados){
+      this.sortearNumero(min, max);
+      return
+    }
+    
+    return numeroSorteado
   }
 
 }
