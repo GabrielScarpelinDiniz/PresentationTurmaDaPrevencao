@@ -60,7 +60,7 @@ class CenaHUD extends Phaser.Scene
                 callback: () => {
                     //   this.fundoTimer.setVisible(true);
                     this.textoTempo.setVisible(true);
-                    if(this.tempoInicial >0) {
+                    if (this.tempoInicial > 0) {
                         this.tempoInicial -= 1; // Decrementa o contador
                     }
                     this.textoTempo.setText((this.tempoInicial - this.tempoInicial %60)/60 + 'min ' + this.tempoInicial %60 + 's')
