@@ -319,7 +319,8 @@ class CenaPrincipal extends Phaser.Scene {
         //chama a cena para mostrar o quiz
         this.scene.wake('quiz');
         // pausa a física do jogo enquanto a cena do quiz estiver exposta
-        this.physics.pause()
+        this.physics.pause()  
+        this.events.emit('abrirQuiz');
       }
     });
   }
@@ -410,6 +411,7 @@ class CenaPrincipal extends Phaser.Scene {
       return
     }
     
+    console.log(numeroSorteado);
     return numeroSorteado
   }
 
