@@ -271,17 +271,15 @@ Posto isso, foi entendido que a definição adequada do público alvo aumenta a 
 
 \# | NPC | Função | Imagem
 --- | --- | --- | --- 
-1 | Dra. Tina | Instruir os alunos e entregar os cases | Imagem
-2 | Isa | Preencher o mapa e atrapalhar o jogador ao participar da dinâmica | Imagem
-3 | NPC 03 | Preencher o mapa e atrapalhar o jogador ao participar da dinâmica | Imagem
-4 | NPC 04 | Preencher o mapa e atrapalhar o jogador ao participar da dinâmica | Imagem
-5 | NPC 05 | Preencher o mapa e atrapalhar o jogador ao participar da dinâmica | Imagem
-6 | NPC 06 | Preencher o mapa e atrapalhar o jogador ao participar da dinâmica | Imagem
-7 | NPC 07 | Preencher o mapa e atrapalhar o jogador ao participar da dinâmica | Imagem
-8 | NPC 08 | Preencher o mapa e atrapalhar o jogador ao participar da dinâmica | Imagem
-9 | NPC 09 | Preencher o mapa e atrapalhar o jogador ao participar da dinâmica | Imagem
-10 | NPC 10 | Preencher o mapa e atrapalhar o jogador ao participar da dinâmica | Imagem
-11 | NPC 11 | Preencher o mapa e atrapalhar o jogador ao participar da dinâmica | Imagem
+1 | Dra. Tina | Instruir os alunos e entregar os cases | <img src="./other/Dr. Tina - Big.png" width="25%">
+2 | Isa | Preencher o mapa e atrapalhar o jogador ao participar da dinâmica | <img src="./other/NPC03 - Big.png" width="25%">
+3 | NPC 03 | Preencher o mapa e atrapalhar o jogador ao participar da dinâmica | <img src="./other/NPC02 - Big.png" width="25%">
+4 | NPC 04 | Preencher o mapa e atrapalhar o jogador ao participar da dinâmica | <img src="./other/NPC04 - Big.png" width="25%">
+5 | NPC 05 | Preencher o mapa e atrapalhar o jogador ao participar da dinâmica | <img src="./other/NPC05 - Big.png" width="25%">
+6 | NPC 06 | Preencher o mapa e atrapalhar o jogador ao participar da dinâmica | <img src="./other/NPC06 - Big.png" width="25%">
+7 | NPC 07 | Preencher o mapa e atrapalhar o jogador ao participar da dinâmica | <img src="./other/NPC07 - Big.png" width="25%">
+8 | NPC 08 | Preencher o mapa e atrapalhar o jogador ao participar da dinâmica | <img src="./other/NPC08 - Big.png" width="25%">
+9 | NPC 09 | Preencher o mapa e atrapalhar o jogador ao participar da dinâmica | <img src="./other/NPC09 - Big.png" width="25%">
 <div align="center">
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 </div>
