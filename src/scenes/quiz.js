@@ -13,7 +13,9 @@ class Quiz extends Phaser.Scene {
     }
 
     create() {
+        this.alternativaRespondida = false;
         this.primeiraCena = this.scene.get('cenaPrincipal'); // Obtém a referência para a cena 'cenaPrincipal'
+        this.cenaHUD = this.scene.get('cenaHUD'); // Obtém a referência para a cena 'cenaPrincipal'
         this.scene.sleep();
         // Adicionando o fundo branco e a borda retangulas
         const bgWhite = this.add.rectangle(gameDimensions.width / 2, gameDimensions.height / 2, 700, 500, 0xffffff).setStrokeStyle(2, 0x000000);
@@ -23,9 +25,8 @@ class Quiz extends Phaser.Scene {
         
         // Adicionando a pergunta à cena
         this.primeiraCena.events.on('abrirQuiz', () => {
-            const numeroSorteado = this.primeiraCena.indiceSorteado;
-            console.log(this.primeiraCena.caseData[numeroSorteado])
-            this.add.text(bgWhite.x, bgWhite.y - 40, this.primeiraCena.caseData[numeroSorteado].quiz.pergunta, {
+            const caso = this.primeiraCena.objetoCaso.caso;
+            this.add.text(bgWhite.x, bgWhite.y - 40, caso.quiz.pergunta, {
                 fontSize: '20px',
                 color: '#000',
                 fontFamily: 'Arial',
@@ -36,7 +37,7 @@ class Quiz extends Phaser.Scene {
             }).setOrigin(0.5);
             
             // Adicionando as alternativas à cena e suas aparências na interface
-            const alternativa1 = this.add.text(bgWhite.x, bgWhite.y + 60, this.primeiraCena.caseData[numeroSorteado].quiz.alternativas[0], {
+            const alternativa1 = this.add.text(bgWhite.x, bgWhite.y + 60, caso.quiz.alternativas[0], {
                 fontSize: '23px',
                 color: '#000',
                 fontFamily: 'Arial',
@@ -49,9 +50,18 @@ class Quiz extends Phaser.Scene {
                     width: 500
                 },
                 align: 'center'
-            }).setOrigin(0.5).setInteractive().on('pointerdown', () => this.verificarResposta(0, this.primeiraCena.caseData[numeroSorteado].quiz.alternativaCorreta));
+            }).setOrigin(0.5).setInteractive().on('pointerdown', () => {
+                if (!this.alternativaRespondida){
+                    this.verificarResposta(0, caso.quiz.alternativaCorreta);
+                    this.primeiraCena.objetoCaso.status = false;
+                    this.primeiraCena.objetoCaso.caso = null;
+                    this.alternativaRespondida = true;
+                    this.cenaHUD.events.emit('quiz-respondido')
+
+                }
+            });
     
-            const alternativa2 = this.add.text(bgWhite.x, bgWhite.y + 140, this.primeiraCena.caseData[numeroSorteado].quiz.alternativas[1], {
+            const alternativa2 = this.add.text(bgWhite.x, bgWhite.y + 140, caso.quiz.alternativas[1], {
                 fontSize: '21px',
                 color: '#000',
                 fontFamily: 'Arial',
@@ -64,7 +74,16 @@ class Quiz extends Phaser.Scene {
                     width: 500
                 },
                 align: 'center'
-            }).setOrigin(0.5).setInteractive().on('pointerdown', () => this.verificarResposta(1, this.primeiraCena.caseData[numeroSorteado].quiz.alternativaCorreta));
+            }).setOrigin(0.5).setInteractive().on('pointerdown', () => {
+                if (!this.alternativaRespondida){
+                    this.verificarResposta(1, caso.quiz.alternativaCorreta);
+                    this.primeiraCena.objetoCaso.status = false;
+                    this.primeiraCena.objetoCaso.caso = null;
+                    this.alternativaRespondida = true;
+                    this.cenaHUD.events.emit('quiz-respondido')
+
+                }
+            });
     
 
 
@@ -85,6 +104,7 @@ class Quiz extends Phaser.Scene {
         const botaoX = this.add.image(bgWhite.x + 300, bgWhite.y - 200, 'x').setScale(0.3).setInteractive();
         botaoX.on('pointerdown', () => {
             // Pausa a cena atual ('quiz')
+            this.alternativaRespondida = false;
             this.scene.sleep('quiz');
             // Reinicia a cena para cada vez que ocorre o overlap com a tenda o quiz voltar a sua forma padrão para que o jogador possa jogar de novo
             this.scene.restart();
@@ -96,6 +116,7 @@ class Quiz extends Phaser.Scene {
     verificarResposta(resposta, alternativaCorreta) {
         // Verifica se a resposta está correta
         if (resposta === alternativaCorreta) {
+            this.cenaHUD.atualizarPontuacao(10);
             // Define a mensagem de explicação para resposta correta
             this.explicacaoText.setText('Parabéns! Usar luvas de proteção térmica de alta qualidade evita acidentes graves na cozinha');
             // Define a cor do texto como verde
@@ -107,4 +128,5 @@ class Quiz extends Phaser.Scene {
             this.explicacaoText.setColor('#FF0000');
         }
     }
+    
 }

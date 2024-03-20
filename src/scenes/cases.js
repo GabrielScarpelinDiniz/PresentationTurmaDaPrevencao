@@ -51,8 +51,7 @@ class CenaCases extends Phaser.Scene {
 
         this.abrirCase = this.scene.get('cenaHUD');        
         const abrirCase = () => {
-            const caseData = this.primeiraCena.caseData;
-            const numeroSorteado = this.primeiraCena.indiceSorteado;
+            const caso = this.primeiraCena.objetoCaso.caso;
             this.case1.setVisible(true);
             this.botaoX.setVisible(true);
             this.nomeTexto ? this.nomeTexto.destroy() : null;
@@ -60,15 +59,14 @@ class CenaCases extends Phaser.Scene {
             this.sintomasTexto ? this.sintomasTexto.destroy() : null;
             this.classificacaoTexto ? this.classificacaoTexto.destroy() : null;
             this.casoImage ? this.casoImage.destroy() : null;
-            this.nomeTexto = this.add.text(this.centroX, this.centroY - 220, caseData[numeroSorteado].nome, { fontSize: '36px', fill: '#000000', backgroundColor: "#5CE1E6", padding: {x: 10, y: 10} }).setVisible(true).setOrigin(0.5);
-            this.casoImage = this.add.image(this.centroX, this.centroY - 100, caseData[numeroSorteado].fotoKey).setScale(0.40).setVisible(true)
-            this.casoTexto = this.add.bitmapText(this.centroX - 210, this.centroY, 'iosevka', caseData[numeroSorteado].desc, 28).setVisible(true).setMaxWidth(450);
-            for (let i = 0; i < caseData[numeroSorteado].colored.length; i++){
-                console.log(caseData[numeroSorteado].colored[i]);
-                this.casoTexto.setWordTint(caseData[numeroSorteado].colored[i], 1, true, 0x0000ff, 0x0000ff, 0x0000ff, 0x0000ff)
+            this.nomeTexto = this.add.text(this.centroX, this.centroY - 220, caso.nome, { fontSize: '36px', fill: '#000000', backgroundColor: "#5CE1E6", padding: {x: 10, y: 10} }).setVisible(true).setOrigin(0.5);
+            this.casoImage = this.add.image(this.centroX, this.centroY - 100, caso.fotoKey).setScale(0.40).setVisible(true)
+            this.casoTexto = this.add.bitmapText(this.centroX - 210, this.centroY, 'iosevka', caso.desc, 28).setVisible(true).setMaxWidth(450);
+            for (let i = 0; i < caso.colored.length; i++){
+                this.casoTexto.setWordTint(caso.colored[i], 1, true, 0x0000ff, 0x0000ff, 0x0000ff, 0x0000ff)
             }
-            this.sintomasTexto = this.add.bitmapText(this.centroX - 210, this.centroY + this.casoTexto.height + 10, 'iosevka', "Sintomas: "+caseData[numeroSorteado].sintomas, 24).setVisible(true).setMaxWidth(450);
-            this.classificacaoTexto = this.add.bitmapText(this.centroX - 210, this.centroY + this.casoTexto.height + this.sintomasTexto.height + 20, 'iosevka', "Classificação: "+caseData[numeroSorteado].classificacao, 24).setVisible(true).setMaxWidth(450).setWordTint(caseData[numeroSorteado].classificacao.split(" ")[0], 1, true, Number(caseData[numeroSorteado].classificacaoCor), Number(caseData[numeroSorteado].classificacaoCor), Number(caseData[numeroSorteado].classificacaoCor), Number(caseData[numeroSorteado].classificacaoCor));
+            this.sintomasTexto = this.add.bitmapText(this.centroX - 210, this.centroY + this.casoTexto.height + 10, 'iosevka', "Sintomas: "+caso.sintomas, 24).setVisible(true).setMaxWidth(450);
+            this.classificacaoTexto = this.add.bitmapText(this.centroX - 210, this.centroY + this.casoTexto.height + this.sintomasTexto.height + 20, 'iosevka', "Classificação: "+caso.classificacao, 24).setVisible(true).setMaxWidth(450).setWordTint(caso.classificacao.split(" ")[0], 1, true, Number(caso.classificacaoCor), Number(caso.classificacaoCor), Number(caso.classificacaoCor), Number(caso.classificacaoCor));
             this.physics.pause();
         }
         this.abrirCase.events.on('abrirCase', abrirCase, this);
