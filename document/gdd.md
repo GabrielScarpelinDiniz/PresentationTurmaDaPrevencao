@@ -310,7 +310,7 @@ Posto isso, foi entendido que a definição adequada do público alvo aumenta a 
 ### 3.3.3. Condições climáticas e temporais (sprints 2 e 3)
 
 &nbsp;&nbsp;&nbsp;&nbsp;No jogo, o tempo é um elemento que adiciona diversão e desafio à experiência do jogador. 
-Um cronômetro é utilizado para medir o tempo que o jogador tem para completar cada ciclo de cuidado com o paciente no pronto-socorro de queimaduras. 
+Um cronômetro é utilizado para medir o tempo que o jogador tem para completar cada ciclo de aprendizado e resolução do case na gincana. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;O desafio está em cumprir o máximo de ciclos no tempo estipulado, o que cria uma sensação de urgência e emoção. O jogador é recompensado com pontuações mais altas por sua eficiência e rapidez, incentivando repetições para melhorar o desempenho. No entanto, erros resultam na perda de tempo, tornando essencial tomar decisões cuidadosas e precisas durante o jogo. 
 
