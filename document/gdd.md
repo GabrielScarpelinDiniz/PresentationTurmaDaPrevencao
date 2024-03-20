@@ -265,6 +265,28 @@ Posto isso, foi entendido que a definição adequada do público alvo aumenta a 
 &nbsp;&nbsp;&nbsp;&nbsp;*Non-Playable Characters* (*NPCs*) são avatares os quais o jogador não possui controle sobre, portanto não comanda seus movimentos nem ações⁹. Porém, é possível interagir com eles se forem programados para isso, como é o caso da Dra. Tina. Em nosso projeto, utilizaremos 11 *NPCs*, dos quais 10 deles serão estudantes e, como o Lipe, participarão da dinâmica. Desde modo, poderão ser obstáculos para o trajeto do jogador durante o jogo. Já a  Dra. Tina será uma *NPC* que ficará situada em somente um lugar, no entanto ela será a única com a qual é possível interagir, visto que ela é a responsável por entregar os cases aos alunos. 
 
 
+<div align="center">
+<sub>Tabela x: Descrição dos NPCs do jogo</sub>
+</div>
+
+\# | NPC | Função | Imagem
+--- | --- | --- | --- 
+1 | Dra. Tina | Instruir os alunos e entregar os cases | Imagem
+2 | Isa | Preencher o mapa e atrapalhar o jogador ao participar da dinâmica | Imagem
+3 | NPC 03 | Preencher o mapa e atrapalhar o jogador ao participar da dinâmica | Imagem
+4 | NPC 04 | Preencher o mapa e atrapalhar o jogador ao participar da dinâmica | Imagem
+5 | NPC 05 | Preencher o mapa e atrapalhar o jogador ao participar da dinâmica | Imagem
+6 | NPC 06 | Preencher o mapa e atrapalhar o jogador ao participar da dinâmica | Imagem
+7 | NPC 07 | Preencher o mapa e atrapalhar o jogador ao participar da dinâmica | Imagem
+8 | NPC 08 | Preencher o mapa e atrapalhar o jogador ao participar da dinâmica | Imagem
+9 | NPC 09 | Preencher o mapa e atrapalhar o jogador ao participar da dinâmica | Imagem
+10 | NPC 10 | Preencher o mapa e atrapalhar o jogador ao participar da dinâmica | Imagem
+11 | NPC 11 | Preencher o mapa e atrapalhar o jogador ao participar da dinâmica | Imagem
+<div align="center">
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+</div>
+
+
 ### 3.2.3. Diversidade e Representatividade dos Personagens
 
 &nbsp;&nbsp;&nbsp;&nbsp; De acordo com o nosso público-alvo, o jogo em questão não apenas oferecerá uma variedade de personagens, mas também buscará causar um impacto social por meio da inclusão e diversidade. A personagem Dra. Tina foi criada para representar uma parcela significativa da população brasileira: pessoas pardas/pretas, conforme indicado pelo Censo de 2022. Nossa abordagem visa não apenas incluir personagens pretos como secundários, mas também posicioná-los como protagonistas da história. Assim, a Dra. Tina desempenha o papel principal ao guiar o personagem principal durante toda a jornada, fornecendo instruções e sendo a figura central por trás de todos os eventos que ocorrem dentro do jogo. Além disso, o projeto visa abordar outras raças e diferentes culturas nos personagens, e a expectativa é que, com o avanço do projeto, os NPCs sejam desenvolvidos para representar ainda mais parcelas da população sub-representadas.
