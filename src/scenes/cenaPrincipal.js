@@ -274,7 +274,7 @@ class CenaPrincipal extends Phaser.Scene {
       console.log('teste'); // Console log para verificar o funcionamento do overlap
       if (this.objetoCaso.status === false) {
         this.indiceSorteado = this.sortearNumero(0, this.caseData.length - 1);
-        console.log(this.caseData)
+        this.objetoCaso.caso = this.caseData[this.indiceSorteado];
         this.physics.pause()
         this.events.emit('abrirCase');
 
@@ -319,7 +319,7 @@ class CenaPrincipal extends Phaser.Scene {
         //chama a cena para mostrar o quiz
         this.scene.wake('quiz');
         // pausa a física do jogo enquanto a cena do quiz estiver exposta
-        this.physics.pause()  
+        this.physics.pause();  
         this.events.emit('abrirQuiz');
       }
     });
@@ -405,13 +405,15 @@ class CenaPrincipal extends Phaser.Scene {
   }
 
   sortearNumero(min, max) {
-    const numeroSorteado = Phaser.Math.Between(min, max);
-    if (this.indiceSorteado in this.sorteados){
-      this.sortearNumero(min, max);
-      return
+    if (this.sorteados.length === this.caseData.length) {
+      return 0
     }
-    
-    console.log(numeroSorteado);
+    const numeroSorteado = Phaser.Math.Between(min, max);
+    console.log(this.sorteados, numeroSorteado)
+    if (this.sorteados.includes(numeroSorteado)){
+      return this.sortearNumero(min, max);
+    }
+    this.sorteados.push(numeroSorteado);
     return numeroSorteado
   }
 

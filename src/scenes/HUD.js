@@ -14,6 +14,7 @@ class CenaHUD extends Phaser.Scene
     {
         // Define um tempo inicial para o timer
         this.tempoInicial = 240;
+        this.pontuacao = 0;
         // Cria os elementos do timer
         this.fundoTimer = this.add.rectangle(635, 30, 210, 50, 0xadd8e6).setVisible(false).setAlpha(0.8);
         this.textoTempo = this.add.text(545, 15,  (this.tempoInicial - this.tempoInicial %60)/60 + 'min ' + this.tempoInicial %60 + 's', { fontSize: '40px', fill: '#000000'}).setVisible(false); // Adiciona o texto do tempo na tela do jogo
@@ -53,7 +54,7 @@ class CenaHUD extends Phaser.Scene
             this.fundoTimer.setVisible(true).setStrokeStyle(2, 0x1a65ac)
             this.textoTempo.setVisible(true)
             this.textoTarefa.setVisible(true).setText("Tenda de livros? <-")
-            this.textoPontos.setText("Pontos: 050");
+            this.textoPontos.setText(`Pontos: ${this.pontuacao}`);
 
             this.time.addEvent({ 
                 delay: 1000, // delay de 1000 ms = 1 segundo
@@ -105,9 +106,18 @@ class CenaHUD extends Phaser.Scene
         // Cria evento para mudar o texto de elementos do HUD
         cenaLivros.events.on('mudaTarefaParaQuiz', function () // Define o evento 'botaoCase'
         {
-            this.textoTarefa.setText("Tenda do Quiz? ->")
-            this.textoPontos.setText("Pontos: 100");
+            this.textoTarefa.setText("Tenda do Quiz? ->");
         }, this);
+
+        this.events.on('quiz-respondido',  () => {
+            this.botaoCaseAlto.setVisible(false);
+            this.botaoCaseBaixo.setVisible(false);
+            this.botaoCase.setVisible(false);
+        })
         
+    }
+    atualizarPontuacao(pontuacao){
+        this.pontuacao += pontuacao;
+        this.textoPontos.setText(`Pontos: ${this.pontuacao}`);
     }
 }
