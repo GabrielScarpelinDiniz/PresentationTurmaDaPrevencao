@@ -51,6 +51,7 @@ class Livros extends Phaser.Scene {
         });
         // });
 
+        // Adiciona o botão de fechar a cena e adiciona o evento de clique
         this.botaoFechar = this.add.sprite(1200, 50, 'botaoX').setScale(0.5).setInteractive().setScrollFactor(0);
         this.botaoFechar.on('pointerdown', () => {
             // Inicie a cena principal passando os dados relevantes do estado da cena principal

@@ -14,7 +14,7 @@ const config = {
             gravity: {
                 y: 0
             },
-            debug: false
+            debug: true
         }
     },
     scale: {
@@ -23,7 +23,16 @@ const config = {
     scene: [
         MenuPrincipal, CenaPrincipal, CenaHUD, CenaCases, Livros, Quiz
     ],
-    pixelArt: true
+    pixelArt: true,
+    plugins: {
+        scene: [
+            {
+                key: "gridEngine",
+                plugin: GridEngine,
+                mapping: "gridEngine"
+            }
+        ]
+    }
 
 };
 
