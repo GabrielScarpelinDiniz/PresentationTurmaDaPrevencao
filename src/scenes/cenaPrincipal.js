@@ -190,6 +190,7 @@ class CenaPrincipal extends Phaser.Scene {
     this.npc07 = new NPCsAlunos(this.physics.add.sprite(660, 645, 'npc07').setSize(16, 18, 9, 10).setScale(1.5).refreshBody(), this, "npc07")
     this.npc08 = new NPCsAlunos(this.physics.add.sprite(720, 645, 'npc08').setSize(16, 18, 9, 10).setScale(1.5).refreshBody(), this, "npc08")
     this.npc09 = new NPCsAlunos(this.physics.add.sprite(780, 645, 'npc09').setSize(16, 18, 9, 10).setScale(1.5).refreshBody(), this, "npc09")
+
     this.tina = this.physics.add.sprite(560, 400, 'tina').setOffset(8, 12).setCircle(8).setScale(2).refreshBody().setImmovable(); // Adiciona o sprite da Tina
     
     // criando a camada da cerca
@@ -255,8 +256,6 @@ class CenaPrincipal extends Phaser.Scene {
     }) //Seta as colisões onde tem a propriedade collider: true no tiled map
     this.physics.add.collider(this.jogador, this.cerca, () => console.log("Colidiu"))
     
-    this.physics.add.collider(this.jogador, this.tina); // Adiciona a colisão entre o persoangem e a Tina
-    
     this.tinaCollider = this.physics.add.overlap(this.tina, this.jogador, () => { // Cria o overlap entre o jogador principal e a Tina
       console.log('teste'); // Console log para verificar o funcionamento do overlap
       if (this.objetoCaso.status === false) {
@@ -267,6 +266,9 @@ class CenaPrincipal extends Phaser.Scene {
         
       }
     });
+    
+    this.physics.add.collider(this.jogador, this.tina); // Adiciona a colisão entre o persoangem e a Tina
+    
     
     this.physics.add.collider(this.jogador, this.tendaLivro, () => {
       console.log("Colidiu com a tenda do livro") //Adiciona colisão entre o jogador e a tenda de livros
