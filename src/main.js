@@ -24,15 +24,6 @@ const config = {
         MenuPrincipal, CenaPrincipal, CenaHUD, CenaCases, Livros, Quiz
     ],
     pixelArt: true,
-    plugins: {
-        scene: [
-            {
-                key: "gridEngine",
-                plugin: GridEngine,
-                mapping: "gridEngine"
-            }
-        ]
-    }
 
 };
 
