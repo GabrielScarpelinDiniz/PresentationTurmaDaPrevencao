@@ -106,6 +106,8 @@ class Quiz extends Phaser.Scene {
             // Pausa a cena atual ('quiz')
             this.alternativaRespondida = false;
             this.cenaHUD.textoTempoDescontado.setVisible(false);
+            this.cenaHUD.fundoTempoDescontado.setVisible(false);
+
             this.scene.sleep('quiz');
             // Reinicia a cena para cada vez que ocorre o overlap com a tenda o quiz voltar a sua forma padrão para que o jogador possa jogar de novo
             this.scene.restart();
