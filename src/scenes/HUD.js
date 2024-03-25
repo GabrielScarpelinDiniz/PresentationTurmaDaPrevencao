@@ -21,7 +21,8 @@ class CenaHUD extends Phaser.Scene
         this.botaoCaseBaixo = this.add.image(1140, 150, 'botaoCaseBaixo').setScale(3).setVisible(false).setInteractive();
         this.botaoCaseAlto = this.add.image(1140, 150, 'botaoCaseAlto').setScale(3).setVisible(false).setInteractive();
         this.botaoCase = this.add.circle(1140, 150, 70, 0xffffff, 1).setVisible(false).setInteractive().setAlpha(0.1);
-        
+        this.textoTempoDescontado = this.add.text(650, 70, "-10", { fontSize: '50px', fill: '#ff0000'}).setVisible(false); // Adiciona o texto do tempo descontado na tela do jogo
+
         // Cria os elementos da tarefas
         this.fundoTarefa = this.add.rectangle(5, 5, 450, 50, 0xadd8e6).setVisible(false).setAlpha(0.9).setOrigin(0,0);
         this.textoTarefa = this.add.text(10, 15, "Procure a dr.ª Tina", { fontSize: '36px', fill: '#000000'}).setVisible(false);
@@ -33,6 +34,7 @@ class CenaHUD extends Phaser.Scene
         //  Define variáveis de chamada das cenas
         const cenaAtual = this.scene.get('cenaPrincipal');
         const cenaLivros = this.scene.get('livros');
+        const cenaQuiz = this.scene.get('quiz');
 
         // Cria evento para mostrar parte da HUD (Tarefas)
         cenaAtual.events.on('mostraTarefaInicial', function () 
@@ -66,9 +68,6 @@ class CenaHUD extends Phaser.Scene
                     }
                     this.textoTempo.setText((this.tempoInicial - this.tempoInicial %60)/60 + 'min ' + this.tempoInicial %60 + 's')
                     // console.log('time: ',time/1000)
-                    if (this.tempoInicial == 99) {
-                        //this.textoTempo.setPosition(this.player.x, 100);
-                    };
                        
                     if ((this.tempoInicial - this.tempoInicial %60)/60 === 0 && this.tempoInicial <= 30) {
                         //this.textoTempo.setPosition(550, 400);
@@ -120,4 +119,10 @@ class CenaHUD extends Phaser.Scene
         this.pontuacao += pontuacao;
         this.textoPontos.setText(`Pontos: ${this.pontuacao}`);
     }
+    atualizarTempo(tempo){
+        this.tempoInicial -= tempo;
+        this.textoTempo.setText((this.tempoInicial - this.tempoInicial %60)/60 + 'min ' + this.tempoInicial %60 + 's');
+        this.textoTempoDescontado.setVisible(true);
+    }
+
 }
