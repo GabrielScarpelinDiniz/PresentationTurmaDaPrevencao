@@ -344,7 +344,7 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 <sub>Figura 6 - Concept Art do Mapa</sub>
 
-<img src="./other/MapConceptArt.png" width="80%">
+<img src="./other/ConceptMapa.jpg" width="80%">
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
@@ -354,27 +354,39 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 <div align="center">
 
-<sub>Figura 7 - Concept Art do Prontuário</sub>
+<sub>Figura 7 - Concept Art do Case</sub>
 
-<img src="./other/ConceptArt_Prontuario.jpeg" width="40%">
+<img src="./other/ConceptCase.jpg" width="40%">
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;A Figura 7: Concept Art do prontuário dos pacientes.
+&nbsp;&nbsp;&nbsp;&nbsp;A Figura 7: Concept Art do case.
 
 <div align="center">
 
 <sub>Figura 8 - Concept Art da Página de Livros</sub>
 
-<img src="./other/ConceptArt_Livro.jpg" width="40%">
+<img src="./other/ConceptLivros.jpg" width="40%">
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
 </div>
 
 &nbsp;&nbsp;&nbsp;&nbsp;Figura 8: Concept Art da Página do Livro.
+
+<div align="center">
+
+<sub>Figura 9 - Concept Art do Quiz</sub>
+
+<img src="./other/ConceptQuiz.jpg" width="40%">
+
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;Figura 9: Concept Art da Página de Quiz.
 
 ### 3.3.5. Trilha sonora (sprint 3)
 
