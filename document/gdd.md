@@ -1240,10 +1240,10 @@ class CenaHUD extends Phaser.Scene
 ```
 Nessa parte, alguns elementos como retângulos e texto são adicionados. Os elementos são adicionados através de eventos, ou seja, na cena principal, quando o usuário clica no botão de fechar o evento é emitido pela cena principal e a cena do HUD ouve esse evento e cria/mostra os elementos. Como a cena fica sempre ativa os elementos são exibidos através do método `setVisible(boolean)`.
 
-## Etapa 4 do desenvolvimento - Refatoramento do Código
+### Etapa 4 do desenvolvimento - Refatoramento do Código
 Para refatorar o código, alguns padrões foram adotados: nome de classe maiúscula, variáveis em 'camelCase' e procurar comentar o código de forma concisa, mas que seja legível.
 
-## Etapa 5 do desenvolvimento - Implementação da Trilha e Efeitos Sonoros / Tela de loading
+### Etapa 5 do desenvolvimento - Implementação da Trilha e Efeitos Sonoros / Tela de loading
 &nbsp;&nbsp;&nbsp;&nbsp;Para implementar o som, primeiramente foi preciso escolher os sons. Para isso, foi baixados sons do site "FreeSound" com licenças Creative Commons. Os sons Creative Commons são importantes para evitar problemas com direitos autorais.
 &nbsp;&nbsp;&nbsp;&nbsp;Após isso, o aúdio foi editado no software "Audacity", para que o som fique mais rápido nos segundos finais do jogo. Em seguida, os assets de som foram carregados no método `preload()`
 ````js
@@ -1286,7 +1286,7 @@ this.botaoX.on("pointerdown", () => {
 
 });
 ````
-## Etapa 6 do desenvolvimento - Tendas
+### Etapa 6 do desenvolvimento - Tendas
 
 &nbsp;&nbsp;&nbsp;&nbsp;Nesta sprint, adicionamos cenas `livros.js` e `quiz.js` para implementarmos as mecânicas necessárias para a dinâmica do jogo. Estas cenas são chamadas na `cenaPrincipal.js` com a interação do jogador com o ambiente.
 
@@ -1639,7 +1639,125 @@ class Quiz extends Phaser.Scene {
 ## 4.4. Desenvolvimento final do MVP (sprint 4)
 
 *Descreva e ilustre aqui o desenvolvimento da versão final do jogo, explicando brevemente o que foi entregue em termos de MVP. Utilize prints de tela para ilustrar. Indique as eventuais dificuldades e planos futuros.*
+### Etapa 1 do desenvolvimento - Case dinâmico
+&nbsp;&nbsp;&nbsp;&nbsp; Nessa fase de desenvolvimento do jogo, precisavámos que os casos fossem importados de forma dinâmica e não mais fixo nos textos, isso foi necessário para começar a adicionar rotatividade no caso. A forma que foi encontrada para fazer isso foi através de arquivos JSON (Javascript Object Notation). A formatação de dados no JSON é a seguinte:
+````json
+[
+    {
+        "nome": "RONALD MEQUI DONALD",
+        "fotoKey": "ronald",
+        "desc": "O cozinheiro de uma hamburgueria, durante a preparação de uma receita, teve contato com a frigideira quente , queimando a palma da mão.",
+        "colored": ["cozinheiro", "contato", "quente"],
+        "sintomas": "Apresenta vermelhidão na região, inchaço e dor local suportável.",
+        "classificacao": "PRIMEIRO GRAU",
+        "classificacaoCor": "0x21FF21",
+        "quiz": {
+            "pergunta": "O que deve ser feito para evitar uma queimadura na pele ao encostar em uma superfície quente na cozinha?",
+            "alternativas": [
+                "Cozinhar enquanto conversa distraidamente com alguém",
+                "Usar luvas de proteção térmica de alta qualidade"
+            ],
+            "alternativaCorreta": 1
+        }
+    }
+]
+````
+&nbsp;&nbsp;&nbsp;&nbsp;No array contem um objeto com as informações que serão relevantes para importar.
+Para importar e atribuir o JSON à uma variável foi feito da seguinte forma:
+````js
+preload(){
+    //... toda lógica
+    this.load.json('casesData', 'assets/cases/cases.json');
+}
+create(){
+    //...toda lógica
+    this.caseData = this.cache.json.get('casesData');
+}
+````
+&nbsp;&nbsp;&nbsp;&nbsp;Agora, foi o momento de criar uma função que sortea os casos dentro desse array de casos. Essa função tem alguns requisitos: sempre sortear um caso novo e ter uma verificação para quando não tiver mais casos.
+````js
+sortearNumero(min, max) {
+    if (this.sorteados.length === this.caseData.length) {
+      return 0
+    }
+    const numeroSorteado = Phaser.Math.Between(min, max);
+    console.log(this.sorteados, numeroSorteado)
+    if (this.sorteados.includes(numeroSorteado)){
+      return this.sortearNumero(min, max);
+    }
+    this.sorteados.push(numeroSorteado);
+    return numeroSorteado
+}
+````
+&nbsp;&nbsp;&nbsp;&nbsp;Para guardar os casos que já foram sorteados, o índice do caso sorteado foi guardado em um array. Dessa forma é possível verificar se todos os foram verificados através do tamanho do array e se o array já inclui ele chama a função novamente para sortear um novo número.
+&nbsp;&nbsp;&nbsp;&nbsp;Após isso, ele guarda o caso sorteado em um objeto chamado `casoObjeto`, que contêm o objeto do caso atual e se está ativo ou não um caso no momento. Depois disso, é possível acessar esses dados em outras cenas, que foi a abordagem escolhida, então na cena `cases.js`, o caso do objeto é acessado através da variável da cena principal e os inputs pegam os respectivos textos de forma dinâmica.
+````js
+create(){
+    this.primeiraCena = this.scene.get('cenaPrincipal');
+    const abrirCase = () => {
+        const caso = this.primeiraCena.objetoCaso.caso;
+        this.nomeTexto = this.add.text(this.centroX, this.centroY - 220, caso.nome, { fontSize: '36px', fill: '#000000', ...})
+    }
+}
+````
+### Etapa 2 do desenvolvimento - Movimentação dos NPC's
+Para a movimentação dos NPC's uma nova classe chamada `NPC` foi criada. Essa classe no construtor recebe três parâmtros: o GameObject da Sprite, a cena atual que a sprite está inserida e a chave da sprite para a animação.
+````js
+constructor(aluno, scene, keySprite) {
+    this.aluno = aluno; // Recebe o aluno no construtor
+    this.scene = scene; // Recebe a cena para setar as fisicas
+    this.keySprite = keySprite; // Recebe a key do sprite para setar a animação
+    this.scene.anims.create({
+      // Cria a animação de andar de cada npc
+      key: `${this.keySprite}Walk`,
+      frames: this.scene.anims.generateFrameNumbers(this.keySprite, {
+        start: 0,
+        end: 7
+      }),
+      frameRate: 10,
+      repeat: -1
+    })
+}
+````
+O método `update()` de cada NPC's é chamado no update da função principal, sendo responsável por duas responsabilidades sendo, fazer os NPC's andarem aleatoriamente e rodar a animação dos NPC's
+````js
+update(){
+    // Adiciona a velocidade ao aluno
+    this.scene.physics.velocityFromAngle(this.aluno.direction, this.aluno.speed, this.aluno.body.velocity);
 
+    // Alterar a direção e a velocidade em intervalos aleatórios
+    if (Phaser.Math.Between(0, 100) > 95) {
+      // Altera a direção e a velocidade com numeros aleatórios
+      this.aluno.direction = Phaser.Math.Between(0, 360);
+      this.aluno.speed = Phaser.Math.Between(30, 70);
+    }
+    if (this.aluno.body.velocity.x > 0) {
+      // Adiciona a animação de andar para a direita
+      this.aluno.anims.play(`${this.keySprite}Walk`, true);
+      this.aluno.flipX = false;
+    }
+    else if (this.aluno.body.velocity.x < 0) {
+      // Adiciona a animação de andar para a esquerda
+      this.aluno.anims.play(`${this.keySprite}Walk`, true)
+      this.aluno.flipX = true;
+    }
+}
+````
+Primeiro ele gera uma direção entre 0 e 360 graus, depois seta uma velocidade aleatória. E se ele estiver para esquerda ou direita, roda a animação espelhando ou não a sprite.
+O último método da classe é o `setCollisionBetweenItens()`, esse método foi criado para evitar muita repetição de código, então através do operador 'spread' do javascript, ele recebe todos os parâmetros e organiza em um array, um loop é criado para percorrer esse array e coloca colisão entre o NPC e todos os objetos com colisão do mapa.
+````js
+setCollisionBetweenItens(...phaserPhysics){
+    // Adiciona a colisão entre o aluno e os itens passados como argumento desse método. Esse metodo aceita um número variável de argumentos e foi feito para evitar a repetição de código
+    for (let i = 0; i < phaserPhysics.length; i++) this.scene.physics.add.collider(this.aluno, phaserPhysics[i])
+}
+````
+Instânciando a classe e colocando colisão:
+````js
+create()
+//... toda lógica
+this.npc01 = new NPCsAlunos(this.physics.add.sprite(300, 645, 'npc01').setSize(16, 18, 9, 10).setScale(1.5).refreshBody(), this, "npc01")
+this.npc01.setCollisionBetweenItens(this.worldBounds, this.cerca, this.arvores, this.faculdade, this.tendaLivro, this.tendaQuiz, this.circuloFonte, this.jogador, this.npc02.aluno, this.npc03.aluno, this.npc04.aluno, this.npc05.aluno, this.npc06.aluno, this.npc07.aluno, this.npc08.aluno, this.npc09.aluno);
+````
 ## 4.5. Revisão do MVP (sprint 5)
 
 *Descreva e ilustre aqui o desenvolvimento dos refinamentos e revisões da versão final do jogo, explicando brevemente o que foi entregue em termos de MVP. Utilize prints de tela para ilustrar.*
