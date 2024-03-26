@@ -297,16 +297,16 @@ class CenaPrincipal extends Phaser.Scene {
 
 
     // Configuração de animação de câmera ao iniciar o jogo
-    this.physics.pause()
-    // Move a câmera da faculdade para o personagem
-    this.cameras.main.centerOn(550, 200);
-    this.cameras.main.pan(550, 800, 6000);
-    // Evento que ativa ao completar o Pan
-    this.cameras.main.on('camerapancomplete', () => {
-      // Câmera começa a seguir personagem
-      this.cameras.main.startFollow(this.jogador, true);
-      this.physics.resume()
-    });
+    // this.physics.pause()
+    // // Move a câmera da faculdade para o personagem
+    // this.cameras.main.centerOn(550, 200);
+    // this.cameras.main.pan(550, 800, 6000);
+    // // Evento que ativa ao completar o Pan
+    // this.cameras.main.on('camerapancomplete', () => {
+    //   // Câmera começa a seguir personagem
+       this.cameras.main.startFollow(this.jogador, true);
+    //   this.physics.resume()
+    // });
     // });
     this.cameras.main.setBounds(0, 0, 1120, 1120)
     this.cameras.main.setZoom(2.5);

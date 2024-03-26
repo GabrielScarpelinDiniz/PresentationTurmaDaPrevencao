@@ -45,32 +45,48 @@
 
 ### 1.1.2. Análise SWOT (sprints 1 e 4)
 
-&nbsp;&nbsp;&nbsp;&nbsp;Uma análise SWOT é uma técnica usada para identificar forças, oportunidades, fraquezas e ameaças para a sua empresa ou até para um projeto específico. Apesar de simples, a análise SWOT é uma ferramenta poderosa para identificar oportunidades de melhoria frente à concorrência¹.
+&nbsp;&nbsp;&nbsp;&nbsp;A matriz SWOT é uma ferramenta de planejamento estratégico que ajuda as empresas na tomada de decisão. Esta metodologia divide-se em aspectos internos e externos, compreendendo forças (*strengths*) e fraquezas (*weaknesses*) para o ambiente interno, e oportunidades (*opportunities*) e ameaças (*threats*) para o externo, que têm por objetivo identificar os principais pontos de influência que afetam a empresa para uma clareza melhor de quais são os fatores que estão sob seu controle (internos) e os que não estão (externos).
+
+&nbsp;&nbsp;&nbsp;&nbsp;Os aspectos externos se situam na esfera do que é praticamente incontrolável pela empresa, ao dependerem do meio em que ela está inserida e até mesmo, algumas vezes, do ambiente global. Desse modo, oportunidades são transformações que ocorrem no mercado e podem ser aproveitadas pela empresa pela tomada de um posicionamento mais favorável diante do que está ocorrendo. Em contrapartida, surgem as ameaças, as quais são fatores exógenos que colocam a empresa em uma situação de risco ou proporcionam maiores desafios para um bom desempenho mercantil.
+
+&nbsp;&nbsp;&nbsp;&nbsp;Por outro lado, os fatores internos referem-se à esfera sob controle direto da empresa, ou seja, ela pode, no caso de fraquezas, tomar atitudes a fim de saná-los, ou potencializá-los, no caso de forças. Neste contexto, as forças correspondem a elementos que conferem vantagens competitivas perante os concorrentes, mas que sejam tão distintiva quanto possível em relação aos competidores para que, deste modo, possam representar um grande diferencial da empresa. Enquanto as fraquezas representam limitações ou desvantagens que fragilizam a corporação, prejudicam a dinâmica do negócio e seu posicionamento estratégico no mercado¹ (FERNANDES, Djair 2012).
+
+&nbsp;&nbsp;&nbsp;&nbsp;Diante desse cenário, a matriz SWOT surge como uma ferramenta poderosíssima para uma parte crucial do posicionamento estratégico, a qual é compreender a interdependência desses componentes, uma vez que alterações em um deles impactam diretamente os demais. A estratégia eficaz, portanto, consiste em focalizar os fatores controláveis para permitir que a empresa alcance seus objetivos estratégicos. Por exemplo, enfrentar as ameaças é mais fácil pela mitigação das fraquezas, ao passo que a exploração mais eficiente das oportunidades é viabilizada pela potencialização das forças. Essa relação intrínseca simplifica a tomada de decisões, proporcionando ideias para a alocação mais produtiva de recursos e a determinação de prioridades.
 
 <div align="center">
 
 <sub>Figura 1 - Análise SWOT da FMUSP</sub>
 
-<img src="./other/analise_swot.png" width="70%">
+<img src="./other/analise_swot.png" width="200%">
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup></div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;Com a análise SWOT, foi possível observar características importantes, tais como os projetos sociais realizados pela Faculdade de Medicina da USP (FMUSP) e a carência de ferramentas tecnológicas para esses projetos sociais. Associados a esses pontos, destacam-se algumas oportunidades, como o amplo público atendido pela FMUSP e, sobretudo, a crescente digitalização mundial. Nesse contexto, o 'Game' foi desenvolvido com o objetivo de atenuar os pontos fracos, potencializar ainda mais os pontos fortes e aproveitar as oportunidades.
+&nbsp;&nbsp;&nbsp;&nbsp;Sob esse prisma, é possível traçar uma gestão mais eficiente dos recursos — que se apresentam como escassos — potencializando suas forças — como a internacionalização e o atendimento público — para aproveitar as oportunidades — como a quantidade de pessoas a serem atendidas — e se proteger das ameaças — como a retirada de verba por parte do governo. Ao examinar esse exemplo, é possível observar a clareza adquirida pelas informações ao serem submetidas a esse método e como em poucos minutos é possível traçar um plano de ação, tendo em vista a interdependência dos fatores endógenos e exógenos.
+
+&nbsp;&nbsp;&nbsp;&nbsp;Com a análise SWOT, foi possível observar características importantes, tais como os projetos sociais realizados pela Faculdade de Medicina da USP (FMUSP) e a carência de ferramentas tecnológicas para esses projetos sociais. Associados a esses pontos, destacam-se algumas oportunidades, como o amplo público atendido pela FMUSP e, sobretudo, a crescente digitalização mundial. Nesse contexto, a aplicação gameficada foi desenvolvido com o objetivo de atenuar os pontos fracos, potencializar ainda mais os pontos fortes e aproveitar as oportunidades.
 
 ### 1.1.3. Descrição da Solução Desenvolvida (sprints 1 e 4)
 
 &nbsp;&nbsp;&nbsp;&nbsp;A falta de conscientização sobre prevenção, primeiros socorros e informações inadequadas sobre queimaduras, em especial em populações vulneráveis, influi na alta incidência de queimaduras, que se torna uma das maiores causas de lesões traumáticas no mundo.<br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;São registrados cerca de 1 milhão de novos casos anualmente no Brasil, e acredita-se que 90% das queimaduras seriam evitadas com devida educação e conscientização da população. Grande parte das queimaduras registradas ocorrem em ambiente residencial e em atividades de lazer, abrangendo, em maioria, homens de 20 a 39 anos. <br>
+&nbsp;&nbsp;&nbsp;&nbsp;São registrados cerca de 1 milhão de novos casos anualmente no Brasil, conforme dados divulgados pelo Ministério da Saúde do Brasil em 2014, e acredita-se que 90% das queimaduras seriam evitadas com devida educação e conscientização da população. Grande parte das queimaduras registradas ocorrem em ambiente residencial e em atividades de lazer, abrangendo, em maioria, homens de 20 a 39 anos. [link TAPI]<br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;O game visa conscientizar a população, em especial as vulneráveis, sobre queimaduras, à medida que fornece informações embasadas para estimular a educação de prevenção de queimaduras, além de auxiliar nos primeiros socorros e desmitificar métodos inapropriados de tratamentos.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Considerando esse cenário, definimos como possível solução a criação de um jogo mobile educacional. Ele visa conscientizar a população, em especial as vulneráveis, sobre queimaduras, à medida que fornece informações embasadas para estimular a educação de prevenção de queimaduras, além de auxiliar nos primeiros socorros e desmitificar métodos inapropriados de tratamentos.<br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;O game deverá ser acessado pelos smartphones dos estudantes e poderá ser utilizado durante as campanhas de conscientização promovidas pela Faculdade de Medicina da USP ou quando da preferência do usuário. A solução impulsiona os benefícios já fornecidos pelas campanhas de conscientização através de seu aspecto lúdico e divertido de compartilhar informações e combater desinformações. <br>
+&nbsp;&nbsp;&nbsp;&nbsp;Nossa solução busca criar os seguintes ganhos para nosso parceiro: conscientização de jovens e adultos, educação de maneira simples sobre a prevenção de queimaduras e promoção da Faculdade de Medicina da USP. Ademais, além de criar ganhos, buscamos também potencializá-los atráves da conscientização na prática, da criação de um diferencial tecnológico e da transmissão de conhecimento com diversão e lucidez.<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;Além de criar ganhos, a solução busca também sanar alguns problemas que o parceiro possui como o baixo interesse das pessoas e a baixa disseminação de conhecimentos acerca do tema. Para isso, propomos criar um jogo que possui uma dinâmica de jogo capaz de reter a atenção do usuário, proporcionar uma experiência única e divertida e facilitar o acesso ao conhecimento atráves de plataforma mobile.<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;O jogo deverá ser acessado pelos smartphones dos estudantes e poderá ser utilizado durante as campanhas de conscientização promovidas pela Faculdade de Medicina da USP ou quando da preferência do usuário. A solução impulsiona os benefícios já fornecidos pelas campanhas de conscientização e agrega um aspecto lúdico e divertido de compartilhar informações e combater desinformações. <br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;O critério de sucesso será a satisfação do jogador durante o processo de conscientização através de um game. Para avaliarmos tal critério, uma pesquisa de satisfação será realizada ao final do game, levando em consideração fatores como diversão, jogabilidade e transmissão de conhecimento.
 
 
 ### 1.1.4. Proposta de Valor (sprints 1 e 4)
+
+&nbsp;&nbsp;&nbsp;&nbsp;Um Canvas de Proposta de Valor é basicamente um mapa visual que ajuda a entender melhor o que torna um produto ou serviço valioso para os clientes. Imagine como um guia que organiza informações importantes sobre quem são seus clientes, o que eles precisam, e como seu produto ou serviço resolve seus problemas ou traz benefícios. É como uma caixa de ferramentas que permite às equipes reunirem suas ideias e pensarem de forma criativa sobre como podem oferecer valor aos seus clientes.
+
+&nbsp;&nbsp;&nbsp;&nbsp;Usar um Canvas de Proposta de Valor é como criar uma história sobre como seu produto ou serviço faz a diferença na vida das pessoas. É uma conversa visual que ajuda as equipes a se concentrarem no que realmente importa: entender as necessidades dos clientes e encontrar maneiras inteligentes de atendê-las. É uma abordagem colaborativa que incentiva todos a contribuírem com suas ideias, garantindo que todos estejam na mesma página e trabalhando na mesma direção para oferecer algo que realmente importa para os clientes, ou seja, construir e consilidar sua proposta de valor.
 
 &nbsp;&nbsp;&nbsp;&nbsp;A proposta de valor, é a essência do que um produto ou serviço oferece aos clientes e como atende às suas necessidades. Desenvolvida em torno do perfil do cliente e da proposta de valor da empresa, a proposta de valor busca alinhar os ganhos desejados, dores enfrentadas e trabalhos a serem realizados pelos clientes com os benefícios oferecidos, problemas resolvidos e produtos/serviços específicos da empresa. Essa ideia foi apresentada por Alexander Osterwalder e sua equipe em seu livro "Value Proposition Design: How to Create Products and Services Customers Want"².
 
@@ -83,13 +99,19 @@
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 </div>
 
+&nbsp;&nbsp;&nbsp;&nbsp;A partir do nosso Canvas de Proposta de Valor (CPV), determinamos essencialmente como o nosso produto ou serviço cria valor para os clientes. Isso inclui entender quem são os nossos clientes-alvo, quais são suas necessidades e desejos, e como o produto ou serviço oferecido atende a essas necessidades de uma forma única e convincente. Além disso, o CPV também nos ajuda a identificar como o nosso produto ou serviço se diferencia da concorrência e quais são os principais benefícios percebidos pelos clientes. 
+
 &nbsp;&nbsp;&nbsp;&nbsp;As maneiras pelas quais nosso jogo se conecta com o perfil do cliente, solucionando suas principais necessidades e impulsionando seus atuais ganhos foram esclarecidas com a elaboração desse canvas. Uma estratégia para enfrentar o problema do cliente de maneira objetiva foi traçada em conjunto com a análise SWOT e, com base nessas informações, o desenvolvimento inicial foi iniciado. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;Tendo em vista o perfil do cliente analisado através do *value proposition canvas*, ao observarmos suas dores, ganhos e necessidades, desenvolvemos uma proposta de solução totalmente gamificada. Essa proposta visa envolver os jovens, proporcionando-lhes um ambiente divertido que cumpra o principal objetivo do projeto: a conscientização. Destacamos, sobretudo, a necessidade de algo versátil e atrativo para o público-alvo, oferecendo uma experiência única e divertida, a fim de disseminar entre diversas pessoas e conscientizar cada vez mais a população.
 
 ### 1.1.5. Matriz de Riscos (sprints 1 e 4)
 
-&nbsp;&nbsp;&nbsp;&nbsp;A Matriz de Riscos, também chamada de Matriz de Probabilidade e Impacto, é uma ferramenta utilizada, majoritariamente em empresas, para avaliar qual a probabilidade de um evento acontecer e qual o impacto que ele teria no empreendimento ou em um projeto⁴. A matriz é eficiente quando há necessidade de priorizar os riscos, sejam eles negativos (as ameaças) ou positivos (as oportunidades), ou seja, analisar e visualizar quais riscos merecem mais atenção no momento, auxiliando na criação de planos de ação para prevenir ou potencializar tal risco⁵.
+&nbsp;&nbsp;&nbsp;&nbsp;A matriz de risco é uma ferramenta amplamente utilizada em diversas indústrias para avaliar e priorizar riscos com base em sua probabilidade e impacto. Normalmente composta por uma tabela que categoriza os riscos em diferentes níveis, geralmente representados por cores ou valores numéricos⁴. A matriz de risco é iterativa por natureza, essa característica decorre da própria dinâmica do risco e da necessidade de reavaliação e refinamento contínuos visando seu aprimoramento. Ela é extremamente eficiente quando há necessidade de priorizar os riscos, sejam eles negativos (as ameaças) ou positivos (as oportunidades), ou seja, é excelente para analisar e visualizar quais riscos merecem mais atenção no momento, auxiliando na criação de planos de ação para prevenir ou potencializar tal risco⁵.
+
+&nbsp;&nbsp;&nbsp;&nbsp;O aspecto iterativo da matriz de risco reconhece que os riscos não são estáticos, mas sim elementos que evoluem ao longo do tempo devido às mudanças no ambiente interno e externo de uma organização. Novos riscos podem surgir, riscos existentes podem mudar em probabilidade ou impacto, e medidas de mitigação podem se mostrar ineficazes ou requerer ajustes. Portanto, revisar e atualizar regularmente a matriz de risco garante sua relevância e reflexão precisa da paisagem de riscos atual.
+
+&nbsp;&nbsp;&nbsp;&nbsp;Ademais, uma abordagem iterativa permite que as organizações melhorem continuamente seus processos de gestão de riscos. Ao revisar regularmente a matriz de risco, as instituições podem identificar áreas onde seus métodos de avaliação de risco podem ser aprimorados, como refinar critérios de risco, melhorar técnicas de coleta e análise de dados, ou aprimorar a comunicação e colaboração entre as partes interessadas. Esse ciclo iterativo de melhoria as auxilia a se adaptarem às circunstâncias voláteis, a anteciparem e responderem melhor a riscos emergentes.
 
 &nbsp;&nbsp;&nbsp;&nbsp;A fim de gerenciar os riscos do nosso produto, a equipe construiu os gráficos que representam potenciais ameaças e oportunidades no projeto (figura 3 e figura 4, respectivamente), contribuindo efetivamente para a tomada de decisões estratégicas e planejamento de planos de ação. 
 
@@ -110,6 +132,8 @@
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;Deste modo, pode-se concluir que a matriz de risco pode ser aplicada em diversas áreas, inclusive em situações cotidianas. A análise de riscos pode ser útil para a tomada de decisão, ponderando seus riscos, ou seja, suas probabilidades e seus impactos; visando uma maior assertividade nesse processo decisório. A natureza iterativa da matriz de risco, portanto, não apenas a torna uma ferramenta valiosa para organizações em diferentes setores, mas também destaca sua utilidade potencial em contextos mais amplos, oferecendo uma estrutura sistemática para a gestão de riscos.
 
 &nbsp;&nbsp;&nbsp;&nbsp;A análise dos riscos no projeto foi realizada com o objetivo de auxiliar o grupo a entender e lidar com possíveis ameaças e oportunidades. Sendo assim, conseguimos prever de forma mais eficaz certos eventos como, por exemplo, a possibilidade do usuário não entender a mecânica do jogo e criar, a partir dessa ameaça, um tutorial simples e esclarecedor. Além disso, foi possível visualizar que a parceria com a FMUSP gera um impacto social significante, indo de acordo com o que o projeto visa. Deste modo, chegamos nos seguintes planos de ação:
 
@@ -166,21 +190,21 @@
 \# | Requisito do grupo 
 --- | ---
 1 | No jogo deve ser implementado um menu inicial com um botão “inciar”;
-2 |O jogo deve conter uma sala de recepção, sala de espera para os pacientes, Farmácia com questionário e uma biblioteca com livros para se adquirir conhecimento;
-3 |Deve ser adicionado ao jogo um sistema de recompensa tendo como base o tempo de atendimento, os acertos no questionário e a satisfação do cliente;
+2 |O jogo deve conter o pátio da faculdade como cenário, uma interação com NPC para acessar um case, uma tenda com questionário e uma tenda com livros para se adquirir conhecimento;
+3 |Deve ser adicionado ao jogo um sistema de recompensa tendo como base o tempo de resolução do case e os acertos no questionário;
 4 |Adicionar efeitos sonoros, música de fundo por meio do framework phaser; 
-5 | deve ter animações que serão feitas com spritesheet;
+5 |Deve ter animações que serão feitas com spritesheet;
 6 |Irá conter uma arte gráfica pixelada, feita com auxílio do piskel;
 7 |Inputs de movimentação com o touch screen de dispositivos mobile
 8 |Implementação de movimento vetorial para normalização de velocidade;
 9 |Programar mudança de cenas para ter um código funcional do menu;
 10 |Adicionar animações ao personagem com spritesheet;
 11 |Adicionar tecla de input para interação com outros objetos ou personagens;
-12 |Fazer quiz na Farmácia com mudança de cenas;
-13 |O jogo deve ser rápido, com um tempo de duração de em média 10 minutos;
+12 |Fazer quiz na tenda de livros com mudança de cenas;
+13 |O jogo deve ser rápido, com um tempo de duração de em média 15 minutos;
 14 |Terá possibilidade de rejogabilidade;
-15 |Adquirir pontos em forma de conhecimento e remédio com estilo mágico para não passar a impressão de ser um remédio verdadeiro;
-16 |Ter a logo do Hospital das Clínicas, entre outras referências;
+15 |Adquirir pontos em forma de conhecimento;
+16 |Ter elemenos da Faculdade de Medicina da USP, entre outras referências;
 17 |Ter uma grande sala com foco no personagem, utilizando dinâmica de câmeras;
 18 |Caixa de diálogo com NPC para instruir o personagem principal sobre quais serão seus próximos passos.
 
@@ -344,7 +368,7 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 <sub>Figura 6 - Concept Art do Mapa</sub>
 
-<img src="./other/MapConceptArt.png" width="80%">
+<img src="./other/ConceptMapa.jpg" width="80%">
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
@@ -354,27 +378,39 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 <div align="center">
 
-<sub>Figura 7 - Concept Art do Prontuário</sub>
+<sub>Figura 7 - Concept Art do Case</sub>
 
-<img src="./other/ConceptArt_Prontuario.jpeg" width="40%">
+<img src="./other/ConceptCase.jpg" width="40%">
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;A Figura 7: Concept Art do prontuário dos pacientes.
+&nbsp;&nbsp;&nbsp;&nbsp;A Figura 7: Concept Art do case.
 
 <div align="center">
 
 <sub>Figura 8 - Concept Art da Página de Livros</sub>
 
-<img src="./other/ConceptArt_Livro.jpg" width="40%">
+<img src="./other/ConceptLivros.jpg" width="40%">
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
 </div>
 
 &nbsp;&nbsp;&nbsp;&nbsp;Figura 8: Concept Art da Página do Livro.
+
+<div align="center">
+
+<sub>Figura 9 - Concept Art do Quiz</sub>
+
+<img src="./other/ConceptQuiz.jpg" width="40%">
+
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;Figura 9: Concept Art da Página de Quiz.
 
 ### 3.3.5. Trilha sonora (sprint 3)
 
@@ -1931,7 +1967,7 @@ O que poderia melhorar no jogo? | A responsividade do personagem aos controles, 
 
 &nbsp;&nbsp;&nbsp;&nbsp;Abaixo, estão contidas as referências utilizadas para embasar todo o projeto, visando entender todo o cenário, não só do cliente, como do mercado ao qual o projeto está inserida.<br>
 
-¹ CASAROTTO,  Camila. Rockcontent. Disponível em: https://rockcontent.com/br/blog/como-fazer-uma-analise-swot/. Acesso em: 16 fev. 2024 <br>
+¹ FERNANDES, D. R. Uma Visão Sobre a Análise da Matriz SWOT como Ferramenta para Elaboração da Estratégia. Revista de Ciências Jurídicas e Empresariais, [S. l.], v. 13, n. 2, 2015. DOI: 10.17921/2448-2129.2012v13n2p%p. Disponível em: https://revistajuridicas.pgsscogna.com.br/juridicas/article/view/720. Acesso em: 25 mar. 2024<br>
 
 ² OSTERWALDER, Alex. Value Proposition Design: How to Create Products and Services Customers Want. 1st Edition. Wiley, 2014. <br>
 
