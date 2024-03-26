@@ -7,6 +7,7 @@ class CenaCases extends Phaser.Scene {
         this.load.image('base-case', 'assets/base-case.png');
         this.load.image('botao-fechar', 'assets/botaoX.png');
         this.load.image('ronald', 'assets/cases/ronald.png');
+        this.load.audio('efeitoSonoroBotaoX', 'assets/sounds/efeitoSonoroBotaoX.mp3') // SFX do Botao de Fechar do Case
         this.load.bitmapFont('pixelBitmapFont', 'assets/fonts/pixel_0.png', 'assets/fonts/pixel.fnt');
         this.load.bitmapFont('iosevka', 'assets/fonts/iosevka_0.png', 'assets/fonts/iosevka.fnt');
 
@@ -23,6 +24,8 @@ class CenaCases extends Phaser.Scene {
         this.case1 = this.add.image(this.centroX, this.centroY, 'base-case').setScale(0.50).setVisible(false).setScrollFactor(0); // Adiciona a imagem do case, quando ocorre esse overlap
         this.botaoX = this.add.sprite(this.case1.x + 210, this.case1.y - 275, 'botao-fechar').setInteractive().setScale(0.25).setVisible(false).setScrollFactor(0); // Adiciona a imagem do botao, quando ocorre esse overlap
 
+        // Adiciona efeito sonoro do botão iniciar
+        this.efeitoSonoroBotaoX = this.sound.add('efeitoSonoroBotaoX');
 
         this.botaoX.on("pointerover", () => {
             // Evento de passar o mouse sobre o botaoJogar
@@ -36,6 +39,7 @@ class CenaCases extends Phaser.Scene {
             
         // Evento disparado ao clicar no botão (Código temporário apenas para demonstração da funcionalidade na sprint 1)
         this.botaoX.on("pointerdown", () => {
+            this.efeitoSonoroBotaoX.play();
             this.nomeTexto.destroy();
             this.casoTexto.destroy();
             this.sintomasTexto.destroy();
@@ -51,6 +55,7 @@ class CenaCases extends Phaser.Scene {
         this.abrirCase = this.scene.get('cenaHUD');        
         const abrirCase = () => {
             const caso = this.primeiraCena.objetoCaso.caso;
+            this.efeitoSonoroBotaoX.play();
             this.case1.setVisible(true);
             this.botaoX.setVisible(true);
             this.nomeTexto ? this.nomeTexto.destroy() : null;

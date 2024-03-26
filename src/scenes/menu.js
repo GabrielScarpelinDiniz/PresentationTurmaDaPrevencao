@@ -7,7 +7,7 @@ class MenuPrincipal extends Phaser.Scene {
   preload() {
     this.load.image("background", "assets/background.png") // Fundo da cena do Main Menu
     this.load.image("inteliLogo", "assets/logointeli.png") // Logo do Inteli
-    this.load.audio('efeitoSonoroBotaoMenu', 'assets/sounds/iniciaJogo.mp3') // Música de introdução
+    this.load.audio('efeitoSonoroBotaoMenu', 'assets/sounds/iniciaJogo.mp3') // SFX do botão iniciar
     this.load.spritesheet("botaoJogar", "assets/button.png", {
       frameWidth: 138,
       frameHeight: 46
