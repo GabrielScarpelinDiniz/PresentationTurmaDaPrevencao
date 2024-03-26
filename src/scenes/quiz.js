@@ -10,6 +10,8 @@ class Quiz extends Phaser.Scene {
         // Pré-carregamento de imagens
         this.load.image('x', 'assets/botaoX.png'); // Carrega a imagem do botão "X"
         this.load.image('simbolo', 'assets/simboloquiz.png'); // Carrega a imagem do símbolo do quiz
+        this.load.audio('efeitoSonoroAcertar', 'assets/sounds/efeitoSonoroAcertar.mp3') // SFX de Acertar
+        this.load.audio('efeitoSonoroErrar', 'assets/sounds/efeitoSonoroErrar.mp3') // SFX de Errar
     }
 
     create() {
@@ -22,6 +24,10 @@ class Quiz extends Phaser.Scene {
         
         // Centralizando a imagem do símbolo
         this.add.image(bgWhite.x, bgWhite.y - 130, 'simbolo').setScale(0.5);
+
+        // Adiciona efeito sonoro do botão iniciar
+        this.efeitoSonoroAcertar = this.sound.add('efeitoSonoroAcertar');
+        this.efeitoSonoroErrar = this.sound.add('efeitoSonoroErrar');
         
         // Adicionando a pergunta à cena
         this.primeiraCena.events.on('abrirQuiz', () => {
@@ -119,12 +125,14 @@ class Quiz extends Phaser.Scene {
     verificarResposta(resposta, alternativaCorreta) {
         // Verifica se a resposta está correta
         if (resposta === alternativaCorreta) {
+            this.efeitoSonoroAcertar.play();
             this.cenaHUD.atualizarPontuacao(10);
             // Define a mensagem de explicação para resposta correta
             this.explicacaoText.setText('Parabéns! Usar luvas de proteção térmica de alta qualidade evita acidentes graves na cozinha');
             // Define a cor do texto como verde
             this.explicacaoText.setColor('#008000');
         } else {
+            this.efeitoSonoroErrar.play();
             this.cenaHUD.atualizarTempo(10);
             // Define a mensagem de explicação para resposta incorreta
             this.explicacaoText.setText('Ops! Essa resposta está incorreta. Estar distraído enquanto cozinha pode gerar acidentes graves.');

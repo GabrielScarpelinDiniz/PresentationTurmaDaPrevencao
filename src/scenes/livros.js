@@ -16,6 +16,7 @@ class Livros extends Phaser.Scene {
         this.load.image('livroVermelhoAberto', 'assets/livroVermelhoAberto.png');
         this.load.image('backgroundLivros', 'assets/backgroundLivros.png');
         this.load.image('botaoX', 'assets/botaoX.png');
+        this.load.audio('efeitoSonoroVirarPagina', 'assets/sounds/efeitoSonoroVirarPagina.mp3') // SFX da página do livro
     }
 
     create() {
@@ -29,7 +30,11 @@ class Livros extends Phaser.Scene {
         this.livroAmarelo = this.add.image(500, 200, 'livroAmarelo').setOrigin(0, 0).setScale(1.6).setInteractive();
         this.livroVermelho = this.add.image(900, 200, 'livroVermelho').setOrigin(0, 0).setScale(1.6).setInteractive();
 
+        // Adiciona efeito sonoro de virar a página
+        this.efeitoSonoroVirarPagina = this.sound.add('efeitoSonoroVirarPagina');
+
         this.livroVerde.on("pointerdown", () => { // Define função que chama o livro verde aberto quando clicar no livro verde fechado
+            this.efeitoSonoroVirarPagina.play();
             this.livroVerde.setVisible(false);
             this.livroAmarelo.setVisible(false);
             this.livroVermelho.setVisible(false);
@@ -37,6 +42,7 @@ class Livros extends Phaser.Scene {
         });
 
         this.livroAmarelo.on("pointerdown", () => { // Define função que chama o livro amarelo aberto quando clicar no livro amarelo fechado
+            this.efeitoSonoroVirarPagina.play();
             this.livroVerde.setVisible(false);
             this.livroAmarelo.setVisible(false);
             this.livroVermelho.setVisible(false);
@@ -44,6 +50,7 @@ class Livros extends Phaser.Scene {
         });
 
         this.livroVermelho.on("pointerdown", () => { // Define função que chama o livro vermelho aberto quando clicar no livro vermelho fechado
+            this.efeitoSonoroVirarPagina.play();
             this.livroVerde.setVisible(false);
             this.livroAmarelo.setVisible(false);
             this.livroVermelho.setVisible(false);
