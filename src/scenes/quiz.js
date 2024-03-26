@@ -105,6 +105,9 @@ class Quiz extends Phaser.Scene {
         botaoX.on('pointerdown', () => {
             // Pausa a cena atual ('quiz')
             this.alternativaRespondida = false;
+            this.cenaHUD.textoTempoDescontado.setVisible(false);
+            this.cenaHUD.fundoTempoDescontado.setVisible(false);
+
             this.scene.sleep('quiz');
             // Reinicia a cena para cada vez que ocorre o overlap com a tenda o quiz voltar a sua forma padrão para que o jogador possa jogar de novo
             this.scene.restart();
@@ -122,6 +125,7 @@ class Quiz extends Phaser.Scene {
             // Define a cor do texto como verde
             this.explicacaoText.setColor('#008000');
         } else {
+            this.cenaHUD.atualizarTempo(10);
             // Define a mensagem de explicação para resposta incorreta
             this.explicacaoText.setText('Ops! Essa resposta está incorreta. Estar distraído enquanto cozinha pode gerar acidentes graves.');
             // Define a cor do texto como vermelho

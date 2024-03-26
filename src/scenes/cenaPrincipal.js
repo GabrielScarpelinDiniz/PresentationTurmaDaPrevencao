@@ -309,7 +309,7 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
 
 
 
-    // Configuração de animação de câmera ao iniciar o jogo
+    //Configuração de animação de câmera ao iniciar o jogo
     this.physics.pause()
     // Move a câmera da faculdade para o personagem
     this.cameras.main.centerOn(550, 200);
