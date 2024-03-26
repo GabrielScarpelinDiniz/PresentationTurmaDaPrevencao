@@ -2,6 +2,17 @@ class CenaPrincipal extends Phaser.Scene {
   defaultVelocity = 3;
   radiansAngleJoystick = 0;
   joystickForce = 0;
+  atualDialogoIndice = 0;
+  dialogo = [
+    `Bom dia alunos e alunas!
+Bem-vindos à Faculdade de Medicina da USP.
+Eu sou a Dra. Tina e serei a instrutora de vocês.
+Hoje é um dia muito especial... O Dia da Prevenção!!
+Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos acerca do tema...... QUEIMADURAS!`, 
+  //NEW DIALOGUE
+  "A dinâmica funciona em ciclos, e cada ciclo vai ter 3 passos. O primeiro passo é ler o case que irei entregar à vocês, o segundo passo é estudar o case na tenda de livros e, por último, vocês irão realizar um quiz. A cada resposta certa vocês ganham pontos, mas cuidado, se errar a pergunta vocês perderão 10 segundos para completar os ciclos. O objetivo da brincadeira é realizar o maior número de ciclos do jogo no menor tempo.", 
+  //NEW DIALOGUE
+  "Uma dica? Leiam com bastante atenção os cases e os livros, as informações serão essenciais para vocês ganharem mais pontos! Agora vamos começar! E mais importante: Divirtam-se!"]
   constructor() {
     super({
       key: "cenaPrincipal",
@@ -74,7 +85,7 @@ class CenaPrincipal extends Phaser.Scene {
     this.load.image('botaoX', 'assets/botaoX.png');
     this.load.image('botaoCase_baixo', 'assets/botaoCase_baixo.png');
     this.load.image('botaoCase_alto', 'assets/botaoCase_alto.png');
-
+    this.load.image('botaoCheck', 'assets/checkBotao.png');
     this.load.spritesheet('npc01', 'assets/spritesheets/NPC01.png', {
       frameWidth: 32,
       frameHeight: 32
@@ -119,6 +130,7 @@ class CenaPrincipal extends Phaser.Scene {
   }
 
   create() {
+    this.stateMachine = new StateMachine('cameraPanParaDialogo');
     this.sorteados = [];
     this.indiceSorteado;
     this.primeiroCaso = true;
@@ -198,7 +210,8 @@ class CenaPrincipal extends Phaser.Scene {
 
     this.case1 = this.add.image(this.centroX, this.centroY, 'case1').setScale(0.50).setVisible(false).setScrollFactor(0); // Adiciona a imagem do case, quando ocorre esse overlap
     this.botaoX = this.add.sprite(this.case1.x + 75, this.case1.y - 92, 'botaoX').setInteractive().setScale(0.1).setVisible(false).setScrollFactor(0); // Adiciona a imagem do botao, quando ocorre esse overlap
-    
+    this.dialogBox = this.add.rectangle(640, 420, 450, 140, 0xFFFFFF, 1).setScrollFactor(0).setOrigin(0.5).setVisible(false).setInteractive(); // Adiciona a caixa de diálogo;
+    this.botaoCheck = this.add.image(820, 450, 'botaoCheck').setInteractive().setVisible(false).setScrollFactor(0).setScale(0.6); // Adiciona o botão de check para iniciar o quiz
     
     this.fundoTimer = this.add.image(100, 100, 'azul').setScale(0.3).setVisible(false); // Adiciona o fundo de imagem do timer
     this.tempoInicial = 1200; // Define o tempo do timer
@@ -300,13 +313,38 @@ class CenaPrincipal extends Phaser.Scene {
     this.physics.pause()
     // Move a câmera da faculdade para o personagem
     this.cameras.main.centerOn(550, 200);
-    this.cameras.main.pan(550, 800, 6000);
-    // Evento que ativa ao completar o Pan
+
+    const dialogoCompleto = () => {
+      this.dialogBox.off('pointerdown', dialogoCompleto)
+      this.atualDialogoIndice++
+      console.log(this.atualDialogoIndice, this.dialogo.length)
+      if (this.atualDialogoIndice === this.dialogo.length){
+        this.dialogBox.destroy();
+        this.dialogText.destroy();
+        this.botaoCheck.destroy(); 
+        this.cameras.main.pan(550, 800, 2000)
+        this.stateMachine.transitionTo('prontoParaJogar');
+        return;
+      }
+      this.dialogText.proximoTexto(this.dialogo[this.atualDialogoIndice], () => this.dialogBox.on('pointerdown', dialogoCompleto))
+    }
+    this.cameras.main.pan(550, 470, 3000)
     this.cameras.main.on('camerapancomplete', () => {
-      // Câmera começa a seguir personagem
-       this.cameras.main.startFollow(this.jogador, true);
-      this.physics.resume()
+      if (this.stateMachine.currentState() === 'cameraPanParaDialogo') {
+        this.botaoCheck.setVisible(true);
+        this.dialogBox.setVisible(true);
+        this.dialogText = new TypeWritter(this, 420, 350, 'iosevka', this.dialogo[this.atualDialogoIndice], 15, 30, () => {
+          this.dialogBox.on('pointerdown', dialogoCompleto)
+        }).setMaxWidth(380).setScrollFactor(0);
+      }
+      else if (this.stateMachine.currentState() === 'prontoParaJogar') {
+        this.joystick.setVisible(true);
+        this.physics.resume();
+        this.cameras.main.startFollow(this.jogador, true)
+      }
     });
+    
+    // });
     this.cameras.main.setBounds(0, 0, 1120, 1120)
     this.cameras.main.setZoom(2.5);
 
@@ -331,7 +369,7 @@ class CenaPrincipal extends Phaser.Scene {
       }
     );
     this.joystick.setScrollFactor(0); // Faz com que o joystick não se mova com a câmera
-
+    this.joystick.setVisible(false); // Esconde o joystick
 
     // Configuração do NPC Tina
     this.anims.create({ // Cria a animação para a personagem Tina
@@ -492,5 +530,4 @@ class CenaPrincipal extends Phaser.Scene {
     this.sorteados.push(numeroSorteado);
     return numeroSorteado
   }
-
 }
