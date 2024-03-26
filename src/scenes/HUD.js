@@ -35,8 +35,7 @@ class CenaHUD extends Phaser.Scene
         //  Define variáveis de chamada das cenas
         const cenaAtual = this.scene.get('cenaPrincipal');
         const cenaLivros = this.scene.get('livros');
-        const cenaQuiz = this.scene.get('quiz');
-
+        
         // Cria evento para mostrar parte da HUD (Tarefas)
         cenaAtual.events.on('mostraTarefaInicial', function () 
         {
