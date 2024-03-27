@@ -67,23 +67,7 @@
             "alternativaCorreta": 0
         }
     },
-    {
-        "nome": "PEDRO ALMEIDA",
-        "fotoKey": "pedro",
-        "desc": "Um pedreiro estava trabalhando em uma construção quando foi atingido por uma pequena quantidade de cimento úmido.",
-        "colored": ["pedreiro", "construção", "cimento", "úmido"],
-        "sintomas": "Apresenta irritação na pele, coceira e vermelhidão na área atingida.",
-        "classificacao": "PRIMEIRO GRAU",
-        "classificacaoCor": "0x21FF21",
-        "quiz": {
-            "pergunta": "Qual medida pode ajudar a prevenir irritações na pele ao trabalhar com cimento?",
-            "alternativas": [
-                "Usar luvas de proteção adequadas e roupas que cubram toda a pele",
-                "Aplicar cimento diretamente na pele para criar uma camada protetora"
-            ],
-            "alternativaCorreta": 0
-        }
-    },
+
     {
         "nome": "CARLO FREDERICO",
         "fotoKey": "carlo",
