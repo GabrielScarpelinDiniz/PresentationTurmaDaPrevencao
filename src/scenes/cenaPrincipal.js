@@ -43,7 +43,18 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
       
     });
 =======
+    // this.load.on('complete', (params) => {
+    //   this.boxBarraDeCarregamento.destroy();
+    //   this.barraCarregamento.destroy();
+    //   this.carregandoTexto.destroy();
+    // });
+    // this.load.on('progress', (value) => {
+    //   this.barraCarregamento.width = 780 * value;
+    // });
+>>>>>>> Stashed changes
 
+    this.cameras.main.setBackgroundColor(0xA5E2FF);
+    this.cameras.main.fadeIn(1000, 0, 0, 0);
     
 <<<<<<< Updated upstream
     
@@ -56,6 +67,13 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
       fill: '#FFFFFF'
     }).setOrigin(0, 0);
 =======
+    // //Cria a lógica de carregamento enquanto as assets são carregadas
+    // this.boxBarraDeCarregamento = this.add.rectangle(240, 600, 800, 100, 0x000000, 0.8).setStrokeStyle(4, 0xFFFFFF).setOrigin(0, 0);
+    // this.barraCarregamento = this.add.rectangle(250, 610, 0, 80, 0xFFFFFF, 0.8).setOrigin(0, 0);
+    // this.carregandoTexto = this.add.text(240, 550, 'Carregando...', {
+    //   fontSize: '40px',
+    //   fill: '#FFFFFF'
+    // }).setOrigin(0, 0);
 >>>>>>> Stashed changes
 
     //Carrega os assets do jogo
@@ -338,6 +356,7 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     //Configuração de animação de câmera ao iniciar o jogo
     this.physics.pause()
     // Move a câmera da faculdade para o personagem
+    this.cameras.main.centerOn(550, -250);
 
     const dialogoCompleto = () => {
       this.dialogBox.off('pointerdown', dialogoCompleto)
@@ -354,6 +373,7 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
       }
       this.dialogText.proximoTexto(this.dialogo[this.atualDialogoIndice], () => this.dialogBox.on('pointerdown', dialogoCompleto))
     }
+    this.cameras.main.pan(550, 470, 5000)
     this.cameras.main.on('camerapancomplete', () => {
         if (this.stateMachine.currentState() === 'cameraPanParaDialogo') {
         this.botaoCheck.setVisible(true);
@@ -419,6 +439,7 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
       }
     });
 
+    this.cameras.main.setBounds(0, -400, 1120, 1120);
     this.cameras.main.setZoom(2.5);
 
 
