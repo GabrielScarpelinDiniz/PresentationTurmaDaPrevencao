@@ -19,7 +19,7 @@
     {
         "nome": "APOLO SOLEMAR",
         "fotoKey": "apolo",
-        "desc": "Sofreu queimaduras solares após passar muito tempo exposto ao sol sem proteção adequada.",
+        "desc": "Sofreu queimaduras solares depois de passar muito tempo exposto ao sol sem proteção adequada.",
         "colored": ["solares", "exposto"],
         "sintomas": "Apresenta pele vermelha, quente ao toque, com dor local suportável.",
         "classificacao": "PRIMEIRO GRAU",
