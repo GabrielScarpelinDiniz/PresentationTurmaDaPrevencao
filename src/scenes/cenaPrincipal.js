@@ -23,6 +23,7 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     }
   }
   preload() {
+<<<<<<< Updated upstream
     this.load.on('complete', (params) => {
       this.boxBarraDeCarregamento.destroy();
       this.barraCarregamento.destroy();
@@ -41,8 +42,10 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
 
       
     });
+=======
 
     
+<<<<<<< Updated upstream
     
     
     //Cria a lógica de carregamento enquanto as assets são carregadas
@@ -52,6 +55,8 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
       fontSize: '40px',
       fill: '#FFFFFF'
     }).setOrigin(0, 0);
+=======
+>>>>>>> Stashed changes
 
     //Carrega os assets do jogo
     this.load.audio('musicaIntroducao', 'assets/sounds/IntroMusic.wav') // Música de introdução
@@ -333,7 +338,6 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     //Configuração de animação de câmera ao iniciar o jogo
     this.physics.pause()
     // Move a câmera da faculdade para o personagem
-    this.cameras.main.centerOn(550, 200);
 
     const dialogoCompleto = () => {
       this.dialogBox.off('pointerdown', dialogoCompleto)
@@ -350,7 +354,6 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
       }
       this.dialogText.proximoTexto(this.dialogo[this.atualDialogoIndice], () => this.dialogBox.on('pointerdown', dialogoCompleto))
     }
-    this.cameras.main.pan(550, 470, 3000)
     this.cameras.main.on('camerapancomplete', () => {
         if (this.stateMachine.currentState() === 'cameraPanParaDialogo') {
         this.botaoCheck.setVisible(true);
@@ -416,7 +419,6 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
       }
     });
 
-    this.cameras.main.setBounds(0, 0, 1120, 1120);
     this.cameras.main.setZoom(2.5);
 
 
