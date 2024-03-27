@@ -29,9 +29,13 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
       this.carregandoTexto.destroy();
     });
     this.load.on('progress', (value) => {
-      this.barraCarregamento.width = 780 * value;
+      // this.barraCarregamento.width = 780 * value;
+
+      this.add.image(400, 400, 'tutorial').setVisible(false);
     });
 
+    this.load.image('tutorial', 'assets/tutorial.png');
+    
     
     //Cria a lógica de carregamento enquanto as assets são carregadas
     this.boxBarraDeCarregamento = this.add.rectangle(240, 600, 800, 100, 0x000000, 0.8).setStrokeStyle(4, 0xFFFFFF).setOrigin(0, 0);
@@ -42,8 +46,6 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     }).setOrigin(0, 0);
 
     //Carrega os assets do jogo
-
-
     this.load.audio('musicaIntroducao', 'assets/sounds/IntroMusic.wav') // Música de introdução
     this.load.audio('musicaJogo', 'assets/sounds/gameMusicLoopWithEndGame.mp3') // Música de jogo quando o cronometro está ativo
     //Carrega a biblioteca do joystick
