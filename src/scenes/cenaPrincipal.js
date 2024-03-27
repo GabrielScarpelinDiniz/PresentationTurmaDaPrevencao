@@ -82,6 +82,9 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     this.load.image('tenda_livro', 'assets/tilemaps/tenda_livro.png');
     this.load.image('tenda_quiz', 'assets/tilemaps/tenda_quiz.png');
     this.load.image('Tree-Sheet', 'assets/tilemaps/Tree-Sheet.png');
+    this.load.image('terrain', 'assets/tilemaps/terrain.png');
+    
+
     this.load.image('botaoX', 'assets/botaoX.png');
     this.load.image('botaoCase_baixo', 'assets/botaoCase_baixo.png');
     this.load.image('botaoCase_alto', 'assets/botaoCase_alto.png');
@@ -174,15 +177,18 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     this.tileset13 = this.map.addTilesetImage('grade-lateral-right-01');
     this.tileset14 = this.map.addTilesetImage('grade-lateral-left-01');
     this.tileset15 = this.map.addTilesetImage('tenda_quiz');
+    this.tileset16 = this.map.addTilesetImage('terrain');
 
-
+    console.log(this.tileset16)
     
     this.chao = this.map.createLayer("Chao", [this.tileset1, this.tileset4, this.tileset5, this.tileset8]);
+    this.detalhesChao = this.map.createLayer("DetalhesChao", [this.tileset16]);
     this.arvores = this.map.createLayer("Arvores", [this.tileset10, this.tileset11]);
     this.faculdade = this.map.createLayer("Faculdade", [this.tileset2]);
     this.fonte = this.map.createLayer("Fonte", [this.tileset3]);
     this.tendaLivro = this.map.createLayer("TendaLivro", [this.tileset9]);
     this.tendaQuiz = this.map.createLayer("TendaQuiz", [this.tileset15]);
+
 
     this.musicaIntroducao.play(); // Inicia a música de introdução
 
