@@ -439,7 +439,7 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 ## 3.5. Gameflow (Diagrama de cenas) (sprint 2)
 
-&nbsp;&nbsp;&nbsp;&nbsp;Um Diagrama de Cenas é uma ferramenta utilizada para auxiliar na organização do desenvolvimento técnico do jogo, apresentando as cenas do projeto e suas relações com outras cenas, exibindo os caminhos possíveis e bloqueios¹¹ ¹². Nosso Diagrama de Cenas pode ser visitado aqui: https://miro.com/app/board/uXjVNmuHdDw=/?share_link_id=114285260269.
+&nbsp;&nbsp;&nbsp;&nbsp;Um Diagrama de Cenas é uma ferramenta utilizada para auxiliar na organização do desenvolvimento técnico do jogo, apresentando as cenas do projeto e suas relações com outras cenas, exibindo os caminhos possíveis e bloqueios¹¹ ¹². Nosso Diagrama de Cenas pode ser visitado <a href="https://miro.com/app/board/uXjVNmuHdDw=/">aqui</a>.
 
 <div align="center">
 
@@ -451,7 +451,7 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;1 - Ao abrir o menu e clicar no botão “JOGAR”, o jogo iniciará. A tela inicial do jogo se passa no hospital onde chegarão os pacientes a serem orientados, vítimas de queimaduras.
+&nbsp;&nbsp;&nbsp;&nbsp;1 - Ao abrir o menu e clicar no botão “JOGAR”, o jogo iniciará. A tela inicial do jogo se passa no campus da Faculdade de Medicida da USP (FMUSP), onde chegarão os alunos para participarem da dinâmica do jogo. Após clicar no botão, o jogador é levado ao cenário principal, primeira cena do jogo, onde o jogador já controla o personagem principal.
 
 <div align="center">
 
@@ -463,7 +463,7 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;2 - No Hall Principal do Hospital, o jogador poderá ir para a Biblioteca, onde poderá ler livros sobre primeiros socorros, tratamento e prevenção de queimaduras. No entanto, apesar do jogador poder ir à Farmácia, ela estará bloqueada, pois nenhum paciente foi atendido.
+&nbsp;&nbsp;&nbsp;&nbsp;2 - Na tela principal, o jogador está na entrada do campus da FMUSP e poderá explorar o mapa livremente. No entanto, ele não conseguirá interagir com a Tenda de Livros e nem com a Tenda de Quiz, somente com a Dra. Tina. O primeiro objetivo do jogador é encontrar a Dra. Tina, que está localizada na parte superior do mapa, e interagir com ela para dar início à dinâmica de ciclos do jogo.
 
 <div align="center">
 
@@ -475,7 +475,7 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;3 - Após recepcionar o paciente no Hall Principal, o médico se dirigirá a Triagem, onde realizará a triagem do paciente para investigar como o trauma foi causado. 
+&nbsp;&nbsp;&nbsp;&nbsp;3 - Após interagir com a Dra., um case aparecerá na tela, e agora o objetivo do jogador é ler o que está escrito e compreender que os elementos destacados serão importantes para a continuação do jogo.
 
 <div align="center">
 
@@ -487,7 +487,7 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;4 - Após a triagem, o médico deverá ir à biblioteca para estudar sobre primeiros socorros, métodos de prevenção sobre o caso de seu paciente e mitos a serem desmistificados. 
+&nbsp;&nbsp;&nbsp;&nbsp;4 - Após ler o case, o jogador deve clicar no botão 'X', indicado na parte direita superior do case, iniciando o timer do jogo. 
 
 <div align="center">
 
@@ -499,7 +499,8 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;5 - Com o conhecimento adquirido na biblioteca, o médico agora pode ir à Farmácia (bloqueada caso não antes realizar a triagem do paciente) e realizar o quiz para aquisição do remédio para tratamento do paciente.
+&nbsp;&nbsp;&nbsp;&nbsp;5 - Com o timer rodando, o personagem deverá ir para a tenda de livros para estudar e se conscientizar sobre os métodos de prevenção, o que fazer e o que não fazer acerca das queimaduras relacionadas ao case que havia lido anteriormente.
+
 
 <div align="center">
 
@@ -511,7 +512,8 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;6 - Adquirindo o remédio, o médico deverá entregá-lo ao paciente, que estará na Sala de Espera, concluindo o ciclo de vida deste NPC no jogo e rendendo pontos ao jogador. Após conclusão do ciclo, o jogador deve inicia-lo novamente.
+&nbsp;&nbsp;&nbsp;&nbsp;6 - Após interagir com a tenda de livros, o jogador terá 3 opções de livros para abrir, e deverá escolher àquele que corresponde ao grau de queimadura do case que está estudando. Vale ressaltar que o jogador terá a liberdade de escolher as outras opções de livros, mas não será útil para o case atual.
+
 
 <div align="center">
 
@@ -523,7 +525,7 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;7 - É importante notar que na etapa 2, o Jogador tem a opção de seguir um caminho diferente do ideal para o andamento do ciclo de jogo, indo à Biblioteca antes de inicializar o tratamento de um paciente na Triagem.
+&nbsp;&nbsp;&nbsp;&nbsp;7 - Quando o jogador escolher o livro que deseja abrir, conteúdos acerca desse grau aparecerão e o jogador deverá ler com atenção para poder adquirir conhecimento do assunto.
 
 <div align="center">
 
@@ -535,7 +537,19 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;8 - Apesar de ser possível a passagem para a Biblioteca, o Jogador não estará permitido ir à Farmácia, dado que ainda não inicializou o atendimento a nenhum paciente e, portanto, não terá que responder a um Quiz específico.
+&nbsp;&nbsp;&nbsp;&nbsp;8 - Com o conhecimento adquirido na tenda de livros, o estudante deverá se dirigir à tenda de quiz (até então bloqueada) e realizar um jogo de perguntas e respostas, que estarão diretamente relacionadas com o atual case que está estudando.
+
+<div align="center">
+
+<sub>Figura 17 - Farmácia Bloqueada</sub>
+
+<img src="./other/farm_block.png" width="80%">
+
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;9 - O quiz terá uma pergunta e duas opções de respostas. Caso o jogador acerte a resposta do quiz, ele ganha de 10 a 20 pontos (os pontos variam de acordo com a dificuldade da pergunta). No caso em que o jogador erre a resposta, aparecerá um feedback na tela explicando o porquê do erro (com o intuito de conscientizar o aluno) e ele perderá 10 segundos no timer. Após a conclusão do ciclo, o jogador deve iniciá-lo novamente, interagindo com a Dra. Tina. A dinâmica do jogo continua até o tempo acabar.
 
 <div align="center">
 
