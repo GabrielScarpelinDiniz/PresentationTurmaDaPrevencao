@@ -285,11 +285,14 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     
     this.physics.add.collider(this.jogador, this.tendaLivro, () => {
       console.log("Colidiu com a tenda do livro") //Adiciona colisão entre o jogador e a tenda de livros
-
-      //chama a cena para mostrar os 3 livros
-      this.scene.wake('livros');
-      // pausa a física do jogo enquanto a cena livros estiver exposta
-      this.physics.pause()
+      if (this.objetoCaso.status === true){
+        //chama a cena para mostrar os 3 livros
+        this.joystick.toggleEnable();
+        this.joystick.toggleEnable();
+        this.scene.wake('livros');
+        // pausa a física do jogo enquanto a cena livros estiver exposta
+        this.physics.pause()
+      }
 
     });
 
@@ -333,7 +336,7 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
       if (this.stateMachine.currentState() === 'cameraPanParaDialogo') {
         this.botaoCheck.setVisible(true);
         this.dialogBox.setVisible(true);
-        this.dialogText = new TypeWritter(this, 420, 350, 'iosevka', this.dialogo[this.atualDialogoIndice], 15, 30, () => {
+        this.dialogText = new TypeWritter(this, 420, 350, 'iosevka', this.dialogo[this.atualDialogoIndice], 15, 20, () => {
           this.dialogBox.on('pointerdown', dialogoCompleto)
         }).setMaxWidth(380).setScrollFactor(0);
       }
