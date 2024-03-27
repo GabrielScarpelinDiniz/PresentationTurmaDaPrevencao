@@ -92,7 +92,7 @@
         "colored": ["gelo"],
         "sintomas": "Vermelhidão e irritação na área atingida",
         "classificacao": "PRIMEIRO GRAU",
-        "classificacaoCor": "0xFFA500",
+        "classificacaoCor": "0x21FF21",
         "quiz": {
             "pergunta": "Como evitar outro caso como o de Leonardo?",
             "alternativas": [
@@ -126,7 +126,7 @@
         "colored": ["respingou", "limpeza", "alvejante"],
         "sintomas": "Vermelhidão e irritação na área atingida",
         "classificacao": "SEGUNDO GRAU",
-        "classificacaoCor": "0x21FF21",
+        "classificacaoCor": "0xFFA500",
         "quiz": {
             "pergunta": "O que poderia ser feito para evitar a situação de queimadura que aconteceu com Graça Silva?",
             "alternativas": [
