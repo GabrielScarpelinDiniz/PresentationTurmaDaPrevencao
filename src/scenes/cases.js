@@ -6,7 +6,21 @@ class CenaCases extends Phaser.Scene {
     preload() {
         this.load.image('base-case', 'assets/base-case.png');
         this.load.image('botao-fechar', 'assets/botaoX.png');
-        this.load.image('ronald', 'assets/cases/ronald.png');
+        this.load.audio('efeitoSonoroBotaoX', 'assets/sounds/efeitoSonoroBotaoX.mp3') // SFX do Botao de Fechar do Case
+        this.load.image('ronald', 'assets/cases/pessoas/ronald.png');
+        this.load.image('maria', 'assets/cases/pessoas/maria.png');
+        this.load.image('sofia', 'assets/cases/pessoas/sofia.png');
+        this.load.image('apolo', 'assets/cases/pessoas/apolo.png');
+        this.load.image('carlo', 'assets/cases/pessoas/carlo.png');
+        this.load.image('fernanda', 'assets/cases/pessoas/fernanda.png');
+        this.load.image('graca', 'assets/cases/pessoas/graca.png');
+        this.load.image('henrique', 'assets/cases/pessoas/henrique.png');
+        this.load.image('leonardo', 'assets/cases/pessoas/leonardo.png');
+        this.load.image('monica', 'assets/cases/pessoas/monica.png');
+        this.load.image('pedro', 'assets/cases/pessoas/pedro.png');
+        this.load.image('penelope', 'assets/cases/pessoas/penelope.png');
+        this.load.image('pepita', 'assets/cases/pessoas/pepita.png');
+        this.load.image('tony', 'assets/cases/pessoas/tony.png');
         this.load.bitmapFont('pixelBitmapFont', 'assets/fonts/pixel_0.png', 'assets/fonts/pixel.fnt');
         this.load.bitmapFont('iosevka', 'assets/fonts/iosevka_0.png', 'assets/fonts/iosevka.fnt');
 
@@ -23,6 +37,8 @@ class CenaCases extends Phaser.Scene {
         this.case1 = this.add.image(this.centroX, this.centroY, 'base-case').setScale(0.50).setVisible(false).setScrollFactor(0); // Adiciona a imagem do case, quando ocorre esse overlap
         this.botaoX = this.add.sprite(this.case1.x + 210, this.case1.y - 275, 'botao-fechar').setInteractive().setScale(0.25).setVisible(false).setScrollFactor(0); // Adiciona a imagem do botao, quando ocorre esse overlap
 
+        // Adiciona efeito sonoro do botão iniciar
+        this.efeitoSonoroBotaoX = this.sound.add('efeitoSonoroBotaoX');
 
         this.botaoX.on("pointerover", () => {
             // Evento de passar o mouse sobre o botaoJogar
@@ -36,6 +52,7 @@ class CenaCases extends Phaser.Scene {
             
         // Evento disparado ao clicar no botão (Código temporário apenas para demonstração da funcionalidade na sprint 1)
         this.botaoX.on("pointerdown", () => {
+            this.efeitoSonoroBotaoX.play();
             this.nomeTexto.destroy();
             this.casoTexto.destroy();
             this.sintomasTexto.destroy();
@@ -45,12 +62,14 @@ class CenaCases extends Phaser.Scene {
             this.botaoX.setVisible(false);
             this.primeiraCena.events.emit('fecharCase');    
             this.primeiraCena.physics.resume();
+            this.events.emit('mudaTarefaParaLivros');
             });
         // Requisições de informações de outras cenas
 
         this.abrirCase = this.scene.get('cenaHUD');        
         const abrirCase = () => {
             const caso = this.primeiraCena.objetoCaso.caso;
+            this.efeitoSonoroBotaoX.play();
             this.case1.setVisible(true);
             this.botaoX.setVisible(true);
             this.nomeTexto ? this.nomeTexto.destroy() : null;
@@ -67,6 +86,7 @@ class CenaCases extends Phaser.Scene {
             this.sintomasTexto = this.add.bitmapText(this.centroX - 210, this.centroY + this.casoTexto.height + 10, 'iosevka', "Sintomas: "+caso.sintomas, 24).setVisible(true).setMaxWidth(450);
             this.classificacaoTexto = this.add.bitmapText(this.centroX - 210, this.centroY + this.casoTexto.height + this.sintomasTexto.height + 20, 'iosevka', "Classificação: "+caso.classificacao, 24).setVisible(true).setMaxWidth(450).setWordTint(caso.classificacao.split(" ")[0], 1, true, Number(caso.classificacaoCor), Number(caso.classificacaoCor), Number(caso.classificacaoCor), Number(caso.classificacaoCor));
             this.physics.pause();
+            
         }
         this.abrirCase.events.on('abrirCase', abrirCase, this);
         this.primeiraCena.events.on('abrirCase', abrirCase, this);

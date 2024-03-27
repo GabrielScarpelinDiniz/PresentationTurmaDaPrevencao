@@ -6,7 +6,8 @@ class MenuPrincipal extends Phaser.Scene {
   }
   preload() {
     this.load.image("background", "assets/background.png") // Fundo da cena do Main Menu
-    this.load.image("inteliLogo", "assets/logointeli.png") // Fundo da cena do Main Menu
+    this.load.image("inteliLogo", "assets/logointeli.png") // Logo do Inteli
+    this.load.audio('efeitoSonoroBotaoMenu', 'assets/sounds/iniciaJogo.mp3') // SFX do botão iniciar
     this.load.spritesheet("botaoJogar", "assets/button.png", {
       frameWidth: 138,
       frameHeight: 46
@@ -20,6 +21,9 @@ class MenuPrincipal extends Phaser.Scene {
     this.mainMenu = this.add.image(630, 365, "background").setScale(2.1)
     this.logoInteli = this.add.image(1200, 690, "inteliLogo").setScale(1)
     this.botaoJogar = this.add.sprite(900, 575, "botaoJogar").setInteractive().setScale(2)
+
+    // Adiciona efeito sonoro do botão iniciar
+    this.efeitoSonoroBotaoMenu = this.sound.add('efeitoSonoroBotaoMenu');
 
     // Cria a animação de botaoJogar
     this.anims.create({
@@ -49,6 +53,7 @@ class MenuPrincipal extends Phaser.Scene {
     // Evento disparado ao clicar no botão (Código temporário apenas para demonstração da funcionalidade na sprint 1)
     this.botaoJogar.on("pointerdown", () => {
       // Evento de click do mouse
+      this.efeitoSonoroBotaoMenu.play();
       this.scene.start("cenaPrincipal")
       this.scene.start("HUD")
       this.scene.stop("menu")
