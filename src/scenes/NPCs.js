@@ -1,6 +1,8 @@
 class NPCsAlunos {
   constructor(aluno, scene, keySprite) {
     this.aluno = aluno; // Recebe o aluno no construtor
+    this.aluno.direction = 0; // Recebe a direção inicial
+    this.aluno.speed = 0; // Recebe a velocidade inicial
     this.scene = scene; // Recebe a cena para setar as fisicas
     this.keySprite = keySprite; // Recebe a key do sprite para setar a animação
     this.scene.anims.create({
@@ -16,15 +18,16 @@ class NPCsAlunos {
   }
   
   update(){
-    // Adiciona a velocidade ao aluno
     this.scene.physics.velocityFromAngle(this.aluno.direction, this.aluno.speed, this.aluno.body.velocity);
-
     // Alterar a direção e a velocidade em intervalos aleatórios
     if (Phaser.Math.Between(0, 100) > 95) {
       // Altera a direção e a velocidade com numeros aleatórios
       this.aluno.direction = Phaser.Math.Between(0, 360);
       this.aluno.speed = Phaser.Math.Between(30, 70);
     }
+    this.updateAnimation();
+  }
+  updateAnimation(){
     if (this.aluno.body.velocity.x > 0) {
       // Adiciona a animação de andar para a direita
       this.aluno.anims.play(`${this.keySprite}Walk`, true);
