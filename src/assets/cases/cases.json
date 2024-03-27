@@ -75,7 +75,7 @@
         "colored": ["toalha", "objetos", "quentes", "mesa"],
         "sintomas": "Pele carbonizada, com danos profundos e ausência de sensibilidade ao toque.",
         "classificacao": "TERCEIRO GRAU",
-        "classificacaoCor": "FF0000",
+        "classificacaoCor": "0xFF0000",
         "quiz": {
             "pergunta": "O que NÃO fazer em casos de queimaduras de 3º Grau?",
             "alternativas": [
@@ -194,7 +194,7 @@
         "colored": ["alta", "voltagem", "contato", "energizadas"],
         "sintomas": "Pele carbonizada em várias áreas expostas do corpo, como mãos e braços.",
         "classificacao": "TERCEIRO GRAU",
-        "classificacaoCor": "FF0000",
+        "classificacaoCor": "0xFF0000",
         "quiz": {
             "pergunta": "O que fazer logo após um acidente de terceiro grau?",
             "alternativas": [
