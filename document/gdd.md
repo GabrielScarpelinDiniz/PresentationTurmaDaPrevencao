@@ -467,9 +467,9 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 <div align="center">
 
-<sub>Figura 11 - Hospital</sub>
+<sub>Figura 11 - Campus FMUSP</sub>
 
-<img src="./other/hospital.png" width="80%">
+<img src="./other/campusGF.png" width=800>
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
@@ -504,9 +504,9 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 <div align="center">
 
-<sub>Figura 14 - Farmácia</sub>
+<sub>Figura 14 - Tenda de Livros</sub>
 
-<img src="./other/farmacia.png" width="80%">
+<img src="./other/tendalivrosGF.png" width=800>
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
@@ -514,12 +514,11 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 &nbsp;&nbsp;&nbsp;&nbsp;6 - Após interagir com a tenda de livros, o jogador terá 3 opções de livros para abrir, e deverá escolher àquele que corresponde ao grau de queimadura do case que está estudando. Vale ressaltar que o jogador terá a liberdade de escolher as outras opções de livros, mas não será útil para o case atual.
 
-
 <div align="center">
 
-<sub>Figura 15 - Sala de Espera</sub>
+<sub>Figura 15 - Livros</sub>
 
-<img src="./other/sala_espera.png" width="80%">
+<img src="./other/livros1GF.png" width=800>
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
