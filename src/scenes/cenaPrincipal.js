@@ -216,7 +216,8 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
 
     this.case1 = this.add.image(this.centroX, this.centroY, 'case1').setScale(0.50).setVisible(false).setScrollFactor(0); // Adiciona a imagem do case, quando ocorre esse overlap
     this.botaoX = this.add.sprite(this.case1.x + 75, this.case1.y - 92, 'botaoX').setInteractive().setScale(0.1).setVisible(false).setScrollFactor(0); // Adiciona a imagem do botao, quando ocorre esse overlap
-    this.dialogBox = this.add.rectangle(640, 420, 450, 140, 0xFFFFFF, 1).setScrollFactor(0).setOrigin(0.5).setVisible(false).setInteractive(); // Adiciona a caixa de diálogo;
+    this.dialogBox = this.add.rectangle(640, 420, 450, 140, 0xadd8e6, 1).setScrollFactor(0).setOrigin(0.5).setVisible(false).setInteractive(); // Adiciona a caixa de diálogo;
+    this.dialogBox.setStrokeStyle(2, 0x1a65ac)
     this.botaoCheck = this.add.image(820, 450, 'botaoCheck').setInteractive().setVisible(false).setScrollFactor(0).setScale(0.6); // Adiciona o botão de check para iniciar o quiz
     
     this.fundoTimer = this.add.image(100, 100, 'azul').setScale(0.3).setVisible(false); // Adiciona o fundo de imagem do timer
@@ -342,7 +343,7 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
       if (this.stateMachine.currentState() === 'cameraPanParaDialogo') {
         this.botaoCheck.setVisible(true);
         this.dialogBox.setVisible(true);
-        this.dialogText = new TypeWritter(this, 420, 350, 'iosevka', this.dialogo[this.atualDialogoIndice], 15, 20, () => {
+        this.dialogText = new TypeWritter(this, 420, 353, 'iosevka', this.dialogo[this.atualDialogoIndice], 15, 20, () => {
           this.dialogBox.on('pointerdown', dialogoCompleto)
         }).setMaxWidth(380).setScrollFactor(0);
       }
