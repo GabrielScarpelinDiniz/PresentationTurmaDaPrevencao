@@ -5,23 +5,14 @@ class MenuPrincipal extends Phaser.Scene {
     })
   }
   preload() {
-<<<<<<< Updated upstream
-    this.load.image("background", "assets/background.png") // Fundo da cena do Main Menu
-    this.load.image("inteliLogo", "assets/logointeli.png") // Logo do Inteli
-    this.load.audio('efeitoSonoroBotaoMenu', 'assets/sounds/iniciaJogo.mp3') // SFX do botão iniciar
-    this.load.spritesheet("botaoJogar", "assets/button.png", {
-      frameWidth: 138,
-      frameHeight: 46
-=======
     this.load.image("background", "assets/backgroundMenu.png") // Fundo da cena do Main Menu
     this.load.image("inteliLogo", "assets/logointeli.png") // Fundo da cena do Main Menu
     this.load.image("nuvem", "assets/nuvem.png")
     this.load.spritesheet("botaoJogar", "assets/botaoJogarNovo.png", {
       frameWidth: 400,
       frameHeight: 200
->>>>>>> Stashed changes
     }) // Imagem para botaoJogar
-
+    this.load.audio('efeitoSonoroBotaoMenu', 'assets/sounds/iniciaJogo.mp3') // SFX do botão iniciar
   }
 
   create() {
@@ -95,13 +86,6 @@ class MenuPrincipal extends Phaser.Scene {
     // Evento disparado ao clicar no botão (Código temporário apenas para demonstração da funcionalidade na sprint 1)
     this.botaoJogar.on("pointerdown", () => {
       // Evento de click do mouse
-<<<<<<< Updated upstream
-      this.efeitoSonoroBotaoMenu.play();
-      this.scene.start("cenaPrincipal")
-      this.scene.start("HUD")
-      this.scene.stop("menu")
-      this.input.setDefaultCursor("default") // Retorno do cursor do mouse para setinha
-=======
       this.cameras.main.fadeOut(1000, 0, 0, 0)
       // Realiza FadeOut antes de passar para próxima cena
       this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE, (cam, effect) => {
@@ -112,7 +96,6 @@ class MenuPrincipal extends Phaser.Scene {
           this.input.setDefaultCursor("default") // Retorno do cursor do mouse para setinha
         })
       })
->>>>>>> Stashed changes
       // this.openFullScreen()
     })
 

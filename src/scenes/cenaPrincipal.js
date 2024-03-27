@@ -23,26 +23,6 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     }
   }
   preload() {
-<<<<<<< Updated upstream
-    this.load.on('complete', (params) => {
-      this.boxBarraDeCarregamento.destroy();
-      this.barraCarregamento.destroy();
-      this.carregandoTexto.destroy();
-    });
-    this.load.on('progress', (value) => {
-      
-      this.load.image('tutorial', 'assets/tutorial.png');
-      this.add.image(400, 50, 'tutorial').setOrigin(0,0).setScale(0.7);
-      // Pode quebrar a tela de carregamento
-      // for (var i = 0; i < 250; i++) {
-      //   this.load.image('tutorial'+i, 'assets/tutorial.png');
-      // }
-      
-      this.barraCarregamento.width = 780 * value;
-
-      
-    });
-=======
     // this.load.on('complete', (params) => {
     //   this.boxBarraDeCarregamento.destroy();
     //   this.barraCarregamento.destroy();
@@ -51,22 +31,10 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     // this.load.on('progress', (value) => {
     //   this.barraCarregamento.width = 780 * value;
     // });
->>>>>>> Stashed changes
 
     this.cameras.main.setBackgroundColor(0xA5E2FF);
     this.cameras.main.fadeIn(1000, 0, 0, 0);
     
-<<<<<<< Updated upstream
-    
-    
-    //Cria a lógica de carregamento enquanto as assets são carregadas
-    this.boxBarraDeCarregamento = this.add.rectangle(240, 600, 800, 100, 0x000000, 0.8).setStrokeStyle(4, 0xFFFFFF).setOrigin(0, 0);
-    this.barraCarregamento = this.add.rectangle(250, 610, 0, 80, 0xFFFFFF, 0.8).setOrigin(0, 0);
-    this.carregandoTexto = this.add.text(240, 550, 'Carregando...', {
-      fontSize: '40px',
-      fill: '#FFFFFF'
-    }).setOrigin(0, 0);
-=======
     // //Cria a lógica de carregamento enquanto as assets são carregadas
     // this.boxBarraDeCarregamento = this.add.rectangle(240, 600, 800, 100, 0x000000, 0.8).setStrokeStyle(4, 0xFFFFFF).setOrigin(0, 0);
     // this.barraCarregamento = this.add.rectangle(250, 610, 0, 80, 0xFFFFFF, 0.8).setOrigin(0, 0);
@@ -74,7 +42,6 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     //   fontSize: '40px',
     //   fill: '#FFFFFF'
     // }).setOrigin(0, 0);
->>>>>>> Stashed changes
 
     //Carrega os assets do jogo
     this.load.audio('musicaIntroducao', 'assets/sounds/IntroMusic.wav') // Música de introdução
@@ -365,7 +332,8 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
       if (this.atualDialogoIndice === this.dialogo.length){
         this.dialogBox.destroy();
         this.dialogText.destroy();
-        this.botaoCheck.destroy(); 
+        this.botaoCheck.destroy();
+        this.cameras.main.setBounds(0, 0, 1120, 1120);
         this.cameras.main.pan(50, 1120, 2000);
 
         this.stateMachine.transitionTo('cameraPanOnibus');
@@ -436,6 +404,7 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
         this.physics.resume();
         this.cameras.main.startFollow(this.jogador, true)
         this.onibus.setVelocityX(150);
+        this.events.emit("mostraTarefaInicial");
       }
     });
 
@@ -519,8 +488,6 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
           this.objetoCaso.status = true;
     })
     // this.physics.add.collider(this.tina, this.wallsLayer)
-
-    this.events.emit("mostraTarefaInicial");
 
   }
 
