@@ -29,12 +29,20 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
       this.carregandoTexto.destroy();
     });
     this.load.on('progress', (value) => {
-      // this.barraCarregamento.width = 780 * value;
+      
+      this.load.image('tutorial', 'assets/tutorial.png');
+      this.add.image(400, 50, 'tutorial').setOrigin(0,0).setScale(0.7);
+      // Pode quebrar a tela de carregamento
+      for (var i = 0; i < 250; i++) {
+        this.load.image('tutorial'+i, 'assets/tutorial.png');
+      }
+      
+      this.barraCarregamento.width = 780 * value;
 
-      this.add.image(400, 400, 'tutorial').setVisible(false);
+      
     });
 
-    this.load.image('tutorial', 'assets/tutorial.png');
+    
     
     
     //Cria a lógica de carregamento enquanto as assets são carregadas
@@ -135,6 +143,8 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
   }
 
   create() {
+    
+
     this.stateMachine = new StateMachine('cameraPanParaDialogo');
     this.sorteados = [];
     this.indiceSorteado;
