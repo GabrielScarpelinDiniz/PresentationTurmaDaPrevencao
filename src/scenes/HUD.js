@@ -21,7 +21,7 @@ class CenaHUD extends Phaser.Scene
         this.botaoCaseBaixo = this.add.image(1140, 150, 'botaoCaseBaixo').setScale(3).setVisible(false).setInteractive();
         this.botaoCaseAlto = this.add.image(1140, 150, 'botaoCaseAlto').setScale(3).setVisible(false).setInteractive();
         this.botaoCase = this.add.circle(1140, 150, 70, 0xffffff, 1).setVisible(false).setInteractive().setAlpha(0.1);
-        this.fundoTempoDescontado = this.add.rectangle(720, 80, 140, 60, 0xfddfe6).setVisible(false).setAlpha(0.4);
+        this.fundoTempoDescontado = this.add.rectangle(715, 90, 140, 55, 0xfddfe6).setVisible(false).setAlpha(0.4);
         this.textoTempoDescontado = this.add.text(650, 70, "-10s", { fontSize: '50px', fill: '#ff0000'}).setVisible(false); // Adiciona o texto do tempo descontado na tela do jogo
 
         // Cria os elementos da tarefas
@@ -133,7 +133,7 @@ class CenaHUD extends Phaser.Scene
         this.tempoInicial -= tempo;
         this.textoTempo.setText((this.tempoInicial - this.tempoInicial %60)/60 + 'min ' + this.tempoInicial %60 + 's');
         this.textoTempoDescontado.setVisible(true);
-        this.fundoTempoDescontado.setVisible(true);
+        this.fundoTempoDescontado.setVisible(true).setStrokeStyle(2, 0x1a65ac);
         if (this.tempoInicial >= -10 && this.tempoInicial < 0){
             this.tempoInicial = 0
         }
