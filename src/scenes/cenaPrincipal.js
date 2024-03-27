@@ -487,8 +487,6 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
           this.events.emit('botaoCase');
           this.objetoCaso.status = true;
     })
-    // this.physics.add.collider(this.tina, this.wallsLayer)
-
   }
 
   update() {
