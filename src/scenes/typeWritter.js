@@ -16,6 +16,7 @@ class TypeWritter extends Phaser.GameObjects.BitmapText {
     }
     
     addChar() {
+      if (this.textOriginal[this.index] === undefined) return;
       this.typedText += this.textOriginal[this.index];
       this.setText(this.typedText);
       this.index++;
