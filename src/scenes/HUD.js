@@ -35,6 +35,7 @@ class CenaHUD extends Phaser.Scene
         //  Define variáveis de chamada das cenas
         const cenaAtual = this.scene.get('cenaPrincipal');
         const cenaLivros = this.scene.get('livros');
+        const cenaCases = this.scene.get('cenaCases');
         
         // Cria evento para mostrar parte da HUD (Tarefas)
         cenaAtual.events.on('mostraTarefaInicial', function () 
@@ -45,6 +46,7 @@ class CenaHUD extends Phaser.Scene
             this.textoPontos.setVisible(true);
             
         }, this);
+
         
         // Cria evento para mostrar parte da HUD (Timer)
         cenaAtual.events.on('showTimer', function ()
@@ -108,11 +110,19 @@ class CenaHUD extends Phaser.Scene
             this.textoTarefa.setText("Tenda do Quiz? ->");
         }, this);
 
+        // Cria evento para mudar o texto de elementos do HUD
+        cenaCases.events.on('mudaTarefaParaLivros', function () // Define o evento 'botaoCase'
+        {
+            this.textoTarefa.setText("Tenda dos Livros? <-");
+        }, this);
+
         this.events.on('quiz-respondido',  () => {
             this.botaoCaseAlto.setVisible(false);
             this.botaoCaseBaixo.setVisible(false);
             this.botaoCase.setVisible(false);
-        })
+            this.textoTarefa.setText("Procure a dr.ª Tina");
+
+        });
         
     }
     atualizarPontuacao(pontuacao){

@@ -62,6 +62,7 @@ class CenaCases extends Phaser.Scene {
             this.botaoX.setVisible(false);
             this.primeiraCena.events.emit('fecharCase');    
             this.primeiraCena.physics.resume();
+            this.events.emit('mudaTarefaParaLivros');
             });
         // Requisições de informações de outras cenas
 
@@ -85,6 +86,7 @@ class CenaCases extends Phaser.Scene {
             this.sintomasTexto = this.add.bitmapText(this.centroX - 210, this.centroY + this.casoTexto.height + 10, 'iosevka', "Sintomas: "+caso.sintomas, 24).setVisible(true).setMaxWidth(450);
             this.classificacaoTexto = this.add.bitmapText(this.centroX - 210, this.centroY + this.casoTexto.height + this.sintomasTexto.height + 20, 'iosevka', "Classificação: "+caso.classificacao, 24).setVisible(true).setMaxWidth(450).setWordTint(caso.classificacao.split(" ")[0], 1, true, Number(caso.classificacaoCor), Number(caso.classificacaoCor), Number(caso.classificacaoCor), Number(caso.classificacaoCor));
             this.physics.pause();
+            
         }
         this.abrirCase.events.on('abrirCase', abrirCase, this);
         this.primeiraCena.events.on('abrirCase', abrirCase, this);
