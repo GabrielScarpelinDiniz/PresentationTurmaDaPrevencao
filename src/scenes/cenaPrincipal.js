@@ -323,35 +323,35 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     // Move a câmera da faculdade para o personagem
     this.cameras.main.centerOn(550, 200);
 
-    // const dialogoCompleto = () => {
-    //   this.dialogBox.off('pointerdown', dialogoCompleto)
-    //   this.atualDialogoIndice++
-    //   console.log(this.atualDialogoIndice, this.dialogo.length)
-    //   if (this.atualDialogoIndice === this.dialogo.length){
-    //     this.dialogBox.destroy();
-    //     this.dialogText.destroy();
-    //     this.botaoCheck.destroy(); 
-    //     this.cameras.main.pan(550, 800, 2000)
-    //     this.stateMachine.transitionTo('prontoParaJogar');
-    //     return;
-    //   }
-    //   this.dialogText.proximoTexto(this.dialogo[this.atualDialogoIndice], () => this.dialogBox.on('pointerdown', dialogoCompleto))
-    // }
-    // this.cameras.main.pan(550, 470, 3000)
-    // this.cameras.main.on('camerapancomplete', () => {
-    //   if (this.stateMachine.currentState() === 'cameraPanParaDialogo') {
-    //     this.botaoCheck.setVisible(true);
-    //     this.dialogBox.setVisible(true);
-    //     this.dialogText = new TypeWritter(this, 420, 350, 'iosevka', this.dialogo[this.atualDialogoIndice], 15, 20, () => {
-    //       this.dialogBox.on('pointerdown', dialogoCompleto)
-    //     }).setMaxWidth(380).setScrollFactor(0);
-    //   }
-    //   else if (this.stateMachine.currentState() === 'prontoParaJogar') {
-    //     this.joystick.setVisible(true);
+    const dialogoCompleto = () => {
+      this.dialogBox.off('pointerdown', dialogoCompleto)
+      this.atualDialogoIndice++
+      console.log(this.atualDialogoIndice, this.dialogo.length)
+      if (this.atualDialogoIndice === this.dialogo.length){
+        this.dialogBox.destroy();
+        this.dialogText.destroy();
+        this.botaoCheck.destroy(); 
+        this.cameras.main.pan(550, 800, 2000)
+        this.stateMachine.transitionTo('prontoParaJogar');
+        return;
+      }
+      this.dialogText.proximoTexto(this.dialogo[this.atualDialogoIndice], () => this.dialogBox.on('pointerdown', dialogoCompleto))
+    }
+    this.cameras.main.pan(550, 470, 3000)
+    this.cameras.main.on('camerapancomplete', () => {
+      if (this.stateMachine.currentState() === 'cameraPanParaDialogo') {
+        this.botaoCheck.setVisible(true);
+        this.dialogBox.setVisible(true);
+        this.dialogText = new TypeWritter(this, 420, 350, 'iosevka', this.dialogo[this.atualDialogoIndice], 15, 20, () => {
+          this.dialogBox.on('pointerdown', dialogoCompleto)
+        }).setMaxWidth(380).setScrollFactor(0);
+      }
+      else if (this.stateMachine.currentState() === 'prontoParaJogar') {
+        this.joystick.setVisible(true);
         this.physics.resume();
         this.cameras.main.startFollow(this.jogador, true)
-    //   }
-    // });
+      }
+    });
     
     // });
     this.cameras.main.setBounds(0, 0, 1120, 1120)
