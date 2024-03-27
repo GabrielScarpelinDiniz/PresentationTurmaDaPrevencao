@@ -86,6 +86,7 @@ class MenuPrincipal extends Phaser.Scene {
     // Evento disparado ao clicar no botão (Código temporário apenas para demonstração da funcionalidade na sprint 1)
     this.botaoJogar.on("pointerdown", () => {
       // Evento de click do mouse
+      this.efeitoSonoroBotaoMenu.play();
       this.cameras.main.fadeOut(1000, 0, 0, 0)
       // Realiza FadeOut antes de passar para próxima cena
       this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE, (cam, effect) => {

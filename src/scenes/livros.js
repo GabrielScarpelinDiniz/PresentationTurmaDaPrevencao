@@ -106,6 +106,7 @@ class Livros extends Phaser.Scene {
             this.terceiroGrau.setVisible(true)
         }
         this.proximaPaginaInterativo.on("pointerdown", () => {
+            this.efeitoSonoroVirarPagina.play();
             if (this.paginaAtual < this.texto[0].quantidadePaginas - 2) {
                 this.primeiroGrau.setVisible(false)
                 this.segundoGrau.setVisible(false)
@@ -117,6 +118,7 @@ class Livros extends Phaser.Scene {
         })
         this.voltarPaginaInterativo = this.add.rectangle(0, 100, 640, 640, 0x000000, 0).setOrigin(0, 0).setInteractive();
         this.voltarPaginaInterativo.on("pointerdown", () => {
+            this.efeitoSonoroVirarPagina.play();
             if (this.paginaAtual == 0) {    
                 this.primeiraPagina.destroy();
                 this.segundaPagina.destroy();
