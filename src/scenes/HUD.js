@@ -134,6 +134,9 @@ class CenaHUD extends Phaser.Scene
         this.textoTempo.setText((this.tempoInicial - this.tempoInicial %60)/60 + 'min ' + this.tempoInicial %60 + 's');
         this.textoTempoDescontado.setVisible(true);
         this.fundoTempoDescontado.setVisible(true);
+        if (this.tempoInicial >= -10 && this.tempoInicial < 0){
+            this.tempoInicial = 0
+        }
     }
 
 }
