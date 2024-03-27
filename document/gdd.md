@@ -57,7 +57,7 @@
 
 <sub>Figura 1 - Análise SWOT da FMUSP</sub>
 
-<img src="./other/analise_swot.png" width="200%">
+<img src="./other/analise_swot.png" width=800>
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup></div>
 
