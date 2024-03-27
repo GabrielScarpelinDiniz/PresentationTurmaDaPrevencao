@@ -16,6 +16,7 @@ class Livros extends Phaser.Scene {
         this.load.image('livroVermelhoAberto', 'assets/livroVermelhoAberto.png');
         this.load.image('backgroundLivros', 'assets/backgroundLivros.png');
         this.load.image('botaoX', 'assets/botaoX.png');
+        this.load.audio('efeitoSonoroVirarPagina', 'assets/sounds/efeitoSonoroVirarPagina.mp3') // SFX da página do livro
         this.load.image("primeiro-grau", "assets/conteudo-livros/images/primeiro-grau.png")
         this.load.image("segundo-grau", "assets/conteudo-livros/images/segundo-grau.png")
         this.load.image("terceiro-grau", "assets/conteudo-livros/images/terceiro-grau.png")
@@ -40,7 +41,13 @@ class Livros extends Phaser.Scene {
         this.primeiroGrau = this.add.image(400, 475, 'primeiro-grau').setScale(2).setVisible(false);
         this.segundoGrau = this.add.image(540, 350, 'segundo-grau').setScale(2).setVisible(false);
         this.terceiroGrau = this.add.image(400, 475, 'terceiro-grau').setScale(2).setVisible(false);
+      
+        // Adiciona efeito sonoro de virar a página
+        this.efeitoSonoroVirarPagina = this.sound.add('efeitoSonoroVirarPagina');
+      
+      
         this.livroVerde.on("pointerdown", () => { // Define função que chama o livro verde aberto quando clicar no livro verde fechado
+            this.efeitoSonoroVirarPagina.play();
             this.livroVerde.setVisible(false);
             this.livroAmarelo.setVisible(false);
             this.livroVermelho.setVisible(false);
@@ -49,6 +56,7 @@ class Livros extends Phaser.Scene {
         });
 
         this.livroAmarelo.on("pointerdown", () => { // Define função que chama o livro amarelo aberto quando clicar no livro amarelo fechado
+            this.efeitoSonoroVirarPagina.play();
             this.livroVerde.setVisible(false);
             this.livroAmarelo.setVisible(false);
             this.livroVermelho.setVisible(false);
@@ -58,6 +66,7 @@ class Livros extends Phaser.Scene {
         });
 
         this.livroVermelho.on("pointerdown", () => { // Define função que chama o livro vermelho aberto quando clicar no livro vermelho fechado
+            this.efeitoSonoroVirarPagina.play();
             this.livroVerde.setVisible(false);
             this.livroAmarelo.setVisible(false);
             this.livroVermelho.setVisible(false);
