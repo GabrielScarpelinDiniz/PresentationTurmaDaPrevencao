@@ -25,12 +25,12 @@
         "classificacao": "PRIMEIRO GRAU",
         "classificacaoCor": "0x21FF21",
         "quiz": {
-            "pergunta": "PREENCHER",
+            "pergunta": "De que maneira Apolo poderia ter evitado sua lesão?",
             "alternativas": [
-                "PREENCHER",
-                "PREENCHER"
+                "Evitar exposição solar durante momentos quentes do dia",
+                "Passar creme hidratante na pele antes de se expor ao Sol"
             ],
-            "alternativaCorreta": 1
+            "alternativaCorreta": 0
         }
     },
     {
@@ -45,7 +45,7 @@
             "pergunta": "Qual a conduta inicial adequada ao derramar ácido na pele?",
             "alternativas": [
                 "Lavar a área afetada imediatamente com água corrente",
-                "Deixar o ácido secar para depois limpar com um pano"
+                "Deixar o ácido secar para depois limpar com um pano úmido"
             ],
             "alternativaCorreta": 0
         }
@@ -59,12 +59,12 @@
         "classificacao": "SEGUNDO GRAU",
         "classificacaoCor": "0xFFA500",
         "quiz": {
-            "pergunta": "PREENCHER",
+            "pergunta": "Qual medida a ser tomada para evitar que outro caso semelhante aconteça?",
             "alternativas": [
-                "PREENCHER",
-                "PREENCHER"
+                "Fazer as crianças utilizarem luvas de proteção para manusear objetos quentes",
+                "Não deixar cabos de panelas quentes virados para fora do fogão"
             ],
-            "alternativaCorreta": 0
+            "alternativaCorreta": 1
         }
     },
 
@@ -77,10 +77,10 @@
         "classificacao": "TERCEIRO GRAU",
         "classificacaoCor": "FF0000",
         "quiz": {
-            "pergunta": "PREENCHER",
+            "pergunta": "O que NÃO fazer em casos de queimaduras de 3º Grau?",
             "alternativas": [
-                "PREENCHER",
-                "PREENCHER"
+                "Carregar imediatamente vítima ao pronto-socorro",
+                "Evitar tocar na área queimada"
             ],
             "alternativaCorreta": 1
         }
@@ -94,10 +94,10 @@
         "classificacao": "PRIMEIRO GRAU",
         "classificacaoCor": "0xFFA500",
         "quiz": {
-            "pergunta": "PREENCHER",
+            "pergunta": "Como evitar outro caso como o de Leonardo?",
             "alternativas": [
-                "PREENCHER",
-                "PREENCHER"
+                "Lavar o plástico antes de aplicar em queimaduras",
+                "Evitar a exposição da pele a variações de temperaturas muito grandes"
             ],
             "alternativaCorreta": 1
         }
@@ -111,10 +111,10 @@
         "classificacao": "SEGUNDO GRAU",
         "classificacaoCor": "0xFFA500",
         "quiz": {
-            "pergunta": "PREENCHER",
+            "pergunta": "Quais os principais sintomas de uma queimadura de 2º Grau?",
             "alternativas": [
-                "PREENCHER",
-                "PREENCHER"
+                "Falta de sensibilidade na área afetada e dificuldade de movimentar os músculos",
+                "Pele vermelha e formação de bolhas com líquido claro"
             ],
             "alternativaCorreta": 1
         }
@@ -128,10 +128,10 @@
         "classificacao": "SEGUNDO GRAU",
         "classificacaoCor": "0x21FF21",
         "quiz": {
-            "pergunta": "PREENCHER",
+            "pergunta": "O que poderia ser feito para evitar a situação de queimadura que aconteceu com Graça Silva?",
             "alternativas": [
-                "PREENCHER",
-                "PREENCHER"
+                "Utilizar luvas de proteção para evitar infecção",
+                "ler cuidadosamente as instruções sobre o uso seguro dos produtos que estão sendo manipulados"
             ],
             "alternativaCorreta": 1
         }
@@ -145,12 +145,12 @@
         "classificacao": "SEGUNDO GRAU",
         "classificacaoCor": "0xFFA500",
         "quiz": {
-            "pergunta": "PREENCHER",
+            "pergunta": "Quais são os sintomas sofridos por Maria após este trauma de 2º Grau?",
             "alternativas": [
-                "PREENCHER",
-                "PREENCHER"
+                "Pele avermelhada e despreendimento de camadas da pele",
+                "Pele carbonizada e ausência de dor"
             ],
-            "alternativaCorreta": 1
+            "alternativaCorreta": 0
         }
     },
     {
@@ -162,10 +162,10 @@
         "classificacao": "PRIMEIRO GRAU",
         "classificacaoCor": "0x21FF21",
         "quiz": {
-            "pergunta": "PREENCHER",
+            "pergunta": "Qual das seguintes medidas poderia ter evitado o que aconteceu com Mônica?",
             "alternativas": [
-                "PREENCHER",
-                "PREENCHER"
+                "Ligar o ventilador no máximo para fazer o ar circular",
+                "Acender churrasqueiras apenas em ambientes abertos"
             ],
             "alternativaCorreta": 1
         }
@@ -179,10 +179,10 @@
         "classificacao": "PRIMEIRO GRAU",
         "classificacaoCor": "0x21FF21",
         "quiz": {
-            "pergunta": "PREENCHER",
+            "pergunta": "Quais os sintomas de uma queimadura elétrica de 1º Grau?",
             "alternativas": [
-                "PREENCHER",
-                "PREENCHER"
+                "Pele vermelha e formação de bolhas com pouco líquido claro",
+                "Pele sensível ao toque e de coloração avermelhada"
             ],
             "alternativaCorreta": 1
         }
@@ -196,12 +196,12 @@
         "classificacao": "TERCEIRO GRAU",
         "classificacaoCor": "FF0000",
         "quiz": {
-            "pergunta": "PREENCHER",
+            "pergunta": "O que fazer logo após um acidente de terceiro grau?",
             "alternativas": [
-                "PREENCHER",
-                "PREENCHER"
+                "Ligar urgentemente para uma equipe médica realizar os primeiros socorros.",
+                "Aplicar substâncias na queimadura para alívio da dor e levá-la ao pronto-socorro imediatamente"
             ],
-            "alternativaCorreta": 1
+            "alternativaCorreta": 0
         }
     },
     {
@@ -213,12 +213,12 @@
         "classificacao": "PRIMEIRO GRAU",
         "classificacaoCor": "0x21FF21",
         "quiz": {
-            "pergunta": "PREENCHER",
+            "pergunta": "O que não é recomendado fazer após uma queimadura elétrica?",
             "alternativas": [
-                "PREENCHER",
-                "PREENCHER"
+                "Aplicar gelo sobre a queimadura",
+                "Lavar a área afetada com água gelada"
             ],
-            "alternativaCorreta": 1
+            "alternativaCorreta": 0
         }
     }
 ]
