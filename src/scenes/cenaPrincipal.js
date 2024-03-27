@@ -339,6 +339,7 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
         this.stateMachine.transitionTo('cameraPanOnibus');
         return;
       }
+      this.dialogText.on('pointerdown', () => { this.dialogText.skip()})
       this.dialogText.proximoTexto(this.dialogo[this.atualDialogoIndice], () => this.dialogBox.on('pointerdown', dialogoCompleto))
     }
     this.cameras.main.pan(550, 470, 5000)
@@ -346,9 +347,11 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
         if (this.stateMachine.currentState() === 'cameraPanParaDialogo') {
         this.botaoCheck.setVisible(true);
         this.dialogBox.setVisible(true);
-        this.dialogText = new TypeWritter(this, 420, 353, 'iosevka', this.dialogo[this.atualDialogoIndice], 15, 20, () => {
+        this.dialogText = new TypeWritter(this, 420, 353, 'iosevka', this.dialogo[this.atualDialogoIndice], 16, 20, () => {
+          this.dialogText.off('pointerdown')
           this.dialogBox.on('pointerdown', dialogoCompleto)
-        }).setMaxWidth(380).setScrollFactor(0);
+          this.botaoCheck.on('pointerdown', dialogoCompleto)
+        }).setMaxWidth(380).setScrollFactor(0).setInteractive().on('pointerdown', () => { this.dialogText.skip()});
       }
 
       else if (this.stateMachine.currentState() === 'cameraPanOnibus'){

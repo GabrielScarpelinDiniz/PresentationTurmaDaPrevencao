@@ -1,5 +1,5 @@
 class TypeWritter extends Phaser.GameObjects.BitmapText {
-    constructor(scene, x, y, font, text, size, velocidade, onComplete, align) {
+    constructor(scene, x, y, font, text, size, velocidade, onComplete, onStart, align) {
       super(scene, x, y, font, text, size, align);
       scene.add.existing(this);
       this.speed = velocidade;
@@ -24,6 +24,11 @@ class TypeWritter extends Phaser.GameObjects.BitmapText {
           this.timer.remove();
           if (this.onComplete) this.onComplete();
       }
+    }
+    skip(){
+        this.timer.remove();
+        this.setText(this.textOriginal);
+        if (this.onComplete) this.onComplete();
     }
     destroy() {
       this.timer.remove();
