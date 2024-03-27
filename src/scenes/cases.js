@@ -6,8 +6,21 @@ class CenaCases extends Phaser.Scene {
     preload() {
         this.load.image('base-case', 'assets/base-case.png');
         this.load.image('botao-fechar', 'assets/botaoX.png');
-        this.load.image('ronald', 'assets/cases/ronald.png');
         this.load.audio('efeitoSonoroBotaoX', 'assets/sounds/efeitoSonoroBotaoX.mp3') // SFX do Botao de Fechar do Case
+        this.load.image('ronald', 'assets/cases/pessoas/ronald.png');
+        this.load.image('maria', 'assets/cases/pessoas/maria.png');
+        this.load.image('sofia', 'assets/cases/pessoas/sofia.png');
+        this.load.image('apolo', 'assets/cases/pessoas/apolo.png');
+        this.load.image('carlo', 'assets/cases/pessoas/carlo.png');
+        this.load.image('fernanda', 'assets/cases/pessoas/fernanda.png');
+        this.load.image('graca', 'assets/cases/pessoas/graca.png');
+        this.load.image('henrique', 'assets/cases/pessoas/henrique.png');
+        this.load.image('leonardo', 'assets/cases/pessoas/leonardo.png');
+        this.load.image('monica', 'assets/cases/pessoas/monica.png');
+        this.load.image('pedro', 'assets/cases/pessoas/pedro.png');
+        this.load.image('penelope', 'assets/cases/pessoas/penelope.png');
+        this.load.image('pepita', 'assets/cases/pessoas/pepita.png');
+        this.load.image('tony', 'assets/cases/pessoas/tony.png');
         this.load.bitmapFont('pixelBitmapFont', 'assets/fonts/pixel_0.png', 'assets/fonts/pixel.fnt');
         this.load.bitmapFont('iosevka', 'assets/fonts/iosevka_0.png', 'assets/fonts/iosevka.fnt');
 
