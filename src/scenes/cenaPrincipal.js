@@ -33,9 +33,9 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
       this.load.image('tutorial', 'assets/tutorial.png');
       this.add.image(400, 50, 'tutorial').setOrigin(0,0).setScale(0.7);
       // Pode quebrar a tela de carregamento
-      for (var i = 0; i < 250; i++) {
-        this.load.image('tutorial'+i, 'assets/tutorial.png');
-      }
+      // for (var i = 0; i < 250; i++) {
+      //   this.load.image('tutorial'+i, 'assets/tutorial.png');
+      // }
       
       this.barraCarregamento.width = 780 * value;
 
