@@ -17,8 +17,25 @@
         }
     },
     {
-        "nome": "MARIANA SOUZA",
-        "fotoKey": "mariana",
+        "nome": "APOLO SOLEMAR",
+        "fotoKey": "apolo",
+        "desc": "Sofreu queimaduras solares após passar muito tempo exposto ao sol sem proteção adequada.",
+        "colored": ["solares", "exposto"],
+        "sintomas": "Apresenta pele vermelha, quente ao toque, com dor local suportável.",
+        "classificacao": "PRIMEIRO GRAU",
+        "classificacaoCor": "0x21FF21",
+        "quiz": {
+            "pergunta": "PREENCHER",
+            "alternativas": [
+                "PREENCHER",
+                "PREENCHER"
+            ],
+            "alternativaCorreta": 1
+        }
+    },
+    {
+        "nome": "SOFIA SOLVENTE",
+        "fotoKey": "sofia",
         "desc": "Uma estudante de química estava realizando uma experiência no laboratório, quando acidentalmente derramou ácido em sua mão.",
         "colored": ["estudante", "química", "laboratório", "ácido"],
         "sintomas": "Apresenta vermelhidão intensa na região afetada, sensação de queimação intensa e formação de bolhas.",
@@ -29,6 +46,23 @@
             "alternativas": [
                 "Lavar a área afetada imediatamente com água corrente",
                 "Deixar o ácido secar para depois limpar com um pano"
+            ],
+            "alternativaCorreta": 0
+        }
+    },
+    {
+        "nome": "PENELOPE MONTINA",
+        "fotoKey": "penelope",
+        "desc": "A criança estava brincando na cozinha enquanto sua mãe preparava o jantar. Distraída, ela esbarrou em um cabo de panela que estava voltado para fora do fogão e derramou uma panela de água fervente sobre seu braço.",
+        "colored": ["cozinha", "cabo", "de", "panela", "fogão", "água", "fervente"],
+        "sintomas": "Apresentam bolhas, pele avermelhada, manchada ou com coloração variável, dor e inchaço.",
+        "classificacao": "SEGUNDO GRAU",
+        "classificacaoCor": "0xFFA500",
+        "quiz": {
+            "pergunta": "PREENCHER",
+            "alternativas": [
+                "PREENCHER",
+                "PREENCHER"
             ],
             "alternativaCorreta": 0
         }
@@ -48,6 +82,159 @@
                 "Aplicar cimento diretamente na pele para criar uma camada protetora"
             ],
             "alternativaCorreta": 0
+        }
+    },
+    {
+        "nome": "CARLO FREDERICO",
+        "fotoKey": "carlo",
+        "desc": "Durante um almoço em família, uma toalha de mesa foi colocada sobre a mesa. Um idoso, ao tentar se levantar da mesa, acabou puxando a toalha sem perceber, derrubando objetos quentes sobre si mesmo.",
+        "colored": ["toalha", "objetos", "quentes", "mesa"],
+        "sintomas": "Pele carbonizada, com danos profundos e ausência de sensibilidade ao toque.",
+        "classificacao": "TERCEIRO GRAU",
+        "classificacaoCor": "FF0000",
+        "quiz": {
+            "pergunta": "PREENCHER",
+            "alternativas": [
+                "PREENCHER",
+                "PREENCHER"
+            ],
+            "alternativaCorreta": 1
+        }
+    },
+    {
+        "nome": "LEONARDO MESSI",
+        "fotoKey": "leonardo",
+        "desc": "Um paciente saiu do jogo de futebol com dor no joelho. Ao chegar em casa, colocou um plástico com gelo na área afetada por mais de 40 minutos.",
+        "colored": ["gelo"],
+        "sintomas": "Vermelhidão e irritação na área atingida",
+        "classificacao": "PRIMEIRO GRAU",
+        "classificacaoCor": "0xFFA500",
+        "quiz": {
+            "pergunta": "PREENCHER",
+            "alternativas": [
+                "PREENCHER",
+                "PREENCHER"
+            ],
+            "alternativaCorreta": 1
+        }
+    },
+    {
+        "nome": "HENRIQUE CALABRESO",
+        "fotoKey": "henrique",
+        "desc": "Jogou álcool na brasa de churrasco, causando uma explosão. Ele foi atingido pelo calor intenso e sentiu queimação no rosto e braços.",
+        "colored": ["gelo"],
+        "sintomas": "Dor intensa, bolhas cheias de líquido claro na pele, vermelhidão profunda",
+        "classificacao": "SEGUNDO GRAU",
+        "classificacaoCor": "0xFFA500",
+        "quiz": {
+            "pergunta": "PREENCHER",
+            "alternativas": [
+                "PREENCHER",
+                "PREENCHER"
+            ],
+            "alternativaCorreta": 1
+        }
+    },
+    {
+        "nome": "GRAÇA SILVA",
+        "fotoKey": "graca",
+        "desc": "Enquanto realizava a limpeza da cozinha, inadvertidamente respingou alvejante em sua perna",
+        "colored": ["respingou", "limpeza", "alvejante"],
+        "sintomas": "Vermelhidão e irritação na área atingida",
+        "classificacao": "SEGUNDO GRAU",
+        "classificacaoCor": "0x21FF21",
+        "quiz": {
+            "pergunta": "PREENCHER",
+            "alternativas": [
+                "PREENCHER",
+                "PREENCHER"
+            ],
+            "alternativaCorreta": 1
+        }
+    },
+    {
+        "nome": "MARIA ANTONIA",
+        "fotoKey": "maria",
+        "desc": "Estava em casa mexendo com soda cáustica. Enquanto organizava a lavanderia, transferiu o conteúdo de vários recipientes para um maior. Ao se distrair, derrubou o material em sua calça.",
+        "colored": ["derrubou", "material", "soda", " cáustica"],
+        "sintomas": "Dor intensa, bolhas cheias de líquido claro na pele, vermelhidão profunda",
+        "classificacao": "SEGUNDO GRAU",
+        "classificacaoCor": "0xFFA500",
+        "quiz": {
+            "pergunta": "PREENCHER",
+            "alternativas": [
+                "PREENCHER",
+                "PREENCHER"
+            ],
+            "alternativaCorreta": 1
+        }
+    },
+    {
+        "nome": "MONICA CABRAL",
+        "fotoKey": "monica",
+        "desc": "Acendeu uma churrasqueira portátil dentro do quarto para se aquecer, resultando em sintomas de intoxicação por monóxido de carbono.",
+        "colored": ["intoxicação", "monóxido", "carbono"],
+        "sintomas": "Dor de cabeça e tontura.",
+        "classificacao": "PRIMEIRO GRAU",
+        "classificacaoCor": "0x21FF21",
+        "quiz": {
+            "pergunta": "PREENCHER",
+            "alternativas": [
+                "PREENCHER",
+                "PREENCHER"
+            ],
+            "alternativaCorreta": 1
+        }
+    },
+    {
+        "nome": "PEPITA AIRES",
+        "fotoKey": "pepita",
+        "desc": "Estava empinando sua pipa em um dia de vento forte. Sem perceber, sua pipa se enroscou nos fios elétricos acima dela, resultando em uma descarga elétrica leve.",
+        "colored": ["pipa", "fios", "descarga", "elétrica"],
+        "sintomas": "Pele avermelhada e sensível ao toque.",
+        "classificacao": "PRIMEIRO GRAU",
+        "classificacaoCor": "0x21FF21",
+        "quiz": {
+            "pergunta": "PREENCHER",
+            "alternativas": [
+                "PREENCHER",
+                "PREENCHER"
+            ],
+            "alternativaCorreta": 1
+        }
+    },
+    {
+        "nome": "TONY WATTSON",
+        "fotoKey": "tony",
+        "desc": "Durante uma operação de manutenção em equipamentos de alta voltagem, um trabalhador idoso entrou em contato direto com partes energizadas do equipamento.",
+        "colored": ["alta", "voltagem", "contato", "energizadas"],
+        "sintomas": "Pele carbonizada em várias áreas expostas do corpo, como mãos e braços.",
+        "classificacao": "TERCEIRO GRAU",
+        "classificacaoCor": "FF0000",
+        "quiz": {
+            "pergunta": "PREENCHER",
+            "alternativas": [
+                "PREENCHER",
+                "PREENCHER"
+            ],
+            "alternativaCorreta": 1
+        }
+    },
+    {
+        "nome": "FERNANDA OSCAR",
+        "fotoKey": "fernanda",
+        "desc": "Enquanto trocava uma lâmpada em casa, acidentalmente encostou nos fios elétricos expostos.",
+        "colored": ["lâmpada", "encostou", "elétricos"],
+        "sintomas": "Vermelhidão e uma sensação de formigamento na área do contato",
+        "classificacao": "PRIMEIRO GRAU",
+        "classificacaoCor": "0x21FF21",
+        "quiz": {
+            "pergunta": "PREENCHER",
+            "alternativas": [
+                "PREENCHER",
+                "PREENCHER"
+            ],
+            "alternativaCorreta": 1
         }
     }
 ]
