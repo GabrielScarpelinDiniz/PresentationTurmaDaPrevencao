@@ -331,7 +331,7 @@ Posto isso, foi entendido que a definição adequada do público alvo aumenta a 
 
 <sub>Figura 5 - Mapa do Jogo</sub>
 
-<img src="./other/mapa1.png" width="50%">
+<img src="./other/mapajogo.jpeg" width="50%">
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 </div>
@@ -583,7 +583,7 @@ assim por diante), a mecânica suporta a dinâmica geral da jogabilidade. Ou sej
 
 # <a name="c4"></a>4. Desenvolvimento do Jogo
 
-## 4.1. Desenvolvimento preliminar do jogo (sprint 1)
+## 4.1. Desenvolvimento preliminar do jogo
 
 &nbsp;&nbsp;&nbsp;&nbsp;A primeira versão do jogo possui duas cenas, uma de início e uma de jogo. Ambas possuem arte gráfica provisória e foram desenvolvidas com o intuito de serem apresentadas na reunião com o parceiro ao final do Sprint 1.
 
@@ -727,12 +727,12 @@ var config = {
     }
 };
 ```
-### Dificuldades
+**Dificuldades**
 - Tentar ajustar o tamanho da tela automaticamente para diferentes dispositivos;
 - Definir corretamente os inputs de movimentação( demora para achar a sintaxe correta);
 - Adaptação às boas práticas ao escrever código em Javascript.
 
-### Próximos passos
+**Próximos passos**
 - Adaptar os inputs de movimentação para funcionarem com as setas do teclado e com o touch screen de dispositivos mobile;
 - Normalizar a velocidade do deslocamento do objeto médico na direção diagonal;
 - Mudar a arte gráfica para a definida pelo grupo de Design;
@@ -752,13 +752,13 @@ var config = {
 
 </div>
 
-## 4.2. Desenvolvimento básico do jogo (sprint 2)
+## 4.2. Desenvolvimento básico do jogo
 
 &nbsp;&nbsp;&nbsp;&nbsp;Na primeira sprint, o desenvolvimento foi focado em criar apenas um esboço do jogo. Em outras palavras, uma parte significativa do código foi refatorada à medida que os conteúdos eram apresentados ao longo da sprint.
 
 &nbsp;&nbsp;&nbsp;&nbsp;Desse modo, a decisão foi: dividir a programação em pequenas etapas, que são: refatorar o jogo para incluir múltiplas cenas, implementar o novo menu em *pixel art*, adicionar físicas e colisões, integrar a câmera ao cenário e criar o novo cenário em *pixel art* usando o Tiled Map Editor.
 
-### Etapa 1 do desenvolvimento - Refatorando o jogo em múltiplas cenas
+**Etapa 1 do desenvolvimento - Refatorando o jogo em múltiplas cenas**
 
 &nbsp;&nbsp;&nbsp;&nbsp;Na primeira entrega, o jogo apresentava um menu e a cena do médico no hospital. Ambos estavam incluídos no mesmo arquivo, sem qualquer separação entre as cenas. Como resultado, a imagem do menu era renderizada em primeiro plano, e ao clicar no botão de jogar, essa imagem era destruída.
 
@@ -810,7 +810,7 @@ class CenaHospital extends Phaser.Scene {
 
 &nbsp;&nbsp;&nbsp;&nbsp;Para finalizar, o código das respectivas cenas e funções foram transferidas para os arquivos em classe, colocando o operador `this` antes das variáveis por conta da mudança para classe.
 
-### Etapa 2 do desenvolvimento - Novo menu em *pixel art*
+**Etapa 2 do desenvolvimento - Novo menu em *pixel art***
 
 &nbsp;&nbsp;&nbsp;&nbsp;O primeiro passo foi fazer o desenho do novo menu, com uma cara parecida, porém em *pixel art* feita no Piskel.
 
@@ -853,7 +853,7 @@ this.botaoJogar.on("pointerdown", () => {
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;No `this.scene.start` o Phaser inicia a cena do hospital e na linha seguinte encerra o menu.
 
-### Etapa 3 do desenvolvimento - Implementação da física
+**Etapa 3 do desenvolvimento - Implementação da física**
 
 &nbsp;&nbsp;&nbsp;&nbsp;O primeiro passo foi habilitar a física na configuração do jogo:
 ```js
@@ -870,7 +870,7 @@ const config = {
 ```
 &nbsp;&nbsp;&nbsp;&nbsp;Colocando esse trecho de código, habilitamos a física no jogo, sem gravidade pois o nosso jogo é no estilo *top down*: vista de cima para baixo.
 
-### Etapa 4 do desenvolvimento - Câmeras e cenário do Tiled Map Editor
+**Etapa 4 do desenvolvimento - Câmeras e cenário do Tiled Map Editor**
 
 &nbsp;&nbsp;&nbsp;&nbsp;Nesta etapa, foi realizado a implementação do Mapa através de um arquivo JSON, localizado em `"src/assets/tilemaps/main_map.json"`. Este arquivo é exportado do Tiled Map Editor, que é um editor de mapas em blocos e por camadas
 
@@ -923,7 +923,7 @@ this.cameras.main.setZoom(2);
 
 </div>
 
-### Etapa 5 do desenvolvimento - Colisões com as paredes
+**Etapa 5 do desenvolvimento - Colisões com as paredes**
 
 &nbsp;&nbsp;&nbsp;&nbsp;De início, foi preciso fazer algumas alterações no Tiled Map Editor, precisamos atribuir a todos os blocos que têm colisão uma propriedade personalizada que chamamos de `Collider`. Essa propriedade precisa ser do tipo `boolean` (verdadeiro ou falso). Com essa propriedade definida nos blocos, foi o momento de implementar a colisão. E com apenas duas linhas, graças ao Tiled Map Editor e às suas facilidades, foi possível definir colisão entre as paredes e o jogador.
 
@@ -948,7 +948,7 @@ this.medico.setVelocityY(velocidadeEmY)
 
 </div>
 
-### Etapa 6 do desenvolvimento - Implementação do joystick e tela cheia
+**Etapa 6 do desenvolvimento - Implementação do joystick e tela cheia**
 
 &nbsp;&nbsp;&nbsp;&nbsp;No projeto foi utilizada uma biblioteca chamada *Rex Virtual Joystick*, que está localizada em `src/plugins/rexvirtualjoystickplugin.min.js` sendo importada na cena do hospital na função `preload()`.
 ````js
@@ -1043,19 +1043,19 @@ openFullScreen() {
 
 </div>
 
-### Dificuldades
+**Dificuldades**
 - Implementação da colisão;
 - Dificuldade em ajustar o Tile Map;
 - Implementar as entradas Mobile - O jogo já tem uma biblioteca para um joystick e teve dificuldade quanto a responsividade.
 
-### Próximos passos
+**Próximos passos**
 - Terminar toda a decoração do mapa;
 - Implementar o quiz e a lógica da biblioteca;
 - Implementar a movimentação através de vetores;
 - Spritesheet do personagem animada e finalizada;
 - Sritesheet dos NPC's para animar no jogo.
 
-## 4.3. Desenvolvimento intermediário do jogo (sprint 3)
+## 4.3. Desenvolvimento intermediário do jogo
 
 &nbsp;&nbsp;&nbsp;&nbsp;Na terceira sprint, o foco da codificação foi reformular a dinâmica do jogo para se adaptar ao novo design de cenário requisitado pelo cliente. Além disso, aprofundamos o desenvolvimento para o nível intermediário do projeto, ou seja, foram implementados estruturas lógicas para a demonstração de, pelo menos, um ciclo do jogo.
 
@@ -1064,7 +1064,7 @@ openFullScreen() {
 &nbsp;&nbsp;&nbsp;&nbsp;As estruturas implementadas no jogo foram os aprimoramentos dos overlaps e colisões, a criação de um novo cenário, a implementação do HUD, que inclui elementos como o timer, a pontuação e as missões a serem realizadas pelo personagem. As ferramentas utilizadas nessa sprint foram o Tiled Map Editor, para a criação do novo mapa; Piskel, para o design dos livros, quiz e personagens; e PixilArt para a elaboração do edifício da Faculdade de Medicina da USP.
 
 
-### Etapa 1 do desenvolvimento - Criação do novo cenário
+**Etapa 1 do desenvolvimento - Criação do novo cenário**
 
 &nbsp;&nbsp;&nbsp;&nbsp;Na sprint anterior, o jogo se passava em um ambiente hospitalar, onde o personagem principal era o médico residente. Com a mudança de cenário, o local passou a ser o pátio da FMUSP e os elementos do jogo foram adaptados para o novo espaço, como o menu, os personagens e os espaços de interação. O modo de uso do Tiled Map Editor para a criação do novo mapa foi o mesmo descrito no tópico 4.2. Fizz
 
@@ -1081,7 +1081,7 @@ openFullScreen() {
 
 
 
-### Etapa 2 do desenvolvimento - Colisões e Overlaps
+**Etapa 2 do desenvolvimento - Colisões e Overlaps**
 
 &nbsp;&nbsp;&nbsp;&nbsp;Foram implementadas, inicialmente, as colisões necessárias para a dinâmica do jogo, configuradas no próprio Tiled Map Editor e adicionadas, com o auxílio de um documento .JSON e do framework Phaser, no código. Na implementação das colisões, utilizamos, dentro do `create()`, o método do Phaser `.setCollisionByProperty()`, que adiciona colisão entre objetos por meio das propriedades adicionadas a eles no Tiled Map Editor e, além disso, para obejtos circulares ou irregulares foi adicionada uma colisão especial em formato de círculo pela adição de um círculo com o método `this.add.circle()`, como descrito a seguir:
 
@@ -1165,7 +1165,7 @@ openFullScreen() {
 &nbsp;&nbsp;&nbsp;&nbsp;Dentro dessa função, a física do jogo é pausada e o 'case' - onde contém o caso atual - é mostrado com as informações, que serão necessárias para estudar e responder o quiz. Nessa função de collider, alguns eventos são emitidos, eles foram utilizados para implementar o HUD posteriormente.
 &nbsp;&nbsp;&nbsp;&nbsp;Avançando para o desenvolvimento da dinâmica de nosso jogo, adicionamos colisões entre as tendas de livros e quiz e o personagem principal.
 
-#### Tenda de Livros
+**Tenda de Livros**
 
 &nbsp;&nbsp;&nbsp;&nbsp;Para adicionarmos a colisão entre a tenda de livros e o personagem, foram adicionados `this.physics.add.collider` entre o jogador `this.jogador` e a tenda `this.tendaLivro` no método `create()` da `cenaPrincipal.js`. Uma função é definida logo após estabelecermos a colisão entre os elementos através de `() => {}`, retomando a cena dos livros `livros.js` através de `this.scene.wake('livros')` e pausando a física da cena atual com `this.physics.pause()`, como demonstrado abaixo:
 
@@ -1181,7 +1181,7 @@ this.physics.add.collider(this.jogador, this.tendaLivro, () => {
 
 ```
 
-#### Tenda de Quiz
+**Tenda de Quiz**
 
 &nbsp;&nbsp;&nbsp;&nbsp;Similarmente, na tenda de quiz, a colisão com o personagem foi adicionada como anteriormente. Estabelecemos colisão entre o jogador `this.jogador` e a tenda de quiz `this.tendaQuiz`, também definindo uma função após este evento através de `() => {}`, retomando a cena de quiz `quiz.js` por `this.scene.wake('quiz')` e pausando a física da cena atual por `this.physics.pause()`.
 
@@ -1199,7 +1199,8 @@ this.physics.add.collider(this.jogador, this.tendaQuiz, () => {
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;As cenas `livros.js` e `quiz.js` citadas acima serão abordadas na Etapa 6 do desenvolvimento - Tendas
-### Etapa 3 do desenvolvimento - Implementação do HUD
+
+**Etapa 3 do desenvolvimento - Implementação do HUD**
 
 &nbsp;&nbsp;&nbsp;&nbsp;O HUD do jogo foi criado em uma nova cena situada na classe CenaHUD, contendo os seguintes elementos: timer, pontuação, botão de reabertura do case e um quadro de orientação das missões. A seguir é possível visualizar o modo como foi implementado:
 
@@ -1289,10 +1290,12 @@ class CenaHUD extends Phaser.Scene
 ```
 Nessa parte, alguns elementos como retângulos e texto são adicionados. Os elementos são adicionados através de eventos, ou seja, na cena principal, quando o usuário clica no botão de fechar o evento é emitido pela cena principal e a cena do HUD ouve esse evento e cria/mostra os elementos. Como a cena fica sempre ativa os elementos são exibidos através do método `setVisible(boolean)`.
 
-### Etapa 4 do desenvolvimento - Refatoramento do Código
+**Etapa 4 do desenvolvimento - Refatoramento do Código**
+
 Para refatorar o código, alguns padrões foram adotados: nome de classe maiúscula, variáveis em 'camelCase' e procurar comentar o código de forma concisa, mas que seja legível.
 
-### Etapa 5 do desenvolvimento - Implementação da Trilha e Efeitos Sonoros / Tela de loading
+**Etapa 5 do desenvolvimento - Implementação da Trilha e Efeitos Sonoros / Tela de loading**
+
 &nbsp;&nbsp;&nbsp;&nbsp;Para implementar o som, primeiramente foi preciso escolher os sons. Para isso, foi baixados sons do site "FreeSound" com licenças Creative Commons. Os sons Creative Commons são importantes para evitar problemas com direitos autorais.
 &nbsp;&nbsp;&nbsp;&nbsp;Após isso, o aúdio foi editado no software "Audacity", para que o som fique mais rápido nos segundos finais do jogo. Em seguida, os assets de som foram carregados no método `preload()`
 ````js
@@ -1335,7 +1338,7 @@ this.botaoX.on("pointerdown", () => {
 
 });
 ````
-### Etapa 6 do desenvolvimento - Tendas
+**Etapa 6 do desenvolvimento - Tendas**
 
 &nbsp;&nbsp;&nbsp;&nbsp;Nesta sprint, adicionamos cenas `livros.js` e `quiz.js` para implementarmos as mecânicas necessárias para a dinâmica do jogo. Estas cenas são chamadas na `cenaPrincipal.js` com a interação do jogador com o ambiente.
 
@@ -1670,13 +1673,13 @@ class Quiz extends Phaser.Scene {
     }
 ```
 
-### Dificuldades
+**Dificuldades**
 - Implementação da colisão;
 - Dificuldade em ajustar a animação do personagem principal;
 - Realizar a transição de cenas;
 - Inclusão de um quiz em HTML no jogo.
 
-### Próximos passos
+**Próximos passos**
 - Incluir o restante dos cases no jogo;
 - Incluir os conteúdos dos livros;
 - Incluir o restante das perguntas do quiz;
@@ -1685,10 +1688,12 @@ class Quiz extends Phaser.Scene {
 - Implementar elementos que visam mais diversidade.
 
   
-## 4.4. Desenvolvimento final do MVP (sprint 4)
+## 4.4. Desenvolvimento final do MVP
 
 *Descreva e ilustre aqui o desenvolvimento da versão final do jogo, explicando brevemente o que foi entregue em termos de MVP. Utilize prints de tela para ilustrar. Indique as eventuais dificuldades e planos futuros.*
-### Etapa 1 do desenvolvimento - Case dinâmico
+
+**Etapa 1 do desenvolvimento - Case dinâmico**
+
 &nbsp;&nbsp;&nbsp;&nbsp; Nessa fase de desenvolvimento do jogo, precisavámos que os casos fossem importados de forma dinâmica e não mais fixo nos textos, isso foi necessário para começar a adicionar rotatividade no caso. A forma que foi encontrada para fazer isso foi através de arquivos JSON (Javascript Object Notation). A formatação de dados no JSON é a seguinte:
 ````json
 [
@@ -1749,8 +1754,9 @@ create(){
     }
 }
 ````
-### Etapa 2 do desenvolvimento - Movimentação dos NPC's
-Para a movimentação dos NPC's uma nova classe chamada `NPC` foi criada. Essa classe no construtor recebe três parâmtros: o GameObject da Sprite, a cena atual que a sprite está inserida e a chave da sprite para a animação.
+**Etapa 2 do desenvolvimento - Movimentação dos NPC's**
+
+&nbsp;&nbsp;&nbsp;&nbsp;Para a movimentação dos NPC's uma nova classe chamada `NPC` foi criada. Essa classe no construtor recebe três parâmtros: o GameObject da Sprite, a cena atual que a sprite está inserida e a chave da sprite para a animação.
 ````js
 constructor(aluno, scene, keySprite) {
     this.aluno = aluno; // Recebe o aluno no construtor
@@ -1768,7 +1774,7 @@ constructor(aluno, scene, keySprite) {
     })
 }
 ````
-O método `update()` de cada NPC's é chamado no update da função principal, sendo responsável por duas responsabilidades sendo, fazer os NPC's andarem aleatoriamente e rodar a animação dos NPC's
+&nbsp;&nbsp;&nbsp;&nbsp;O método `update()` de cada NPC's é chamado no update da função principal, sendo responsável por duas responsabilidades sendo, fazer os NPC's andarem aleatoriamente e rodar a animação dos NPC's
 ````js
 update(){
     // Adiciona a velocidade ao aluno
@@ -1792,7 +1798,7 @@ update(){
     }
 }
 ````
-Primeiro ele gera uma direção entre 0 e 360 graus, depois seta uma velocidade aleatória. E se ele estiver para esquerda ou direita, roda a animação espelhando ou não a sprite.
+&nbsp;&nbsp;&nbsp;&nbsp;Primeiro ele gera uma direção entre 0 e 360 graus, depois seta uma velocidade aleatória. E se ele estiver para esquerda ou direita, roda a animação espelhando ou não a sprite.
 O último método da classe é o `setCollisionBetweenItens()`, esse método foi criado para evitar muita repetição de código, então através do operador 'spread' do javascript, ele recebe todos os parâmetros e organiza em um array, um loop é criado para percorrer esse array e coloca colisão entre o NPC e todos os objetos com colisão do mapa.
 ````js
 setCollisionBetweenItens(...phaserPhysics){
@@ -1800,7 +1806,7 @@ setCollisionBetweenItens(...phaserPhysics){
     for (let i = 0; i < phaserPhysics.length; i++) this.scene.physics.add.collider(this.aluno, phaserPhysics[i])
 }
 ````
-Instânciando a classe e colocando colisão:
+&nbsp;&nbsp;&nbsp;&nbsp;Instânciando a classe e colocando colisão:
 ````js
 create()
 //... toda lógica
