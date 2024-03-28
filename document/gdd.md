@@ -445,7 +445,7 @@ Fizz
 
 <sub>Figura 9 - Visão geral do Diagrama de Cenas</sub>
 
-<img src="./other/diagrama_cenas.png" width="80%">
+<img src="./other/visaodiagrama.png" width=800>
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
@@ -457,7 +457,7 @@ Fizz
 
 <sub>Figura 10 - Menu do Jogo</sub>
 
-<img src="./other/menu.png" width="80%">
+<img src="./other/menuGFcerto.png" width=800>
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
@@ -479,9 +479,9 @@ Fizz
 
 <div align="center">
 
-<sub>Figura 12 - Triagem</sub>
+<sub>Figura 12 - Encontro com Dra. Tina</sub>
 
-<img src="./other/triagem.png" width="80%">
+<img src="./other/tinaGF.png" width=800>
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
@@ -491,9 +491,9 @@ Fizz
 
 <div align="center">
 
-<sub>Figura 13 - Biblioteca</sub>
+<sub>Figura 13 - Case</sub>
 
-<img src="./other/biblioteca.png" width="80%">
+<img src="./other/casecertoGF.png" width=800>
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
@@ -528,9 +528,9 @@ Fizz
 
 <div align="center">
 
-<sub>Figura 16 - Caminho a Biblioteca</sub>
+<sub>Figura 16 - Conteúdo do livro</sub>
 
-<img src="./other/bib_7.png" width="80%">
+<img src="./other/livrocertoGF.png" width=800>
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
@@ -540,9 +540,9 @@ Fizz
 
 <div align="center">
 
-<sub>Figura 17 - Farmácia Bloqueada</sub>
+<sub>Figura 17 - Tenda de Quiz</sub>
 
-<img src="./other/farm_block.png" width="80%">
+<img src="./other/tendaquizGF.png" width=800>
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
@@ -552,9 +552,9 @@ Fizz
 
 <div align="center">
 
-<sub>Figura 17 - Farmácia Bloqueada</sub>
+<sub>Figura 17 - Quiz</sub>
 
-<img src="./other/farm_block.png" width="80%">
+<img src="./other/quizcertoGF.png" width=800>
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
