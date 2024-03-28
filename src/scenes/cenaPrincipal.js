@@ -90,8 +90,13 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     this.load.image('botaoCase_baixo', 'assets/botaoCase_baixo.png');
     this.load.image('botaoCase_alto', 'assets/botaoCase_alto.png');
     this.load.image('botaoCheck', 'assets/checkBotao.png');
+    this.load.image('bandeiraPrevencao', 'assets/bandeiraoPrevencao.png');
+    this.load.image('posteInteliDireita', 'assets/poste_inteli_direita.png');
+    this.load.image('posteInteliEsquerda', 'assets/poste_inteli_esquerda.png');
+    this.load.image('posteUspDireita', 'assets/poste_usp_direita.png');
+    this.load.image('posteUspEsquerda', 'assets/poste_usp_esquerda.png');
     this.load.spritesheet('npc01', 'assets/spritesheets/NPC01.png', {
-      frameWidth: 32,
+      frameWidth: 32, 
       frameHeight: 32
     });
     this.load.spritesheet('npc02', 'assets/spritesheets/NPC02.png', {
@@ -227,6 +232,11 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
 
     this.tina = this.physics.add.sprite(560, 400, 'tina').setOffset(8, 12).setCircle(8).setScale(2).refreshBody().setImmovable(); // Adiciona o sprite da Tina
     
+    this.posteInteliDireita = this.add.image(470, 700, 'posteInteliDireita');
+    this.posteInteliEsquerda = this.add.image(650, 700, 'posteInteliEsquerda');
+    this.posteUspDireita = this.add.image(330, 490, 'posteUspDireita');
+    this.posteUspEsquerda = this.add.image(790, 490, 'posteUspEsquerda');
+
     // criando a camada da cerca
     this.cerca = this.map.createLayer("Cerca", [this.tileset6, this.tileset7, this.tileset11, this.tileset12, this.tileset13, this.tileset14]);
 
@@ -243,17 +253,16 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
       fill: '#000000'
     }).setVisible(false); // Adiciona o texto do tempo na tela do jogo
     
-
-
+    
     // Cria circulo de colisao da fonte no mapa
     this.circuloFonte = this.add.circle(560, 570, 70, 0xffffff, 0); //Adiciona círculo sob a fonte
     this.physics.add.existing(this.circuloFonte); //Adiciona física ao círculo adicionado
     this.circuloFonte.body.setCircle(70).setImmovable(); //Define a hitbox do objeto criado como um círculo imóvel
     this.onibus = this.physics.add.image(80, 1000, "onibus").setBodySize(150, 70).setOffset(32, 70).refreshBody();
-
-
-
-
+    
+    
+    
+    
     // Esse trecho do código cria todas as colisões do jogo
     this.physics.add.collider(this.jogador, this.worldBounds);
     this.fonte.setCollisionByProperty({
@@ -307,9 +316,9 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
         // pausa a física do jogo enquanto a cena livros estiver exposta
         this.physics.pause()
       }
-
+      
     });
-
+    
     this.physics.add.collider(this.jogador, this.tendaQuiz, () => {
       console.log("Colidiu com a tenda do quiz") //Adiciona colisão entre o jogador e a tenda
       if (this.objetoCaso.status === true){
@@ -320,28 +329,25 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
         this.events.emit('abrirQuiz'); // Emite o evento para abrir o quiz
       }
     });
-
-
-
-
-
-
+    
+    
+    
     //Configuração de animação de câmera ao iniciar o jogo
     this.physics.pause()
     // Move a câmera da faculdade para o personagem
     this.cameras.main.centerOn(550, -250);
-
+    
     const dialogoCompleto = () => {
       this.dialogBox.off('pointerdown', dialogoCompleto)
       this.atualDialogoIndice++
       console.log(this.atualDialogoIndice, this.dialogo.length)
-      if (this.atualDialogoIndice === this.dialogo.length){
+      if (this.atualDialogoIndice === 1){
         this.dialogBox.destroy();
         this.dialogText.destroy();
         this.botaoCheck.destroy();
         this.cameras.main.setBounds(0, 0, 1120, 1120);
         this.cameras.main.pan(50, 1120, 2000);
-
+        
         this.stateMachine.transitionTo('cameraPanOnibus');
         return;
       }
@@ -349,14 +355,14 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     }
     this.cameras.main.pan(550, 470, 5000)
     this.cameras.main.on('camerapancomplete', () => {
-        if (this.stateMachine.currentState() === 'cameraPanParaDialogo') {
+      if (this.stateMachine.currentState() === 'cameraPanParaDialogo') {
         this.botaoCheck.setVisible(true);
         this.dialogBox.setVisible(true);
         this.dialogText = new TypeWritter(this, 420, 353, 'iosevka', this.dialogo[this.atualDialogoIndice], 15, 20, () => {
           this.dialogBox.on('pointerdown', dialogoCompleto)
         }).setMaxWidth(380).setScrollFactor(0);
       }
-
+      
       else if (this.stateMachine.currentState() === 'cameraPanOnibus'){
         this.physics.resume();
         this.cameras.main.startFollow(this.onibus, true);
@@ -400,7 +406,7 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
                 this.timer.remove()
                 this.stateMachine.transitionTo('prontoParaJogar');
               }
-
+              
             }
           },
           loop: true
@@ -417,17 +423,16 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     });
 
     this.cameras.main.setBounds(0, -400, 1120, 1120);
-    this.cameras.main.setZoom(2.5);
-
-
+    this.cameras.main.setZoom(2.5);   
+    
     // Inicializa as variáveis para movimentação do personagem
     this.keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A);
     this.keyW = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W); // O código de cada tecla e o modo pelo qual devemos "chamá-la"
     this.keyS = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S); // encontram-se na linha 115000 do arquivo "phaser.js"
     this.keyD = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D);
     this.cursors = this.input.keyboard.createCursorKeys(); // Adiciona as setas do teclado
-
-
+    
+    
     //Cria o joystick na cena do principal
     this.joystick = this.plugins.get("rexvirtualjoystickplugin").add(
       this, {
@@ -438,7 +443,7 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
         thumb: this.add.circle(0, 0, 15, 0xcccccc),
         minForce: 2,
       }
-    );
+      );
     this.joystick.setScrollFactor(0); // Faz com que o joystick não se mova com a câmera
     this.joystick.setVisible(false); // Esconde o joystick
 
