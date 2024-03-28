@@ -38,7 +38,7 @@ class CenaCases extends Phaser.Scene {
         this.botaoX = this.add.sprite(this.case1.x + 210, this.case1.y - 275, 'botao-fechar').setInteractive().setScale(0.25).setVisible(false).setScrollFactor(0); // Adiciona a imagem do botao, quando ocorre esse overlap
 
         // Adiciona efeito sonoro do botão iniciar
-        this.efeitoSonoroBotaoX = this.sound.add('efeitoSonoroBotaoX');
+        this.efeitoSonoroBotaoX = this.sound.add('efeitoSonoroBotaoX',{volume: 0.5});
 
         this.botaoX.on("pointerover", () => {
             // Evento de passar o mouse sobre o botaoJogar

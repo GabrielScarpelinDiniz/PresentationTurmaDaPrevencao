@@ -28,7 +28,7 @@ class MenuPrincipal extends Phaser.Scene {
     this.botaoJogar = this.add.sprite(640, 620, "botaoJogar").setInteractive().setScale(1)
 
     // Adiciona efeito sonoro do botão iniciar
-    this.efeitoSonoroBotaoMenu = this.sound.add('efeitoSonoroBotaoMenu');
+    this.efeitoSonoroBotaoMenu = this.sound.add('efeitoSonoroBotaoMenu',{volume: 0.5});
 
     // Cria a animação de botaoJogar
     this.anims.create({
