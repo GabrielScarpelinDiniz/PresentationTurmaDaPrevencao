@@ -175,8 +175,8 @@
 3|Definir os diferentes tipos de queimadura;
 4|Dizer por que uma queimadura profunda não dói;
 5|O jogo deve ser compatível com mobile;
-6|A paleta de cores deve ser da FMUSP e do INTELI;
-7|Tempo limitado apenas com a intenção de capacitação, sendo uma experiência única, de aproximadamente 15 minutos;
+6|A paleta de cores deve ser vibrante e atraente para o público do jovem;
+7|Tempo limitado apenas com a intenção de capacitação, sendo uma experiência única de aprendizado;
 8|Jogo tem de atrair o interesse dos alunos;
 9|Deve ter recompensas, pontuação, recordes;
 10|Pode ser expandido para fora das escolas;
