@@ -374,43 +374,43 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;A Figura 6: Concept Art representando o Mapa do Jogo.
+&nbsp;&nbsp;&nbsp;&nbsp;Figura 6: O mapa principal do jogo retrata o pátio da Faculdade de Medicina da Universidade de São Paulo. O espaço é arborizado, com duas tendas em cada extremidade e uma fonte central. Um portão separa o pátio da rua adjacente.
 
 <div align="center">
 
 <sub>Figura 7 - Concept Art do Case</sub>
 
-<img src="./other/ConceptCase.jpg" width="40%">
+<img src="./other/ConceptCase.jpg" width="50%">
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;A Figura 7: Concept Art do case.
+&nbsp;&nbsp;&nbsp;&nbsp;Figura 7: Na parte superior do case há um quadro e uma foto há serem preenchidos com o nome e imagem do paciente respectivo. Logo abaixo, há uma descrição de como ocorreu o acidente de queimadura seguido das lesões sofridas e a classificação do machucado.
 
 <div align="center">
 
-<sub>Figura 8 - Concept Art da Página de Livros</sub>
+<sub>Figura 8 - Concept Art de Livros</sub>
 
-<img src="./other/ConceptLivros.jpg" width="40%">
+<img src="./other/ConceptLivros.jpg" width="50%">
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;Figura 8: Concept Art da Página do Livro.
+&nbsp;&nbsp;&nbsp;&nbsp;Figura 8: Os livros são dispostos em ordem crescente quanto ao seu grau de classificação começando pela esquerda. Cada um indica na capa a qual grau se refere e contém uma cor única.
 
 <div align="center">
 
 <sub>Figura 9 - Concept Art do Quiz</sub>
 
-<img src="./other/ConceptQuiz.jpg" width="40%">
+<img src="./other/ConceptQuiz.jpg" width="50%">
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;Figura 9: Concept Art da Página de Quiz.
+&nbsp;&nbsp;&nbsp;&nbsp;Figura 9: O quiz é um quadrado que contém, começando pela parte superior, três figuras em forma de retângulos com um símbolo de interrogação no centro. Em seguida, há uma área de pergunta a ser desenvolvida e duas caixas com opções de alternativa.
 
 ### 3.3.5. Trilha sonora (sprint 3)
 
