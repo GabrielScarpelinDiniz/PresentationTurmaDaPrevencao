@@ -26,8 +26,8 @@ class Quiz extends Phaser.Scene {
         this.add.image(bgWhite.x, bgWhite.y - 130, 'simbolo').setScale(0.5);
 
         // Adiciona efeito sonoro do botão iniciar
-        this.efeitoSonoroAcertar = this.sound.add('efeitoSonoroAcertar');
-        this.efeitoSonoroErrar = this.sound.add('efeitoSonoroErrar');
+        this.efeitoSonoroAcertar = this.sound.add('efeitoSonoroAcertar',{volume: 0.5});
+        this.efeitoSonoroErrar = this.sound.add('efeitoSonoroErrar',{volume: 0.5});
         
         // Adicionando a pergunta à cena
         this.primeiraCena.events.on('abrirQuiz', () => {
@@ -128,14 +128,14 @@ class Quiz extends Phaser.Scene {
             this.efeitoSonoroAcertar.play();
             this.cenaHUD.atualizarPontuacao(10);
             // Define a mensagem de explicação para resposta correta
-            this.explicacaoText.setText('Parabéns! Usar luvas de proteção térmica de alta qualidade evita acidentes graves na cozinha');
+            this.explicacaoText.setText('Parabéns! Você acertou');
             // Define a cor do texto como verde
             this.explicacaoText.setColor('#008000');
         } else {
             this.efeitoSonoroErrar.play();
             this.cenaHUD.atualizarTempo(10);
             // Define a mensagem de explicação para resposta incorreta
-            this.explicacaoText.setText('Ops! Essa resposta está incorreta. Estar distraído enquanto cozinha pode gerar acidentes graves.');
+            this.explicacaoText.setText('Ops! Essa resposta está incorreta.');
             // Define a cor do texto como vermelho
             this.explicacaoText.setColor('#FF0000');
         }

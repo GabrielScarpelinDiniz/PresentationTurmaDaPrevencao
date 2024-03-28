@@ -46,6 +46,7 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     //Carrega os assets do jogo
     this.load.audio('musicaIntroducao', 'assets/sounds/IntroMusic.wav') // Música de introdução
     this.load.audio('musicaJogo', 'assets/sounds/gameMusicLoopWithEndGame.mp3') // Música de jogo quando o cronometro está ativo
+    this.load.audio('efeitoSonoroOnibus', 'assets/sounds/efeitoSonoroOnibus.mp3') // SFX do botão iniciar
     //Carrega a biblioteca do joystick
     this.load.plugin(
       "rexvirtualjoystickplugin",
@@ -156,14 +157,19 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
       status: false
     };
 
+    // Adiciona efeito sonoro do ônibus
+    this.efeitoSonoroOnibus = this.sound.add('efeitoSonoroOnibus', {
+      loop: true,
+      volume: 0.5});
 
     // Adiciona a música de introdução
     this.musicaIntroducao = this.sound.add('musicaIntroducao', {
-      loop: true
+      loop: true,
+      volume: 0.5
     }); // Adiciona a música de introdução
     this.musicaJogo = this.sound.add('musicaJogo', {
       loop: false,
-      volume: 0.1
+      volume: 0.3
     }); // Adiciona a música de jogo
     this.map = this.make.tilemap({
       key: "mapa",
@@ -355,8 +361,10 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
         this.physics.resume();
         this.cameras.main.startFollow(this.onibus, true);
         this.onibus.setVelocityX(100);
+        this.efeitoSonoroOnibus.play();
       }
       else if (this.stateMachine.currentState() === 'entradaDosPersonagens') {
+        this.efeitoSonoroOnibus.stop();
         this.cerca.setVisible(false);
         this.npcControll = 1;
         this.timer = this.time.addEvent({
