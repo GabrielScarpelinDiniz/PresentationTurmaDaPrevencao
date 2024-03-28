@@ -160,7 +160,7 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     // Adiciona efeito sonoro do ônibus
     this.efeitoSonoroOnibus = this.sound.add('efeitoSonoroOnibus', {
       loop: true,
-      volume: 0.5});
+      volume: 0.2});
 
     // Adiciona a música de introdução
     this.musicaIntroducao = this.sound.add('musicaIntroducao', {
