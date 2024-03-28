@@ -53,25 +53,7 @@ class MenuPrincipal extends Phaser.Scene {
 
 
     // Lógica para destruir nuvens caso ultrapassem os limites de tela
-    if (this.nuvem1.x < 100) {
-      this.nuvem1.destroy();
-    }
-
-    if (this.nuvem2.x > 1200) {
-      this.nuvem2.destroy();
-    }
-
-    if (this.nuvem3.x > 1200) {
-      this.nuvem3.destroy();
-    }
-
-    if (this.nuvem4.x < 100) {
-      this.nuvem4.destroy();
-    }
     
-    if (this.nuvem5.x > 1200) {
-      this.nuvem5.destroy();
-    }
 
     // Ajuste visual da imagem do mouse para fornecer feedback que o botão jogar é interativo
     this.botaoJogar.on("pointerover", () => {
@@ -105,7 +87,30 @@ class MenuPrincipal extends Phaser.Scene {
 
   }
 
-  update() {}
+  update() {
+    if (this.nuvem1.x < -400) {
+      this.nuvem1.destroy();
+    }
+
+    if (this.nuvem2.x > 1600) {
+      this.nuvem2.destroy();
+    }
+
+    if (this.nuvem3.x > 1600) {
+      this.nuvem3.destroy();
+      this.nuvem3 = this.physics.add.image(-100, 465, "nuvem").setScale(0.3).setVelocityX(85);
+    }
+
+    if (this.nuvem4.x < -400) {
+      this.nuvem4.destroy();
+      this.nuvem4 = this.physics.add.image(1360, 170, "nuvem").setScale(0.4).setFlip(true).setVelocityX(-90);
+    }
+    
+    if (this.nuvem5.x > 1600) {
+      this.nuvem5.destroy();
+      this.nuvem5 = this.physics.add.image(-100, 320, "nuvem").setScale(0.2).setFlip(true).setVelocityX(65);
+    }
+  }
   
   openFullScreen() {
     const page = document.documentElement //Pega o documento inteiro
