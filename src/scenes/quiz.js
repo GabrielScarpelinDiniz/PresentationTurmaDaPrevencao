@@ -23,7 +23,8 @@ class Quiz extends Phaser.Scene {
         const bgWhite = this.add.rectangle(gameDimensions.width / 2, gameDimensions.height / 2, 700, 500, 0xffffff).setStrokeStyle(2, 0x000000);
         
         // Centralizando a imagem do símbolo
-        this.add.image(bgWhite.x, bgWhite.y - 130, 'simbolo').setScale(0.5);
+        this.simboloQuiz = this.add.image(bgWhite.x, bgWhite.y - 130, 'simbolo').setScale(0.5);
+        this.fundoFeedback = this.add.rectangle (bgWhite.x, bgWhite.y - 130, 500, 130, 0xfddfe6).setVisible(false).setAlpha(0.9)
 
         // Adiciona efeito sonoro do botão iniciar
         this.efeitoSonoroAcertar = this.sound.add('efeitoSonoroAcertar',{volume: 0.5});
@@ -92,17 +93,25 @@ class Quiz extends Phaser.Scene {
             });
     
 
-
             // Adicionando a explicação à cena e configurações estéticas
-            this.explicacaoText = this.add.text(bgWhite.x, bgWhite.y + 200, '', {
-                fontSize: '16px',
-                color: '#000',
+            this.textoExplicacaoAlternativaErrada = this.add.text(bgWhite.x, bgWhite.y - 130, caso.feedbackRespostaErrada, {
+                fontSize: '22px',
+                color: '#ff0000',
                 fontFamily: 'Arial',
                 align: 'center',
                 wordWrap: {
                     width: 500
                 }
-            }).setOrigin(0.5);
+            }).setOrigin(0.5).setVisible(false);
+            this.textoExplicacaoAlternativaCerta = this.add.text(bgWhite.x, bgWhite.y - 130, caso.feedbackRespostaCerta, {
+                fontSize: '22px',
+                color: '#008000',
+                fontFamily: 'Arial',
+                align: 'center',
+                wordWrap: {
+                    width: 500
+                }
+            }).setOrigin(0.5).setVisible(false);
         })
 
 
@@ -124,20 +133,21 @@ class Quiz extends Phaser.Scene {
 
     verificarResposta(resposta, alternativaCorreta) {
         // Verifica se a resposta está correta
+        this.simboloQuiz.setVisible(false)
         if (resposta === alternativaCorreta) {
             this.efeitoSonoroAcertar.play();
             this.cenaHUD.atualizarPontuacao(10);
             // Define a mensagem de explicação para resposta correta
-            this.explicacaoText.setText('Parabéns! Você acertou');
-            // Define a cor do texto como verde
-            this.explicacaoText.setColor('#008000');
+            this.textoExplicacaoAlternativaCerta.setVisible(true);
+            this.fundoFeedback.setVisible(true);
+            this.fundoFeedback.setStrokeStyle(2, 0x008000).setVisible(true);
         } else {
             this.efeitoSonoroErrar.play();
             this.cenaHUD.atualizarTempo(10);
             // Define a mensagem de explicação para resposta incorreta
-            this.explicacaoText.setText('Ops! Essa resposta está incorreta.');
-            // Define a cor do texto como vermelho
-            this.explicacaoText.setColor('#FF0000');
+            this.textoExplicacaoAlternativaErrada.setVisible(true);
+            this.fundoFeedback.setVisible(true);
+            this.fundoFeedback.setStrokeStyle(2, 0xff0000).setVisible(true);
         }
     }
     

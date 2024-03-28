@@ -1,22 +1,5 @@
 [
     {
-        "nome": "RONALD MEQUI DONALD",
-        "fotoKey": "ronald",
-        "desc": "O cozinheiro de uma hamburgueria, durante a preparação de uma receita, teve contato com a frigideira quente , queimando a palma da mão.",
-        "colored": ["cozinheiro", "contato", "quente"],
-        "sintomas": "Apresenta vermelhidão na região, inchaço e dor local suportável.",
-        "classificacao": "PRIMEIRO GRAU",
-        "classificacaoCor": "0x21FF21",
-        "quiz": {
-            "pergunta": "O que deve ser feito para evitar uma queimadura na pele ao encostar em uma superfície quente na cozinha?",
-            "alternativas": [
-                "Cozinhar enquanto conversa distraidamente com alguém",
-                "Usar luvas de proteção térmica de alta qualidade"
-            ],
-            "alternativaCorreta": 1
-        }
-    },
-    {
         "nome": "APOLO SOLEMAR",
         "fotoKey": "apolo",
         "desc": "Sofreu queimaduras solares depois de passar muito tempo exposto ao sol sem proteção adequada.",
@@ -31,43 +14,10 @@
                 "Passar creme hidratante na pele antes de se expor ao Sol"
             ],
             "alternativaCorreta": 0
-        }
+        },
+        "feedbackRespostaErrada": "Ops! Essa resposta está incorreta. Expor-se ao sol durante momentos quentes do dia sem proteção adequada pode resultar em queimaduras solares.",
+        "feedbackRespostaCerta": "Parabéns! Evitar exposição solar durante momentos quentes do dia é uma medida importante para prevenir queimaduras solares."
     },
-    {
-        "nome": "SOFIA SOLVENTE",
-        "fotoKey": "sofia",
-        "desc": "Uma estudante de química estava realizando uma experiência no laboratório, quando acidentalmente derramou ácido em sua mão.",
-        "colored": ["estudante", "química", "laboratório", "ácido"],
-        "sintomas": "Apresenta vermelhidão intensa na região afetada, sensação de queimação intensa e formação de bolhas.",
-        "classificacao": "SEGUNDO GRAU",
-        "classificacaoCor": "0xFFA500",
-        "quiz": {
-            "pergunta": "Qual a conduta inicial adequada ao derramar ácido na pele?",
-            "alternativas": [
-                "Lavar a área afetada imediatamente com água corrente",
-                "Deixar o ácido secar para depois limpar com um pano úmido"
-            ],
-            "alternativaCorreta": 0
-        }
-    },
-    {
-        "nome": "PENELOPE MONTINA",
-        "fotoKey": "penelope",
-        "desc": "A criança estava brincando na cozinha enquanto sua mãe preparava o jantar. Distraída, ela esbarrou em um cabo de panela que estava voltado para fora do fogão e derramou uma panela de água fervente sobre seu braço.",
-        "colored": ["cozinha", "cabo", "de", "panela", "fogão", "água", "fervente"],
-        "sintomas": "Apresentam bolhas, pele avermelhada, manchada ou com coloração variável, dor e inchaço.",
-        "classificacao": "SEGUNDO GRAU",
-        "classificacaoCor": "0xFFA500",
-        "quiz": {
-            "pergunta": "Qual medida a ser tomada para evitar que outro caso semelhante aconteça?",
-            "alternativas": [
-                "Fazer as crianças utilizarem luvas de proteção para manusear objetos quentes",
-                "Não deixar cabos de panelas quentes virados para fora do fogão"
-            ],
-            "alternativaCorreta": 1
-        }
-    },
-
     {
         "nome": "CARLO FREDERICO",
         "fotoKey": "carlo",
@@ -83,41 +33,29 @@
                 "Evitar tocar na área queimada"
             ],
             "alternativaCorreta": 0
-        }
+        },
+        "feedbackRespostaErrada": "Ops! Essa resposta está incorreta. Em casos de queimaduras de 3º Grau, é essencial não mover a vítima e chamar imediatamente uma equipe médica.",
+        "feedbackRespostaCerta": "Parabéns! Em casos de queimaduras de 3º Grau, é essencial não mover a vítima e chamar imediatamente uma equipe médica."
     },
     {
-        "nome": "LEONARDO MESSI",
-        "fotoKey": "leonardo",
-        "desc": "Um paciente saiu do jogo de futebol com dor no joelho. Ao chegar em casa, colocou um plástico com gelo na área afetada por mais de 40 minutos.",
-        "colored": ["gelo"],
-        "sintomas": "Vermelhidão e irritação na área atingida",
+        "nome": "FERNANDA OSCAR",
+        "fotoKey": "fernanda",
+        "desc": "Enquanto trocava uma lâmpada em casa, acidentalmente encostou nos fios elétricos expostos.",
+        "colored": ["lâmpada", "encostou", "elétricos"],
+        "sintomas": "Vermelhidão e uma sensação de formigamento na área do contato",
         "classificacao": "PRIMEIRO GRAU",
         "classificacaoCor": "0x21FF21",
         "quiz": {
-            "pergunta": "Como evitar outro caso como o de Leonardo?",
+            "pergunta": "O que NÃO é recomendado fazer após uma queimadura elétrica?",
             "alternativas": [
-                "Lavar o plástico antes de aplicar em queimaduras",
-                "Evitar a exposição da pele a variações de temperaturas muito grandes"
+                "Aplicar gelo sobre a queimadura",
+                "Lavar a área afetada com água corrente"
             ],
-            "alternativaCorreta": 1
-        }
-    },
-    {
-        "nome": "HENRIQUE CALABRESO",
-        "fotoKey": "henrique",
-        "desc": "Jogou álcool na brasa de churrasco, causando uma explosão. Ele foi atingido pelo calor intenso e sentiu queimação no rosto e braços.",
-        "colored": ["gelo"],
-        "sintomas": "Dor intensa, bolhas cheias de líquido claro na pele, vermelhidão profunda",
-        "classificacao": "SEGUNDO GRAU",
-        "classificacaoCor": "0xFFA500",
-        "quiz": {
-            "pergunta": "Quais os principais sintomas de uma queimadura de 2º Grau?",
-            "alternativas": [
-                "Falta de sensibilidade na área afetada e dificuldade de movimentar os músculos",
-                "Pele vermelha e formação de bolhas com líquido claro"
-            ],
-            "alternativaCorreta": 1
-        }
+            "alternativaCorreta": 0
+        },
+        "feedbackRespostaErrada": "Ops! Essa resposta está incorreta. Aplicar gelo sobre uma queimadura elétrica pode piorar o dano tecidual.",
+        "feedbackRespostaCerta": "Parabéns! Aplicar gelo sobre uma queimadura elétrica pode piorar o dano tecidual."
+    
     },
     {
         "nome": "GRAÇA SILVA",
@@ -134,7 +72,50 @@
                 "ler cuidadosamente as instruções sobre o uso seguro dos produtos que estão sendo manipulados"
             ],
             "alternativaCorreta": 1
-        }
+        },
+        "feedbackRespostaErrada": "Ops! Essa resposta está incorreta. Embora o uso de luvas de proteção seja importante, é essencial ler cuidadosamente as instruções sobre o uso seguro dos produtos para evitar acidentes como o de Graça Silva.",
+        "feedbackRespostaCerta": "Parabéns! Ler cuidadosamente as instruções sobre o uso seguro dos produtos que estão sendo manipulados é uma medida importante para evitar acidentes como o de Graça Silva."
+    
+    },
+    {
+        "nome": "HENRIQUE CALABRESO",
+        "fotoKey": "henrique",
+        "desc": "Jogou álcool na brasa de churrasco, causando uma explosão. Ele foi atingido pelo calor intenso e sentiu queimação no rosto e braços.",
+        "colored": ["gelo"],
+        "sintomas": "Dor intensa, bolhas cheias de líquido claro na pele, vermelhidão profunda",
+        "classificacao": "SEGUNDO GRAU",
+        "classificacaoCor": "0xFFA500",
+        "quiz": {
+            "pergunta": "Quais os principais sintomas de uma queimadura de 2º Grau?",
+            "alternativas": [
+                "Falta de sensibilidade na área afetada e dificuldade de movimentar os músculos",
+                "Pele vermelha e formação de bolhas com líquido claro"
+            ],
+            "alternativaCorreta": 1
+        },
+        "feedbackRespostaErrada": "Ops! Essa resposta está incorreta. Os principais sintomas de uma queimadura de 2º Grau incluem pele vermelha e formação de bolhas com líquido claro.",
+        "feedbackRespostaCerta": "Parabéns! Os principais sintomas de uma queimadura de 2º Grau incluem pele vermelha e formação de bolhas com líquido claro."
+
+    },
+    {
+        "nome": "LEONARDO MESSI",
+        "fotoKey": "leonardo",
+        "desc": "Um paciente saiu do jogo de futebol com dor no joelho. Ao chegar em casa, colocou um plástico com gelo na área afetada por mais de 40 minutos.",
+        "colored": ["gelo"],
+        "sintomas": "Vermelhidão e irritação na área atingida",
+        "classificacao": "PRIMEIRO GRAU",
+        "classificacaoCor": "0x21FF21",
+        "quiz": {
+            "pergunta": "Como evitar outro caso como o de Leonardo?",
+            "alternativas": [
+                "Lavar o plástico antes de aplicar em queimaduras",
+                "Evitar a exposição da pele a variações de temperaturas muito grandes"
+            ],
+            "alternativaCorreta": 1
+        },
+        "feedbackRespostaErrada": "Ops! Essa resposta está incorreta. Para evitar casos semelhantes ao de Leonardo, é importante evitar a exposição da pele a variações de temperaturas muito grandes.",
+        "feedbackRespostaCerta": "Parabéns! Para evitar casos semelhantes ao de Leonardo, é importante evitar a exposição da pele a variações de temperaturas muito grandes."
+    
     },
     {
         "nome": "MARIA ANTONIA",
@@ -151,7 +132,10 @@
                 "Pele carbonizada e ausência de dor"
             ],
             "alternativaCorreta": 0
-        }
+        },
+        "feedbackRespostaErrada": "Ops! Essa resposta está incorreta. Os sintomas sofridos por Maria após o trauma de 2º Grau incluem pele avermelhada e despreendimento de camadas da pele.",
+        "feedbackRespostaCerta": "Parabéns! Os sintomas sofridos por Maria após o trauma de 2º Grau incluem pele avermelhada e despreendimento de camadas da pele."
+  
     },
     {
         "nome": "MONICA CABRAL",
@@ -168,7 +152,10 @@
                 "Acender churrasqueiras apenas em ambientes abertos"
             ],
             "alternativaCorreta": 1
-        }
+        },
+        "feedbackRespostaErrada": "Ops! Essa resposta está incorreta. Para evitar o que aconteceu com Mônica, é importante acender churrasqueiras apenas em ambientes abertos para evitar a intoxicação por monóxido de carbono.",
+        "feedbackRespostaCerta": "Parabéns! É importante acender churrasqueiras apenas em ambientes abertos para evitar a intoxicação por monóxido de carbono."
+ 
     },
     {
         "nome": "PEPITA AIRES",
@@ -185,7 +172,50 @@
                 "Pele sensível ao toque e de coloração avermelhada"
             ],
             "alternativaCorreta": 1
-        }
+        },
+        "feedbackRespostaErrada": "Ops! Essa resposta está incorreta. Os sintomas de uma queimadura elétrica de 1º Grau incluem pele sensível ao toque e de coloração avermelhada.",
+        "feedbackRespostaCerta": "Parabéns! Os sintomas de uma queimadura elétrica de 1º Grau incluem pele sensível ao toque e de coloração avermelhada."
+  
+    },
+    {
+        "nome": "RONALD MEQUI DONALD",
+        "fotoKey": "ronald",
+        "desc": "O cozinheiro de uma hamburgueria, durante a preparação de uma receita, teve contato com a frigideira quente , queimando a palma da mão.",
+        "colored": ["cozinheiro", "contato", "quente"],
+        "sintomas": "Apresenta vermelhidão na região, inchaço e dor local suportável.",
+        "classificacao": "PRIMEIRO GRAU",
+        "classificacaoCor": "0x21FF21",
+        "quiz": {
+            "pergunta": "O que deve ser feito para evitar uma queimadura na pele ao encostar em uma superfície quente na cozinha?",
+            "alternativas": [
+                "Cozinhar enquanto conversa distraidamente com alguém",
+                "Usar luvas de proteção térmica de alta qualidade"
+            ],
+            "alternativaCorreta": 1
+        },
+        "feedbackRespostaErrada": "Ops! Essa resposta está incorreta. Estar distraído enquanto cozinha pode gerar acidentes graves.",
+        "feedbackRespostaCerta": "Parabéns! Usar luvas de proteção térmica de alta qualidade evita acidentes graves na cozinha."
+   
+    },
+    {
+        "nome": "SOFIA SOLVENTE",
+        "fotoKey": "sofia",
+        "desc": "Uma estudante de química estava realizando uma experiência no laboratório, quando acidentalmente derramou ácido em sua mão.",
+        "colored": ["estudante", "química", "laboratório", "ácido"],
+        "sintomas": "Apresenta vermelhidão intensa na região afetada, sensação de queimação intensa e formação de bolhas.",
+        "classificacao": "SEGUNDO GRAU",
+        "classificacaoCor": "0xFFA500",
+        "quiz": {
+            "pergunta": "Qual a conduta inicial adequada ao derramar ácido na pele?",
+            "alternativas": [
+                "Lavar a área afetada imediatamente com água corrente",
+                "Deixar o ácido secar para depois limpar com um pano úmido"
+            ],
+            "alternativaCorreta": 0
+        },
+        "feedbackRespostaErrada": "Ops! Essa resposta está incorreta. A conduta inicial adequada ao derramar ácido na pele é lavar a área afetada imediatamente com água corrente.",
+        "feedbackRespostaCerta": "Parabéns! O ideal realmente é lavar a área afetada imediatamente com água corrente."
+
     },
     {
         "nome": "TONY WATTSON",
@@ -202,23 +232,11 @@
                 "Aplicar substâncias na queimadura para alívio da dor e levá-la ao pronto-socorro imediatamente"
             ],
             "alternativaCorreta": 0
-        }
-    },
-    {
-        "nome": "FERNANDA OSCAR",
-        "fotoKey": "fernanda",
-        "desc": "Enquanto trocava uma lâmpada em casa, acidentalmente encostou nos fios elétricos expostos.",
-        "colored": ["lâmpada", "encostou", "elétricos"],
-        "sintomas": "Vermelhidão e uma sensação de formigamento na área do contato",
-        "classificacao": "PRIMEIRO GRAU",
-        "classificacaoCor": "0x21FF21",
-        "quiz": {
-            "pergunta": "O que não é recomendado fazer após uma queimadura elétrica?",
-            "alternativas": [
-                "Aplicar gelo sobre a queimadura",
-                "Lavar a área afetada com água gelada"
-            ],
-            "alternativaCorreta": 0
-        }
+        },
+        "feedbackRespostaErrada": "Ops! Essa resposta está incorreta, pois não é recomendado aplicar substâncias em nenhum tipo de queimadura sem orientação médica.",
+        "feedbackRespostaCerta": "Parabéns! Após um acidente de terceiro grau, é essencial ligar urgentemente para uma equipe médica realizar os primeiros socorros e conduzí-lo a um hospital."
+ 
     }
 ]
+
+
