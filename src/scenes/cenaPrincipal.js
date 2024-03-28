@@ -4,15 +4,15 @@ class CenaPrincipal extends Phaser.Scene {
   joystickForce = 0;
   atualDialogoIndice = 0;
   dialogo = [
-    `Bom dia alunos e alunas!
+    `Bom dia, alunos e alunas!
 Bem-vindos à Faculdade de Medicina da USP.
-Eu sou a Dra. Tina e serei a instrutora de vocês.
+Eu sou a dr.ª Tina e serei a instrutora de vocês.
 Hoje é um dia muito especial... O Dia da Prevenção!!
 Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos acerca do tema...... QUEIMADURAS!`, 
   //NEW DIALOGUE
-  "A dinâmica funciona em ciclos, e cada ciclo vai ter 3 passos. O primeiro passo é ler o case que irei entregar à vocês, o segundo passo é estudar o case na tenda de livros e, por último, vocês irão realizar um quiz. A cada resposta certa vocês ganham pontos, mas cuidado, se errar a pergunta vocês perderão 10 segundos para completar os ciclos. O objetivo da brincadeira é realizar o maior número de ciclos do jogo no menor tempo.", 
+  "A dinâmica funciona em ciclos e cada um deles terá 3 passos. O primeiro passo, é ler o case que irei entregar à vocês; o segundo passo é estudar o case na tenda de livros e, por último, vocês irão responder um quiz. A cada resposta certa, vocês ganham pontos, mas cuidado, se errar a pergunta vocês perderão 10 segundos e terão menos pontos para completar os ciclos. O objetivo da brincadeira é realizar o maior número de ciclos do jogo no tempo determinado.", 
   //NEW DIALOGUE
-  "Uma dica? Leiam com bastante atenção os cases e os livros, as informações serão essenciais para vocês ganharem mais pontos! Agora vamos começar! E mais importante: Divirtam-se!"]
+  "Querem uma dica? Leiam com bastante atenção os cases e os livros, as informações deles serão essenciais para vocês ganharem mais pontos! Agora vamos começar! E mais importante: Divirtam-se!"]
   constructor() {
     super({
       key: "cenaPrincipal",
