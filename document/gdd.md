@@ -33,17 +33,17 @@
 <br>
 
 
-# <a name="c1"></a>1. Introdução (sprints 1 e 4)
+# <a name="c1"></a>1. Introdução
 
 ## 1.1. Escopo do Projeto
 
-### 1.1.1. Contexto da indústria (sprints 1 e 4)
+### 1.1.1. Contexto da indústria
 
 &nbsp;&nbsp;&nbsp;&nbsp;A Faculdade de Medicina da USP é uma referência no campo da educação superior, destacando-se no ensino de Medicina no Brasil e na realização de pesquisas de ponta, além de campanhas de conscientização para a população. Competindo com outras instituições renomadas, como UNICAMP, PUC-SP e UNIFESP, a FMUSP se destaca por suas iniciativas inovadoras e seu impacto notável no mercado regional e nacional, especialmente através de suas campanhas e atividades clínicas de alto padrão.
 
 &nbsp;&nbsp;&nbsp;&nbsp;Internacionalmente reconhecida, a FMUSP continua a liderar o caminho em pesquisas de vanguarda, abrangendo áreas como cirurgia com células-tronco, desenvolvimento de pele artificial e outras tendências futuras na medicina.
 
-### 1.1.2. Análise SWOT (sprints 1 e 4)
+### 1.1.2. Análise SWOT
 
 &nbsp;&nbsp;&nbsp;&nbsp;A matriz SWOT é uma ferramenta de planejamento estratégico que ajuda as empresas na tomada de decisão. Esta metodologia divide-se em aspectos internos e externos, compreendendo forças (*strengths*) e fraquezas (*weaknesses*) para o ambiente interno, e oportunidades (*opportunities*) e ameaças (*threats*) para o externo, que têm por objetivo identificar os principais pontos de influência que afetam a empresa para uma clareza melhor de quais são os fatores que estão sob seu controle (internos) e os que não estão (externos).
 
@@ -51,7 +51,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;Por outro lado, os fatores internos referem-se à esfera sob controle direto da empresa, ou seja, ela pode, no caso de fraquezas, tomar atitudes a fim de saná-los, ou potencializá-los, no caso de forças. Neste contexto, as forças correspondem a elementos que conferem vantagens competitivas perante os concorrentes, mas que sejam tão distintiva quanto possível em relação aos competidores para que, deste modo, possam representar um grande diferencial da empresa. Enquanto as fraquezas representam limitações ou desvantagens que fragilizam a corporação, prejudicam a dinâmica do negócio e seu posicionamento estratégico no mercado¹ (FERNANDES, Djair 2012).
 
-&nbsp;&nbsp;&nbsp;&nbsp;Diante desse cenário, a matriz SWOT surge como uma ferramenta poderosíssima para uma parte crucial do posicionamento estratégico, a qual é compreender a interdependência desses componentes, uma vez que alterações em um deles impactam diretamente os demais. A estratégia eficaz, portanto, consiste em focalizar os fatores controláveis para permitir que a empresa alcance seus objetivos estratégicos. Por exemplo, enfrentar as ameaças é mais fácil pela mitigação das fraquezas, ao passo que a exploração mais eficiente das oportunidades é viabilizada pela potencialização das forças. Essa relação intrínseca simplifica a tomada de decisões, proporcionando ideias para a alocação mais produtiva de recursos e a determinação de prioridades.
+&nbsp;&nbsp;&nbsp;&nbsp;Diante desse cenário, a matriz SWOT surge como uma ferramenta poderosíssima para uma parte crucial do posicionamento estratégico, a qual é compreender a interdependência desses componentes, uma vez que alterações em um deles impactam diretamente os demais. A estratégia eficaz, portanto, consiste em focalizar os fatores controláveis para permitir que a empresa alcance seus objetivos estratégicos. Por exemplo, enfrentar as ameaças é mais fácil pela mitigação das fraquezas, ao passo que a exploração mais eficiente das oportunidades é viabilizada pela potencialização das forças. Essa relação intrínseca simplifica a tomada de decisões, proporcionando ideias para a alocação mais produtiva de recursos e a determinação de prioridades. Fizz
 
 <div align="center">
 
@@ -65,7 +65,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;Com a análise SWOT, foi possível observar características importantes, tais como os projetos sociais realizados pela Faculdade de Medicina da USP (FMUSP) e a carência de ferramentas tecnológicas para esses projetos sociais. Associados a esses pontos, destacam-se algumas oportunidades, como o amplo público atendido pela FMUSP e, sobretudo, a crescente digitalização mundial. Nesse contexto, a aplicação gameficada foi desenvolvido com o objetivo de atenuar os pontos fracos, potencializar ainda mais os pontos fortes e aproveitar as oportunidades.
 
-### 1.1.3. Descrição da Solução Desenvolvida (sprints 1 e 4)
+### 1.1.3. Descrição da Solução Desenvolvida
 
 &nbsp;&nbsp;&nbsp;&nbsp;A falta de conscientização sobre prevenção, primeiros socorros e informações inadequadas sobre queimaduras, em especial em populações vulneráveis, influi na alta incidência de queimaduras, que se torna uma das maiores causas de lesões traumáticas no mundo.<br>
 
@@ -82,7 +82,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;O critério de sucesso será a satisfação do jogador durante o processo de conscientização através de um game. Para avaliarmos tal critério, uma pesquisa de satisfação será realizada ao final do game, levando em consideração fatores como diversão, jogabilidade e transmissão de conhecimento.
 
 
-### 1.1.4. Proposta de Valor (sprints 1 e 4)
+### 1.1.4. Proposta de Valor
 
 &nbsp;&nbsp;&nbsp;&nbsp;Um Canvas de Proposta de Valor é basicamente um mapa visual que ajuda a entender melhor o que torna um produto ou serviço valioso para os clientes. Imagine como um guia que organiza informações importantes sobre quem são seus clientes, o que eles precisam, e como seu produto ou serviço resolve seus problemas ou traz benefícios. É como uma caixa de ferramentas que permite às equipes reunirem suas ideias e pensarem de forma criativa sobre como podem oferecer valor aos seus clientes.
 
@@ -105,7 +105,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;Tendo em vista o perfil do cliente analisado através do *value proposition canvas*, ao observarmos suas dores, ganhos e necessidades, desenvolvemos uma proposta de solução totalmente gamificada. Essa proposta visa envolver os jovens, proporcionando-lhes um ambiente divertido que cumpra o principal objetivo do projeto: a conscientização. Destacamos, sobretudo, a necessidade de algo versátil e atrativo para o público-alvo, oferecendo uma experiência única e divertida, a fim de disseminar entre diversas pessoas e conscientizar cada vez mais a população.
 
-### 1.1.5. Matriz de Riscos (sprints 1 e 4)
+### 1.1.5. Matriz de Riscos
 
 &nbsp;&nbsp;&nbsp;&nbsp;A matriz de risco é uma ferramenta amplamente utilizada em diversas indústrias para avaliar e priorizar riscos com base em sua probabilidade e impacto. Normalmente composta por uma tabela que categoriza os riscos em diferentes níveis, geralmente representados por cores ou valores numéricos⁴. A matriz de risco é iterativa por natureza, essa característica decorre da própria dinâmica do risco e da necessidade de reavaliação e refinamento contínuos visando seu aprimoramento. Ela é extremamente eficiente quando há necessidade de priorizar os riscos, sejam eles negativos (as ameaças) ou positivos (as oportunidades), ou seja, é excelente para analisar e visualizar quais riscos merecem mais atenção no momento, auxiliando na criação de planos de ação para prevenir ou potencializar tal risco⁵.
 
@@ -160,7 +160,7 @@
 12 | O usuário tem dificuldade em entender a dinâmica e mecânica do jogo: Entender como se joga um jogo é essencial para o sucesso do mesmo e a falha na compreensão pode gerar estresse e desinteresse. Para que isso não aconteça, a jogabilidade deve estar alinhada com nível do usuário e o tutorial deve ser bem informativo e esclarecedor, para que o jogo siga um fluxo divertido e intuitivo.
 13 | Concorrência com outros jogos: A concorrência com outros jogos é um risco de probabilidade alta e impacto também alto, visto que poderíamos perder clientes, dito isso, uma solução viável seria desenvolver novas estratégias de marketing para o jogo e garantir atualizações que inovem o produto.
 
-## 1.2. Requisitos do Projeto (sprints 1 e 2)
+## 1.2. Requisitos do Projeto
 
 &nbsp;&nbsp;&nbsp;&nbsp;Esta seção tem como objetivo fornecer uma visão abrangente e detalhada dos requisitos essenciais que orientarão o desenvolvimento do projeto. Aqui, serão delineadas as funcionalidades, características e restrições fundamentais para garantir a compreensão unificada entre a equipe de desenvolvimento e o cliente.
 
@@ -175,8 +175,8 @@
 3|Definir os diferentes tipos de queimadura;
 4|Dizer por que uma queimadura profunda não dói;
 5|O jogo deve ser compatível com mobile;
-6|A paleta de cores deve ser da FMUSP e do INTELI;
-7|Tempo limitado apenas com a intenção de capacitação, sendo uma experiência única, de aproximadamente 15 minutos;
+6|A paleta de cores deve ser vibrante e atraente para o público do jovem;
+7|Tempo limitado apenas com a intenção de capacitação, sendo uma experiência única de aprendizado;
 8|Jogo tem de atrair o interesse dos alunos;
 9|Deve ter recompensas, pontuação, recordes;
 10|Pode ser expandido para fora das escolas;
@@ -210,7 +210,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;Listar esses pontos em uma tabela auxiliou o grupo a se organizar melhor para a produção de requisitos alinhados com os do cliente e a ter um maior entendimento do projeto, visando sempre o atenditmento dos pedidos do cliente. E, ao mesmo tempo, ajudou o grupo a organizar as tarefas de forma eficiente, ou seja, abrangendo todos os pontos listados e propotcionando uma divisão igualitária dessas tarefas.
 
-## 1.3. Público-alvo do Projeto (sprint 2)
+## 1.3. Público-alvo do Projeto
 
 &nbsp;&nbsp;&nbsp;&nbsp;De acordo com Kotler (2000)⁵, também conhecido como o “pai do marketing”, o público alvo é o grupo de consumidores que possui necessidades semelhantes àquelas que a empresa atende. O público alvo pode ser dividido em diversos fatores tais quais: geografia, demografia, psicografia e comportamento⁶. 
 
@@ -220,23 +220,23 @@
 &nbsp;&nbsp;&nbsp;&nbsp;Portanto, para que a magnitude da influência e impacto gerado do nosso produto seja positiva, definimos o público alvo levando em consideração os aspectos demográficos, especificamente a idade, renda e educação. 
 Posto isso, foi entendido que a definição adequada do público alvo aumenta a magnitude da influência e impacto gerado, o que vai de acordo com o nosso objetivo principal.
 
-# <a name="c2"></a>2. Visão Geral do Jogo (sprint 2)
+# <a name="c2"></a>2. Visão Geral do Jogo
 
-## 2.1. Objetivos do Jogo (sprint 2)
+## 2.1. Objetivos do Jogo
 
 &nbsp;&nbsp;&nbsp;&nbsp;O objetivo de um jogo geralmente é a meta que os jogadores devem alcançar para vencer ou progredir. Pode envolver completar tarefas específicas, resolver quebra-cabeças, derrotar inimigos, acumular pontos, entre outros desafios.
 
 &nbsp;&nbsp;&nbsp;&nbsp;Para o nosso jogo, o objetivo é resolver o máximo de cases propostos pela dra. Tina em um tempo determinado, passando por um ciclo de teoria (representada pelos livros da tenda de livros) e de prática (representada pelo quiz da tenda de quiz), obtendo assim uma pontuação final que pode ser superada a cada novo ciclo. Isso incentiva que os jogadores equilibrem eficiência na resolução e aprimoramento de habilidades através da aprendizagem.
 
-## 2.2. Características do Jogo (sprint 2)
+## 2.2. Características do Jogo
 
-### 2.2.1. Gênero do Jogo (sprint 2)
+### 2.2.1. Gênero do Jogo
 
 &nbsp;&nbsp;&nbsp;&nbsp;O gênero se refere à classificação ou categoria que descreve o estilo e a mecânica de jogo predominantes. Cada gênero tem características específicas que definem como os jogadores interagem com o jogo e o que podem esperar dele em termos de jogabilidade, narrativa e objetivos⁸.
 
 &nbsp;&nbsp;&nbsp;&nbsp;O nosso jogo simula a atuação de um estudante de ensino médio durante uma gincana promovida por uma faculdade, portanto seu gênero é simulação. Como tal, o jogo oferece uma experiência imersiva e educativa, onde o jogador pode aprender sobre prevenção de queimaduras e sobre o que deve-se ou não fazer logo após se queimar.
 
-### 2.2.2. Plataforma do Jogo (sprint 2)
+### 2.2.2. Plataforma do Jogo
 
 &nbsp;&nbsp;&nbsp;&nbsp;A plataforma de um jogo se refere ao ambiente ou sistema no qual o jogo é executado. Isso inclui dispositivos como computadores, consoles de videogame, smartphones, tablets, entre outros, e também o sistema operacional ou plataforma online que suporta a execução do jogo.
 
@@ -244,13 +244,13 @@ Posto isso, foi entendido que a definição adequada do público alvo aumenta a 
 
 &nbsp;&nbsp;&nbsp;&nbsp;A aplicação também poderá ser acessado via web, oferecendo flexibilidade adicional aos jogadores, que poderão jogar diretamente de seus navegadores sem a necessidade de downloads adicionais. Isso tornará o jogo acessível a uma ampla gama de dispositivos, garantindo que mais pessoas possam participar e aprender sobre a importância da prevenção de queimaduras.
 
-### 2.2.3. Número de jogadores (sprint 2)
+### 2.2.3. Número de jogadores
 
 &nbsp;&nbsp;&nbsp;&nbsp;O número de jogadores de um jogo refere-se à quantidade de participantes que podem jogar simultaneamente ou de forma sequencial. Esse aspecto é fundamental na definição da dinâmica do jogo, determinando se é um jogo para um único jogador, para dois jogadores, ou para múltiplos jogadores. O número de jogadores pode influenciar elementos como competição, colaboração, estratégia e interação social dentro do jogo.
 
 &nbsp;&nbsp;&nbsp;&nbsp;No contexto do nosso jogo sobre prevenção de queimaduras, a opção de um jogador oferecerá uma experiência individualizada e centrada no aprendizado. Isso permitirá um foco maior na absorção de informações e na prática de habilidades específicas, como identificar riscos de queimaduras e tomar decisões preventivas adequadas. Além disso, jogar sozinho pode facilitar a personalização da experiência de acordo com o ritmo e as necessidades individuais do jogador.
 
-### 2.2.4. Títulos semelhantes e inspirações (sprint 2)
+### 2.2.4. Títulos semelhantes e inspirações 
 
 &nbsp;&nbsp;&nbsp;&nbsp;Títulos semelhantes e inspirações de um jogo referem-se a outros jogos que compartilham características, temas, mecânicas de jogo ou atmosfera semelhantes com o jogo que está sendo desenvolvido. Ao analisar títulos semelhantes, podemos identificar elementos que foram bem-sucedidos em outros jogos e incorporá-los ao nosso próprio projeto. Já as inspirações nos forneceram uma fonte de criatividade e direção para o desenvolvimento do jogo.
 
@@ -266,16 +266,16 @@ Posto isso, foi entendido que a definição adequada do público alvo aumenta a 
 
 *Ex. cada partida dura até 15 minutos*
 
-# <a name="c3"></a>3. Game Design (sprints 2 e 3)
+# <a name="c3"></a>3. Game Design
 
-## 3.1. Enredo do Jogo (sprints 2 e 3)
+## 3.1. Enredo do Jogo
 
 &nbsp;&nbsp;&nbsp;&nbsp;No jogo "Turma da Prevenção: Com queimadura não se brinca", os jogadores entram em uma aventura imersiva da vida de Lipe, um estudante de ensino médio em uma escola pública muito dedicado e competitivo. O sonho de Lipe é se tornar um médico e por isso participa da dinâmica proposta pela Dra. Tina, uma renomada médica do Hospital das Clínicas. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;No Dia da Prevenção, a Faculdade de Medicina da USP abriu as portas para receber alunos de todas as escolas, com o objetivo de conscientizá-los acerca do tema das queimaduras. Durante a dinâmica, Lipe vai entrar em contato com casos reais de pessoas que sofreram lesões de queimadura e vai estudar cada um deles minuciosamente, desbravando a literatura acerca do tema. A dinâmica irá testar seus conhecimentos adquiridos por meio de um jogo desafiador de perguntas e respostas. À medida em que o jogo avança, Lipe vai compreendendo os perigos e cuidados relacionados às queimaduras, desmitificando crenças populares e absorvendo conhecimento valioso, além de entender a importância da prevenção.
 
 
-## 3.2. Personagens (sprints 2 e 3)
+## 3.2. Personagens
 
 ### 3.2.1. Controláveis
 
@@ -286,7 +286,7 @@ Posto isso, foi entendido que a definição adequada do público alvo aumenta a 
 ### 3.2.2. Non-Playable Characters (NPC)
 
 
-&nbsp;&nbsp;&nbsp;&nbsp;*Non-Playable Characters* (*NPCs*) são avatares os quais o jogador não possui controle sobre, portanto não comanda seus movimentos nem ações⁹. Porém, é possível interagir com eles se forem programados para isso, como é o caso da Dra. Tina. Em nosso projeto, utilizaremos 11 *NPCs*, dos quais 10 deles serão estudantes e, como o Lipe, participarão da dinâmica. Desde modo, poderão ser obstáculos para o trajeto do jogador durante o jogo. Já a  Dra. Tina é uma *NPC* que fica situada somente em um lugar, no entanto ela é a única com a qual se pode interagir, visto que é a responsável por entregar os cases aos alunos. 
+&nbsp;&nbsp;&nbsp;&nbsp;*Non-Playable Characters* (*NPCs*) são avatares os quais o jogador não possui controle sobre, portanto não comanda seus movimentos nem ações⁹. Porém, é possível interagir com eles se forem programados para isso, como é o caso da Dra. Tina. Em nosso projeto, utilizaremos 11 *NPCs*, dos quais 10 deles serão estudantes e, como o Lipe, participarão da dinâmica. Desde modo, poderão ser obstáculos para o trajeto do jogador durante o jogo. Já a  Dra. Tina é uma *NPC* que fica situada somente em um lugar, no entanto ela é a única com a qual se pode interagir, visto que é a responsável por entregar os cases aos alunos. Fizz
 
 
 <div align="center">
@@ -313,9 +313,9 @@ Posto isso, foi entendido que a definição adequada do público alvo aumenta a 
 
 &nbsp;&nbsp;&nbsp;&nbsp; De acordo com o nosso público-alvo, o jogo em questão não apenas oferecerá uma variedade de personagens, mas também buscará causar um impacto social por meio da inclusão e diversidade. A personagem Dra. Tina foi criada para representar uma parcela significativa da população brasileira: pessoas pardas/pretas, conforme indicado pelo Censo de 2022. Nossa abordagem visa não apenas incluir personagens pretos como secundários, mas também posicioná-los como protagonistas da história. Assim, a Dra. Tina desempenha o papel principal ao guiar o personagem principal durante toda a jornada, fornecendo instruções e sendo a figura central por trás de todos os eventos que ocorrem dentro do jogo. Além disso, o projeto visa abordar outras raças e diferentes culturas nos personagens, e a expectativa é que, com o avanço do projeto, os NPCs sejam desenvolvidos para representar ainda mais parcelas da população sub-representadas.
 
-## 3.3. Mundo do jogo (sprints 2 e 3)
+## 3.3. Mundo do jogo
 
-### 3.3.1. Locações Principais e/ou Mapas (sprints 2 e 3)
+### 3.3.1. Locações Principais e/ou Mapas
 
 &nbsp;&nbsp;&nbsp;&nbsp;O jogo se passa em um fase única e cíclica composta pelos seguintes ambientes:
 
@@ -331,12 +331,12 @@ Posto isso, foi entendido que a definição adequada do público alvo aumenta a 
 
 <sub>Figura 5 - Mapa do Jogo</sub>
 
-<img src="./other/mapa1.png" width="50%">
+<img src="./other/mapajogo.jpeg" width="50%">
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 </div>
 
-### 3.3.2. Navegação pelo mundo (sprints 2 e 3)
+### 3.3.2. Navegação pelo mundo
 
 &nbsp;&nbsp;&nbsp;&nbsp;O jogador controla um estudante do ensino médio utilizando um controle direcional na tela de seu dispositivo móvel. Tocando no controle e arrastando o dedo na direção desejada, a movimentação do personagem é ativada e é possível navegar livremente dentro dos limites do cenário, além de interagir com objetos e personagens por meio de colisões.
 
@@ -351,7 +351,7 @@ Posto isso, foi entendido que a definição adequada do público alvo aumenta a 
 &nbsp;&nbsp;&nbsp;&nbsp;O jogador retorna a Dra. Tina para a entregar o case resolvido, dando início à um novo ciclo de jogo após a Dra. atribuir mais um case ao estudante.
 
 
-### 3.3.3. Condições climáticas e temporais (sprints 2 e 3)
+### 3.3.3. Condições climáticas e temporais
 
 &nbsp;&nbsp;&nbsp;&nbsp;No jogo, o tempo é um elemento que adiciona diversão e desafio à experiência do jogador. 
 Um cronômetro é utilizado para medir o tempo que o jogador tem para completar cada ciclo de aprendizado e resolução do case na gincana. 
@@ -360,10 +360,10 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 &nbsp;&nbsp;&nbsp;&nbsp;Em resumo, o cronômetro adiciona dinamismo e intensidade à jogabilidade, mantendo os jogadores engajados e focados em suas tarefas.
 
-### 3.3.4. Concept Art (sprint 2)
+### 3.3.4. Concept Art
 
 &nbsp;&nbsp;&nbsp;&nbsp;As Concepts Arts são desenhos desenvolvidos com o objetivo de conceituar elementos do jogo como personagens, itens, cenários, etc¹⁰. Para nosso jogo, as concepts arts desenvolvidas estão listadas abaixo:
-
+Fizz
 <div align="center">
 
 <sub>Figura 6 - Concept Art do Mapa</sub>
@@ -374,45 +374,45 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;A Figura 6: Concept Art representando o Mapa do Jogo.
+&nbsp;&nbsp;&nbsp;&nbsp;Figura 6: O mapa principal do jogo retrata o pátio da Faculdade de Medicina da Universidade de São Paulo. O espaço é arborizado, com duas tendas em cada extremidade e uma fonte central. Um portão separa o pátio da rua adjacente.
 
 <div align="center">
 
 <sub>Figura 7 - Concept Art do Case</sub>
 
-<img src="./other/ConceptCase.jpg" width="40%">
+<img src="./other/ConceptCase.jpg" width="50%">
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;A Figura 7: Concept Art do case.
+&nbsp;&nbsp;&nbsp;&nbsp;Figura 7: Na parte superior do case há um quadro e uma foto há serem preenchidos com o nome e imagem do paciente respectivo. Logo abaixo, há uma descrição de como ocorreu o acidente de queimadura seguido das lesões sofridas e a classificação do machucado.
 
 <div align="center">
 
-<sub>Figura 8 - Concept Art da Página de Livros</sub>
+<sub>Figura 8 - Concept Art de Livros</sub>
 
-<img src="./other/ConceptLivros.jpg" width="40%">
+<img src="./other/ConceptLivros.jpg" width="50%">
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;Figura 8: Concept Art da Página do Livro.
+&nbsp;&nbsp;&nbsp;&nbsp;Figura 8: Os livros são dispostos em ordem crescente quanto ao seu grau de classificação começando pela esquerda. Cada um indica na capa a qual grau se refere e contém uma cor única.
 
 <div align="center">
 
 <sub>Figura 9 - Concept Art do Quiz</sub>
 
-<img src="./other/ConceptQuiz.jpg" width="40%">
+<img src="./other/ConceptQuiz.jpg" width="50%">
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;Figura 9: Concept Art da Página de Quiz.
+&nbsp;&nbsp;&nbsp;&nbsp;Figura 9: O quiz é um quadrado que contém, começando pela parte superior, três figuras em forma de retângulos com um símbolo de interrogação no centro. Em seguida, há uma área de pergunta a ser desenvolvida e duas caixas com opções de alternativa.
 
-### 3.3.5. Trilha sonora (sprint 3)
+### 3.3.5. Trilha sonora
 
 &nbsp;&nbsp;&nbsp;&nbsp;As trilhas sonoras são meios de envolver o usuário no jogo, segundo o artigo "The Role of Music in Videogames" - O papel da música nos videogames - cujo autor, citado no artigo da BBC ¹⁴, afirma que as trilhas sonoras nos jogos são multifuncionais, pois significam várias coisas para o jogador. Isso inclui o aumento da imersão, as brechas para mudanças na história, além de contribuírem também para a estética do jogo, tornando-se assim um fator muito importante para o envolvimento do jogador na narrativa.
 
@@ -427,7 +427,7 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 &nbsp;&nbsp;&nbsp;&nbsp;Tendo como referência o artigo mencionado, as músicas selecionadas foram cuidadosamente escolhidas para transmitir a atmosfera do jogo, com o objetivo de proporcionar uma imersão mais profunda por parte do jogador. No menu e no tutorial, optamos por músicas com ritmo mais lento, oferecendo uma introdução tranquila e acolhedora ao universo do jogo. No entanto, à medida que a dinâmica do jogo se intensifica, marcada pelo início do cronômetro e pelo aumento da velocidade das ações, uma trilha sonora com batidas mais pulsantes é ativada, elevando a energia e a intensidade da experiência de jogo.
 
-## 3.4. Inventário e Bestiário (sprint 3)
+## 3.4. Inventário e Bestiário
 
 ### 3.4.1. Inventário
 
@@ -437,7 +437,7 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 &nbsp;&nbsp;&nbsp;&nbsp;Não se aplica.
 
-## 3.5. Gameflow (Diagrama de cenas) (sprint 2)
+## 3.5. Gameflow (Diagrama de cenas)
 
 &nbsp;&nbsp;&nbsp;&nbsp;Um Diagrama de Cenas é uma ferramenta utilizada para auxiliar na organização do desenvolvimento técnico do jogo, apresentando as cenas do projeto e suas relações com outras cenas, exibindo os caminhos possíveis e bloqueios¹¹ ¹². Nosso Diagrama de Cenas pode ser visitado <a href="https://miro.com/app/board/uXjVNmuHdDw=/">aqui</a>.
 
@@ -445,7 +445,7 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 <sub>Figura 9 - Visão geral do Diagrama de Cenas</sub>
 
-<img src="./other/diagrama_cenas.png" width="80%">
+<img src="./other/visaodiagrama.png" width=800>
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
@@ -457,7 +457,7 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 <sub>Figura 10 - Menu do Jogo</sub>
 
-<img src="./other/menu.png" width="80%">
+<img src="./other/menuGFcerto.png" width=800>
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
@@ -467,9 +467,9 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 <div align="center">
 
-<sub>Figura 11 - Hospital</sub>
+<sub>Figura 11 - Campus FMUSP</sub>
 
-<img src="./other/hospital.png" width="80%">
+<img src="./other/campusGF.png" width=800>
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
@@ -479,9 +479,9 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 <div align="center">
 
-<sub>Figura 12 - Triagem</sub>
+<sub>Figura 12 - Encontro com Dra. Tina</sub>
 
-<img src="./other/triagem.png" width="80%">
+<img src="./other/tinaGF.png" width=800>
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
@@ -491,9 +491,9 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 <div align="center">
 
-<sub>Figura 13 - Biblioteca</sub>
+<sub>Figura 13 - Case</sub>
 
-<img src="./other/biblioteca.png" width="80%">
+<img src="./other/casecertoGF.png" width=800>
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
@@ -504,9 +504,9 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 <div align="center">
 
-<sub>Figura 14 - Farmácia</sub>
+<sub>Figura 14 - Tenda de Livros</sub>
 
-<img src="./other/farmacia.png" width="80%">
+<img src="./other/tendalivrosGF.png" width=800>
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
@@ -514,12 +514,11 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 &nbsp;&nbsp;&nbsp;&nbsp;6 - Após interagir com a tenda de livros, o jogador terá 3 opções de livros para abrir, e deverá escolher àquele que corresponde ao grau de queimadura do case que está estudando. Vale ressaltar que o jogador terá a liberdade de escolher as outras opções de livros, mas não será útil para o case atual.
 
-
 <div align="center">
 
-<sub>Figura 15 - Sala de Espera</sub>
+<sub>Figura 15 - Livros</sub>
 
-<img src="./other/sala_espera.png" width="80%">
+<img src="./other/livros1GF.png" width=800>
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
@@ -529,9 +528,9 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 <div align="center">
 
-<sub>Figura 16 - Caminho a Biblioteca</sub>
+<sub>Figura 16 - Conteúdo do livro</sub>
 
-<img src="./other/bib_7.png" width="80%">
+<img src="./other/livrocertoGF.png" width=800>
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
@@ -541,27 +540,27 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 <div align="center">
 
-<sub>Figura 17 - Farmácia Bloqueada</sub>
+<sub>Figura 17 - Tenda de Quiz</sub>
 
-<img src="./other/farm_block.png" width="80%">
+<img src="./other/tendaquizGF.png" width=800>
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;9 - O quiz terá uma pergunta e duas opções de respostas. Caso o jogador acerte a resposta do quiz, ele ganha de 10 a 20 pontos (os pontos variam de acordo com a dificuldade da pergunta). No caso em que o jogador erre a resposta, aparecerá um feedback na tela explicando o porquê do erro (com o intuito de conscientizar o aluno) e ele perderá 10 segundos no timer. Após a conclusão do ciclo, o jogador deve iniciá-lo novamente, interagindo com a Dra. Tina. A dinâmica do jogo continua até o tempo acabar.
+&nbsp;&nbsp;&nbsp;&nbsp;9 - O quiz terá uma pergunta e duas opções de respostas. Caso o jogador acerte a resposta do quiz, ele ganha de 10 a 20 pontos (os pontos variam de acordo com a dificuldade da pergunta). No caso em que o jogador erre a resposta, aparecerá um feedback na tela explicando o porquê do erro (com o intuito de conscientizar o aluno) e ele perderá 10 segundos no timer. Após a conclusão do ciclo, o jogador deve iniciá-lo novamente, interagindo com a Dra. Tina. A dinâmica do jogo continua até o tempo acabar. Fizz
 
 <div align="center">
 
-<sub>Figura 17 - Farmácia Bloqueada</sub>
+<sub>Figura 17 - Quiz</sub>
 
-<img src="./other/farm_block.png" width="80%">
+<img src="./other/quizcertoGF.png" width=800>
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 
 </div>
 
-## 3.6. Regras do jogo (sprint 3)
+## 3.6. Regras do jogo
 
 &nbsp;&nbsp;&nbsp;&nbsp;As regras de um jogo, segundo o livro “Regras do Jogo: Fundamentos do Design de Jogos (Volume 1)”, moldam a experiência do jogador, fornecem estrutura e significado, e promovem a interatividade ao definirem limites, objetivos e desafios. Com isso o jogador é, de certa forma, guiado a seguir a lógica (gameflow) própria daquele jogo.
 
@@ -571,7 +570,7 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 &nbsp;&nbsp;&nbsp;&nbsp;Ao interagir com a doutora, será apresentado ao jogador um caso de uma pessoa que sofreu uma queimadura. Após obter as informações do caso, o jogador deve se dirigir para a tenda de livros, onde irá ler sobre aquele caso para adquirir conhecimento e por fim colocará isso em prática no local do quiz, em que será feita uma pergunta e, com base nos acertos e no tempo que o jogador demorar em cada ciclo, obterá uma pontuação.
 
-## 3.7. Mecânicas do jogo (sprint 3)
+## 3.7. Mecânicas do jogo
 
 &nbsp;&nbsp;&nbsp;&nbsp;O MDA, que foi apresentado pela primeira vez na  Conferência *Foundations of Digital Games* no artigo chamado *MDA: A Formal Approach to Game Design and Game Research*, é um *framework* desenvolvido por Robin Hunicke, Marc LeBlanc e Robert Zubek. Ele é muito utilizado no mundo do design de *games* para ajudar os produtores a criarem uma experiência imersiva e de altíssima qualidade para seu usuário. Isso é possível pela fragmentação do jogo em três aspectos: mecânica, dinâmica e estética. 
 
@@ -584,7 +583,7 @@ assim por diante), a mecânica suporta a dinâmica geral da jogabilidade. Ou sej
 
 # <a name="c4"></a>4. Desenvolvimento do Jogo
 
-## 4.1. Desenvolvimento preliminar do jogo (sprint 1)
+## 4.1. Desenvolvimento preliminar do jogo
 
 &nbsp;&nbsp;&nbsp;&nbsp;A primeira versão do jogo possui duas cenas, uma de início e uma de jogo. Ambas possuem arte gráfica provisória e foram desenvolvidas com o intuito de serem apresentadas na reunião com o parceiro ao final do Sprint 1.
 
@@ -728,12 +727,12 @@ var config = {
     }
 };
 ```
-### Dificuldades
+**Dificuldades**
 - Tentar ajustar o tamanho da tela automaticamente para diferentes dispositivos;
 - Definir corretamente os inputs de movimentação( demora para achar a sintaxe correta);
 - Adaptação às boas práticas ao escrever código em Javascript.
 
-### Próximos passos
+**Próximos passos**
 - Adaptar os inputs de movimentação para funcionarem com as setas do teclado e com o touch screen de dispositivos mobile;
 - Normalizar a velocidade do deslocamento do objeto médico na direção diagonal;
 - Mudar a arte gráfica para a definida pelo grupo de Design;
@@ -753,13 +752,13 @@ var config = {
 
 </div>
 
-## 4.2. Desenvolvimento básico do jogo (sprint 2)
+## 4.2. Desenvolvimento básico do jogo
 
 &nbsp;&nbsp;&nbsp;&nbsp;Na primeira sprint, o desenvolvimento foi focado em criar apenas um esboço do jogo. Em outras palavras, uma parte significativa do código foi refatorada à medida que os conteúdos eram apresentados ao longo da sprint.
 
 &nbsp;&nbsp;&nbsp;&nbsp;Desse modo, a decisão foi: dividir a programação em pequenas etapas, que são: refatorar o jogo para incluir múltiplas cenas, implementar o novo menu em *pixel art*, adicionar físicas e colisões, integrar a câmera ao cenário e criar o novo cenário em *pixel art* usando o Tiled Map Editor.
 
-### Etapa 1 do desenvolvimento - Refatorando o jogo em múltiplas cenas
+**Etapa 1 do desenvolvimento - Refatorando o jogo em múltiplas cenas**
 
 &nbsp;&nbsp;&nbsp;&nbsp;Na primeira entrega, o jogo apresentava um menu e a cena do médico no hospital. Ambos estavam incluídos no mesmo arquivo, sem qualquer separação entre as cenas. Como resultado, a imagem do menu era renderizada em primeiro plano, e ao clicar no botão de jogar, essa imagem era destruída.
 
@@ -811,7 +810,7 @@ class CenaHospital extends Phaser.Scene {
 
 &nbsp;&nbsp;&nbsp;&nbsp;Para finalizar, o código das respectivas cenas e funções foram transferidas para os arquivos em classe, colocando o operador `this` antes das variáveis por conta da mudança para classe.
 
-### Etapa 2 do desenvolvimento - Novo menu em *pixel art*
+**Etapa 2 do desenvolvimento - Novo menu em *pixel art***
 
 &nbsp;&nbsp;&nbsp;&nbsp;O primeiro passo foi fazer o desenho do novo menu, com uma cara parecida, porém em *pixel art* feita no Piskel.
 
@@ -854,7 +853,7 @@ this.botaoJogar.on("pointerdown", () => {
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;No `this.scene.start` o Phaser inicia a cena do hospital e na linha seguinte encerra o menu.
 
-### Etapa 3 do desenvolvimento - Implementação da física
+**Etapa 3 do desenvolvimento - Implementação da física**
 
 &nbsp;&nbsp;&nbsp;&nbsp;O primeiro passo foi habilitar a física na configuração do jogo:
 ```js
@@ -871,7 +870,7 @@ const config = {
 ```
 &nbsp;&nbsp;&nbsp;&nbsp;Colocando esse trecho de código, habilitamos a física no jogo, sem gravidade pois o nosso jogo é no estilo *top down*: vista de cima para baixo.
 
-### Etapa 4 do desenvolvimento - Câmeras e cenário do Tiled Map Editor
+**Etapa 4 do desenvolvimento - Câmeras e cenário do Tiled Map Editor**
 
 &nbsp;&nbsp;&nbsp;&nbsp;Nesta etapa, foi realizado a implementação do Mapa através de um arquivo JSON, localizado em `"src/assets/tilemaps/main_map.json"`. Este arquivo é exportado do Tiled Map Editor, que é um editor de mapas em blocos e por camadas
 
@@ -924,7 +923,7 @@ this.cameras.main.setZoom(2);
 
 </div>
 
-### Etapa 5 do desenvolvimento - Colisões com as paredes
+**Etapa 5 do desenvolvimento - Colisões com as paredes**
 
 &nbsp;&nbsp;&nbsp;&nbsp;De início, foi preciso fazer algumas alterações no Tiled Map Editor, precisamos atribuir a todos os blocos que têm colisão uma propriedade personalizada que chamamos de `Collider`. Essa propriedade precisa ser do tipo `boolean` (verdadeiro ou falso). Com essa propriedade definida nos blocos, foi o momento de implementar a colisão. E com apenas duas linhas, graças ao Tiled Map Editor e às suas facilidades, foi possível definir colisão entre as paredes e o jogador.
 
@@ -949,7 +948,7 @@ this.medico.setVelocityY(velocidadeEmY)
 
 </div>
 
-### Etapa 6 do desenvolvimento - Implementação do joystick e tela cheia
+**Etapa 6 do desenvolvimento - Implementação do joystick e tela cheia**
 
 &nbsp;&nbsp;&nbsp;&nbsp;No projeto foi utilizada uma biblioteca chamada *Rex Virtual Joystick*, que está localizada em `src/plugins/rexvirtualjoystickplugin.min.js` sendo importada na cena do hospital na função `preload()`.
 ````js
@@ -1044,19 +1043,19 @@ openFullScreen() {
 
 </div>
 
-### Dificuldades
+**Dificuldades**
 - Implementação da colisão;
 - Dificuldade em ajustar o Tile Map;
 - Implementar as entradas Mobile - O jogo já tem uma biblioteca para um joystick e teve dificuldade quanto a responsividade.
 
-### Próximos passos
+**Próximos passos**
 - Terminar toda a decoração do mapa;
 - Implementar o quiz e a lógica da biblioteca;
 - Implementar a movimentação através de vetores;
 - Spritesheet do personagem animada e finalizada;
 - Sritesheet dos NPC's para animar no jogo.
 
-## 4.3. Desenvolvimento intermediário do jogo (sprint 3)
+## 4.3. Desenvolvimento intermediário do jogo
 
 &nbsp;&nbsp;&nbsp;&nbsp;Na terceira sprint, o foco da codificação foi reformular a dinâmica do jogo para se adaptar ao novo design de cenário requisitado pelo cliente. Além disso, aprofundamos o desenvolvimento para o nível intermediário do projeto, ou seja, foram implementados estruturas lógicas para a demonstração de, pelo menos, um ciclo do jogo.
 
@@ -1065,9 +1064,9 @@ openFullScreen() {
 &nbsp;&nbsp;&nbsp;&nbsp;As estruturas implementadas no jogo foram os aprimoramentos dos overlaps e colisões, a criação de um novo cenário, a implementação do HUD, que inclui elementos como o timer, a pontuação e as missões a serem realizadas pelo personagem. As ferramentas utilizadas nessa sprint foram o Tiled Map Editor, para a criação do novo mapa; Piskel, para o design dos livros, quiz e personagens; e PixilArt para a elaboração do edifício da Faculdade de Medicina da USP.
 
 
-### Etapa 1 do desenvolvimento - Criação do novo cenário
+**Etapa 1 do desenvolvimento - Criação do novo cenário**
 
-&nbsp;&nbsp;&nbsp;&nbsp;Na sprint anterior, o jogo se passava em um ambiente hospitalar, onde o personagem principal era o médico residente. Com a mudança de cenário, o local passou a ser o pátio da FMUSP e os elementos do jogo foram adaptados para o novo espaço, como o menu, os personagens e os espaços de interação. O modo de uso do Tiled Map Editor para a criação do novo mapa foi o mesmo descrito no tópico 4.2.
+&nbsp;&nbsp;&nbsp;&nbsp;Na sprint anterior, o jogo se passava em um ambiente hospitalar, onde o personagem principal era o médico residente. Com a mudança de cenário, o local passou a ser o pátio da FMUSP e os elementos do jogo foram adaptados para o novo espaço, como o menu, os personagens e os espaços de interação. O modo de uso do Tiled Map Editor para a criação do novo mapa foi o mesmo descrito no tópico 4.2. Fizz
 
 <div align="center">
 
@@ -1082,7 +1081,7 @@ openFullScreen() {
 
 
 
-### Etapa 2 do desenvolvimento - Colisões e Overlaps
+**Etapa 2 do desenvolvimento - Colisões e Overlaps**
 
 &nbsp;&nbsp;&nbsp;&nbsp;Foram implementadas, inicialmente, as colisões necessárias para a dinâmica do jogo, configuradas no próprio Tiled Map Editor e adicionadas, com o auxílio de um documento .JSON e do framework Phaser, no código. Na implementação das colisões, utilizamos, dentro do `create()`, o método do Phaser `.setCollisionByProperty()`, que adiciona colisão entre objetos por meio das propriedades adicionadas a eles no Tiled Map Editor e, além disso, para obejtos circulares ou irregulares foi adicionada uma colisão especial em formato de círculo pela adição de um círculo com o método `this.add.circle()`, como descrito a seguir:
 
@@ -1166,7 +1165,7 @@ openFullScreen() {
 &nbsp;&nbsp;&nbsp;&nbsp;Dentro dessa função, a física do jogo é pausada e o 'case' - onde contém o caso atual - é mostrado com as informações, que serão necessárias para estudar e responder o quiz. Nessa função de collider, alguns eventos são emitidos, eles foram utilizados para implementar o HUD posteriormente.
 &nbsp;&nbsp;&nbsp;&nbsp;Avançando para o desenvolvimento da dinâmica de nosso jogo, adicionamos colisões entre as tendas de livros e quiz e o personagem principal.
 
-#### Tenda de Livros
+**Tenda de Livros**
 
 &nbsp;&nbsp;&nbsp;&nbsp;Para adicionarmos a colisão entre a tenda de livros e o personagem, foram adicionados `this.physics.add.collider` entre o jogador `this.jogador` e a tenda `this.tendaLivro` no método `create()` da `cenaPrincipal.js`. Uma função é definida logo após estabelecermos a colisão entre os elementos através de `() => {}`, retomando a cena dos livros `livros.js` através de `this.scene.wake('livros')` e pausando a física da cena atual com `this.physics.pause()`, como demonstrado abaixo:
 
@@ -1182,7 +1181,7 @@ this.physics.add.collider(this.jogador, this.tendaLivro, () => {
 
 ```
 
-#### Tenda de Quiz
+**Tenda de Quiz**
 
 &nbsp;&nbsp;&nbsp;&nbsp;Similarmente, na tenda de quiz, a colisão com o personagem foi adicionada como anteriormente. Estabelecemos colisão entre o jogador `this.jogador` e a tenda de quiz `this.tendaQuiz`, também definindo uma função após este evento através de `() => {}`, retomando a cena de quiz `quiz.js` por `this.scene.wake('quiz')` e pausando a física da cena atual por `this.physics.pause()`.
 
@@ -1200,7 +1199,8 @@ this.physics.add.collider(this.jogador, this.tendaQuiz, () => {
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;As cenas `livros.js` e `quiz.js` citadas acima serão abordadas na Etapa 6 do desenvolvimento - Tendas
-### Etapa 3 do desenvolvimento - Implementação do HUD
+
+**Etapa 3 do desenvolvimento - Implementação do HUD**
 
 &nbsp;&nbsp;&nbsp;&nbsp;O HUD do jogo foi criado em uma nova cena situada na classe CenaHUD, contendo os seguintes elementos: timer, pontuação, botão de reabertura do case e um quadro de orientação das missões. A seguir é possível visualizar o modo como foi implementado:
 
@@ -1288,12 +1288,14 @@ class CenaHUD extends Phaser.Scene
 }
 
 ```
-Nessa parte, alguns elementos como retângulos e texto são adicionados. Os elementos são adicionados através de eventos, ou seja, na cena principal, quando o usuário clica no botão de fechar o evento é emitido pela cena principal e a cena do HUD ouve esse evento e cria/mostra os elementos. Como a cena fica sempre ativa os elementos são exibidos através do método `setVisible(boolean)`.
+&nbsp;&nbsp;&nbsp;&nbsp;Nessa parte, alguns elementos como retângulos e texto são adicionados. Os elementos são adicionados através de eventos, ou seja, na cena principal, quando o usuário clica no botão de fechar o evento é emitido pela cena principal e a cena do HUD ouve esse evento e cria/mostra os elementos. Como a cena fica sempre ativa os elementos são exibidos através do método `setVisible(boolean)`.
 
-### Etapa 4 do desenvolvimento - Refatoramento do Código
-Para refatorar o código, alguns padrões foram adotados: nome de classe maiúscula, variáveis em 'camelCase' e procurar comentar o código de forma concisa, mas que seja legível.
+**Etapa 4 do desenvolvimento - Refatoramento do Código**
 
-### Etapa 5 do desenvolvimento - Implementação da Trilha e Efeitos Sonoros / Tela de loading
+&nbsp;&nbsp;&nbsp;&nbsp;Para refatorar o código, alguns padrões foram adotados: nome de classe maiúscula, variáveis em 'camelCase' e procurar comentar o código de forma concisa, mas que seja legível.
+
+**Etapa 5 do desenvolvimento - Implementação da Trilha e Efeitos Sonoros / Tela de loading**
+
 &nbsp;&nbsp;&nbsp;&nbsp;Para implementar o som, primeiramente foi preciso escolher os sons. Para isso, foi baixados sons do site "FreeSound" com licenças Creative Commons. Os sons Creative Commons são importantes para evitar problemas com direitos autorais.
 &nbsp;&nbsp;&nbsp;&nbsp;Após isso, o aúdio foi editado no software "Audacity", para que o som fique mais rápido nos segundos finais do jogo. Em seguida, os assets de som foram carregados no método `preload()`
 ````js
@@ -1336,7 +1338,7 @@ this.botaoX.on("pointerdown", () => {
 
 });
 ````
-### Etapa 6 do desenvolvimento - Tendas
+**Etapa 6 do desenvolvimento - Tendas**
 
 &nbsp;&nbsp;&nbsp;&nbsp;Nesta sprint, adicionamos cenas `livros.js` e `quiz.js` para implementarmos as mecânicas necessárias para a dinâmica do jogo. Estas cenas são chamadas na `cenaPrincipal.js` com a interação do jogador com o ambiente.
 
@@ -1671,13 +1673,13 @@ class Quiz extends Phaser.Scene {
     }
 ```
 
-### Dificuldades
+**Dificuldades**
 - Implementação da colisão;
 - Dificuldade em ajustar a animação do personagem principal;
 - Realizar a transição de cenas;
 - Inclusão de um quiz em HTML no jogo.
 
-### Próximos passos
+**Próximos passos**
 - Incluir o restante dos cases no jogo;
 - Incluir os conteúdos dos livros;
 - Incluir o restante das perguntas do quiz;
@@ -1686,10 +1688,12 @@ class Quiz extends Phaser.Scene {
 - Implementar elementos que visam mais diversidade.
 
   
-## 4.4. Desenvolvimento final do MVP (sprint 4)
+## 4.4. Desenvolvimento final do MVP
 
 *Descreva e ilustre aqui o desenvolvimento da versão final do jogo, explicando brevemente o que foi entregue em termos de MVP. Utilize prints de tela para ilustrar. Indique as eventuais dificuldades e planos futuros.*
-### Etapa 1 do desenvolvimento - Case dinâmico
+
+**Etapa 1 do desenvolvimento - Case dinâmico**
+
 &nbsp;&nbsp;&nbsp;&nbsp; Nessa fase de desenvolvimento do jogo, precisavámos que os casos fossem importados de forma dinâmica e não mais fixo nos textos, isso foi necessário para começar a adicionar rotatividade no caso. A forma que foi encontrada para fazer isso foi através de arquivos JSON (Javascript Object Notation). A formatação de dados no JSON é a seguinte:
 ````json
 [
@@ -1740,6 +1744,7 @@ sortearNumero(min, max) {
 }
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;Para guardar os casos que já foram sorteados, o índice do caso sorteado foi guardado em um array. Dessa forma é possível verificar se todos os foram verificados através do tamanho do array e se o array já inclui ele chama a função novamente para sortear um novo número.
+
 &nbsp;&nbsp;&nbsp;&nbsp;Após isso, ele guarda o caso sorteado em um objeto chamado `casoObjeto`, que contêm o objeto do caso atual e se está ativo ou não um caso no momento. Depois disso, é possível acessar esses dados em outras cenas, que foi a abordagem escolhida, então na cena `cases.js`, o caso do objeto é acessado através da variável da cena principal e os inputs pegam os respectivos textos de forma dinâmica.
 ````js
 create(){
@@ -1750,8 +1755,9 @@ create(){
     }
 }
 ````
-### Etapa 2 do desenvolvimento - Movimentação dos NPC's
-Para a movimentação dos NPC's uma nova classe chamada `NPC` foi criada. Essa classe no construtor recebe três parâmtros: o GameObject da Sprite, a cena atual que a sprite está inserida e a chave da sprite para a animação.
+**Etapa 2 do desenvolvimento - Movimentação dos NPC's**
+
+&nbsp;&nbsp;&nbsp;&nbsp;Para a movimentação dos NPC's uma nova classe chamada `NPC` foi criada. Essa classe no construtor recebe três parâmtros: o GameObject da Sprite, a cena atual que a sprite está inserida e a chave da sprite para a animação.
 ````js
 constructor(aluno, scene, keySprite) {
     this.aluno = aluno; // Recebe o aluno no construtor
@@ -1769,7 +1775,7 @@ constructor(aluno, scene, keySprite) {
     })
 }
 ````
-O método `update()` de cada NPC's é chamado no update da função principal, sendo responsável por duas responsabilidades sendo, fazer os NPC's andarem aleatoriamente e rodar a animação dos NPC's
+&nbsp;&nbsp;&nbsp;&nbsp;O método `update()` de cada NPC's é chamado no update da função principal, sendo responsável por duas responsabilidades sendo, fazer os NPC's andarem aleatoriamente e rodar a animação dos NPC's
 ````js
 update(){
     // Adiciona a velocidade ao aluno
@@ -1793,7 +1799,7 @@ update(){
     }
 }
 ````
-Primeiro ele gera uma direção entre 0 e 360 graus, depois seta uma velocidade aleatória. E se ele estiver para esquerda ou direita, roda a animação espelhando ou não a sprite.
+&nbsp;&nbsp;&nbsp;&nbsp;Primeiro ele gera uma direção entre 0 e 360 graus, depois seta uma velocidade aleatória. E se ele estiver para esquerda ou direita, roda a animação espelhando ou não a sprite.
 O último método da classe é o `setCollisionBetweenItens()`, esse método foi criado para evitar muita repetição de código, então através do operador 'spread' do javascript, ele recebe todos os parâmetros e organiza em um array, um loop é criado para percorrer esse array e coloca colisão entre o NPC e todos os objetos com colisão do mapa.
 ````js
 setCollisionBetweenItens(...phaserPhysics){
@@ -1801,7 +1807,7 @@ setCollisionBetweenItens(...phaserPhysics){
     for (let i = 0; i < phaserPhysics.length; i++) this.scene.physics.add.collider(this.aluno, phaserPhysics[i])
 }
 ````
-Instânciando a classe e colocando colisão:
+&nbsp;&nbsp;&nbsp;&nbsp;Instânciando a classe e colocando colisão:
 ````js
 create()
 //... toda lógica
@@ -1979,7 +1985,7 @@ O que poderia melhorar no jogo? | A responsividade do personagem aos controles, 
 
 # <a name="c7"></a>7. Referências (sprint 5)
 
-&nbsp;&nbsp;&nbsp;&nbsp;Abaixo, estão contidas as referências utilizadas para embasar todo o projeto, visando entender todo o cenário, não só do cliente, como do mercado ao qual o projeto está inserida.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Abaixo, estão contidas as referências utilizadas para embasar todo o projeto, visando entender todo o cenário, não só do cliente, como do mercado ao qual o projeto está inserida.<br> Fizz
 
 ¹ FERNANDES, D. R. Uma Visão Sobre a Análise da Matriz SWOT como Ferramenta para Elaboração da Estratégia. Revista de Ciências Jurídicas e Empresariais, [S. l.], v. 13, n. 2, 2015. DOI: 10.17921/2448-2129.2012v13n2p%p. Disponível em: https://revistajuridicas.pgsscogna.com.br/juridicas/article/view/720. Acesso em: 25 mar. 2024<br>
 

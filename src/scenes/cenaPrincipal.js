@@ -4,15 +4,15 @@ class CenaPrincipal extends Phaser.Scene {
   joystickForce = 0;
   atualDialogoIndice = 0;
   dialogo = [
-    `Bom dia alunos e alunas!
+    `Bom dia, alunos e alunas!
 Bem-vindos à Faculdade de Medicina da USP.
-Eu sou a Dra. Tina e serei a instrutora de vocês.
+Eu sou a dr.ª Tina e serei a instrutora de vocês.
 Hoje é um dia muito especial... O Dia da Prevenção!!
 Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos acerca do tema...... QUEIMADURAS!`, 
   //NEW DIALOGUE
-  "A dinâmica funciona em ciclos, e cada ciclo vai ter 3 passos. O primeiro passo é ler o case que irei entregar à vocês, o segundo passo é estudar o case na tenda de livros e, por último, vocês irão realizar um quiz. A cada resposta certa vocês ganham pontos, mas cuidado, se errar a pergunta vocês perderão 10 segundos para completar os ciclos. O objetivo da brincadeira é realizar o maior número de ciclos do jogo no menor tempo.", 
+  "A dinâmica funciona em ciclos e cada um deles terá 3 passos. O primeiro passo, é ler o case que irei entregar à vocês; o segundo passo é estudar o case na tenda de livros e, por último, vocês irão responder um quiz. A cada resposta certa, vocês ganham pontos, mas cuidado, se errar a pergunta vocês perderão 10 segundos e terão menos pontos para completar os ciclos. O objetivo da brincadeira é realizar o maior número de ciclos do jogo no tempo determinado.", 
   //NEW DIALOGUE
-  "Uma dica? Leiam com bastante atenção os cases e os livros, as informações serão essenciais para vocês ganharem mais pontos! Agora vamos começar! E mais importante: Divirtam-se!"]
+  "Querem uma dica? Leiam com bastante atenção os cases e os livros, as informações deles serão essenciais para vocês ganharem mais pontos! Agora vamos começar! E mais importante: Divirtam-se!"]
   constructor() {
     super({
       key: "cenaPrincipal",
@@ -46,6 +46,7 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     //Carrega os assets do jogo
     this.load.audio('musicaIntroducao', 'assets/sounds/IntroMusic.wav') // Música de introdução
     this.load.audio('musicaJogo', 'assets/sounds/gameMusicLoopWithEndGame.mp3') // Música de jogo quando o cronometro está ativo
+    this.load.audio('efeitoSonoroOnibus', 'assets/sounds/efeitoSonoroOnibus.mp3') // SFX do botão iniciar
     //Carrega a biblioteca do joystick
     this.load.plugin(
       "rexvirtualjoystickplugin",
@@ -89,8 +90,13 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     this.load.image('botaoCase_baixo', 'assets/botaoCase_baixo.png');
     this.load.image('botaoCase_alto', 'assets/botaoCase_alto.png');
     this.load.image('botaoCheck', 'assets/checkBotao.png');
+    this.load.image('bandeiraPrevencao', 'assets/bandeiraoPrevencao.png');
+    this.load.image('posteInteliDireita', 'assets/poste_inteli_direita.png');
+    this.load.image('posteInteliEsquerda', 'assets/poste_inteli_esquerda.png');
+    this.load.image('posteUspDireita', 'assets/poste_usp_direita.png');
+    this.load.image('posteUspEsquerda', 'assets/poste_usp_esquerda.png');
     this.load.spritesheet('npc01', 'assets/spritesheets/NPC01.png', {
-      frameWidth: 32,
+      frameWidth: 32, 
       frameHeight: 32
     });
     this.load.spritesheet('npc02', 'assets/spritesheets/NPC02.png', {
@@ -156,14 +162,19 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
       status: false
     };
 
+    // Adiciona efeito sonoro do ônibus
+    this.efeitoSonoroOnibus = this.sound.add('efeitoSonoroOnibus', {
+      loop: true,
+      volume: 0.2});
 
     // Adiciona a música de introdução
     this.musicaIntroducao = this.sound.add('musicaIntroducao', {
-      loop: true
+      loop: true,
+      volume: 0.5
     }); // Adiciona a música de introdução
     this.musicaJogo = this.sound.add('musicaJogo', {
       loop: false,
-      volume: 0.1
+      volume: 0.3
     }); // Adiciona a música de jogo
     this.map = this.make.tilemap({
       key: "mapa",
@@ -221,6 +232,11 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
 
     this.tina = this.physics.add.sprite(560, 400, 'tina').setOffset(8, 12).setCircle(8).setScale(2).refreshBody().setImmovable(); // Adiciona o sprite da Tina
     
+    this.posteInteliDireita = this.add.image(470, 700, 'posteInteliDireita');
+    this.posteInteliEsquerda = this.add.image(650, 700, 'posteInteliEsquerda');
+    this.posteUspDireita = this.add.image(330, 490, 'posteUspDireita');
+    this.posteUspEsquerda = this.add.image(790, 490, 'posteUspEsquerda');
+
     // criando a camada da cerca
     this.cerca = this.map.createLayer("Cerca", [this.tileset6, this.tileset7, this.tileset11, this.tileset12, this.tileset13, this.tileset14]);
 
@@ -228,7 +244,7 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     this.botaoX = this.add.sprite(this.case1.x + 75, this.case1.y - 92, 'botaoX').setInteractive().setScale(0.1).setVisible(false).setScrollFactor(0); // Adiciona a imagem do botao, quando ocorre esse overlap
     this.dialogBox = this.add.rectangle(640, 420, 450, 140, 0xadd8e6, 1).setScrollFactor(0).setOrigin(0.5).setVisible(false).setInteractive(); // Adiciona a caixa de diálogo;
     this.dialogBox.setStrokeStyle(2, 0x1a65ac)
-    this.botaoCheck = this.add.image(820, 450, 'botaoCheck').setInteractive().setVisible(false).setScrollFactor(0).setScale(0.6); // Adiciona o botão de check para iniciar o quiz
+    this.botaoCheck = this.add.image(820, 450, 'botaoCheck').setVisible(false).setScrollFactor(0).setScale(0.6); // Adiciona o botão de check para iniciar o quiz
     
     this.fundoTimer = this.add.image(100, 100, 'azul').setScale(0.3).setVisible(false); // Adiciona o fundo de imagem do timer
     this.tempoInicial = 1200; // Define o tempo do timer
@@ -237,17 +253,16 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
       fill: '#000000'
     }).setVisible(false); // Adiciona o texto do tempo na tela do jogo
     
-
-
+    
     // Cria circulo de colisao da fonte no mapa
     this.circuloFonte = this.add.circle(560, 570, 70, 0xffffff, 0); //Adiciona círculo sob a fonte
     this.physics.add.existing(this.circuloFonte); //Adiciona física ao círculo adicionado
     this.circuloFonte.body.setCircle(70).setImmovable(); //Define a hitbox do objeto criado como um círculo imóvel
     this.onibus = this.physics.add.image(80, 1000, "onibus").setBodySize(150, 70).setOffset(32, 70).refreshBody();
-
-
-
-
+    
+    
+    
+    
     // Esse trecho do código cria todas as colisões do jogo
     this.physics.add.collider(this.jogador, this.worldBounds);
     this.fonte.setCollisionByProperty({
@@ -301,9 +316,9 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
         // pausa a física do jogo enquanto a cena livros estiver exposta
         this.physics.pause()
       }
-
+      
     });
-
+    
     this.physics.add.collider(this.jogador, this.tendaQuiz, () => {
       console.log("Colidiu com a tenda do quiz") //Adiciona colisão entre o jogador e a tenda
       if (this.objetoCaso.status === true){
@@ -314,28 +329,25 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
         this.events.emit('abrirQuiz'); // Emite o evento para abrir o quiz
       }
     });
-
-
-
-
-
-
+    
+    
+    
     //Configuração de animação de câmera ao iniciar o jogo
     this.physics.pause()
     // Move a câmera da faculdade para o personagem
     this.cameras.main.centerOn(550, -250);
-
+    
     const dialogoCompleto = () => {
       this.dialogBox.off('pointerdown', dialogoCompleto)
       this.atualDialogoIndice++
       console.log(this.atualDialogoIndice, this.dialogo.length)
-      if (this.atualDialogoIndice === this.dialogo.length){
+      if (this.atualDialogoIndice === 1){
         this.dialogBox.destroy();
         this.dialogText.destroy();
         this.botaoCheck.destroy();
         this.cameras.main.setBounds(0, 0, 1120, 1120);
         this.cameras.main.pan(50, 1120, 2000);
-
+        
         this.stateMachine.transitionTo('cameraPanOnibus');
         return;
       }
@@ -344,7 +356,7 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     }
     this.cameras.main.pan(550, 470, 5000)
     this.cameras.main.on('camerapancomplete', () => {
-        if (this.stateMachine.currentState() === 'cameraPanParaDialogo') {
+      if (this.stateMachine.currentState() === 'cameraPanParaDialogo') {
         this.botaoCheck.setVisible(true);
         this.dialogBox.setVisible(true);
         this.dialogText = new TypeWritter(this, 420, 353, 'iosevka', this.dialogo[this.atualDialogoIndice], 16, 20, () => {
@@ -353,13 +365,15 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
           this.botaoCheck.on('pointerdown', dialogoCompleto)
         }).setMaxWidth(380).setScrollFactor(0).setInteractive().on('pointerdown', () => { this.dialogText.skip()});
       }
-
+      
       else if (this.stateMachine.currentState() === 'cameraPanOnibus'){
         this.physics.resume();
         this.cameras.main.startFollow(this.onibus, true);
         this.onibus.setVelocityX(100);
+        this.efeitoSonoroOnibus.play();
       }
       else if (this.stateMachine.currentState() === 'entradaDosPersonagens') {
+        this.efeitoSonoroOnibus.stop();
         this.cerca.setVisible(false);
         this.npcControll = 1;
         this.timer = this.time.addEvent({
@@ -395,7 +409,7 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
                 this.timer.remove()
                 this.stateMachine.transitionTo('prontoParaJogar');
               }
-
+              
             }
           },
           loop: true
@@ -412,17 +426,16 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     });
 
     this.cameras.main.setBounds(0, -400, 1120, 1120);
-    this.cameras.main.setZoom(2.5);
-
-
+    this.cameras.main.setZoom(2.5);   
+    
     // Inicializa as variáveis para movimentação do personagem
     this.keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A);
     this.keyW = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W); // O código de cada tecla e o modo pelo qual devemos "chamá-la"
     this.keyS = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S); // encontram-se na linha 115000 do arquivo "phaser.js"
     this.keyD = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D);
     this.cursors = this.input.keyboard.createCursorKeys(); // Adiciona as setas do teclado
-
-
+    
+    
     //Cria o joystick na cena do principal
     this.joystick = this.plugins.get("rexvirtualjoystickplugin").add(
       this, {
@@ -433,7 +446,7 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
         thumb: this.add.circle(0, 0, 15, 0xcccccc),
         minForce: 2,
       }
-    );
+      );
     this.joystick.setScrollFactor(0); // Faz com que o joystick não se mova com a câmera
     this.joystick.setVisible(false); // Esconde o joystick
 

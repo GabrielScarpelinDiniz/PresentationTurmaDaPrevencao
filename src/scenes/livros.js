@@ -43,7 +43,7 @@ class Livros extends Phaser.Scene {
         this.terceiroGrau = this.add.image(400, 475, 'terceiro-grau').setScale(2).setVisible(false);
       
         // Adiciona efeito sonoro de virar a página
-        this.efeitoSonoroVirarPagina = this.sound.add('efeitoSonoroVirarPagina');
+        this.efeitoSonoroVirarPagina = this.sound.add('efeitoSonoroVirarPagina',{volume: 0.5});
       
       
         this.livroVerde.on("pointerdown", () => { // Define função que chama o livro verde aberto quando clicar no livro verde fechado
