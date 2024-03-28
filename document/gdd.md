@@ -1814,6 +1814,80 @@ create()
 this.npc01 = new NPCsAlunos(this.physics.add.sprite(300, 645, 'npc01').setSize(16, 18, 9, 10).setScale(1.5).refreshBody(), this, "npc01")
 this.npc01.setCollisionBetweenItens(this.worldBounds, this.cerca, this.arvores, this.faculdade, this.tendaLivro, this.tendaQuiz, this.circuloFonte, this.jogador, this.npc02.aluno, this.npc03.aluno, this.npc04.aluno, this.npc05.aluno, this.npc06.aluno, this.npc07.aluno, this.npc08.aluno, this.npc09.aluno);
 ````
+
+**Etapa 3 do desenvolvimento - Conteúdo dos livros**
+Para a implementação do conteúdo do livro dinâmico, a ideia foi a mesma dos casos
+Primeiramente, foi criado um arquivo JSON com a seguinte estrutura de dados:
+````json
+[
+  {
+    "0": "conteúdo",
+    "1": "conteúdo",
+    "quantidadePaginas": 2
+  }
+]
+````
+Dessa forma, os dados poderiam ser mostrados de forma dinâmica. A página sempre é passada em pares, então foi utilizada a página 0 com a 1, 2 com a 3 e assim por diante. 
+Para passar a página, dois retângulos foram criados, um na esquerda e outro na direita ocupando metade da tela. Quando clica no retângulo da direita, avança página, quando clica no retângulo da direita, volta página. Ainda, quando clica no retângulo da esquerda e está na página 0 - primeira página - ele volta para os livros. Abaixo, encontra-se a função que mostra o conteúdo dos livros e cria o retângulo com interatividade
+````js
+mostrarConteudo(grau){
+    console.log(this.texto[grau - 1], grau - 1, this.texto[grau - 1].quantidadePaginas, this.texto[grau - 1][0])
+    grau === 1 ? this.primeiroGrau.setVisible(true) : grau === 2 ? this.segundoGrau.setVisible(true) : this.terceiroGrau.setVisible(true);
+    this.primeiraPagina ? this.primeiraPagina.destroy() : null
+    this.segundaPagina ? this.segundaPagina.destroy() : null
+    this.paginaAtual = 0;
+    this.primeiraPagina = this.add.bitmapText(220, 110, 'iosevka', this.texto[grau - 1][this.paginaAtual], 30).setVisible(true).setMaxWidth(320);
+    this.segundaPagina = this.add.bitmapText(660 , 110, 'iosevka', this.texto[grau - 1][this.paginaAtual + 1], 30).setVisible(true).setMaxWidth(320);
+    this.proximaPaginaInterativo = this.add.rectangle(640, 100, 640, 640, 0x000000, 0).setOrigin(0, 0).setInteractive();
+    if (grau === 1) {
+        this.primeiroGrau.setVisible(true)
+    }
+    else if (grau === 2) {
+        this.segundoGrau.setVisible(true)
+    }
+    else if (grau === 3) {
+        this.terceiroGrau.setVisible(true)
+    }
+    this.proximaPaginaInterativo.on("pointerdown", () => {
+        this.efeitoSonoroVirarPagina.play();
+        if (this.paginaAtual < this.texto[0].quantidadePaginas - 2) {
+            this.primeiroGrau.setVisible(false)
+            this.segundoGrau.setVisible(false)
+            this.terceiroGrau.setVisible(false)
+            this.paginaAtual += 2;
+            this.primeiraPagina.setText(this.texto[grau - 1][this.paginaAtual]);
+            this.segundaPagina.setText(this.texto[grau - 1][this.paginaAtual + 1]);
+        }
+    })
+    this.voltarPaginaInterativo = this.add.rectangle(0, 100, 640, 640, 0x000000, 0).setOrigin(0, 0).setInteractive();
+    this.voltarPaginaInterativo.on("pointerdown", () => {
+        this.efeitoSonoroVirarPagina.play();
+        if (this.paginaAtual == 0) {    
+            this.primeiraPagina.destroy();
+            this.segundaPagina.destroy();
+            this.proximaPaginaInterativo.destroy();
+            this.voltarPaginaInterativo.destroy();
+            this.primeiroGrau.setVisible(false)
+            this.segundoGrau.setVisible(false)
+            this.terceiroGrau.setVisible(false)
+            this.livroVerde.setVisible(true);
+            this.livroAmarelo.setVisible(true);
+            this.livroVermelho.setVisible(true);
+            this.livroVermelhoAberto.setVisible(false);
+            this.livroAmareloAberto.setVisible(false);
+            this.livroVerdeAberto.setVisible(false);
+        }
+        else if (this.paginaAtual >= 2) {
+            this.paginaAtual -= 2;
+            this.primeiraPagina.setText(this.texto[grau - 1][this.paginaAtual]);
+            this.segundaPagina.setText(this.texto[grau - 1][this.paginaAtual + 1]);
+            this.paginaAtual === 0 ? grau === 1 ? this.primeiroGrau.setVisible(true) : grau === 2 ? this.segundoGrau.setVisible(true) : this.terceiroGrau.setVisible(true) : null;
+        }
+    })
+}
+````
+Na página zero existe uma imagem que representa as diferentes camadas da pele e qual o grau de queimadura que afeta cada.
+
 ## 4.5. Revisão do MVP (sprint 5)
 
 *Descreva e ilustre aqui o desenvolvimento dos refinamentos e revisões da versão final do jogo, explicando brevemente o que foi entregue em termos de MVP. Utilize prints de tela para ilustrar.*
