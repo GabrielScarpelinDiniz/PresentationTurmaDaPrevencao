@@ -2455,7 +2455,7 @@ verificarResposta(resposta, alternativaCorreta) {
     }
 ```
 
-Tais métodos são chamados em outro método, chamado `verificarResposta()`, que, por sua vez, é chamado no evento de clique do mouse em uma das alternativas do quiz, verificando se essa alternativa está correta e chamando o método próprio para o acerto ou erro do jogador, do seguinte modo:
+&nbsp;&nbsp;&nbsp;&nbsp;Tais métodos são chamados em outro método, chamado `verificarResposta()`, que, por sua vez, é chamado no evento de clique do mouse em uma das alternativas do quiz, verificando se essa alternativa está correta e chamando o método próprio para o acerto ou erro do jogador, do seguinte modo:
 
 ```js
 verificarResposta(resposta, alternativaCorreta) {
