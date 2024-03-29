@@ -23,25 +23,25 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     }
   }
   preload() {
-    // this.load.on('complete', (params) => {
-    //   this.boxBarraDeCarregamento.destroy();
-    //   this.barraCarregamento.destroy();
-    //   this.carregandoTexto.destroy();
-    // });
-    // this.load.on('progress', (value) => {
-    //   this.barraCarregamento.width = 780 * value;
-    // });
+    this.load.on('complete', (params) => {
+      this.boxBarraDeCarregamento.destroy();
+      this.barraCarregamento.destroy();
+      this.carregandoTexto.destroy();
+    });
+    this.load.on('progress', (value) => {
+      this.barraCarregamento.width = 780 * value;
+    });
 
     this.cameras.main.setBackgroundColor(0xA5E2FF);
     this.cameras.main.fadeIn(1000, 0, 0, 0);
     
-    // //Cria a lógica de carregamento enquanto as assets são carregadas
-    // this.boxBarraDeCarregamento = this.add.rectangle(240, 600, 800, 100, 0x000000, 0.8).setStrokeStyle(4, 0xFFFFFF).setOrigin(0, 0);
-    // this.barraCarregamento = this.add.rectangle(250, 610, 0, 80, 0xFFFFFF, 0.8).setOrigin(0, 0);
-    // this.carregandoTexto = this.add.text(240, 550, 'Carregando...', {
-    //   fontSize: '40px',
-    //   fill: '#FFFFFF'
-    // }).setOrigin(0, 0);
+    //Cria a lógica de carregamento enquanto as assets são carregadas
+    this.boxBarraDeCarregamento = this.add.rectangle(240, 600, 800, 100, 0x000000, 0.8).setStrokeStyle(4, 0xFFFFFF).setOrigin(0, 0);
+    this.barraCarregamento = this.add.rectangle(250, 610, 0, 80, 0xFFFFFF, 0.8).setOrigin(0, 0);
+    this.carregandoTexto = this.add.text(240, 550, 'Carregando...', {
+      fontSize: '40px',
+      fill: '#FFFFFF'
+    }).setOrigin(0, 0);
 
     //Carrega os assets do jogo
     this.load.audio("musicaIntroducao", "assets/sounds/IntroMusic.wav") // Música de introdução
@@ -147,7 +147,6 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
   }
 
   create() {
-    
 
     this.maquinaEstado = new StateMachine("cameraPanParaDialogo");
     this.sorteados = [];
@@ -202,6 +201,7 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
 
     console.log(this.tileset16)
     
+
     this.chao = this.map.createLayer("Chao", [this.tileset1, this.tileset4, this.tileset5, this.tileset8]);
     this.detalhesChao = this.map.createLayer("DetalhesChao", [this.tileset16]);
     this.arvores = this.map.createLayer("Arvores", [this.tileset10, this.tileset11]);
@@ -259,7 +259,6 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     this.physics.add.existing(this.circuloFonte); //Adiciona física ao círculo adicionado
     this.circuloFonte.body.setCircle(70).setImmovable(); //Define a hitbox do objeto criado como um círculo imóvel
     this.onibus = this.physics.add.image(80, 1000, "onibus").setBodySize(150, 70).setOffset(32, 70).refreshBody();
-    
     
     
     

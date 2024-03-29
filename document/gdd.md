@@ -41,6 +41,77 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;Internacionalmente reconhecida, a FMUSP continua a liderar o caminho em pesquisas de vanguarda, abrangendo áreas como cirurgia com células-tronco, desenvolvimento de pele artificial e outras tendências futuras na medicina.
 
+#### 1.1.1.1. 5 Forças de Porter
+
+&nbsp;&nbsp;&nbsp;&nbsp;As cinco forças de Porter é um framework fundado por Michael Porter, professor da Harvard Business School, em 1970(referência). O modelo é utilizado para realizar uma análise setorial do mercado em que a empresa está inserida, mostrando qual sua posição no setor em comparação com outros empreendimentos atuantes do mesmo setor. Segundo Joan Magretta, editora de estratégia na Harvard Business Review, "a estrutura das cinco forças explica os preços e custos médios do setor e, portanto, a lucratividade média a ser superada."(referência), ou seja, compreender com profundidade a rivalidade entre concorrentes (1), a ameaça de novos entrantes (2), o poder de barganha dos fornecedores (3), o poder de barganha dos clientes (4) e a ameaça de produtos substitutos (5), é fundamental para entender a dinâmica da competição e para construir uma estratégia empresarial que visa mais lucro. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;A partir do nosso projeto, realizamos uma análise profunda do setor de faculdades de medicina no estado de São Paulo, utilizando o modelo de Porter (figura xx) e explicando como cada uma das 5 forças funcionam nesse setor.
+
+**Rivalidade entre concorrentes**
+
+&nbsp;&nbsp;&nbsp;&nbsp;No cenário das faculdades de medicina em São Paulo, a rivalidade entre as instituições é acirrada e desempenha um grande papel na determinação da excelência e reputação de cada uma. Tanto as faculdades públicas quanto as privadas competem vigorosamente por recursos essenciais, incluindo:
+
+- Atração dos melhores professores e pesquisadores e recursos necessários para desenvolver programas educacionais focados em pesquisa de alta qualidade. A principal reputação das instituições públicas está ligada à qualidade do ensino e à produção científica de seus professores e alunos
+
+- Acesso a hospitais de ensino afiliados, onde os alunos realizam estágios e residências. Hospitais de renome, como o Hospital das Clínicas, são disputados pelas faculdades públicas, que buscam estabelecer parcerias estratégicas para oferecer uma educação clínica de alta qualidade aos estudantes.
+
+- Reputação e prestígio entre as faculdades de medicina públicas em São Paulo. Instituições como a FMUSP têm uma longa história de excelência acadêmica e pesquisa de ponta, e outras faculdades públicas buscam elevar seu status por meio de avanços em pesquisa, publicações científicas e reconhecimento nacional e internacional.
+
+- Faculdades públicas, como a Faculdade de Medicina da Universidade de São Paulo (FMUSP), a Faculdade de Medicina da Universidade Estadual de Campinas (UNICAMP) e a Faculdade de Medicina de São José do Rio Preto (FAMERP) competem pela alocação de recursos governamentais limitados. Essas instituições dependem do financiamento público para manter suas operações e infraestrutura, o que pode gerar uma competição acirrada entre elas por uma fatia maior do orçamento estatal.
+
+- As faculdades de medicina privadas competem pela captação de recursos financeiros por meio de mensalidades, doações e parcerias corporativas. Elas dependem da mensalidade paga pelos alunos para financiar suas operações, o que as leva a competir por estudantes e oferecer programas educacionais atrativos.
+
+- Oferta de programas educacionais mais atualizados e inovadores. Por exemplo, o Hospital Israelita Albert Einstein em São Paulo se destaca pelo uso de maquetes 3D no ensino médico. Essas maquetes permitem uma compreensão detalhada da anatomia humana, proporcionando uma experiência de aprendizado tátil e interativa. Essa abordagem inovadora evidencia o compromisso do Einstein com a excelência educacional e atrai alunos interessados em uma educação médica moderna.
+
+**Ameaça de Novos Entrantes**
+
+&nbsp;&nbsp;&nbsp;&nbsp;A ameaça de novos entrantes no setor de faculdades de medicina no estado de São Paulo é relativamente baixa, devido a fatores como:
+
+- Complexidade na certificação e regulamento feito pelo governo, exigindo autorização e cumprimento de requisitos legais e administrativos. Isso inclui a necessidade de avaliação e aprovação por parte do Ministério da Educação (MEC) e do Conselho Estadual de Educação, tornando o processo de entrada no mercado bastante restritivo. Além das regulamentações governamentais, as faculdades de medicina também estão sujeitas a processos de acreditação e certificação por organizações profissionais e acadêmicas.
+
+- Requer um investimento significativo em infraestrutura, recursos humanos qualificados, equipamentos médicos, laboratórios e instalações clínicas. O alto custo inicial pode representar uma barreira substancial para potenciais novos entrantes.
+
+- Requer experiência e conhecimento específico no campo da educação médica. Novos entrantes podem enfrentar dificuldades se não tiverem uma equipe acadêmica e administrativa experiente e capacitada para lidar com os desafios complexos do ambiente educacional e da prática clínica.
+
+- O mercado de faculdades de medicina em São Paulo já é dominado por instituições tradicionais e bem estabelecidas, tanto públicas quanto privadas, que possuem reputação consolidada, recursos robustos e redes de parcerias com instituições de saúde. Competir com essas instituições consolidadas seria um desafio significativo para novos entrantes.
+
+- Os estudantes e profissionais de saúde geralmente preferem faculdades com reputação reconhecida e programas de alta qualidade. Estabelecer uma nova instituição e construir uma reputação respeitável no mercado exigiria tempo e esforço substanciais, representando outra barreira para novos participantes.
+
+
+**Poder de Barganha dos Fornecedores**
+
+&nbsp;&nbsp;&nbsp;&nbsp;O poder de barganha dos fornecedores pode variar dependendo dos tipos de fornecedores considerados:
+
+- Os fornecedores de tecnologia e equipamentos médicos têm um poder alto devido à oferta de recursos essenciais para o ensino médico, como equipamentos de simulação e dispositivos médicos. Com poucos fornecedores especializados, podem impor preços elevados e condições contratuais rigorosas. Por exemplo, a empresa de dispositivos médicos Stryker Corporation, que fornecem uma variedade de equipamentos e tecnologias utilizados em cirurgias ortopédicas, neurocirurgias e outras especialidades médicas. Devido à sua reputação estabelecida e à qualidade de seus produtos, a Stryker tem uma posição forte no mercado e pode influenciar os preços e condições contratuais ao fornecer seus dispositivos para faculdades de medicina. 
+
+- Os fornecedores de materiais didáticos e livros têm um poder de barganha menor em comparação com os fornecedores de tecnologia médica. Isso se deve à variedade maior de opções disponíveis e à flexibilidade das faculdades de medicina para escolher entre diferentes editoras e distribuidores. No entanto, os fornecedores ainda podem influenciar os preços e as condições de pagamento, especialmente para materiais específicos ou edições atualizadas.
+
+- Empresas que fornecem serviços de limpeza, manutenção e gestão de instalações para as faculdades de medicina geralmente têm um poder de barganha mais baixo, pois esses serviços são considerados commodities e há várias opções disponíveis no mercado. As faculdades podem facilmente substituir ou negociar com diferentes fornecedores para obter condições mais favoráveis.
+
+- Empresas fornecedoras de equipamentos de laboratório especializados, como microscópios e centrífugas, têm um poder de barganha moderado devido à necessidade desses equipamentos para atividades educacionais e de pesquisa das faculdades de medicina. No entanto, a existência de fornecedores alternativos e a capacidade de negociar com base no volume de compra podem afetar esse poder.
+
+**Poder de Barganha dos Clientes**
+
+&nbsp;&nbsp;&nbsp;&nbsp;O poder de barganha dos clientes nesse setor é bastante limitado, pois as faculdades de medicina privadas têm alta demanda e já possuem preços fixos de matrícula e mensalidade, ou seja, os estudantes não têm nenhuma influência direta para ditar o preço. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;No caso das faculdades onde o ensino é público, os clientes não têm nenhum poder de barganha financeira visto que a educação é gratuita e financiada pelo governo estadual ou federal. No entanto, os estudantes das faculdades de medicina públicas têm certo poder de negociação quando realizam greves, exercendo pressão no governo, para que suas reivindicações sejam atendidas.
+
+**Ameaça de Novos Substitutos**
+
+&nbsp;&nbsp;&nbsp;&nbsp;A ameaça de novos substitutos para as faculdades de medicina, tanto particulares quanto públicas, é baixa. Isso acontece pois não há outros serviços ou produtos alternativos que levam alguém a exercer, legalmente, a profissão de médico sem que tenha passado pelo processo tradicional de formação. A prática da medicina envolve muitas responsabilidades para com a saúde de todos, e por isso existem diversas regulamentações rigorosas que dificultam substitutos nesse setor, como por exemplo:
+
+- Para ser reconhecido como médico no Brasil e obter licença médica, é obrigatório ter um diploma que comprove a conclusão do curso de Medicina em uma instituição reconhecida pelo Ministério da Educação.
+
+- O Conselho Federal e Regional de Medicina são órgãos responsáveis por regulamentar e fiscalizar a prática médica no Brasil. É obrigatório que os médicos se inscrevam no Conselho para obter registro profissional e poder exercer a profissão, também necessitando de um diploma no curso superior de medicina.
+
+&nbsp;&nbsp;&nbsp;&nbsp;No entanto, alguns fatores que podem levar a substituição da escolha do curso de medicina, mas não suprir completamente seus benfícios são:
+
+- Pessoas que têm interesse nas áreas de ciências da saúde, mas não exclusivamente querem ou conseguem se tornar médicas. Essas pessoas optam por outros cursos relacionados à saúde, como por exemplo, Enfermagem, Fisioterapia e Biomedicina. 
+
+- Pessoas cujo a escolha do curso tenha sido majoritariamente influenciada pela remuneração do emprego. Antigamente, fazer curso de medicina trazia ao estudante diversos benefícios sociais, como o interesse pela posição socioeconômica e a aprovação de familiares e da sociedade no geral(referência 3). Atualmente, há diversas alternativas para aqueles que buscam segurança financeira e/ou prestígio, como por exemplo, cursos de Economia e Engenharia(referência 4).
+
+
+
 ### 1.1.2. Análise SWOT
 
 &nbsp;&nbsp;&nbsp;&nbsp;A matriz SWOT é uma ferramenta de planejamento estratégico que ajuda as empresas na tomada de decisão. Esta metodologia divide-se em aspectos internos e externos, compreendendo forças (*strengths*) e fraquezas (*weaknesses*) para o ambiente interno, e oportunidades (*opportunities*) e ameaças (*threats*) para o externo, que têm por objetivo identificar os principais pontos de influência que afetam a empresa para uma clareza melhor de quais são os fatores que estão sob seu controle (internos) e os que não estão (externos)¹.
