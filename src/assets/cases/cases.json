@@ -69,11 +69,11 @@
             "pergunta": "O que poderia ser feito para evitar a situação de queimadura que aconteceu com Graça Silva?",
             "alternativas": [
                 "Utilizar luvas de proteção para evitar infecção",
-                "ler cuidadosamente as instruções sobre o uso seguro dos produtos que estão sendo manipulados"
+                "Ler cuidadosamente as instruções sobre o uso seguro dos produtos que estão sendo manipulados"
             ],
             "alternativaCorreta": 1
         },
-        "feedbackRespostaErrada": "Ops! Essa resposta está incorreta. Embora o uso de luvas de proteção seja importante, é essencial ler cuidadosamente as instruções sobre o uso seguro dos produtos para evitar acidentes.",
+        "feedbackRespostaErrada": "Ops! Embora o uso de luvas de proteção seja importante, é essencial ler as instruções sobre o uso seguro dos produtos para evitar acidentes.",
         "feedbackRespostaCerta": "Parabéns! Ler as instruções sobre o uso seguro dos produtos que estão sendo manipulados é uma medida importante para evitar acidentes como o de Graça Silva."
     
     },
