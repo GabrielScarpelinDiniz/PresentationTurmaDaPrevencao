@@ -2300,6 +2300,185 @@ create() {
   }
 ```
 
+**Etapa 7 do desenvolvimento - Implementação de mais quizes e *feedbacks* ao responder às questões**
+
+&nbsp;&nbsp;&nbsp;&nbsp;Para a implementação de mais quizes, assim como na implementação de cases, foi utilizado um _JSON_ para armazenar as informações que seriam atreladas a cada quiz e, simultâneamente, a cada case que o usuário estivesse naquele momento, segue o modelo desse _JSON_:
+
+```json
+{
+        "nome": "APOLO SOLEMAR",
+        "fotoKey": "apolo",
+        "desc": "Sofreu queimaduras solares depois de passar muito tempo exposto ao sol sem proteção adequada.",
+        "colored": ["solares", "exposto"],
+        "sintomas": "Apresenta pele vermelha, quente ao toque, dor local suportável.",
+        "classificacao": "PRIMEIRO GRAU",
+        "classificacaoCor": "0x21FF21",
+        "quiz": {
+            "pergunta": "De que maneira Apolo poderia ter evitado sua lesão?",
+            "alternativas": [
+                "Evitar exposição solar durante momentos quentes do dia",
+                "Passar creme hidratante na pele antes de se expor ao Sol"
+            ],
+            "alternativaCorreta": 0
+        },
+        "feedbackRespostaErrada": "Ops! Essa resposta está incorreta. Expor-se ao sol durante momentos quentes do dia sem proteção adequada pode resultar em queimaduras solares.",
+        "feedbackRespostaCerta": "Parabéns! Evitar exposição solar durante momentos quentes do dia é uma medida importante para prevenir queimaduras solares."
+    }
+```
+&nbsp;&nbsp;&nbsp;&nbsp;Desse modo, é possível gerar de maneira dinâmica as perguntas que serão feitas, atrelando cada uma a um caso e depois chamar seu texto por meio de uma variável que recebe o objeto `this.primeiraCena.objetoCaso.caso` cujos atributos são os dados do caso guardados no _JSON_. Assim, é simples acessar os textos, pois se tornam propriedades de um objeto, como pode ser exemplificado em `caso.quiz.pergunta`, que é utilizado para setar o texto da pergunta do caso em específico que foi sorteado para o jogador. Junto a tudo isso, também foi adicionado um texto de feedback para as respostas, explicando o porquê de ela estar certa ou errada, que aparece no lugar onde estava o logo do quiz. Isso pode ser observado abaixo:
+
+```js
+
+this.primeiraCena.events.on('abrirQuiz', () => {
+    const caso = this.primeiraCena.objetoCaso.caso;
+    this.add.text(bgWhite.x, bgWhite.y - 40, caso.quiz.pergunta, {
+        fontSize: '20px',
+        color: '#000',
+        fontFamily: 'Arial',
+        align: 'center',
+        wordWrap: {
+            width: 500
+        }
+    }).setOrigin(0.5);
+
+    // Adicionando as alternativas à cena e suas aparências na interface
+    const alternativa1 = this.add.text(bgWhite.x, bgWhite.y + 60, caso.quiz.alternativas[0], {
+        fontSize: '23px',
+        color: '#000',
+        fontFamily: 'Arial',
+        backgroundColor: '#008CCC',
+        padding: {
+            x: 10,
+            y: 10
+        },
+        wordWrap: {
+            width: 500
+        },
+        align: 'center'
+    }).setOrigin(0.5).setInteractive().on('pointerdown', () => {
+        if (!this.alternativaRespondida){
+            this.verificarResposta(0, caso.quiz.alternativaCorreta);
+            this.primeiraCena.objetoCaso.status = false;
+            this.primeiraCena.objetoCaso.caso = null;
+            this.alternativaRespondida = true;
+            this.cenaHUD.events.emit('quiz-respondido')
+        }
+    });
+
+    const alternativa2 = this.add.text(bgWhite.x, bgWhite.y + 140, caso.quiz.alternativas[1], {
+        fontSize: '21px',
+        color: '#000',
+        fontFamily: 'Arial',
+        backgroundColor: '#FFC107',
+        padding: {
+            x: 10,
+            y: 10
+        },
+        wordWrap: {
+            width: 500
+        },
+        align: 'center'
+    }).setOrigin(0.5).setInteractive().on('pointerdown', () => {
+        if (!this.alternativaRespondida){
+            this.verificarResposta(1, caso.quiz.alternativaCorreta);
+            this.primeiraCena.objetoCaso.status = false;
+            this.primeiraCena.objetoCaso.caso = null;
+            this.alternativaRespondida = true;
+            this.cenaHUD.events.emit('quiz-respondido')
+        }
+    });
+    
+        // Adicionando texto da explicação do porque está certa ou errada a alternativa à cena e também configurações estéticas
+        this.textoExplicacaoAlternativaErrada = this.add.text(bgWhite.x, bgWhite.y - 130, caso.feedbackRespostaErrada, {
+            fontSize: '22px',
+            color: '#ff0000',
+            fontFamily: 'Arial',
+            align: 'center',
+            wordWrap: {
+                width: 500
+            }
+        }).setOrigin(0.5).setVisible(false);
+        this.textoExplicacaoAlternativaCerta = this.add.text(bgWhite.x, bgWhite.y - 130, caso.feedbackRespostaCerta, {
+            fontSize: '22px',
+            color: '#008000',
+            fontFamily: 'Arial',
+            align: 'center',
+            wordWrap: {
+                width: 500
+            }
+        }).setOrigin(0.5).setVisible(false);
+})
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;Por fim, foi adicionado um método que verifica se a resposta está correta ou incorreta e, com base nisso, exibe um dos *feedbacks* e um dos sons possíveis para demonstrar se a alternativa está correta ou incorreta, como pode ser visto a seguir:
+
+```js
+verificarResposta(resposta, alternativaCorreta) {
+        // Verifica se a resposta está correta
+        this.simboloQuiz.setVisible(false)
+        if (resposta === alternativaCorreta) {
+            this.efeitoSonoroAcertar.play();
+            this.cenaHUD.atualizarPontuacao(10);
+            // Define a mensagem de explicação para resposta correta
+            this.textoExplicacaoAlternativaCerta.setVisible(true);
+            this.fundoFeedback.setVisible(true);
+            this.fundoFeedback.setStrokeStyle(2, 0x008000).setVisible(true);
+        } else {
+            this.efeitoSonoroErrar.play();
+            this.cenaHUD.atualizarTempo(10);
+            // Define a mensagem de explicação para resposta incorreta
+            this.textoExplicacaoAlternativaErrada.setVisible(true);
+            this.fundoFeedback.setVisible(true);
+            this.fundoFeedback.setStrokeStyle(2, 0xff0000).setVisible(true);
+        }
+    }
+```
+
+**Etapa 8 do desenvolvimento - Lógica de pontuação e perda de tempo**
+
+&nbsp;&nbsp;&nbsp;&nbsp;Nessa etapa, foi adicionada ao jogo a lógica de pontuação, que é atualizada a cada pergunta nova que é respondida corretamente, por outro lado, se ela for respondida incorretamente, o jogador perderá 10 segundos, implicando que ele faça menos casos, portanto poderá obtermenos pontos de forma indireta. Tal adição foi feita por meio dos métodos `atualizarPontuacao()` e `atualizarTempo()` da seguinte maneira:
+
+```js
+    atualizarPontuacao(pontuacao){
+        this.pontuacao += pontuacao;
+        this.textoPontos.setText(`Pontos: ${this.pontuacao}`);
+    }
+    atualizarTempo(tempo){
+        this.tempoInicial -= tempo;
+        this.textoTempo.setText((this.tempoInicial - this.tempoInicial %60)/60 + 'min ' + this.tempoInicial %60 + 's');
+        this.textoTempoDescontado.setVisible(true);
+        this.fundoTempoDescontado.setVisible(true).setStrokeStyle(2, 0xff0000);
+        if (this.tempoInicial >= -10 && this.tempoInicial < 0){
+            this.tempoInicial = 0
+        }
+    }
+```
+
+Tais métodos são chamados em outro método, chamado `verificarResposta()`, que, por sua vez, é chamado no evento de clique do mouse em uma das alternativas do quiz, verificando se essa alternativa está correta e chamando o método próprio para o acerto ou erro do jogador, do seguinte modo:
+
+```js
+verificarResposta(resposta, alternativaCorreta) {
+        // Verifica se a resposta está correta
+        this.simboloQuiz.setVisible(false)
+        if (resposta === alternativaCorreta) {
+            this.efeitoSonoroAcertar.play();
+            this.cenaHUD.atualizarPontuacao(10);
+            // Define a mensagem de explicação para resposta correta
+            this.textoExplicacaoAlternativaCerta.setVisible(true);
+            this.fundoFeedback.setVisible(true);
+            this.fundoFeedback.setStrokeStyle(2, 0x008000).setVisible(true);
+        } else {
+            this.efeitoSonoroErrar.play();
+            this.cenaHUD.atualizarTempo(10);
+            // Define a mensagem de explicação para resposta incorreta
+            this.textoExplicacaoAlternativaErrada.setVisible(true);
+            this.fundoFeedback.setVisible(true);
+            this.fundoFeedback.setStrokeStyle(2, 0xff0000).setVisible(true);
+        }
+    }
+```
+
 
 **Dificuldades**
 - A implementação dinâmica dos Cases usando _JSON_;
