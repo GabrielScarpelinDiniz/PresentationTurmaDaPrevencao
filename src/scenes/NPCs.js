@@ -28,6 +28,7 @@ class NPCsAlunos {
     this.updateAnimation();
   }
   updateAnimation(){
+    // Atualiza a animação do aluno
     if (this.aluno.body.velocity.x > 0) {
       // Adiciona a animação de andar para a direita
       this.aluno.anims.play(`${this.keySprite}Walk`, true);

@@ -2,12 +2,12 @@ class CenaHUD extends Phaser.Scene
 {
     constructor ()
     {
-        super({ key: 'cenaHUD', active: true}); // Define a key da cena e a mantém ativada desde o início do ciclo de jogo
+        super({ key: "cenaHUD", active: true}); // Define a key da cena e a mantém ativada desde o início do ciclo de jogo
 
     }
     preload () {
-        this.load.image('botaoCaseBaixo', 'assets/botaoCase_baixo.png');
-        this.load.image('botaoCaseAlto', 'assets/botaoCase_alto.png');
+        this.load.image("botaoCaseBaixo", "assets/botaoCase_baixo.png");
+        this.load.image("botaoCaseAlto", "assets/botaoCase_alto.png");
     }
 
     create ()
@@ -17,29 +17,30 @@ class CenaHUD extends Phaser.Scene
         this.pontuacao = 0;
         // Cria os elementos do timer
         this.fundoTimer = this.add.rectangle(635, 30, 210, 50, 0xadd8e6).setVisible(false).setAlpha(0.8);
-        this.textoTempo = this.add.text(540, 15,  (this.tempoInicial - this.tempoInicial %60)/60 + 'min ' + this.tempoInicial %60 + 's', { fontSize: '40px', fill: '#000000'}).setVisible(false); // Adiciona o texto do tempo na tela do jogo
-        this.botaoCaseBaixo = this.add.image(1140, 150, 'botaoCaseBaixo').setScale(3).setVisible(false).setInteractive();
-        this.botaoCaseAlto = this.add.image(1140, 150, 'botaoCaseAlto').setScale(3).setVisible(false).setInteractive();
+        this.textoTempo = this.add.text(540, 15,  (this.tempoInicial - this.tempoInicial %60)/60 + "min " + this.tempoInicial %60 + "s", { fontSize: "40px", fill: "#000000"}).setVisible(false); // Adiciona o texto do tempo na tela do jogo
+        this.botaoCaseBaixo = this.add.image(1140, 150, "botaoCaseBaixo").setScale(3).setVisible(false).setInteractive();
+        this.botaoCaseAlto = this.add.image(1140, 150, "botaoCaseAlto").setScale(3).setVisible(false).setInteractive();
         this.botaoCase = this.add.circle(1140, 150, 70, 0xffffff, 1).setVisible(false).setInteractive().setAlpha(0.1);
         this.fundoTempoDescontado = this.add.rectangle(715, 90, 140, 55, 0xf10016).setVisible(false).setAlpha(0.14);
-        this.textoTempoDescontado = this.add.text(650, 70, "-10s", { fontSize: '50px', fill: '#ff0000'}).setVisible(false); // Adiciona o texto do tempo descontado na tela do jogo
+        this.textoTempoDescontado = this.add.text(650, 70, "-10s", { fontSize: "50px", fill: "#ff0000"}).setVisible(false); // Adiciona o texto do tempo descontado na tela do jogo
 
         // Cria os elementos da tarefas
         this.fundoTarefa = this.add.rectangle(5, 5, 450, 50, 0xadd8e6).setVisible(false).setAlpha(0.9).setOrigin(0,0);
-        this.textoTarefa = this.add.text(10, 15, "Procure a dr.ª Tina", { fontSize: '36px', fill: '#000000'}).setVisible(false);
+        this.textoTarefa = this.add.text(10, 15, "Procure a dr.ª Tina", { fontSize: "36px", fill: "#000000"}).setVisible(false);
 
         // Cria os elementos da pontuação
         this.fundoPontos = this.add.rectangle(1140, 30, 260, 50, 0xadd8e6).setVisible(false).setAlpha(0.9);
-        this.textoPontos = this.add.text(1020, 15, "Pontos: 0", { fontSize: '36px', fill: '#000000'}).setVisible(false);
+        this.textoPontos = this.add.text(1020, 15, "Pontos: 0", { fontSize: "36px", fill: "#000000"}).setVisible(false);
 
         //  Define variáveis de chamada das cenas
-        const cenaAtual = this.scene.get('cenaPrincipal');
-        const cenaLivros = this.scene.get('livros');
-        const cenaCases = this.scene.get('cenaCases');
+        const cenaAtual = this.scene.get("cenaPrincipal");
+        const cenaLivros = this.scene.get("livros");
+        const cenaCases = this.scene.get("cenaCases");
         
         // Cria evento para mostrar parte da HUD (Tarefas)
-        cenaAtual.events.on('mostraTarefaInicial', function () 
+        cenaAtual.events.on("mostraTarefaInicial", function () 
         {
+            // Mostra o texto da tarefa
             this.fundoTarefa.setStrokeStyle(2, 0x1a65ac).setVisible(true);
             this.textoTarefa.setVisible(true);
             this.fundoPontos.setStrokeStyle(2, 0x1a65ac).setVisible(true);
@@ -49,7 +50,7 @@ class CenaHUD extends Phaser.Scene
 
         
         // Cria evento para mostrar parte da HUD (Timer)
-        cenaAtual.events.on('showTimer', function ()
+        cenaAtual.events.on("showTimer", function ()
         {
             setTimeout( () => {
             }, this.tempoInicial * 1000); // função para chamar tela final após o tempo de jogo
@@ -68,12 +69,12 @@ class CenaHUD extends Phaser.Scene
                     if (this.tempoInicial > 0) {
                         this.tempoInicial -= 1; // Decrementa o contador
                     }
-                    this.textoTempo.setText((this.tempoInicial - this.tempoInicial %60)/60 + 'min ' + this.tempoInicial %60 + 's')
-                    // console.log('time: ',time/1000)
+                    this.textoTempo.setText((this.tempoInicial - this.tempoInicial %60)/60 + "min " + this.tempoInicial %60 + "s")
+                    // console.log("time: ",time/1000)
                        
                     if ((this.tempoInicial - this.tempoInicial %60)/60 === 0 && this.tempoInicial <= 30) {
                         //this.textoTempo.setPosition(550, 400);
-                        this.textoTempo.setColor('#ff0000');
+                        this.textoTempo.setColor("#ff0000");
                     };
                 },
                 loop: true // Atualiza o texto
@@ -81,7 +82,7 @@ class CenaHUD extends Phaser.Scene
         }, this);
 
         // Cria evento para mostrar o case por um botão
-        cenaAtual.events.on('botaoCase', function () // Define o evento 'botaoCase'
+        cenaAtual.events.on("botaoCase", function () // Define o evento "botaoCase"
         {
             this.botaoCase.setVisible(true);
             this.botaoCaseBaixo.setVisible(true);
@@ -97,26 +98,27 @@ class CenaHUD extends Phaser.Scene
                 this.botaoCaseAlto.setVisible(false);
             });
 
-            this.botaoCase.on("pointerdown", () => { // Disparo da cena 'abrirCase' quando clicar no botão do case
+            this.botaoCase.on("pointerdown", () => { // Disparo da cena "abrirCase" quando clicar no botão do case
                 cenaAtual.physics.pause();
-                this.events.emit('abrirCase');
+                this.events.emit("abrirCase");
                 console.log("teste2");
             });
         }, this);
 
         // Cria evento para mudar o texto de elementos do HUD
-        cenaLivros.events.on('mudaTarefaParaQuiz', function () // Define o evento 'botaoCase'
+        cenaLivros.events.on("mudaTarefaParaQuiz", function () // Define o evento "botaoCase"
         {
             this.textoTarefa.setText("Tenda do Quiz? ->");
         }, this);
 
         // Cria evento para mudar o texto de elementos do HUD
-        cenaCases.events.on('mudaTarefaParaLivros', function () // Define o evento 'botaoCase'
+        cenaCases.events.on("mudaTarefaParaLivros", function () // Define o evento "botaoCase"
         {
             this.textoTarefa.setText("Tenda dos Livros? <-");
         }, this);
 
-        this.events.on('quiz-respondido',  () => {
+        this.events.on("quiz-respondido",  () => {
+            // Fecha tudo do case e volta para o jogo
             this.botaoCaseAlto.setVisible(false);
             this.botaoCaseBaixo.setVisible(false);
             this.botaoCase.setVisible(false);
@@ -126,12 +128,14 @@ class CenaHUD extends Phaser.Scene
         
     }
     atualizarPontuacao(pontuacao){
+        // Atualiza a pontuação
         this.pontuacao += pontuacao;
         this.textoPontos.setText(`Pontos: ${this.pontuacao}`);
     }
     atualizarTempo(tempo){
+        // Atualiza o tempo
         this.tempoInicial -= tempo;
-        this.textoTempo.setText((this.tempoInicial - this.tempoInicial %60)/60 + 'min ' + this.tempoInicial %60 + 's');
+        this.textoTempo.setText((this.tempoInicial - this.tempoInicial %60)/60 + "min " + this.tempoInicial %60 + "s");
         this.textoTempoDescontado.setVisible(true);
         this.fundoTempoDescontado.setVisible(true).setStrokeStyle(2, 0xff0000);
         if (this.tempoInicial >= -10 && this.tempoInicial < 0){

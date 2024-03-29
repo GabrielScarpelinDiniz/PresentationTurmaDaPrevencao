@@ -12,7 +12,7 @@ class MenuPrincipal extends Phaser.Scene {
       frameWidth: 400,
       frameHeight: 200
     }) // Imagem para botaoJogar
-    this.load.audio('efeitoSonoroBotaoIniciar', 'assets/sounds/efeitoSonoroBotaoIniciar.mp3') // SFX do botão iniciar
+    this.load.audio("efeitoSonoroBotaoIniciar", "assets/sounds/efeitoSonoroBotaoIniciar.mp3") // SFX do botão iniciar
   }
 
   create() {
@@ -28,12 +28,12 @@ class MenuPrincipal extends Phaser.Scene {
     this.botaoJogar = this.add.sprite(640, 620, "botaoJogar").setInteractive().setScale(1)
 
     // Adiciona efeito sonoro do botão iniciar
-    this.efeitoSonoroBotaoIniciar = this.sound.add('efeitoSonoroBotaoIniciar',{volume: 0.5});
+    this.efeitoSonoroBotaoIniciar = this.sound.add("efeitoSonoroBotaoIniciar",{volume: 0.5});
 
     // Cria a animação de botaoJogar
     this.anims.create({
-      key: 'animar',
-      frames: this.anims.generateFrameNumbers('botaoJogar', {
+      key: "animar",
+      frames: this.anims.generateFrameNumbers("botaoJogar", {
         start: 0,
         end: 1
       }),
@@ -42,7 +42,7 @@ class MenuPrincipal extends Phaser.Scene {
     });
 
     // Ativa a animação de botaoJogar
-    this.botaoJogar.anims.play('animar', true);
+    this.botaoJogar.anims.play("animar", true);
 
     // Move as nuvens no eixo X
     this.nuvem1.setVelocityX(-190);
@@ -82,12 +82,13 @@ class MenuPrincipal extends Phaser.Scene {
       // this.openFullScreen()
     })
 
-    this.scene.sleep('livros');
-    this.scene.sleep('quiz');
+    this.scene.sleep("livros");
+    this.scene.sleep("quiz");
 
   }
 
   update() {
+    // Lógica para destruir nuvens caso ultrapassem os limites de tela e criar algumas novas nuvens
     if (this.nuvem1.x < -400) {
       this.nuvem1.destroy();
     }

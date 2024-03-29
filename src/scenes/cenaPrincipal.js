@@ -44,9 +44,9 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     // }).setOrigin(0, 0);
 
     //Carrega os assets do jogo
-    this.load.audio('musicaIntroducao', 'assets/sounds/IntroMusic.wav') // Música de introdução
-    this.load.audio('musicaJogo', 'assets/sounds/gameMusicLoopWithEndGame.mp3') // Música de jogo quando o cronometro está ativo
-    this.load.audio('efeitoSonoroOnibus', 'assets/sounds/efeitoSonoroOnibus.mp3') // SFX do botão iniciar
+    this.load.audio("musicaIntroducao", "assets/sounds/IntroMusic.wav") // Música de introdução
+    this.load.audio("musicaJogo", "assets/sounds/gameMusicLoopWithEndGame.mp3") // Música de jogo quando o cronometro está ativo
+    this.load.audio("efeitoSonoroOnibus", "assets/sounds/efeitoSonoroOnibus.mp3") // SFX do botão iniciar
     //Carrega a biblioteca do joystick
     this.load.plugin(
       "rexvirtualjoystickplugin",
@@ -59,75 +59,75 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
       frameWidth: 32,
       frameHeight: 32
     });
-    this.load.spritesheet('tina', 'assets/spritesheets/drTina.png', {
+    this.load.spritesheet("tina", "assets/spritesheets/drTina.png", {
       frameWidth: 32,
       frameHeight: 32
     });
 
-    this.load.json('casesData', 'assets/cases/cases.json');
-    this.load.image('case1', 'assets/spritesheets/prontuario1.png');
+    this.load.json("casesData", "assets/cases/cases.json");
+    this.load.image("case1", "assets/spritesheets/prontuario1.png");
 
     //Carrega elementos principais do mapa
-    this.load.image('Calcada', 'assets/tilemaps/Calcada.png');
-    this.load.image('faculdade', 'assets/tilemaps/faculdade.png');
-    this.load.image('fonte', 'assets/tilemaps/fonte.png');
-    this.load.image('Grass', 'assets/tilemaps/Grass.png');
-    this.load.image('pedra', 'assets/tilemaps/pedra.png');
-    this.load.image('portao', 'assets/tilemaps/portao.png');
-    this.load.image('portao2', 'assets/tilemaps/portao2.png');
-    this.load.image('grade-lateral-left', 'assets/tilemaps/grade-lateral-left.png');
-    this.load.image('grade-lateral-right', 'assets/tilemaps/grade-lateral-right.png');
-    this.load.image('grade-lateral-right-01', 'assets/tilemaps/grade-lateral-right-01.png');
-    this.load.image('grade-lateral-left-01', 'assets/tilemaps/grade-lateral-left-01.png');
-    this.load.image('rua', 'assets/tilemaps/rua.png');
-    this.load.image('tenda_livro', 'assets/tilemaps/tenda_livro.png');
-    this.load.image('tenda_quiz', 'assets/tilemaps/tenda_quiz.png');
-    this.load.image('Tree-Sheet', 'assets/tilemaps/Tree-Sheet.png');
-    this.load.image('terrain', 'assets/tilemaps/terrain.png');
+    this.load.image("Calcada", "assets/tilemaps/Calcada.png");
+    this.load.image("faculdade", "assets/tilemaps/faculdade.png");
+    this.load.image("fonte", "assets/tilemaps/fonte.png");
+    this.load.image("Grass", "assets/tilemaps/Grass.png");
+    this.load.image("pedra", "assets/tilemaps/pedra.png");
+    this.load.image("portao", "assets/tilemaps/portao.png");
+    this.load.image("portao2", "assets/tilemaps/portao2.png");
+    this.load.image("grade-lateral-left", "assets/tilemaps/grade-lateral-left.png");
+    this.load.image("grade-lateral-right", "assets/tilemaps/grade-lateral-right.png");
+    this.load.image("grade-lateral-right-01", "assets/tilemaps/grade-lateral-right-01.png");
+    this.load.image("grade-lateral-left-01", "assets/tilemaps/grade-lateral-left-01.png");
+    this.load.image("rua", "assets/tilemaps/rua.png");
+    this.load.image("tenda_livro", "assets/tilemaps/tenda_livro.png");
+    this.load.image("tenda_quiz", "assets/tilemaps/tenda_quiz.png");
+    this.load.image("Tree-Sheet", "assets/tilemaps/Tree-Sheet.png");
+    this.load.image("terrain", "assets/tilemaps/terrain.png");
     
 
-    this.load.image('botaoX', 'assets/botaoX.png');
-    this.load.image('botaoCase_baixo', 'assets/botaoCase_baixo.png');
-    this.load.image('botaoCase_alto', 'assets/botaoCase_alto.png');
-    this.load.image('botaoCheck', 'assets/checkBotao.png');
-    this.load.image('bandeiraPrevencao', 'assets/bandeiraoPrevencao.png');
-    this.load.image('posteInteliDireita', 'assets/poste_inteli_direita.png');
-    this.load.image('posteInteliEsquerda', 'assets/poste_inteli_esquerda.png');
-    this.load.image('posteUspDireita', 'assets/poste_usp_direita.png');
-    this.load.image('posteUspEsquerda', 'assets/poste_usp_esquerda.png');
-    this.load.spritesheet('npc01', 'assets/spritesheets/NPC01.png', {
+    this.load.image("botaoX", "assets/botaoX.png");
+    this.load.image("botaoCase_baixo", "assets/botaoCase_baixo.png");
+    this.load.image("botaoCase_alto", "assets/botaoCase_alto.png");
+    this.load.image("botaoCheck", "assets/checkBotao.png");
+    this.load.image("bandeiraPrevencao", "assets/bandeiraoPrevencao.png");
+    this.load.image("posteInteliDireita", "assets/poste_inteli_direita.png");
+    this.load.image("posteInteliEsquerda", "assets/poste_inteli_esquerda.png");
+    this.load.image("posteUspDireita", "assets/poste_usp_direita.png");
+    this.load.image("posteUspEsquerda", "assets/poste_usp_esquerda.png");
+    this.load.spritesheet("npc01", "assets/spritesheets/NPC01.png", {
       frameWidth: 32, 
       frameHeight: 32
     });
-    this.load.spritesheet('npc02', 'assets/spritesheets/NPC02.png', {
+    this.load.spritesheet("npc02", "assets/spritesheets/NPC02.png", {
       frameWidth: 32,
       frameHeight: 32
     });
-    this.load.spritesheet('npc03', 'assets/spritesheets/NPC03.png', {
+    this.load.spritesheet("npc03", "assets/spritesheets/NPC03.png", {
       frameWidth: 32,
       frameHeight: 32
     });
-    this.load.spritesheet('npc04', 'assets/spritesheets/NPC04.png', {
+    this.load.spritesheet("npc04", "assets/spritesheets/NPC04.png", {
       frameWidth: 32,
       frameHeight: 32
     });
-    this.load.spritesheet('npc05', 'assets/spritesheets/NPC05.png', {
+    this.load.spritesheet("npc05", "assets/spritesheets/NPC05.png", {
       frameWidth: 32,
       frameHeight: 32
     });
-    this.load.spritesheet('npc06', 'assets/spritesheets/NPC06.png', {
+    this.load.spritesheet("npc06", "assets/spritesheets/NPC06.png", {
       frameWidth: 32,
       frameHeight: 32
     });
-    this.load.spritesheet('npc07', 'assets/spritesheets/NPC07.png', {
+    this.load.spritesheet("npc07", "assets/spritesheets/NPC07.png", {
       frameWidth: 32,
       frameHeight: 32
     });
-    this.load.spritesheet('npc08', 'assets/spritesheets/NPC08.png', {
+    this.load.spritesheet("npc08", "assets/spritesheets/NPC08.png", {
       frameWidth: 32,
       frameHeight: 32
     });
-    this.load.spritesheet('npc09', 'assets/spritesheets/NPC09.png', {
+    this.load.spritesheet("npc09", "assets/spritesheets/NPC09.png", {
       frameWidth: 32,
       frameHeight: 32
     });
@@ -135,8 +135,8 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
 
 
     //Carrega o tiled do mapa
-    this.load.tilemapTiledJSON('mapa', 'assets/tilemaps/novoMapa.json');
-    this.load.image('onibus', "assets/spritesheets/bus.png");
+    this.load.tilemapTiledJSON("mapa", "assets/tilemaps/novoMapa.json");
+    this.load.image("onibus", "assets/spritesheets/bus.png");
     this.load.image("civic", "assets/spritesheets/civic.png");
     this.load.image("jeep", "assets/spritesheets/jeep.png");
     this.load.image("pickup", "assets/spritesheets/pickup.png");
@@ -149,11 +149,11 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
   create() {
     
 
-    this.stateMachine = new StateMachine('cameraPanParaDialogo');
+    this.maquinaEstado = new StateMachine("cameraPanParaDialogo");
     this.sorteados = [];
     this.indiceSorteado;
     this.primeiroCaso = true;
-    this.caseData = this.cache.json.get('casesData');
+    this.caseData = this.cache.json.get("casesData");
     this.centroX = this.cameras.main.worldView.x + this.cameras.main.width / 2;
     this.centroY = this.cameras.main.worldView.y + this.cameras.main.height / 2; // Reserva as posições de X e Y da câmera
     this.overlapCollider;
@@ -163,16 +163,16 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     };
 
     // Adiciona efeito sonoro do ônibus
-    this.efeitoSonoroOnibus = this.sound.add('efeitoSonoroOnibus', {
+    this.efeitoSonoroOnibus = this.sound.add("efeitoSonoroOnibus", {
       loop: true,
       volume: 0.2});
 
     // Adiciona a música de introdução
-    this.musicaIntroducao = this.sound.add('musicaIntroducao', {
+    this.musicaIntroducao = this.sound.add("musicaIntroducao", {
       loop: true,
       volume: 0.5
     }); // Adiciona a música de introdução
-    this.musicaJogo = this.sound.add('musicaJogo', {
+    this.musicaJogo = this.sound.add("musicaJogo", {
       loop: false,
       volume: 0.3
     }); // Adiciona a música de jogo
@@ -183,22 +183,22 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     }); //Cria o mapa colocando o tamanho de cada "azulejo", que no nosso tiled foi 32x32
 
     // Adiciona os tilesets do mapa
-    this.tileset1 = this.map.addTilesetImage('Calcada');
-    this.tileset2 = this.map.addTilesetImage('faculdade');
-    this.tileset3 = this.map.addTilesetImage('fonte');
-    this.tileset4 = this.map.addTilesetImage('Grass');
-    this.tileset5 = this.map.addTilesetImage('pedra');
-    this.tileset6 = this.map.addTilesetImage('portao');
-    this.tileset7 = this.map.addTilesetImage('portao2');
-    this.tileset8 = this.map.addTilesetImage('rua');
-    this.tileset9 = this.map.addTilesetImage('tenda_livro');
-    this.tileset10 = this.map.addTilesetImage('Tree-Sheet');
-    this.tileset11 = this.map.addTilesetImage('grade-lateral-left');
-    this.tileset12 = this.map.addTilesetImage('grade-lateral-right');
-    this.tileset13 = this.map.addTilesetImage('grade-lateral-right-01');
-    this.tileset14 = this.map.addTilesetImage('grade-lateral-left-01');
-    this.tileset15 = this.map.addTilesetImage('tenda_quiz');
-    this.tileset16 = this.map.addTilesetImage('terrain');
+    this.tileset1 = this.map.addTilesetImage("Calcada");
+    this.tileset2 = this.map.addTilesetImage("faculdade");
+    this.tileset3 = this.map.addTilesetImage("fonte");
+    this.tileset4 = this.map.addTilesetImage("Grass");
+    this.tileset5 = this.map.addTilesetImage("pedra");
+    this.tileset6 = this.map.addTilesetImage("portao");
+    this.tileset7 = this.map.addTilesetImage("portao2");
+    this.tileset8 = this.map.addTilesetImage("rua");
+    this.tileset9 = this.map.addTilesetImage("tenda_livro");
+    this.tileset10 = this.map.addTilesetImage("Tree-Sheet");
+    this.tileset11 = this.map.addTilesetImage("grade-lateral-left");
+    this.tileset12 = this.map.addTilesetImage("grade-lateral-right");
+    this.tileset13 = this.map.addTilesetImage("grade-lateral-right-01");
+    this.tileset14 = this.map.addTilesetImage("grade-lateral-left-01");
+    this.tileset15 = this.map.addTilesetImage("tenda_quiz");
+    this.tileset16 = this.map.addTilesetImage("terrain");
 
     console.log(this.tileset16)
     
@@ -220,37 +220,37 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     this.jogador = this.physics.add.sprite(550, 800, "jogador").setOffset(9, 12).setCircle(7).setScale(1.5).refreshBody();
     
     //Cria as outras crianças do mapa, com uma classe especial que com alguns metodos que facilitam a movimentação e colisão entre os outros objetos
-    this.npc01 = new NPCsAlunos(this.physics.add.sprite(575, 980, 'npc01').setSize(16, 18, 9, 10).setVisible(false).setScale(1.5).refreshBody(), this, "npc01") 
-    this.npc02 = new NPCsAlunos(this.physics.add.sprite(575, 980, 'npc02').setSize(16, 18, 9, 10).setVisible(false).setScale(1.5).refreshBody(), this, "npc02")
-    this.npc03 = new NPCsAlunos(this.physics.add.sprite(575, 980, 'npc03').setSize(16, 18, 9, 10).setVisible(false).setScale(1.5).refreshBody(), this, "npc03")
-    this.npc04 = new NPCsAlunos(this.physics.add.sprite(575, 980, 'npc04').setSize(16, 18, 9, 10).setVisible(false).setScale(1.5).refreshBody(), this, "npc04")
-    this.npc05 = new NPCsAlunos(this.physics.add.sprite(575, 980, 'npc05').setSize(16, 18, 9, 10).setVisible(false).setScale(1.5).refreshBody(), this, "npc05")
-    this.npc06 = new NPCsAlunos(this.physics.add.sprite(575, 980, 'npc06').setSize(16, 18, 9, 10).setVisible(false).setScale(1.5).refreshBody(), this, "npc06")
-    this.npc07 = new NPCsAlunos(this.physics.add.sprite(575, 980, 'npc07').setSize(16, 18, 9, 10).setVisible(false).setScale(1.5).refreshBody(), this, "npc07")
-    this.npc08 = new NPCsAlunos(this.physics.add.sprite(575, 980, 'npc08').setSize(16, 18, 9, 10).setVisible(false).setScale(1.5).refreshBody(), this, "npc08")
-    this.npc09 = new NPCsAlunos(this.physics.add.sprite(575, 980, 'npc09').setSize(16, 18, 9, 10).setVisible(false).setScale(1.5).refreshBody(), this, "npc09")
+    this.npc01 = new NPCsAlunos(this.physics.add.sprite(575, 980, "npc01").setSize(16, 18, 9, 10).setVisible(false).setScale(1.5).refreshBody(), this, "npc01") 
+    this.npc02 = new NPCsAlunos(this.physics.add.sprite(575, 980, "npc02").setSize(16, 18, 9, 10).setVisible(false).setScale(1.5).refreshBody(), this, "npc02")
+    this.npc03 = new NPCsAlunos(this.physics.add.sprite(575, 980, "npc03").setSize(16, 18, 9, 10).setVisible(false).setScale(1.5).refreshBody(), this, "npc03")
+    this.npc04 = new NPCsAlunos(this.physics.add.sprite(575, 980, "npc04").setSize(16, 18, 9, 10).setVisible(false).setScale(1.5).refreshBody(), this, "npc04")
+    this.npc05 = new NPCsAlunos(this.physics.add.sprite(575, 980, "npc05").setSize(16, 18, 9, 10).setVisible(false).setScale(1.5).refreshBody(), this, "npc05")
+    this.npc06 = new NPCsAlunos(this.physics.add.sprite(575, 980, "npc06").setSize(16, 18, 9, 10).setVisible(false).setScale(1.5).refreshBody(), this, "npc06")
+    this.npc07 = new NPCsAlunos(this.physics.add.sprite(575, 980, "npc07").setSize(16, 18, 9, 10).setVisible(false).setScale(1.5).refreshBody(), this, "npc07")
+    this.npc08 = new NPCsAlunos(this.physics.add.sprite(575, 980, "npc08").setSize(16, 18, 9, 10).setVisible(false).setScale(1.5).refreshBody(), this, "npc08")
+    this.npc09 = new NPCsAlunos(this.physics.add.sprite(575, 980, "npc09").setSize(16, 18, 9, 10).setVisible(false).setScale(1.5).refreshBody(), this, "npc09")
 
-    this.tina = this.physics.add.sprite(560, 400, 'tina').setOffset(8, 12).setCircle(8).setScale(2).refreshBody().setImmovable(); // Adiciona o sprite da Tina
+    this.tina = this.physics.add.sprite(560, 400, "tina").setOffset(8, 12).setCircle(8).setScale(2).refreshBody().setImmovable(); // Adiciona o sprite da Tina
     
-    this.posteInteliDireita = this.add.image(470, 700, 'posteInteliDireita');
-    this.posteInteliEsquerda = this.add.image(650, 700, 'posteInteliEsquerda');
-    this.posteUspDireita = this.add.image(330, 490, 'posteUspDireita');
-    this.posteUspEsquerda = this.add.image(790, 490, 'posteUspEsquerda');
+    this.posteInteliDireita = this.add.image(470, 700, "posteInteliDireita");
+    this.posteInteliEsquerda = this.add.image(650, 700, "posteInteliEsquerda");
+    this.posteUspDireita = this.add.image(330, 490, "posteUspDireita");
+    this.posteUspEsquerda = this.add.image(790, 490, "posteUspEsquerda");
 
     // criando a camada da cerca
     this.cerca = this.map.createLayer("Cerca", [this.tileset6, this.tileset7, this.tileset11, this.tileset12, this.tileset13, this.tileset14]);
 
-    this.case1 = this.add.image(this.centroX, this.centroY, 'case1').setScale(0.50).setVisible(false).setScrollFactor(0); // Adiciona a imagem do case, quando ocorre esse overlap
-    this.botaoX = this.add.sprite(this.case1.x + 75, this.case1.y - 92, 'botaoX').setInteractive().setScale(0.1).setVisible(false).setScrollFactor(0); // Adiciona a imagem do botao, quando ocorre esse overlap
+    this.case1 = this.add.image(this.centroX, this.centroY, "case1").setScale(0.50).setVisible(false).setScrollFactor(0); // Adiciona a imagem do case, quando ocorre esse overlap
+    this.botaoX = this.add.sprite(this.case1.x + 75, this.case1.y - 92, "botaoX").setInteractive().setScale(0.1).setVisible(false).setScrollFactor(0); // Adiciona a imagem do botao, quando ocorre esse overlap
     this.dialogBox = this.add.rectangle(640, 420, 450, 140, 0xadd8e6, 1).setScrollFactor(0).setOrigin(0.5).setVisible(false).setInteractive(); // Adiciona a caixa de diálogo;
     this.dialogBox.setStrokeStyle(2, 0x1a65ac)
-    this.botaoCheck = this.add.image(820, 450, 'botaoCheck').setVisible(false).setScrollFactor(0).setScale(0.6); // Adiciona o botão de check para iniciar o quiz
+    this.botaoCheck = this.add.image(820, 450, "botaoCheck").setVisible(false).setScrollFactor(0).setScale(0.6); // Adiciona o botão de check para iniciar o quiz
     
-    this.fundoTimer = this.add.image(100, 100, 'azul').setScale(0.3).setVisible(false); // Adiciona o fundo de imagem do timer
+    this.fundoTimer = this.add.image(100, 100, "azul").setScale(0.3).setVisible(false); // Adiciona o fundo de imagem do timer
     this.tempoInicial = 1200; // Define o tempo do timer
-    this.textoTempo = this.add.text(55, 80, this.tempoInicial + 's', {
-      fontSize: '40px',
-      fill: '#000000'
+    this.textoTempo = this.add.text(55, 80, this.tempoInicial + "s", {
+      fontSize: "40px",
+      fill: "#000000"
     }).setVisible(false); // Adiciona o texto do tempo na tela do jogo
     
     
@@ -293,12 +293,12 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     this.physics.add.collider(this.jogador, this.cerca, () => console.log("Colidiu"))
     
     this.tinaCollider = this.physics.add.overlap(this.tina, this.jogador, () => { // Cria o overlap entre o jogador principal e a Tina
-      console.log('teste'); // Console log para verificar o funcionamento do overlap
+      console.log("teste"); // Console log para verificar o funcionamento do overlap
       if (this.objetoCaso.status === false) {
         this.indiceSorteado = this.sortearNumero(0, this.caseData.length - 1);
         this.objetoCaso.caso = this.caseData[this.indiceSorteado];
         this.physics.pause()
-        this.events.emit('abrirCase');
+        this.events.emit("abrirCase");
         
       }
     });
@@ -310,9 +310,8 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
       console.log("Colidiu com a tenda do livro") //Adiciona colisão entre o jogador e a tenda de livros
       if (this.objetoCaso.status === true){
         //chama a cena para mostrar os 3 livros
-        this.joystick.toggleEnable();
-        this.joystick.toggleEnable();
-        this.scene.wake('livros');
+        this.joystick.thumb.setPosition(470, 430);
+        this.scene.wake("livros");
         // pausa a física do jogo enquanto a cena livros estiver exposta
         this.physics.pause()
       }
@@ -323,10 +322,10 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
       console.log("Colidiu com a tenda do quiz") //Adiciona colisão entre o jogador e a tenda
       if (this.objetoCaso.status === true){
         //chama a cena para mostrar o quiz
-        this.scene.wake('quiz');
+        this.scene.wake("quiz");
         // pausa a física do jogo enquanto a cena do quiz estiver exposta
         this.physics.pause();  // Pausa a física do jogo enquanto o quiz estiver aberto
-        this.events.emit('abrirQuiz'); // Emite o evento para abrir o quiz
+        this.events.emit("abrirQuiz"); // Emite o evento para abrir o quiz
       }
     });
     
@@ -336,43 +335,50 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     this.physics.pause()
     // Move a câmera da faculdade para o personagem
     this.cameras.main.centerOn(550, -250);
-    
+    this.cameras.main.pan(550, 470, 5000)
+
+
     const dialogoCompleto = () => {
-      this.dialogBox.off('pointerdown', dialogoCompleto)
+      // Função que avança o diálogo se tiver mais texto, ou finaliza o diálogo se não tiver mais texto
+      this.dialogBox.off("pointerdown", dialogoCompleto)
       this.atualDialogoIndice++
       console.log(this.atualDialogoIndice, this.dialogo.length)
-      if (this.atualDialogoIndice === 1){
+      if (this.atualDialogoIndice === this.dialogo.length){
+        // Se o diálogo acabar, destrói os elementos de diálogo e inicia a câmera de pan para o ônibus
         this.dialogBox.destroy();
         this.dialogText.destroy();
         this.botaoCheck.destroy();
         this.cameras.main.setBounds(0, 0, 1120, 1120);
         this.cameras.main.pan(50, 1120, 2000);
         
-        this.stateMachine.transitionTo('cameraPanOnibus');
+        this.maquinaEstado.transitionTo("cameraPanOnibus");
         return;
       }
-      this.dialogText.on('pointerdown', () => { this.dialogText.skip()})
-      this.dialogText.proximoTexto(this.dialogo[this.atualDialogoIndice], () => this.dialogBox.on('pointerdown', dialogoCompleto))
+      this.dialogText.on("pointerdown", () => { this.dialogText.skip()}) // Adiciona a função de pular o texto ao clicar no texto
+      this.dialogText.proximoTexto(this.dialogo[this.atualDialogoIndice], () => this.dialogBox.on("pointerdown", dialogoCompleto)) // Adiciona o próximo texto ao diálogo
     }
-    this.cameras.main.pan(550, 470, 5000)
-    this.cameras.main.on('camerapancomplete', () => {
-      if (this.stateMachine.currentState() === 'cameraPanParaDialogo') {
+
+    this.cameras.main.on("camerapancomplete", () => {
+      // Nessa função, toda vez que uma animação de cena acaba, ela verifica qual estado em que está para executar a próxima ação
+      if (this.maquinaEstado.currentState() === "cameraPanParaDialogo") {
+        // Se o estado for de pan para o diálogo, inicia o diálogo
         this.botaoCheck.setVisible(true);
         this.dialogBox.setVisible(true);
-        this.dialogText = new TypeWritter(this, 420, 353, 'iosevka', this.dialogo[this.atualDialogoIndice], 16, 20, () => {
-          this.dialogText.off('pointerdown')
-          this.dialogBox.on('pointerdown', dialogoCompleto)
-          this.botaoCheck.on('pointerdown', dialogoCompleto)
-        }).setMaxWidth(380).setScrollFactor(0).setInteractive().on('pointerdown', () => { this.dialogText.skip()});
+        this.dialogText = new TypeWritter(this, 420, 353, "iosevka", this.dialogo[this.atualDialogoIndice], 16, 20, () => {
+          this.dialogText.off("pointerdown")
+          this.dialogBox.on("pointerdown", dialogoCompleto)
+          this.botaoCheck.on("pointerdown", dialogoCompleto)
+        }).setMaxWidth(380).setScrollFactor(0).setInteractive().on("pointerdown", () => { this.dialogText.skip()});
       }
-      
-      else if (this.stateMachine.currentState() === 'cameraPanOnibus'){
+      else if (this.maquinaEstado.currentState() === "cameraPanOnibus"){
+        // Se o estado for de pan para o ônibus, inicia o ônibus andando e som de ônibus
         this.physics.resume();
         this.cameras.main.startFollow(this.onibus, true);
         this.onibus.setVelocityX(100);
         this.efeitoSonoroOnibus.play();
       }
-      else if (this.stateMachine.currentState() === 'entradaDosPersonagens') {
+      else if (this.maquinaEstado.currentState() === "entradaDosPersonagens") {
+        // Se o estado for de entrada dos personagens, inicia a entrada dos personagens
         this.efeitoSonoroOnibus.stop();
         this.cerca.setVisible(false);
         this.npcControll = 1;
@@ -386,7 +392,8 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
             }
             if (this.npcControll === 10){
               if (this[`npc0${this.npcControll - 1}`].aluno.y <= 700){
-                console.log('teste')
+                //Quando chegar no ultimo aluno, ele seta posições para eles espalhadas na faculdade e seta colisão entre os alunos e objetos no mapa
+                console.log("teste")
                 this[`npc0${1}`].aluno.setPosition(250, 700);
                 this[`npc0${2}`].aluno.setPosition(300, 700);
                 this[`npc0${3}`].aluno.setPosition(350, 700);
@@ -406,8 +413,8 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
                 this.npc08.setCollisionBetweenItens(this.worldBounds, this.cerca, this.arvores, this.faculdade, this.tendaLivro, this.tendaQuiz, this.circuloFonte, this.jogador, this.npc01.aluno, this.npc02.aluno, this.npc03.aluno, this.npc04.aluno, this.npc05.aluno, this.npc06.aluno, this.npc07.aluno, this.npc09.aluno);
                 this.npc09.setCollisionBetweenItens(this.worldBounds, this.cerca, this.arvores, this.faculdade, this.tendaLivro, this.tendaQuiz, this.circuloFonte, this.jogador, this.npc01.aluno, this.npc02.aluno, this.npc03.aluno, this.npc04.aluno, this.npc05.aluno, this.npc06.aluno, this.npc07.aluno, this.npc08.aluno);
                 this.cameras.main.pan(550, 800, 1000);
-                this.timer.remove()
-                this.stateMachine.transitionTo('prontoParaJogar');
+                this.timer.remove() // Remove o timer
+                this.maquinaEstado.transitionTo("prontoParaJogar"); // Transição de estado para pronto para jogar, significando a última animação
               }
               
             }
@@ -415,7 +422,8 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
           loop: true
         });
       }
-      else if (this.stateMachine.currentState() === 'prontoParaJogar') {
+      else if (this.maquinaEstado.currentState() === "prontoParaJogar") {
+        // Se o estado for de pronto para jogar, inicia o jogo, voltando a física e mostrando o joystick
         this.cerca.setVisible(true);
         this.joystick.setVisible(true);
         this.physics.resume();
@@ -452,21 +460,21 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
 
     // Configuração do NPC Tina
     this.anims.create({ // Cria a animação para a personagem Tina
-      key: 'tinaIdle', // Chave que cria o nome para iniciar a animação
-      frames: this.anims.generateFrameNumbers('tina', {
+      key: "tinaIdle", // Chave que cria o nome para iniciar a animação
+      frames: this.anims.generateFrameNumbers("tina", {
         start: 0,
         end: 15
       }), // Define quais frames serão utilizados nessa animação
       frameRate: 10, // Velocidade da animação em frames por segundo
       repeat: -1 // Indica um loop
     });
-    this.tina.anims.play('tinaIdle', true); // Inicia a animação tinaIdle
+    this.tina.anims.play("tinaIdle", true); // Inicia a animação tinaIdle
 
 
     // Configurações de animação do personagem principal
     this.anims.create({
-      key: 'playerWalkingLeft', // Chave que cria o nome para iniciar a animação
-      frames: this.anims.generateFrameNumbers('jogador', {
+      key: "playerWalkingLeft", // Chave que cria o nome para iniciar a animação
+      frames: this.anims.generateFrameNumbers("jogador", {
         start: 8,
         end: 15
       }), // Define quais frames serão utilizados nessa animação
@@ -474,8 +482,8 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
       repeat: -1 // Indica um loop
     });
     this.anims.create({
-      key: 'playerWalkingRight', // Chave que cria o nome para iniciar a animação
-      frames: this.anims.generateFrameNumbers('jogador', {
+      key: "playerWalkingRight", // Chave que cria o nome para iniciar a animação
+      frames: this.anims.generateFrameNumbers("jogador", {
         start: 0,
         end: 7
       }), // Define quais frames serão utilizados nessa animação
@@ -483,8 +491,8 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
       repeat: -1 // Indica um loop
     });
     this.anims.create({
-      key: 'playerIdle', // Chave que cria o nome para iniciar a animação
-      frames: this.anims.generateFrameNumbers('jogador', {
+      key: "playerIdle", // Chave que cria o nome para iniciar a animação
+      frames: this.anims.generateFrameNumbers("jogador", {
         start: 0,
         end: 0
       }), // Define quais frames serão utilizados nessa animação
@@ -492,28 +500,31 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     });
 
 
-    this.events.on('fecharCase', () => {
+    this.events.on("fecharCase", () => {
+      // Função que fecha o case
           //  Dispatch a Scene event
           if (this.primeiroCaso === true){
-            this.events.emit('showTimer');
+            this.events.emit("showTimer");
             this.musicaIntroducao.stop(); // Para a música de introdução
             this.musicaJogo.play(); // Inicia a música de jogo
             this.primeiroCaso = false;
           }
-          this.events.emit('botaoCase');
+          this.events.emit("botaoCase");
           this.objetoCaso.status = true;
     })
   }
 
   update() {
-    if (this.onibus.x >= 575 && this.stateMachine.currentState() === 'cameraPanOnibus') {
-      this.stateMachine.transitionTo('entradaDosPersonagens');
+    if (this.onibus.x >= 575 && this.maquinaEstado.currentState() === "cameraPanOnibus") {
+      // Se o ônibus chegar na posição 575, ele para e a câmera pan para a entrada dos personagens
+      this.maquinaEstado.transitionTo("entradaDosPersonagens");
       this.onibus.setVelocityX(0);
       this.cameras.main.pan(575, 900, 1000)
       this.cameras.main.stopFollow()
     }
     //Chama a função que faz os npcs andarem
-    if (this.stateMachine.currentState() === 'entradaDosPersonagens') {
+    if (this.maquinaEstado.currentState() === "entradaDosPersonagens") {
+      // Se o estado for de entrada dos personagens, atualiza a animação dos NPCs
       this.npc01.updateAnimation();
       this.npc02.updateAnimation();
       this.npc03.updateAnimation();
@@ -526,19 +537,21 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     }
     // Configuração Joystick
     if (this.joystick.visible) {
+      // Se o joystick estiver visível, ele atualiza a posição do jogador de acordo com o movimento do joystick
       this.radiansAngleJoystick = this.fixAngle(this.joystick.angle) * Math.PI / 180 || 0;
       this.joystickForce = this.joystick.force < 50 ? this.joystick.force : 50;
       const velocityDoctorX = (this.defaultVelocity * Math.cos(this.radiansAngleJoystick) * this.joystickForce)
       const velocityDoctorY = -(this.defaultVelocity * Math.sin(this.radiansAngleJoystick) * this.joystickForce)
-      if (velocityDoctorX > 0) this.jogador.anims.play('playerWalkingRight', true);
-      else if (velocityDoctorX < 0) this.jogador.anims.play('playerWalkingLeft', true);
-      else if (velocityDoctorY == 0) this.jogador.anims.play('playerIdle', true);
+      if (velocityDoctorX > 0) this.jogador.anims.play("playerWalkingRight", true);
+      else if (velocityDoctorX < 0) this.jogador.anims.play("playerWalkingLeft", true);
+      else if (velocityDoctorY == 0) this.jogador.anims.play("playerIdle", true);
       this.jogador.setVelocityX(velocityDoctorX)
       this.jogador.setVelocityY(velocityDoctorY)
     }
     
     
-    if (this.stateMachine.currentState() === 'prontoParaJogar') {
+    if (this.maquinaEstado.currentState() === "prontoParaJogar") {
+      // Se o estado for de pronto para jogar, ele atualiza a posição do jogador de acordo com as teclas pressionadas
       // Mapeamento de Inputs
       if (this.keyA.isDown || this.cursors.left.isDown) { // Verifica se a tecla A está pressionada
         this.jogador.setVelocityX(-this.defaultVelocity * 50); // Define a velocidade do personagem no eixo X, quando a condição é verdadeira
@@ -585,16 +598,17 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     
     // Verifica se o jogador está parado e roda animação de idle quando ele está
     if (this.jogador.body.velocity.x === 0 && this.jogador.body.velocity.y === 0) {
-      this.jogador.anims.play('playerIdle', true);
+      this.jogador.anims.play("playerIdle", true);
     }
     // Verifica se o jogador está se movendo e roda animação de movimento quando ele está, considerando a direção que ele está indo
-    if (this.jogador.body.velocity.x > 0) this.jogador.anims.play('playerWalkingRight', true);
-    else if (this.jogador.body.velocity.x < 0) this.jogador.anims.play('playerWalkingLeft', true);
-    else if (this.jogador.body.velocity.y !== 0 && this.jogador.body.velocity.x === 0) this.jogador.anims.play('playerWalkingRight', true);
+    if (this.jogador.body.velocity.x > 0) this.jogador.anims.play("playerWalkingRight", true);
+    else if (this.jogador.body.velocity.x < 0) this.jogador.anims.play("playerWalkingLeft", true);
+    else if (this.jogador.body.velocity.y !== 0 && this.jogador.body.velocity.x === 0) this.jogador.anims.play("playerWalkingRight", true);
 
 
-    // Coloca os NPC's para andarem aleatoriamente
-    if (this.stateMachine.currentState() === 'prontoParaJogar') {
+    // Coloca os NPC"s para andarem aleatoriamente
+    if (this.maquinaEstado.currentState() === "prontoParaJogar") {
+      // Se o estado for de pronto para jogar, atualiza a posição dos NPCs aleatoriamente
       this.npc01.update();
       this.npc02.update();
       this.npc03.update();
@@ -606,14 +620,17 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
       this.npc09.update();
   
     }
-    if (Phaser.Math.Between(0, 1000) > 980 && !this.newCar && this.stateMachine.currentState() === 'prontoParaJogar' && !this.onibus){
+    if (Phaser.Math.Between(0, 1000) > 980 && !this.newCar && this.maquinaEstado.currentState() === "prontoParaJogar" && !this.onibus){
+      // Sorteia um novo carro para aparecer na tela
       this.newCar = this.sortearCarro();
     }
     if (this.newCar && (this.newCar.x > 1170 || this.newCar.x < -50)){
+      // Se o carro sair da tela, ele é destruído
       this.newCar.destroy();
       this.newCar = null;
     }
-    if (this.onibus.x > 1170 && this.stateMachine.currentState() === 'prontoParaJogar' && this.onibus){
+    if (this.onibus.x > 1170 && this.maquinaEstado.currentState() === "prontoParaJogar" && this.onibus){
+      // Se o ônibus sair da tela, ele é destruído
       this.onibus.destroy();
     }
   }
@@ -628,6 +645,7 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
   }
   
   sortearNumero(min, max) {
+    // Função que sorteia um número entre min e max, sem repetir os números sorteados, para o caso
     if (this.sorteados.length === this.caseData.length) {
       return 0
     }
@@ -640,7 +658,8 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     return numeroSorteado
   }
   sortearCarro(){
-    const carros = ['civic', 'jeep', 'pickup', 'police', 'suv', 'taxi']
+    // Função que sorteia um carro para aparecer na tela
+    const carros = ["civic", "jeep", "pickup", "police", "suv", "taxi"]
     const carroSorteado = Phaser.Math.Between(0, carros.length - 1)
     const left = Phaser.Math.Between(0, 1)
     const velocidade = Phaser.Math.Between(250, 300)
