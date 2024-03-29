@@ -2185,7 +2185,7 @@ preload() {
     this.load.audio('efeitoSonoroBotaoMenu', 'assets/sounds/iniciaJogo.mp3') // SFX do botão iniciar
   }
 ``` 
-&nbsp;&nbsp;&nbsp;&nbsp;Em seguida, no método `crete()`, adicionamos as imagens e spritesheet à cena `menu.js` e adicionamos algumas lógicas de funcionamento da cena.
+&nbsp;&nbsp;&nbsp;&nbsp;Em seguida, no método `create()`, adicionamos as imagens e spritesheet à cena `menu.js` e adicionamos algumas lógicas de funcionamento da cena.
 
 &nbsp;&nbsp;&nbsp;&nbsp;Primeiramente, adicionamos as imagens de plano de fundo, logo do Inteli, nuvem e spritesheet do botão jogar nas coordenadas, tamanho e direção desejadas.
 
@@ -2306,9 +2306,9 @@ create() {
 - A implementação dinâmica dos conteúdos dos livros usando _JSON_;
 - A implementação dinâmica das perguntas do quiz usando _JSON_;
 - Criar e ajustar a Cutscene inicial do jogo;
-- Ajustar o volume de cada elemento sonoro.
-- Entender o funcionamento das animações de câmera
-- Observar a necessidade de uma máquina de estado nas animações de câmera
+- Ajustar o volume de cada elemento sonoro;
+- Entender o funcionamento das animações de câmera;
+- Observar a necessidade de uma máquina de estado nas animações de câmera.
 
 **Próximos passos**
 - Pesquisar a possibilidade de implementar elementos que visam mais diversidade;
