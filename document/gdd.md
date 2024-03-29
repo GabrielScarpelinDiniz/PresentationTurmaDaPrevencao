@@ -137,7 +137,6 @@
 ⁰ ¹ ² ³ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹
 
 &nbsp;&nbsp;&nbsp;&nbsp;A falta de conscientização sobre prevenção, primeiros socorros e informações inadequadas sobre queimaduras, em especial em populações vulneráveis, influi na alta incidência de queimaduras, que se torna uma das maiores causas de lesões traumáticas no mundo. Foram registrados cerca de 1 milhão de novos casos anualmente no Brasil, conforme dados divulgados pelo Ministério da Saúde do Brasil em 2014, e acredita-se que 90% das queimaduras poderiam ser evitadas com a devida educação e conscientização da população. Grande parte das queimaduras registradas ocorreram em ambiente residencial e em atividades de lazer, abrangendo, na maioria, homens de 20 a 39 anos.[⁷](#c7)
-<br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;Considerando esse cenário, definimos como possível solução a criação de um jogo mobile educacional. Ele visa conscientizar a população, em especial as vulneráveis, sobre queimaduras, à medida que fornece informações embasadas para estimular a educação de prevenção de queimaduras, além de auxiliar nos primeiros socorros e desmitificar métodos inapropriados de tratamentos.<br>
 
@@ -183,20 +182,24 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;A fim de gerenciar os riscos do nosso produto, a equipe construiu os gráficos que representam potenciais ameaças e oportunidades no projeto (figura 3 e figura 4, respectivamente), contribuindo efetivamente para a tomada de decisões estratégicas e planejamento de planos de ação. 
 
+&nbsp;&nbsp;&nbsp;&nbsp;Dada a iteratividade do gerenciamento de risco citada acima, as figuras a seguir foram adaptadas para a fase atual do projeto com a revisão do impacto e da probabilidade dos riscos e das oportunidades. 
+
 <div align="center">
 
 <sub>Figura 3 - Matriz de Riscos</sub>
 
-<img src="./other/matriz_de_riscos.jpg" width="60%">
+<img src="./other/matriz_de_riscos.png" width="80%">
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;Algumas mudanças notáveis foram: a extinção do risco "Falta de Comprometimento do Grupo", pois todos os membros mostraram proatividade e responsabilidade para com o projeto, e o aumento da oportunidade "Credibilidade do Projeto", após receber um _feedback_ positivo ao final da apresentação do MVP para o parceiro com o fim da _sprint_ 4.
 
 <div align="center">
 
 <sub>Figura 4 - Matriz de Oportunidades</sub>
 
-<img src="./other/matriz_de_oportunidades.png" width="60%">
+<img src="./other/matriz_de_oportunidades.png" width="80%">
 
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 </div>
