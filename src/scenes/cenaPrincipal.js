@@ -50,9 +50,9 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     //Carrega a biblioteca do joystick
     this.load.plugin(
       "rexvirtualjoystickplugin",
-      "../plugins/rexvirtualjoystickplugin.min.js",
+      "../../plugins/rexvirtualjoystickplugin.min.js",
       true
-    );  
+    );
 
     //Carrega personagem e NPC
     this.load.spritesheet("jogador", "assets/spritesheets/playerPrincipal.png", {
