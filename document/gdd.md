@@ -2135,6 +2135,172 @@ class StateMachine {
     }
 }
 ````
+
+**Etapa 6 - Novo Menu do jogo**
+
+&nbsp;&nbsp;&nbsp;&nbsp;Seguindo para a finalização de nosso jogo, pensamos em um novo Menu tendo como base o cenário de nosso jogo, representando o céu de nosso mapa. Para darmos forma ao nosso novo menu, portanto, primeiro desenvolvemos nossas *pixel arts*. 
+
+<div align="center">
+
+<sub>Figura X - Menu atualizado desenvolvido no Piskel</sub>
+
+<img src="./other/menuGFcerto.png" width="60%">
+
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;*Assets* para confecção do Menu atualizado:
+
+<div align="center">
+
+<sub>Figura X - Spritesheet do botão para animação</sub>
+
+<img src="./other/botaoJogarNovo.png" width="60%">
+
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+
+</div>
+
+<div align="center">
+
+<sub>Figura X - Imagem das nuvens que se movem no menu</sub>
+
+<img src="./other/nuvem.png" width="60%">
+
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;Os *assets* foram implementados no método `preload()` da cena `menu.js`: 
+```js
+preload() {
+    this.load.image("background", "assets/backgroundMenu.png") // Fundo da cena do Main Menu
+    this.load.image("inteliLogo", "assets/logointeli.png") // Fundo da cena do Main Menu
+    this.load.image("nuvem", "assets/nuvem.png") // Imagem das nuvens do menu
+    this.load.spritesheet("botaoJogar", "assets/botaoJogarNovo.png", {
+      frameWidth: 400,
+      frameHeight: 200
+    }) // Imagem para botaoJogar
+    this.load.audio('efeitoSonoroBotaoMenu', 'assets/sounds/iniciaJogo.mp3') // SFX do botão iniciar
+  }
+``` 
+&nbsp;&nbsp;&nbsp;&nbsp;Em seguida, no método `crete()`, adicionamos as imagens e spritesheet à cena `menu.js` e adicionamos algumas lógicas de funcionamento da cena.
+
+&nbsp;&nbsp;&nbsp;&nbsp;Primeiramente, adicionamos as imagens de plano de fundo, logo do Inteli, nuvem e spritesheet do botão jogar nas coordenadas, tamanho e direção desejadas.
+
+&nbsp;&nbsp;&nbsp;&nbsp;É interessante destacar que as nuvens são adicionadas através do método `this.physics.add.image()`, já que futuramente seus parâmetros de velocidade são alterados.
+
+````js
+create() {
+
+    // Carrega a cena Main Menu
+    this.mainMenu = this.add.image(640, 360, "background").setScale(1)
+    this.logoInteli = this.add.image(1180, 630, "inteliLogo").setScale(1)
+    this.nuvem1 = this.physics.add.image(532, 320, "nuvem").setScale(1.3);
+    this.nuvem2 = this.physics.add.image(680, 165, "nuvem").setScale(1.2).setFlip(true);
+    this.nuvem3 = this.physics.add.image(700, 465, "nuvem").setScale(0.3);
+    this.nuvem4 = this.physics.add.image(130, 170, "nuvem").setScale(0.4).setFlip(true);
+    this.nuvem5 = this.physics.add.image(980, 320, "nuvem").setScale(0.2).setFlip(true);
+    this.botaoJogar = this.add.sprite(640, 620, "botaoJogar").setInteractive().setScale(1)
+
+````
+
+&nbsp;&nbsp;&nbsp;&nbsp; Após adicionarmos os *assets* em nosso jogo, adicionamos o efeito sonoro  e animação do botão de Jogar através dos métodos `this.sound.add()` e `this.anims.create()`, além da movimentação das imagens de nuvens por `this.nuvem.setVelocityX()`:
+
+```js
+    // Adiciona efeito sonoro do botão iniciar
+    this.efeitoSonoroBotaoMenu = this.sound.add('efeitoSonoroBotaoMenu',{volume: 0.5});
+
+    // Cria a animação de botaoJogar
+    this.anims.create({
+      key: 'animar',
+      frames: this.anims.generateFrameNumbers('botaoJogar', {
+        start: 0,
+        end: 1
+      }),
+      frameRate: 2,
+      repeat: -1
+    });
+
+    // Ativa a animação de botaoJogar
+    this.botaoJogar.anims.play('animar', true);
+
+    // Move as nuvens no eixo X
+    this.nuvem1.setVelocityX(-190);
+    this.nuvem2.setVelocityX(200);
+    this.nuvem3.setVelocityX(85);
+    this.nuvem4.setVelocityX(-90);
+    this.nuvem5.setVelocityX(65);
+
+```
+&nbsp;&nbsp;&nbsp;&nbsp;Pensando na performance dos dispositivos a executarem nosso jogo, aplicamos uma lógica para destruição das nuvens após elas ultrapassarem os limites da tela:
+
+```js
+    // Lógica para destruir nuvens caso ultrapassem os limites de tela
+    if (this.nuvem1.x < 100) {
+      this.nuvem1.destroy();
+    }
+
+    if (this.nuvem2.x > 1200) {
+      this.nuvem2.destroy();
+    }
+
+    if (this.nuvem3.x > 1200) {
+      this.nuvem3.destroy();
+    }
+
+    if (this.nuvem4.x < 100) {
+      this.nuvem4.destroy();
+    }
+    
+    if (this.nuvem5.x > 1200) {
+      this.nuvem5.destroy();
+    }
+```
+&nbsp;&nbsp;&nbsp;&nbsp;Após as implementações criadas, adicionamos uma animação ao mouse para que quando o jogador o passar sob o botão de jogar, o cursor se torne uma mão e, caso o mouse não esteja sobre o botão, mantenha seu estado original:
+
+```js
+
+    // Ajuste visual da imagem do mouse para fornecer feedback que o botão jogar é interativo
+    this.botaoJogar.on("pointerover", () => {
+      // Evento de passar o mouse sobre o botaoJogar
+      this.input.setDefaultCursor("pointer") // Cursor vira mãozinha
+    })
+    this.botaoJogar.on("pointerout", () => {
+      // Evento de retirar o mouse do botaoJogar
+      this.input.setDefaultCursor("default") // Cursor vira setinha
+    })
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;No seguinte código, adicionamos a lógica ao botão de jogar. Com o evento de click do mouse, o efeito sonoro do botão de jogar é ativado e é um *fade out* de 1000 milisegundos é realizado para transição entre cenas. Através do método `this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE) => {}`, garantimos que as chamadas das cenas `cenaPrincipal.js` e `HUD.js` sejam realizadas apenas após o evento de Fade Out ser finalizado. O mouse volta a seu estado original e as cenas `livros.js` e `quiz.js` são temporariamente desativadas.
+
+```js
+    // Evento disparado ao clicar no botão
+    this.botaoJogar.on("pointerdown", () => {
+      // Evento de click do mouse
+      this.efeitoSonoroBotaoMenu.play();
+      this.cameras.main.fadeOut(1000, 0, 0, 0)
+      // Realiza FadeOut antes de passar para próxima cena
+      this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE, (cam, effect) => {
+        this.time.delayedCall(1000, () => {
+          this.scene.start("cenaPrincipal")
+          this.scene.start("HUD")
+          this.scene.stop("menu")
+          this.input.setDefaultCursor("default") // Retorno do cursor do mouse para setinha
+        })
+      })
+      // this.openFullScreen()
+    })
+
+    this.scene.sleep('livros');
+    this.scene.sleep('quiz');
+
+  }
+```
+
+
 **Dificuldades**
 - A implementação dinâmica dos Cases usando _JSON_;
 - A implementação dinâmica dos conteúdos dos livros usando _JSON_;
