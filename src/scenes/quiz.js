@@ -42,8 +42,8 @@ class Quiz extends Phaser.Scene {
                 wordWrap: {
                     width: 500
                 }
-            }).setOrigin(0.5); // Adiciona a pergunta à cena e configurações estéticas
-            
+            }).setOrigin(0.5);
+
             // Adicionando as alternativas à cena e suas aparências na interface
             const alternativa1 = this.add.text(bgWhite.x, bgWhite.y + 60, caso.quiz.alternativas[0], {
                 fontSize: "23px",
@@ -96,7 +96,7 @@ class Quiz extends Phaser.Scene {
             });
     
 
-            // Adicionando a explicação à cena e configurações estéticas
+            // Adicionando texto da explicação do porque está certa ou errada a alternativa à cena e também configurações estéticas
             this.textoExplicacaoAlternativaErrada = this.add.text(bgWhite.x, bgWhite.y - 130, caso.feedbackRespostaErrada, {
                 fontSize: "22px",
                 color: "#ff0000",

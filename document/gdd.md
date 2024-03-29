@@ -37,7 +37,7 @@
 
 ### 1.1.1. Contexto da indústria
 
-&nbsp;&nbsp;&nbsp;&nbsp;A Faculdade de Medicina da USP é uma referência no campo da educação superior, destacando-se no ensino de Medicina no Brasil e na realização de pesquisas de ponta, além de campanhas de conscientização para a população(referencia ¹). Competindo com outras instituições renomadas, como UNICAMP, PUC-SP e UNIFESP, a FMUSP se destaca por suas iniciativas inovadoras e seu impacto notável no mercado regional e nacional, especialmente através de suas campanhas e atividades clínicas de alto padrão.
+&nbsp;&nbsp;&nbsp;&nbsp;A Faculdade de Medicina da USP é uma referência no campo da educação superior, destacando-se no ensino de Medicina no Brasil e na realização de pesquisas de ponta, além de campanhas de conscientização para a população¹. Competindo com outras instituições renomadas, como UNICAMP, PUC-SP e UNIFESP, a FMUSP se destaca por suas iniciativas inovadoras e seu impacto notável no mercado regional e nacional, especialmente através de suas campanhas e atividades clínicas de alto padrão.
 
 &nbsp;&nbsp;&nbsp;&nbsp;Internacionalmente reconhecida, a FMUSP continua a liderar o caminho em pesquisas de vanguarda, abrangendo áreas como cirurgia com células-tronco, desenvolvimento de pele artificial e outras tendências futuras na medicina.
 
@@ -45,7 +45,17 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;As cinco forças de Porter é um framework fundado por Michael Porter, professor da Harvard Business School, em 1970[²](#c7). O modelo é utilizado para realizar uma análise setorial do mercado em que a empresa está inserida, mostrando qual sua posição no setor em comparação com outros empreendimentos atuantes do mesmo setor. Segundo Joan Magretta, editora de estratégia na Harvard Business Review, "a estrutura das cinco forças explica os preços e custos médios do setor e, portanto, a lucratividade média a ser superada."[³](#c7), ou seja, compreender com profundidade a rivalidade entre concorrentes (1), a ameaça de novos entrantes (2), o poder de barganha dos fornecedores (3), o poder de barganha dos clientes (4) e a ameaça de produtos substitutos (5), é fundamental para entender a dinâmica da competição e para construir uma estratégia empresarial que visa mais lucro. 
 
-&nbsp;&nbsp;&nbsp;&nbsp;A partir do nosso projeto, realizamos uma análise profunda do setor de faculdades de medicina no estado de São Paulo, utilizando o modelo de Porter (figura xx) e explicando como cada uma das 5 forças funcionam nesse setor.
+&nbsp;&nbsp;&nbsp;&nbsp;A partir do nosso projeto, realizamos uma análise profunda do setor de faculdades de medicina no estado de São Paulo, utilizando o modelo de Porter (figura 01) e explicando como cada uma das 5 forças funcionam nesse setor.
+
+<div align="center">
+
+<sub>Figura 01 - Template 5 Forças de Porter</sub>
+
+<img src="./other/5forces.png" width=800>
+
+<sup>Fonte: </sup>
+
+</div>
 
 **Rivalidade entre concorrentes**
 
@@ -155,7 +165,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;Usar um Canvas de Proposta de Valor é como criar uma história sobre como seu produto ou serviço faz a diferença na vida das pessoas. É uma conversa visual que ajuda as equipes a se concentrarem no que realmente importa: entender as necessidades dos clientes e encontrar maneiras inteligentes de atendê-las. É uma abordagem colaborativa que incentiva todos a contribuírem com suas ideias, garantindo que todos estejam na mesma página e trabalhando na mesma direção para oferecer algo que realmente importa para os clientes, ou seja, construir e consilidar sua proposta de valor.
 
-&nbsp;&nbsp;&nbsp;&nbsp;A proposta de valor, é a essência do que um produto ou serviço oferece aos clientes e como atende às suas necessidades. Desenvolvida em torno do perfil do cliente e da proposta de valor da empresa, a proposta de valor busca alinhar os ganhos desejados, dores enfrentadas e trabalhos a serem realizados pelos clientes com os benefícios oferecidos, problemas resolvidos e produtos/serviços específicos da empresa. Essa ideia foi apresentada por Alexander Osterwalder e sua equipe em seu livro "Value Proposition Design: How to Create Products and Services Customers Want"².
+&nbsp;&nbsp;&nbsp;&nbsp;A proposta de valor, é a essência do que um produto ou serviço oferece aos clientes e como atende às suas necessidades. Desenvolvida em torno do perfil do cliente e da proposta de valor da empresa, a proposta de valor busca alinhar os ganhos desejados, dores enfrentadas e trabalhos a serem realizados pelos clientes com os benefícios oferecidos, problemas resolvidos e produtos/serviços específicos da empresa. Essa ideia foi apresentada por Alexander Osterwalder e sua equipe em seu livro "Value Proposition Design: How to Create Products and Services Customers Want"[⁹](#c7).
 
 <div align="center">
 
@@ -174,7 +184,7 @@
 
 ### 1.1.5. Matriz de Riscos
 
-&nbsp;&nbsp;&nbsp;&nbsp;A matriz de risco é uma ferramenta amplamente utilizada em diversas indústrias para avaliar e priorizar riscos com base em sua probabilidade e impacto. Normalmente composta por uma tabela que categoriza os riscos em diferentes níveis, geralmente representados por cores ou valores numéricos[⁹](#c7). A matriz de risco é iterativa por natureza, essa característica decorre da própria dinâmica do risco e da necessidade de reavaliação e refinamento contínuos visando seu aprimoramento. Ela é extremamente eficiente quando há necessidade de priorizar os riscos, sejam eles negativos (as ameaças) ou positivos (as oportunidades), ou seja, é excelente para analisar e visualizar quais riscos merecem mais atenção no momento, auxiliando na criação de planos de ação para prevenir ou potencializar tal risco[¹⁰](#c7).
+&nbsp;&nbsp;&nbsp;&nbsp;A matriz de risco é uma ferramenta amplamente utilizada em diversas indústrias para avaliar e priorizar riscos com base em sua probabilidade e impacto. Normalmente composta por uma tabela que categoriza os riscos em diferentes níveis, geralmente representados por cores ou valores numéricos[¹⁰](#c7). A matriz de risco é iterativa por natureza, essa característica decorre da própria dinâmica do risco e da necessidade de reavaliação e refinamento contínuos visando seu aprimoramento. Ela é extremamente eficiente quando há necessidade de priorizar os riscos, sejam eles negativos (as ameaças) ou positivos (as oportunidades), ou seja, é excelente para analisar e visualizar quais riscos merecem mais atenção no momento, auxiliando na criação de planos de ação para prevenir ou potencializar tal risco[¹¹](#c7).
 
 &nbsp;&nbsp;&nbsp;&nbsp;O aspecto iterativo da matriz de risco reconhece que os riscos não são estáticos, mas sim elementos que evoluem ao longo do tempo devido às mudanças no ambiente interno e externo de uma organização. Novos riscos podem surgir, riscos existentes podem mudar em probabilidade ou impacto, e medidas de mitigação podem se mostrar ineficazes ou requerer ajustes. Portanto, revisar e atualizar regularmente a matriz de risco garante sua relevância e reflexão precisa da paisagem de riscos atual.
 
@@ -283,7 +293,7 @@
 
 ## 1.3. Público-alvo do Projeto
 
-&nbsp;&nbsp;&nbsp;&nbsp;De acordo com Kotler (2000)[¹¹](#c7), também conhecido como o “pai do marketing”, o público alvo é o grupo de consumidores que possui necessidades semelhantes àquelas que a empresa atende. O público alvo pode ser dividido em diversos fatores tais quais: geografia, demografia, psicografia e comportamento[¹²](#c7). 
+&nbsp;&nbsp;&nbsp;&nbsp;De acordo com Kotler (2000)[¹²](#c7), também conhecido como o “pai do marketing”, o público alvo é o grupo de consumidores que possui necessidades semelhantes àquelas que a empresa atende. O público alvo pode ser dividido em diversos fatores tais quais: geografia, demografia, psicografia e comportamento[¹³](#c7). 
 
 &nbsp;&nbsp;&nbsp;&nbsp;O nosso jogo é pensado e destinado à adolescentes e jovens adultos que fazem parte de comunidades e regiões carentes com acesso limitado à educação, visto que o objetivo principal do projeto é a conscientização e 90% dos incidentes envolvendo queimaduras são reportados em locais onde a população é leiga[⁷](#c7). 
 
@@ -295,7 +305,7 @@ Posto isso, foi entendido que a definição adequada do público alvo aumenta a 
 
 ## 2.1. Objetivos do Jogo
 
-&nbsp;&nbsp;&nbsp;&nbsp;O objetivo de um jogo geralmente é a meta que os jogadores devem alcançar para vencer ou progredir[¹³](#c7). Pode envolver completar tarefas específicas, resolver quebra-cabeças, derrotar inimigos, acumular pontos, entre outros desafios.
+&nbsp;&nbsp;&nbsp;&nbsp;O objetivo de um jogo geralmente é a meta que os jogadores devem alcançar para vencer ou progredir¹⁴. Pode envolver completar tarefas específicas, resolver quebra-cabeças, derrotar inimigos, acumular pontos, entre outros desafios.
 
 &nbsp;&nbsp;&nbsp;&nbsp;Para o nosso jogo, o objetivo é resolver o máximo de cases propostos pela dra. Tina em um tempo determinado, passando por um ciclo de teoria (representada pelos livros da tenda de livros) e de prática (representada pelo quiz da tenda de quiz), obtendo assim uma pontuação final que pode ser superada a cada novo ciclo. Isso incentiva que os jogadores equilibrem eficiência na resolução e aprimoramento de habilidades através da aprendizagem.
 
@@ -303,13 +313,13 @@ Posto isso, foi entendido que a definição adequada do público alvo aumenta a 
 
 ### 2.2.1. Gênero do Jogo
 
-&nbsp;&nbsp;&nbsp;&nbsp;O gênero se refere à classificação ou categoria que descreve o estilo e a mecânica de jogo predominantes. Cada gênero tem características específicas que definem como os jogadores interagem com o jogo e o que podem esperar dele em termos de jogabilidade, narrativa e objetivos[¹⁴](#c7).
+&nbsp;&nbsp;&nbsp;&nbsp;O gênero se refere à classificação ou categoria que descreve o estilo e a mecânica de jogo predominantes. Cada gênero tem características específicas que definem como os jogadores interagem com o jogo e o que podem esperar dele em termos de jogabilidade, narrativa e objetivos[¹⁵](#c7).
 
 &nbsp;&nbsp;&nbsp;&nbsp;O nosso jogo simula a atuação de um estudante de ensino médio durante uma gincana promovida por uma faculdade, portanto seu gênero é simulação. Como tal, o jogo oferece uma experiência imersiva e educativa, onde o jogador pode aprender sobre prevenção de queimaduras e sobre o que deve-se ou não fazer logo após se queimar.
 
 ### 2.2.2. Plataforma do Jogo
 
-&nbsp;&nbsp;&nbsp;&nbsp;A plataforma de um jogo se refere ao ambiente ou sistema no qual o jogo é executado(referencia 15). Isso inclui dispositivos como computadores, consoles de videogame, smartphones, tablets, entre outros, e também o sistema operacional ou plataforma online que suporta a execução do jogo.
+&nbsp;&nbsp;&nbsp;&nbsp;A plataforma de um jogo se refere ao ambiente ou sistema no qual o jogo é executado¹⁶. Isso inclui dispositivos como computadores, consoles de videogame, smartphones, tablets, entre outros, e também o sistema operacional ou plataforma online que suporta a execução do jogo.
 
 &nbsp;&nbsp;&nbsp;&nbsp;O jogo será desenvolvido para dispositivos móveis, como smartphones e tablets, e oferecerá uma experiência acessível e portátil. A interface será otimizada para telas sensíveis ao toque, permitindo aos jogadores interagirem intuitivamente com os elementos do jogo. Além disso, a natureza móvel desses dispositivos permitirá que os jogadores acessem o jogo em qualquer lugar, tornando-o conveniente para ser usado na educação.
 
@@ -350,14 +360,14 @@ Posto isso, foi entendido que a definição adequada do público alvo aumenta a 
 
 ### 3.2.1. Controláveis
 
-&nbsp;&nbsp;&nbsp;&nbsp;O termo "personagem controlável" refere-se àqueles avatares que são comandados pelo jogador através de comandos de movimento, ações, combate, dentre outros[¹⁶](#c7).
+&nbsp;&nbsp;&nbsp;&nbsp;O termo "personagem controlável" refere-se àqueles avatares que são comandados pelo jogador através de comandos de movimento, ações, combate, dentre outros[¹⁷](#c7).
 
 &nbsp;&nbsp;&nbsp;&nbsp;O jogo referido neste documento terá somente um único personagem controlável, o Lipe. Lipe é um aluno dedicado que está no ensino médio de uma escola pública e participará de uma dinâmica proposta pela Dra. Tina dentro do campus da Faculdade de Medicina da USP. O personagem sonha em um dia ser médico, então está animado para os desafios que lhe serão apresentados. Lipe irá estudar os cases que serão fornecidos pela Dra. Tina e terá como objetivo concluir o maior número de cases em um tempo estabelecido. 
 
 ### 3.2.2. Non-Playable Characters (NPC)
 
 
-&nbsp;&nbsp;&nbsp;&nbsp;*Non-Playable Characters* (*NPCs*) são avatares os quais o jogador não possui controle sobre, portanto não comanda seus movimentos nem ações[¹⁶](#c7). Porém, é possível interagir com eles se forem programados para isso, como é o caso da Dra. Tina. Em nosso projeto, utilizaremos 11 *NPCs*, dos quais 10 deles serão estudantes e, como o Lipe, participarão da dinâmica. Desde modo, poderão ser obstáculos para o trajeto do jogador durante o jogo. Já a  Dra. Tina é uma *NPC* que fica situada somente em um lugar, no entanto ela é a única com a qual se pode interagir, visto que é a responsável por entregar os cases aos alunos.
+&nbsp;&nbsp;&nbsp;&nbsp;*Non-Playable Characters* (*NPCs*) são avatares os quais o jogador não possui controle sobre, portanto não comanda seus movimentos nem ações[¹⁷](#c7). Porém, é possível interagir com eles se forem programados para isso, como é o caso da Dra. Tina. Em nosso projeto, utilizaremos 11 *NPCs*, dos quais 10 deles serão estudantes e, como o Lipe, participarão da dinâmica. Desde modo, poderão ser obstáculos para o trajeto do jogador durante o jogo. Já a  Dra. Tina é uma *NPC* que fica situada somente em um lugar, no entanto ela é a única com a qual se pode interagir, visto que é a responsável por entregar os cases aos alunos.
 
 
 <div align="center">
@@ -424,7 +434,7 @@ Posto isso, foi entendido que a definição adequada do público alvo aumenta a 
 
 ### 3.3.3. Condições climáticas e temporais
 
-&nbsp;&nbsp;&nbsp;&nbsp;No jogo, o tempo é um elemento que adiciona diversão e desafio à experiência do jogador.(referencia 17) 
+&nbsp;&nbsp;&nbsp;&nbsp;No jogo, o tempo é um elemento que adiciona diversão e desafio à experiência do jogador.¹⁸ 
 Um cronômetro é utilizado para medir o tempo que o jogador tem para completar cada ciclo de aprendizado e resolução do case na gincana. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;O desafio está em cumprir o máximo de ciclos no tempo estipulado, o que cria uma sensação de urgência e emoção. O jogador é recompensado com pontuações mais altas por sua eficiência e rapidez, incentivando repetições para melhorar o desempenho. No entanto, erros resultam na perda de tempo, tornando essencial tomar decisões cuidadosas e precisas durante o jogo. 
@@ -433,7 +443,7 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 ### 3.3.4. Concept Art
 
-&nbsp;&nbsp;&nbsp;&nbsp;As Concepts Arts são desenhos desenvolvidos com o objetivo de conceituar elementos do jogo como personagens, itens, cenários, etc[¹⁸](#c7). Para nosso jogo, as concepts arts desenvolvidas estão listadas abaixo:
+&nbsp;&nbsp;&nbsp;&nbsp;As Concepts Arts são desenhos desenvolvidos com o objetivo de conceituar elementos do jogo como personagens, itens, cenários, etc[¹⁹](#c7). Para nosso jogo, as concepts arts desenvolvidas estão listadas abaixo:
  
 <div align="center">
 
@@ -485,7 +495,7 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 ### 3.3.5. Trilha sonora
 
-&nbsp;&nbsp;&nbsp;&nbsp;As trilhas sonoras são meios de envolver o usuário no jogo, segundo o artigo "The Role of Music in Videogames" - O papel da música nos videogames - cujo autor, citado no artigo da BBC[¹⁹](#c7), afirma que as trilhas sonoras nos jogos são multifuncionais, pois significam várias coisas para o jogador. Isso inclui o aumento da imersão, as brechas para mudanças na história, além de contribuírem também para a estética do jogo, tornando-se assim um fator muito importante para o envolvimento do jogador na narrativa.
+&nbsp;&nbsp;&nbsp;&nbsp;As trilhas sonoras são meios de envolver o usuário no jogo, segundo o artigo "The Role of Music in Videogames" - O papel da música nos videogames - cujo autor, citado no artigo da BBC[²⁰](#c7), afirma que as trilhas sonoras nos jogos são multifuncionais, pois significam várias coisas para o jogador. Isso inclui o aumento da imersão, as brechas para mudanças na história, além de contribuírem também para a estética do jogo, tornando-se assim um fator muito importante para o envolvimento do jogador na narrativa.
 
 <div align="center">
 <sub>Tabela X: Lista de músicas e efeitos sonoros</sub>
@@ -519,7 +529,7 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 ## 3.5. Gameflow (Diagrama de cenas)
 
-&nbsp;&nbsp;&nbsp;&nbsp;Um Diagrama de Cenas é uma ferramenta utilizada para auxiliar na organização do desenvolvimento técnico do jogo, apresentando as cenas do projeto e suas relações com outras cenas, exibindo os caminhos possíveis e bloqueios[²⁰](#c7)[²¹](#c7). Nosso Diagrama de Cenas pode ser visitado <a href="https://miro.com/app/board/uXjVNmuHdDw=/">aqui</a>.
+&nbsp;&nbsp;&nbsp;&nbsp;Um Diagrama de Cenas é uma ferramenta utilizada para auxiliar na organização do desenvolvimento técnico do jogo, apresentando as cenas do projeto e suas relações com outras cenas, exibindo os caminhos possíveis e bloqueios[²¹](#c7) [²²](#c7). Nosso Diagrama de Cenas pode ser visitado <a href="https://miro.com/app/board/uXjVNmuHdDw=/">aqui</a>.
 
 <div align="center">
 
@@ -642,7 +652,7 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 ## 3.6. Regras do jogo
 
-&nbsp;&nbsp;&nbsp;&nbsp;As regras de um jogo, segundo o livro “Regras do Jogo: Fundamentos do Design de Jogos (Volume 1)”, moldam a experiência do jogador, fornecem estrutura e significado, e promovem a interatividade ao definirem limites, objetivos e desafios[²²](#c7). Com isso o jogador é, de certa forma, guiado a seguir a lógica (gameflow) própria daquele jogo.
+&nbsp;&nbsp;&nbsp;&nbsp;As regras de um jogo, segundo o livro “Regras do Jogo: Fundamentos do Design de Jogos (Volume 1)”, moldam a experiência do jogador, fornecem estrutura e significado, e promovem a interatividade ao definirem limites, objetivos e desafios[²³](#c7). Com isso o jogador é, de certa forma, guiado a seguir a lógica (gameflow) própria daquele jogo.
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;Em nosso jogo, o personagem principal deve concluir o máximo de ciclos em um determinado tempo, obtendo assim uma pontuação que o jogador deve tentar superar a cada vez que jogar. Esses ciclos seguem uma lógica que consiste na apresentação do problema, auto estudo e teste do conhecimento adquirido; que ocorrerão, respectivamente, no encontro com a doutora Tina, na tenda de livros e na barraca do quiz. 
@@ -652,7 +662,7 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 ## 3.7. Mecânicas do jogo
 
-&nbsp;&nbsp;&nbsp;&nbsp;O MDA, que foi apresentado pela primeira vez na  Conferência *Foundations of Digital Games* no artigo chamado *MDA: A Formal Approach to Game Design and Game Research*, é um *framework* desenvolvido por Robin Hunicke, Marc LeBlanc e Robert Zubek[²³](#c7). Ele é muito utilizado no mundo do design de *games* para ajudar os produtores a criarem uma experiência imersiva e de altíssima qualidade para seu usuário. Isso é possível pela fragmentação do jogo em três aspectos: mecânica, dinâmica e estética. 
+&nbsp;&nbsp;&nbsp;&nbsp;O MDA, que foi apresentado pela primeira vez na  Conferência *Foundations of Digital Games* no artigo chamado *MDA: A Formal Approach to Game Design and Game Research*, é um *framework* desenvolvido por Robin Hunicke, Marc LeBlanc e Robert Zubek[²⁴](#c7). Ele é muito utilizado no mundo do design de *games* para ajudar os produtores a criarem uma experiência imersiva e de altíssima qualidade para seu usuário. Isso é possível pela fragmentação do jogo em três aspectos: mecânica, dinâmica e estética. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;Segundo os desenvolvedores desse *framework*, as mecânicas são as várias ações, comportamentos e mecanismos de controle oferecidos ao jogador dentro de um contexto de jogo. Juntamente com o conteúdo do jogo (níveis, ativos e
 assim por diante), a mecânica suporta a dinâmica geral da jogabilidade. Ou seja, as mecânicas compõem a parte mais fundamental do ponto de vista do desenvolvedor, pois são a base para a criação de dinâmicas, que, por sua vez, criam estéticas únicas, o que agrega valor ao produto desenvolvido.
@@ -2303,6 +2313,185 @@ create() {
   }
 ```
 
+**Etapa 7 do desenvolvimento - Implementação de mais quizes e *feedbacks* ao responder às questões**
+
+&nbsp;&nbsp;&nbsp;&nbsp;Para a implementação de mais quizes, assim como na implementação de cases, foi utilizado um _JSON_ para armazenar as informações que seriam atreladas a cada quiz e, simultâneamente, a cada case que o usuário estivesse naquele momento, segue o modelo desse _JSON_:
+
+```json
+{
+        "nome": "APOLO SOLEMAR",
+        "fotoKey": "apolo",
+        "desc": "Sofreu queimaduras solares depois de passar muito tempo exposto ao sol sem proteção adequada.",
+        "colored": ["solares", "exposto"],
+        "sintomas": "Apresenta pele vermelha, quente ao toque, dor local suportável.",
+        "classificacao": "PRIMEIRO GRAU",
+        "classificacaoCor": "0x21FF21",
+        "quiz": {
+            "pergunta": "De que maneira Apolo poderia ter evitado sua lesão?",
+            "alternativas": [
+                "Evitar exposição solar durante momentos quentes do dia",
+                "Passar creme hidratante na pele antes de se expor ao Sol"
+            ],
+            "alternativaCorreta": 0
+        },
+        "feedbackRespostaErrada": "Ops! Essa resposta está incorreta. Expor-se ao sol durante momentos quentes do dia sem proteção adequada pode resultar em queimaduras solares.",
+        "feedbackRespostaCerta": "Parabéns! Evitar exposição solar durante momentos quentes do dia é uma medida importante para prevenir queimaduras solares."
+    }
+```
+&nbsp;&nbsp;&nbsp;&nbsp;Desse modo, é possível gerar de maneira dinâmica as perguntas que serão feitas, atrelando cada uma a um caso e depois chamar seu texto por meio de uma variável que recebe o objeto `this.primeiraCena.objetoCaso.caso` cujos atributos são os dados do caso guardados no _JSON_. Assim, é simples acessar os textos, pois se tornam propriedades de um objeto, como pode ser exemplificado em `caso.quiz.pergunta`, que é utilizado para setar o texto da pergunta do caso em específico que foi sorteado para o jogador. Junto a tudo isso, também foi adicionado um texto de feedback para as respostas, explicando o porquê de ela estar certa ou errada, que aparece no lugar onde estava o logo do quiz. Isso pode ser observado abaixo:
+
+```js
+
+this.primeiraCena.events.on('abrirQuiz', () => {
+    const caso = this.primeiraCena.objetoCaso.caso;
+    this.add.text(bgWhite.x, bgWhite.y - 40, caso.quiz.pergunta, {
+        fontSize: '20px',
+        color: '#000',
+        fontFamily: 'Arial',
+        align: 'center',
+        wordWrap: {
+            width: 500
+        }
+    }).setOrigin(0.5);
+
+    // Adicionando as alternativas à cena e suas aparências na interface
+    const alternativa1 = this.add.text(bgWhite.x, bgWhite.y + 60, caso.quiz.alternativas[0], {
+        fontSize: '23px',
+        color: '#000',
+        fontFamily: 'Arial',
+        backgroundColor: '#008CCC',
+        padding: {
+            x: 10,
+            y: 10
+        },
+        wordWrap: {
+            width: 500
+        },
+        align: 'center'
+    }).setOrigin(0.5).setInteractive().on('pointerdown', () => {
+        if (!this.alternativaRespondida){
+            this.verificarResposta(0, caso.quiz.alternativaCorreta);
+            this.primeiraCena.objetoCaso.status = false;
+            this.primeiraCena.objetoCaso.caso = null;
+            this.alternativaRespondida = true;
+            this.cenaHUD.events.emit('quiz-respondido')
+        }
+    });
+
+    const alternativa2 = this.add.text(bgWhite.x, bgWhite.y + 140, caso.quiz.alternativas[1], {
+        fontSize: '21px',
+        color: '#000',
+        fontFamily: 'Arial',
+        backgroundColor: '#FFC107',
+        padding: {
+            x: 10,
+            y: 10
+        },
+        wordWrap: {
+            width: 500
+        },
+        align: 'center'
+    }).setOrigin(0.5).setInteractive().on('pointerdown', () => {
+        if (!this.alternativaRespondida){
+            this.verificarResposta(1, caso.quiz.alternativaCorreta);
+            this.primeiraCena.objetoCaso.status = false;
+            this.primeiraCena.objetoCaso.caso = null;
+            this.alternativaRespondida = true;
+            this.cenaHUD.events.emit('quiz-respondido')
+        }
+    });
+    
+        // Adicionando texto da explicação do porque está certa ou errada a alternativa à cena e também configurações estéticas
+        this.textoExplicacaoAlternativaErrada = this.add.text(bgWhite.x, bgWhite.y - 130, caso.feedbackRespostaErrada, {
+            fontSize: '22px',
+            color: '#ff0000',
+            fontFamily: 'Arial',
+            align: 'center',
+            wordWrap: {
+                width: 500
+            }
+        }).setOrigin(0.5).setVisible(false);
+        this.textoExplicacaoAlternativaCerta = this.add.text(bgWhite.x, bgWhite.y - 130, caso.feedbackRespostaCerta, {
+            fontSize: '22px',
+            color: '#008000',
+            fontFamily: 'Arial',
+            align: 'center',
+            wordWrap: {
+                width: 500
+            }
+        }).setOrigin(0.5).setVisible(false);
+})
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;Por fim, foi adicionado um método que verifica se a resposta está correta ou incorreta e, com base nisso, exibe um dos *feedbacks* e um dos sons possíveis para demonstrar se a alternativa está correta ou incorreta, como pode ser visto a seguir:
+
+```js
+verificarResposta(resposta, alternativaCorreta) {
+        // Verifica se a resposta está correta
+        this.simboloQuiz.setVisible(false)
+        if (resposta === alternativaCorreta) {
+            this.efeitoSonoroAcertar.play();
+            this.cenaHUD.atualizarPontuacao(10);
+            // Define a mensagem de explicação para resposta correta
+            this.textoExplicacaoAlternativaCerta.setVisible(true);
+            this.fundoFeedback.setVisible(true);
+            this.fundoFeedback.setStrokeStyle(2, 0x008000).setVisible(true);
+        } else {
+            this.efeitoSonoroErrar.play();
+            this.cenaHUD.atualizarTempo(10);
+            // Define a mensagem de explicação para resposta incorreta
+            this.textoExplicacaoAlternativaErrada.setVisible(true);
+            this.fundoFeedback.setVisible(true);
+            this.fundoFeedback.setStrokeStyle(2, 0xff0000).setVisible(true);
+        }
+    }
+```
+
+**Etapa 8 do desenvolvimento - Lógica de pontuação e perda de tempo**
+
+&nbsp;&nbsp;&nbsp;&nbsp;Nessa etapa, foi adicionada ao jogo a lógica de pontuação, que é atualizada a cada pergunta nova que é respondida corretamente, por outro lado, se ela for respondida incorretamente, o jogador perderá 10 segundos, implicando que ele faça menos casos, portanto poderá obtermenos pontos de forma indireta. Tal adição foi feita por meio dos métodos `atualizarPontuacao()` e `atualizarTempo()` da seguinte maneira:
+
+```js
+    atualizarPontuacao(pontuacao){
+        this.pontuacao += pontuacao;
+        this.textoPontos.setText(`Pontos: ${this.pontuacao}`);
+    }
+    atualizarTempo(tempo){
+        this.tempoInicial -= tempo;
+        this.textoTempo.setText((this.tempoInicial - this.tempoInicial %60)/60 + 'min ' + this.tempoInicial %60 + 's');
+        this.textoTempoDescontado.setVisible(true);
+        this.fundoTempoDescontado.setVisible(true).setStrokeStyle(2, 0xff0000);
+        if (this.tempoInicial >= -10 && this.tempoInicial < 0){
+            this.tempoInicial = 0
+        }
+    }
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;Tais métodos são chamados em outro método, chamado `verificarResposta()`, que, por sua vez, é chamado no evento de clique do mouse em uma das alternativas do quiz, verificando se essa alternativa está correta e chamando o método próprio para o acerto ou erro do jogador, do seguinte modo:
+
+```js
+verificarResposta(resposta, alternativaCorreta) {
+        // Verifica se a resposta está correta
+        this.simboloQuiz.setVisible(false)
+        if (resposta === alternativaCorreta) {
+            this.efeitoSonoroAcertar.play();
+            this.cenaHUD.atualizarPontuacao(10);
+            // Define a mensagem de explicação para resposta correta
+            this.textoExplicacaoAlternativaCerta.setVisible(true);
+            this.fundoFeedback.setVisible(true);
+            this.fundoFeedback.setStrokeStyle(2, 0x008000).setVisible(true);
+        } else {
+            this.efeitoSonoroErrar.play();
+            this.cenaHUD.atualizarTempo(10);
+            // Define a mensagem de explicação para resposta incorreta
+            this.textoExplicacaoAlternativaErrada.setVisible(true);
+            this.fundoFeedback.setVisible(true);
+            this.fundoFeedback.setStrokeStyle(2, 0xff0000).setVisible(true);
+        }
+    }
+```
+
 
 **Dificuldades**
 - A implementação dinâmica dos Cases usando _JSON_;
@@ -2337,7 +2526,7 @@ create() {
 
 ## 5.1. Casos de Teste
 
-&nbsp;&nbsp;&nbsp;&nbsp;Segundo o site "web.dev"¹³, no desenvolvimento de software, um caso de teste é definido como "uma sequência de ações ou circunstâncias planejadas para confirmar a eficácia de um programa ou aplicativo de software". Esses casos têm como objetivo assegurar que o software opere conforme planejado, garantindo que todos os seus recursos e funções tenham o desempenho correto. Normalmente, são criados por testadores ou desenvolvedores de software para garantir que o software atenda aos requisitos e especificações definidos.
+&nbsp;&nbsp;&nbsp;&nbsp;Segundo o site "web.dev"²⁵, no desenvolvimento de software, um caso de teste é definido como "uma sequência de ações ou circunstâncias planejadas para confirmar a eficácia de um programa ou aplicativo de software". Esses casos têm como objetivo assegurar que o software opere conforme planejado, garantindo que todos os seus recursos e funções tenham o desempenho correto. Normalmente, são criados por testadores ou desenvolvedores de software para garantir que o software atenda aos requisitos e especificações definidos.
 
 &nbsp;&nbsp;&nbsp;&nbsp;O presente projeto, ao adotar o paradigma de programação orientada a objetos, torna essencial a criação de casos de teste para garantir que as classes, métodos e interações entre os objetos funcionem corretamente e atendam aos requisitos do sistema. Os testes devem abranger também diversas situações e cenários possíveis de uso do sistema, verificando se os objetos interagem corretamente entre si e se os métodos produzem os resultados esperados.
 
@@ -2502,34 +2691,55 @@ O que poderia melhorar no jogo? | A responsividade do personagem aos controles, 
 
 &nbsp;&nbsp;&nbsp;&nbsp;Abaixo, estão contidas as referências utilizadas para embasar todo o projeto, visando entender todo o cenário, não só do cliente, como do mercado ao qual o projeto está inserida.<br>  
 
-¹ FERNANDES, D. R. Uma Visão Sobre a Análise da Matriz SWOT como Ferramenta para Elaboração da Estratégia. Revista de Ciências Jurídicas e Empresariais, [S. l.], v. 13, n. 2, 2015. DOI: 10.17921/2448-2129.2012v13n2p%p. Disponível em: https://revistajuridicas.pgsscogna.com.br/juridicas/article/view/720. Acesso em: 25 mar. 2024<br>
+¹ 
 
-² OSTERWALDER, Alex. Value Proposition Design: How to Create Products and Services Customers Want. 1st Edition. Wiley, 2014. <br>
+² DINIZ, Bruno; SILVA, Mateus; NUNES, Paloma; TOMAZ, Pedro. APLICAÇÃO DE FERRAMENTAS GERENCIAIS (ANALÍSE DE SOWT, MATRIZ BCG E CINCO FORÇAS DE PORTER) NA EMPRESA CHECKAUTO , Rio de Janeiro, RJ, 2022. Disponível em: http://dspace.sti.ufcg.edu.br:8080/xmlui/bitstream/handle/riufcg/32706/APLICA%C3%87%C3%83O%20DE%20FERRAMENTAS%20GERENCIAIS%20%28ANAL%C3%8DSE%20DE%20SWOT%2C%20MATRIZ%20BCG%20E%20CINCO%20FOR%C3%87AS%20DE%20PORTER%29%20-%20ANAIS%20X%20SIMEP%20ARTIGO%202022.pdf?sequence=1&isAllowed=y. Acesso em: 25 mar. 2024.
 
-³ MINETTO, Bianca. Ferramentas da qualidade. Disponível em: https://ferramentasdaqualidade.org/matriz-de-riscos-matriz-de-probabilidade-e-impacto/. Acesso em: 16 Fev. 2024 <br>
+³ MAGRETTA, Joan. Entendendo Michael Porter. São Paulo, SP: Editora Alta Books, 2019. E-book. ISBN 9788550805047. Disponível em: https://integrada.minhabiblioteca.com.br/#/books/9788550805047/. Acesso em: 25 mar. 2024.
 
-⁴ NAVARRO, Antonio Fernando. A função e a origem do Gerenciamento de Riscos. Scribd Inc.<br>
+⁴ AZEVEDO, Arelusa; TOLLENDAL, Carolina; NOGUEIRA, Diana; BARTELS, Fernanda; DE PAULA, Fernando; BERALDO, Franciane. Fatores que Orientam a Escolha do Curso Médico, Belo Horizonte, MG, 2005. Disponível em: https://www.scielo.br/j/rbem/a/mxwNc5g6B8nFR6gkBtQD7gN/#. Acesso em: 29 mar. 2024.<br>
 
-⁵ KOTLER, Philip; ARMSTRONG, Gary. Princípios de Marketing. 15. ed. [S. l.]: Pearson Universidades, 2014. 800 p. ISBN 978-8543004471.<br>
+⁵ BALIANA, Isabella. Profissões de maior prestígio: confira as mais queridinhas do Brasil. [S. l.], 2023. Disponível em: https://querobolsa.com.br/revista/profissoes-de-maior-prestigio. Acesso em: 29 mar. 2024.<br>
 
-⁶ JRS CONSULTORIA (AL). Público-alvo: tudo o que você precisa saber sobre o assunto!. Maceió, 2022. Disponível em: https://www.jrsconsultoria.com.br/2022/07/publico-alvo-tudo-o-que-voce-precisa-saber-sobre-o-assunto/. Acesso em: 27 fev. 2024.<br>
+⁶ FERNANDES, D. R. Uma Visão Sobre a Análise da Matriz SWOT como Ferramenta para Elaboração da Estratégia. Revista de Ciências Jurídicas e Empresariais, [S. l.], v. 13, n. 2, 2015. DOI: 10.17921/2448-2129.2012v13n2p%p. Disponível em: https://revistajuridicas.pgsscogna.com.br/juridicas/article/view/720. Acesso em: 25 mar. 2024<br>
 
 ⁷ Termo de Ativação de Projeto do Inteli (TAPI). Disponível em: https://drive.google.com/drive/folders/13H766_e002nh_oMMHXkQbkT5U-e7Otj3. Acesso em 28 fev. 2024.
 
-⁸ WIRTZ, Bryan. Gamedesigning. Disponível em: https://www.gamedesigning.org/gaming/video-game-genres/#Educational-Games. Acesso em 14 Fev. 2024<br>
+⁸ Osterwalder, A., Pigneur, Y., Bernarda, G., Smith, A., Papadakos, T., & Dumlao, A. (2010). Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers. John Wiley & Sons.
 
-⁹ BORGES, D. M.; BARREIRA, R. G.; SOUZA, J. G.. Comportamento de personagens em jogos de computador. In: ENCOINFO - Congresso de Computação e Tecnologias da Informação, 11., 2009, Palmas - TO. Anais [...]. Palmas - TO: CEULP/ULBRA, 2009. p. 101 - 108. ISSN e-ISSN: 2447-0767 versão online. Disponível em: https://ulbra-to.br/encoinfo/edicoes/2009/artigos/comportamento-de-personagens-em-jogos-de-computador/. Acesso em: 28 fev. 2024.<br>
+⁹ OSTERWALDER, Alex. Value Proposition Design: How to Create Products and Services Customers Want. 1st Edition. Wiley, 2014. <br>
 
-¹⁰EIKO, Julia. Revospace. Disponível em: https://revospace.com.br/artigo/o-que-e-concept-art/. Acesso em 28 fev. 2024.<br>
+¹⁰ MINETTO, Bianca. Ferramentas da qualidade. Disponível em: https://ferramentasdaqualidade.org/matriz-de-riscos-matriz-de-probabilidade-e-impacto/. Acesso em: 16 Fev. 2024 <br>
 
-¹¹ O que é Wireframe? Miro. Disponível em: https://miro.com/pt/wireframe/o-que-e-wireframe/. Acesso em 28 fev. 2024.<br>
+¹¹ NAVARRO, Antonio Fernando. A função e a origem do Gerenciamento de Riscos. Scribd Inc.<br>
 
-¹² What is a UML Diagram? Miro. Disponível em: https://miro.com/diagramming/what-is-a-uml-diagram/. Acesso em 28 fev. 2024.<br>
+¹² KOTLER, Philip; ARMSTRONG, Gary. Princípios de Marketing. 15. ed. [S. l.]: Pearson Universidades, 2014. 800 p. ISBN 978-8543004471.<br>
 
-¹³SCHWERING, Ramona. Como definir casos de teste e prioridades. Disponível em: https://web.dev/articles/ta-test-cases?hl=pt-br. Acesso em 28 fev. 2024.<br>
+¹³ JRS CONSULTORIA (AL). Público-alvo: tudo o que você precisa saber sobre o assunto!. Maceió, 2022. Disponível em: https://www.jrsconsultoria.com.br/2022/07/publico-alvo-tudo-o-que-voce-precisa-saber-sobre-o-assunto/. Acesso em: 27 fev. 2024.<br>
 
-¹⁴ HAIDER, Arwa. The music most embedded in our psyches? Disponível em: https://www.bbc.com/culture/article/20220608-the-music-most-embedded-in-our-psyches. Acesso em 13 mar. 2024.<br>
+¹⁴ 
 
+¹⁵ WIRTZ, Bryan. Gamedesigning. Disponível em: https://www.gamedesigning.org/gaming/video-game-genres/#Educational-Games. Acesso em 14 Fev. 2024<br>
+
+¹⁶ 
+
+¹⁷ BORGES, D. M.; BARREIRA, R. G.; SOUZA, J. G.. Comportamento de personagens em jogos de computador. In: ENCOINFO - Congresso de Computação e Tecnologias da Informação, 11., 2009, Palmas - TO. Anais [...]. Palmas - TO: CEULP/ULBRA, 2009. p. 101 - 108. ISSN e-ISSN: 2447-0767 versão online. Disponível em: https://ulbra-to.br/encoinfo/edicoes/2009/artigos/comportamento-de-personagens-em-jogos-de-computador/. Acesso em: 28 fev. 2024.<br>
+
+¹⁸
+
+¹⁹ EIKO, Julia. Revospace. Disponível em: https://revospace.com.br/artigo/o-que-e-concept-art/. Acesso em 28 fev. 2024.<br>
+
+²⁰ HAIDER, Arwa. The music most embedded in our psyches? Disponível em: https://www.bbc.com/culture/article/20220608-the-music-most-embedded-in-our-psyches. Acesso em 13 mar. 2024.<br>
+
+²¹ O que é Wireframe? Miro. Disponível em: https://miro.com/pt/wireframe/o-que-e-wireframe/. Acesso em 28 fev. 2024.<br>
+
+²² What is a UML Diagram? Miro. Disponível em: https://miro.com/diagramming/what-is-a-uml-diagram/. Acesso em 28 fev. 2024.<br>
+
+²³ Salen, K. e Zimmerman, E. (2012) “Regras do Jogo: Fundamentos do Design de Jogos", Volume 1, Blucher.
+
+²⁴ Hunicke, R., LeBlanc, M., & Zubek, R. (2004). MDA: A formal approach to game design and game research. In Proceedings of the AAAI Workshop on Challenges in Game AI (Vol. 4, pp. 04-04).
+
+²⁵ SCHWERING, Ramona. Como definir casos de teste e prioridades. Disponível em: https://web.dev/articles/ta-test-cases?hl=pt-br. Acesso em 28 fev. 2024.<br>
 
 # <a name="c8"></a>Anexos
 
