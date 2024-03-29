@@ -1699,8 +1699,6 @@ class Quiz extends Phaser.Scene {
   
 ## 4.4. Desenvolvimento final do MVP
 
-*Descreva e ilustre aqui o desenvolvimento da versão final do jogo, explicando brevemente o que foi entregue em termos de MVP. Utilize prints de tela para ilustrar. Indique as eventuais dificuldades e planos futuros.*
-
 **Etapa 1 do desenvolvimento - Case dinâmico**
 
 &nbsp;&nbsp;&nbsp;&nbsp; Nessa fase de desenvolvimento do jogo, precisavámos que os casos fossem importados de forma dinâmica e não mais fixo nos textos, isso foi necessário para começar a adicionar rotatividade no caso. A forma que foi encontrada para fazer isso foi através de arquivos JSON (Javascript Object Notation). A formatação de dados no JSON é a seguinte:
@@ -1808,8 +1806,7 @@ update(){
     }
 }
 ````
-&nbsp;&nbsp;&nbsp;&nbsp;Primeiro ele gera uma direção entre 0 e 360 graus, depois seta uma velocidade aleatória. E se ele estiver para esquerda ou direita, roda a animação espelhando ou não a sprite.
-O último método da classe é o `setCollisionBetweenItens()`, esse método foi criado para evitar muita repetição de código, então através do operador 'spread' do javascript, ele recebe todos os parâmetros e organiza em um array, um loop é criado para percorrer esse array e coloca colisão entre o NPC e todos os objetos com colisão do mapa.
+&nbsp;&nbsp;&nbsp;&nbsp;Primeiro ele gera uma direção entre 0 e 360 graus, depois define uma velocidade aleatória. Caso ele esteja para a esquerda ou para a direita, a animação rotaciona espelhando ou não a _sprite_. O último método da classe é o `setCollisionBetweenItens()`, esse método foi criado para evitar muita repetição de código, então através do operador '_spread_' do javascript, ele recebe todos os parâmetros e organiza em um array, um loop é criado para percorrer esse array e coloca colisão entre o NPC e todos os objetos com colisão do mapa.
 ````js
 setCollisionBetweenItens(...phaserPhysics){
     // Adiciona a colisão entre o aluno e os itens passados como argumento desse método. Esse metodo aceita um número variável de argumentos e foi feito para evitar a repetição de código
@@ -1825,7 +1822,8 @@ this.npc01.setCollisionBetweenItens(this.worldBounds, this.cerca, this.arvores, 
 ````
 
 **Etapa 3 do desenvolvimento - Conteúdo dos livros**
-Para a implementação do conteúdo do livro dinâmico, a ideia foi a mesma dos casos
+
+&nbsp;&nbsp;&nbsp;&nbsp;Para a implementação do conteúdo do livro dinâmico, a ideia foi a mesma dos casos.
 Primeiramente, foi criado um arquivo JSON com a seguinte estrutura de dados:
 ````json
 [
@@ -1836,8 +1834,9 @@ Primeiramente, foi criado um arquivo JSON com a seguinte estrutura de dados:
   }
 ]
 ````
-Dessa forma, os dados poderiam ser mostrados de forma dinâmica. A página sempre é passada em pares, então foi utilizada a página 0 com a 1, 2 com a 3 e assim por diante. 
-Para passar a página, dois retângulos foram criados, um na esquerda e outro na direita ocupando metade da tela. Quando clica no retângulo da direita, avança página, quando clica no retângulo da direita, volta página. Ainda, quando clica no retângulo da esquerda e está na página 0 - primeira página - ele volta para os livros. Abaixo, encontra-se a função que mostra o conteúdo dos livros e cria o retângulo com interatividade
+&nbsp;&nbsp;&nbsp;&nbsp;Dessa forma, os dados poderiam ser mostrados de forma dinâmica. A página sempre é passada em pares, então foi utilizada a página 0 com a 1, a 2 com a 3 e assim por diante.
+
+&nbsp;&nbsp;&nbsp;&nbsp; Para passar a página, dois retângulos foram criados, um à esquerda e outro à direita, ocupando metade da tela. Ao clicar no retângulo da direita, avança uma página, ao clicar no retângulo da direita, volta uma página. Ainda, ao clicar no retângulo da esquerda e estar na página 0 - primeira página - a cena volta para os livros. Abaixo, encontra-se a função que mostra o conteúdo dos livros e cria o retângulo com interatividade (os comentários do código serão adicionados posteriormente).
 ````js
 mostrarConteudo(grau){
     console.log(this.texto[grau - 1], grau - 1, this.texto[grau - 1].quantidadePaginas, this.texto[grau - 1][0])
@@ -1895,7 +1894,7 @@ mostrarConteudo(grau){
     })
 }
 ````
-Na página zero existe uma imagem que representa as diferentes camadas da pele e qual o grau de queimadura que afeta cada.
+&nbsp;&nbsp;&nbsp;&nbsp;Na página zero existe uma imagem que representa as diferentes camadas da pele e qual o grau de queimadura que afeta cada.
 
 ## 4.5. Revisão do MVP (sprint 5)
 
