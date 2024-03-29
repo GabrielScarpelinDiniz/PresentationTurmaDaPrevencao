@@ -50,7 +50,7 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     //Carrega a biblioteca do joystick
     this.load.plugin(
       "rexvirtualjoystickplugin",
-      "../../plugins/rexvirtualjoystickplugin.min.js",
+      "../src/plugins/rexvirtualjoystickplugin.min.js",
       true
     );
 
