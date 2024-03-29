@@ -43,13 +43,13 @@
 
 ### 1.1.2. Análise SWOT
 
-&nbsp;&nbsp;&nbsp;&nbsp;A matriz SWOT é uma ferramenta de planejamento estratégico que ajuda as empresas na tomada de decisão. Esta metodologia divide-se em aspectos internos e externos, compreendendo forças (*strengths*) e fraquezas (*weaknesses*) para o ambiente interno, e oportunidades (*opportunities*) e ameaças (*threats*) para o externo, que têm por objetivo identificar os principais pontos de influência que afetam a empresa para uma clareza melhor de quais são os fatores que estão sob seu controle (internos) e os que não estão (externos).
+&nbsp;&nbsp;&nbsp;&nbsp;A matriz SWOT é uma ferramenta de planejamento estratégico que ajuda as empresas na tomada de decisão. Esta metodologia divide-se em aspectos internos e externos, compreendendo forças (*strengths*) e fraquezas (*weaknesses*) para o ambiente interno, e oportunidades (*opportunities*) e ameaças (*threats*) para o externo, que têm por objetivo identificar os principais pontos de influência que afetam a empresa para uma clareza melhor de quais são os fatores que estão sob seu controle (internos) e os que não estão (externos)¹.
 
 &nbsp;&nbsp;&nbsp;&nbsp;Os aspectos externos se situam na esfera do que é praticamente incontrolável pela empresa, ao dependerem do meio em que ela está inserida e até mesmo, algumas vezes, do ambiente global. Desse modo, oportunidades são transformações que ocorrem no mercado e podem ser aproveitadas pela empresa pela tomada de um posicionamento mais favorável diante do que está ocorrendo. Em contrapartida, surgem as ameaças, as quais são fatores exógenos que colocam a empresa em uma situação de risco ou proporcionam maiores desafios para um bom desempenho mercantil.
 
-&nbsp;&nbsp;&nbsp;&nbsp;Por outro lado, os fatores internos referem-se à esfera sob controle direto da empresa, ou seja, ela pode, no caso de fraquezas, tomar atitudes a fim de saná-los, ou potencializá-los, no caso de forças. Neste contexto, as forças correspondem a elementos que conferem vantagens competitivas perante os concorrentes, mas que sejam tão distintiva quanto possível em relação aos competidores para que, deste modo, possam representar um grande diferencial da empresa. Enquanto as fraquezas representam limitações ou desvantagens que fragilizam a corporação, prejudicam a dinâmica do negócio e seu posicionamento estratégico no mercado¹ (FERNANDES, Djair 2012).
+&nbsp;&nbsp;&nbsp;&nbsp;Por outro lado, os fatores internos referem-se à esfera sob controle direto da empresa, ou seja, ela pode, no caso de fraquezas, tomar atitudes a fim de saná-los, ou potencializá-los, no caso de forças. Neste contexto, as forças correspondem a elementos que conferem vantagens competitivas perante os concorrentes, mas que sejam tão distintiva quanto possível em relação aos competidores para que, deste modo, possam representar um grande diferencial da empresa. Enquanto as fraquezas representam limitações ou desvantagens que fragilizam a corporação, prejudicam a dinâmica do negócio e seu posicionamento estratégico no mercado.
 
-&nbsp;&nbsp;&nbsp;&nbsp;Diante desse cenário, a matriz SWOT surge como uma ferramenta poderosíssima para uma parte crucial do posicionamento estratégico, a qual é compreender a interdependência desses componentes, uma vez que alterações em um deles impactam diretamente os demais. A estratégia eficaz, portanto, consiste em focalizar os fatores controláveis para permitir que a empresa alcance seus objetivos estratégicos. Por exemplo, enfrentar as ameaças é mais fácil pela mitigação das fraquezas, ao passo que a exploração mais eficiente das oportunidades é viabilizada pela potencialização das forças. Essa relação intrínseca simplifica a tomada de decisões, proporcionando ideias para a alocação mais produtiva de recursos e a determinação de prioridades. Fizz
+&nbsp;&nbsp;&nbsp;&nbsp;Diante desse cenário, a matriz SWOT surge como uma ferramenta poderosíssima para uma parte crucial do posicionamento estratégico, a qual é compreender a interdependência desses componentes, uma vez que alterações em um deles impactam diretamente os demais. A estratégia eficaz, portanto, consiste em focalizar os fatores controláveis para permitir que a empresa alcance seus objetivos estratégicos. Por exemplo, enfrentar as ameaças é mais fácil pela mitigação das fraquezas, ao passo que a exploração mais eficiente das oportunidades é viabilizada pela potencialização das forças. Essa relação intrínseca simplifica a tomada de decisões, proporcionando ideias para a alocação mais produtiva de recursos e a determinação de prioridades.  
 
 <div align="center">
 
@@ -67,7 +67,8 @@
 
 ⁰ ¹ ² ³ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹
 
-&nbsp;&nbsp;&nbsp;&nbsp;A falta de conscientização sobre prevenção, primeiros socorros e informações inadequadas sobre queimaduras, em especial em populações vulneráveis, influi na alta incidência de queimaduras, que se torna uma das maiores causas de lesões traumáticas no mundo. Foram registrados cerca de 1 milhão de novos casos anualmente no Brasil, conforme dados divulgados pelo Ministério da Saúde do Brasil em 2014, e acredita-se que 90% das queimaduras poderiam ser evitadas com a devida educação e conscientização da população. Grande parte das queimaduras registradas ocorreram em ambiente residencial e em atividades de lazer, abrangendo, na maioria, homens de 20 a 39 anos[⁷](#c7).  <br>
+&nbsp;&nbsp;&nbsp;&nbsp;A falta de conscientização sobre prevenção, primeiros socorros e informações inadequadas sobre queimaduras, em especial em populações vulneráveis, influi na alta incidência de queimaduras, que se torna uma das maiores causas de lesões traumáticas no mundo. Foram registrados cerca de 1 milhão de novos casos anualmente no Brasil, conforme dados divulgados pelo Ministério da Saúde do Brasil em 2014, e acredita-se que 90% das queimaduras poderiam ser evitadas com a devida educação e conscientização da população. Grande parte das queimaduras registradas ocorreram em ambiente residencial e em atividades de lazer, abrangendo, na maioria, homens de 20 a 39 anos.[⁷](#c7)
+<br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;Considerando esse cenário, definimos como possível solução a criação de um jogo mobile educacional. Ele visa conscientizar a população, em especial as vulneráveis, sobre queimaduras, à medida que fornece informações embasadas para estimular a educação de prevenção de queimaduras, além de auxiliar nos primeiros socorros e desmitificar métodos inapropriados de tratamentos.<br>
 
@@ -82,7 +83,7 @@
 
 ### 1.1.4. Proposta de Valor
 
-&nbsp;&nbsp;&nbsp;&nbsp;Um Canvas de Proposta de Valor é basicamente um mapa visual que ajuda a entender melhor o que torna um produto ou serviço valioso para os clientes. Imagine como um guia que organiza informações importantes sobre quem são seus clientes, o que eles precisam, e como seu produto ou serviço resolve seus problemas ou traz benefícios. É como uma caixa de ferramentas que permite às equipes reunirem suas ideias e pensarem de forma criativa sobre como podem oferecer valor aos seus clientes.
+&nbsp;&nbsp;&nbsp;&nbsp;Um Canvas de Proposta de Valor é basicamente um mapa visual que ajuda a entender melhor o que torna um produto ou serviço valioso para os clientes. Imagine como um guia que organiza informações importantes sobre quem são seus clientes, o que eles precisam, e como seu produto ou serviço resolve seus problemas ou traz benefícios. É como uma caixa de ferramentas que permite às equipes reunirem suas ideias e pensarem de forma criativa sobre como podem oferecer valor aos seus clientes. Esta abordagem foi popularizada por Alexander Osterwalder e Yves Pigneur em seu livro "Business Model Generation", onde o canvas é uma das nove áreas-chave de um modelo de negócios.
 
 &nbsp;&nbsp;&nbsp;&nbsp;Usar um Canvas de Proposta de Valor é como criar uma história sobre como seu produto ou serviço faz a diferença na vida das pessoas. É uma conversa visual que ajuda as equipes a se concentrarem no que realmente importa: entender as necessidades dos clientes e encontrar maneiras inteligentes de atendê-las. É uma abordagem colaborativa que incentiva todos a contribuírem com suas ideias, garantindo que todos estejam na mesma página e trabalhando na mesma direção para oferecer algo que realmente importa para os clientes, ou seja, construir e consilidar sua proposta de valor.
 
@@ -284,7 +285,7 @@ Posto isso, foi entendido que a definição adequada do público alvo aumenta a 
 ### 3.2.2. Non-Playable Characters (NPC)
 
 
-&nbsp;&nbsp;&nbsp;&nbsp;*Non-Playable Characters* (*NPCs*) são avatares os quais o jogador não possui controle sobre, portanto não comanda seus movimentos nem ações⁹. Porém, é possível interagir com eles se forem programados para isso, como é o caso da Dra. Tina. Em nosso projeto, utilizaremos 11 *NPCs*, dos quais 10 deles serão estudantes e, como o Lipe, participarão da dinâmica. Desde modo, poderão ser obstáculos para o trajeto do jogador durante o jogo. Já a  Dra. Tina é uma *NPC* que fica situada somente em um lugar, no entanto ela é a única com a qual se pode interagir, visto que é a responsável por entregar os cases aos alunos. Fizz
+&nbsp;&nbsp;&nbsp;&nbsp;*Non-Playable Characters* (*NPCs*) são avatares os quais o jogador não possui controle sobre, portanto não comanda seus movimentos nem ações⁹. Porém, é possível interagir com eles se forem programados para isso, como é o caso da Dra. Tina. Em nosso projeto, utilizaremos 11 *NPCs*, dos quais 10 deles serão estudantes e, como o Lipe, participarão da dinâmica. Desde modo, poderão ser obstáculos para o trajeto do jogador durante o jogo. Já a  Dra. Tina é uma *NPC* que fica situada somente em um lugar, no entanto ela é a única com a qual se pode interagir, visto que é a responsável por entregar os cases aos alunos.
 
 
 <div align="center">
@@ -361,7 +362,7 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 ### 3.3.4. Concept Art
 
 &nbsp;&nbsp;&nbsp;&nbsp;As Concepts Arts são desenhos desenvolvidos com o objetivo de conceituar elementos do jogo como personagens, itens, cenários, etc¹⁰. Para nosso jogo, as concepts arts desenvolvidas estão listadas abaixo:
-Fizz
+ 
 <div align="center">
 
 <sub>Figura 6 - Concept Art do Mapa</sub>
@@ -555,7 +556,7 @@ Fizz
 
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;9 - O quiz terá uma pergunta e duas opções de respostas. Caso o jogador acerte a resposta do quiz, ele ganha de 10 a 20 pontos (os pontos variam de acordo com a dificuldade da pergunta). No caso em que o jogador erre a resposta, aparecerá um feedback na tela explicando o porquê do erro (com o intuito de conscientizar o aluno) e ele perderá 10 segundos no timer. Após a conclusão do ciclo, o jogador deve iniciá-lo novamente, interagindo com a Dra. Tina. A dinâmica do jogo continua até o tempo acabar. Fizz
+&nbsp;&nbsp;&nbsp;&nbsp;9 - O quiz terá uma pergunta e duas opções de respostas. Caso o jogador acerte a resposta do quiz, ele ganha de 10 a 20 pontos (os pontos variam de acordo com a dificuldade da pergunta). No caso em que o jogador erre a resposta, aparecerá um feedback na tela explicando o porquê do erro (com o intuito de conscientizar o aluno) e ele perderá 10 segundos no timer. Após a conclusão do ciclo, o jogador deve iniciá-lo novamente, interagindo com a Dra. Tina. A dinâmica do jogo continua até o tempo acabar.  
 
 <div align="center">
 
@@ -1073,7 +1074,7 @@ openFullScreen() {
 
 **Etapa 1 do desenvolvimento - Criação do novo cenário**
 
-&nbsp;&nbsp;&nbsp;&nbsp;Na sprint anterior, o jogo se passava em um ambiente hospitalar, onde o personagem principal era o médico residente. Com a mudança de cenário, o local passou a ser o pátio da FMUSP e os elementos do jogo foram adaptados para o novo espaço, como o menu, os personagens e os espaços de interação. O modo de uso do Tiled Map Editor para a criação do novo mapa foi o mesmo descrito no tópico 4.2. Fizz
+&nbsp;&nbsp;&nbsp;&nbsp;Na sprint anterior, o jogo se passava em um ambiente hospitalar, onde o personagem principal era o médico residente. Com a mudança de cenário, o local passou a ser o pátio da FMUSP e os elementos do jogo foram adaptados para o novo espaço, como o menu, os personagens e os espaços de interação. O modo de uso do Tiled Map Editor para a criação do novo mapa foi o mesmo descrito no tópico 4.2.  
 
 <div align="center">
 
@@ -1894,6 +1895,60 @@ mostrarConteudo(grau){
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;Na página zero existe uma imagem que representa as diferentes camadas da pele e qual o grau de queimadura que afeta cada.
 
+**Etapa 4 do desenvolvimento - Adição de Efeitos Sonoros**
+
+&nbsp;&nbsp;&nbsp;&nbsp;A adição das músicas na trilha sonora do jogo foi muito bem recebida e demonstrou que indicações sonoras poderiam enriquecer ainda mais a experiência do usuário. Com isso em mente, foi necessário buscar efeitos sonoros que representassem diversos momentos em nosso jogo.
+
+&nbsp;&nbsp;&nbsp;&nbsp;Citaremos abaixo um exemplo de implementação no código que foi aplicada na adição de todos os efeitos sonoros. A seguir, será listado as cenas e a lógica de implementação de cada efeito sonoro específico.
+
+&nbsp;&nbsp;&nbsp;&nbsp;Primeiro, é necessário carregar o arquivo no método `preload()`. Segundo, o efeito sonoro é atribuído a um objeto no método `create()`. Por fim, o efeito sonoro é chamado, através do método `play()`, em partes específicas do código para criar o resultado esperado, nesse caso, sinalizar para o jogador que o botão Iniciar foi clicado.
+
+```js
+preload(){
+(...)
+    // SFX do botão iniciar
+    this.load.audio('efeitoSonoroBotaoIniciar', 'assets/sounds/efeitoSonoroBotaoIniciar.mp3')
+}
+```
+```js
+create(){
+    (...)
+    // Adiciona efeito sonoro do botão iniciar
+    this.efeitoSonoroBotaoIniciar = this.sound.add('efeitoSonoroBotaoIniciar',{volume: 0.5});
+    (...)
+    this.botaoJogar.on("pointerdown", () => {
+      // Evento de click do mouse
+      this.efeitoSonoroBotaoIniciar.play();
+      (...)
+    }
+}
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;Como dito anteriormente, outros efeitos sonoros foram adicionados seguindo a mesma lógica de implementação do código acima e pode-se verificar uma lista extensiva deles na tabela x da seção 3.3.5, que inclui também a cena que está o efeito e o evento que ocasiona sua ocorrência.
+
+**Dificuldades**
+- A implementação dinâmica dos Cases usando _JSON_;
+- A implementação dinâmica dos conteúdos dos livros usando _JSON_;
+- A implementação dinâmica das perguntas do quiz usando _JSON_;
+- Criar e ajustar a Cutscene inicial do jogo;
+- Ajustar o volume de cada elemento sonoro.
+
+**Próximos passos**
+- Pesquisar a possibilidade de implementar elementos que visam mais diversidade;
+- Corrigir os elementos textuais;
+    - Gramática
+    - Tamanho da Fonte
+    - Quantidade de Falas
+    - Respostas erradas no Quiz
+    - Palavras sem coloração adequada nos Cases
+    - Textos faltando nos Livros
+- Adicionar um indicador para a Dra. Tina;
+- Adicionar um tutorial;
+- Melhorar a visibilidade da caixa de próxima tarefa;
+- Acertar bugs gráficos;
+- Criar uma tela de _Game Over_.
+
+
 ## 4.5. Revisão do MVP (sprint 5)
 
 *Descreva e ilustre aqui o desenvolvimento dos refinamentos e revisões da versão final do jogo, explicando brevemente o que foi entregue em termos de MVP. Utilize prints de tela para ilustrar.*
@@ -2065,7 +2120,7 @@ O que poderia melhorar no jogo? | A responsividade do personagem aos controles, 
 
 # <a name="c7"></a>7. Referências (sprint 5)
 
-&nbsp;&nbsp;&nbsp;&nbsp;Abaixo, estão contidas as referências utilizadas para embasar todo o projeto, visando entender todo o cenário, não só do cliente, como do mercado ao qual o projeto está inserida.<br> Fizz
+&nbsp;&nbsp;&nbsp;&nbsp;Abaixo, estão contidas as referências utilizadas para embasar todo o projeto, visando entender todo o cenário, não só do cliente, como do mercado ao qual o projeto está inserida.<br>  
 
 ¹ FERNANDES, D. R. Uma Visão Sobre a Análise da Matriz SWOT como Ferramenta para Elaboração da Estratégia. Revista de Ciências Jurídicas e Empresariais, [S. l.], v. 13, n. 2, 2015. DOI: 10.17921/2448-2129.2012v13n2p%p. Disponível em: https://revistajuridicas.pgsscogna.com.br/juridicas/article/view/720. Acesso em: 25 mar. 2024<br>
 
