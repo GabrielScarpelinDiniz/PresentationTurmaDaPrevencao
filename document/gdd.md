@@ -45,7 +45,17 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;As cinco forças de Porter é um framework fundado por Michael Porter, professor da Harvard Business School, em 1970[²](#c7). O modelo é utilizado para realizar uma análise setorial do mercado em que a empresa está inserida, mostrando qual sua posição no setor em comparação com outros empreendimentos atuantes do mesmo setor. Segundo Joan Magretta, editora de estratégia na Harvard Business Review, "a estrutura das cinco forças explica os preços e custos médios do setor e, portanto, a lucratividade média a ser superada."[³](#c7), ou seja, compreender com profundidade a rivalidade entre concorrentes (1), a ameaça de novos entrantes (2), o poder de barganha dos fornecedores (3), o poder de barganha dos clientes (4) e a ameaça de produtos substitutos (5), é fundamental para entender a dinâmica da competição e para construir uma estratégia empresarial que visa mais lucro. 
 
-&nbsp;&nbsp;&nbsp;&nbsp;A partir do nosso projeto, realizamos uma análise profunda do setor de faculdades de medicina no estado de São Paulo, utilizando o modelo de Porter (figura xx) e explicando como cada uma das 5 forças funcionam nesse setor.
+&nbsp;&nbsp;&nbsp;&nbsp;A partir do nosso projeto, realizamos uma análise profunda do setor de faculdades de medicina no estado de São Paulo, utilizando o modelo de Porter (figura 01) e explicando como cada uma das 5 forças funcionam nesse setor.
+
+<div align="center">
+
+<sub>Figura 01 - Template 5 Forças de Porter</sub>
+
+<img src="./other/5forces.png" width=800>
+
+<sup>Fonte: </sup>
+
+</div>
 
 **Rivalidade entre concorrentes**
 
