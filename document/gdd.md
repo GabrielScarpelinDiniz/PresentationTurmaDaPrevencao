@@ -67,7 +67,8 @@
 
 ⁰ ¹ ² ³ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹
 
-&nbsp;&nbsp;&nbsp;&nbsp;A falta de conscientização sobre prevenção, primeiros socorros e informações inadequadas sobre queimaduras, em especial em populações vulneráveis, influi na alta incidência de queimaduras, que se torna uma das maiores causas de lesões traumáticas no mundo. Foram registrados cerca de 1 milhão de novos casos anualmente no Brasil, conforme dados divulgados pelo Ministério da Saúde do Brasil em 2014, e acredita-se que 90% das queimaduras poderiam ser evitadas com a devida educação e conscientização da população. Grande parte das queimaduras registradas ocorreram em ambiente residencial e em atividades de lazer, abrangendo, na maioria, homens de 20 a 39 anos[⁷](#c7).  <br>
+&nbsp;&nbsp;&nbsp;&nbsp;A falta de conscientização sobre prevenção, primeiros socorros e informações inadequadas sobre queimaduras, em especial em populações vulneráveis, influi na alta incidência de queimaduras, que se torna uma das maiores causas de lesões traumáticas no mundo. Foram registrados cerca de 1 milhão de novos casos anualmente no Brasil, conforme dados divulgados pelo Ministério da Saúde do Brasil em 2014, e acredita-se que 90% das queimaduras poderiam ser evitadas com a devida educação e conscientização da população. Grande parte das queimaduras registradas ocorreram em ambiente residencial e em atividades de lazer, abrangendo, na maioria, homens de 20 a 39 anos.[⁷](#c7)
+<br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;Considerando esse cenário, definimos como possível solução a criação de um jogo mobile educacional. Ele visa conscientizar a população, em especial as vulneráveis, sobre queimaduras, à medida que fornece informações embasadas para estimular a educação de prevenção de queimaduras, além de auxiliar nos primeiros socorros e desmitificar métodos inapropriados de tratamentos.<br>
 
@@ -1893,6 +1894,60 @@ mostrarConteudo(grau){
 }
 ````
 &nbsp;&nbsp;&nbsp;&nbsp;Na página zero existe uma imagem que representa as diferentes camadas da pele e qual o grau de queimadura que afeta cada.
+
+**Etapa 4 do desenvolvimento - Adição de Efeitos Sonoros**
+
+&nbsp;&nbsp;&nbsp;&nbsp;A adição das músicas na trilha sonora do jogo foi muito bem recebida e demonstrou que indicações sonoras poderiam enriquecer ainda mais a experiência do usuário. Com isso em mente, foi necessário buscar efeitos sonoros que representassem diversos momentos em nosso jogo.
+
+&nbsp;&nbsp;&nbsp;&nbsp;Citaremos abaixo um exemplo de implementação no código que foi aplicada na adição de todos os efeitos sonoros. A seguir, será listado as cenas e a lógica de implementação de cada efeito sonoro específico.
+
+&nbsp;&nbsp;&nbsp;&nbsp;Primeiro, é necessário carregar o arquivo no método `preload()`. Segundo, o efeito sonoro é atribuído a um objeto no método `create()`. Por fim, o efeito sonoro é chamado, através do método `play()`, em partes específicas do código para criar o resultado esperado, nesse caso, sinalizar para o jogador que o botão Iniciar foi clicado.
+
+```js
+preload(){
+(...)
+    // SFX do botão iniciar
+    this.load.audio('efeitoSonoroBotaoIniciar', 'assets/sounds/efeitoSonoroBotaoIniciar.mp3')
+}
+```
+```js
+create(){
+    (...)
+    // Adiciona efeito sonoro do botão iniciar
+    this.efeitoSonoroBotaoIniciar = this.sound.add('efeitoSonoroBotaoIniciar',{volume: 0.5});
+    (...)
+    this.botaoJogar.on("pointerdown", () => {
+      // Evento de click do mouse
+      this.efeitoSonoroBotaoIniciar.play();
+      (...)
+    }
+}
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;Como dito anteriormente, outros efeitos sonoros foram adicionados seguindo a mesma lógica de implementação do código acima e pode-se verificar uma lista extensiva deles na tabela x da seção 3.3.5, que inclui também a cena que está o efeito e o evento que ocasiona sua ocorrência.
+
+**Dificuldades**
+- A implementação dinâmica dos Cases usando _JSON_;
+- A implementação dinâmica dos conteúdos dos livros usando _JSON_;
+- A implementação dinâmica das perguntas do quiz usando _JSON_;
+- Criar e ajustar a Cutscene inicial do jogo;
+- Ajustar o volume de cada elemento sonoro.
+
+**Próximos passos**
+- Pesquisar a possibilidade de implementar elementos que visam mais diversidade;
+- Corrigir os elementos textuais;
+    - Gramática
+    - Tamanho da Fonte
+    - Quantidade de Falas
+    - Respostas erradas no Quiz
+    - Palavras sem coloração adequada nos Cases
+    - Textos faltando nos Livros
+- Adicionar um indicador para a Dra. Tina;
+- Adicionar um tutorial;
+- Melhorar a visibilidade da caixa de próxima tarefa;
+- Acertar bugs gráficos;
+- Criar uma tela de _Game Over_.
+
 
 ## 4.5. Revisão do MVP (sprint 5)
 
