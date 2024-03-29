@@ -1926,12 +1926,154 @@ create(){
 
 &nbsp;&nbsp;&nbsp;&nbsp;Como dito anteriormente, outros efeitos sonoros foram adicionados seguindo a mesma lógica de implementação do código acima e pode-se verificar uma lista extensiva deles na tabela x da seção 3.3.5, que inclui também a cena que está o efeito e o evento que ocasiona sua ocorrência.
 
+**Etapa 5 do desenvolvimento - Animações de câmera e diálogo animado**
+&nbsp;&nbsp;&nbsp;&nbsp;O primeiro passo foi criar uma máquina de diálogo. A lógica da máquina é simples, ela estende o BitMap Text do phaser recebendo dois parâmetros a mais: velocidade e uma função que é executada ao terminar a animação do diálogo. Um timer é criado com a velocidade passada no parâmetro e uma função é chamada, essa função adiciona um carácter de cada vez ao texto original verificando se o carácter existe.
+&nbsp;&nbsp;&nbsp;&nbsp;A classe ficou da seguinte forma:
+````js
+class TypeWritter extends Phaser.GameObjects.BitmapText {
+    constructor(scene, x, y, font, text, size, velocidade, onComplete, onStart, align) {
+      // Cria um objeto BitmapText com dois argumentos adicionais: velocidade e onComplete
+      super(scene, x, y, font, text, size, align); // Chama o construtor da classe pai
+      scene.add.existing(this); // Adiciona o objeto ao display list da cena
+      this.speed = velocidade; // Define a velocidade de digitação
+      this.textOriginal = text; // Armazena o texto original
+      this.index = 0; // Inicializa o índice
+      this.typedText = ""; // Inicializa o texto digitado
+      this.timer = scene.time.addEvent({
+        delay: this.speed,
+        callback: this.addChar,
+        callbackScope: this,
+        loop: true
+      }); // Cria um evento de tempo para adicionar caracteres
+      this.onComplete = onComplete; // Armazena a função onComplete
+    }
+    
+    addChar() {
+      if (this.textOriginal[this.index] === undefined) return; // Verifica se o texto acabou
+      this.typedText += this.textOriginal[this.index]; // Adiciona um caractere ao texto digitado
+      this.setText(this.typedText); // Define o texto do objeto
+      this.index++; // Incrementa o índice
+      if (this.index === this.textOriginal.length) {
+          // Se o índice for igual ao tamanho do texto original, então remove o evento de tempo e chama a função onComplete
+          this.timer.remove();
+          if (this.onComplete) this.onComplete();
+      }
+    }
+}
+```` 
+&nbsp;&nbsp;&nbsp;&nbsp;Após isso, três novos métodos foram criados: `skip()`, `proximoTexto()` e uma sobreescrita do método `destroy()`.
+&nbsp;&nbsp;&nbsp;&nbsp;A função `skip()` pula toda a animação de fala, colocando o texto diretamente, já a função próximo texto reseta a classe e permite que um novo diálogo seja colocado com toda a animação novamente e por fim, o método `destroy()` remove o timer, pois caso contrário ele continuava rodando, dando inúmeros erros no console.
+````js
+skip(){
+    // Função para pular a digitação
+    this.timer.remove();
+    this.setText(this.textOriginal);
+    if (this.onComplete) this.onComplete();
+}
+destroy() {
+    // Função para destruir o objeto, removendo o evento de tempo e chamando o método destroy da classe pai
+    this.timer.remove();
+    super.destroy();
+}
+proximoTexto(texto, onComplete){
+    // Função para adicionar um novo texto ao objeto e reiniciar a digitação
+    console.log(texto)
+    this.textOriginal = texto;
+    this.index = 0;
+    this.typedText = "";
+    this.timer = this.scene.time.addEvent({
+        delay: this.speed,
+        callback: this.addChar,
+        callbackScope: this,
+        loop: true
+    });
+    this.onComplete = onComplete;
+}
+````
+&nbsp;&nbsp;&nbsp;&nbsp;Além disso, para a animação de câmera uma máquina de estados foi criada. De modo simples, ela salva o estado em que o jogo está e toda vez que uma movimentação de câmera acaba ela vê o que precisa fazer.
+````js
+this.maquinaEstado = new StateMachine("cameraPanParaDialogo"); // Instância da máquina de estado passando o estado inicial
+this.cameras.main.on("camerapancomplete", () => {
+      // Nessa função, toda vez que uma animação de cena acaba, ela verifica qual estado em que está para executar a próxima ação
+      if (this.maquinaEstado.currentState() === "cameraPanParaDialogo") {
+        // Se o estado for de pan para o diálogo, inicia o diálogo
+        // ... toda lógica
+      }
+      else if (this.maquinaEstado.currentState() === "cameraPanOnibus"){
+        // Se o estado for de pan para o ônibus, inicia o ônibus andando e som de ônibus
+        // ... toda lógica
+      }
+      else if (this.maquinaEstado.currentState() === "entradaDosPersonagens") {
+        // Se o estado for de entrada dos personagens, inicia a entrada dos personagens
+        // ... toda lógica
+      }
+      else if (this.maquinaEstado.currentState() === "prontoParaJogar") {
+        // Se o estado for de pronto para jogar, inicia o jogo, voltando a física e mostrando o joystick
+        // ... toda lógica
+      }
+    });
+````
+&nbsp;&nbsp;&nbsp;&nbsp;Os métodos de transição de estado estão separados dependendo do uso, um exemplo, é quando o ônibus chega em frente ao portão, uma animação de câmera é chamada e o estado é trocado para outro
+````js
+if (this.onibus.x >= 575 && this.maquinaEstado.currentState() === "cameraPanOnibus") {
+    // Se o ônibus chegar na posição 575, ele para e a câmera pan para a entrada dos personagens
+    this.maquinaEstado.transitionTo("entradaDosPersonagens");
+    this.onibus.setVelocityX(0);
+    this.cameras.main.pan(575, 900, 1000)
+    this.cameras.main.stopFollow()
+}
+````
+&nbsp;&nbsp;&nbsp;&nbsp;Voltando aos diálogos, outra função muito importante é a `dialogoCompleto()`, que verifica se tem mais diálogos da personagem em um array e se tiver, passa para o próximo diálogo, caso contrário troca o estado da máquina de estado.
+````js
+const dialogoCompleto = () => {
+    // Função que avança o diálogo se tiver mais texto, ou finaliza o diálogo se não tiver mais texto
+    this.dialogBox.off("pointerdown", dialogoCompleto)
+    this.atualDialogoIndice++
+    console.log(this.atualDialogoIndice, this.dialogo.length)
+    if (this.atualDialogoIndice === this.dialogo.length){
+    // Se o diálogo acabar, destrói os elementos de diálogo e inicia a câmera de pan para o ônibus
+    this.dialogBox.destroy();
+    this.dialogText.destroy();
+    this.botaoCheck.destroy();
+    this.cameras.main.setBounds(0, 0, 1120, 1120);
+    this.cameras.main.pan(50, 1120, 2000);
+    
+    this.maquinaEstado.transitionTo("cameraPanOnibus");
+    return;
+    }
+    this.dialogText.on("pointerdown", () => { this.dialogText.skip()}) // Adiciona a função de pular o texto ao clicar no texto
+    this.dialogText.proximoTexto(this.dialogo[this.atualDialogoIndice], () => this.dialogBox.on("pointerdown", dialogoCompleto)) // Adiciona o próximo texto ao diálogo
+}
+````
+&nbsp;&nbsp;&nbsp;&nbsp;Por fim, abaixo está a máquina de estado, que tem somente dois métodos, que pega o estado atual e que troca de estado. A máquina de estados funciona simplesmente trocando um atributo da máquina que é uma string.
+````js
+class StateMachine {
+    constructor(initialState) {
+        // Inicializa a máquina de estados com um estado inicial
+        this.state = initialState;
+    }
+    
+    transitionTo(state) {
+        // Função para transicionar entre estados
+        if (this.state === state) {
+            return;
+        }
+        this.state = state;
+    }
+    currentState() {
+        // Retorna o estado atual
+        return this.state;
+    }
+}
+````
 **Dificuldades**
 - A implementação dinâmica dos Cases usando _JSON_;
 - A implementação dinâmica dos conteúdos dos livros usando _JSON_;
 - A implementação dinâmica das perguntas do quiz usando _JSON_;
 - Criar e ajustar a Cutscene inicial do jogo;
 - Ajustar o volume de cada elemento sonoro.
+- Entender o funcionamento das animações de câmera
+- Observar a necessidade de uma máquina de estado nas animações de câmera
 
 **Próximos passos**
 - Pesquisar a possibilidade de implementar elementos que visam mais diversidade;
