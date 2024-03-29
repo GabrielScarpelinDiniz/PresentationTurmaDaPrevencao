@@ -2694,9 +2694,9 @@ O que poderia melhorar no jogo? | A responsividade do personagem aos controles, 
 
 ³ MAGRETTA, Joan. Entendendo Michael Porter. São Paulo, SP: Editora Alta Books, 2019. E-book. ISBN 9788550805047. Disponível em: https://integrada.minhabiblioteca.com.br/#/books/9788550805047/. Acesso em: 25 mar. 2024.
 
-⁴https://www.scielo.br/j/rbem/a/mxwNc5g6B8nFR6gkBtQD7gN/#:~:text=Algumas%20pessoas%20escolhem%20a%20Medicina,ou%20o%20m%C3%A9dico%20da%20fam%C3%ADlias.
+⁴ AZEVEDO, Arelusa; TOLLENDAL, Carolina; NOGUEIRA, Diana; BARTELS, Fernanda; DE PAULA, Fernando; BERALDO, Franciane. Fatores que Orientam a Escolha do Curso Médico, Belo Horizonte, MG, 2005. Disponível em: https://www.scielo.br/j/rbem/a/mxwNc5g6B8nFR6gkBtQD7gN/#. Acesso em: 29 mar. 2024.<br>
 
-⁵ https://querobolsa.com.br/revista/profissoes-de-maior-prestigio
+⁵ BALIANA, Isabella. Profissões de maior prestígio: confira as mais queridinhas do Brasil. [S. l.], 2023. Disponível em: https://querobolsa.com.br/revista/profissoes-de-maior-prestigio. Acesso em: 29 mar. 2024.<br>
 
 ⁶ FERNANDES, D. R. Uma Visão Sobre a Análise da Matriz SWOT como Ferramenta para Elaboração da Estratégia. Revista de Ciências Jurídicas e Empresariais, [S. l.], v. 13, n. 2, 2015. DOI: 10.17921/2448-2129.2012v13n2p%p. Disponível em: https://revistajuridicas.pgsscogna.com.br/juridicas/article/view/720. Acesso em: 25 mar. 2024<br>
 
