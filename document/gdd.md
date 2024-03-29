@@ -417,15 +417,24 @@ Fizz
 &nbsp;&nbsp;&nbsp;&nbsp;As trilhas sonoras são meios de envolver o usuário no jogo, segundo o artigo "The Role of Music in Videogames" - O papel da música nos videogames - cujo autor, citado no artigo da BBC ¹⁴, afirma que as trilhas sonoras nos jogos são multifuncionais, pois significam várias coisas para o jogador. Isso inclui o aumento da imersão, as brechas para mudanças na história, além de contribuírem também para a estética do jogo, tornando-se assim um fator muito importante para o envolvimento do jogador na narrativa.
 
 <div align="center">
-<sub>Tabela X: Lista de músicas</sub>
+<sub>Tabela X: Lista de músicas e efeitos sonoros</sub>
 </div>
 
 \# | Título | Ocorrência | Autoria
 --- | --- | --- | ---
-1 | Tema de abertura e durante o tutorial | Tela de início e Cena da faculdade | FoolBoyMedia (CC BY-NC 4.0)
-2 | Tema principal | Cena da faculdade após a introdução | BloodPixelHero (CC BY 4.0)
+1 | Tema de abertura e durante o tutorial | Tela de início e Cena da Faculdade | FoolBoyMedia (CC BY-NC 4.0)
+2 | Tema principal | Cena da Faculdade após abrir um Case | BloodPixelHero (CC BY 4.0)
+3 | Efeito Sonoro Botão Iniciar | Cena de Menu após a clicar no Botão Iniciar | Pixabay (CC0)
+4 | Efeito Sonoro Botão X | Cena da Faculdade após abrir um Case e clicar no Botão X | Pixabay (CC0)
+5 | Efeito Sonoro Ônibus | Cutscene inicial quando o ônibus passa | Pixabay (CC0)
+6 | Efeito Sonoro Virar Página | Cena dos Livros após clicar em uma página | Pixabay (CC0)
+7 | Efeito Sonoro Acertar Quiz | Cena do Quiz após clicar na alternativa correta | Pixabay (CC0)
+8 | Efeito Sonoro Errar Quiz | Cena do Quiz após clicar na alternativa errada | Pixabay (CC0)
+
 
 &nbsp;&nbsp;&nbsp;&nbsp;Tendo como referência o artigo mencionado, as músicas selecionadas foram cuidadosamente escolhidas para transmitir a atmosfera do jogo, com o objetivo de proporcionar uma imersão mais profunda por parte do jogador. No menu e no tutorial, optamos por músicas com ritmo mais lento, oferecendo uma introdução tranquila e acolhedora ao universo do jogo. No entanto, à medida que a dinâmica do jogo se intensifica, marcada pelo início do cronômetro e pelo aumento da velocidade das ações, uma trilha sonora com batidas mais pulsantes é ativada, elevando a energia e a intensidade da experiência de jogo.
+
+&nbsp;&nbsp;&nbsp;&nbsp;Foram adicionados alguns efeitos sonoros também para melhorar a imersão do usuário, assim como fornecer _feedback_ para algumas ações que não possuiam muito impacto antes, como o clique de um botão ou o acerto ou erro do quiz.
 
 ## 3.4. Inventário e Bestiário
 

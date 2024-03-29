@@ -12,7 +12,7 @@ class MenuPrincipal extends Phaser.Scene {
       frameWidth: 400,
       frameHeight: 200
     }) // Imagem para botaoJogar
-    this.load.audio('efeitoSonoroBotaoMenu', 'assets/sounds/iniciaJogo.mp3') // SFX do botão iniciar
+    this.load.audio('efeitoSonoroBotaoIniciar', 'assets/sounds/efeitoSonoroBotaoIniciar.mp3') // SFX do botão iniciar
   }
 
   create() {
@@ -28,7 +28,7 @@ class MenuPrincipal extends Phaser.Scene {
     this.botaoJogar = this.add.sprite(640, 620, "botaoJogar").setInteractive().setScale(1)
 
     // Adiciona efeito sonoro do botão iniciar
-    this.efeitoSonoroBotaoMenu = this.sound.add('efeitoSonoroBotaoMenu',{volume: 0.5});
+    this.efeitoSonoroBotaoIniciar = this.sound.add('efeitoSonoroBotaoIniciar',{volume: 0.5});
 
     // Cria a animação de botaoJogar
     this.anims.create({
@@ -68,7 +68,7 @@ class MenuPrincipal extends Phaser.Scene {
     // Evento disparado ao clicar no botão (Código temporário apenas para demonstração da funcionalidade na sprint 1)
     this.botaoJogar.on("pointerdown", () => {
       // Evento de click do mouse
-      this.efeitoSonoroBotaoMenu.play();
+      this.efeitoSonoroBotaoIniciar.play();
       this.cameras.main.fadeOut(1000, 0, 0, 0)
       // Realiza FadeOut antes de passar para próxima cena
       this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE, (cam, effect) => {
