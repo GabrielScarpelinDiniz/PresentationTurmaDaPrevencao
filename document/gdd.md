@@ -2005,7 +2005,9 @@ create(){
 &nbsp;&nbsp;&nbsp;&nbsp;Como dito anteriormente, outros efeitos sonoros foram adicionados seguindo a mesma lógica de implementação do código acima e pode-se verificar uma lista extensiva deles na tabela 5 da seção 3.3.5, que inclui também a cena que está o efeito e o evento que ocasiona sua ocorrência.
 
 **Etapa 5 do desenvolvimento - Animações de câmera e diálogo animado**
+
 &nbsp;&nbsp;&nbsp;&nbsp;O primeiro passo foi criar uma máquina de diálogo. A lógica da máquina é simples, ela estende o BitMap Text do phaser recebendo dois parâmetros a mais: velocidade e uma função que é executada ao terminar a animação do diálogo. Um timer é criado com a velocidade passada no parâmetro e uma função é chamada, essa função adiciona um carácter de cada vez ao texto original verificando se o carácter existe.
+
 &nbsp;&nbsp;&nbsp;&nbsp;A classe ficou da seguinte forma:
 ````js
 class TypeWritter extends Phaser.GameObjects.BitmapText {
