@@ -2662,22 +2662,103 @@ verificarResposta(resposta, alternativaCorreta) {
 
 ### 5.2.1 Registros de testes
 
-*Descreva nesta seção as sessões de teste/entrevista com diferentes jogadores. Registre cada teste conforme o template a seguir.*
+&nbsp;&nbsp;&nbsp;&nbsp;Aqui serão descritos os testes de jogabilidade (*playtests*) de nosso jogo, realizados por convidados. Estes testes têm como objetivo avaliar a intuitividade, ambientação e comunicação do jogo com os potenciais usuários. 
 
-Nome | João Jonas (use nomes fictícios)
+**Sessão de testes - 26/03**
+
+Nome | Laura Fernandes (fictício)
 --- | ---
-Já possuía experiência prévia com games? | sim, é um jogador casual
-Conseguiu iniciar o jogo? | sim
-Entendeu as regras e mecânicas do jogo? | entendeu as regras, mas sobre as mecânicas, apenas as essenciais, não explorou os comandos complexos
-Conseguiu progredir no jogo? | sim, sem dificuldades  
-Apresentou dificuldades? | Não, conseguiu jogar com facilidade e afirmou ser fácil
-Que nota deu ao jogo? | 9.0
-O que gostou no jogo? | Gostou  de como o jogo vai ficando mais difícil ao longo do tempo sem deixar de ser divertido
-O que poderia melhorar no jogo? | A responsividade do personagem aos controles, disse que havia um pouco de atraso desde o momento do comando até a resposta do personagem
+Já possuía experiência prévia com games? | Sim
+Conseguiu iniciar o jogo? | Sim
+Entendeu as regras e mecânicas do jogo? | Sim, porém poderiam estar mais claras
+Conseguiu progredir no jogo? | Sim
+Apresentou dificuldades? | Sim, houve dificuldade na leitura dos textos por serem longos demais.
+Que nota deu ao jogo? | 9
+O que gostou no jogo? | Dinâmica de aprendizado
+O que poderia melhorar no jogo? | Ter textos mais curtos e evidenciar as missões de maneira mais clara
+
+Nome | Fernanda Castro (fictício)
+--- | ---
+Já possuía experiência prévia com games? | Sim
+Conseguiu iniciar o jogo? | Sim
+Entendeu as regras e mecânicas do jogo? | Sim, mas com dificuldades
+Conseguiu progredir no jogo? | Sim, após auxílio
+Apresentou dificuldades? | Foram apresentadas dificuldades no entendimento do passo a passo do jogo.
+Que nota deu ao jogo? | 8
+O que gostou no jogo? | Design, JoyStick e a dinâmica de conscientização
+O que poderia melhorar no jogo? | Apresentar as regras do jogo de maneira mais clara e intuitiva
+
+Nome | Rafael Ferreira (fictício)
+--- | ---
+Já possuía experiência prévia com games? | Sim, com jogos e também programação
+Conseguiu iniciar o jogo? | Sim.
+Entendeu as regras e mecânicas do jogo? | Sim, mas não com facilidade
+Conseguiu progredir no jogo? | Não
+Apresentou dificuldades? | Apresentou dificuldades em relação ao entendimento do passo a passo do jogo e visibilidade dos objetos interativos.
+Que nota deu ao jogo? | 8.5
+O que gostou no jogo? | Mecânica ser semelhante ao jogo Pokemon, exploração livre e design do jogo.
+O que poderia melhorar no jogo? | Melhorias no direcionamento do jogador durante o ciclo de jogo e destaque de objetos interativos.
+
+Nome | Antônio Duarte (fictício)
+--- | ---
+Já possuía experiência prévia com games? | Sim, jogador casual
+Conseguiu iniciar o jogo? | Sim
+Entendeu as regras e mecânicas do jogo? | Entendeu a dinâmica a princípio, mas teve dificuldades no andamento dos ciclos.
+Conseguiu progredir no jogo? | Sim
+Apresentou dificuldades? | Sim, no entendimento da dinâmica
+Que nota deu ao jogo? | 7.5
+O que gostou no jogo? | Gostou do design do jogo e exploração do mapa
+O que poderia melhorar no jogo? | Textos mais curtos e explicação mais detalhada da dinâmica do jogo.
+
+Nome | Valter Pires (fictício)
+--- | ---
+Já possuía experiência prévia com games? | Pouca experiência
+Conseguiu iniciar o jogo? | Sim
+Entendeu as regras e mecânicas do jogo? | Sim
+Conseguiu progredir no jogo? | Sim
+Apresentou dificuldades? | Não, jogo intuitivo
+Que nota deu ao jogo? | Com as melhorias propostas, 10.
+O que gostou no jogo? | Gostou do quiz, dos estandartes e da Dra Tina.
+O que poderia melhorar no jogo? | O joystick ser flexível para o lado direito, ter que ir na tenda de livros sempre, ônibus na contramão, pausar o tempo no livro, destacar os textos do que fazer e do que não fazer, o texto do livro está passando da figura do livro, a imagem da pele está parecendo algas.
+
+Nome | Wilson Dias (fictício)
+--- | ---
+Já possuía experiência prévia com games? | Sim
+Conseguiu iniciar o jogo? | Sim
+Entendeu as regras e mecânicas do jogo? | Sim
+Conseguiu progredir no jogo? | Não
+Apresentou dificuldades? | Sim, tempo curto para ler o caso e correlacionar as informações do case com o livro
+Que nota deu ao jogo? | 8
+O que gostou no jogo? | Destaque de palavras chaves no case, design e colisão com NPCs
+O que poderia melhorar no jogo? | Maior tempo em cada ciclo
+
+Nome | Andressa Martins (fictício)
+--- | ---
+Já possuía experiência prévia com games? | Sim.
+Conseguiu iniciar o jogo? | Sim.
+Entendeu as regras e mecânicas do jogo? | Sim, com dificuldades.
+Conseguiu progredir no jogo? | Sim.
+Apresentou dificuldades? | Sim, nas instruções do jogo.
+Que nota deu ao jogo? | 8.
+O que gostou no jogo? | Jogo objetivo, sem enrolação.
+O que poderia melhorar no jogo? | Instruções mais claras e separação dos textos em tópicos.
+
+Nome | José Rosa (fictício)
+--- | ---
+Já possuía experiência prévia com games? | Sim.
+Conseguiu iniciar o jogo? | Sim.
+Entendeu as regras e mecânicas do jogo? | Sim.
+Conseguiu progredir no jogo? | Sim.
+Apresentou dificuldades? | Sim, muitos textos.
+Que nota deu ao jogo? | 8
+O que gostou no jogo? | Design e dinâmica do jogo.
+O que poderia melhorar no jogo? | Menos textos e mais objetivos, botões para retornar à escolha de livros ao inves de fechar o menu da tenda.
 
 ### 5.2.2 Melhorias
 
 *Descreva nesta seção um plano de melhorias sobre o jogo, com base nos resultados dos testes de jogabilidade*
+
+
 
 # <a name="c6"></a>6. Conclusões e trabalhos futuros (sprint 5)
 
