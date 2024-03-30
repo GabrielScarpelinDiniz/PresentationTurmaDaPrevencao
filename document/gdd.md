@@ -2579,15 +2579,21 @@ verificarResposta(resposta, alternativaCorreta) {
 
 \# | Pré-condição | Descrição do Teste | Pós-condição
 |------|---------|--- |--- |
-1 | Cena cenaPrincipal.js carregada | Verificar se a cena do cenaPrincipal.js foi carregada corretamente | Os assets da cena cenaPrincipal.js estão carregados e prontos para uso |
-2 | Mapa carregado | Verificar se o mapa foi carregado corretamente | O mapa está carregado e pronto para ser utilizado na cena |
-3 | Joystick está visível | Verificar se o joystick foi criado corretamente na cena do cenaPrincipal.js | O joystick está presente e funcional na cena |
-4 | Colisão com cenário inicializada | Testar colisão do personagem com as partes do cenário | O personagem não atravessa partes do cenário e colide corretamente |
-5 | O personagem está carregado | Verificar se o personagem carregou corretamente | O personagem está carregado e funcional na cena |
-6 | O personagem carregou e está parado | Testar se o personagem se move corretamente | O personagem se move com o clique de teclas de input/joystick |
-7 | O personagem está em movimentação | Testar se o personagem para de se mover quando nenhuma tecla de movimento é pressionada | O personagem fica parado |
-8 | O personagem está na posição inicial | Verificar se a posição inicial do personagem está correta | O personagem está na posição inicial correta |
-9 | Posição do Joystick definida | Verificar se a posição do joystick é ajustada corretamente de acordo com a posição da câmera | A posição do joystick está sincronizada com a posição da câmera |
+1 | Cena cenaPrincipal.js está carregada | Verificar se os elementos de carregamento são destruídos corretamente após o carregamento completo | As barras de carregamento e o texto de carregamento são destruídos após o carregamento completo dos assets |
+2 | Cena cenaPrincipal.js está carregada | Verificar se a cor de fundo da câmera principal é definida corretamente | A cor de fundo da câmera principal é definida como 0xA5E2FF |
+3 | Cena cenaPrincipal.js está carregada | Verificar se a cena principal é completamente visível após o fade-in | A cena principal é totalmente visível após o fade-in |
+4 | Cena cenaPrincipal.js está carregada | Verificar se os assets de áudio são carregados corretamente | Os assets de áudio são carregados sem erros |
+5 | Nenhum tilemap foi carregado | Verificar se os tilemaps são carregados corretamente | Os tilemaps são carregados sem erros |
+6 | Nenhum botão foi carregado | Verificar se os botões são carregados corretamente | Os botões são carregados sem erro |
+7 | Joystick não está carregado | Verificar se o joystick foi criado corretamente na cena do cenaPrincipal.js | O joystick está presente e funcional na cena |
+8 | Colisão com cenário inicializada | Testar colisão do personagem com as partes do cenário | O personagem não atravessa partes do cenário e colide corretamente |
+9 | O personagem está carregado | Verificar se o personagem carregou corretamente | O personagem está carregado e funcional na cena |
+10 | O personagem carregou e está parado | Testar se o personagem se move corretamente | O personagem se move com o clique de teclas de input/joystick |
+11 | O personagem está em movimentação | Testar se o personagem para de se mover quando nenhuma tecla de movimento é pressionada | O personagem fica parado |
+12 | O personagem está na posição inicial | Verificar se a posição inicial do personagem está correta | O personagem está na posição inicial correta |
+13 | Posição do Joystick definida | Verificar se a posição do joystick é ajustada corretamente de acordo com a posição da câmera | A posição do joystick está sincronizada com a posição da câmera |
+14 | A cena principal está carregada e acabou a _cutscene_ inicial | Verificar se a câmera principal está configurada corretamente | A câmera principal é configurada corretamente para seguir o jogador ou o personagem principal |
+15 | A cena principal está carregada e acabou a _cutscene_ inicial | Verificar se os NPCs são posicionados corretamente no mapa | Os NPCs são posicionados nos locais corretos do mapa sem sobreposições indevidas |
 
 <div align="center">
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
@@ -2684,7 +2690,7 @@ verificarResposta(resposta, alternativaCorreta) {
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;Os testes anteriores refletem a verificação do carregamento de assets e seu posicioamento, da mecânica do jogo, de algumas interações com botões e de alguns eventos criados entre cenas. Não abordamos, porém, cenários de erros que possam a vir surgir de entradas inválidas do usuário ou de situações inesperadas. A tabela a seguir caminha inicialmente para essa direção enquanto vamos refinando o código e descobrindo novas formas que o jogo pode ficar com a lógica inoperante.
+&nbsp;&nbsp;&nbsp;&nbsp;Os testes anteriores refletem a verificação do carregamento de assets e seu posicionamento, da mecânica do jogo, de algumas interações com botões e de alguns eventos criados entre cenas. Não abordamos, porém, cenários de erros que possam a vir surgir de entradas inválidas do usuário ou de situações inesperadas. A tabela a seguir caminha inicialmente para essa direção enquanto vamos refinando o código e descobrindo novas formas que o jogo pode ficar com a lógica inoperante.
 
 <div align="center">
 <sub>Tabela 9: Cenários de Erro Gerais</sub>
