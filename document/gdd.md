@@ -2889,7 +2889,7 @@ O que poderia melhorar no jogo? | Menos textos e mais objetivos, botões para re
 
 &nbsp;&nbsp;&nbsp;&nbsp;Abaixo, estão contidas as referências utilizadas para embasar todo o projeto, visando entender todo o cenário, não só do cliente, como do mercado ao qual o projeto está inserida.<br>  
 
-¹ Assessoria de Comunicação da FMUSP. Faculdade de Medicina da USP é classificada em primeiro lugar na América Latina no EduRank 2022. Disponível em https://www.fm.usp.br/fmusp/noticias/faculdade-de-medicina-da-usp-e-classificada-em-primeiro-lugar-na-america-latina-no-edurank-2022#:~:text=25%2F08%2F2022-,Faculdade%20de%20Medicina%20da%20USP%20é%20classificada%20em%20primeiro,América%20Latina%20no%20EduRank%202022&text=Informações%3A,a%20melhor%20no%20EduRank%202022. Acesso em: 28 Mar. 2024 <br>
+¹ Assessoria de Comunicação da FMUSP. Faculdade de Medicina da USP é classificada em primeiro lugar na América Latina no EduRank 2022. Disponível em https://www.fm.usp.br/fmusp/noticias/faculdade-de-medicina-da-usp-e-classificada-em-primeiro-lugar-na-america-latina-no-edurank-2022#:~:text=25%2F08%2F2022-,Faculdade%20de%20Medicina%20da%20USP%20é%20classificada%20em%20primeiro,América%20Latina%20no%20EduRank%202022&text=Informações%3A,a%20melhor%20no%20EduRank%202022. Acesso em: 28 mar. 2024 <br>
 
 ² DINIZ, Bruno; SILVA, Mateus; NUNES, Paloma; TOMAZ, Pedro. APLICAÇÃO DE FERRAMENTAS GERENCIAIS (ANALÍSE DE SOWT, MATRIZ BCG E CINCO FORÇAS DE PORTER) NA EMPRESA CHECKAUTO , Rio de Janeiro, RJ, 2022. Disponível em: http://dspace.sti.ufcg.edu.br:8080/xmlui/bitstream/handle/riufcg/32706/APLICA%C3%87%C3%83O%20DE%20FERRAMENTAS%20GERENCIAIS%20%28ANAL%C3%8DSE%20DE%20SWOT%2C%20MATRIZ%20BCG%20E%20CINCO%20FOR%C3%87AS%20DE%20PORTER%29%20-%20ANAIS%20X%20SIMEP%20ARTIGO%202022.pdf?sequence=1&isAllowed=y. Acesso em: 25 mar. 2024.
 
@@ -2907,7 +2907,7 @@ O que poderia melhorar no jogo? | Menos textos e mais objetivos, botões para re
 
 ⁹ OSTERWALDER, Alex. Value Proposition Design: How to Create Products and Services Customers Want. 1st Edition. Wiley, 2014. <br>
 
-¹⁰ MINETTO, Bianca. Ferramentas da qualidade. Disponível em: https://ferramentasdaqualidade.org/matriz-de-riscos-matriz-de-probabilidade-e-impacto/. Acesso em: 16 Fev. 2024 <br>
+¹⁰ MINETTO, Bianca. Ferramentas da qualidade. Disponível em: https://ferramentasdaqualidade.org/matriz-de-riscos-matriz-de-probabilidade-e-impacto/. Acesso em: 16 fev. 2024 <br>
 
 ¹¹ NAVARRO, Antonio Fernando. A função e a origem do Gerenciamento de Riscos. Scribd Inc.<br>
 
