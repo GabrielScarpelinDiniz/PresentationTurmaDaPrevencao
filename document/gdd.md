@@ -2672,17 +2672,14 @@ verificarResposta(resposta, alternativaCorreta) {
 \# | Pré-condição | Descrição do Teste | Pós-condição
 |------|---------|--- |--- |
 1 | Carregamento de imagens bem-sucedido |	Verificar se as imagens foram carregadas corretamente |	Imagens carregadas corretamente |
-2 | Elementos das cenas criados corretamente |	Verificar se os elementos das cenas estão posicionados e visíveis corretamente | Elementos das cenas foram criados e posicionados corretamente |
-3 | Verificar se o evento "abrirCase" é acionado na cena cases.js |	Verificar se o evento "abrirCase" pausa a física e torna o caso e o botão visíveis | O evento "abrirCase" pausa a física e torna o caso e o botão visíveis |
-4 | O cursor está fora do "botãoX" no cases.js | Verificar se o cursor muda para uma mãozinha ao passar sobre o botão "botaoX" | O cursor muda para uma mãozinha ao passar sobre o botão "botaoX" |
-5 | O cursor está sobre o "botãoX" no cases.js | Verificar se o cursor muda para uma setinha ao sair do botão "botaoX" |	O cursor volta ao seu estado padrão ao sair do botão "botaoX" |
-6 | O "botãoX" foi clicado no cases.js |	Verificar se ao clicar no botão "botaoX", o caso e o botão tornam-se invisíveis e a física é retomada |	Ao clicar no botão "botaoX", o caso e o botão se tornam invisíveis e a física é retomada |
-7 | A tenda de livros foi ativada em "cenaPrincipal.js"  |	Verificar se a ação de clicar e abrir livros funciona |	Livro correspondente é aberto |
-8 | O "botaoFechar" foi clicado em livros.js |	Verificar se ao clicar no botão "botaoFechar", o livro e o botão tornam-se invisíveis e a física é retomada |	Ao clicar no botão "botaoFechar", o livro e o botão se tornam invisíveis e a física é retomada |
-9 | O "botãoX" foi clicado em quiz.js |	Verificar se ao clicar no botão "botaoX", o caso e o botão tornam-se invisíveis e a física é retomada |	Ao clicar no botão "botaoX", o caso e o botão se tornam invisíveis e a física é retomada |
-10 | O quiz está aberto |	Verificar resposta do usuário |	Retorno de mensagem de parabéns ou de erro e feedback |
-11 | Quiz foi respondido | Testar quando a resposta é correta | Se a resposta fornecida for igual à alternativa correta, o símbolo do quiz é ocultado, o efeito sonoro de acerto é reproduzido, a pontuação é atualizada em 10 pontos, a mensagem de explicação para resposta correta é exibida, o fundo do feedback é exibido com estilo verde e 2 pixels de espessura. |
-12 | Quiz foi respondido | Testar quando a resposta é incorreta | Se a resposta fornecida for diferente da alternativa correta, o símbolo do quiz é ocultado, o efeito sonoro de erro é reproduzido, o tempo é atualizado em -10 unidades, a mensagem de explicação para resposta incorreta é exibida, o fundo do feedback é exibido com estilo vermelho e 2 pixels de espessura. |
+2 | Elementos das cenas criados corretamente |	Verificar se os elementos das cenas estão posicionados corretamente e visíveis  | Elementos das cenas foram criados e posicionados corretamente |
+3 | O cursor está fora do "botãoX" no cases.js | Verificar se o cursor muda para uma mãozinha ao passar sobre o botão "botaoX" | O cursor muda para uma mãozinha ao passar sobre o botão "botaoX" |
+4 | O cursor está sobre o "botãoX" no cases.js | Verificar se o cursor muda para uma setinha ao sair do botão "botaoX" |	O cursor volta ao seu estado padrão ao sair do botão "botaoX" |
+5 | O "botãoX" foi clicado no cases.js |	Verificar se ao clicar no botão "botaoX", o caso e o botão tornam-se invisíveis e a física é retomada |	Ao clicar no botão "botaoX", o caso e o botão se tornam invisíveis e a física é retomada |
+6 | O "botãoX" foi clicado em quiz.js |	Verificar se ao clicar no botão "botaoX", o caso e o botão tornam-se invisíveis e a física é retomada |	Ao clicar no botão "botaoX", o caso e o botão se tornam invisíveis e a física é retomada |
+7 | O quiz está aberto |	Verificar resposta do usuário |	Retorno de mensagem de parabéns ou de erro e feedback |
+8 | Quiz foi respondido | Testar quando a resposta é correta | Se a resposta fornecida for igual à alternativa correta, o símbolo do quiz é ocultado, o efeito sonoro de acerto é reproduzido, a pontuação é atualizada em 10 pontos, a mensagem de explicação para resposta correta é exibida, o fundo do feedback é exibido com estilo verde e 2 pixels de espessura. |
+9 | Quiz foi respondido | Testar quando a resposta é incorreta | Se a resposta fornecida for diferente da alternativa correta, o símbolo do quiz é ocultado, o efeito sonoro de erro é reproduzido, o tempo é atualizado em -10 unidades, a mensagem de explicação para resposta incorreta é exibida, o fundo do feedback é exibido com estilo vermelho e 2 pixels de espessura. |
 
 
 <div align="center">
@@ -2751,12 +2748,13 @@ verificarResposta(resposta, alternativaCorreta) {
 
 \# | Pré-condição | Descrição do Teste | Pós-condição
 |------|---------|--- |--- |
-1 | Qualquer inicialização de imagens |	Verificar se a imagem existe no diretório indicado |	A imagem existe e está com o caminho correto |
+1 | Qualquer inicialização de imagens |	Verificar se a imagem existe no diretório indicado | A imagem existe e está com o caminho correto |
 2 | Inicialização de cena ou transição entre elas |	Verificar se a cena existe e foi inicializada corretamente | A cena existe e está com o caminho correto |
 3 | O jogo estar carregado na cena menu.js ou cenaPrincipal.js |	Verificar se algum input do usuário ou clique fora da área interativa ocasiona erros | As cenas mantêm a sua lógica intacta |
 4 | O jogo está sendo inicializado ou executando | Verificar se existe algum código de erro no console sobre erro de sintaxe | Existe uma mensagem de erro no console do navegador |
 5 | O jogo está sendo inicializado ou executando | Verificar se existe algum código de erro no console sobre erro de variáveis, objetos ou métodos inexistentes | Existe uma mensagem de erro no console do navegador |
 6 | O jogador está interagindo com o mundo ou mudando de cenas | Verificar se existe algum código de erro no console sobre eventos não previamente definidos| Existe uma mensagem de erro no console do navegador |
+7 | Qualquer inicialização de efeitos sonoros | Verificar se o arquivo existe no diretório indicado | Não existe uma mensagem de erro no console do navegador |
 
 <div align="center">
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
