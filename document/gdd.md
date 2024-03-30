@@ -371,7 +371,7 @@ Posto isso, foi entendido que a definição adequada do público alvo aumenta a 
 
 
 <div align="center">
-<sub>Tabela x: Descrição dos NPCs do jogo</sub>
+<sub>Tabela 4: Descrição dos NPCs do jogo</sub>
 </div>
 
 \# | NPC | Função | Imagem
@@ -498,7 +498,7 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 &nbsp;&nbsp;&nbsp;&nbsp;As trilhas sonoras são meios de envolver o usuário no jogo, segundo o artigo "The Role of Music in Videogames" - O papel da música nos videogames - cujo autor, citado no artigo da BBC[²⁰](#c7), afirma que as trilhas sonoras nos jogos são multifuncionais, pois significam várias coisas para o jogador. Isso inclui o aumento da imersão, as brechas para mudanças na história, além de contribuírem também para a estética do jogo, tornando-se assim um fator muito importante para o envolvimento do jogador na narrativa.
 
 <div align="center">
-<sub>Tabela X: Lista de músicas e efeitos sonoros</sub>
+<sub>Tabela 5: Lista de músicas e efeitos sonoros</sub>
 </div>
 
 \# | Título | Ocorrência | Autoria
@@ -2006,7 +2006,7 @@ create(){
 }
 ```
 
-&nbsp;&nbsp;&nbsp;&nbsp;Como dito anteriormente, outros efeitos sonoros foram adicionados seguindo a mesma lógica de implementação do código acima e pode-se verificar uma lista extensiva deles na tabela x da seção 3.3.5, que inclui também a cena que está o efeito e o evento que ocasiona sua ocorrência.
+&nbsp;&nbsp;&nbsp;&nbsp;Como dito anteriormente, outros efeitos sonoros foram adicionados seguindo a mesma lógica de implementação do código acima e pode-se verificar uma lista extensiva deles na tabela 5 da seção 3.3.5, que inclui também a cena que está o efeito e o evento que ocasiona sua ocorrência.
 
 **Etapa 5 do desenvolvimento - Animações de câmera e diálogo animado**
 &nbsp;&nbsp;&nbsp;&nbsp;O primeiro passo foi criar uma máquina de diálogo. A lógica da máquina é simples, ela estende o BitMap Text do phaser recebendo dois parâmetros a mais: velocidade e uma função que é executada ao terminar a animação do diálogo. Um timer é criado com a velocidade passada no parâmetro e uma função é chamada, essa função adiciona um carácter de cada vez ao texto original verificando se o carácter existe.
@@ -2533,7 +2533,7 @@ verificarResposta(resposta, alternativaCorreta) {
 &nbsp;&nbsp;&nbsp;&nbsp;A tabela abaixo representa os casos de teste que podem ser realizados na cena `main.js`. Entre eles, podemos destacar a verificação se as dimensões de inicialização da tela do jogo estão corretas, se a tela está com o ajuste configurado para dispositivos mobile e se existem duas cenas sendo adicionadas ao jogo.
 
 <div align="center">
-<sub>Tabela 4: Casos de Testes da Cena main.js</sub>
+<sub>Tabela 6: Casos de Testes da Cena main.js</sub>
 </div>
 
 \# | Pré-condição | Descrição do Teste | Pós-condição
@@ -2553,7 +2553,7 @@ verificarResposta(resposta, alternativaCorreta) {
 &nbsp;&nbsp;&nbsp;&nbsp; Outro arquivo em que deve-se criar casos de teste é a cena chamada `menu.js`. Aqui estão os testes relacionados com o carregamento do jogo e posicionamento das imagens na tela. Além disso, criamos testes também para testar a funcionalidade do botão "Jogar".
 
 <div align="center">
-<sub>Tabela 5: Casos de Testes da Cena menu.js</sub>
+<sub>Tabela 7: Casos de Testes da Cena menu.js</sub>
 </div>
 
 \# | Pré-condição | Descrição do Teste | Pós-condição
@@ -2574,7 +2574,7 @@ verificarResposta(resposta, alternativaCorreta) {
 &nbsp;&nbsp;&nbsp;&nbsp;Testes como a verificação do carregamento do mapa, a criação do joystick virtual e a colisão com o cenário são feitos nessa parte. Como ``cenaPrincipal.js`` será um arquivo com mais código do que os outros, mais testes serão adicionados com a implementação de novas mecânicas.
 
 <div align="center">
-<sub>Tabela 6: Casos de Testes da Cena cenaPrincipal.js</sub>
+<sub>Tabela 8: Casos de Testes da Cena cenaPrincipal.js</sub>
 </div>
 
 \# | Pré-condição | Descrição do Teste | Pós-condição
@@ -2604,7 +2604,7 @@ verificarResposta(resposta, alternativaCorreta) {
 &nbsp;&nbsp;&nbsp;&nbsp;Começando a falar do HUD, elementos essenciais do nosso jogo, alguns casos de teste possuem uma importância maior como verificar o carregamento do elementos, sua posição e atualização dinâmica de seus valores. A tabela abaixo lista outros testes.
 
 <div align="center">
-<sub>Tabela 7: Casos de Testes da Cena HUD.js</sub>
+<sub>Tabela 9: Casos de Testes da Cena HUD.js</sub>
 </div>
 
 \# | Pré-condição | Descrição do Teste | Pós-condição
@@ -2627,7 +2627,7 @@ verificarResposta(resposta, alternativaCorreta) {
 &nbsp;&nbsp;&nbsp;&nbsp;Após o HUD, vamos analisar a cena ``cases.js``. Ela é responsável por criar os elementos visuais dos cases, peças fundamentais para a o fluxo do jogo acontecer.
 
 <div align="center">
-<sub>Tabela 8: Casos de Testes da Cena cases.js</sub>
+<sub>Tabela 10: Casos de Testes da Cena cases.js</sub>
 </div>
 
 \# | Pré-condição | Descrição do Teste | Pós-condição
@@ -2646,7 +2646,7 @@ verificarResposta(resposta, alternativaCorreta) {
 &nbsp;&nbsp;&nbsp;&nbsp;Outra cena crítica que pode interromper o fluxo do jogo é a ``livros.js``. Ela carrega os textos e artes dos livros, dinâmica importante para fornecer a conscientização que esperamos passar com o jogo.
 
 <div align="center">
-<sub>Tabela 9: Casos de Testes da Cena livros.js</sub>
+<sub>Tabela 11: Casos de Testes da Cena livros.js</sub>
 </div>
 
 \# | Pré-condição | Descrição do Teste | Pós-condição
@@ -2670,7 +2670,7 @@ verificarResposta(resposta, alternativaCorreta) {
 &nbsp;&nbsp;&nbsp;&nbsp;Ademais, a cena `quiz.js` é de fundamental importância para o ciclo de jogatinas, uma vez que é através dela que o jogador obtém sua pontuação e testa seus conhecimentos, portanto, lógicas importantes como a adição de pontuações e verificação de respostas corretas estão nessa cena, tornando os testes indispensáveis.
 
 <div align="center">
-<sub>Tabela 10: Casos de Testes da Cena quiz.js</sub>
+<sub>Tabela 12: Casos de Testes da Cena quiz.js</sub>
 </div>
 
 \# | Pré-condição | Descrição do Teste | Pós-condição
@@ -2697,11 +2697,11 @@ verificarResposta(resposta, alternativaCorreta) {
 &nbsp;&nbsp;&nbsp;&nbsp;Além disso, foi criado um novo arquivo chamado `typeWritter.js`, o qual contém o mecanismo de implementação dos diálogos adicionados ao jogo, posto isso, é de funcamental importância a verificação por meio de testes nesse arquivo.
 
 <div align="center">
-<sub>Tabela 11: Casos de Testes da Cena typeWritter.js</sub>
+<sub>Tabela 13: Casos de Testes da Cena typeWritter.js</sub>
 </div>
 
-| # | Pré-condição | Descrição do Teste | Pós-condição |
-|---|--------------|-------------------|--------------|
+\# | Pré-condição | Descrição do Teste | Pós-condição
+|------|---------|--- |--- |
 | 1 | Objeto TypeWritter criado | Testar a criação de um objeto TypeWritter | Um objeto TypeWritter é criado com as propriedades definidas corretamente, incluindo velocidade de digitação, texto original, índice e texto digitado. Um evento de tempo é iniciado para adicionar caracteres ao texto. |
 | 2 | Chamada da função addChar() | Testar a adição de caracteres ao texto digitado | Cada vez que a função addChar() é chamada, um caractere é adicionado ao texto digitado, até que o texto original seja totalmente digitado. |
 | 3 | Chamada da função skip() | Testar a função de pular a digitação | A chamada da função skip() interrompe o evento de tempo, define o texto do objeto como o texto original completo e chama a função onComplete() se fornecida. |
@@ -2718,7 +2718,7 @@ verificarResposta(resposta, alternativaCorreta) {
 &nbsp;&nbsp;&nbsp;&nbsp;Foi adicionada uma máquina de estado em nosso código, por isso é imprtanante realizar os teste para verificar o funcionamento adequado dela. Esses testes contribuem para a identificação de bugs que podem surgir devido a transições incorretas de estado, lógica inadequada de transição ou estados mal definidos. Encontrar e corrigir esses bugs durante o estágio de teste é fundamental para garantir seu bom funcionamento.
 
 <div align="center">
-<sub>Tabela 12: Casos de Testes da Cena stateMachine.js</sub>
+<sub>Tabela 14: Casos de Testes da Cena stateMachine.js</sub>
 </div>
 
 | # | Pré-condição | Descrição do Teste | Pós-condição |
@@ -2731,8 +2731,9 @@ verificarResposta(resposta, alternativaCorreta) {
 &nbsp;&nbsp;&nbsp;&nbsp;Além disso, foi criado um arquivo que se chama `NPCs.js`, o qual é responsável pela lógica de movimentação aleatória dos NPCs, posto isso, é fundamental testá-lo, para garantir que essa lógica esteja funcionando corretamente.
 
 <div align="center">
-<sub>Tabela 13: Casos de Testes da Cena NPCs.js</sub>
+<sub>Tabela 15: Casos de Testes da Cena NPCs.js</sub>
 </div>
+
 | # | Pré-condição | Descrição do Teste | Pós-condição |
 |---|--------------|-------------------|--------------|
 | 1 | Objeto aluno inicializado | Testar a atualização das propriedades de direção e velocidade do aluno | A direção e velocidade do aluno são alteradas em intervalos aleatórios dentro dos limites especificados. |
@@ -2749,7 +2750,7 @@ verificarResposta(resposta, alternativaCorreta) {
 &nbsp;&nbsp;&nbsp;&nbsp;Os testes anteriores refletem a verificação do carregamento de assets e seu posicioamento, da mecânica do jogo, de algumas interações com botões e de alguns eventos criados entre cenas. Não abordamos, porém, cenários de erros que possam a vir surgir de entradas inválidas do usuário ou de situações inesperadas. A tabela a seguir caminha inicialmente para essa direção enquanto vamos refinando o código e descobrindo novas formas que o jogo pode ficar com a lógica inoperante.
 
 <div align="center">
-<sub>Tabela 14: Cenários de Erro Gerais</sub>
+<sub>Tabela 16: Cenários de Erro Gerais</sub>
 </div>
 
 \# | Pré-condição | Descrição do Teste | Pós-condição
@@ -2771,7 +2772,9 @@ verificarResposta(resposta, alternativaCorreta) {
 
 ### 5.2.1 Registros de testes
 
-&nbsp;&nbsp;&nbsp;&nbsp;Aqui serão descritos os testes de jogabilidade (*playtests*) de nosso jogo, realizados por convidados. Estes testes têm como objetivo avaliar a intuitividade, ambientação e comunicação do jogo com os potenciais usuários. 
+&nbsp;&nbsp;&nbsp;&nbsp;Aqui serão descritos os testes de jogabilidade (*playtests*) de nosso jogo, realizados por convidados. Estes testes têm como objetivo avaliar a intuitividade, ambientação e comunicação do jogo com os potenciais usuários.
+
+&nbsp;&nbsp;&nbsp;&nbsp;Os teste foram realizado, em sua maioria, durante os dias 26 a 29 de março em ambientes físicos (aulas de experiência do usuário no Inteli) e online (videochamadas). Os testadores foram classificados como público secundário por não pertencerem ao ensino médio de escolas públicas, nosso público-alvo, mas forneceram _insights_ valiosos descritos mais abaixo na seção de Melhorias.
 
 **Sessão de testes - 26/03**
 
