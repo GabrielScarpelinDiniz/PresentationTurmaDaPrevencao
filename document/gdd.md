@@ -2718,7 +2718,7 @@ verificarResposta(resposta, alternativaCorreta) {
 &nbsp;&nbsp;&nbsp;&nbsp;Foi adicionada uma máquina de estado em nosso código, por isso é imprtanante realizar os teste para verificar o funcionamento adequado dela. Esses testes contribuem para a identificação de bugs que podem surgir devido a transições incorretas de estado, lógica inadequada de transição ou estados mal definidos. Encontrar e corrigir esses bugs durante o estágio de teste é fundamental para garantir seu bom funcionamento.
 
 <div align="center">
-<sub>Tabela 11: Casos de Testes da Cena stateMachine.js</sub>
+<sub>Tabela 12: Casos de Testes da Cena stateMachine.js</sub>
 </div>
 
 | # | Pré-condição | Descrição do Teste | Pós-condição |
@@ -2730,6 +2730,9 @@ verificarResposta(resposta, alternativaCorreta) {
 
 &nbsp;&nbsp;&nbsp;&nbsp;Além disso, foi criado um arquivo que se chama `NPCs.js`, o qual é responsável pela lógica de movimentação aleatória dos NPCs, posto isso, é fundamental testá-lo, para garantir que essa lógica esteja funcionando corretamente.
 
+<div align="center">
+<sub>Tabela 13: Casos de Testes da Cena NPCs.js</sub>
+</div>
 | # | Pré-condição | Descrição do Teste | Pós-condição |
 |---|--------------|-------------------|--------------|
 | 1 | Objeto aluno inicializado | Testar a atualização das propriedades de direção e velocidade do aluno | A direção e velocidade do aluno são alteradas em intervalos aleatórios dentro dos limites especificados. |
@@ -2746,7 +2749,7 @@ verificarResposta(resposta, alternativaCorreta) {
 &nbsp;&nbsp;&nbsp;&nbsp;Os testes anteriores refletem a verificação do carregamento de assets e seu posicioamento, da mecânica do jogo, de algumas interações com botões e de alguns eventos criados entre cenas. Não abordamos, porém, cenários de erros que possam a vir surgir de entradas inválidas do usuário ou de situações inesperadas. A tabela a seguir caminha inicialmente para essa direção enquanto vamos refinando o código e descobrindo novas formas que o jogo pode ficar com a lógica inoperante.
 
 <div align="center">
-<sub>Tabela 9: Cenários de Erro Gerais</sub>
+<sub>Tabela 14: Cenários de Erro Gerais</sub>
 </div>
 
 \# | Pré-condição | Descrição do Teste | Pós-condição
