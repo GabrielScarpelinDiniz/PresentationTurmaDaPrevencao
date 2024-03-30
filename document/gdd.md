@@ -53,7 +53,7 @@
 
 <img src="./other/5forces.png" width=800>
 
-<sup>Fonte: </sup>
+<sup>Fonte: Material adaptado pelos autores (2024)</sup>
 
 </div>
 
