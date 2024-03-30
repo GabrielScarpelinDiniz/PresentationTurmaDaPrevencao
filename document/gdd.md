@@ -2772,6 +2772,10 @@ verificarResposta(resposta, alternativaCorreta) {
 
 **Sessão de testes - 26/03**
 
+<div align="center">
+<sub>Tabela 17: Teste Laura Fernandes</sub>
+</div>
+
 Nome | Laura Fernandes (fictício)
 --- | ---
 Já possuía experiência prévia com games? | Sim
@@ -2782,6 +2786,14 @@ Apresentou dificuldades? | Sim, houve dificuldade na leitura dos textos por sere
 Que nota deu ao jogo? | 9
 O que gostou no jogo? | Dinâmica de aprendizado
 O que poderia melhorar no jogo? | Ter textos mais curtos e evidenciar as missões de maneira mais clara
+
+<div align="center">
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+</div>
+
+<div align="center">
+<sub>Tabela 18: Teste Fernanda Castro</sub>
+</div>
 
 Nome | Fernanda Castro (fictício)
 --- | ---
@@ -2794,6 +2806,14 @@ Que nota deu ao jogo? | 8
 O que gostou no jogo? | Design, JoyStick e a dinâmica de conscientização
 O que poderia melhorar no jogo? | Apresentar as regras do jogo de maneira mais clara e intuitiva
 
+<div align="center">
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+</div>
+
+<div align="center">
+<sub>Tabela 19: Teste Refael Ferreira</sub>
+</div>
+
 Nome | Rafael Ferreira (fictício)
 --- | ---
 Já possuía experiência prévia com games? | Sim, com jogos e também programação
@@ -2804,6 +2824,15 @@ Apresentou dificuldades? | Apresentou dificuldades em relação ao entendimento 
 Que nota deu ao jogo? | 8.5
 O que gostou no jogo? | Mecânica ser semelhante ao jogo Pokemon, exploração livre e design do jogo.
 O que poderia melhorar no jogo? | Melhorias no direcionamento do jogador durante o ciclo de jogo e destaque de objetos interativos.
+
+<div align="center">
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+</div>
+
+
+<div align="center">
+<sub>Tabela 20: Teste Antônio Duarte</sub>
+</div>
 
 Nome | Antônio Duarte (fictício)
 --- | ---
@@ -2816,6 +2845,14 @@ Que nota deu ao jogo? | 7.5
 O que gostou no jogo? | Gostou do design do jogo e exploração do mapa
 O que poderia melhorar no jogo? | Textos mais curtos e explicação mais detalhada da dinâmica do jogo.
 
+<div align="center">
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+</div>
+
+<div align="center">
+<sub>Tabela 21: Valter Pires</sub>
+</div>
+
 Nome | Valter Pires (fictício)
 --- | ---
 Já possuía experiência prévia com games? | Pouca experiência
@@ -2826,6 +2863,14 @@ Apresentou dificuldades? | Não, jogo intuitivo
 Que nota deu ao jogo? | Com as melhorias propostas, 10.
 O que gostou no jogo? | Gostou do quiz, dos estandartes e da Dra Tina.
 O que poderia melhorar no jogo? | O joystick ser flexível para o lado direito, ter que ir na tenda de livros sempre, ônibus na contramão, pausar o tempo no livro, destacar os textos do que fazer e do que não fazer, o texto do livro está passando da figura do livro, a imagem da pele está parecendo algas.
+
+<div align="center">
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+</div>
+
+<div align="center">
+<sub>Tabela 22: Teste Wilson Dias</sub>
+</div>
 
 Nome | Wilson Dias (fictício)
 --- | ---
@@ -2838,6 +2883,14 @@ Que nota deu ao jogo? | 8
 O que gostou no jogo? | Destaque de palavras chaves no case, design e colisão com NPCs
 O que poderia melhorar no jogo? | Maior tempo de jogo
 
+<div align="center">
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+</div>
+
+<div align="center">
+<sub>Tabela 23: Teste Andressa Martins</sub>
+</div>
+
 Nome | Andressa Martins (fictício)
 --- | ---
 Já possuía experiência prévia com games? | Sim.
@@ -2848,6 +2901,14 @@ Apresentou dificuldades? | Sim, nas instruções do jogo.
 Que nota deu ao jogo? | 8.
 O que gostou no jogo? | Jogo objetivo, sem enrolação.
 O que poderia melhorar no jogo? | Instruções mais claras e separação dos textos em tópicos.
+
+<div align="center">
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+</div>
+
+<div align="center">
+<sub>Tabela 24: Teste José Rosa</sub>
+</div>
 
 Nome | José Rosa (fictício)
 --- | ---
@@ -2860,9 +2921,11 @@ Que nota deu ao jogo? | 8
 O que gostou no jogo? | Design e dinâmica do jogo.
 O que poderia melhorar no jogo? | Menos textos e mais objetivos, botões para retornar à escolha de livros ao inves de fechar o menu da tenda.
 
-### 5.2.2 Melhorias
+<div align="center">
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+</div>
 
-*Descreva nesta seção um plano de melhorias sobre o jogo, com base nos resultados dos testes de jogabilidade*
+### 5.2.2 Melhorias
 
 &nbsp;&nbsp;&nbsp;&nbsp;Com base nos *feedbacks* coletados dos usuários que testaram o jogo, nossa equipe traçou um plano de melhorias que foca no aprimoramento das funcionalidades mais sugeridas. Posteriormente, implementaremos polimentos, tais como a sugestão de mudar a faixa em que o ônibus está, correção de imagens e colocar em evidência os objetos passíveis de interação.
 
