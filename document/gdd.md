@@ -305,7 +305,7 @@ Posto isso, foi entendido que a definição adequada do público alvo aumenta a 
 
 ## 2.1. Objetivos do Jogo
 
-&nbsp;&nbsp;&nbsp;&nbsp;O objetivo de um jogo geralmente é a meta que os jogadores devem alcançar para vencer ou progredir¹⁴. Pode envolver completar tarefas específicas, resolver quebra-cabeças, derrotar inimigos, acumular pontos, entre outros desafios.
+&nbsp;&nbsp;&nbsp;&nbsp;Os jogos têm como principal função proporcionar entretenimento, lazer e diversão aos participantes¹⁴. Pode envolver completar tarefas específicas, resolver quebra-cabeças, derrotar inimigos, acumular pontos, entre outros desafios.
 
 &nbsp;&nbsp;&nbsp;&nbsp;Para o nosso jogo, o objetivo é resolver o máximo de cases propostos pela dra. Tina em um tempo determinado, passando por um ciclo de teoria (representada pelos livros da tenda de livros) e de prática (representada pelo quiz da tenda de quiz), obtendo assim uma pontuação final que pode ser superada a cada novo ciclo. Isso incentiva que os jogadores equilibrem eficiência na resolução e aprimoramento de habilidades através da aprendizagem.
 
@@ -434,7 +434,7 @@ Posto isso, foi entendido que a definição adequada do público alvo aumenta a 
 
 ### 3.3.3. Condições climáticas e temporais
 
-&nbsp;&nbsp;&nbsp;&nbsp;No jogo, o tempo é um elemento que adiciona diversão e desafio à experiência do jogador.¹⁸ 
+&nbsp;&nbsp;&nbsp;&nbsp;No jogo, o tempo é um elemento que adiciona diversão e desafio à experiência do jogador. Segundo Douglas Barbosa, "essa restrição temporal adiciona uma camada de tensão à jogabilidade, forçando o jogador a tomar decisões rápidas e priorizar tarefas para alcançar os objetivos."¹⁸ 
 Um cronômetro é utilizado para medir o tempo que o jogador tem para completar cada ciclo de aprendizado e resolução do case na gincana. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;O desafio está em cumprir o máximo de ciclos no tempo estipulado, o que cria uma sensação de urgência e emoção. O jogador é recompensado com pontuações mais altas por sua eficiência e rapidez, incentivando repetições para melhorar o desempenho. No entanto, erros resultam na perda de tempo, tornando essencial tomar decisões cuidadosas e precisas durante o jogo. 
@@ -2884,7 +2884,7 @@ O que poderia melhorar no jogo? | Menos textos e mais objetivos, botões para re
 
 &nbsp;&nbsp;&nbsp;&nbsp;Abaixo, estão contidas as referências utilizadas para embasar todo o projeto, visando entender todo o cenário, não só do cliente, como do mercado ao qual o projeto está inserida.<br>  
 
-¹ 
+¹ Assessoria de Comunicação da FMUSP. Faculdade de Medicina da USP é classificada em primeiro lugar na América Latina no EduRank 2022. Disponível em https://www.fm.usp.br/fmusp/noticias/faculdade-de-medicina-da-usp-e-classificada-em-primeiro-lugar-na-america-latina-no-edurank-2022#:~:text=25%2F08%2F2022-,Faculdade%20de%20Medicina%20da%20USP%20é%20classificada%20em%20primeiro,América%20Latina%20no%20EduRank%202022&text=Informações%3A,a%20melhor%20no%20EduRank%202022. Acesso em: 28 Mar. 2024 <br>
 
 ² DINIZ, Bruno; SILVA, Mateus; NUNES, Paloma; TOMAZ, Pedro. APLICAÇÃO DE FERRAMENTAS GERENCIAIS (ANALÍSE DE SOWT, MATRIZ BCG E CINCO FORÇAS DE PORTER) NA EMPRESA CHECKAUTO , Rio de Janeiro, RJ, 2022. Disponível em: http://dspace.sti.ufcg.edu.br:8080/xmlui/bitstream/handle/riufcg/32706/APLICA%C3%87%C3%83O%20DE%20FERRAMENTAS%20GERENCIAIS%20%28ANAL%C3%8DSE%20DE%20SWOT%2C%20MATRIZ%20BCG%20E%20CINCO%20FOR%C3%87AS%20DE%20PORTER%29%20-%20ANAIS%20X%20SIMEP%20ARTIGO%202022.pdf?sequence=1&isAllowed=y. Acesso em: 25 mar. 2024.
 
@@ -2910,15 +2910,15 @@ O que poderia melhorar no jogo? | Menos textos e mais objetivos, botões para re
 
 ¹³ JRS CONSULTORIA (AL). Público-alvo: tudo o que você precisa saber sobre o assunto!. Maceió, 2022. Disponível em: https://www.jrsconsultoria.com.br/2022/07/publico-alvo-tudo-o-que-voce-precisa-saber-sobre-o-assunto/. Acesso em: 27 fev. 2024.<br>
 
-¹⁴ 
+¹⁴ CAIUSCA, Alana. Atividades que proporcionam entretenimento e benefícios para a saúde. Disponível em: https://www.educamaisbrasil.com.br/enem/educacao-fisica/jogos. Acessado em: 28 mar. 2024 <br>
 
-¹⁵ WIRTZ, Bryan. Gamedesigning. Disponível em: https://www.gamedesigning.org/gaming/video-game-genres/#Educational-Games. Acesso em 14 Fev. 2024<br>
+¹⁵ WIRTZ, Bryan. Gamedesigning. Disponível em: https://www.gamedesigning.org/gaming/video-game-genres/#Educational-Games. Acesso em 14 fev. 2024<br>
 
-¹⁶ 
+¹⁶ O que é: Plataforma de Jogo. Disponível em: https://nexogeek.com.br/glossario/o-que-e-plataforma-de-jogo. Acessado em: 27 mar. 2024.
 
 ¹⁷ BORGES, D. M.; BARREIRA, R. G.; SOUZA, J. G.. Comportamento de personagens em jogos de computador. In: ENCOINFO - Congresso de Computação e Tecnologias da Informação, 11., 2009, Palmas - TO. Anais [...]. Palmas - TO: CEULP/ULBRA, 2009. p. 101 - 108. ISSN e-ISSN: 2447-0767 versão online. Disponível em: https://ulbra-to.br/encoinfo/edicoes/2009/artigos/comportamento-de-personagens-em-jogos-de-computador/. Acesso em: 28 fev. 2024.<br>
 
-¹⁸
+¹⁸ BARBOSA, Douglas. O Tempo nos Jogos. Disponível em: https://www.linkedin.com/pulse/o-tempo-nos-jogos-douglas-barbosa. Acessado em: 27 mar. 2024.
 
 ¹⁹ EIKO, Julia. Revospace. Disponível em: https://revospace.com.br/artigo/o-que-e-concept-art/. Acesso em 28 fev. 2024.<br>
 
