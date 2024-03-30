@@ -2627,7 +2627,7 @@ verificarResposta(resposta, alternativaCorreta) {
 &nbsp;&nbsp;&nbsp;&nbsp;Após o HUD, vamos analisar a cena ``cases.js``. Ela é responsável por criar os elementos visuais dos cases, peças fundamentais para a o fluxo do jogo acontecer.
 
 <div align="center">
-<sub>Tabela 8: Casos de Testes da Cenaa cases.js</sub>
+<sub>Tabela 8: Casos de Testes da Cena cases.js</sub>
 </div>
 
 \# | Pré-condição | Descrição do Teste | Pós-condição
@@ -2667,7 +2667,7 @@ verificarResposta(resposta, alternativaCorreta) {
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp; ``quiz.js`` 
+&nbsp;&nbsp;&nbsp;&nbsp;Ademais, a cena `quiz.js` é de fundamental importância para o ciclo de jogatinas, uma vez que é através dela que o jogador obtém sua pontuação e testa seus conhecimentos, portanto, lógicas importantes como a adição de pontuações e verificação de respostas corretas estão nessa cena, tornando os testes indispensáveis.
 
 <div align="center">
 <sub>Tabela 10: Casos de Testes da Cena quiz.js</sub>
@@ -2684,13 +2684,66 @@ verificarResposta(resposta, alternativaCorreta) {
 7 | A tenda de livros foi ativada em "cenaPrincipal.js"  |	Verificar se a ação de clicar e abrir livros funciona |	Livro correspondente é aberto |
 8 | O "botaoFechar" foi clicado em livros.js |	Verificar se ao clicar no botão "botaoFechar", o livro e o botão tornam-se invisíveis e a física é retomada |	Ao clicar no botão "botaoFechar", o livro e o botão se tornam invisíveis e a física é retomada |
 9 | O "botãoX" foi clicado em quiz.js |	Verificar se ao clicar no botão "botaoX", o caso e o botão tornam-se invisíveis e a física é retomada |	Ao clicar no botão "botaoX", o caso e o botão se tornam invisíveis e a física é retomada |
-9 | O quiz está aberto |	Verificar resposta do usuário |	Retorno de mensagem de parabéns ou de erro e feedback |
+10 | O quiz está aberto |	Verificar resposta do usuário |	Retorno de mensagem de parabéns ou de erro e feedback |
+11 | Quiz foi respondido | Testar quando a resposta é correta | Se a resposta fornecida for igual à alternativa correta, o símbolo do quiz é ocultado, o efeito sonoro de acerto é reproduzido, a pontuação é atualizada em 10 pontos, a mensagem de explicação para resposta correta é exibida, o fundo do feedback é exibido com estilo verde e 2 pixels de espessura. |
+12 | Quiz foi respondido | Testar quando a resposta é incorreta | Se a resposta fornecida for diferente da alternativa correta, o símbolo do quiz é ocultado, o efeito sonoro de erro é reproduzido, o tempo é atualizado em -10 unidades, a mensagem de explicação para resposta incorreta é exibida, o fundo do feedback é exibido com estilo vermelho e 2 pixels de espessura. |
+
 
 <div align="center">
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;Os testes anteriores refletem a verificação do carregamento de assets e seu posicionamento, da mecânica do jogo, de algumas interações com botões e de alguns eventos criados entre cenas. Não abordamos, porém, cenários de erros que possam a vir surgir de entradas inválidas do usuário ou de situações inesperadas. A tabela a seguir caminha inicialmente para essa direção enquanto vamos refinando o código e descobrindo novas formas que o jogo pode ficar com a lógica inoperante.
+
+&nbsp;&nbsp;&nbsp;&nbsp;Além disso, foi criado um novo arquivo chamado `typeWritter.js`, o qual contém o mecanismo de implementação dos diálogos adicionados ao jogo, posto isso, é de funcamental importância a verificação por meio de testes nesse arquivo.
+
+<div align="center">
+<sub>Tabela 11: Casos de Testes da Cena typeWritter.js</sub>
+</div>
+
+| # | Pré-condição | Descrição do Teste | Pós-condição |
+|---|--------------|-------------------|--------------|
+| 1 | Objeto TypeWritter criado | Testar a criação de um objeto TypeWritter | Um objeto TypeWritter é criado com as propriedades definidas corretamente, incluindo velocidade de digitação, texto original, índice e texto digitado. Um evento de tempo é iniciado para adicionar caracteres ao texto. |
+| 2 | Chamada da função addChar() | Testar a adição de caracteres ao texto digitado | Cada vez que a função addChar() é chamada, um caractere é adicionado ao texto digitado, até que o texto original seja totalmente digitado. |
+| 3 | Chamada da função skip() | Testar a função de pular a digitação | A chamada da função skip() interrompe o evento de tempo, define o texto do objeto como o texto original completo e chama a função onComplete() se fornecida. |
+| 4 | Chamada da função destroy() | Testar a função de destruir o objeto | A chamada da função destroy() remove o evento de tempo e chama o método destroy() da classe pai para destruir o objeto. |
+| 5 | Chamada da função proximoTexto(texto, onComplete) | Testar a função de adicionar um novo texto | A chamada da função proximoTexto(texto, onComplete) redefine o texto original para o novo texto fornecido, reinicia a digitação do texto e chama a função onComplete() se fornecida. |
+| 6 | Objeto TypeWritter criado com texto vazio | Testar a criação de um objeto TypeWritter com texto vazio | Um objeto TypeWritter é criado e nenhum evento de tempo é iniciado, pois não há texto a ser digitado. |
+| 7 | Chamada da função skip() sem evento de tempo ativo | Testar a função de pular a digitação quando não há evento de tempo ativo | Não ocorre nenhum erro e a função skip() não tem efeito, pois não há digitação em progresso. |
+| 8 | Chamada da função proximoTexto(texto, onComplete) com texto vazio | Testar a função de adicionar um novo texto com texto vazio | O texto original é definido como vazio e nenhum evento de tempo é iniciado, pois não há texto a ser digitado. |
+
+<div align="center">
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;Foi adicionada uma máquina de estado em nosso código, por isso é imprtanante realizar os teste para verificar o funcionamento adequado dela. Esses testes contribuem para a identificação de bugs que podem surgir devido a transições incorretas de estado, lógica inadequada de transição ou estados mal definidos. Encontrar e corrigir esses bugs durante o estágio de teste é fundamental para garantir seu bom funcionamento.
+
+<div align="center">
+<sub>Tabela 11: Casos de Testes da Cena stateMachine.js</sub>
+</div>
+
+| # | Pré-condição | Descrição do Teste | Pós-condição |
+|---|--------------|-------------------|--------------|
+| 1 | Máquina de estados criada com um estado inicial válido | Testar a criação da máquina de estados | Uma máquina de estados é criada com o estado inicial definido corretamente. |
+| 2 | Chamada da função transitionTo(state) com um novo estado válido | Testar a transição para um novo estado válido | O estado atual é alterado para o novo estado fornecido. |
+| 3 | Chamada da função transitionTo(state) com o estado atual | Testar a transição para o próprio estado atual | Não ocorre nenhuma alteração no estado atual. |
+| 4 | Chamada da função currentState() | Testar a obtenção do estado atual | A função currentState() retorna o estado atual da máquina de estados. |
+
+&nbsp;&nbsp;&nbsp;&nbsp;Além disso, foi criado um arquivo que se chama `NPCs.js`, o qual é responsável pela lógica de movimentação aleatória dos NPCs, posto isso, é fundamental testá-lo, para garantir que essa lógica esteja funcionando corretamente.
+
+| # | Pré-condição | Descrição do Teste | Pós-condição |
+|---|--------------|-------------------|--------------|
+| 1 | Objeto aluno inicializado | Testar a atualização das propriedades de direção e velocidade do aluno | A direção e velocidade do aluno são alteradas em intervalos aleatórios dentro dos limites especificados. |
+| 2 | Chamada da função updateAnimation() | Testar a atualização da animação do aluno | A animação do aluno é atualizada com base na velocidade atual do corpo. |
+| 3 | Corpo do aluno se movendo para a direita | Testar se a animação de caminhada para a direita é corretamente acionada | Se a velocidade do corpo do aluno for positiva, a animação de caminhada para a direita é acionada e o aluno não é invertido horizontalmente. |
+| 4 | Corpo do aluno se movendo para a esquerda | Testar se a animação de caminhada para a esquerda é corretamente acionada | Se a velocidade do corpo do aluno for negativa, a animação de caminhada para a esquerda é acionada e o aluno é invertido horizontalmente. |
+| 5 | Chamada da função setCollisionBetweenItens(...phaserPhysics) | Testar a configuração de colisão entre o aluno e outros objetos | A função setCollisionBetweenItens() adiciona colisão entre o aluno e os itens passados como argumentos. |
+
+<div align="center">
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+</div>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;Os testes anteriores refletem a verificação do carregamento de assets e seu posicioamento, da mecânica do jogo, de algumas interações com botões e de alguns eventos criados entre cenas. Não abordamos, porém, cenários de erros que possam a vir surgir de entradas inválidas do usuário ou de situações inesperadas. A tabela a seguir caminha inicialmente para essa direção enquanto vamos refinando o código e descobrindo novas formas que o jogo pode ficar com a lógica inoperante.
 
 <div align="center">
 <sub>Tabela 9: Cenários de Erro Gerais</sub>
