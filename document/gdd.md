@@ -2867,6 +2867,11 @@ O que poderia melhorar no jogo? | Menos textos e mais objetivos, botões para re
 
 *Descreva nesta seção um plano de melhorias sobre o jogo, com base nos resultados dos testes de jogabilidade*
 
+&nbsp;&nbsp;&nbsp;&nbsp;Com base nos *feedbacks* coletados dos usuários que testaram o jogo, nossa equipe traçou um plano de melhorias que consiste basicamente em focar no aprimoramento das funcionalidades mais sugeridas. Posteriormente, iremos implementar polimentos, como a sugestão de mudar a faixa em que o ônibus está, correção de imagens e colocar em evidência os objetos passíveis de interação.
+&nbsp;&nbsp;&nbsp;&nbsp;Quase todos os testadores ressaltaram a importância de uma abordagem mais concisa e direta em relação às informações transmitidas ao longo do jogo. Com base nisso, estamos empenhados em revisar e otimizar os textos presentes no jogo, priorizando uma comunicação mais objetiva e eficiente para garantir uma experiência de jogo mais imersiva e envolvente para todos os jogadores.
+&nbsp;&nbsp;&nbsp;&nbsp;Além disso, reconhecemos a necessidade de tornar as missões do jogador mais claras e acessíveis. Para alcançar esse objetivo, estamos trabalhando no refinamento das instruções e na implementação de elementos visuais que orientem de forma intuitiva os objetivos e desafios do jogo. Pretendemos, também, adicionar um tutorial na tela de carregamento, o que facilitará a absorção do ciclo principal do jogo por parte dos jogadores. Dessa forma, os jogadores poderão compreender melhor seus objetivos e desfrutar de uma experiência de jogo mais fluida e gratificante.
+&nbsp;&nbsp;&nbsp;&nbsp;Estamos comprometidos em transformar os *feedbacks* recebidos em melhorias tangíveis que resultem em uma experiência de jogo ainda mais cativante e satisfatória para todos os jogadores.
+
 
 
 # <a name="c6"></a>6. Conclusões e trabalhos futuros (sprint 5)
