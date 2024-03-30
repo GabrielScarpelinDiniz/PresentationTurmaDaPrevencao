@@ -118,7 +118,7 @@
 
 - Pessoas que têm interesse nas áreas de ciências da saúde, mas não exclusivamente querem ou conseguem se tornar médicas. Essas pessoas optam por outros cursos relacionados à saúde, como por exemplo, Enfermagem, Fisioterapia e Biomedicina. 
 
-- Pessoas cujo a escolha do curso tenha sido majoritariamente influenciada pela remuneração do emprego. Antigamente, fazer curso de medicina trazia ao estudante diversos benefícios sociais, como o interesse pela posição socioeconômica e a aprovação de familiares e da sociedade no geral[⁴](#c7). Atualmente, há diversas alternativas para aqueles que buscam segurança financeira e/ou prestígio, como por exemplo, cursos de Economia e Engenharia[⁵](#c7).
+- Pessoas cujo a escolha do curso tenha sido majoritariamente influenciada pela remuneração do emprego. Antigamente, fazer curso de medicina trazia ao estudantes diversos benefícios sociais, como o interesse pela posição socioeconômica e a aprovação de familiares e da sociedade no geral[⁴](#c7). Atualmente, há diversas alternativas para aqueles que buscam segurança financeira e/ou prestígio, como por exemplo, cursos de Economia e Engenharia[⁵](#c7).
 
 ### 1.1.2. Análise SWOT
 
@@ -2287,7 +2287,7 @@ create() {
 
 ```
 
-&nbsp;&nbsp;&nbsp;&nbsp;No seguinte código, adicionamos a lógica ao botão de jogar. Com o evento de click do mouse, o efeito sonoro do botão de jogar é ativado e é um *fade out* de 1000 milisegundos é realizado para transição entre cenas. Através do método `this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE) => {}`, garantimos que as chamadas das cenas `cenaPrincipal.js` e `HUD.js` sejam realizadas apenas após o evento de Fade Out ser finalizado. O mouse volta a seu estado original e as cenas `livros.js` e `quiz.js` são temporariamente desativadas.
+&nbsp;&nbsp;&nbsp;&nbsp;No seguinte código, adicionamos a lógica ao botão de jogar. Com o evento de click do mouse, o efeito sonoro do botão de jogar é ativado e é um *fade out* de 1000 milisegundos é realizado para transição entre cenas. Através do método `this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE, => {})`, garantimos que as chamadas das cenas `cenaPrincipal.js` e `HUD.js` sejam realizadas apenas após o evento de Fade Out ser finalizado. O mouse volta a seu estado original e as cenas `livros.js` e `quiz.js` são temporariamente desativadas.
 
 ```js
     // Evento disparado ao clicar no botão
