@@ -2646,15 +2646,16 @@ verificarResposta(resposta, alternativaCorreta) {
 \# | Pré-condição | Descrição do Teste | Pós-condição
 |------|---------|--- |--- |
 1 | Carregamento de imagens bem-sucedido |	Verificar se as imagens foram carregadas corretamente |	Imagens carregadas corretamente |
-2 | Elementos das cenas criados corretamente |	Verificar se os elementos das cenas estão posicionados e visíveis corretamente | Elementos das cenas foram criados e posicionados corretamente |
-3 | Verificar se o evento "abrirCase" é acionado na cena cases.js |	Verificar se o evento "abrirCase" pausa a física e torna o caso e o botão visíveis | O evento "abrirCase" pausa a física e torna o caso e o botão visíveis |
-4 | O cursor está fora do "botãoX" no cases.js | Verificar se o cursor muda para uma mãozinha ao passar sobre o botão "botaoX" | O cursor muda para uma mãozinha ao passar sobre o botão "botaoX" |
-5 | O cursor está sobre o "botãoX" no cases.js | Verificar se o cursor muda para uma setinha ao sair do botão "botaoX" |	O cursor volta ao seu estado padrão ao sair do botão "botaoX" |
-6 | O "botãoX" foi clicado no cases.js |	Verificar se ao clicar no botão "botaoX", o caso e o botão tornam-se invisíveis e a física é retomada |	Ao clicar no botão "botaoX", o caso e o botão se tornam invisíveis e a física é retomada |
-7 | A tenda de livros foi ativada em "cenaPrincipal.js"  |	Verificar se a ação de clicar e abrir livros funciona |	Livro correspondente é aberto |
-8 | O "botaoFechar" foi clicado em livros.js |	Verificar se ao clicar no botão "botaoFechar", o livro e o botão tornam-se invisíveis e a física é retomada |	Ao clicar no botão "botaoFechar", o livro e o botão se tornam invisíveis e a física é retomada |
-9 | O "botãoX" foi clicado em quiz.js |	Verificar se ao clicar no botão "botaoX", o caso e o botão tornam-se invisíveis e a física é retomada |	Ao clicar no botão "botaoX", o caso e o botão se tornam invisíveis e a física é retomada |
-9 | O quiz está aberto |	Verificar resposta do usuário |	Retorno de mensagem de parabéns ou de erro e feedback |
+2 | Elementos da Cena de Livros criados corretamente |	Verificar se os elementos da Cena de Livros estão posicionados corretamente e visíveis  | Elementos das cenas foram criados e posicionados corretamente |
+4 | O cursor está fora do "botãoX" na Cena de Livros | Verificar se o cursor muda para uma mãozinha ao passar sobre o botão "botaoX" | O cursor muda para uma mãozinha ao passar sobre o botão "botaoX" |
+5 | O cursor está sobre o "botãoX" na Cena de Livros | Verificar se o cursor muda para uma setinha ao sair do botão "botaoX" |	O cursor volta ao seu estado padrão ao sair do botão "botaoX" |
+6 | O "botãoX" foi clicado na Cena de Livros |	Verificar se ao clicar no botão "botaoX", o livro e o botão tornam-se invisíveis e a física é retomada | Ao clicar no botão "botaoX", o livro e o botão se tornam invisíveis e a física é retomada |
+7 | Algum livro está aberto |	Verificar se o efeito sonoro de passar página é ativado ao clicar no livro | O efeito sonoro de passar página é ativado |
+8 | Livros carregados     | Clicar em algum livro fechado   | O livro correspondente é aberto, e seu conteúdo é mostrado corretamente |
+9 | Qualquer livro aberto | Clicar para avançar para a próxima página  | A próxima página do livro é exibida corretamente |
+10 | Qualquer livro aberto  | Clicar para voltar para a página anterior  | A página anterior do livro é exibida corretamente |
+
+
 
 <div align="center">
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
