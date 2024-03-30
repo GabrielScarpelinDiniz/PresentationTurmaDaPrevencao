@@ -37,7 +37,7 @@
 
 ### 1.1.1. Contexto da indústria
 
-&nbsp;&nbsp;&nbsp;&nbsp;A Faculdade de Medicina da USP é uma referência no campo da educação superior, destacando-se no ensino de Medicina no Brasil e na realização de pesquisas de ponta, além de campanhas de conscientização para a população¹. Competindo com outras instituições renomadas, como UNICAMP, PUC-SP e UNIFESP, a FMUSP se destaca por suas iniciativas inovadoras e seu impacto notável no mercado regional e nacional, especialmente através de suas campanhas e atividades clínicas de alto padrão.
+&nbsp;&nbsp;&nbsp;&nbsp;A Faculdade de Medicina da USP é uma referência no campo da educação superior, destacando-se no ensino de Medicina no Brasil e na realização de pesquisas de ponta, além de campanhas de conscientização para a população[¹](#c7). Competindo com outras instituições renomadas, como UNICAMP, PUC-SP e UNIFESP, a FMUSP se destaca por suas iniciativas inovadoras e seu impacto notável no mercado regional e nacional, especialmente através de suas campanhas e atividades clínicas de alto padrão.
 
 &nbsp;&nbsp;&nbsp;&nbsp;Internacionalmente reconhecida, a FMUSP continua a liderar o caminho em pesquisas de vanguarda, abrangendo áreas como cirurgia com células-tronco, desenvolvimento de pele artificial e outras tendências futuras na medicina.
 
@@ -132,7 +132,7 @@
 
 <div align="center">
 
-<sub>Figura 1 - Análise SWOT da FMUSP</sub>
+<sub>Figura 02 - Análise SWOT da FMUSP</sub>
 
 <img src="./other/analise_swot.png" width=800>
 
@@ -143,8 +143,6 @@
 &nbsp;&nbsp;&nbsp;&nbsp;Com a análise SWOT, foi possível observar características importantes, tais como os projetos sociais realizados pela Faculdade de Medicina da USP (FMUSP) e a carência de ferramentas tecnológicas para esses projetos sociais. Associados a esses pontos, destacam-se algumas oportunidades, como o amplo público atendido pela FMUSP e, sobretudo, a crescente digitalização mundial. Nesse contexto, a aplicação gameficada foi desenvolvido com o objetivo de atenuar os pontos fracos, potencializar ainda mais os pontos fortes e aproveitar as oportunidades.
 
 ### 1.1.3. Descrição da Solução Desenvolvida
-
-⁰ ¹ ² ³ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹
 
 &nbsp;&nbsp;&nbsp;&nbsp;A falta de conscientização sobre prevenção, primeiros socorros e informações inadequadas sobre queimaduras, em especial em populações vulneráveis, influi na alta incidência de queimaduras, que se torna uma das maiores causas de lesões traumáticas no mundo. Foram registrados cerca de 1 milhão de novos casos anualmente no Brasil, conforme dados divulgados pelo Ministério da Saúde do Brasil em 2014, e acredita-se que 90% das queimaduras poderiam ser evitadas com a devida educação e conscientização da população. Grande parte das queimaduras registradas ocorreram em ambiente residencial e em atividades de lazer, abrangendo, na maioria, homens de 20 a 39 anos.[⁷](#c7)
 
@@ -169,7 +167,7 @@
 
 <div align="center">
 
-<sub>Figura 2 - Canvas da Proposta de Valor do Projeto</sub>
+<sub>Figura 03 - Canvas da Proposta de Valor do Projeto</sub>
 
 <img src=".\other\canvas_proposta_valor.png" width="100%">
 
@@ -190,13 +188,13 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;Ademais, uma abordagem iterativa permite que as organizações melhorem continuamente seus processos de gestão de riscos. Ao revisar regularmente a matriz de risco, as instituições podem identificar áreas onde seus métodos de avaliação de risco podem ser aprimorados, como refinar critérios de risco, melhorar técnicas de coleta e análise de dados, ou aprimorar a comunicação e colaboração entre as partes interessadas. Esse ciclo iterativo de melhoria as auxilia a se adaptarem às circunstâncias voláteis, a anteciparem e responderem melhor a riscos emergentes.
 
-&nbsp;&nbsp;&nbsp;&nbsp;A fim de gerenciar os riscos do nosso produto, a equipe construiu os gráficos que representam potenciais ameaças e oportunidades no projeto (figura 3 e figura 4, respectivamente), contribuindo efetivamente para a tomada de decisões estratégicas e planejamento de planos de ação. 
+&nbsp;&nbsp;&nbsp;&nbsp;A fim de gerenciar os riscos do nosso produto, a equipe construiu os gráficos que representam potenciais ameaças e oportunidades no projeto (figura 04 e figura 05, respectivamente), contribuindo efetivamente para a tomada de decisões estratégicas e planejamento de planos de ação. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;Dada a iteratividade do gerenciamento de risco citada acima, as figuras a seguir foram adaptadas para a fase atual do projeto com a revisão do impacto e da probabilidade dos riscos e das oportunidades. 
 
 <div align="center">
 
-<sub>Figura 3 - Matriz de Riscos</sub>
+<sub>Figura 04 - Matriz de Riscos</sub>
 
 <img src="./other/matriz_de_riscos.png" width="80%">
 
@@ -207,7 +205,7 @@
 
 <div align="center">
 
-<sub>Figura 4 - Matriz de Oportunidades</sub>
+<sub>Figura 05 - Matriz de Oportunidades</sub>
 
 <img src="./other/matriz_de_oportunidades.png" width="80%">
 
@@ -221,8 +219,6 @@
 <div align="center">
 <sub>Tabela 1: Requisitos do cliente</sub>
 </div>
-
-
 
 
 \# | Plano de ações:
@@ -305,7 +301,7 @@ Posto isso, foi entendido que a definição adequada do público alvo aumenta a 
 
 ## 2.1. Objetivos do Jogo
 
-&nbsp;&nbsp;&nbsp;&nbsp;Os jogos têm como principal função proporcionar entretenimento, lazer e diversão aos participantes¹⁴. Pode envolver completar tarefas específicas, resolver quebra-cabeças, derrotar inimigos, acumular pontos, entre outros desafios.
+&nbsp;&nbsp;&nbsp;&nbsp;Os jogos têm como principal função proporcionar entretenimento, lazer e diversão aos participantes[¹⁴](#c7). Pode envolver completar tarefas específicas, resolver quebra-cabeças, derrotar inimigos, acumular pontos, entre outros desafios.
 
 &nbsp;&nbsp;&nbsp;&nbsp;Para o nosso jogo, o objetivo é resolver o máximo de cases propostos pela dra. Tina em um tempo determinado, passando por um ciclo de teoria (representada pelos livros da tenda de livros) e de prática (representada pelo quiz da tenda de quiz), obtendo assim uma pontuação final que pode ser superada a cada novo ciclo. Isso incentiva que os jogadores equilibrem eficiência na resolução e aprimoramento de habilidades através da aprendizagem.
 
@@ -319,7 +315,7 @@ Posto isso, foi entendido que a definição adequada do público alvo aumenta a 
 
 ### 2.2.2. Plataforma do Jogo
 
-&nbsp;&nbsp;&nbsp;&nbsp;A plataforma de um jogo se refere ao ambiente ou sistema no qual o jogo é executado¹⁶. Isso inclui dispositivos como computadores, consoles de videogame, smartphones, tablets, entre outros, e também o sistema operacional ou plataforma online que suporta a execução do jogo.
+&nbsp;&nbsp;&nbsp;&nbsp;A plataforma de um jogo se refere ao ambiente ou sistema no qual o jogo é executado[¹⁶](#c7). Isso inclui dispositivos como computadores, consoles de videogame, smartphones, tablets, entre outros, e também o sistema operacional ou plataforma online que suporta a execução do jogo.
 
 &nbsp;&nbsp;&nbsp;&nbsp;O jogo será desenvolvido para dispositivos móveis, como smartphones e tablets, e oferecerá uma experiência acessível e portátil. A interface será otimizada para telas sensíveis ao toque, permitindo aos jogadores interagirem intuitivamente com os elementos do jogo. Além disso, a natureza móvel desses dispositivos permitirá que os jogadores acessem o jogo em qualquer lugar, tornando-o conveniente para ser usado na educação.
 
@@ -410,7 +406,7 @@ Posto isso, foi entendido que a definição adequada do público alvo aumenta a 
 
 <div align="center">
 
-<sub>Figura 5 - Mapa do Jogo</sub>
+<sub>Figura 06 - Mapa do Jogo</sub>
 
 <img src="./other/mapajogo.jpeg" width="50%">
 
@@ -434,7 +430,7 @@ Posto isso, foi entendido que a definição adequada do público alvo aumenta a 
 
 ### 3.3.3. Condições climáticas e temporais
 
-&nbsp;&nbsp;&nbsp;&nbsp;No jogo, o tempo é um elemento que adiciona diversão e desafio à experiência do jogador. Segundo Douglas Barbosa, "essa restrição temporal adiciona uma camada de tensão à jogabilidade, forçando o jogador a tomar decisões rápidas e priorizar tarefas para alcançar os objetivos."¹⁸ 
+&nbsp;&nbsp;&nbsp;&nbsp;No jogo, o tempo é um elemento que adiciona diversão e desafio à experiência do jogador. Segundo Douglas Barbosa, "essa restrição temporal adiciona uma camada de tensão à jogabilidade, forçando o jogador a tomar decisões rápidas e priorizar tarefas para alcançar os objetivos."[¹⁸](#c7) 
 Um cronômetro é utilizado para medir o tempo que o jogador tem para completar cada ciclo de aprendizado e resolução do case na gincana. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;O desafio está em cumprir o máximo de ciclos no tempo estipulado, o que cria uma sensação de urgência e emoção. O jogador é recompensado com pontuações mais altas por sua eficiência e rapidez, incentivando repetições para melhorar o desempenho. No entanto, erros resultam na perda de tempo, tornando essencial tomar decisões cuidadosas e precisas durante o jogo. 
@@ -447,7 +443,7 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
  
 <div align="center">
 
-<sub>Figura 6 - Concept Art do Mapa</sub>
+<sub>Figura 07 - Concept Art do Mapa</sub>
 
 <img src="./other/ConceptMapa.jpg" width="80%">
 
@@ -455,11 +451,11 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;Figura 6: O mapa principal do jogo retrata o pátio da Faculdade de Medicina da Universidade de São Paulo. O espaço é arborizado, com duas tendas em cada extremidade e uma fonte central. Um portão separa o pátio da rua adjacente.
+&nbsp;&nbsp;&nbsp;&nbsp;Figura 07: O mapa principal do jogo retrata o pátio da Faculdade de Medicina da Universidade de São Paulo. O espaço é arborizado, com duas tendas em cada extremidade e uma fonte central. Um portão separa o pátio da rua adjacente.
 
 <div align="center">
 
-<sub>Figura 7 - Concept Art do Case</sub>
+<sub>Figura 08 - Concept Art do Case</sub>
 
 <img src="./other/ConceptCase.jpg" width="50%">
 
@@ -471,7 +467,7 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 <div align="center">
 
-<sub>Figura 8 - Concept Art de Livros</sub>
+<sub>Figura 09 - Concept Art de Livros</sub>
 
 <img src="./other/ConceptLivros.jpg" width="50%">
 
@@ -479,11 +475,11 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;Figura 8: Os livros são dispostos em ordem crescente quanto ao seu grau de classificação começando pela esquerda. Cada um indica na capa a qual grau se refere e contém uma cor única.
+&nbsp;&nbsp;&nbsp;&nbsp;Figura 09: Os livros são dispostos em ordem crescente quanto ao seu grau de classificação começando pela esquerda. Cada um indica na capa a qual grau se refere e contém uma cor única.
 
 <div align="center">
 
-<sub>Figura 9 - Concept Art do Quiz</sub>
+<sub>Figura 10 - Concept Art do Quiz</sub>
 
 <img src="./other/ConceptQuiz.jpg" width="50%">
 
@@ -491,7 +487,7 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;Figura 9: O quiz é um quadrado que contém, começando pela parte superior, três figuras em forma de retângulos com um símbolo de interrogação no centro. Em seguida, há uma área de pergunta a ser desenvolvida e duas caixas com opções de alternativa.
+&nbsp;&nbsp;&nbsp;&nbsp;Figura 10: O quiz é um quadrado que contém, começando pela parte superior, três figuras em forma de retângulos com um símbolo de interrogação no centro. Em seguida, há uma área de pergunta a ser desenvolvida e duas caixas com opções de alternativa.
 
 ### 3.3.5. Trilha sonora
 
@@ -533,7 +529,7 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 <div align="center">
 
-<sub>Figura 9 - Visão geral do Diagrama de Cenas</sub>
+<sub>Figura 11 - Visão geral do Diagrama de Cenas</sub>
 
 <img src="./other/visaodiagrama.png" width=800>
 
@@ -545,7 +541,7 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 <div align="center">
 
-<sub>Figura 10 - Menu do Jogo</sub>
+<sub>Figura 12 - Menu do Jogo</sub>
 
 <img src="./other/menuGFcerto.png" width=800>
 
@@ -557,7 +553,7 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 <div align="center">
 
-<sub>Figura 11 - Campus FMUSP</sub>
+<sub>Figura 13 - Campus FMUSP</sub>
 
 <img src="./other/campusGF.png" width=800>
 
@@ -569,7 +565,7 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 <div align="center">
 
-<sub>Figura 12 - Encontro com Dra. Tina</sub>
+<sub>Figura 14 - Encontro com Dra. Tina</sub>
 
 <img src="./other/tinaGF.png" width=800>
 
@@ -581,7 +577,7 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 <div align="center">
 
-<sub>Figura 13 - Case</sub>
+<sub>Figura 15 - Case</sub>
 
 <img src="./other/casecertoGF.png" width=800>
 
@@ -594,7 +590,7 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 <div align="center">
 
-<sub>Figura 14 - Tenda de Livros</sub>
+<sub>Figura 16 - Tenda de Livros</sub>
 
 <img src="./other/tendalivrosGF.png" width=800>
 
@@ -606,7 +602,7 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 <div align="center">
 
-<sub>Figura 15 - Livros</sub>
+<sub>Figura 17 - Livros</sub>
 
 <img src="./other/livros1GF.png" width=800>
 
@@ -618,7 +614,7 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 <div align="center">
 
-<sub>Figura 16 - Conteúdo do livro</sub>
+<sub>Figura 18 - Conteúdo do livro</sub>
 
 <img src="./other/livrocertoGF.png" width=800>
 
@@ -630,7 +626,7 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 <div align="center">
 
-<sub>Figura 17 - Tenda de Quiz</sub>
+<sub>Figura 19 - Tenda de Quiz</sub>
 
 <img src="./other/tendaquizGF.png" width=800>
 
@@ -642,7 +638,7 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 
 <div align="center">
 
-<sub>Figura 17 - Quiz</sub>
+<sub>Figura 20 - Quiz</sub>
 
 <img src="./other/quizcertoGF.png" width=800>
 
@@ -679,7 +675,7 @@ assim por diante), a mecânica suporta a dinâmica geral da jogabilidade. Ou sej
 
 <div align="center">
 
-<sub>Figura 18 - Cenas de jogo</sub>
+<sub>Figura 21 - Cenas de jogo</sub>
 
 <p align="middle">
     <img src="other\sprint_1_item_4.1_files\figura1.png" width="40%">
@@ -693,7 +689,7 @@ assim por diante), a mecânica suporta a dinâmica geral da jogabilidade. Ou sej
 
 <div align="center">
 
-<sub>Figura 19 - Cena de início</sub>
+<sub>Figura 22 - Cena de início</sub>
 
 <p align="middle">
     <img src="other\sprint_1_item_4.1_files\figura3.png" width="40%">
@@ -707,7 +703,7 @@ assim por diante), a mecânica suporta a dinâmica geral da jogabilidade. Ou sej
 
 <div align="center">
 
-<sub>Figura 20 - Cena de jogo</sub>
+<sub>Figura 23 - Cena de jogo</sub>
 
 <p align="middle">
     <img src="other\sprint_1_item_4.1_files\figura5.png" width="40%">
@@ -834,7 +830,7 @@ var config = {
 
 <div align="center">
 
-<sub>Figura 21 - Protótipo do Quiz</sub>
+<sub>Figura 24 - Protótipo do Quiz</sub>
 
 <img src="other\sprint_1_item_4.1_files\figura7.jpg" width="40%">
 
@@ -906,7 +902,7 @@ class CenaHospital extends Phaser.Scene {
 
 <div align="center">
 
-<sub>Figura 22 - Novo menu desenvolvido no Piskel</sub>
+<sub>Figura 25 - Novo menu desenvolvido no Piskel</sub>
 
 <img src="other\sprint_2_item_4.2_files\figura1.png" width="60%">
 
@@ -916,7 +912,7 @@ class CenaHospital extends Phaser.Scene {
 
 <div align="center">
 
-<sub>Figura 23 - Spritesheet do botão para animação</sub>
+<sub>Figura 26 - Spritesheet do botão para animação</sub>
 
 <img src="other\sprint_2_item_4.2_files\button.png" width="60%">
 
@@ -966,7 +962,7 @@ const config = {
 
 <div align="center">
 
-<sub>Figura 24 - Mapa no Tiled Map Editor</sub>
+<sub>Figura 27 - Mapa no Tiled Map Editor</sub>
 
 <img src="other\sprint_2_item_4.2_files\tiled_map_editor.png" width="40%">
 
@@ -1005,7 +1001,7 @@ this.cameras.main.setZoom(2);
 ````
 <div align="center">
 
-<sub>Figura 25 - Mapa implementado no phaser com câmera</sub>
+<sub>Figura 28 - Mapa implementado no phaser com câmera</sub>
 
 <img src="other\sprint_2_item_4.2_files\camera_and_tiled_map.png" width="40%">
 
@@ -1030,7 +1026,7 @@ this.medico.setVelocityY(velocidadeEmY)
 ````
 <div align="center">
 
-<sub>Figura 26 - Colisão entre o personagem e a parede</sub>
+<sub>Figura 29 - Colisão entre o personagem e a parede</sub>
 
 <img src="other\sprint_2_item_4.2_files\collision.png" width="40%">
 
@@ -1063,7 +1059,7 @@ this.joystick.setScrollFactor(0); // Faz com que o joystick não se mova com a c
 
 <div align="center">
 
-<sub>Figura 27 - Cálculo da velocidade em X e Y</sub>
+<sub>Figura 30 - Cálculo da velocidade em X e Y</sub>
 
 <img src="other\sprint_2_item_4.2_files\vetores.png" width="40%">
 
@@ -1098,7 +1094,7 @@ const velocityDoctorY = -(this.defaultVelocity * Math.sin(this.radiansAngleJoyst
 
 <div align="center">
 
-<sub>Figura 28 - Movimentação vetorial com o controle joystick</sub>
+<sub>Figura 31 - Movimentação vetorial com o controle joystick</sub>
 
 <img src="other\sprint_2_item_4.2_files\movimentacao_vetorial.png" width="40%">
 
@@ -1125,7 +1121,7 @@ openFullScreen() {
 
 <div align="center">
 
-<sub>Figura 29 - Joystick no jogo e tela cheia</sub>
+<sub>Figura 32 - Joystick no jogo e tela cheia</sub>
 
 <img src="other\sprint_2_item_4.2_files\joystick.png" width="40%">
 
@@ -1160,7 +1156,7 @@ openFullScreen() {
 
 <div align="center">
 
-<sub>Figura 30 - Mapa</sub>
+<sub>Figura 33 - Mapa</sub>
 
 <img src="other\mapaZoomOut.png">
 
@@ -2155,7 +2151,7 @@ class StateMachine {
 
 <div align="center">
 
-<sub>Figura X - Menu atualizado desenvolvido no Piskel</sub>
+<sub>Figura 34 - Menu atualizado desenvolvido no Piskel</sub>
 
 <img src="./other/menuGFcerto.png" width="60%">
 
@@ -2167,7 +2163,7 @@ class StateMachine {
 
 <div align="center">
 
-<sub>Figura X - Spritesheet do botão para animação</sub>
+<sub>Figura 35 - Spritesheet do botão para animação</sub>
 
 <img src="./other/botaoJogarNovo.png" width="60%">
 
@@ -2177,7 +2173,7 @@ class StateMachine {
 
 <div align="center">
 
-<sub>Figura X - Imagem das nuvens que se movem no menu</sub>
+<sub>Figura 36 - Imagem das nuvens que se movem no menu</sub>
 
 <img src="./other/nuvem.png" width="60%">
 
@@ -2938,6 +2934,8 @@ O que poderia melhorar no jogo? | Menos textos e mais objetivos, botões para re
 ²⁴ Hunicke, R., LeBlanc, M., & Zubek, R. (2004). MDA: A formal approach to game design and game research. In Proceedings of the AAAI Workshop on Challenges in Game AI (Vol. 4, pp. 04-04).
 
 ²⁵ SCHWERING, Ramona. Como definir casos de teste e prioridades. Disponível em: https://web.dev/articles/ta-test-cases?hl=pt-br. Acesso em 28 fev. 2024.<br>
+
+⁰ ¹ ² ³ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹
 
 # <a name="c8"></a>Anexos
 
