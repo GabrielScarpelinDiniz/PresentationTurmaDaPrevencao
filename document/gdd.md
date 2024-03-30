@@ -2700,8 +2700,8 @@ verificarResposta(resposta, alternativaCorreta) {
 <sub>Tabela 11: Casos de Testes da Cena typeWritter.js</sub>
 </div>
 
-| # | Pré-condição | Descrição do Teste | Pós-condição |
-|---|--------------|-------------------|--------------|
+\# | Pré-condição | Descrição do Teste | Pós-condição
+|------|---------|--- |--- |
 | 1 | Objeto TypeWritter criado | Testar a criação de um objeto TypeWritter | Um objeto TypeWritter é criado com as propriedades definidas corretamente, incluindo velocidade de digitação, texto original, índice e texto digitado. Um evento de tempo é iniciado para adicionar caracteres ao texto. |
 | 2 | Chamada da função addChar() | Testar a adição de caracteres ao texto digitado | Cada vez que a função addChar() é chamada, um caractere é adicionado ao texto digitado, até que o texto original seja totalmente digitado. |
 | 3 | Chamada da função skip() | Testar a função de pular a digitação | A chamada da função skip() interrompe o evento de tempo, define o texto do objeto como o texto original completo e chama a função onComplete() se fornecida. |
@@ -2733,6 +2733,7 @@ verificarResposta(resposta, alternativaCorreta) {
 <div align="center">
 <sub>Tabela 13: Casos de Testes da Cena NPCs.js</sub>
 </div>
+
 | # | Pré-condição | Descrição do Teste | Pós-condição |
 |---|--------------|-------------------|--------------|
 | 1 | Objeto aluno inicializado | Testar a atualização das propriedades de direção e velocidade do aluno | A direção e velocidade do aluno são alteradas em intervalos aleatórios dentro dos limites especificados. |
@@ -2771,7 +2772,9 @@ verificarResposta(resposta, alternativaCorreta) {
 
 ### 5.2.1 Registros de testes
 
-&nbsp;&nbsp;&nbsp;&nbsp;Aqui serão descritos os testes de jogabilidade (*playtests*) de nosso jogo, realizados por convidados. Estes testes têm como objetivo avaliar a intuitividade, ambientação e comunicação do jogo com os potenciais usuários. 
+&nbsp;&nbsp;&nbsp;&nbsp;Aqui serão descritos os testes de jogabilidade (*playtests*) de nosso jogo, realizados por convidados. Estes testes têm como objetivo avaliar a intuitividade, ambientação e comunicação do jogo com os potenciais usuários.
+
+&nbsp;&nbsp;&nbsp;&nbsp;Os teste foram realizado, em sua maioria, durante os dias 26 a 29 de março em ambientes físicos (aulas de experiência do usuário no Inteli) e online (videochamadas). Os testadores foram classificados como público secundário por não pertencerem ao ensino médio de escolas públicas, nosso público-alvo, mas forneceram _insights_ valiosos descritos mais abaixo na seção de Melhorias.
 
 **Sessão de testes - 26/03**
 
