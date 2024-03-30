@@ -2606,18 +2606,64 @@ verificarResposta(resposta, alternativaCorreta) {
 1 | Carregamento de imagens bem-sucedido |	Verificar se as imagens foram carregadas corretamente |	Imagens carregadas corretamente |
 2 | Elementos de HUD criados corretamente |	Verificar se os elementos de HUD estão posicionados e visíveis corretamente | Elementos de HUD estão criados e posicionados corretamente |
 3 | Eventos de exibição da Tarefa funcionando |	Verificar se o evento "mostraTarefaInicial" exibe corretamente as informações da tarefa | Eventos de exibição da Tarefa funcionam corretamente |
-4 | Colisão com cenário inicializada | Testar colisão do personagem com as partes do cenário | O personagem não atravessa partes do cenário e colide corretamente |
-5 | Evento de exibição do Timer funcionando | Verificar se o evento "showTimer" atualiza corretamente o timer e mostra os elementos relacionados ao tempo |	Evento de exibição do Timer funciona corretamente |
-6 | Evento do botão Case foi carregado |	Verificar se o botão "botaoCase" exibe corretamente as imagens e responde aos cliques corretamente |	Botão "botaoCase" foi carregado corretamente e está interativo |
+4 | Evento de exibição do Timer funcionando | Verificar se o evento "showTimer" atualiza corretamente o timer e mostra os elementos relacionados ao tempo |	Evento de exibição do Timer funciona corretamente |
+5 | Evento do botão Case foi carregado |	Verificar se o botão "botaoCase" exibe corretamente as imagens e responde aos cliques corretamente |	Botão "botaoCase" foi carregado corretamente e está interativo |
+6 | Texto da Tarefa definido como "Procure a dr.ª Tina" e colisão com a NPC Dra Tina  |	Verificar se o evento "mudaTarefaParaLivros" muda corretamente as informações da Tarefa | O texto da Tarefa muda para "Tenda dos Livros?" |
+7 | Texto da Tarefa definido como "Tenda dos Livros?" e colisão com a Tenda de Livros  |	Verificar se o evento "mudaTarefaParaQuiz" muda corretamente as informações da Tarefa | O texto da Tarefa muda para "Tenda do Quiz?"|
+8 | Texto da Pontuação carregado e Quiz respondido certo |	Verificar o texto da pontuação muda de valor | Texto da Pontuação muda de valor |
+8 | Texto do Timer carregado e Quiz respondido errado |	Verificar o texto do timer muda de valor | Texto do Timer muda de valor |
+
 
 <div align="center">
 <sup>Fonte: Material produzido pelos autores (2024)</sup>
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;Após o HUD, as cenas ``cases.js``, ``livros.js`` e ``quiz.js`` foram agrupadas na tabela abaixo (mas podem ser postas em tabelas diferentes caso surja um número elevado de testes a serem feitos). A justificativa desse agrupamento origina-se das características semelhantes das três cenas.
+&nbsp;&nbsp;&nbsp;&nbsp;Após o HUD, vamos analisar a cena ``cases.js``. Ela é responsável por criar os elementos visuais dos cases, peças fundamentais para a o fluxo do jogo acontecer.
 
 <div align="center">
-<sub>Tabela 8: Casos de Testes das Cenas cases.js, livros.js e quiz.js</sub>
+<sub>Tabela 8: Casos de Testes da Cenaa cases.js</sub>
+</div>
+
+\# | Pré-condição | Descrição do Teste | Pós-condição
+|------|---------|--- |--- |
+1 | Carregamento de imagens bem-sucedido |	Verificar se as imagens foram carregadas corretamente |	Imagens carregadas corretamente |
+2 | Elementos das cena criados corretamente |	Verificar se os elementos da cena estão posicionados corretamente e visíveis | Elementos das cenas foram criados e posicionados corretamente |
+3 | Verificar se o evento "abrirCase" é acionado na cena cases.js |	Verificar se o evento "abrirCase" pausa a física e torna o caso e o botão visíveis | O evento "abrirCase" pausa a física e torna o caso e o botão visíveis |
+4 | O cursor está fora do "botãoX" no cases.js | Verificar se o cursor muda para uma mãozinha ao passar sobre o botão "botaoX" | O cursor muda para uma mãozinha ao passar sobre o botão "botaoX" |
+5 | O cursor está sobre o "botãoX" no cases.js | Verificar se o cursor muda para uma setinha ao sair do botão "botaoX" |	O cursor volta ao seu estado padrão ao sair do botão "botaoX" |
+6 | O "botãoX" foi clicado no cases.js |	Verificar se ao clicar no botão "botaoX", o caso e o botão tornam-se invisíveis e a física é retomada |	Ao clicar no botão "botaoX", o caso e o botão se tornam invisíveis e a física é retomada |
+
+<div align="center">
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;Outra cena crítica que pode interromper o fluxo do jogo é a ``livros.js``. Ela carrega os textos e artes dos livros, dinâmica importante para fornecer a conscientização que esperamos passar com o jogo.
+
+<div align="center">
+<sub>Tabela 9: Casos de Testes da Cena livros.js</sub>
+</div>
+
+\# | Pré-condição | Descrição do Teste | Pós-condição
+|------|---------|--- |--- |
+1 | Carregamento de imagens bem-sucedido |	Verificar se as imagens foram carregadas corretamente |	Imagens carregadas corretamente |
+2 | Elementos das cenas criados corretamente |	Verificar se os elementos das cenas estão posicionados e visíveis corretamente | Elementos das cenas foram criados e posicionados corretamente |
+3 | Verificar se o evento "abrirCase" é acionado na cena cases.js |	Verificar se o evento "abrirCase" pausa a física e torna o caso e o botão visíveis | O evento "abrirCase" pausa a física e torna o caso e o botão visíveis |
+4 | O cursor está fora do "botãoX" no cases.js | Verificar se o cursor muda para uma mãozinha ao passar sobre o botão "botaoX" | O cursor muda para uma mãozinha ao passar sobre o botão "botaoX" |
+5 | O cursor está sobre o "botãoX" no cases.js | Verificar se o cursor muda para uma setinha ao sair do botão "botaoX" |	O cursor volta ao seu estado padrão ao sair do botão "botaoX" |
+6 | O "botãoX" foi clicado no cases.js |	Verificar se ao clicar no botão "botaoX", o caso e o botão tornam-se invisíveis e a física é retomada |	Ao clicar no botão "botaoX", o caso e o botão se tornam invisíveis e a física é retomada |
+7 | A tenda de livros foi ativada em "cenaPrincipal.js"  |	Verificar se a ação de clicar e abrir livros funciona |	Livro correspondente é aberto |
+8 | O "botaoFechar" foi clicado em livros.js |	Verificar se ao clicar no botão "botaoFechar", o livro e o botão tornam-se invisíveis e a física é retomada |	Ao clicar no botão "botaoFechar", o livro e o botão se tornam invisíveis e a física é retomada |
+9 | O "botãoX" foi clicado em quiz.js |	Verificar se ao clicar no botão "botaoX", o caso e o botão tornam-se invisíveis e a física é retomada |	Ao clicar no botão "botaoX", o caso e o botão se tornam invisíveis e a física é retomada |
+9 | O quiz está aberto |	Verificar resposta do usuário |	Retorno de mensagem de parabéns ou de erro e feedback |
+
+<div align="center">
+<sup>Fonte: Material produzido pelos autores (2024)</sup>
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp; ``quiz.js`` 
+
+<div align="center">
+<sub>Tabela 10: Casos de Testes da Cena quiz.js</sub>
 </div>
 
 \# | Pré-condição | Descrição do Teste | Pós-condição
