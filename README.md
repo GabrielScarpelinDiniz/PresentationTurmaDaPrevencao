@@ -11,12 +11,12 @@
 ## Tilápia
 
 ## 👨‍🎓 Integrantes: 
-- <a href="https://www.linkedin.com/in//">Gabriel Henrique Martins Alves</a>
+- <a href="https://www.linkedin.com/in/gabriel-martins-alves/">Gabriel Henrique Martins Alves</a>
 - <a href="https://www.linkedin.com/in/gabriel-scarpelin-diniz-425258144/">Gabriel Scarpelin Diniz</a>
-- <a href="https://www.linkedin.com/in//">Isabelly Maia</a>
-- <a href="https://www.linkedin.com/in//">Leonardo Casal Andriolo</a> 
-- <a href="https://www.linkedin.com/in//">Matheus Jorge Rosa</a>
-- <a href="https://www.linkedin.com/in//">Pietra Pasqualini Batista</a>
+- <a href="https://www.linkedin.com/in/isabellymaia/">Isabelly Maia</a>
+- <a href="https://www.linkedin.com/in/leonardo-andriolo/">Leonardo Casal Andriolo</a> 
+- <a href="https://www.linkedin.com/in/matheusjorgerosa/">Matheus Jorge Rosa</a>
+- <a href="https://www.linkedin.com/in/pietra-batista-9096642ba/">Pietra Pasqualini Batista</a>
 
 ## 👩‍🏫 Professores:
 ### Orientador(a) 
