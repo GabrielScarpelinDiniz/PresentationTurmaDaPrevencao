@@ -20,11 +20,11 @@ class MenuPrincipal extends Phaser.Scene {
     // Carrega a cena Main Menu
     this.mainMenu = this.add.image(640, 360, "background").setScale(1)
     this.logoInteli = this.add.image(1180, 630, "inteliLogo").setScale(1)
-    this.nuvem1 = this.physics.add.image(532, 320, "nuvem").setScale(1.3);
-    this.nuvem2 = this.physics.add.image(680, 165, "nuvem").setScale(1.2).setFlip(true);
-    this.nuvem3 = this.physics.add.image(700, 465, "nuvem").setScale(0.3);
-    this.nuvem4 = this.physics.add.image(130, 170, "nuvem").setScale(0.4).setFlip(true);
-    this.nuvem5 = this.physics.add.image(980, 320, "nuvem").setScale(0.2).setFlip(true);
+    this.nuvem1 = this.add.image(532, 320, "nuvem").setScale(1.3);
+    this.nuvem2 = this.add.image(680, 165, "nuvem").setScale(1.2).setFlip(true);
+    this.nuvem3 = this.add.image(700, 465, "nuvem").setScale(0.3);
+    this.nuvem4 = this.add.image(130, 170, "nuvem").setScale(0.4).setFlip(true);
+    this.nuvem5 = this.add.image(980, 320, "nuvem").setScale(0.2).setFlip(true);
     this.botaoJogar = this.add.sprite(640, 620, "botaoJogar").setInteractive().setScale(1)
 
     // Adiciona efeito sonoro do botão iniciar
@@ -45,12 +45,45 @@ class MenuPrincipal extends Phaser.Scene {
     this.botaoJogar.anims.play("animar", true);
 
     // Move as nuvens no eixo X
-    this.nuvem1.setVelocityX(-190);
-    this.nuvem2.setVelocityX(200);
-    this.nuvem3.setVelocityX(85);
-    this.nuvem4.setVelocityX(-90);
-    this.nuvem5.setVelocityX(65);
+    this.tweens.add({
+      targets: this.nuvem1,
+      x: -380,
+      duration: 5000,
+      ease: "Linear",
+      repeat: 0,
+    })
 
+    this.tweens.add({
+      targets: this.nuvem2,
+      x: 1550,
+      duration: 5000,
+      ease: "Linear",
+      repeat: 0,
+    })
+    this.tweens.add({
+      targets: this.nuvem3,
+      x: 1550,
+      duration: 5000,
+      ease: "Linear",
+      repeat: -1,
+      yoyo: true,
+    })
+    this.tweens.add({
+      targets: this.nuvem4,
+      x: -380,
+      duration: 5000,
+      ease: "Linear",
+      repeat: -1,
+      yoyo: true,
+    })
+    this.tweens.add({
+      targets: this.nuvem5,
+      x: 1550,
+      duration: 5000,
+      ease: "Linear",
+      repeat: -1,
+      yoyo: true,
+    })
 
     // Lógica para destruir nuvens caso ultrapassem os limites de tela
     
@@ -66,9 +99,12 @@ class MenuPrincipal extends Phaser.Scene {
     })
 
     // Evento disparado ao clicar no botão (Código temporário apenas para demonstração da funcionalidade na sprint 1)
-    this.botaoJogar.on("pointerdown", () => {
+    this.botaoJogar.on("pointerup", () => {
       // Evento de click do mouse
       this.efeitoSonoroBotaoIniciar.play();
+      if (!this.scale.isFullscreen) {
+        this.scale.startFullscreen();
+      }
       this.cameras.main.fadeOut(1000, 0, 0, 0)
       // Realiza FadeOut antes de passar para próxima cena
       this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE, (cam, effect) => {
@@ -89,40 +125,5 @@ class MenuPrincipal extends Phaser.Scene {
 
   update() {
     // Lógica para destruir nuvens caso ultrapassem os limites de tela e criar algumas novas nuvens
-    if (this.nuvem1.x < -400) {
-      this.nuvem1.destroy();
-    }
-
-    if (this.nuvem2.x > 1600) {
-      this.nuvem2.destroy();
-    }
-
-    if (this.nuvem3.x > 1600) {
-      this.nuvem3.destroy();
-      this.nuvem3 = this.physics.add.image(-100, 465, "nuvem").setScale(0.3).setVelocityX(85);
-    }
-
-    if (this.nuvem4.x < -400) {
-      this.nuvem4.destroy();
-      this.nuvem4 = this.physics.add.image(1360, 170, "nuvem").setScale(0.4).setFlip(true).setVelocityX(-90);
-    }
-    
-    if (this.nuvem5.x > 1600) {
-      this.nuvem5.destroy();
-      this.nuvem5 = this.physics.add.image(-100, 320, "nuvem").setScale(0.2).setFlip(true).setVelocityX(65);
-    }
-  }
-  
-  openFullScreen() {
-    const page = document.documentElement //Pega o documento inteiro
-    if (page.requestFullscreen) { //Se o navegador suportar o Fullscreen
-      page.requestFullscreen() //Ativa o Fullscreen
-    } else if (page.mozRequestFullScreen) { //Se o navegador suportar o Fullscreen do Mozila
-      page.mozRequestFullScreen() //Ativa o Fullscreen
-    } else if (page.webkitRequestFullscreen) { //Se o navegador suportar o Fullscreen do Webkit
-      page.webkitRequestFullscreen() //Ativa o Fullscreen
-    } else if (page.msRequestFullscreen) { //Se o navegador suportar o Fullscreen do Microsoft
-      page.msRequestFullscreen() //Ativa o Fullscreen
-    }
   }
 }
