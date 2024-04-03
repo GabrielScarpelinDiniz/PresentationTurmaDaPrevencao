@@ -10,7 +10,9 @@ Eu sou a dr.ª Tina e serei a instrutora de vocês.
 Hoje é um dia muito especial... O Dia da Prevenção!!
 Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos acerca do tema...... QUEIMADURAS!`, 
   //NEW DIALOGUE
-  "A dinâmica funciona em ciclos e cada um deles terá 3 passos. O primeiro passo, é ler o case que irei entregar à vocês; o segundo passo é estudar o case na tenda de livros e, por último, vocês irão responder um quiz. A cada resposta certa, vocês ganham pontos, mas cuidado, se errar a pergunta vocês perderão 10 segundos e terão menos pontos para completar os ciclos. O objetivo da brincadeira é realizar o maior número de ciclos do jogo no tempo determinado.", 
+  "A dinâmica funciona em ciclos e cada um deles terá 3 passos. O primeiro passo, é ler o case que irei entregar à vocês;", 
+  "O segundo passo é estudar o case na tenda de livros, aqui mesmo. Lá vocês encontrarão 3 livros, cada um com uma informação diferente. A informação correta está em um dos livros.",
+  "O terceiro passo é responder o quiz na tenda de perguntas. Se acertarem, ganham pontos. Se errarem, perdem tempo. E lembrem-se: o tempo é o seu maior inimigo!",
   //NEW DIALOGUE
   "Querem uma dica? Leiam com bastante atenção os cases e os livros, as informações deles serão essenciais para vocês ganharem mais pontos! Agora vamos começar! E mais importante: Divirtam-se!"]
   constructor() {
@@ -144,15 +146,17 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     this.load.image("police", "assets/spritesheets/police.png");
     this.load.image("suv", "assets/spritesheets/suv.png");
     this.load.image("taxi", "assets/spritesheets/taxi.png");
+    this.load.image("seta", "assets/seta.png");
 
   }
 
   create() {
-
-    this.maquinaEstado = new StateMachine("cameraPanParaDialogo");
+    this.prontoParaJogar = false;
+    this.maquinaEstado = new StateMachine("cameraPanParaDialogoInicial");
     this.sorteados = [];
     this.indiceSorteado;
     this.primeiroCaso = true;
+    this.iniciarTimer = true;
     this.caseData = this.cache.json.get("casesData");
     this.centroX = this.cameras.main.worldView.x + this.cameras.main.width / 2;
     this.centroY = this.cameras.main.worldView.y + this.cameras.main.height / 2; // Reserva as posições de X e Y da câmera
@@ -221,7 +225,7 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     this.worldBounds = this.physics.add.staticGroup().add(this.add.rectangle(0, 560, 3, 1120, 0x000000, 0)).add(this.add.rectangle(1120, 560, 3, 1120, 0x000000, 0)).add(this.add.rectangle(560, 0, 1120, 3, 0x000000, 0)).add(this.add.rectangle(560, 885, 1120, 3, 0x000000, 0));
     
     // Cria e posiciona o player
-    this.jogador = this.physics.add.sprite(550, 800, "jogador").setOffset(9, 12).setCircle(7).setScale(1.5).refreshBody();
+    this.jogador = this.physics.add.sprite(575, 980, "jogador").setOffset(9, 12).setCircle(7).setScale(1.5).refreshBody().setVisible(false);
     
     //Cria as outras crianças do mapa, com uma classe especial que com alguns metodos que facilitam a movimentação e colisão entre os outros objetos
     this.npc01 = new NPCsAlunos(this.physics.add.sprite(575, 980, "npc01").setSize(16, 18, 9, 10).setVisible(false).setScale(1.5).refreshBody(), this, "npc01") 
@@ -259,15 +263,15 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     
     
     // Cria circulo de colisao da fonte no mapa
+    this.seta = this.add.image(560, 360, "seta").setScale(1).setVisible(false); // Adiciona a seta para indicar a fonte
     this.circuloFonte = this.add.circle(560, 570, 70, 0xffffff, 0); //Adiciona círculo sob a fonte
     this.physics.add.existing(this.circuloFonte); //Adiciona física ao círculo adicionado
     this.circuloFonte.body.setCircle(70).setImmovable(); //Define a hitbox do objeto criado como um círculo imóvel
-    this.onibus = this.physics.add.image(80, 1000, "onibus").setBodySize(150, 70).setOffset(32, 70).refreshBody();
+    this.onibus = this.physics.add.image(1040, 1000, "onibus").setBodySize(150, 70).setOffset(32, 70).refreshBody().setFlip(true, false);
     
     
     
     // Esse trecho do código cria todas as colisões do jogo
-    this.physics.add.collider(this.jogador, this.worldBounds);
     this.fonte.setCollisionByProperty({
       collider: false
     }) //Seta as colisões onde tem a propriedade collider: true no tiled map
@@ -302,7 +306,20 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
         this.objetoCaso.caso = this.caseData[this.indiceSorteado];
         this.physics.pause()
         this.events.emit("abrirCase");
-        
+        this.maquinaEstado.transitionTo("livros")
+      }
+      if (this.primeiroCaso === true){
+        this.seta.x = 155;
+        this.seta.y = 450;
+        this.animacaoSeta.remove();
+        this.animacaoSeta = this.tweens.add({
+          targets: this.seta,
+          x: this.seta.x,
+          y: this.seta.y + 15,
+          duration: 500,
+          yoyo: true,
+          repeat: -1,
+        });
       }
     });
     
@@ -312,23 +329,44 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     this.physics.add.collider(this.jogador, this.tendaLivro, () => {
       console.log("Colidiu com a tenda do livro") //Adiciona colisão entre o jogador e a tenda de livros
       if (this.objetoCaso.status === true){
+        this.jogador.y = 650
+        if (this.primeiroCaso === true){
+          this.seta.x = 980;
+          this.seta.y = 450;
+          this.animacaoSeta.remove();
+          this.animacaoSeta = this.tweens.add({
+            targets: this.seta,
+            x: this.seta.x,
+            y: this.seta.y + 15,
+            duration: 500,
+            yoyo: true,
+            repeat: -1,
+          });
+        }
         //chama a cena para mostrar os 3 livros
         this.joystick.thumb.setPosition(470, 430);
         this.scene.wake("livros");
         // pausa a física do jogo enquanto a cena livros estiver exposta
         this.physics.pause()
+        this.maquinaEstado.transitionTo("quiz")
       }
       
     });
     
     this.physics.add.collider(this.jogador, this.tendaQuiz, () => {
       console.log("Colidiu com a tenda do quiz") //Adiciona colisão entre o jogador e a tenda
-      if (this.objetoCaso.status === true){
+      if ((this.objetoCaso.status === true && this.primeiroCaso === false) || (this.objetoCaso.status === true && this.primeiroCaso === true && this.maquinaEstado.currentState() === "quiz")){
         //chama a cena para mostrar o quiz
         this.scene.wake("quiz");
         // pausa a física do jogo enquanto a cena do quiz estiver exposta
         this.physics.pause();  // Pausa a física do jogo enquanto o quiz estiver aberto
         this.events.emit("abrirQuiz"); // Emite o evento para abrir o quiz
+
+        if (this.primeiroCaso){
+          this.seta.setVisible(false);
+          this.animacaoSeta.remove();
+        }
+        this.primeiroCaso ? this.primeiroCaso = false : null; // Verifica se é o primeiro caso, se for, seta como falso
       }
     });
     
@@ -341,43 +379,88 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     this.cameras.main.pan(550, 470, 5000)
 
 
-    const dialogoCompleto = () => {
-      // Função que avança o diálogo se tiver mais texto, ou finaliza o diálogo se não tiver mais texto
-      this.dialogBox.off("pointerdown", dialogoCompleto)
-      this.atualDialogoIndice++
-      console.log(this.atualDialogoIndice, this.dialogo.length)
-      if (this.atualDialogoIndice === this.dialogo.length){
-        // Se o diálogo acabar, destrói os elementos de diálogo e inicia a câmera de pan para o ônibus
-        this.dialogBox.destroy();
-        this.dialogText.destroy();
-        this.botaoCheck.destroy();
-        this.cameras.main.setBounds(0, 0, 1120, 1120);
-        this.cameras.main.pan(50, 1120, 2000);
-        
-        this.maquinaEstado.transitionTo("cameraPanOnibus");
-        return;
-      }
-      this.dialogText.on("pointerdown", () => { this.dialogText.skip()}) // Adiciona a função de pular o texto ao clicar no texto
-      this.dialogText.proximoTexto(this.dialogo[this.atualDialogoIndice], () => this.dialogBox.on("pointerdown", dialogoCompleto)) // Adiciona o próximo texto ao diálogo
-    }
-
     this.cameras.main.on("camerapancomplete", () => {
       // Nessa função, toda vez que uma animação de cena acaba, ela verifica qual estado em que está para executar a próxima ação
-      if (this.maquinaEstado.currentState() === "cameraPanParaDialogo") {
+      if (this.maquinaEstado.currentState() === "cameraPanParaDialogoInicial") {
         // Se o estado for de pan para o diálogo, inicia o diálogo
         this.botaoCheck.setVisible(true);
         this.dialogBox.setVisible(true);
-        this.dialogText = new TypeWritter(this, 420, 353, "iosevka", this.dialogo[this.atualDialogoIndice], 16, 20, () => {
-          this.dialogText.off("pointerdown")
-          this.dialogBox.on("pointerdown", dialogoCompleto)
-          this.botaoCheck.on("pointerdown", dialogoCompleto)
+        this.cameras.main.setBounds(0, 0, 1120, 1120);
+        this.dialogText = new TypeWritter(this, 420, 353, "iosevka", this.dialogo[0], 16, 20, () => {
+          this.dialogBox.on("pointerdown", () => {
+            console.log("teste0")
+            this.maquinaEstado.transitionTo("cameraPanSegundoDialogo");
+            this.cameras.main.pan(550, 470, 100)
+          });
         }).setMaxWidth(380).setScrollFactor(0).setInteractive().on("pointerdown", () => { this.dialogText.skip()});
+      }
+      else if (this.maquinaEstado.currentState() === "cameraPanSegundoDialogo") {
+        this.dialogBox.off("pointerdown");
+        this.dialogText.proximoTexto(this.dialogo[1], () => {
+          this.dialogBox.on("pointerdown", () => {
+            console.log("teste1")
+            this.maquinaEstado.transitionTo("cameraPanTerceiroDialogo");
+            this.cameras.main.pan(160, 625, 1000);
+            this.dialogText.setVisible(false);
+            this.dialogBox.setVisible(false);
+            this.botaoCheck.setVisible(false);
+            
+          });
+        });
+      }
+      else if (this.maquinaEstado.currentState() === "cameraPanTerceiroDialogo") {
+        this.dialogBox.off("pointerdown");
+        this.dialogText.setVisible(true);
+        this.botaoCheck.setVisible(true);
+        this.dialogBox.setVisible(true);
+        this.dialogText.proximoTexto(this.dialogo[2], () => {
+          this.dialogBox.on("pointerdown", () => {
+            console.log("teste2")
+            this.maquinaEstado.transitionTo("cameraPanQuartoDialogo");
+            this.cameras.main.pan(1000, 625, 1000);
+            this.dialogText.setVisible(false);
+            this.dialogBox.setVisible(false);
+            this.botaoCheck.setVisible(false);
+          });
+        });
+      }
+      else if (this.maquinaEstado.currentState() === "cameraPanQuartoDialogo") {
+        this.dialogBox.off("pointerdown");
+        this.dialogText.setVisible(true);
+        this.botaoCheck.setVisible(true);
+        this.dialogBox.setVisible(true);
+        this.dialogText.proximoTexto(this.dialogo[3], () => {
+          this.dialogBox.on("pointerdown", () => {
+            console.log("teste3")
+            this.maquinaEstado.transitionTo("cameraPanQuintoDialogo");
+            this.cameras.main.pan(550, 470, 1000);
+            this.dialogBox.off("pointerdown");
+            this.dialogText.setVisible(false);
+            this.dialogBox.setVisible(false);
+            this.botaoCheck.setVisible(false);
+          });
+        });
+      }
+      else if (this.maquinaEstado.currentState() === "cameraPanQuintoDialogo") {
+        this.dialogText.setVisible(true);
+        this.botaoCheck.setVisible(true);
+        this.dialogBox.setVisible(true);
+        this.dialogText.proximoTexto(this.dialogo[4], () => {
+          this.dialogBox.on("pointerdown", () => {
+            console.log("teste4")
+            this.maquinaEstado.transitionTo("cameraPanOnibus");
+            this.cameras.main.pan(1070, 1120, 2000);
+            this.dialogBox.destroy();
+            this.dialogText.destroy();
+            this.botaoCheck.destroy();
+          });
+        });
       }
       else if (this.maquinaEstado.currentState() === "cameraPanOnibus"){
         // Se o estado for de pan para o ônibus, inicia o ônibus andando e som de ônibus
         this.physics.resume();
         this.cameras.main.startFollow(this.onibus, true);
-        this.onibus.setVelocityX(100);
+        this.onibus.setVelocityX(-100);
         this.efeitoSonoroOnibus.play();
       }
       else if (this.maquinaEstado.currentState() === "entradaDosPersonagens") {
@@ -393,8 +476,11 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
               this[`npc0${this.npcControll}`].aluno.setVelocity(0.01, -50)
               this.npcControll++;
             }
-            if (this.npcControll === 10){
-              if (this[`npc0${this.npcControll - 1}`].aluno.y <= 700){
+            else if (this.npcControll === 10){
+              this.jogador.setVelocity(0, -50).setVisible(true);
+              this.npcControll++;
+            }
+            else if (this[`npc0${9}`].aluno.y <= 500){
                 //Quando chegar no ultimo aluno, ele seta posições para eles espalhadas na faculdade e seta colisão entre os alunos e objetos no mapa
                 console.log("teste")
                 this[`npc0${1}`].aluno.setPosition(250, 700);
@@ -415,12 +501,11 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
                 this.npc07.setCollisionBetweenItens(this.worldBounds, this.cerca, this.arvores, this.faculdade, this.tendaLivro, this.tendaQuiz, this.circuloFonte, this.jogador, this.npc01.aluno, this.npc02.aluno, this.npc03.aluno, this.npc04.aluno, this.npc05.aluno, this.npc06.aluno, this.npc08.aluno, this.npc09.aluno);
                 this.npc08.setCollisionBetweenItens(this.worldBounds, this.cerca, this.arvores, this.faculdade, this.tendaLivro, this.tendaQuiz, this.circuloFonte, this.jogador, this.npc01.aluno, this.npc02.aluno, this.npc03.aluno, this.npc04.aluno, this.npc05.aluno, this.npc06.aluno, this.npc07.aluno, this.npc09.aluno);
                 this.npc09.setCollisionBetweenItens(this.worldBounds, this.cerca, this.arvores, this.faculdade, this.tendaLivro, this.tendaQuiz, this.circuloFonte, this.jogador, this.npc01.aluno, this.npc02.aluno, this.npc03.aluno, this.npc04.aluno, this.npc05.aluno, this.npc06.aluno, this.npc07.aluno, this.npc08.aluno);
+                this.physics.add.collider(this.jogador, this.worldBounds);
                 this.cameras.main.pan(550, 800, 1000);
                 this.timer.remove() // Remove o timer
                 this.maquinaEstado.transitionTo("prontoParaJogar"); // Transição de estado para pronto para jogar, significando a última animação
               }
-              
-            }
           },
           loop: true
         });
@@ -432,6 +517,17 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
         this.physics.resume();
         this.cameras.main.startFollow(this.jogador, true)
         this.onibus.setVelocityX(150);
+        this.prontoParaJogar = true;
+        this.maquinaEstado.transitionTo("case");
+        this.seta.setVisible(true);
+        this.animacaoSeta = this.tweens.add({
+          targets: this.seta,
+          x: this.seta.x,
+          y: this.seta.y + 15,
+          duration: 500,
+          yoyo: true,
+          repeat: -1,
+        })
         this.efeitoSonoroCriancas.play(); // Inicia efeito sonoro das crianças
         this.events.emit("mostraTarefaInicial");
       }
@@ -462,6 +558,8 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     this.joystick.setScrollFactor(0); // Faz com que o joystick não se mova com a câmera
     this.joystick.setVisible(false); // Esconde o joystick
 
+
+    
     // Configuração do NPC Tina
     this.anims.create({ // Cria a animação para a personagem Tina
       key: "tinaIdle", // Chave que cria o nome para iniciar a animação
@@ -507,11 +605,11 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     this.events.on("fecharCase", () => {
       // Função que fecha o case
           //  Dispatch a Scene event
-          if (this.primeiroCaso === true){
+          if (this.iniciarTimer === true){
             this.events.emit("showTimer");
             this.musicaIntroducao.stop(); // Para a música de introdução
             this.musicaJogo.play(); // Inicia a música de jogo
-            this.primeiroCaso = false;
+            this.iniciarTimer = false;
           }
           this.events.emit("botaoCase");
           this.objetoCaso.status = true;
@@ -519,7 +617,7 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
   }
 
   update() {
-    if (this.onibus.x >= 575 && this.maquinaEstado.currentState() === "cameraPanOnibus") {
+    if (this.onibus.x <= 560 && this.maquinaEstado.currentState() === "cameraPanOnibus") {
       // Se o ônibus chegar na posição 575, ele para e a câmera pan para a entrada dos personagens
       this.maquinaEstado.transitionTo("entradaDosPersonagens");
       this.onibus.setVelocityX(0);
@@ -554,7 +652,18 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     }
     
     
-    if (this.maquinaEstado.currentState() === "prontoParaJogar") {
+    if (this.prontoParaJogar) {
+      // Se o estado for de pronto para jogar, atualiza a posição dos NPCs aleatoriamente
+      this.npc01.update();
+      this.npc02.update();
+      this.npc03.update();
+      this.npc04.update();
+      this.npc05.update();
+      this.npc06.update();
+      this.npc07.update();
+      this.npc08.update();
+      this.npc09.update();
+      
       // Se o estado for de pronto para jogar, ele atualiza a posição do jogador de acordo com as teclas pressionadas
       // Mapeamento de Inputs
       if (this.keyA.isDown || this.cursors.left.isDown) { // Verifica se a tecla A está pressionada
@@ -610,20 +719,7 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     else if (this.jogador.body.velocity.y !== 0 && this.jogador.body.velocity.x === 0) this.jogador.anims.play("playerWalkingRight", true);
 
 
-    // Coloca os NPC"s para andarem aleatoriamente
-    if (this.maquinaEstado.currentState() === "prontoParaJogar") {
-      // Se o estado for de pronto para jogar, atualiza a posição dos NPCs aleatoriamente
-      this.npc01.update();
-      this.npc02.update();
-      this.npc03.update();
-      this.npc04.update();
-      this.npc05.update();
-      this.npc06.update();
-      this.npc07.update();
-      this.npc08.update();
-      this.npc09.update();
-  
-    }
+
     if (Phaser.Math.Between(0, 1000) > 980 && !this.newCar && this.maquinaEstado.currentState() === "prontoParaJogar" && !this.onibus){
       // Sorteia um novo carro para aparecer na tela
       this.newCar = this.sortearCarro();
@@ -633,7 +729,7 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
       this.newCar.destroy();
       this.newCar = null;
     }
-    if (this.onibus.x > 1170 && this.maquinaEstado.currentState() === "prontoParaJogar" && this.onibus){
+    if (this.onibus.x < -200 && this.prontoParaJogar && this.onibus){
       // Se o ônibus sair da tela, ele é destruído
       this.onibus.destroy();
     }
