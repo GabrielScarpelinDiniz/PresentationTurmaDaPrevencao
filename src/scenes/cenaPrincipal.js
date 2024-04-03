@@ -49,6 +49,7 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     this.load.audio("musicaIntroducao", "assets/sounds/IntroMusic.wav") // Música de introdução
     this.load.audio("musicaJogo", "assets/sounds/gameMusicLoopWithEndGame.mp3") // Música de jogo quando o cronometro está ativo
     this.load.audio("efeitoSonoroOnibus", "assets/sounds/efeitoSonoroOnibus.mp3") // SFX do botão iniciar
+    this.load.audio("efeitoSonoroCriancas", "assets/sounds/efeitoSonoroCriancas.mp3") // SFX das Crianças
     //Carrega a biblioteca do joystick
     this.load.plugin(
       "rexvirtualjoystickplugin",
@@ -169,7 +170,6 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     this.efeitoSonoroOnibus = this.sound.add("efeitoSonoroOnibus", {
       loop: true,
       volume: 0.2});
-
     // Adiciona a música de introdução
     this.musicaIntroducao = this.sound.add("musicaIntroducao", {
       loop: true,
@@ -179,6 +179,10 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
       loop: false,
       volume: 0.3
     }); // Adiciona a música de jogo
+    this.efeitoSonoroCriancas = this.sound.add("efeitoSonoroCriancas", {
+      loop: true,
+      volume: 0.2
+    }); // Adiciona efeito sonoro das crianças
     this.map = this.make.tilemap({
       key: "mapa",
       tileWidth: 32,
@@ -524,6 +528,7 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
           yoyo: true,
           repeat: -1,
         })
+        this.efeitoSonoroCriancas.play(); // Inicia efeito sonoro das crianças
         this.events.emit("mostraTarefaInicial");
       }
     });

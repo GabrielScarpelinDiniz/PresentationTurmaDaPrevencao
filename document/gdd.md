@@ -507,6 +507,8 @@ Um cronômetro é utilizado para medir o tempo que o jogador tem para completar 
 6 | Efeito Sonoro Virar Página | Cena dos Livros após clicar em uma página | Pixabay (CC0)
 7 | Efeito Sonoro Acertar Quiz | Cena do Quiz após clicar na alternativa correta | Pixabay (CC0)
 8 | Efeito Sonoro Errar Quiz | Cena do Quiz após clicar na alternativa errada | Pixabay (CC0)
+9 | Efeito Sonoro de Crianças | Cena da Faculdade após a Cutscene inicial | Pixabay (CC0)
+10 | Efeito Sonoro Fim de Jogo | Cena de Gamer Over após o timer acabar | floraphonic/Pixabay (CC0)
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;Tendo como referência o artigo mencionado, as músicas selecionadas foram cuidadosamente escolhidas para transmitir a atmosfera do jogo, com o objetivo de proporcionar uma imersão mais profunda por parte do jogador. No menu e no tutorial, optamos por músicas com ritmo mais lento, oferecendo uma introdução tranquila e acolhedora ao universo do jogo. No entanto, à medida que a dinâmica do jogo se intensifica, marcada pelo início do cronômetro e pelo aumento da velocidade das ações, uma trilha sonora com batidas mais pulsantes é ativada, elevando a energia e a intensidade da experiência de jogo.
