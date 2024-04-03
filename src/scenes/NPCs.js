@@ -23,7 +23,7 @@ class NPCsAlunos {
     if (Phaser.Math.Between(0, 100) > 95) {
       // Altera a direção e a velocidade com numeros aleatórios
       this.aluno.direction = Phaser.Math.Between(0, 360);
-      this.aluno.speed = Phaser.Math.Between(30, 70);
+      this.aluno.speed = Phaser.Math.Between(80, 120);
     }
     this.updateAnimation();
   }

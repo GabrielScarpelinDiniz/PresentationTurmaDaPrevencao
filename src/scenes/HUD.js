@@ -6,8 +6,8 @@ class CenaHUD extends Phaser.Scene
 
     }
     preload () {
-        this.load.image("botaoCaseBaixo", "assets/botaoCase_baixo.png");
-        this.load.image("botaoCaseAlto", "assets/botaoCase_alto.png");
+        this.load.image("botaoCaseBaixo", "/src/assets/botaoCase_baixo.png");
+        this.load.image("botaoCaseAlto", "/src/assets/botaoCase_alto.png");
     }
 
     create ()
