@@ -5,14 +5,14 @@ class MenuPrincipal extends Phaser.Scene {
     })
   }
   preload() {
-    this.load.image("background", "assets/backgroundMenu.png") // Fundo da cena do Main Menu
-    this.load.image("inteliLogo", "assets/logointeli.png") // Fundo da cena do Main Menu
-    this.load.image("nuvem", "assets/nuvem.png")
-    this.load.spritesheet("botaoJogar", "assets/botaoJogarNovo.png", {
+    this.load.image("background", "/src/assets/backgroundMenu.png") // Fundo da cena do Main Menu
+    this.load.image("inteliLogo", "/src/assets/logointeli.png") // Fundo da cena do Main Menu
+    this.load.image("nuvem", "/src/assets/nuvem.png")
+    this.load.spritesheet("botaoJogar", "/src/assets/botaoJogarNovo.png", {
       frameWidth: 400,
       frameHeight: 200
     }) // Imagem para botaoJogar
-    this.load.audio("efeitoSonoroBotaoIniciar", "assets/sounds/efeitoSonoroBotaoIniciar.mp3") // SFX do botão iniciar
+    this.load.audio("efeitoSonoroBotaoIniciar", "/src/assets/sounds/efeitoSonoroBotaoIniciar.mp3") // SFX do botão iniciar
   }
 
   create() {

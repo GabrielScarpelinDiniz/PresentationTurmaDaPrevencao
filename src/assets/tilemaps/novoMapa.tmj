@@ -4439,7 +4439,7 @@
         {
          "columns":32,
          "firstgid":659,
-         "image":"..\/..\/..\/..\/..\/..\/Desktop\/terrain.png",
+         "image":"terrain.png",
          "imageheight":1024,
          "imagewidth":1024,
          "margin":0,

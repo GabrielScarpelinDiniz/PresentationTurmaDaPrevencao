@@ -46,10 +46,10 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     }).setOrigin(0, 0);
 
     //Carrega os assets do jogo
-    this.load.audio("musicaIntroducao", "assets/sounds/IntroMusic.wav") // Música de introdução
-    this.load.audio("musicaJogo", "assets/sounds/gameMusicLoopWithEndGame.mp3") // Música de jogo quando o cronometro está ativo
-    this.load.audio("efeitoSonoroOnibus", "assets/sounds/efeitoSonoroOnibus.mp3") // SFX do botão iniciar
-    this.load.audio("efeitoSonoroCriancas", "assets/sounds/efeitoSonoroCriancas.mp3") // SFX das Crianças
+    this.load.audio("musicaIntroducao", "/src/assets/sounds/IntroMusic.wav") // Música de introdução
+    this.load.audio("musicaJogo", "/src/assets/sounds/gameMusicLoopWithEndGame.mp3") // Música de jogo quando o cronometro está ativo
+    this.load.audio("efeitoSonoroOnibus", "/src/assets/sounds/efeitoSonoroOnibus.mp3") // SFX do botão iniciar
+    this.load.audio("efeitoSonoroCriancas", "/src/assets/sounds/efeitoSonoroCriancas.mp3") // SFX das Crianças
     //Carrega a biblioteca do joystick
     this.load.plugin(
       "rexvirtualjoystickplugin",
@@ -58,79 +58,79 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     );
 
     //Carrega personagem e NPC
-    this.load.spritesheet("jogador", "assets/spritesheets/playerPrincipal.png", {
+    this.load.spritesheet("jogador", "/src/assets/spritesheets/playerPrincipal.png", {
       frameWidth: 32,
       frameHeight: 32
     });
-    this.load.spritesheet("tina", "assets/spritesheets/drTina.png", {
+    this.load.spritesheet("tina", "/src/assets/spritesheets/drTina.png", {
       frameWidth: 32,
       frameHeight: 32
     });
 
-    this.load.json("casesData", "assets/cases/cases.json");
-    this.load.image("case1", "assets/spritesheets/prontuario1.png");
+    this.load.json("casesData", "/src/assets/cases/cases.json");
+    this.load.image("case1", "/src/assets/spritesheets/prontuario1.png");
 
     //Carrega elementos principais do mapa
-    this.load.image("Calcada", "assets/tilemaps/Calcada.png");
-    this.load.image("faculdade", "assets/tilemaps/faculdade.png");
-    this.load.image("fonte", "assets/tilemaps/fonte.png");
-    this.load.image("Grass", "assets/tilemaps/Grass.png");
-    this.load.image("pedra", "assets/tilemaps/pedra.png");
-    this.load.image("portao", "assets/tilemaps/portao.png");
-    this.load.image("portao2", "assets/tilemaps/portao2.png");
-    this.load.image("grade-lateral-left", "assets/tilemaps/grade-lateral-left.png");
-    this.load.image("grade-lateral-right", "assets/tilemaps/grade-lateral-right.png");
-    this.load.image("grade-lateral-right-01", "assets/tilemaps/grade-lateral-right-01.png");
-    this.load.image("grade-lateral-left-01", "assets/tilemaps/grade-lateral-left-01.png");
-    this.load.image("rua", "assets/tilemaps/rua.png");
-    this.load.image("tenda_livro", "assets/tilemaps/tenda_livro.png");
-    this.load.image("tenda_quiz", "assets/tilemaps/tenda_quiz.png");
-    this.load.image("Tree-Sheet", "assets/tilemaps/Tree-Sheet.png");
-    this.load.image("terrain", "assets/tilemaps/terrain.png");
+    this.load.image("Calcada", "/src/assets/tilemaps/Calcada.png");
+    this.load.image("faculdade", "/src/assets/tilemaps/faculdade.png");
+    this.load.image("fonte", "/src/assets/tilemaps/fonte.png");
+    this.load.image("Grass", "/src/assets/tilemaps/Grass.png");
+    this.load.image("pedra", "/src/assets/tilemaps/pedra.png");
+    this.load.image("portao", "/src/assets/tilemaps/portao.png");
+    this.load.image("portao2", "/src/assets/tilemaps/portao2.png");
+    this.load.image("grade-lateral-left", "/src/assets/tilemaps/grade-lateral-left.png");
+    this.load.image("grade-lateral-right", "/src/assets/tilemaps/grade-lateral-right.png");
+    this.load.image("grade-lateral-right-01", "/src/assets/tilemaps/grade-lateral-right-01.png");
+    this.load.image("grade-lateral-left-01", "/src/assets/tilemaps/grade-lateral-left-01.png");
+    this.load.image("rua", "/src/assets/tilemaps/rua.png");
+    this.load.image("tenda_livro", "/src/assets/tilemaps/tenda_livro.png");
+    this.load.image("tenda_quiz", "/src/assets/tilemaps/tenda_quiz.png");
+    this.load.image("Tree-Sheet", "/src/assets/tilemaps/Tree-Sheet.png");
+    this.load.image("terrain", "/src/assets/tilemaps/terrain.png");
     
 
-    this.load.image("botaoX", "assets/botaoX.png");
-    this.load.image("botaoCase_baixo", "assets/botaoCase_baixo.png");
-    this.load.image("botaoCase_alto", "assets/botaoCase_alto.png");
-    this.load.image("botaoCheck", "assets/checkBotao.png");
-    this.load.image("bandeiraPrevencao", "assets/bandeiraoPrevencao.png");
-    this.load.image("posteInteliDireita", "assets/poste_inteli_direita.png");
-    this.load.image("posteInteliEsquerda", "assets/poste_inteli_esquerda.png");
-    this.load.image("posteUspDireita", "assets/poste_usp_direita.png");
-    this.load.image("posteUspEsquerda", "assets/poste_usp_esquerda.png");
-    this.load.spritesheet("npc01", "assets/spritesheets/NPC01.png", {
+    this.load.image("botaoX", "/src/assets/botaoX.png");
+    this.load.image("botaoCase_baixo", "/src/assets/botaoCase_baixo.png");
+    this.load.image("botaoCase_alto", "/src/assets/botaoCase_alto.png");
+    this.load.image("botaoCheck", "/src/assets/checkBotao.png");
+    this.load.image("bandeiraPrevencao", "/src/assets/bandeiraoPrevencao.png");
+    this.load.image("posteInteliDireita", "/src/assets/poste_inteli_direita.png");
+    this.load.image("posteInteliEsquerda", "/src/assets/poste_inteli_esquerda.png");
+    this.load.image("posteUspDireita", "/src/assets/poste_usp_direita.png");
+    this.load.image("posteUspEsquerda", "/src/assets/poste_usp_esquerda.png");
+    this.load.spritesheet("npc01", "/src/assets/spritesheets/NPC01.png", {
       frameWidth: 32, 
       frameHeight: 32
     });
-    this.load.spritesheet("npc02", "assets/spritesheets/NPC02.png", {
+    this.load.spritesheet("npc02", "/src/assets/spritesheets/NPC02.png", {
       frameWidth: 32,
       frameHeight: 32
     });
-    this.load.spritesheet("npc03", "assets/spritesheets/NPC03.png", {
+    this.load.spritesheet("npc03", "/src/assets/spritesheets/NPC03.png", {
       frameWidth: 32,
       frameHeight: 32
     });
-    this.load.spritesheet("npc04", "assets/spritesheets/NPC04.png", {
+    this.load.spritesheet("npc04", "/src/assets/spritesheets/NPC04.png", {
       frameWidth: 32,
       frameHeight: 32
     });
-    this.load.spritesheet("npc05", "assets/spritesheets/NPC05.png", {
+    this.load.spritesheet("npc05", "/src/assets/spritesheets/NPC05.png", {
       frameWidth: 32,
       frameHeight: 32
     });
-    this.load.spritesheet("npc06", "assets/spritesheets/NPC06.png", {
+    this.load.spritesheet("npc06", "/src/assets/spritesheets/NPC06.png", {
       frameWidth: 32,
       frameHeight: 32
     });
-    this.load.spritesheet("npc07", "assets/spritesheets/NPC07.png", {
+    this.load.spritesheet("npc07", "/src/assets/spritesheets/NPC07.png", {
       frameWidth: 32,
       frameHeight: 32
     });
-    this.load.spritesheet("npc08", "assets/spritesheets/NPC08.png", {
+    this.load.spritesheet("npc08", "/src/assets/spritesheets/NPC08.png", {
       frameWidth: 32,
       frameHeight: 32
     });
-    this.load.spritesheet("npc09", "assets/spritesheets/NPC09.png", {
+    this.load.spritesheet("npc09", "/src/assets/spritesheets/NPC09.png", {
       frameWidth: 32,
       frameHeight: 32
     });
@@ -138,15 +138,15 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
 
 
     //Carrega o tiled do mapa
-    this.load.tilemapTiledJSON("mapa", "assets/tilemaps/novoMapa.json");
-    this.load.image("onibus", "assets/spritesheets/bus.png");
-    this.load.image("civic", "assets/spritesheets/civic.png");
-    this.load.image("jeep", "assets/spritesheets/jeep.png");
-    this.load.image("pickup", "assets/spritesheets/pickup.png");
-    this.load.image("police", "assets/spritesheets/police.png");
-    this.load.image("suv", "assets/spritesheets/suv.png");
-    this.load.image("taxi", "assets/spritesheets/taxi.png");
-    this.load.image("seta", "assets/seta.png");
+    this.load.tilemapTiledJSON("mapa", "/src/assets/tilemaps/novoMapa.json");
+    this.load.image("onibus", "/src/assets/spritesheets/bus.png");
+    this.load.image("civic", "/src/assets/spritesheets/civic.png");
+    this.load.image("jeep", "/src/assets/spritesheets/jeep.png");
+    this.load.image("pickup", "/src/assets/spritesheets/pickup.png");
+    this.load.image("police", "/src/assets/spritesheets/police.png");
+    this.load.image("suv", "/src/assets/spritesheets/suv.png");
+    this.load.image("taxi", "/src/assets/spritesheets/taxi.png");
+    this.load.image("seta", "/src/assets/seta.png");
 
   }
 
