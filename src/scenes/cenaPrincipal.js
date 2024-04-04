@@ -654,7 +654,6 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
   }
 
   update() {
-    console.log(this.jogador.x, this.jogador.y)
     if (this.onibus.x <= 560 && this.maquinaEstado.currentState() === "cameraPanOnibus") {
       // Se o ônibus chegar na posição 575, ele para e a câmera pan para a entrada dos personagens
       this.maquinaEstado.transitionTo("entradaDosPersonagens");

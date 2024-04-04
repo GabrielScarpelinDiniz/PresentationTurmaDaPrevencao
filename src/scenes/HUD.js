@@ -1,6 +1,6 @@
 class CenaHUD extends Phaser.Scene {
   constructor() {
-    super({ key: "cenaHUD", active: true }); // Define a key da cena e a mantém ativada desde o início do ciclo de jogo
+    super({ key: "cenaHUD" }); // Define a key da cena e a mantém ativada desde o início do ciclo de jogo
   }
 
   preload() {
@@ -11,9 +11,11 @@ class CenaHUD extends Phaser.Scene {
       frameHeight: 200,
     });
     this.load.image("seta", "/src/assets/seta.png");
+    this.load.bitmapFont("iosevka2", "/src/assets/fonts/iosevka_0.png", "/src/assets/fonts/iosevka.fnt");
   }
 
   create() {
+    this.tempo ? this.tempo.remove() : null
     this.habilitarTarefa = false;
     //  Define variáveis de chamada das cenas
     const cenaAtual = this.scene.get("cenaPrincipal");
@@ -29,18 +31,7 @@ class CenaHUD extends Phaser.Scene {
       .sprite(640, 100, "HUD")
       .setScale(1.25)
       .setVisible(false);
-    this.textoTempo = this.add
-      .bitmapText(
-        600,
-        30,
-        "iosevka",
-        (this.tempoInicial - (this.tempoInicial % 60)) / 60 +
-          "min " +
-          (this.tempoInicial % 60) +
-          "s",
-        48
-      )
-      .setVisible(false); // Adiciona o texto do tempo na tela do jogo
+    this.textoTempo = this.add.bitmapText(600, 30, "iosevka2", (this.tempoInicial - (this.tempoInicial % 60)) / 60 +"min " + (this.tempoInicial % 60) + "s", 48).setVisible(false); // Adiciona o texto do tempo na tela do jogo
     this.botaoCaseBaixo = this.add
       .image(1140, 150, "botaoCaseBaixo")
       .setScale(3)
@@ -65,16 +56,16 @@ class CenaHUD extends Phaser.Scene {
       .setVisible(false); // Adiciona o texto do tempo descontado na tela do jogo
     // Cria os elementos da tarefas
     this.textoTarefa = this.add
-      .bitmapText(25, 30, "iosevka", "Procure a dr.ª Tina", 42)
+      .bitmapText(25, 30, "iosevka2", "Procure a dr.ª Tina", 42)
       .setVisible(false);
     this.seta = this.add.image(450, 50, "seta").setScale(1.5).setVisible(false);
     // Cria os elementos da pontuação
     this.textoPontos = this.add
-      .bitmapText(840, 30, "iosevka", "Pontos: 0", 42)
+      .bitmapText(840, 30, "iosevka2", "Pontos: 0", 42)
       .setVisible(false);
 
     // Cria evento para mostrar parte da HUD (Tarefas)
-    cenaAtual.events.on(
+    cenaAtual.events.once(
       "mostraTarefaInicial",
       function () {
         // Mostra o texto da tarefa
@@ -88,7 +79,7 @@ class CenaHUD extends Phaser.Scene {
     );
 
     // Cria evento para mostrar parte da HUD (Timer)
-    cenaAtual.events.on(
+    cenaAtual.events.once(
       "showTimer",
       function () {
         setTimeout(() => {}, this.tempoInicial * 1000); // função para chamar tela final após o tempo de jogo
@@ -99,7 +90,7 @@ class CenaHUD extends Phaser.Scene {
         this.textoTarefa.setVisible(true).setText("Tenda de livros?");
         this.textoPontos.setText(`Pontos: ${this.pontuacao}`);
 
-        this.time.addEvent({
+        this.tempoEvent = this.time.addEvent({
           delay: 1000, // delay de 1000 ms = 1 segundo
           callback: () => {
             this.textoTempo.setVisible(true);
@@ -128,7 +119,10 @@ class CenaHUD extends Phaser.Scene {
               this.HUDImage.anims.play("hudAnimateRed", true);
             }
             if (this.tempoInicial === 0) {
+              this.tempoEvent.remove();
+              this.tempoEvent.destroy();
               this.scene.stop("cenaPrincipal");
+              this.scene.stop("cenaHUD");
               cenaAtual.musicaJogo.destroy();
               this.scene.start("GameOver", {
                 pontuacao: this.pontuacao,

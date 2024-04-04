@@ -112,7 +112,8 @@ class MenuPrincipal extends Phaser.Scene {
       this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE, (cam, effect) => {
         this.time.delayedCall(1000, () => {
           this.scene.start("cenaPrincipal")
-          this.scene.start("HUD")
+          this.scene.start("cenaHUD")
+          this.scene.restart("cenaHUD");
           this.scene.stop("menu")
           this.input.setDefaultCursor("default") // Retorno do cursor do mouse para setinha
         })
