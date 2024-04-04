@@ -9,7 +9,7 @@ class CenaHUD extends Phaser.Scene {
 
   create() {
     // Define um tempo inicial para o timer
-    this.tempoInicial = 2;
+    this.tempoInicial = 50;
     this.pontuacao = 0;
     // Cria os elementos do timer
     this.fundoTimer = this.add
@@ -129,7 +129,9 @@ class CenaHUD extends Phaser.Scene {
             if (this.tempoInicial === 0) {
               this.scene.stop("cenaPrincipal");
               cenaAtual.musicaJogo.destroy();
-              this.scene.start("GameOver");
+              this.scene.start("GameOver", {
+                pontuacao: this.pontuacao
+              });
             }
           },
           loop: true, // Atualiza o texto
