@@ -22,9 +22,6 @@ class CenaCases extends Phaser.Scene {
         this.load.image("pepita", "/src/assets/cases/pessoas/pepita.png");
         this.load.image("tony", "/src/assets/cases/pessoas/tony.png");
         this.load.bitmapFont("pixelBitmapFont", "/src/assets/fonts/pixel_0.png", "/src/assets/fonts/pixel.fnt");
-        this.load.bitmapFont("dyslexic", "/src/assets/fonts/dyslexic_0.png", "/src/assets/fonts/dyslexic.fnt");
-        this.load.bitmapFont("iosevka", "/src/assets/fonts/iosevka_0.png", "/src/assets/fonts/iosevka.fnt");
-
     }
 
     create() {   

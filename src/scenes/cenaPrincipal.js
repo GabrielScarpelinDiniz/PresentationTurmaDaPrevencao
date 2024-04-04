@@ -53,7 +53,7 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     //Carrega a biblioteca do joystick
     this.load.plugin(
       "rexvirtualjoystickplugin",
-      "./plugins/rexvirtualjoystickplugin.min.js",
+      "/src/plugins/rexvirtualjoystickplugin.min.js",
       true
     );
 
@@ -469,8 +469,9 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
         this.cerca.setVisible(false);
         this.npcControll = 1;
         this.timer = this.time.addEvent({
-          delay: 1000,
+          delay: 1500,
           callback: () => {
+            console.log(this.jogador.y)
             if (this.npcControll <= 9){
               this[`npc0${this.npcControll}`].aluno.setVisible(true);
               this[`npc0${this.npcControll}`].aluno.setVelocity(0.01, -50)
@@ -480,7 +481,8 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
               this.jogador.setVelocity(0, -50).setVisible(true);
               this.npcControll++;
             }
-            else if (this[`npc0${9}`].aluno.y <= 500){
+            
+            else if (this.jogador.y < 770){
                 //Quando chegar no ultimo aluno, ele seta posições para eles espalhadas na faculdade e seta colisão entre os alunos e objetos no mapa
                 console.log("teste")
                 this[`npc0${1}`].aluno.setPosition(250, 700);
@@ -516,7 +518,7 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
         this.joystick.setVisible(true);
         this.physics.resume();
         this.cameras.main.startFollow(this.jogador, true)
-        this.onibus.setVelocityX(150);
+        this.onibus.setVelocityX(-150);
         this.prontoParaJogar = true;
         this.maquinaEstado.transitionTo("case");
         this.seta.setVisible(true);
@@ -534,7 +536,7 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     });
 
     this.cameras.main.setBounds(0, -400, 1120, 1120);
-    this.cameras.main.setZoom(2.5);   
+    this.cameras.main.setZoom(2.35);   
     
     // Inicializa as variáveis para movimentação do personagem
     this.keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A);
@@ -617,6 +619,7 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
   }
 
   update() {
+    console.log(this.jogador.x, this.jogador.y)
     if (this.onibus.x <= 560 && this.maquinaEstado.currentState() === "cameraPanOnibus") {
       // Se o ônibus chegar na posição 575, ele para e a câmera pan para a entrada dos personagens
       this.maquinaEstado.transitionTo("entradaDosPersonagens");
@@ -720,7 +723,7 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
 
 
 
-    if (Phaser.Math.Between(0, 1000) > 980 && !this.newCar && this.maquinaEstado.currentState() === "prontoParaJogar" && !this.onibus){
+    if (Phaser.Math.Between(0, 1000) > 980 && !this.newCar && this.prontoParaJogar){
       // Sorteia um novo carro para aparecer na tela
       this.newCar = this.sortearCarro();
     }
@@ -763,6 +766,6 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     const carroSorteado = Phaser.Math.Between(0, carros.length - 1)
     const left = Phaser.Math.Between(0, 1)
     const velocidade = Phaser.Math.Between(250, 300)
-    return this.physics.add.image(left === 1 ? 1120 : -0, left === 1 ? 925 : 1000, carros[carroSorteado]).setBodySize(150, 70).setOffset(32, 70).setVelocityX(left === 1 ? -velocidade : velocidade).setFlip(left === 0 ? false: true, false).refreshBody();
+    return this.physics.add.image(left === 1 ? 1120 : -0, left === 1 ? 905 : 985, carros[carroSorteado]).setBodySize(150, 70).setOffset(32, 70).setVelocityX(left === 1 ? -velocidade : velocidade).setFlip(left === 0 ? false: true, false).refreshBody();
   }
 }
