@@ -250,6 +250,7 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     this.npc07 = new NPCsAlunos(this.physics.add.sprite(575, 980, "npc07").setSize(16, 18, 9, 10).setVisible(false).setScale(1.5).refreshBody(), this, "npc07")
     this.npc08 = new NPCsAlunos(this.physics.add.sprite(575, 980, "npc08").setSize(16, 18, 9, 10).setVisible(false).setScale(1.5).refreshBody(), this, "npc08")
     this.npc09 = new NPCsAlunos(this.physics.add.sprite(575, 980, "npc09").setSize(16, 18, 9, 10).setVisible(false).setScale(1.5).refreshBody(), this, "npc09")
+    this.tina = this.physics.add.sprite(560, 400, "tina").setOffset(8, 12).setCircle(8).setScale(2).refreshBody().setImmovable(); // Adiciona o sprite da Tina
 
     this.posteInteliDireita = this.add.image(470, 700, "posteInteliDireita");
     this.posteInteliEsquerda = this.add.image(650, 700, "posteInteliEsquerda");
