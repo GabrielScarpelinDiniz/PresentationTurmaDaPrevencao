@@ -642,13 +642,13 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
       // Se o joystick estiver visível, ele atualiza a posição do jogador de acordo com o movimento do joystick
       this.radiansAngleJoystick = this.fixAngle(this.joystick.angle) * Math.PI / 180 || 0;
       this.joystickForce = this.joystick.force < 50 ? this.joystick.force : 50;
-      const velocityDoctorX = (this.defaultVelocity * Math.cos(this.radiansAngleJoystick) * this.joystickForce)
-      const velocityDoctorY = -(this.defaultVelocity * Math.sin(this.radiansAngleJoystick) * this.joystickForce)
-      if (velocityDoctorX > 0) this.jogador.anims.play("playerWalkingRight", true);
-      else if (velocityDoctorX < 0) this.jogador.anims.play("playerWalkingLeft", true);
-      else if (velocityDoctorY == 0) this.jogador.anims.play("playerIdle", true);
-      this.jogador.setVelocityX(velocityDoctorX)
-      this.jogador.setVelocityY(velocityDoctorY)
+      const velocityJogadorX = (this.defaultVelocity * Math.cos(this.radiansAngleJoystick) * this.joystickForce)
+      const velocityJogadorY = -(this.defaultVelocity * Math.sin(this.radiansAngleJoystick) * this.joystickForce)
+      if (velocityJogadorX > 0) this.jogador.anims.play("playerWalkingRight", true);
+      else if (velocityJogadorX < 0) this.jogador.anims.play("playerWalkingLeft", true);
+      else if (velocityJogadorY == 0) this.jogador.anims.play("playerIdle", true);
+      this.jogador.setVelocityX(velocityJogadorX)
+      this.jogador.setVelocityY(velocityJogadorY)
     }
     
     
