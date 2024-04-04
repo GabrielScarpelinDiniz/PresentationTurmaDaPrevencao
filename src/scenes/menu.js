@@ -13,6 +13,8 @@ class MenuPrincipal extends Phaser.Scene {
       frameHeight: 200
     }) // Imagem para botaoJogar
     this.load.audio("efeitoSonoroBotaoIniciar", "/src/assets/sounds/efeitoSonoroBotaoIniciar.mp3") // SFX do botão iniciar
+    this.load.bitmapFont("dyslexic", "/src/assets/fonts/dyslexic_0.png", "/src/assets/fonts/dyslexic.fnt");
+    this.load.bitmapFont("iosevka", "/src/assets/fonts/iosevka_0.png", "/src/assets/fonts/iosevka.fnt");
   }
 
   create() {
