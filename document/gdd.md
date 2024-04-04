@@ -77,34 +77,34 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;A ameaça de novos entrantes no setor de faculdades de medicina no estado de São Paulo é relativamente baixa, devido a fatores como:
 
-- Complexidade na certificação e regulamento feito pelo governo, exigindo autorização e cumprimento de requisitos legais e administrativos. Isso inclui a necessidade de avaliação e aprovação por parte do Ministério da Educação (MEC) e do Conselho Estadual de Educação, tornando o processo de entrada no mercado bastante restritivo. Além das regulamentações governamentais, as faculdades de medicina também estão sujeitas a processos de acreditação e certificação por organizações profissionais e acadêmicas.
+- Complexidade na certificação e regulamento feito pelo governo, que exigem autorização e conformidade de requisitos legais e administrativos. Isso inclui a necessidade de avaliação e aprovação por parte do Ministério da Educação (MEC) e do Conselho Estadual de Educação. Tal impecilho torna o processo de entrada no mercado bastante restritivo. Além das regulamentações governamentais, as faculdades de medicina também estão sujeitas a processos de acreditação e certificação por organizações profissionais e acadêmicas;
 
-- Requer um investimento significativo em infraestrutura, recursos humanos qualificados, equipamentos médicos, laboratórios e instalações clínicas. O alto custo inicial pode representar uma barreira substancial para potenciais novos entrantes.
+- Requer um investimento significativo em infraestrutura, recursos humanos qualificados, equipamentos médicos, laboratórios e instalações clínicas. O alto custo dos itens supracitados, pode representar, inicialmente, uma barreira substancial para potenciais novos entrantes;
 
-- Requer experiência e conhecimento específico no campo da educação médica. Novos entrantes podem enfrentar dificuldades se não tiverem uma equipe acadêmica e administrativa experiente e capacitada para lidar com os desafios complexos do ambiente educacional e da prática clínica.
+- Requer experiência e conhecimento específico no campo da educação médica. Novos entrantes podem enfrentar dificuldades se não tiverem uma equipe acadêmica e administrativa experiente e capacitada para lidar com os desafios complexos do ambiente educacional e da prática clínica;
 
-- O mercado de faculdades de medicina em São Paulo já é dominado por instituições tradicionais e bem estabelecidas, tanto públicas quanto privadas, que possuem reputação consolidada, recursos robustos e redes de parcerias com instituições de saúde. Competir com essas instituições consolidadas seria um desafio significativo para novos entrantes.
+- O mercado de faculdades de medicina em São Paulo já é dominado por instituições tradicionais e bem estabelecidas, tanto públicas quanto privadas, que possuem reputação consolidada, recursos robustos e redes de parcerias com instituições de saúde. Competir com essas instituições seria um desafio significativo para novos entrantes;
 
-- Os estudantes e profissionais de saúde geralmente preferem faculdades com reputação reconhecida e programas de alta qualidade. Estabelecer uma nova instituição e construir uma reputação respeitável no mercado exigiria tempo e esforço substanciais, representando outra barreira para novos participantes.
+- Os estudantes e profissionais de saúde geralmente preferem faculdades com reputação reconhecida e programas de alta qualidade. Estabelecer uma nova instituição e construir uma reputação respeitável no mercado exigiria tempo e esforço substanciais. Esse fato representa outra barreira para novos participantes.
 
 
 **Poder de Barganha dos Fornecedores**
 
-&nbsp;&nbsp;&nbsp;&nbsp;O poder de barganha dos fornecedores pode variar dependendo dos tipos de fornecedores considerados:
+&nbsp;&nbsp;&nbsp;&nbsp;O poder de barganha dos fornecedores pode variar dependendo dos tipos que forem considerados, como pode-se notar:
 
-- Os fornecedores de tecnologia e equipamentos médicos têm um poder alto devido à oferta de recursos essenciais para o ensino médico, como equipamentos de simulação e dispositivos médicos. Com poucos fornecedores especializados, podem impor preços elevados e condições contratuais rigorosas. Podemos tomar como exemplo, a empresa de dispositivos médicos Stryker Corporation, que fornece uma variedade de equipamentos e tecnologias utilizados em cirurgias ortopédicas, neurocirurgias e outras especialidades médicas. Devido à sua reputação estabelecida e à qualidade de seus produtos, a Stryker tem uma posição forte no mercado e pode influenciar os preços e condições contratuais ao fornecer seus dispositivos para faculdades de medicina. 
+- Os fornecedores de tecnologia e equipamentos médicos têm um poder alto devido à oferta de recursos essenciais para o ensino médico, como equipamentos de simulação e dispositivos médicos. Com poucos concorrentes especializados, esse tipo pode impor preços elevados e condições contratuais rigorosas. Podemos tomar como exemplo a empresa de dispositivos médicos Stryker Corporation, que fornece uma variedade de equipamentos e tecnologias utilizados em cirurgias ortopédicas, neurocirurgias, entre outras especialidades médicas. Devido à sua reputação estabelecida e à qualidade de seus produtos, a Stryker tem uma posição forte no mercado e pode influenciar os preços e condições contratuais ao fornecer seus dispositivos para faculdades de medicina; 
 
-- Os fornecedores de materiais didáticos e livros têm um poder de barganha menor em comparação com os fornecedores de tecnologia médica. Isso se deve à maior variedade de opções disponíveis e à flexibilidade das faculdades de medicina para escolher entre diferentes editoras e distribuidores. No entanto, os fornecedores ainda podem influenciar os preços e as condições de pagamento, especialmente para materiais específicos ou edições atualizadas.
+- Os provedores de materiais didáticos e livros têm um poder de barganha menor em comparação com os fornecedores de tecnologia médica. Isso se deve à maior variedade de opções disponíveis e à flexibilidade das faculdades de medicina para escolher entre diferentes editoras e distribuidores. No entanto, eles ainda podem influenciar os preços e as condições de pagamento, especialmente para materiais específicos ou edições atualizadas;
 
-- Empresas que fornecem serviços de limpeza, manutenção e gestão de instalações para as faculdades de medicina geralmente têm um poder de barganha mais baixo, pois esses serviços são considerados commodities e há várias opções disponíveis no mercado. As faculdades podem facilmente substituir ou negociar com diferentes fornecedores para obter condições mais favoráveis.
+- Empresas que fornecem serviços de limpeza, manutenção e gestão de instalações para as faculdades de medicina geralmente têm um poder de barganha baixo, pois esses serviços são considerados commodities e há várias opções disponíveis no mercado. As faculdades podem, facilmente, substituir ou negociar com diferentes fornecedores para obter condições mais favoráveis;
 
-- Empresas fornecedoras de equipamentos de laboratório especializados, como microscópios e centrífugas, têm um poder de barganha moderado devido à necessidade desses equipamentos para atividades educacionais e de pesquisa das faculdades de medicina. No entanto, a existência de fornecedores alternativos e a capacidade de negociar com base no volume de compra podem afetar esse poder.
+- Organizações que atuam no fornecimento de equipamentos de laboratório especializados, como microscópios e centrífugas, têm um poder de barganha moderado. Isso se deve à necessidade desses equipamentos para atividades educacionais e de pesquisa das faculdades de medicina. No entanto, a existência de fornecedores alternativos e a capacidade de negociar com base no volume de compra podem afetar esse poder.
 
 **Poder de Barganha dos Clientes**
 
 &nbsp;&nbsp;&nbsp;&nbsp;O poder de barganha dos clientes nesse setor é bastante limitado, pois as faculdades de medicina privadas têm alta demanda e já possuem preços fixos de matrícula e mensalidade, ou seja, os estudantes não têm nenhuma influência direta para ditar o preço. 
 
-&nbsp;&nbsp;&nbsp;&nbsp;No caso das faculdades onde o ensino é público, os clientes não têm nenhum poder de barganha financeira visto que a educação é gratuita e financiada pelo governo estadual ou federal. No entanto, os estudantes das faculdades de medicina públicas têm certo poder de negociação quando realizam greves, exercendo pressão no governo, para que suas reivindicações sejam atendidas.
+&nbsp;&nbsp;&nbsp;&nbsp;No caso das faculdades onde o ensino é público, os clientes não têm nenhum poder de barganha financeira visto que a educação é gratuita e financiada pelo governo estadual ou federal. No entanto, os estudantes das faculdades de medicina públicas têm certo poder de negociação quando realizam greves e exercem pressão sobre o governo para que suas reivindicações sejam atendidas.
 
 **Ameaça de Novos Substitutos**
 
@@ -116,9 +116,9 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;No entanto, alguns fatores que podem levar a substituição da escolha do curso de medicina, mas não suprir completamente seus benfícios são:
 
-- Pessoas que têm interesse nas áreas de ciências da saúde, mas não exclusivamente querem ou conseguem se tornar médicas. Essas pessoas optam por outros cursos relacionados à saúde, como por exemplo, Enfermagem, Fisioterapia e Biomedicina. 
+- Pessoas que têm interesse nas áreas de ciências da saúde, mas não exclusivamente querem ou conseguem se tornar médicas. Essas pessoas optam por outros cursos relacionados à saúde, como por exemplo, Enfermagem, Fisioterapia, Psicologia e Biomedicina. 
 
-- Pessoas cujo a escolha do curso tenha sido majoritariamente influenciada pela remuneração do emprego. Antigamente, fazer curso de medicina trazia ao estudantes diversos benefícios sociais, como o interesse pela posição socioeconômica e a aprovação de familiares e da sociedade no geral[⁴](#c7). Atualmente, há diversas alternativas para aqueles que buscam segurança financeira e/ou prestígio, como por exemplo, cursos de Economia e Engenharia[⁵](#c7).
+- Pessoas cuja escolha do curso tenha sido majoritariamente influenciada pela remuneração do emprego. Antigamente, fazer curso de medicina trazia aos estudantes diversos benefícios sociais, como o interesse pela posição socioeconômica, a aprovação de familiares e da sociedade no geral[⁴](#c7). Atualmente, há diversas alternativas para aqueles que buscam segurança financeira e/ou prestígio, como, por exemplo, cursos de Economia e Engenharia[⁵](#c7).
 
 ### 1.1.2. Análise SWOT
 
@@ -144,17 +144,17 @@
 
 ### 1.1.3. Descrição da Solução Desenvolvida
 
-&nbsp;&nbsp;&nbsp;&nbsp;A falta de conscientização sobre prevenção, primeiros socorros e informações inadequadas sobre queimaduras, em especial em populações vulneráveis, influi na alta incidência de queimaduras, que se torna uma das maiores causas de lesões traumáticas no mundo. Foram registrados cerca de 1 milhão de novos casos anualmente no Brasil, conforme dados divulgados pelo Ministério da Saúde do Brasil em 2014, e acredita-se que 90% das queimaduras poderiam ser evitadas com a devida educação e conscientização da população. Grande parte das queimaduras registradas ocorreram em ambiente residencial e em atividades de lazer, abrangendo, na maioria, homens de 20 a 39 anos.[⁷](#c7)
+&nbsp;&nbsp;&nbsp;&nbsp;A falta de conscientização sobre prevenção, primeiros socorros e informações inadequadas sobre queimaduras, em especial em populações vulneráveis, influi na alta incidência de queimaduras, que se torna uma das maiores causas de lesões traumáticas no mundo. Foram registrados cerca de 1 milhão de novos casos anualmente no Brasil, conforme dados divulgados pelo Ministério da Saúde do Brasil em 2014, e acredita-se que cerca de 90% das queimaduras poderiam ser evitadas com a devida educação e conscientização da população. Grande parte das queimaduras registradas ocorreram em ambiente residencial e em atividades de lazer, abrangendo, em sua maioria, homens de 20 a 39 anos[⁷](#c7).
 
-&nbsp;&nbsp;&nbsp;&nbsp;Considerando esse cenário, definimos como possível solução a criação de um jogo mobile educacional. Ele visa conscientizar a população, em especial as vulneráveis, sobre queimaduras, à medida que fornece informações embasadas para estimular a educação de prevenção de queimaduras, além de auxiliar nos primeiros socorros e desmitificar métodos inapropriados de tratamentos.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Considerando esse cenário, definimos como possível solução a criação de um jogo mobile educacional. Ele objetiva a conscientização da população, em especial de suas parcelas mais vulneráveis, sobre queimaduras, à medida em que fornece informações embasadas para estimular a educação acerca da prevenção de queimaduras, além de auxiliar nos primeiros socorros e desmitificar métodos inapropriados de tratamento.<br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;Nossa solução busca criar os seguintes ganhos para nosso parceiro: conscientização de jovens e adultos, educação de maneira simples sobre a prevenção de queimaduras e promoção da Faculdade de Medicina da USP. Ademais, além de criar ganhos, buscamos também potencializá-los atráves da conscientização na prática, da criação de um diferencial tecnológico e da transmissão de conhecimento com diversão e lucidez.<br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;Além de criar ganhos, a solução busca também sanar alguns problemas que o parceiro possui como o baixo interesse das pessoas e a baixa disseminação de conhecimentos acerca do tema. Para isso, propomos criar um jogo que possui uma dinâmica de jogo capaz de reter a atenção do usuário, proporcionar uma experiência única e divertida e facilitar o acesso ao conhecimento atráves de plataforma mobile.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Além de criar ganhos, essa solução busca também sanar alguns problemas que o parceiro possui como o baixo interesse das pessoas e a baixa disseminação de conhecimentos no que tange ao tema. Para isso, propomos criar um jogo que possui uma dinâmica de jogo capaz de reter a atenção do usuário, proporcionar uma experiência única e divertida e facilitar o acesso ao conhecimento atráves de plataforma mobile.<br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;O jogo deverá ser acessado pelos smartphones dos estudantes e poderá ser utilizado durante as campanhas de conscientização promovidas pela Faculdade de Medicina da USP ou quando da preferência do usuário. A solução impulsiona os benefícios já fornecidos pelas campanhas de conscientização e agrega um aspecto lúdico e divertido de compartilhar informações e combater desinformações. <br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;O critério de sucesso será a satisfação do jogador durante o processo de conscientização através de um game. Para avaliarmos tal critério, uma pesquisa de satisfação será realizada ao final do game, levando em consideração fatores como diversão, jogabilidade e transmissão de conhecimento.
+&nbsp;&nbsp;&nbsp;&nbsp;O critério de sucesso será a satisfação do jogador durante o processo de conscientização através de um game. Para avaliá-lo, uma pesquisa de satisfação será realizada ao final do game, levando em consideração fatores como diversão, jogabilidade e transmissão de conhecimento.
 
 
 ### 1.1.4. Proposta de Valor

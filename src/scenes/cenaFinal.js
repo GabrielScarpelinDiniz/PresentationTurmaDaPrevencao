@@ -11,11 +11,17 @@ class GameOver extends Phaser.Scene {
     this.cameras.main.setBackgroundColor(0xa5e2ff);
     this.load.image("botaoMenu", "/src/assets/botaoMenu.png");
     this.load.image("botaoInicio", "/src/assets/botaoVoltarInicio.png");
+    this.load.audio("sfxGameOver", "/src/assets/sounds/efeitoSonoroGameOver.wav");
   }
   init(params) {
     this.pontuacao = params.pontuacao;
   }
   create() {
+    this.musicaGameOver = this.sound.add("sfxGameOver", {
+      loop: false,
+      volume: 0.5,
+    });
+    this.musicaGameOver.play();
     this.add.image(640, 200, "cenaFinal").setScale(0.16); // Cria a frase: "Acabou o tempo!"
     this.botaoMenu = this.add
       .sprite(550, 575, "botaoMenu")
