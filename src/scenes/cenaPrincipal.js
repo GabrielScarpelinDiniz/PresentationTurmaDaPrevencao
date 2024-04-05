@@ -6,7 +6,7 @@ class CenaPrincipal extends Phaser.Scene {
   dialogo = [
     `Bom dia, alunos e alunas!
 Bem-vindos à Faculdade de Medicina da USP.
-Eu sou a dr.ª Tina e serei a instrutora de vocês.
+Eu sou a Dra. Tina e serei a instrutora de vocês.
 Hoje é um dia muito especial... O Dia da Prevenção!!
 Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos acerca do tema...... QUEIMADURAS!`, 
   //NEW DIALOGUE

@@ -56,7 +56,7 @@ class CenaHUD extends Phaser.Scene {
       .setVisible(false); // Adiciona o texto do tempo descontado na tela do jogo
     // Cria os elementos da tarefas
     this.textoTarefa = this.add
-      .bitmapText(25, 30, "iosevka2", "Procure a dr.ª Tina", 42)
+      .bitmapText(25, 30, "iosevka2", "Procure a Dra. Tina", 42)
       .setVisible(false);
     this.seta = this.add.image(450, 50, "seta").setScale(1.5).setVisible(false);
     // Cria os elementos da pontuação
@@ -193,7 +193,7 @@ class CenaHUD extends Phaser.Scene {
       this.botaoCaseAlto.setVisible(false);
       this.botaoCaseBaixo.setVisible(false);
       this.botaoCase.setVisible(false);
-      this.textoTarefa.setText("Procure a dr.ª Tina");
+      this.textoTarefa.setText("Procure a Dra. Tina");
       this.state = "Tina";
     });
 
