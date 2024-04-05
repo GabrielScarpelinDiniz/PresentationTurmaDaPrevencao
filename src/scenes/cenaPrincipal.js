@@ -53,8 +53,8 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
       .setOrigin(0, 0);
 
     //Carrega os assets do jogo
-    this.load.audio("musicaIntroducao", "/src/assets/sounds/IntroMusic.wav") // Música de introdução
-    this.load.audio("musicaJogo", "/src/assets/sounds/gameMusicLoopWithEndGame.mp3") // Música de jogo quando o cronometro está ativo
+    this.load.audio("musicaIntroducao", "/src/assets/sounds/temaAbertura.wav") // Música de introdução
+    this.load.audio("musicaJogo", "/src/assets/sounds/temaPrincipal.mp3") // Música de jogo quando o cronometro está ativo
     this.load.audio("efeitoSonoroOnibus", "/src/assets/sounds/efeitoSonoroOnibus.mp3") // SFX do botão iniciar
     this.load.audio("efeitoSonoroCriancas", "/src/assets/sounds/efeitoSonoroCriancas.mp3") // SFX das Crianças
     //Carrega a biblioteca do joystick
