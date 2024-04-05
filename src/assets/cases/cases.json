@@ -21,8 +21,8 @@
     {
         "nome": "CARLO FREDERICO",
         "fotoKey": "carlo",
-        "desc": "Durante um almoço em família, uma toalha de mesa foi colocada sobre a mesa. Um idoso, ao tentar se levantar da mesa, acabou puxando a toalha sem perceber e derrubou objetos quentes sobre si mesmo.",
-        "colored": ["toalha", "objetos", "quentes", "mesa"],
+        "desc": "Durante um almoço em família, uma toalha foi colocada sobre a mesa. Um idoso, ao tentar se levantar da mesa, acabou puxando a toalha sem perceber e derrubou objetos quentes sobre si mesmo.",
+        "colored": ["toalha", "objetos", "quentes", "mesa,"],
         "sintomas": "Pele carbonizada, com danos profundos e ausência de sensibilidade ao toque.",
         "classificacao": "TERCEIRO GRAU",
         "classificacaoCor": "0xFF0000",
@@ -61,10 +61,10 @@
         "nome": "GRAÇA SILVA",
         "fotoKey": "graca",
         "desc": "Enquanto realizava a limpeza da cozinha, inadvertidamente respingou alvejante em sua perna",
-        "colored": ["respingou", "limpeza", "alvejante"],
+        "colored": ["respingou", "limpeza", "alvejante", "cozinha"],
         "sintomas": "Vermelhidão e irritação na área atingida",
-        "classificacao": "SEGUNDO GRAU",
-        "classificacaoCor": "0xFFA500",
+        "classificacao": "PRIMEIRO GRAU",
+        "classificacaoCor": "0x21FF21",
         "quiz": {
             "pergunta": "O que poderia ser feito para evitar a situação de queimadura que aconteceu com Graça Silva?",
             "alternativas": [
@@ -81,7 +81,7 @@
         "nome": "HENRIQUE CALABRESO",
         "fotoKey": "henrique",
         "desc": "Jogou álcool na brasa de churrasco, causando uma explosão. Ele foi atingido pelo calor intenso e sentiu queimação no rosto e braços.",
-        "colored": ["gelo"],
+        "colored": ["churraco", "explosão", "álcool"],
         "sintomas": "Dor intensa, bolhas cheias de líquido claro na pele, vermelhidão profunda",
         "classificacao": "SEGUNDO GRAU",
         "classificacaoCor": "0xFFA500",
@@ -100,11 +100,11 @@
     {
         "nome": "LEONARDO MESSI",
         "fotoKey": "leonardo",
-        "desc": "Um paciente saiu do jogo de futebol com dor no joelho. Ao chegar em casa, colocou um plástico com gelo na área afetada por mais de 40 minutos.",
-        "colored": ["gelo"],
-        "sintomas": "Vermelhidão e irritação na área atingida",
-        "classificacao": "PRIMEIRO GRAU",
-        "classificacaoCor": "0x21FF21",
+        "desc": "Um paciente saiu do jogo de futebol com dor no joelho. Ao chegar em casa, colocou gelo na área afetada por mais de 40 minutos.",
+        "colored": ["gelo", "futebol"],
+        "sintomas": "Dor intensa, pele avermelhada, com micro bolhas.",
+        "classificacao": "SEGUNDO GRAU",
+        "classificacaoCor": "0xFFA500",
         "quiz": {
             "pergunta": "Como evitar outro caso como o de Leonardo?",
             "alternativas": [
@@ -143,8 +143,8 @@
         "desc": "Acendeu uma churrasqueira portátil dentro do quarto para se aquecer, resultando em sintomas de intoxicação por monóxido de carbono.",
         "colored": ["intoxicação", "monóxido", "carbono"],
         "sintomas": "Dor de cabeça e tontura.",
-        "classificacao": "PRIMEIRO GRAU",
-        "classificacaoCor": "0x21FF21",
+        "classificacao": "SEGUNDO GRAU",
+        "classificacaoCor": "0xFFA500",
         "quiz": {
             "pergunta": "Qual das seguintes medidas poderia ter evitado o que aconteceu com Mônica?",
             "alternativas": [
@@ -220,7 +220,7 @@
     {
         "nome": "TONY WATTSON",
         "fotoKey": "tony",
-        "desc": "Durante uma operação de manutenção em equipamentos de alta voltagem, um trabalhador idoso entrou em contato direto com partes energizadas do equipamento.",
+        "desc": "Durante uma operação de manutenção em eletrodoméstico de alta voltagem, um trabalhador entrou em contato direto com partes energizadas do equipamento.",
         "colored": ["alta", "voltagem", "contato", "energizadas"],
         "sintomas": "Pele carbonizada em várias áreas expostas do corpo, como mãos e braços.",
         "classificacao": "TERCEIRO GRAU",
