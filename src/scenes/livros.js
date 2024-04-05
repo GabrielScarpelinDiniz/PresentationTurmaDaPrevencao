@@ -43,7 +43,6 @@ class Livros extends Phaser.Scene {
         this.load.image("segundograu2", "assets/paginasIniciais/segundograu2.png");
         this.load.image("terceirograu1", "assets/paginasIniciais/terceirograu1.png");
         this.load.image("terceirograu2", "assets/paginasIniciais/terceirograu2.png");
-
     }
 
     create() {
