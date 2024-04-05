@@ -8,41 +8,41 @@ class Livros extends Phaser.Scene {
 
     preload() {
         // Carrega as imagens a serem utilizadas
-        this.load.image("livroVerde", "assets/livroVerde.png");
-        this.load.image("livroAmarelo", "assets/livroAmarelo.png");
-        this.load.image("livroVermelho", "assets/livroVermelho.png");
-        this.load.image("livroVerdeAberto", "assets/livroVerdeAberto.png");
-        this.load.image("livroAmareloAberto", "assets/livroAmareloAberto.png");
-        this.load.image("livroVermelhoAberto", "assets/livroVermelhoAberto.png");
-        this.load.image("backgroundLivros", "assets/backgroundLivros.png");
-        this.load.image("botaoX", "assets/botaoX.png");
-        this.load.audio("efeitoSonoroVirarPagina", "assets/sounds/efeitoSonoroVirarPagina.mp3"); // SFX da página do livro
-        this.load.image("primeiro-grau", "assets/conteudo-livros/images/primeiro-grau.png");
-        this.load.image("segundo-grau", "assets/conteudo-livros/images/segundo-grau.png");
-        this.load.image("terceiro-grau", "assets/conteudo-livros/images/terceiro-grau.png");
-        this.load.image("setadireita", "assets/setadireita.png");
-        this.load.image("setaesquerda", "assets/setaesquerda.png");
+        this.load.image("livroVerde", "src/assets/livroVerde.png");
+        this.load.image("livroAmarelo", "src/assets/livroAmarelo.png");
+        this.load.image("livroVermelho", "src/assets/livroVermelho.png");
+        this.load.image("livroVerdeAberto", "src/assets/livroVerdeAberto.png");
+        this.load.image("livroAmareloAberto", "src/assets/livroAmareloAberto.png");
+        this.load.image("livroVermelhoAberto", "src/assets/livroVermelhoAberto.png");
+        this.load.image("backgroundLivros", "src/assets/backgroundLivros.png");
+        this.load.image("botaoX", "src/assets/botaoX.png");
+        this.load.audio("efeitoSonoroVirarPagina", "src/assets/sounds/efeitoSonoroVirarPagina.mp3"); // SFX da página do livro
+        this.load.image("primeiro-grau", "src/assets/conteudo-livros/images/primeiro-grau.png");
+        this.load.image("segundo-grau", "src/assets/conteudo-livros/images/segundo-grau.png");
+        this.load.image("terceiro-grau", "src/assets/conteudo-livros/images/terceiro-grau.png");
+        this.load.image("setadireita", "src/assets/setadireita.png");
+        this.load.image("setaesquerda", "src/assets/setaesquerda.png");
 
-        this.load.image("verdeCase1", "assets/paginaCases/case1.png");
-        this.load.image("verdeCase2", "assets/paginaCases/case2.png");
-        this.load.image("verdeCase3", "assets/paginaCases/case3.png");
-        this.load.image("verdeCase4", "assets/paginaCases/case4.png");
-        this.load.image("verdeCase5", "assets/paginaCases/case5.png");
-        this.load.image("amareloCase6", "assets/paginaCases/case6.png");
-        this.load.image("amareloCase7", "assets/paginaCases/case7.png");
-        this.load.image("amareloCase8", "assets/paginaCases/case8.png");
-        this.load.image("amareloCase9", "assets/paginaCases/case9.png");
-        this.load.image("amareloCase10", "assets/paginaCases/case10.png");
-        this.load.image("vermelhoCase11", "assets/paginaCases/case11.png");
-        this.load.image("vermelhoCase12", "assets/paginaCases/case12.png");
+        this.load.image("verdeCase1", "src/assets/paginaCases/case1.png");
+        this.load.image("verdeCase2", "src/assets/paginaCases/case2.png");
+        this.load.image("verdeCase3", "src/assets/paginaCases/case3.png");
+        this.load.image("verdeCase4", "src/assets/paginaCases/case4.png");
+        this.load.image("verdeCase5", "src/assets/paginaCases/case5.png");
+        this.load.image("amareloCase6", "src/assets/paginaCases/case6.png");
+        this.load.image("amareloCase7", "src/assets/paginaCases/case7.png");
+        this.load.image("amareloCase8", "src/assets/paginaCases/case8.png");
+        this.load.image("amareloCase9", "src/assets/paginaCases/case9.png");
+        this.load.image("amareloCase10", "src/assets/paginaCases/case10.png");
+        this.load.image("vermelhoCase11", "src/assets/paginaCases/case11.png");
+        this.load.image("vermelhoCase12", "src/assets/paginaCases/case12.png");
 
-        this.load.image("tiposQueimadura", "assets/paginasIniciais/tipo.png");
-        this.load.image("primeirograu1", "assets/paginasIniciais/primeirograu1.png");
-        this.load.image("primeirograu2", "assets/paginasIniciais/primeirograu2.png");
-        this.load.image("segundograu1", "assets/paginasIniciais/segundograu1.png");
-        this.load.image("segundograu2", "assets/paginasIniciais/segundograu2.png");
-        this.load.image("terceirograu1", "assets/paginasIniciais/terceirograu1.png");
-        this.load.image("terceirograu2", "assets/paginasIniciais/terceirograu2.png");
+        this.load.image("tiposQueimadura", "src/assets/paginasIniciais/tipo.png");
+        this.load.image("primeirograu1", "src/assets/paginasIniciais/primeirograu1.png");
+        this.load.image("primeirograu2", "src/assets/paginasIniciais/primeirograu2.png");
+        this.load.image("segundograu1", "src/assets/paginasIniciais/segundograu1.png");
+        this.load.image("segundograu2", "src/assets/paginasIniciais/segundograu2.png");
+        this.load.image("terceirograu1", "src/assets/paginasIniciais/terceirograu1.png");
+        this.load.image("terceirograu2", "src/assets/paginasIniciais/terceirograu2.png");
     }
 
     create() {
