@@ -91,7 +91,7 @@ class CenaHUD extends Phaser.Scene {
         this.textoPontos.setText(`Pontos: ${this.pontuacao}`);
 
         this.tempoEvent = this.time.addEvent({
-          delay: 100, // delay de 1000 ms = 1 segundo
+          delay: 1000, // delay de 1000 ms = 1 segundo
           callback: () => {
             this.textoTempo.setVisible(true);
             if (this.tempoInicial > 0) {

@@ -20,8 +20,9 @@ class Livros extends Phaser.Scene {
         this.load.image("primeiro-grau", "src/assets/conteudo-livros/images/primeiro-grau.png");
         this.load.image("segundo-grau", "src/assets/conteudo-livros/images/segundo-grau.png");
         this.load.image("terceiro-grau", "src/assets/conteudo-livros/images/terceiro-grau.png");
-        this.load.image("setadireita", "src/assets/setadireita.png");
-        this.load.image("setaesquerda", "src/assets/setaesquerda.png");
+        this.load.image("setaVermelha", "src/assets/setaVermelha.png");
+        this.load.image("setaVerde", "src/assets/setaVerde.png");
+        this.load.image("setaAmarela", "src/assets/setaAmarela.png");
 
         this.load.image("verdeCase1", "src/assets/paginaCases/case1.png");
         this.load.image("verdeCase2", "src/assets/paginaCases/case2.png");
@@ -43,14 +44,13 @@ class Livros extends Phaser.Scene {
         this.load.image("segundograu2", "src/assets/paginasIniciais/segundograu2.png");
         this.load.image("terceirograu1", "src/assets/paginasIniciais/terceirograu1.png");
         this.load.image("terceirograu2", "src/assets/paginasIniciais/terceirograu2.png");
+        this.load.image("setaVoltar", "src/assets/setaVoltar.png")
     }
 
     create() {
         this.primeiraCena = this.scene.get("cenaPrincipal");
         this.scene.sleep("livros")
         this.texto = this.cache.json.get("conteudo-livros");
-
-        this.add.image()
         // this.eventoGatilho.on("tendaLivros", () => {
         // Adiciona o background e livros a serem apresentados na cena
         this.add.image(0, 0, "backgroundLivros").setOrigin(0, 0).setScale(2);
@@ -93,8 +93,8 @@ class Livros extends Phaser.Scene {
             this.paginaAtual = 0;
             this.primeiroGrau1 = this.add.image(400, 325, "primeirograu1").setVisible(true);
             this.primeiroGrau2 = this.add.image(850, 325, "primeirograu2").setVisible(true);
-            this.setaDireita = this.add.image(1140, 500, "setadireita").setScale(0.12).setInteractive().setScrollFactor(0);
-            this.setaEsquerda = this.add.image(100, 500, "setaesquerda").setScale(0.12).setInteractive().setScrollFactor(0).setVisible(false);
+            this.setaDireita = this.add.image(1180, 360, "setaVerde").setScale(0.75).setInteractive().setScrollFactor(0);
+            this.setaEsquerda = this.add.image(100, 360, "setaVerde").setScale(0.75).setInteractive().setScrollFactor(0).setVisible(false).setFlip(true, false);
 
             this.setaDireita.on("pointerdown", () => {
                 this.efeitoSonoroVirarPagina.play();
@@ -185,12 +185,11 @@ class Livros extends Phaser.Scene {
             this.livroAmarelo.setVisible(false);
             this.livroVermelho.setVisible(false);
             this.livroAmareloAberto.setVisible(true);
-
             this.paginaAtual = 0;
             this.segundoGrau1= this.add.image(400, 325, "segundograu1").setVisible(true);
             this.segundoGrau2 = this.add.image(850, 325, "segundograu2").setVisible(true);            
-            this.setaDireita = this.add.image(1140, 500, "setadireita").setScale(0.12).setInteractive().setScrollFactor(0);
-            this.setaEsquerda = this.add.image(100, 500, "setaesquerda").setScale(0.12).setInteractive().setScrollFactor(0).setVisible(false);
+            this.setaDireita = this.add.image(1180, 360, "setaAmarela").setScale(0.75).setInteractive().setScrollFactor(0);
+            this.setaEsquerda = this.add.image(100, 360, "setaAmarela").setScale(0.75).setInteractive().setScrollFactor(0).setVisible(false).setFlip(true, false);
 
             this.setaDireita.on("pointerdown", () => {
                 this.efeitoSonoroVirarPagina.play();
@@ -281,12 +280,11 @@ class Livros extends Phaser.Scene {
             this.livroAmarelo.setVisible(false);
             this.livroVermelho.setVisible(false);
             this.livroVermelhoAberto.setVisible(true);
-
             this.paginaAtual = 0;
             this.terceiroGrau1= this.add.image(400, 325, "terceirograu1").setVisible(true);
             this.terceiroGrau2 = this.add.image(850, 325, "terceirograu2").setVisible(true);            
-            this.setaDireita = this.add.image(1140, 500, "setadireita").setScale(0.12).setInteractive().setScrollFactor(0);
-            this.setaEsquerda = this.add.image(100, 500, "setaesquerda").setScale(0.12).setInteractive().setScrollFactor(0).setVisible(false);
+            this.setaDireita = this.add.image(1180, 360, "setaVermelha").setScale(0.75).setInteractive().setScrollFactor(0);
+            this.setaEsquerda = this.add.image(100, 360, "setaVermelha").setScale(0.75).setInteractive().setScrollFactor(0).setVisible(false).setFlip(true, false);
 
             this.setaDireita.on("pointerdown", () => {
                 this.efeitoSonoroVirarPagina.play();
@@ -352,7 +350,7 @@ class Livros extends Phaser.Scene {
 
             })
         });
-
+        
         // Adiciona o botão de fechar a cena e adiciona o evento de clique
         this.botaoFechar = this.add.sprite(1200, 50, "botaoX").setScale(0.5).setInteractive().setScrollFactor(0);
         this.botaoFechar.on("pointerdown", () => {

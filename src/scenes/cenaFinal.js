@@ -70,6 +70,7 @@ class GameOver extends Phaser.Scene {
     this.botaoMenu.on("pointerdown", () => {
       //Fecha a cena de game over e volta para o menu do jogo
       this.scene.stop("GameOver");
+      this.scene.restart("livros");
       this.scene.start("menu");
       this.scene.start("cenaCases");
     });
