@@ -33,17 +33,17 @@ class CenaHUD extends Phaser.Scene {
       .setVisible(false);
     this.textoTempo = this.add.bitmapText(600, 30, "iosevka2", (this.tempoInicial - (this.tempoInicial % 60)) / 60 +"min " + (this.tempoInicial % 60) + "s", 48).setVisible(false); // Adiciona o texto do tempo na tela do jogo
     this.botaoCaseBaixo = this.add
-      .image(1140, 150, "botaoCaseBaixo")
+      .image(1140, 180, "botaoCaseBaixo")
       .setScale(3)
       .setVisible(false)
       .setInteractive();
     this.botaoCaseAlto = this.add
-      .image(1140, 150, "botaoCaseAlto")
+      .image(1140, 180, "botaoCaseAlto")
       .setScale(3)
       .setVisible(false)
       .setInteractive();
     this.botaoCase = this.add
-      .circle(1140, 150, 70, 0xffffff, 1)
+      .circle(1140, 180, 70, 0xffffff, 1)
       .setVisible(false)
       .setInteractive()
       .setAlpha(0.1);
@@ -91,7 +91,7 @@ class CenaHUD extends Phaser.Scene {
         this.textoPontos.setText(`Pontos: ${this.pontuacao}`);
 
         this.tempoEvent = this.time.addEvent({
-          delay: 1000, // delay de 1000 ms = 1 segundo
+          delay: 100, // delay de 1000 ms = 1 segundo
           callback: () => {
             this.textoTempo.setVisible(true);
             if (this.tempoInicial > 0) {
@@ -123,7 +123,10 @@ class CenaHUD extends Phaser.Scene {
               this.tempoEvent.destroy();
               this.scene.stop("cenaPrincipal");
               this.scene.stop("cenaHUD");
+              this.scene.sleep("livros");
+              this.scene.sleep("cenaCases");
               cenaAtual.musicaJogo.destroy();
+              cenaAtual.efeitoSonoroCriancas.destroy(); // Inicia efeito sonoro das crianças
               this.scene.start("GameOver", {
                 pontuacao: this.pontuacao,
               });
@@ -158,7 +161,6 @@ class CenaHUD extends Phaser.Scene {
 
         this.botaoCase.on("pointerdown", () => {
           // Disparo da cena "abrirCase" quando clicar no botão do case
-          cenaAtual.physics.pause();
           this.events.emit("abrirCase");
           console.log("teste2");
         });

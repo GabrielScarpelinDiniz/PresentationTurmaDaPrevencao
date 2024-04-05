@@ -60,7 +60,7 @@ class CenaCases extends Phaser.Scene {
             this.case1.setVisible(false);
             this.botaoX.setVisible(false);
             this.primeiraCena.events.emit("fecharCase");    
-            this.primeiraCena.physics.resume();
+            this.primeiraCena.controlesHabilitados = true; // Habilita os controles do jogador
             this.events.emit("mudaTarefaParaLivros");
             });
         // Requisições de informações de outras cenas
@@ -68,6 +68,7 @@ class CenaCases extends Phaser.Scene {
         this.abrirCase = this.scene.get("cenaHUD"); // Pega a cena HUD para abrir o case       
         const abrirCase = () => {
             // Adiciona as informações do caso na tela de casos
+            this.primeiraCena.controlesHabilitados = false; // Desabilita os controles do jogador
             const caso = this.primeiraCena.objetoCaso.caso;
             this.efeitoSonoroBotaoX.play(); // Efeito sonoro do botão de fechar
             this.case1.setVisible(true);
@@ -85,7 +86,8 @@ class CenaCases extends Phaser.Scene {
             }
             this.sintomasTexto = this.add.bitmapText(this.centroX - 210, this.centroY + this.casoTexto.height + 10, "iosevka", "Sintomas: "+caso.sintomas, 24).setVisible(true).setMaxWidth(450); // Adiciona os sintomas do caso importando do JSON
             this.classificacaoTexto = this.add.bitmapText(this.centroX - 210, this.centroY + this.casoTexto.height + this.sintomasTexto.height + 20, "iosevka", "Classificação: "+caso.classificacao, 24).setVisible(true).setMaxWidth(450).setWordTint(caso.classificacao.split(" ")[0], 1, true, Number(caso.classificacaoCor), Number(caso.classificacaoCor), Number(caso.classificacaoCor), Number(caso.classificacaoCor)); // Adiciona a classificação do caso importando do JSON
-            this.physics.pause(); // Pausa a física do jogo
+            this.primeiraCena.controlesHabilitados = false; // Desabilita os controles do jogador
+            this.primeiraCena.jogador.setVelocity(0, 0); // Para o jogador
             
         }
         this.abrirCase.events.on("abrirCase", abrirCase, this); // Evento para abrir o case

@@ -32,9 +32,17 @@ class Quiz extends Phaser.Scene {
         
         // Adicionando a pergunta à cena
         this.primeiraCena.events.on("abrirQuiz", () => {
+            this.pergunta ? this.pergunta.destroy() : null;
+            this.alternativa1 ? this.alternativa1.destroy() : null;
+            this.alternativa2 ? this.alternativa2.destroy() : null;
+            this.textoExplicacaoAlternativaErrada ? this.textoExplicacaoAlternativaErrada.destroy() : null;
+            this.textoExplicacaoAlternativaCerta ? this.textoExplicacaoAlternativaCerta.destroy() : null;
+            this.fundoFeedback ? this.fundoFeedback.setVisible(false) : null;
+            
             // Obtém o caso atual
+            this.primeiraCena.controlesHabilitados = false;
             const caso = this.primeiraCena.objetoCaso.caso;
-            this.add.text(bgWhite.x, bgWhite.y - 40, caso.quiz.pergunta, {
+            this.pergunta = this.add.text(bgWhite.x, bgWhite.y - 40, caso.quiz.pergunta, {
                 fontSize: "20px",
                 color: "#000",
                 fontFamily: "Arial",
@@ -45,7 +53,7 @@ class Quiz extends Phaser.Scene {
             }).setOrigin(0.5);
 
             // Adicionando as alternativas à cena e suas aparências na interface
-            const alternativa1 = this.add.text(bgWhite.x, bgWhite.y + 60, caso.quiz.alternativas[0], {
+            this.alternativa1 = this.add.text(bgWhite.x, bgWhite.y + 60, caso.quiz.alternativas[0], {
                 fontSize: "23px",
                 color: "#000",
                 fontFamily: "Arial",
@@ -70,7 +78,7 @@ class Quiz extends Phaser.Scene {
                 }
             });
     
-            const alternativa2 = this.add.text(bgWhite.x, bgWhite.y + 140, caso.quiz.alternativas[1], {
+            this.alternativa2 = this.add.text(bgWhite.x, bgWhite.y + 140, caso.quiz.alternativas[1], {
                 fontSize: "21px",
                 color: "#000",
                 fontFamily: "Arial",
@@ -125,12 +133,16 @@ class Quiz extends Phaser.Scene {
             this.alternativaRespondida = false;
             this.cenaHUD.textoTempoDescontado.setVisible(false);
             this.cenaHUD.fundoTempoDescontado.setVisible(false);
-
+            this.primeiraCena.controlesHabilitados = true;
+            this.alternativa1.destroy();
+            this.alternativa2.destroy();
+            this.textoExplicacaoAlternativaErrada.destroy();
+            this.textoExplicacaoAlternativaCerta.destroy();
             this.scene.sleep("quiz");
             // Reinicia a cena para cada vez que ocorre o overlap com a tenda o quiz voltar a sua forma padrão para que o jogador possa jogar de novo
             this.scene.restart();
             // Resume a física na cena "cenaPrincipal", é útil se a cena principal contiver objetos físicos em movimento ou interações físicas que precisem ser retomadas após o término do quiz
-            this.primeiraCena.physics.resume();
+            
         });
     }
 

@@ -71,12 +71,19 @@ class GameOver extends Phaser.Scene {
       //Fecha a cena de game over e volta para o menu do jogo
       this.scene.stop("GameOver");
       this.scene.start("menu");
+      this.scene.start("cenaCases");
     });
 
     this.botaoVoltar.on("pointerdown", () => {
       //Fecha a cena de game over e volta início do jogo
-      this.scene.sleep("GameOver");
-      this.scene.switch("cenaPrincipal");
+      this.scene.stop("GameOver");
+      this.scene.sleep("livros");
+      this.scene.restart("livros");
+      this.scene.sleep("quiz");
+      this.scene.restart("quiz");
+      this.scene.start("cenaPrincipal", { from: "GameOver" });
+      this.scene.start("cenaHUD");
+      this.scene.start("cenaCases");
     });
   }
 }

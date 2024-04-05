@@ -111,7 +111,7 @@ class MenuPrincipal extends Phaser.Scene {
       // Realiza FadeOut antes de passar para próxima cena
       this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE, (cam, effect) => {
         this.time.delayedCall(1000, () => {
-          this.scene.start("cenaPrincipal")
+          this.scene.start("cenaPrincipal", { from: "menu" })
           this.scene.start("cenaHUD")
           this.scene.restart("cenaHUD");
           this.scene.stop("menu")
