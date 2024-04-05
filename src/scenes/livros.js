@@ -135,14 +135,23 @@ class Livros extends Phaser.Scene {
                 this.paginaAtual--;
 
                 switch (this.paginaAtual) {
-
+                    case -1:
+                        this.primeiroGrau1.setVisible(false);
+                        this.primeiroGrau2.setVisible(false);
+                        this.setaEsquerda.setVisible(false);
+                        this.setaDireita.setVisible(false);
+                        this.livroVerde.setVisible(true);
+                        this.livroAmarelo.setVisible(true);
+                        this.livroVermelho.setVisible(true);
+                        this.livroVerdeAberto.setVisible(false);
+                        break;
                     case 0:
                         console.log(this.paginaAtual);
                         this.primeiroGrau1.setVisible(true);
                         this.primeiroGrau2.setVisible(true);
                         this.verdeCase1.setVisible(false);
                         this.tipos.setVisible(false);
-                        this.setaEsquerda.setVisible(false);
+                        this.setaEsquerda.setVisible(true);
                         this.setaDireita.setVisible(true);
                         break;
 
@@ -231,15 +240,23 @@ class Livros extends Phaser.Scene {
                 this.paginaAtual--;
 
                 switch (this.paginaAtual) {
-
+                    case -1:
+                        this.segundoGrau1.setVisible(false);
+                        this.segundoGrau2.setVisible(false);
+                        this.setaEsquerda.setVisible(false);
+                        this.setaDireita.setVisible(false);
+                        this.livroVerde.setVisible(true);
+                        this.livroAmarelo.setVisible(true);
+                        this.livroVermelho.setVisible(true);
+                        this.livroAmareloAberto.setVisible(false);
+                        break;
                     case 0:
-
                         console.log(this.paginaAtual);
                         this.segundoGrau1.setVisible(true);
                         this.segundoGrau2.setVisible(true);
                         this.amareloCase6.setVisible(false);
                         this.tipos.setVisible(false);
-                        this.setaEsquerda.setVisible(false);
+                        this.setaEsquerda.setVisible(true);
                         this.setaDireita.setVisible(true);
                         break;
 
@@ -291,7 +308,7 @@ class Livros extends Phaser.Scene {
                 this.paginaAtual++;
 
                 switch (this.paginaAtual) {
-
+                    
                     case 1:
                         console.log(this.paginaAtual);
                         this.terceiroGrau1.setVisible(false);
@@ -317,14 +334,23 @@ class Livros extends Phaser.Scene {
                 this.paginaAtual--;
 
                 switch (this.paginaAtual) {
-
+                    case -1:
+                        this.terceiroGrau1.setVisible(false);
+                        this.terceiroGrau2.setVisible(false);
+                        this.setaEsquerda.setVisible(false);
+                        this.setaDireita.setVisible(false);
+                        this.livroVerde.setVisible(true);
+                        this.livroAmarelo.setVisible(true);
+                        this.livroVermelho.setVisible(true);
+                        this.livroVermelhoAberto.setVisible(false);
+                        break;
                     case 0:
 
                         this.terceiroGrau1.setVisible(true);
                         this.terceiroGrau2.setVisible(true);
                         this.vermelhoCase11.setVisible(false);
                         this.tipos.setVisible(false);
-                        this.setaEsquerda.setVisible(false);
+                        this.setaEsquerda.setVisible(true);
                         this.setaDireita.setVisible(true);
                         console.log(this.paginaAtual);
                         break;

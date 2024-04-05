@@ -24,7 +24,7 @@ class CenaHUD extends Phaser.Scene {
 
     this.state = "Tina";
     // Define um tempo inicial para o timer
-    this.tempoInicial = 20;
+    this.tempoInicial = 240;
     this.pontuacao = 0;
     // Cria os elementos do timer
     this.HUDImage = this.add
