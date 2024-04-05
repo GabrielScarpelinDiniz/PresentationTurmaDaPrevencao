@@ -1,6 +1,6 @@
 [
     {
-        "0": "\nAs queimaduras de PRIMEIRO GRAU afetam apenas a camada mais superficial da pele, a epiderme.\n\nEsta camada é composta por células mortas que são constantemente renovadas.",
+        "0": "primeiro-grau-sol",
         "1": "\nElas causam vermelhidão, dor e possíveis inchaços, mas não formam bolhas.\n\nGeralmente podem ser tratadas em casa e cicatrizam por conta própria.",
         "2": "\nQUEIMADURA TÉRMICA é uma lesão na pele causada pelo contato direto com fontes de calor, como fogo, líquidos quentes, vapor ou objetos quentes.\n\nQUEIMADURA QUÍMICA é uma lesão na pele causada pelo contato com substâncias químicas agressivas, como ácidos, bases ou solventes.",
         "3":"\nQUEIMADURA ELÉTRICA ocorre quando a pele entra em contato com uma corrente elétrica. Esta lesão pode resultar de uma variedade de situações, incluindo acidentes domésticos, falhas em equipamentos elétricos ou trabalhos em ambientes industriais.",
@@ -14,7 +14,7 @@
         "11":"\nO que não fazer: Tocar na área afetada, aplicar substâncias e ignorar sintomas como vermelhidão e sensibilidade.\n\nComo prevenir: Evite empinar pipas em dias de vento forte e próximas a fios elétricos, e esteja sempre ciente dos arredores para evitar acidentes com eletricidade",
         "12":"\nQUEIMADURA POR CONTATO COM FIOS ELÉTRICOS\n\nO que fazer: Lave imediatamente a área afetada com água corrente e procure assistência médica se a queimadura parecer grave ou se não melhorar dentro de alguns dias.",
         "13":"\nO que não fazer: Aplicar gelo na queimadura, estourar bolhas se formarem e não usar produtos desconhecidos ou caseiros na área afetada.\n\nComo prevenir: Desligar a energia antes de realizar qualquer trabalho elétrico e usar ferramentas isoladas.",
-        "images": ["primeiro-grau"],
+        "images": [""],
         "quantidadePaginas": 14
     },
     {
