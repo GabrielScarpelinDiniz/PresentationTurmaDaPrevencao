@@ -8,26 +8,48 @@ class Livros extends Phaser.Scene {
 
     preload() {
         // Carrega as imagens a serem utilizadas
-        this.load.image("livroVerde", "/src/assets/livroVerde.png");
-        this.load.image("livroAmarelo", "/src/assets/livroAmarelo.png");
-        this.load.image("livroVermelho", "/src/assets/livroVermelho.png");
-        this.load.image("livroVerdeAberto", "/src/assets/livroVerdeAberto.png");
-        this.load.image("livroAmareloAberto", "/src/assets/livroAmareloAberto.png");
-        this.load.image("livroVermelhoAberto", "/src/assets/livroVermelhoAberto.png");
-        this.load.image("backgroundLivros", "/src/assets/backgroundLivros.png");
-        this.load.image("botaoX", "/src/assets/botaoX.png");
-        this.load.audio("efeitoSonoroVirarPagina", "/src/assets/sounds/efeitoSonoroVirarPagina.mp3") // SFX da página do livro
-        this.load.image("primeiro-grau", "/src/assets/conteudo-livros/images/primeiro-grau.png")
-        this.load.image("segundo-grau", "/src/assets/conteudo-livros/images/segundo-grau.png")
-        this.load.image("terceiro-grau", "/src/assets/conteudo-livros/images/terceiro-grau.png")
-        this.load.json("conteudo-livros", "/src/assets/conteudo-livros/textos.json")
+        this.load.image("livroVerde", "assets/livroVerde.png");
+        this.load.image("livroAmarelo", "assets/livroAmarelo.png");
+        this.load.image("livroVermelho", "assets/livroVermelho.png");
+        this.load.image("livroVerdeAberto", "assets/livroVerdeAberto.png");
+        this.load.image("livroAmareloAberto", "assets/livroAmareloAberto.png");
+        this.load.image("livroVermelhoAberto", "assets/livroVermelhoAberto.png");
+        this.load.image("backgroundLivros", "assets/backgroundLivros.png");
+        this.load.image("botaoX", "assets/botaoX.png");
+        this.load.audio("efeitoSonoroVirarPagina", "assets/sounds/efeitoSonoroVirarPagina.mp3"); // SFX da página do livro
+        this.load.image("primeiro-grau", "assets/conteudo-livros/images/primeiro-grau.png");
+        this.load.image("segundo-grau", "assets/conteudo-livros/images/segundo-grau.png");
+        this.load.image("terceiro-grau", "assets/conteudo-livros/images/terceiro-grau.png");
+        this.load.image("setadireita", "assets/setadireita.png");
+        this.load.image("setaesquerda", "assets/setaesquerda.png");
+
+        this.load.image("verdeCase1", "assets/paginaCases/case1.png");
+        this.load.image("verdeCase2", "assets/paginaCases/case2.png");
+        this.load.image("verdeCase3", "assets/paginaCases/case3.png");
+        this.load.image("verdeCase4", "assets/paginaCases/case4.png");
+        this.load.image("verdeCase5", "assets/paginaCases/case5.png");
+        this.load.image("amareloCase6", "assets/paginaCases/case6.png");
+        this.load.image("amareloCase7", "assets/paginaCases/case7.png");
+        this.load.image("amareloCase8", "assets/paginaCases/case8.png");
+        this.load.image("amareloCase9", "assets/paginaCases/case9.png");
+        this.load.image("amareloCase10", "assets/paginaCases/case10.png");
+        this.load.image("vermelhoCase11", "assets/paginaCases/case11.png");
+        this.load.image("vermelhoCase12", "assets/paginaCases/case12.png");
+
+        this.load.image("tiposQueimadura", "assets/paginasIniciais/tipo.png");
+        this.load.image("primeirograu1", "assets/paginasIniciais/primeirograu1.png");
+        this.load.image("primeirograu2", "assets/paginasIniciais/primeirograu2.png");
+        this.load.image("segundograu1", "assets/paginasIniciais/segundograu1.png");
+        this.load.image("segundograu2", "assets/paginasIniciais/segundograu2.png");
+        this.load.image("terceirograu1", "assets/paginasIniciais/terceirograu1.png");
+        this.load.image("terceirograu2", "assets/paginasIniciais/terceirograu2.png");
     }
 
     create() {
         this.primeiraCena = this.scene.get("cenaPrincipal");
         this.scene.sleep("livros")
         this.texto = this.cache.json.get("conteudo-livros");
-        
+
         this.add.image()
         // this.eventoGatilho.on("tendaLivros", () => {
         // Adiciona o background e livros a serem apresentados na cena
@@ -38,23 +60,123 @@ class Livros extends Phaser.Scene {
         this.livroAmareloAberto = this.add.image(640, 350, "livroAmareloAberto").setScale(2.6).setVisible(false);
         this.livroVermelhoAberto = this.add.image(640, 350, "livroVermelhoAberto").setScale(2.6).setVisible(false);
         this.livroVerdeAberto = this.add.image(640, 350, "livroVerdeAberto").setScale(2.6).setVisible(false);
-        this.primeiroGrau = this.add.image(400, 475, "primeiro-grau").setScale(2).setVisible(false);
-        this.segundoGrau = this.add.image(540, 350, "segundo-grau").setScale(2).setVisible(false);
-        this.terceiroGrau = this.add.image(400, 475, "terceiro-grau").setScale(2).setVisible(false);
         // inicia os objetos iniciais da cena livro
         // Adiciona efeito sonoro de virar a página
-        this.efeitoSonoroVirarPagina = this.sound.add("efeitoSonoroVirarPagina",{volume: 0.5});
-      
-      
+        this.efeitoSonoroVirarPagina = this.sound.add("efeitoSonoroVirarPagina", {
+            volume: 0.5
+        });
+
+        this.verdeCase1 = this.add.image(850, 325, "verdeCase1").setVisible(false);
+        this.verdeCase2 = this.add.image(850, 325, "verdeCase2").setVisible(false);
+        this.verdeCase3 = this.add.image(400, 325, "verdeCase3").setVisible(false);
+        this.verdeCase4 = this.add.image(850, 325, "verdeCase4").setVisible(false);
+        this.verdeCase5 = this.add.image(400, 325, "verdeCase5").setVisible(false);
+
+        this.amareloCase6 = this.add.image(850, 325, "amareloCase6").setVisible(false);
+        this.amareloCase7 = this.add.image(850, 325, "amareloCase7").setVisible(false);
+        this.amareloCase8 = this.add.image(400, 325, "amareloCase8").setVisible(false);
+        this.amareloCase9 = this.add.image(850, 325, "amareloCase9").setVisible(false);
+        this.amareloCase10 = this.add.image(400, 325, "amareloCase10").setVisible(false);
+
+        this.vermelhoCase11 = this.add.image(850, 325, "vermelhoCase11").setVisible(false);
+        this.vermelhoCase12 = this.add.image(400, 325, "vermelhoCase12").setVisible(false);
+
+        this.tipos = this.add.image(400, 325, "tiposQueimadura").setVisible(false);
+
         this.livroVerde.on("pointerdown", () => { // Define função que chama o livro verde aberto quando clicar no livro verde fechado
             // Adiciona o evento de clique no livro verde, ao clicar o livro verde é aberto
             this.efeitoSonoroVirarPagina.play();
             this.livroVerde.setVisible(false);
             this.livroAmarelo.setVisible(false);
             this.livroVermelho.setVisible(false);
-            this.mostrarConteudo(1);
             this.livroVerdeAberto.setVisible(true);
+            this.paginaAtual = 0;
+            this.primeiroGrau1 = this.add.image(400, 325, "primeirograu1").setVisible(true);
+            this.primeiroGrau2 = this.add.image(850, 325, "primeirograu2").setVisible(true);
+            this.setaDireita = this.add.image(1140, 500, "setadireita").setScale(0.12).setInteractive().setScrollFactor(0);
+            this.setaEsquerda = this.add.image(100, 500, "setaesquerda").setScale(0.12).setInteractive().setScrollFactor(0).setVisible(false);
+
+            this.setaDireita.on("pointerdown", () => {
+                this.efeitoSonoroVirarPagina.play();
+                this.paginaAtual++;
+
+                switch (this.paginaAtual) {
+
+                    case 1:
+                        console.log(this.paginaAtual);
+                        this.primeiroGrau1.setVisible(false);
+                        this.primeiroGrau2.setVisible(false);
+                        this.setaEsquerda.setVisible(true);
+                        this.tipos.setVisible(true);
+                        this.verdeCase1.setVisible(true);
+                        break;
+
+                    case 2:
+                        console.log(this.paginaAtual);
+                        this.tipos.setVisible(false);
+                        this.verdeCase1.setVisible(false);
+                        this.verdeCase2.setVisible(true);
+                        this.verdeCase3.setVisible(true);
+                        break;
+
+                    case 3:
+                        console.log(this.paginaAtual);
+                        this.verdeCase2.setVisible(false);
+                        this.verdeCase3.setVisible(false);
+                        this.verdeCase4.setVisible(true);
+                        this.verdeCase5.setVisible(true);
+                        this.setaDireita.setVisible(false);
+                }
+
+            });
+
+            this.setaEsquerda.on("pointerdown", () => {
+                this.efeitoSonoroVirarPagina.play();
+                this.paginaAtual--;
+
+                switch (this.paginaAtual) {
+
+                    case 0:
+                        console.log(this.paginaAtual);
+                        this.primeiroGrau1.setVisible(true);
+                        this.primeiroGrau2.setVisible(true);
+                        this.verdeCase1.setVisible(false);
+                        this.tipos.setVisible(false);
+                        this.setaEsquerda.setVisible(false);
+                        this.setaDireita.setVisible(true);
+                        break;
+
+                    case 1:
+
+                        this.verdeCase2.setVisible(false);
+                        this.verdeCase3.setVisible(false);
+                        this.verdeCase1.setVisible(true);
+                        this.tipos.setVisible(true)
+                        this.setaEsquerda.setVisible(true);
+                        console.log(this.paginaAtual);
+                        break;
+
+                    case 2:
+                        this.verdeCase2.setVisible(true);
+                        this.verdeCase3.setVisible(true);
+                        this.verdeCase4.setVisible(false);
+                        this.verdeCase5.setVisible(false);
+                        this.setaDireita.setVisible(true);
+                        console.log(this.paginaAtual);
+                        break;
+
+                    case 3:
+                        this.verdeCase4.setVisible(true);
+                        this.verdeCase5.setVisible(true);
+                        console.log(this.paginaAtual);
+                        this.setaEsquerda.setVisible(true);
+                        break;
+                }
+
+            })
+
         });
+
 
         this.livroAmarelo.on("pointerdown", () => { // Define função que chama o livro amarelo aberto quando clicar no livro amarelo fechado
             // Adiciona o evento de clique no livro amarelo, ao clicar o livro amarelo é aberto
@@ -63,8 +185,93 @@ class Livros extends Phaser.Scene {
             this.livroAmarelo.setVisible(false);
             this.livroVermelho.setVisible(false);
             this.livroAmareloAberto.setVisible(true);
-            this.mostrarConteudo(2);
 
+            this.paginaAtual = 0;
+            this.segundoGrau1= this.add.image(400, 325, "segundograu1").setVisible(true);
+            this.segundoGrau2 = this.add.image(850, 325, "segundograu2").setVisible(true);            
+            this.setaDireita = this.add.image(1140, 500, "setadireita").setScale(0.12).setInteractive().setScrollFactor(0);
+            this.setaEsquerda = this.add.image(100, 500, "setaesquerda").setScale(0.12).setInteractive().setScrollFactor(0).setVisible(false);
+
+            this.setaDireita.on("pointerdown", () => {
+                this.efeitoSonoroVirarPagina.play();
+                this.paginaAtual++;
+
+                switch (this.paginaAtual) {
+
+                    case 1:
+                        console.log(this.paginaAtual);
+                        this.segundoGrau1.setVisible(false);
+                        this.segundoGrau2.setVisible(false);
+                        this.setaEsquerda.setVisible(true);
+                        this.tipos.setVisible(true);
+                        this.amareloCase6.setVisible(true);
+                        break;
+
+                    case 2:
+                        console.log(this.paginaAtual);
+                        this.tipos.setVisible(false);
+                        this.amareloCase6.setVisible(false);
+                        this.amareloCase7.setVisible(true);
+                        this.amareloCase8.setVisible(true);
+                        break;
+
+                    case 3:
+                        console.log(this.paginaAtual);
+                        this.amareloCase7.setVisible(false);
+                        this.amareloCase8.setVisible(false);
+                        this.amareloCase9.setVisible(true);
+                        this.amareloCase10.setVisible(true);
+                        this.setaDireita.setVisible(false);
+                        break;
+                }
+
+            });
+
+            this.setaEsquerda.on("pointerdown", () => {
+                this.efeitoSonoroVirarPagina.play();
+                this.paginaAtual--;
+
+                switch (this.paginaAtual) {
+
+                    case 0:
+
+                        console.log(this.paginaAtual);
+                        this.segundoGrau1.setVisible(true);
+                        this.segundoGrau2.setVisible(true);
+                        this.amareloCase6.setVisible(false);
+                        this.tipos.setVisible(false);
+                        this.setaEsquerda.setVisible(false);
+                        this.setaDireita.setVisible(true);
+                        break;
+
+                    case 1:
+
+                        this.amareloCase7.setVisible(false);
+                        this.amareloCase8.setVisible(false);
+                        this.amareloCase6.setVisible(true);
+                        this.tipos.setVisible(true)
+                        this.setaEsquerda.setVisible(true);
+                        console.log(this.paginaAtual);
+                        break;
+
+                    case 2:
+                        this.amareloCase7.setVisible(true);
+                        this.amareloCase8.setVisible(true);
+                        this.amareloCase9.setVisible(false);
+                        this.amareloCase10.setVisible(false);
+                        this.setaDireita.setVisible(true);
+                        console.log(this.paginaAtual);
+                        break;
+
+                    case 3:
+                        this.amareloCase9.setVisible(true);
+                        this.amareloCase10.setVisible(true);
+                        console.log(this.paginaAtual);
+                        this.setaDireita.setVisible(false);
+                        break;
+                }
+
+            })
         });
 
         this.livroVermelho.on("pointerdown", () => { // Define função que chama o livro vermelho aberto quando clicar no livro vermelho fechado
@@ -74,10 +281,77 @@ class Livros extends Phaser.Scene {
             this.livroAmarelo.setVisible(false);
             this.livroVermelho.setVisible(false);
             this.livroVermelhoAberto.setVisible(true);
-            this.mostrarConteudo(3);
 
+            this.paginaAtual = 0;
+            this.terceiroGrau1= this.add.image(400, 325, "terceirograu1").setVisible(true);
+            this.terceiroGrau2 = this.add.image(850, 325, "terceirograu2").setVisible(true);            
+            this.setaDireita = this.add.image(1140, 500, "setadireita").setScale(0.12).setInteractive().setScrollFactor(0);
+            this.setaEsquerda = this.add.image(100, 500, "setaesquerda").setScale(0.12).setInteractive().setScrollFactor(0).setVisible(false);
+
+            this.setaDireita.on("pointerdown", () => {
+                this.efeitoSonoroVirarPagina.play();
+                this.paginaAtual++;
+
+                switch (this.paginaAtual) {
+
+                    case 1:
+                        console.log(this.paginaAtual);
+                        this.terceiroGrau1.setVisible(false);
+                        this.terceiroGrau2.setVisible(false);
+                        this.setaEsquerda.setVisible(true);
+                        this.tipos.setVisible(true);
+                        this.vermelhoCase11.setVisible(true);
+                        break;
+                    
+                    case 2:
+                        console.log(this.paginaAtual);
+                        this.tipos.setVisible(false);
+                        this.vermelhoCase11.setVisible(false);
+                        this.vermelhoCase12.setVisible(true);
+                        this.setaDireita.setVisible(false);
+                        break;
+                }
+
+            });
+
+            this.setaEsquerda.on("pointerdown", () => {
+                this.efeitoSonoroVirarPagina.play();
+                this.paginaAtual--;
+
+                switch (this.paginaAtual) {
+
+                    case 0:
+
+                        this.terceiroGrau1.setVisible(true);
+                        this.terceiroGrau2.setVisible(true);
+                        this.vermelhoCase11.setVisible(false);
+                        this.tipos.setVisible(false);
+                        this.setaEsquerda.setVisible(false);
+                        this.setaDireita.setVisible(true);
+                        console.log(this.paginaAtual);
+                        break;
+
+                    case 1:
+
+                        console.log(this.paginaAtual);
+                        this.vermelhoCase11.setVisible(true);
+                        this.tipos.setVisible(true);
+                        this.vermelhoCase12.setVisible(false);
+                        this.setaEsquerda.setVisible(true);
+                        this.setaDireita.setVisible(true);
+
+                        break;
+                    
+                    case 2: 
+                    
+                        console.log(this.paginaAtual);
+                        this.setaDireita.setVisible(false);
+                        this.vermelhoCase12.setVisible(false);
+                        break;
+                }
+
+            })
         });
-        // });
 
         // Adiciona o botão de fechar a cena e adiciona o evento de clique
         this.botaoFechar = this.add.sprite(1200, 50, "botaoX").setScale(0.5).setInteractive().setScrollFactor(0);
@@ -90,67 +364,5 @@ class Livros extends Phaser.Scene {
             this.primeiraCena.physics.resume()
         });
     }
-    mostrarConteudo(grau){
-        // Função que mostra o conteúdo do livro
-        console.log(this.texto[grau - 1], grau - 1, this.texto[grau - 1].quantidadePaginas, this.texto[grau - 1][0])
-        grau === 1 ? this.primeiroGrau.setVisible(true) : grau === 2 ? this.segundoGrau.setVisible(true) : this.terceiroGrau.setVisible(true);
-        this.primeiraPagina ? this.primeiraPagina.destroy() : null // Verifica se a primeira página existe, se sim, destroi
-        this.segundaPagina ? this.segundaPagina.destroy() : null // Verifica se a segunda página existe, se sim, destroi
-        this.paginaAtual = 0;
-        this.primeiraPagina = this.add.bitmapText(220, 110, "iosevka", this.texto[grau - 1][this.paginaAtual], 30).setVisible(true).setMaxWidth(320); // Adiciona o texto da primeira página
-        this.segundaPagina = this.add.bitmapText(660 , 110, "iosevka", this.texto[grau - 1][this.paginaAtual + 1], 30).setVisible(true).setMaxWidth(320); // Adiciona o texto da segunda página
-        this.proximaPaginaInterativo = this.add.rectangle(640, 100, 640, 640, 0x000000, 0).setOrigin(0, 0).setInteractive(); // Adiciona a área interativa para passar a página
-        if (grau === 1) {
-            // Adiciona a imagem do primeiro grau
-            this.primeiroGrau.setVisible(true)
-        }
-        else if (grau === 2) {
-            // Adiciona a imagem do segundo grau
-            this.segundoGrau.setVisible(true)
-        }
-        else if (grau === 3) {
-            // Adiciona a imagem do terceiro grau
-            this.terceiroGrau.setVisible(true)
-        }
-        this.proximaPaginaInterativo.on("pointerdown", () => {
-            this.efeitoSonoroVirarPagina.play();
-            if (this.paginaAtual < this.texto[0].quantidadePaginas - 2) {
-                // Se a página atual for menor que a quantidade de páginas - 2, então incrementa a página atual em 2
-                this.primeiroGrau.setVisible(false)
-                this.segundoGrau.setVisible(false)
-                this.terceiroGrau.setVisible(false)
-                this.paginaAtual += 2;
-                this.primeiraPagina.setText(this.texto[grau - 1][this.paginaAtual]);
-                this.segundaPagina.setText(this.texto[grau - 1][this.paginaAtual + 1]);
-            }
-        })
-        this.voltarPaginaInterativo = this.add.rectangle(0, 100, 640, 640, 0x000000, 0).setOrigin(0, 0).setInteractive();
-        this.voltarPaginaInterativo.on("pointerdown", () => {
-            this.efeitoSonoroVirarPagina.play();
-            if (this.paginaAtual == 0) {   
-                // Se a página atual for 0, então volta para a tela inicial 
-                this.primeiraPagina.destroy();
-                this.segundaPagina.destroy();
-                this.proximaPaginaInterativo.destroy();
-                this.voltarPaginaInterativo.destroy();
-                this.primeiroGrau.setVisible(false)
-                this.segundoGrau.setVisible(false)
-                this.terceiroGrau.setVisible(false)
-                this.livroVerde.setVisible(true);
-                this.livroAmarelo.setVisible(true);
-                this.livroVermelho.setVisible(true);
-                this.livroVermelhoAberto.setVisible(false);
-                this.livroAmareloAberto.setVisible(false);
-                this.livroVerdeAberto.setVisible(false);
-            }
-            else if (this.paginaAtual >= 2) {
-                // Porque na primeira página tem imagem
-                // verifica se a página atual é maior ou igual a 2
-                this.paginaAtual -= 2; // decrementa a página atual em 2
-                this.primeiraPagina.setText(this.texto[grau - 1][this.paginaAtual]);
-                this.segundaPagina.setText(this.texto[grau - 1][this.paginaAtual + 1]);
-                this.paginaAtual === 0 ? grau === 1 ? this.primeiroGrau.setVisible(true) : grau === 2 ? this.segundoGrau.setVisible(true) : this.terceiroGrau.setVisible(true) : null;
-            }
-        })
-    }
+
 }
