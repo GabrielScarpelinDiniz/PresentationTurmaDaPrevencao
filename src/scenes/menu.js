@@ -5,16 +5,16 @@ class MenuPrincipal extends Phaser.Scene {
     })
   }
   preload() {
-    this.load.image("background", "/src/assets/backgroundMenu.png") // Fundo da cena do Main Menu
-    this.load.image("inteliLogo", "/src/assets/logointeli.png") // Fundo da cena do Main Menu
-    this.load.image("nuvem", "/src/assets/nuvem.png")
-    this.load.spritesheet("botaoJogar", "/src/assets/botaoJogarNovo.png", {
+    this.load.image("background", "src/assets/backgroundMenu.png") // Fundo da cena do Main Menu
+    this.load.image("inteliLogo", "src/assets/logointeli.png") // Fundo da cena do Main Menu
+    this.load.image("nuvem", "src/assets/nuvem.png")
+    this.load.spritesheet("botaoJogar", "src/assets/botaoJogarNovo.png", {
       frameWidth: 400,
       frameHeight: 200
     }) // Imagem para botaoJogar
-    this.load.audio("efeitoSonoroBotaoIniciar", "/src/assets/sounds/efeitoSonoroBotaoIniciar.mp3") // SFX do botão iniciar
-    this.load.bitmapFont("dyslexic", "/src/assets/fonts/dyslexic_0.png", "/src/assets/fonts/dyslexic.fnt");
-    this.load.bitmapFont("iosevka", "/src/assets/fonts/iosevka_0.png", "/src/assets/fonts/iosevka.fnt");
+    this.load.audio("efeitoSonoroBotaoIniciar", "src/assets/sounds/efeitoSonoroBotaoIniciar.mp3") // SFX do botão iniciar
+    this.load.bitmapFont("dyslexic", "src/assets/fonts/dyslexic_0.png", "src/assets/fonts/dyslexic.fnt");
+    this.load.bitmapFont("iosevka", "src/assets/fonts/iosevka_0.png", "src/assets/fonts/iosevka.fnt");
   }
 
   create() {

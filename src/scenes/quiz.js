@@ -8,10 +8,10 @@ class Quiz extends Phaser.Scene {
 
     preload() {
         // Pré-carregamento de imagens
-        this.load.image("x", "/src/assets/botaoX.png"); // Carrega a imagem do botão "X"
-        this.load.image("simbolo", "/src/assets/simboloquiz.png"); // Carrega a imagem do símbolo do quiz
-        this.load.audio("efeitoSonoroAcertar", "/src/assets/sounds/efeitoSonoroAcertar.mp3") // SFX de Acertar
-        this.load.audio("efeitoSonoroErrar", "/src/assets/sounds/efeitoSonoroErrar.mp3") // SFX de Errar
+        this.load.image("x", "src/assets/botaoX.png"); // Carrega a imagem do botão "X"
+        this.load.image("simbolo", "src/assets/simboloquiz.png"); // Carrega a imagem do símbolo do quiz
+        this.load.audio("efeitoSonoroAcertar", "src/assets/sounds/efeitoSonoroAcertar.mp3") // SFX de Acertar
+        this.load.audio("efeitoSonoroErrar", "src/assets/sounds/efeitoSonoroErrar.mp3") // SFX de Errar
     }
 
     create() {

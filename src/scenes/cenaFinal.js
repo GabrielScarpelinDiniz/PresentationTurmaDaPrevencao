@@ -7,11 +7,11 @@ class GameOver extends Phaser.Scene {
 
   preload() {
     // Carrega os elementos utilizados na cena de game over do jogo
-    this.load.image("cenaFinal", "/src/assets/gocerto.png");
+    this.load.image("cenaFinal", "src/assets/gocerto.png");
     this.cameras.main.setBackgroundColor(0xa5e2ff);
-    this.load.image("botaoMenu", "/src/assets/botaoMenu.png");
-    this.load.image("botaoInicio", "/src/assets/botaoVoltarInicio.png");
-    this.load.audio("sfxGameOver", "/src/assets/sounds/efeitoSonoroGameOver.wav");
+    this.load.image("botaoMenu", "src/assets/botaoMenu.png");
+    this.load.image("botaoInicio", "src/assets/botaoVoltarInicio.png");
+    this.load.audio("sfxGameOver", "src/assets/sounds/efeitoSonoroGameOver.wav");
   }
   init(params) {
     this.pontuacao = params.pontuacao;

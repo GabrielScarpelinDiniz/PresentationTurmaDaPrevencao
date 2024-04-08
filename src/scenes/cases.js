@@ -4,24 +4,24 @@ class CenaCases extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image("base-case", "/src/assets/base-case.png");
-        this.load.image("botao-fechar", "/src/assets/botaoX.png");
-        this.load.audio("efeitoSonoroBotaoX", "/src/assets/sounds/efeitoSonoroBotaoX.mp3") // SFX do Botao de Fechar do Case
-        this.load.image("ronald", "/src/assets/cases/pessoas/ronald.png");
-        this.load.image("maria", "/src/assets/cases/pessoas/maria.png");
-        this.load.image("sofia", "/src/assets/cases/pessoas/sofia.png");
-        this.load.image("apolo", "/src/assets/cases/pessoas/apolo.png");
-        this.load.image("carlo", "/src/assets/cases/pessoas/carlo.png");
-        this.load.image("fernanda", "/src/assets/cases/pessoas/fernanda.png");
-        this.load.image("graca", "/src/assets/cases/pessoas/graca.png");
-        this.load.image("henrique", "/src/assets/cases/pessoas/henrique.png");
-        this.load.image("leonardo", "/src/assets/cases/pessoas/leonardo.png");
-        this.load.image("monica", "/src/assets/cases/pessoas/monica.png");
-        this.load.image("pedro", "/src/assets/cases/pessoas/pedro.png");
-        this.load.image("penelope", "/src/assets/cases/pessoas/penelope.png");
-        this.load.image("pepita", "/src/assets/cases/pessoas/pepita.png");
-        this.load.image("tony", "/src/assets/cases/pessoas/tony.png");
-        this.load.bitmapFont("pixelBitmapFont", "/src/assets/fonts/pixel_0.png", "/src/assets/fonts/pixel.fnt");
+        this.load.image("base-case", "src/assets/base-case.png");
+        this.load.image("botao-fechar", "src/assets/botaoX.png");
+        this.load.audio("efeitoSonoroBotaoX", "src/assets/sounds/efeitoSonoroBotaoX.mp3") // SFX do Botao de Fechar do Case
+        this.load.image("ronald", "src/assets/cases/pessoas/ronald.png");
+        this.load.image("maria", "src/assets/cases/pessoas/maria.png");
+        this.load.image("sofia", "src/assets/cases/pessoas/sofia.png");
+        this.load.image("apolo", "src/assets/cases/pessoas/apolo.png");
+        this.load.image("carlo", "src/assets/cases/pessoas/carlo.png");
+        this.load.image("fernanda", "src/assets/cases/pessoas/fernanda.png");
+        this.load.image("graca", "src/assets/cases/pessoas/graca.png");
+        this.load.image("henrique", "src/assets/cases/pessoas/henrique.png");
+        this.load.image("leonardo", "src/assets/cases/pessoas/leonardo.png");
+        this.load.image("monica", "src/assets/cases/pessoas/monica.png");
+        this.load.image("pedro", "src/assets/cases/pessoas/pedro.png");
+        this.load.image("penelope", "src/assets/cases/pessoas/penelope.png");
+        this.load.image("pepita", "src/assets/cases/pessoas/pepita.png");
+        this.load.image("tony", "src/assets/cases/pessoas/tony.png");
+        this.load.bitmapFont("pixelBitmapFont", "src/assets/fonts/pixel_0.png", "src/assets/fonts/pixel.fnt");
     }
 
     create() {   

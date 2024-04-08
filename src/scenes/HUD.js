@@ -4,14 +4,14 @@ class CenaHUD extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image("botaoCaseBaixo", "/src/assets/botaoCase_baixo.png");
-    this.load.image("botaoCaseAlto", "/src/assets/botaoCase_alto.png");
-    this.load.spritesheet("HUD", "/src/assets/novaHUD.png", {
+    this.load.image("botaoCaseBaixo", "src/assets/botaoCase_baixo.png");
+    this.load.image("botaoCaseAlto", "src/assets/botaoCase_alto.png");
+    this.load.spritesheet("HUD", "src/assets/novaHUD.png", {
       frameWidth: 1000,
       frameHeight: 200,
     });
-    this.load.image("seta", "/src/assets/seta.png");
-    this.load.bitmapFont("iosevka2", "/src/assets/fonts/iosevka_0.png", "/src/assets/fonts/iosevka.fnt");
+    this.load.image("seta", "src/assets/seta.png");
+    this.load.bitmapFont("iosevka2", "src/assets/fonts/iosevka_0.png", "src/assets/fonts/iosevka.fnt");
   }
 
   create() {
