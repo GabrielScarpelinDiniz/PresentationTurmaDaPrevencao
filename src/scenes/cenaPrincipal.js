@@ -235,53 +235,6 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     this.fonte = this.map.createLayer("Fonte", [this.tileset3]);
     this.tendaLivro = this.map.createLayer("TendaLivro", [this.tileset9]);
     this.tendaQuiz = this.map.createLayer("TendaQuiz", [this.tileset15]);
-
-    this.musicaIntroducao.play(); // Inicia a música de introdução
-
-    // define os limites do mundo do jogo,
-    this.worldBounds = this.physics.add.staticGroup().add(this.add.rectangle(0, 560, 3, 1120, 0x000000, 0)).add(this.add.rectangle(1120, 560, 3, 1120, 0x000000, 0)).add(this.add.rectangle(560, 0, 1120, 3, 0x000000, 0)).add(this.add.rectangle(560, 885, 1120, 3, 0x000000, 0));
-    
-    // Cria e posiciona o player
-    this.jogador = this.physics.add.sprite(575, 980, "jogador").setOffset(9, 12).setCircle(7).setScale(1.5).refreshBody().setVisible(false);
-    
-    //Cria as outras crianças do mapa, com uma classe especial que com alguns metodos que facilitam a movimentação e colisão entre os outros objetos
-    this.npc01 = new NPCsAlunos(this.physics.add.sprite(575, 980, "npc01").setSize(16, 18, 9, 10).setVisible(false).setScale(1.5).refreshBody(), this, "npc01") 
-    this.npc02 = new NPCsAlunos(this.physics.add.sprite(575, 980, "npc02").setSize(16, 18, 9, 10).setVisible(false).setScale(1.5).refreshBody(), this, "npc02")
-    this.npc03 = new NPCsAlunos(this.physics.add.sprite(575, 980, "npc03").setSize(16, 18, 9, 10).setVisible(false).setScale(1.5).refreshBody(), this, "npc03")
-    this.npc04 = new NPCsAlunos(this.physics.add.sprite(575, 980, "npc04").setSize(16, 18, 9, 10).setVisible(false).setScale(1.5).refreshBody(), this, "npc04")
-    this.npc05 = new NPCsAlunos(this.physics.add.sprite(575, 980, "npc05").setSize(16, 18, 9, 10).setVisible(false).setScale(1.5).refreshBody(), this, "npc05")
-    this.npc06 = new NPCsAlunos(this.physics.add.sprite(575, 980, "npc06").setSize(16, 18, 9, 10).setVisible(false).setScale(1.5).refreshBody(), this, "npc06")
-    this.npc07 = new NPCsAlunos(this.physics.add.sprite(575, 980, "npc07").setSize(16, 18, 9, 10).setVisible(false).setScale(1.5).refreshBody(), this, "npc07")
-    this.npc08 = new NPCsAlunos(this.physics.add.sprite(575, 980, "npc08").setSize(16, 18, 9, 10).setVisible(false).setScale(1.5).refreshBody(), this, "npc08")
-    this.npc09 = new NPCsAlunos(this.physics.add.sprite(575, 980, "npc09").setSize(16, 18, 9, 10).setVisible(false).setScale(1.5).refreshBody(), this, "npc09")
-    this.tina = this.physics.add.sprite(560, 400, "tina").setOffset(8, 12).setCircle(8).setScale(2).refreshBody().setImmovable(); // Adiciona o sprite da Tina
-
-    this.posteInteliDireita = this.add.image(470, 700, "posteInteliDireita");
-    this.posteInteliEsquerda = this.add.image(650, 700, "posteInteliEsquerda");
-    this.posteUspDireita = this.add.image(330, 490, "posteUspDireita");
-    this.posteUspEsquerda = this.add.image(790, 490, "posteUspEsquerda");
-
-    // criando a camada da cerca
-    this.cerca = this.map.createLayer("Cerca", [
-      this.tileset6,
-      this.tileset7,
-      this.tileset11,
-      this.tileset12,
-      this.tileset13,
-      this.tileset14,
-    ]);
-
-    this.case1 = this.add
-      .image(this.centroX, this.centroY, "case1")
-      .setScale(0.5)
-      .setVisible(false)
-      .setScrollFactor(0); // Adiciona a imagem do case, quando ocorre esse overlap
-    this.botaoX = this.add
-      .sprite(this.case1.x + 75, this.case1.y - 92, "botaoX")
-      .setInteractive()
-      .setScale(0.1)
-      .setVisible(false)
-      .setScrollFactor(0); // Adiciona a imagem do botao, quando ocorre esse overlap
     this.dialogBox = this.add
       .rectangle(640, 420, 450, 140, 0xadd8e6, 1)
       .setScrollFactor(0)
@@ -294,501 +247,187 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
       .setVisible(false)
       .setScrollFactor(0)
       .setScale(0.6); // Adiciona o botão de check para iniciar o quiz
+    this.musicaIntroducao.play(); // Inicia a música de introdução
 
-    this.fundoTimer = this.add
-      .image(100, 100, "azul")
-      .setScale(0.3)
-      .setVisible(false); // Adiciona o fundo de imagem do timer
-    this.tempoInicial = 1200; // Define o tempo do timer
-    this.textoTempo = this.add
-      .text(55, 80, this.tempoInicial + "s", {
-        fontSize: "40px",
-        fill: "#000000",
-      })
-      .setVisible(false); // Adiciona o texto do tempo na tela do jogo
-
-    // Cria circulo de colisao da fonte no mapa
-    this.seta = this.add.image(560, 360, "seta").setScale(1).setVisible(false); // Adiciona a seta para indicar a fonte
-    this.circuloFonte = this.add.circle(560, 570, 70, 0xffffff, 0); //Adiciona círculo sob a fonte
-    this.physics.add.existing(this.circuloFonte); //Adiciona física ao círculo adicionado
-    this.circuloFonte.body.setCircle(70).setImmovable(); //Define a hitbox do objeto criado como um círculo imóvel
-    this.onibus = this.physics.add.image(1040, 1000, "onibus").setBodySize(150, 70).setOffset(32, 70).refreshBody().setFlip(true, false);
-    
-    
-    
-    // Esse trecho do código cria todas as colisões do jogo
-    this.fonte.setCollisionByProperty({
-      collider: false,
-    }); //Seta as colisões onde tem a propriedade collider: true no tiled map
-    this.physics.add.collider(this.jogador, this.circuloFonte);
-    // Cria colisão com as árvores
-    this.arvores.setCollisionByProperty({
-      collider: true,
-    }); //Seta as colisões onde tem a propriedade collider: true no tiled map
-    this.physics.add.collider(this.jogador, this.arvores, () =>
-      console.log("Colidiu")
-    ); //Adiciona colisão entre o jogador e as árvores
-    //Cria colisão com a tenda
-    this.tendaQuiz.setCollisionByProperty({
-      collider: true,
-    }); //Seta as colisões onde tem a propriedade collider: true no tiled map
-    this.tendaLivro.setCollisionByProperty({
-      collider: true,
-    }); //Seta as colisões onde tem a propriedade collider: true no tiled map
-    // Cria colisão com a faculdade
-    this.faculdade.setCollisionByProperty({
-      collider: true,
-    }); //Seta as colisões onde tem a propriedade collider: true no tiled map
-    this.physics.add.collider(this.jogador, this.faculdade, () =>
-      console.log("Colidiu")
-    );
-    // Cria colisão com a cerca
-    this.cerca.setCollisionByProperty({
-      collider: true
-    }) //Seta as colisões onde tem a propriedade collider: true no tiled map
-    this.physics.add.collider(this.jogador, this.cerca, () => console.log("Colidiu"))
-    
-    this.tinaCollider = this.physics.add.overlap(this.tina, this.jogador, () => { // Cria o overlap entre o jogador principal e a Tina
-      console.log("teste"); // Console log para verificar o funcionamento do overlap
-      if (this.objetoCaso.status === false) {
-        this.indiceSorteado = this.sortearNumero(0, this.caseData.length - 1);
-        this.objetoCaso.caso = this.caseData[this.indiceSorteado];
-        this.objetoCaso.status = true;
-        this.events.emit("abrirCase");
-        this.maquinaEstado.transitionTo("livros")
-      }
-      if (this.primeiroCaso === true){
-        this.seta.x = 155;
-        this.seta.y = 450;
-        this.animacaoSeta.remove();
-        this.animacaoSeta = this.tweens.add({
-          targets: this.seta,
-          x: this.seta.x,
-          y: this.seta.y + 15,
-          duration: 500,
-          yoyo: true,
-          repeat: -1,
-        });
-      }
-    });
-
-    this.physics.add.collider(this.jogador, this.tina); // Adiciona a colisão entre o persoangem e a Tina
-
-    this.physics.add.collider(this.jogador, this.tendaLivro, () => {
-      console.log("Colidiu com a tenda do livro") //Adiciona colisão entre o jogador e a tenda de livros
-      if (this.objetoCaso.status === true){
-        this.jogador.y = 650
-        if (this.primeiroCaso === true){
-          this.seta.x = 980;
-          this.seta.y = 450;
-          this.animacaoSeta.remove();
-          this.animacaoSeta = this.tweens.add({
-            targets: this.seta,
-            x: this.seta.x,
-            y: this.seta.y + 15,
-            duration: 500,
-            yoyo: true,
-            repeat: -1,
-          });
-        }
-        //chama a cena para mostrar os 3 livros
-        this.joystick.thumb.setPosition(470, 430);
-        this.scene.wake("livros");
-        // pausa a física do jogo enquanto a cena livros estiver exposta
-        this.physics.pause();
-        this.maquinaEstado.transitionTo("quiz")
-      }
-    });
-
-    this.physics.add.collider(this.jogador, this.tendaQuiz, () => {
-      console.log("Colidiu com a tenda do quiz") //Adiciona colisão entre o jogador e a tenda
-      if ((this.objetoCaso.status === true && this.primeiroCaso === false) || (this.objetoCaso.status === true && this.primeiroCaso === true && this.maquinaEstado.currentState() === "quiz")){
-        //chama a cena para mostrar o quiz
-        this.controlesHabilitados = false;
-        this.jogador.setVelocity(0, 0);
-        this.scene.wake("quiz");
-        // pausa a física do jogo enquanto a cena do quiz estiver exposta
-        this.events.emit("abrirQuiz"); // Emite o evento para abrir o quiz
-
-        if (this.primeiroCaso){
-          this.seta.setVisible(false);
-          this.animacaoSeta.remove();
-        }
-        this.primeiroCaso ? this.primeiroCaso = false : null; // Verifica se é o primeiro caso, se for, seta como falso
-      }
-    });
-
-    //Configuração de animação de câmera ao iniciar o jogo
-    this.physics.pause();
-    // Move a câmera da faculdade para o personagem
-    if (this.from === "GameOver") {
-      this.cameras.main.centerOn(550, -250);
-      this.cameras.main.pan(1070, 1520, 2000);
-      this.maquinaEstado.transitionTo("cameraPanOnibus");
-
-    } else {
-      this.cameras.main.centerOn(550, -250);
-      this.cameras.main.pan(550, 470, 5000);
-    }
-
+    // define os limites do mundo do jogo,
+    this.worldBounds = this.physics.add.staticGroup().add(this.add.rectangle(0, 560, 3, 1120, 0x000000, 0)).add(this.add.rectangle(1120, 560, 3, 1120, 0x000000, 0)).add(this.add.rectangle(560, 0, 1120, 3, 0x000000, 0)).add(this.add.rectangle(560, 885, 1120, 3, 0x000000, 0));
+    this.cameras.main.setBounds(0, -400, 1120, 1520);
+    this.cameras.main.setZoom(2.2);
+    this.cameras.main.centerOn(550, -250);
+    this.tina = this.physics.add.sprite(560, 400, "tina").setOffset(8, 12).setCircle(8).setScale(2).refreshBody().setImmovable(); // Adiciona o sprite da Tina
+    this.cameras.main.pan(560, 460, 2000)
     this.cameras.main.on("camerapancomplete", () => {
-      // Nessa função, toda vez que uma animação de cena acaba, ela verifica qual estado em que está para executar a próxima ação
+      console.log(this.maquinaEstado.currentState())
       if (this.maquinaEstado.currentState() === "cameraPanParaDialogoInicial") {
-        // Se o estado for de pan para o diálogo, inicia o diálogo
         this.botaoCheck.setVisible(true);
         this.dialogBox.setVisible(true);
         this.cameras.main.setBounds(0, 0, 1120, 1120);
         this.dialogText = new TypeWritter(this, 420, 353, "iosevka", this.dialogo[0], 16, 20, () => {
-          this.dialogBox.on("pointerdown", () => {
-            console.log("teste0")
-            this.maquinaEstado.transitionTo("cameraPanSegundoDialogo");
-            this.cameras.main.pan(550, 470, 100)
-          });
+        this.dialogBox.once("pointerdown", () => {
+          console.log("teste0")
+          this.maquinaEstado.transitionTo("cameraPanSegundoDialogo");
+          this.cameras.main.pan(0, 645, 1000);
+          this.dialogBox.setVisible(false);
+          this.botaoCheck.setVisible(false);
+          this.dialogText.setVisible(false);
+        });
         }).setMaxWidth(380).setScrollFactor(0).setInteractive().on("pointerdown", () => { this.dialogText.skip()});
       }
-      else if (this.maquinaEstado.currentState() === "cameraPanSegundoDialogo") {
-        this.dialogBox.off("pointerdown");
-        this.dialogText.proximoTexto(this.dialogo[1], () => {
-          this.dialogBox.on("pointerdown", () => {
-            console.log("teste1")
-            this.maquinaEstado.transitionTo("cameraPanTerceiroDialogo");
-            this.cameras.main.pan(160, 625, 1000);
-            this.dialogText.setVisible(false);
-            this.dialogBox.setVisible(false);
-            this.botaoCheck.setVisible(false);
-            
-          });
-        });
+      if (this.maquinaEstado.currentState() === "cameraPanSegundoDialogo") {
+        this.cameras.main.pan(50, 560, 1000)
+        this.cameras.main.zoomTo(4, 1000)
+        this.maquinaEstado.transitionTo("zoomIn");
       }
-      else if (this.maquinaEstado.currentState() === "cameraPanTerceiroDialogo") {
-        this.dialogBox.off("pointerdown");
-        this.dialogText.setVisible(true);
-        this.botaoCheck.setVisible(true);
-        this.dialogBox.setVisible(true);
-        this.dialogText.proximoTexto(this.dialogo[2], () => {
-          this.dialogBox.on("pointerdown", () => {
-            console.log("teste2")
-            this.maquinaEstado.transitionTo("cameraPanQuartoDialogo");
-            this.cameras.main.pan(1000, 625, 1000);
-            this.dialogText.setVisible(false);
-            this.dialogBox.setVisible(false);
-            this.botaoCheck.setVisible(false);
-          });
-        });
+      if (this.maquinaEstado.currentState() === "abrirLivros") {
+        this.scene.wake("livros");
       }
-      else if (this.maquinaEstado.currentState() === "cameraPanQuartoDialogo") {
-        this.dialogBox.off("pointerdown");
-        this.dialogText.setVisible(true);
-        this.botaoCheck.setVisible(true);
-        this.dialogBox.setVisible(true);
-        this.dialogText.proximoTexto(this.dialogo[3], () => {
-          this.dialogBox.on("pointerdown", () => {
-            console.log("teste3")
-            this.maquinaEstado.transitionTo("cameraPanQuintoDialogo");
-            this.cameras.main.pan(550, 470, 1000);
-            this.dialogBox.off("pointerdown");
-            this.dialogText.setVisible(false);
-            this.dialogBox.setVisible(false);
-            this.botaoCheck.setVisible(false);
-          });
-        });
-      }
-      else if (this.maquinaEstado.currentState() === "cameraPanQuintoDialogo") {
-        this.dialogText.setVisible(true);
-        this.botaoCheck.setVisible(true);
-        this.dialogBox.setVisible(true);
-        this.dialogText.proximoTexto(this.dialogo[4], () => {
-          this.dialogBox.on("pointerdown", () => {
-            console.log("teste4")
-            this.maquinaEstado.transitionTo("cameraPanOnibus");
-            this.cameras.main.pan(1070, 1120, 2000);
-            this.dialogBox.destroy();
-            this.dialogText.destroy();
-            this.botaoCheck.destroy();
-          });
-        });
-      }
-      else if (this.maquinaEstado.currentState() === "cameraPanOnibus"){
-        // Se o estado for de pan para o ônibus, inicia o ônibus andando e som de ônibus
-        this.physics.resume();
-        this.cameras.main.setBounds(0, 0, 1120, 1120);
-        this.cameras.main.startFollow(this.onibus, true);
-        this.onibus.setVelocityX(-100);
-        this.efeitoSonoroOnibus.play();
-      } else if (this.maquinaEstado.currentState() === "entradaDosPersonagens") {
-        // Se o estado for de entrada dos personagens, inicia a entrada dos personagens
-        this.efeitoSonoroOnibus.stop();
-        this.cerca.setVisible(false);
-        this.npcControll = 1;
-        this.timer = this.time.addEvent({
-          delay: 1500,
-          callback: () => {
-            if (this.npcControll <= 9) {
-              this[`npc0${this.npcControll}`].aluno.setVisible(true);
-              this[`npc0${this.npcControll}`].aluno.setVelocity(0.01, -50);
-              this.npcControll++;
-            }
-            else if (this.npcControll === 10){
-              this.jogador.setVelocity(0, -50).setVisible(true);
-              this.npcControll++;
-            }
-            
-            else if (this.jogador.y < 770){
-                //Quando chegar no ultimo aluno, ele seta posições para eles espalhadas na faculdade e seta colisão entre os alunos e objetos no mapa
-                console.log("teste");
-                this.posicionarNPCs();
-                this.physics.add.collider(this.jogador, this.worldBounds);
-                this.cameras.main.pan(550, 750, 1000);
-                this.timer.remove(); // Remove o timer
-                this.maquinaEstado.transitionTo("prontoParaJogar"); // Transição de estado para pronto para jogar, significando a última animação
-              }
-              
-          },
-          loop: true,
-        });
-      } else if (this.maquinaEstado.currentState() === "prontoParaJogar") {
-        // Se o estado for de pronto para jogar, inicia o jogo, voltando a física e mostrando o joystick
-        this.cerca.setVisible(true);
-        this.joystick.setVisible(true);
-        this.physics.resume();
-        this.cameras.main.startFollow(this.jogador, true)
-        this.onibus.setVelocityX(-150);
-        this.prontoParaJogar = true;
-        this.controlesHabilitados = true;
-        this.maquinaEstado.transitionTo("case");
-        this.seta.setVisible(true);
-        this.animacaoSeta = this.tweens.add({
-          targets: this.seta,
-          x: this.seta.x,
-          y: this.seta.y + 15,
-          duration: 500,
-          yoyo: true,
-          repeat: -1,
-        })
-        this.efeitoSonoroCriancas.play(); // Inicia efeito sonoro das crianças
-        this.events.emit("mostraTarefaInicial");
-      }
-    });
-
-    this.cameras.main.setBounds(0, -400, 1120, 1520);
-    this.cameras.main.setZoom(2.5);
-
-    // Inicializa as variáveis para movimentação do personagem
-    this.keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A);
-    this.keyW = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W); // O código de cada tecla e o modo pelo qual devemos "chamá-la"
-    this.keyS = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S); // encontram-se na linha 115000 do arquivo "phaser.js"
-    this.keyD = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D);
-    this.cursors = this.input.keyboard.createCursorKeys(); // Adiciona as setas do teclado
-
-    //Cria o joystick na cena do principal
-    this.joystick = this.plugins.get("rexvirtualjoystickplugin").add(this, {
-      x: 470,
-      y: 430,
-      radius: 30,
-      base: this.add.circle(0, 0, 30, 0xff0000),
-      thumb: this.add.circle(0, 0, 15, 0xcccccc),
-      minForce: 2,
-    });
-    this.joystick.setScrollFactor(0); // Faz com que o joystick não se mova com a câmera
-    this.joystick.setVisible(false); // Esconde o joystick
-
-
-    
-    // Configuração do NPC Tina
-    this.anims.create({
-      // Cria a animação para a personagem Tina
-      key: "tinaIdle", // Chave que cria o nome para iniciar a animação
-      frames: this.anims.generateFrameNumbers("tina", {
-        start: 0,
-        end: 15,
-      }), // Define quais frames serão utilizados nessa animação
-      frameRate: 10, // Velocidade da animação em frames por segundo
-      repeat: -1, // Indica um loop
-    });
-    this.tina.anims.play("tinaIdle", true); // Inicia a animação tinaIdle
-
-    // Configurações de animação do personagem principal
-    this.anims.create({
-      key: "playerWalkingLeft", // Chave que cria o nome para iniciar a animação
-      frames: this.anims.generateFrameNumbers("jogador", {
-        start: 8,
-        end: 15,
-      }), // Define quais frames serão utilizados nessa animação
-      frameRate: 10, // Velocidade da animação em frames por segundo
-      repeat: -1, // Indica um loop
-    });
-    this.anims.create({
-      key: "playerWalkingRight", // Chave que cria o nome para iniciar a animação
-      frames: this.anims.generateFrameNumbers("jogador", {
-        start: 0,
-        end: 7,
-      }), // Define quais frames serão utilizados nessa animação
-      frameRate: 10, // Velocidade da animação em frames por segundo
-      repeat: -1, // Indica um loop
-    });
-    this.anims.create({
-      key: "playerIdle", // Chave que cria o nome para iniciar a animação
-      frames: this.anims.generateFrameNumbers("jogador", {
-        start: 0,
-        end: 0,
-      }), // Define quais frames serão utilizados nessa animação
-      frameRate: 10, // Velocidade da animação em frames por segundo
-    });
-
-    this.events.on("fecharCase", () => {
-      // Função que fecha o case
-          //  Dispatch a Scene event
-          if (this.iniciarTimer === true){
-            this.events.emit("showTimer");
-            this.musicaIntroducao.stop(); // Para a música de introdução
-            this.musicaJogo.play(); // Inicia a música de jogo
-            this.iniciarTimer = false;
-          }
-          this.events.emit("botaoCase");
-          this.objetoCaso.status = true;
+    })
+    this.cameras.main.on("camerazoomcomplete", () => {
+      this.cameras.main.pan(50, 560, 100);
+        this.maquinaEstado.transitionTo("abrirLivros")
     })
   }
 
   update() {
-    if (this.onibus.x <= 560 && this.maquinaEstado.currentState() === "cameraPanOnibus") {
-      // Se o ônibus chegar na posição 575, ele para e a câmera pan para a entrada dos personagens
-      this.maquinaEstado.transitionTo("entradaDosPersonagens");
-      this.onibus.setVelocityX(0);
-      this.cameras.main.pan(575, 900, 1000);
-      this.cameras.main.stopFollow();
-    }
-    //Chama a função que faz os npcs andarem
-    if (this.maquinaEstado.currentState() === "entradaDosPersonagens") {
-      // Se o estado for de entrada dos personagens, atualiza a animação dos NPCs
-      this.npc01.updateAnimation();
-      this.npc02.updateAnimation();
-      this.npc03.updateAnimation();
-      this.npc04.updateAnimation();
-      this.npc05.updateAnimation();
-      this.npc06.updateAnimation();
-      this.npc07.updateAnimation();
-      this.npc08.updateAnimation();
-      this.npc09.updateAnimation();
-    }
-    // Configuração Joystick
+    // if (this.onibus.x <= 560 && this.maquinaEstado.currentState() === "cameraPanOnibus") {
+    //   // Se o ônibus chegar na posição 575, ele para e a câmera pan para a entrada dos personagens
+    //   this.maquinaEstado.transitionTo("entradaDosPersonagens");
+    //   this.onibus.setVelocityX(0);
+    //   this.cameras.main.pan(575, 900, 1000);
+    //   this.cameras.main.stopFollow();
+    // }
+    // //Chama a função que faz os npcs andarem
+    // if (this.maquinaEstado.currentState() === "entradaDosPersonagens") {
+    //   // Se o estado for de entrada dos personagens, atualiza a animação dos NPCs
+    //   this.npc01.updateAnimation();
+    //   this.npc02.updateAnimation();
+    //   this.npc03.updateAnimation();
+    //   this.npc04.updateAnimation();
+    //   this.npc05.updateAnimation();
+    //   this.npc06.updateAnimation();
+    //   this.npc07.updateAnimation();
+    //   this.npc08.updateAnimation();
+    //   this.npc09.updateAnimation();
+    // }
+    // // Configuração Joystick
     
-    if (this.prontoParaJogar){
-      this.npc01.update();
-      this.npc02.update();
-      this.npc03.update();
-      this.npc04.update();
-      this.npc05.update();
-      this.npc06.update();
-      this.npc07.update();
-      this.npc08.update();
-      this.npc09.update();
-    }
-    console.log(this.prontoParaJogar, this.prontoParaJogar && this.controlesHabilitados)
-    if (this.prontoParaJogar && this.controlesHabilitados) {
-      if (this.joystick.visible) {
-        // Se o joystick estiver visível, ele atualiza a posição do jogador de acordo com o movimento do joystick
-        this.radiansAngleJoystick =
-          (this.fixAngle(this.joystick.angle) * Math.PI) / 180 || 0;
-        this.joystickForce = this.joystick.force < 50 ? this.joystick.force : 50;
-        const velocityJogadorX = (this.defaultVelocity * Math.cos(this.radiansAngleJoystick) * this.joystickForce)
-        const velocityJogadorY = -(this.defaultVelocity * Math.sin(this.radiansAngleJoystick) * this.joystickForce)
-        if (velocityJogadorX > 0) this.jogador.anims.play("playerWalkingRight", true);
-        else if (velocityJogadorX < 0) this.jogador.anims.play("playerWalkingLeft", true);
-        else if (velocityJogadorY == 0) this.jogador.anims.play("playerIdle", true);
-        this.jogador.setVelocityX(velocityJogadorX)
-        this.jogador.setVelocityY(velocityJogadorY)
-      }
-      // Se o estado for de pronto para jogar, ele atualiza a posição do jogador de acordo com as teclas pressionadas
-      // Mapeamento de Inputs
-      if (this.keyA.isDown || this.cursors.left.isDown) {
-        // Verifica se a tecla A está pressionada
-        this.jogador.setVelocityX(-this.defaultVelocity * 50); // Define a velocidade do personagem no eixo X, quando a condição é verdadeira
-        this.joystick.setVisible(false); // Esconde o joystick
-      } else if (this.keyD.isDown || this.cursors.right.isDown) {
-        // Verifica se a tecla D está pressionada
-        this.jogador.setVelocityX(this.defaultVelocity * 50);
-        this.joystick.setVisible(false); // Esconde o joystick
-      } else {
-        if (!this.joystick.visible) {
-          this.jogador.setVelocityX(0);
-        }
-      }
-      if (this.keyS.isDown || this.cursors.down.isDown) {
-        // Verifica se a tecla S está pressionada
-        this.jogador.setVelocityY(this.defaultVelocity * 50);
-        this.joystick.setVisible(false);
-      } else if (this.keyW.isDown || this.cursors.up.isDown) {
-        // Verifica se a tecla W está pressionada
-        this.jogador.setVelocityY(-this.defaultVelocity * 50);
-        this.joystick.setVisible(false);
-      } else {
-        if (!this.joystick.visible) {
-          this.jogador.setVelocityY(0);
-        }
-      }
-      // Movimentação diagonal do personagem, para ele não andar mais rápido que o normal
-      if (
-        (this.keyA.isDown || this.cursors.left.isDown) &&
-        (this.keyW.isDown || this.cursors.up.isDown)
-      ) {
-        this.jogador.setVelocityX(-this.defaultVelocity * 30);
-        this.jogador.setVelocityY(-this.defaultVelocity * 30);
-      }
-      if (
-        (this.keyD.isDown || this.cursors.right.isDown) &&
-        (this.keyW.isDown || this.cursors.up.isDown)
-      ) {
-        this.jogador.setVelocityX(this.defaultVelocity * 30);
-        this.jogador.setVelocityY(-this.defaultVelocity * 30);
-      }
-      if (
-        (this.keyA.isDown || this.cursors.left.isDown) &&
-        (this.keyS.isDown || this.cursors.down.isDown)
-      ) {
-        this.jogador.setVelocityX(-this.defaultVelocity * 30);
-        this.jogador.setVelocityY(this.defaultVelocity * 30);
-      }
-      if (
-        (this.keyD.isDown || this.cursors.right.isDown) &&
-        (this.keyS.isDown || this.cursors.down.isDown)
-      ) {
-        this.jogador.setVelocityX(this.defaultVelocity * 30);
-        this.jogador.setVelocityY(this.defaultVelocity * 30);
-      }
-    }
+    // if (this.prontoParaJogar){
+    //   this.npc01.update();
+    //   this.npc02.update();
+    //   this.npc03.update();
+    //   this.npc04.update();
+    //   this.npc05.update();
+    //   this.npc06.update();
+    //   this.npc07.update();
+    //   this.npc08.update();
+    //   this.npc09.update();
+    // }
+    // console.log(this.prontoParaJogar, this.prontoParaJogar && this.controlesHabilitados)
+    // if (this.prontoParaJogar && this.controlesHabilitados) {
+    //   if (this.joystick.visible) {
+    //     // Se o joystick estiver visível, ele atualiza a posição do jogador de acordo com o movimento do joystick
+    //     this.radiansAngleJoystick =
+    //       (this.fixAngle(this.joystick.angle) * Math.PI) / 180 || 0;
+    //     this.joystickForce = this.joystick.force < 50 ? this.joystick.force : 50;
+    //     const velocityJogadorX = (this.defaultVelocity * Math.cos(this.radiansAngleJoystick) * this.joystickForce)
+    //     const velocityJogadorY = -(this.defaultVelocity * Math.sin(this.radiansAngleJoystick) * this.joystickForce)
+    //     if (velocityJogadorX > 0) this.jogador.anims.play("playerWalkingRight", true);
+    //     else if (velocityJogadorX < 0) this.jogador.anims.play("playerWalkingLeft", true);
+    //     else if (velocityJogadorY == 0) this.jogador.anims.play("playerIdle", true);
+    //     this.jogador.setVelocityX(velocityJogadorX)
+    //     this.jogador.setVelocityY(velocityJogadorY)
+    //   }
+    //   // Se o estado for de pronto para jogar, ele atualiza a posição do jogador de acordo com as teclas pressionadas
+    //   // Mapeamento de Inputs
+    //   if (this.keyA.isDown || this.cursors.left.isDown) {
+    //     // Verifica se a tecla A está pressionada
+    //     this.jogador.setVelocityX(-this.defaultVelocity * 50); // Define a velocidade do personagem no eixo X, quando a condição é verdadeira
+    //     this.joystick.setVisible(false); // Esconde o joystick
+    //   } else if (this.keyD.isDown || this.cursors.right.isDown) {
+    //     // Verifica se a tecla D está pressionada
+    //     this.jogador.setVelocityX(this.defaultVelocity * 50);
+    //     this.joystick.setVisible(false); // Esconde o joystick
+    //   } else {
+    //     if (!this.joystick.visible) {
+    //       this.jogador.setVelocityX(0);
+    //     }
+    //   }
+    //   if (this.keyS.isDown || this.cursors.down.isDown) {
+    //     // Verifica se a tecla S está pressionada
+    //     this.jogador.setVelocityY(this.defaultVelocity * 50);
+    //     this.joystick.setVisible(false);
+    //   } else if (this.keyW.isDown || this.cursors.up.isDown) {
+    //     // Verifica se a tecla W está pressionada
+    //     this.jogador.setVelocityY(-this.defaultVelocity * 50);
+    //     this.joystick.setVisible(false);
+    //   } else {
+    //     if (!this.joystick.visible) {
+    //       this.jogador.setVelocityY(0);
+    //     }
+    //   }
+    //   // Movimentação diagonal do personagem, para ele não andar mais rápido que o normal
+    //   if (
+    //     (this.keyA.isDown || this.cursors.left.isDown) &&
+    //     (this.keyW.isDown || this.cursors.up.isDown)
+    //   ) {
+    //     this.jogador.setVelocityX(-this.defaultVelocity * 30);
+    //     this.jogador.setVelocityY(-this.defaultVelocity * 30);
+    //   }
+    //   if (
+    //     (this.keyD.isDown || this.cursors.right.isDown) &&
+    //     (this.keyW.isDown || this.cursors.up.isDown)
+    //   ) {
+    //     this.jogador.setVelocityX(this.defaultVelocity * 30);
+    //     this.jogador.setVelocityY(-this.defaultVelocity * 30);
+    //   }
+    //   if (
+    //     (this.keyA.isDown || this.cursors.left.isDown) &&
+    //     (this.keyS.isDown || this.cursors.down.isDown)
+    //   ) {
+    //     this.jogador.setVelocityX(-this.defaultVelocity * 30);
+    //     this.jogador.setVelocityY(this.defaultVelocity * 30);
+    //   }
+    //   if (
+    //     (this.keyD.isDown || this.cursors.right.isDown) &&
+    //     (this.keyS.isDown || this.cursors.down.isDown)
+    //   ) {
+    //     this.jogador.setVelocityX(this.defaultVelocity * 30);
+    //     this.jogador.setVelocityY(this.defaultVelocity * 30);
+    //   }
+    // }
 
-    // Verifica se o jogador está parado e roda animação de idle quando ele está
-    if (
-      this.jogador.body.velocity.x === 0 &&
-      this.jogador.body.velocity.y === 0
-    ) {
-      this.jogador.anims.play("playerIdle", true);
-    }
-    // Verifica se o jogador está se movendo e roda animação de movimento quando ele está, considerando a direção que ele está indo
-    if (this.jogador.body.velocity.x > 0)
-      this.jogador.anims.play("playerWalkingRight", true);
-    else if (this.jogador.body.velocity.x < 0)
-      this.jogador.anims.play("playerWalkingLeft", true);
-    else if (
-      this.jogador.body.velocity.y !== 0 &&
-      this.jogador.body.velocity.x === 0
-    )
-      this.jogador.anims.play("playerWalkingRight", true);
+    // // Verifica se o jogador está parado e roda animação de idle quando ele está
+    // if (
+    //   this.jogador.body.velocity.x === 0 &&
+    //   this.jogador.body.velocity.y === 0
+    // ) {
+    //   this.jogador.anims.play("playerIdle", true);
+    // }
+    // // Verifica se o jogador está se movendo e roda animação de movimento quando ele está, considerando a direção que ele está indo
+    // if (this.jogador.body.velocity.x > 0)
+    //   this.jogador.anims.play("playerWalkingRight", true);
+    // else if (this.jogador.body.velocity.x < 0)
+    //   this.jogador.anims.play("playerWalkingLeft", true);
+    // else if (
+    //   this.jogador.body.velocity.y !== 0 &&
+    //   this.jogador.body.velocity.x === 0
+    // )
+    //   this.jogador.anims.play("playerWalkingRight", true);
 
 
-    if (Phaser.Math.Between(0, 1000) > 980 && !this.newCar && this.prontoParaJogar){
-      // Sorteia um novo carro para aparecer na tela
-      this.newCar = this.sortearCarro();
-    }
-    if (this.newCar && (this.newCar.x > 1170 || this.newCar.x < -50)) {
-      // Se o carro sair da tela, ele é destruído
-      this.newCar.destroy();
-      this.newCar = null;
-    }
-    if (this.onibus.x < -200 && this.prontoParaJogar && this.onibus){
-      // Se o ônibus sair da tela, ele é destruído
-      this.onibus.destroy();
-    }
+    // if (Phaser.Math.Between(0, 1000) > 980 && !this.newCar && this.prontoParaJogar){
+    //   // Sorteia um novo carro para aparecer na tela
+    //   this.newCar = this.sortearCarro();
+    // }
+    // if (this.newCar && (this.newCar.x > 1170 || this.newCar.x < -50)) {
+    //   // Se o carro sair da tela, ele é destruído
+    //   this.newCar.destroy();
+    //   this.newCar = null;
+    // }
+    // if (this.onibus.x < -200 && this.prontoParaJogar && this.onibus){
+    //   // Se o ônibus sair da tela, ele é destruído
+    //   this.onibus.destroy();
+    // }
   }
 
   fixAngle(angle) {
