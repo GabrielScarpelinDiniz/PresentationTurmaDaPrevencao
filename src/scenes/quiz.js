@@ -126,19 +126,25 @@ class Quiz extends Phaser.Scene {
             const pageDown = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.PAGE_DOWN);
             pageDown.on("up", () => {
                 if (this.alternativaRespondida){
-                    this.alternativaRespondida = false;
-                    this.cenaHUD.textoTempoDescontado.setVisible(false);
-                    this.cenaHUD.fundoTempoDescontado.setVisible(false);
-                    this.primeiraCena.controlesHabilitados = true;
-                    this.alternativa1.destroy();
-                    this.alternativa2.destroy();
-                    this.textoExplicacaoAlternativaErrada.destroy();
-                    this.textoExplicacaoAlternativaCerta.destroy();
-                    this.primeiraCena.events.emit("fimApresentacao");
-                    this.scene.sleep("quiz");
-                    // Reinicia a cena para cada vez que ocorre o overlap com a tenda o quiz voltar a sua forma padrão para que o jogador possa jogar de novo
-                    this.scene.restart();
-                    // Resume a física na cena "cenaPrincipal", é útil se a cena principal contiver objetos físicos em movimento ou interações físicas que precisem ser retomadas após o término do quiz
+                    if (!this.trailer){
+                        this.trailer = this.add.video(640, 360, "trailer").setOrigin(0.5).play();
+                        const pageUp = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.PAGE_UP);
+                        pageUp.on("up", () => {
+                            if (this.trailer){
+                                this.trailer.setPaused(!this.trailer.isPaused());
+                            }
+                        })
+                        this.trailer.once("complete", () => {
+                            this.scene.stop("cenaPrincipal");
+                            this.scene.stop("cenaHUD");
+                            this.scene.sleep("livros");
+                            this.scene.sleep("cenaCases");
+                            this.primeiraCena.musicaIntroducao.destroy();
+                            this.scene.start("GameOver", {
+                                pontuacao: this.pontuacao,
+                            });
+                        })
+                    }
                 }
                 else {
                     this.verificarResposta(1, caso.quiz.alternativaCorreta);

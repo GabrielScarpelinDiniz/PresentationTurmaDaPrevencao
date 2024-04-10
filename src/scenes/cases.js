@@ -73,21 +73,21 @@ class CenaCases extends Phaser.Scene {
             this.primeiraCena.controlesHabilitados = false; // Desabilita os controles do jogador
             const caso = this.primeiraCena.objetoCaso.caso;
             this.efeitoSonoroBotaoX.play(); // Efeito sonoro do botão de fechar
-            this.case1.setVisible(true);
-            this.botaoX.setVisible(true); // Mostra o botão de fechar
+            this.case1.setVisible(false);
+            this.botaoX.setVisible(false); // Mostra o botão de fechar
             this.nomeTexto ? this.nomeTexto.destroy() : null; // Verifica se o texto já existe, se sim, destroi
             this.casoTexto ? this.casoTexto.destroy() : null;
             this.sintomasTexto ? this.sintomasTexto.destroy() : null;
             this.classificacaoTexto ? this.classificacaoTexto.destroy() : null;
             this.casoImage ? this.casoImage.destroy() : null;
-            this.nomeTexto = this.add.text(this.centroX, this.centroY - 220, caso.nome, { fontSize: '36px', fill: '#000000', backgroundColor: "#5CE1E6", padding: {x: 10, y: 10} }).setVisible(true).setOrigin(0.5); // Adiciona o nome do caso importando do JSON
-            this.casoImage = this.add.image(this.centroX, this.centroY - 100, caso.fotoKey).setScale(0.40).setVisible(true); // Adiciona a imagem do caso importando do JSON
+            this.nomeTexto = this.add.text(this.centroX, this.centroY - 220, caso.nome, { fontSize: '36px', fill: '#000000', padding: {x: 10, y: 10} }).setVisible(true).setOrigin(0.5); // Adiciona o nome do caso importando do JSON
+            this.casoImage = this.add.image(this.centroX, this.centroY + 100, caso.fotoKey).setScale(0.90).setVisible(true); // Adiciona a imagem do caso importando do JSON
             this.casoTexto = this.add.bitmapText(this.centroX - 210, this.centroY, "iosevka", caso.desc, 28).setVisible(true).setMaxWidth(450); // Adiciona a descrição do caso importando do JSON
             for (let i = 0; i < caso.colored.length; i++){
                 this.casoTexto.setWordTint(caso.colored[i], 1, true, 0x0000ff, 0x0000ff, 0x0000ff, 0x0000ff); // Adiciona a cor azul para as palavras que estão no array colored
             }
-            this.sintomasTexto = this.add.bitmapText(this.centroX - 210, this.centroY + this.casoTexto.height + 10, "iosevka", "Sintomas: "+caso.sintomas, 24).setVisible(true).setMaxWidth(450); // Adiciona os sintomas do caso importando do JSON
-            this.classificacaoTexto = this.add.bitmapText(this.centroX - 210, this.centroY + this.casoTexto.height + this.sintomasTexto.height + 20, "iosevka", "Classificação: "+caso.classificacao, 24).setVisible(true).setMaxWidth(450).setWordTint(caso.classificacao.split(" ")[0], 1, true, Number(caso.classificacaoCor), Number(caso.classificacaoCor), Number(caso.classificacaoCor), Number(caso.classificacaoCor)); // Adiciona a classificação do caso importando do JSON
+            this.sintomasTexto = this.add.bitmapText(this.centroX - 210, this.centroY + this.casoTexto.height + 10, "iosevka", ""+caso.sintomas, 24).setVisible(true).setMaxWidth(450); // Adiciona os sintomas do caso importando do JSON
+            this.classificacaoTexto = this.add.bitmapText(this.centroX - 210, this.centroY + this.casoTexto.height + this.sintomasTexto.height + 20, "iosevka", ""+caso.classificacao, 24).setVisible(true).setMaxWidth(450).setWordTint(caso.classificacao.split(" ")[0], 1, true, Number(caso.classificacaoCor), Number(caso.classificacaoCor), Number(caso.classificacaoCor), Number(caso.classificacaoCor)); // Adiciona a classificação do caso importando do JSON
             this.primeiraCena.controlesHabilitados = false; // Desabilita os controles do jogador
             this.primeiraCena.jogador.setVelocity(0, 0); // Para o jogador
             

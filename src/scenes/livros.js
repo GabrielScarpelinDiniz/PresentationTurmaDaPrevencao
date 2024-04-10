@@ -37,6 +37,8 @@ class Livros extends Phaser.Scene {
         this.load.image("amareloPag2", "src/assets/paginaCases/amareloPag2.png");
         this.load.image("amareloPag3", "src/assets/paginaCases/amareloPag3.png");
         this.load.image("amareloPag4", "src/assets/paginaCases/amareloPag4.png");
+        this.load.image("amareloPag5", "src/assets/paginaCases/amareloPag5.png");
+        this.load.image("amareloPag6", "src/assets/paginaCases/amareloPag6.png");
 
         this.load.image("vermelhoPag1", "src/assets/paginaCases/vermelhoPag1.png");
         this.load.image("vermelhoPag2", "src/assets/paginaCases/vermelhoPag2.png");
@@ -49,6 +51,9 @@ class Livros extends Phaser.Scene {
         this.load.image("terceirograu1", "src/assets/paginasIniciais/terceirograu1.png");
         this.load.image("terceirograu2", "src/assets/paginasIniciais/terceirograu2.png");
         this.load.image("setaVoltar", "src/assets/setaVoltar.png")
+        this.load.image("problemaTexto", "src/assets/problema.png");
+        this.load.image("mercadoTexto", "src/assets/mercado.png");
+        this.load.image("solucaoTexto", "src/assets/solucao.png");
     }
 
     create() {
@@ -65,13 +70,42 @@ class Livros extends Phaser.Scene {
         this.livroVermelhoAberto = this.add.image(640, 350, "livroVermelhoAberto").setScale(2.6).setVisible(false);
         this.livroVerdeAberto = this.add.image(640, 350, "livroVerdeAberto").setScale(2.6).setVisible(false);
         this.paginasVerde = [this.add.image(400, 325, "verdePag1").setVisible(false), this.add.image(850, 325, "verdePag2").setVisible(false), this.add.image(400, 325, "verdePag3").setVisible(false), this.add.image(850, 325, "verdePag4").setVisible(false), this.add.image(400, 325, "verdePag5").setVisible(false), this.add.image(850, 325, "verdePag6").setVisible(false), this.add.image(400, 325, "verdePag7").setVisible(false), this.add.image(850, 325, "verdePag8").setVisible(false)];
-        this.paginasAmarela = [this.add.image(400, 325, "amareloPag1").setVisible(false), this.add.image(850, 325, "amareloPag2").setVisible(false), this.add.image(400, 325, "amareloPag3").setVisible(false), this.add.image(850, 325, "amareloPag4").setVisible(false)];
+        this.paginasAmarela = [this.add.image(400, 325, "amareloPag1").setVisible(false), this.add.image(850, 325, "amareloPag2").setVisible(false), this.add.image(400, 325, "amareloPag3").setVisible(false), this.add.image(850, 325, "amareloPag4").setVisible(false), this.add.image(400, 325, "amareloPag5").setVisible(false), this.add.image(850, 325, "amareloPag6").setVisible(false)];
         this.paginasVermelha = [this.add.image(400, 325, "vermelhoPag1").setVisible(false), this.add.image(850, 325, "vermelhoPag2").setVisible(false)];
         // inicia os objetos iniciais da cena livro
         // Adiciona efeito sonoro de virar a página
         this.efeitoSonoroVirarPagina = this.sound.add("efeitoSonoroVirarPagina", {
             volume: 0.5
         });
+        this.problemaTexto = this.add.image(240, 150, "problemaTexto").setScale(1).setVisible(true);
+        this.mercadoTexto = this.add.image(640, 150, "mercadoTexto").setScale(1).setVisible(true);
+        this.solucaoTexto = this.add.image(1040, 150, "solucaoTexto").setScale(1).setVisible(true);
+        this.tweenProblema = this.tweens.add({
+            targets: this.problemaTexto,
+            y: 170,
+            duration: 500,
+            ease: "Linear",
+            yoyo: true,
+            loop: -1
+        
+        })
+        this.tweenMercado = this.tweens.add({
+            targets: this.mercadoTexto,
+            y: 170,
+            duration: 500,
+            ease: "Linear",
+            yoyo: true,
+            loop: -1
+        }).pause();
+        this.tweenSolucao = this.tweens.add({
+            targets: this.solucaoTexto,
+            y: 170,
+            duration: 500,
+            ease: "Linear",
+            yoyo: true,
+            loop: -1
+        }).pause();
+
         const pageDown = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.PAGE_DOWN);
         const pageUp = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.PAGE_UP);
         
@@ -133,12 +167,28 @@ class Livros extends Phaser.Scene {
             this.paginasVermelha.forEach(pagina => {
                 pagina.setVisible(false);
             });
+            this.problemaTexto.setVisible(true);
+            this.mercadoTexto.setVisible(true);
+            this.solucaoTexto.setVisible(true);
+            if (!this.tweenProblema.isPlaying()){
+                this.tweenProblema.play();
+            }
+            if (this.tweenMercado.isPlaying()){
+                this.tweenMercado.pause();
+            }
+            if (this.tweenSolucao.isPlaying()){
+                this.tweenSolucao.pause();
+            }
+
         }
         if (this.maquinaEstado.currentState()  >= 2 && this.maquinaEstado.currentState() < 2 + this.paginasVermelha.length) {
             this.livroVerde.setVisible(false);
             this.livroAmarelo.setVisible(false);
             this.livroVermelho.setVisible(false);
             this.livroVermelhoAberto.setVisible(true);
+            this.problemaTexto.setVisible(false);
+            this.mercadoTexto.setVisible(false);
+            this.solucaoTexto.setVisible(false);
             this.paginasVermelha[this.maquinaEstado.currentState() - 2].setVisible(true);
             this.paginasVermelha[this.maquinaEstado.currentState() - 1].setVisible(true);
         }
@@ -147,6 +197,9 @@ class Livros extends Phaser.Scene {
             this.livroAmarelo.setVisible(false);
             this.livroVermelho.setVisible(false);
             this.livroAmareloAberto.setVisible(true);
+            this.problemaTexto.setVisible(false);
+            this.mercadoTexto.setVisible(false);
+            this.solucaoTexto.setVisible(false);
             this.paginasAmarela[this.maquinaEstado.currentState() - 4 - this.paginasVermelha.length].setVisible(true);
             this.paginasAmarela[this.maquinaEstado.currentState() - 3 - this.paginasVermelha.length].setVisible(true);
         }
@@ -155,6 +208,9 @@ class Livros extends Phaser.Scene {
             this.livroAmarelo.setVisible(false);
             this.livroVermelho.setVisible(false);
             this.livroVerdeAberto.setVisible(true);
+            this.problemaTexto.setVisible(false);
+            this.mercadoTexto.setVisible(false);
+            this.solucaoTexto.setVisible(false);
             this.paginasVerde[this.maquinaEstado.currentState() - 6 - this.paginasVermelha.length - this.paginasAmarela.length].setVisible(true);
             this.paginasVerde[this.maquinaEstado.currentState() - 5 - this.paginasVermelha.length - this.paginasAmarela.length].setVisible(true);
         }
@@ -174,6 +230,18 @@ class Livros extends Phaser.Scene {
             this.paginasVermelha.forEach(pagina => {
                 pagina.setVisible(false);
             });
+            this.problemaTexto.setVisible(true);
+            this.mercadoTexto.setVisible(true);
+            this.solucaoTexto.setVisible(true);
+            if (this.tweenProblema.isPlaying()){
+                this.tweenProblema.pause();
+            }
+            if (!this.tweenMercado.isPlaying()){
+                this.tweenMercado.play();
+            }
+            if (this.tweenSolucao.isPlaying()){
+                this.tweenSolucao.pause();
+            }
         }
         if (this.maquinaEstado.currentState() === this.paginasVermelha.length + this.paginasAmarela.length + 4){
             this.livroVerde.setVisible(true);
@@ -191,6 +259,18 @@ class Livros extends Phaser.Scene {
             this.paginasVermelha.forEach(pagina => {
                 pagina.setVisible(false);
             });
+            this.problemaTexto.setVisible(true);
+            this.mercadoTexto.setVisible(true);
+            this.solucaoTexto.setVisible(true);
+            if (this.tweenProblema.isPlaying()){
+                this.tweenProblema.pause();
+            }
+            if (this.tweenMercado.isPlaying()){
+                this.tweenMercado.pause();
+            }
+            if (!this.tweenSolucao.isPlaying()){
+                this.tweenSolucao.play();
+            }
         }
         if (this.maquinaEstado.currentState() === this.paginasVerde.length + this.paginasAmarela.length + this.paginasVermelha.length + 6){
             this.livroVerde.setVisible(true);
@@ -199,6 +279,9 @@ class Livros extends Phaser.Scene {
             this.livroAmareloAberto.setVisible(false);
             this.livroVermelhoAberto.setVisible(false);
             this.livroVerdeAberto.setVisible(false);
+            this.problemaTexto.setVisible(true);
+            this.mercadoTexto.setVisible(true);
+            this.solucaoTexto.setVisible(true);
             this.paginasVerde.forEach(pagina => {
                 pagina.setVisible(false);
             });
@@ -208,6 +291,15 @@ class Livros extends Phaser.Scene {
             this.paginasVermelha.forEach(pagina => {
                 pagina.setVisible(false);
             });
+            if (this.tweenProblema.isPlaying()){
+                this.tweenProblema.pause();
+            }
+            if (this.tweenMercado.isPlaying()){
+                this.tweenMercado.pause();
+            }
+            if (this.tweenSolucao.isPlaying()){
+                this.tweenSolucao.pause();
+            }
         }
     }
 }

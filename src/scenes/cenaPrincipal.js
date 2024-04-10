@@ -4,7 +4,7 @@ class CenaPrincipal extends Phaser.Scene {
   joystickForce = 0;
   atualDialogoIndice = 0;
   dialogo = [
-    `Bom dia, Intelers! Estamos fazendo um projeto social para coscientizar jovens sobre prevenção de queimaduras, vocês podem nos ajudar a evitar casos como esse?`, 
+    `Bom dia, Intelers! Estamos fazendo um projeto social para conscientizar jovens sobre prevenção de queimaduras, vocês podem nos ajudar a evitar casos como esse?`, 
   //NEW DIALOGUE
   "A dinâmica funciona em ciclos e cada um deles terá 3 passos. O primeiro passo, é ler o case que irei entregar à vocês;", 
   "O segundo passo é estudar o case na tenda de livros, aqui mesmo. Lá vocês encontrarão 3 livros, cada um com uma informação diferente. A informação correta está em um dos livros.",
@@ -93,7 +93,12 @@ class CenaPrincipal extends Phaser.Scene {
     this.load.image("tenda_quiz", "src/assets/tilemaps/tenda_quiz.png");
     this.load.image("Tree-Sheet", "src/assets/tilemaps/Tree-Sheet.png");
     this.load.image("terrain", "src/assets/tilemaps/terrain.png");
-    
+    this.load.video({
+      key: 'trailer',
+      url: [ 'src/assets/video/trailer.mp4' ],
+      asBlob: false,
+      noAudio: false
+    });
 
     this.load.image("botaoX", "src/assets/botaoX.png");
     this.load.image("botaoCase_baixo", "src/assets/botaoCase_baixo.png");
@@ -169,12 +174,12 @@ class CenaPrincipal extends Phaser.Scene {
     this.overlapCollider;
     this.objetoCaso = {
       caso: {
-        nome: "VÍTIMA ANÔNIMA",
+        nome: "",
         fotoKey: "caseReal",
-        desc: "Durante um almoço em família, uma toalha foi colocada sobre a mesa. Uma criança, ao brincar perto da mesa, acabou puxando a toalha sem perceber e derrubou uma panela com água fervendo sobre si mesma.",
+        desc: "",
         colored: ["toalha", "panela", "água", "fervendo", "mesa"],
-        sintomas: "Queimaduras em 60% do corpo, com áreas de pele carbonizada e ausência de sensibilidade ao toque.",
-        classificacao: "TERCEIRO GRAU",
+        sintomas: "",
+        classificacao: "",
         classificacaoCor: "0xFF0000",
         quiz: {
           pergunta: "O que poderia ter feito para evitar esse tipo de queimadura?",
@@ -185,7 +190,7 @@ class CenaPrincipal extends Phaser.Scene {
           alternativaCorreta: 1
         },
         feedbackRespostaErrada: "Ops! Essa resposta está incorreta. Em casos de queimaduras de 3º Grau, é essencial não mover a vítima e chamar imediatamente uma equipe médica especializada.",
-        feedbackRespostaCerta: "Parabéns! Em casos de queimaduras de 3º Grau, é essencial não mover a vítima e chamar imediatamente uma equipe médica, muito menos tocar nela."
+        feedbackRespostaCerta: "Parabéns! Você acertou! Jogar turma da prevenção é uma ótima maneira de prevenir acidentes domésticos."
       },
       status: false,
     };
@@ -199,7 +204,7 @@ class CenaPrincipal extends Phaser.Scene {
     // Adiciona a música de introdução
     this.musicaIntroducao = this.sound.add("musicaIntroducao", {
       loop: true,
-      volume: 0.5,
+      volume: 0,
     }); // Adiciona a música de introdução
     this.musicaJogo = this.sound.add("musicaJogo", {
       loop: false,

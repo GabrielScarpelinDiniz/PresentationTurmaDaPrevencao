@@ -120,7 +120,30 @@ class MenuPrincipal extends Phaser.Scene {
       })
       // this.openFullScreen()
     })
-
+    const pageDown = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.PAGE_DOWN);
+    const pageUp = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.PAGE_UP);
+    pageUp.on("up", ()=> {
+      if (!this.scale.isFullscreen) {
+        this.scale.startFullscreen();
+      }
+    })
+    pageDown.on("up", () => {
+      this.efeitoSonoroBotaoIniciar.play();
+      if (!this.scale.isFullscreen) {
+        this.scale.startFullscreen();
+      }
+      this.cameras.main.fadeOut(1000, 0, 0, 0)
+      // Realiza FadeOut antes de passar para próxima cena
+      this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE, (cam, effect) => {
+        this.time.delayedCall(1000, () => {
+          this.scene.start("cenaPrincipal", { from: "menu" })
+          this.scene.start("cenaHUD")
+          this.scene.restart("cenaHUD");
+          this.scene.stop("menu")
+          this.input.setDefaultCursor("default") // Retorno do cursor do mouse para setinha
+        })
+      })
+    })
     this.scene.sleep("livros");
     this.scene.sleep("quiz");
 
