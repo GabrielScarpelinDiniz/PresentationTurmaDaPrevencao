@@ -21,12 +21,13 @@ class CenaCases extends Phaser.Scene {
         this.load.image("penelope", "src/assets/cases/pessoas/penelope.png");
         this.load.image("pepita", "src/assets/cases/pessoas/pepita.png");
         this.load.image("tony", "src/assets/cases/pessoas/tony.png");
+        this.load.image("caseReal", "src/assets/cases/pessoas/casoReal.jpg");
         this.load.bitmapFont("pixelBitmapFont", "src/assets/fonts/pixel_0.png", "src/assets/fonts/pixel.fnt");
     }
 
     create() {   
         this.primeiraCena = this.scene.get("cenaPrincipal"); // Pega a cena principal para pausar o jogo
-
+        this.caseAberto = false; // Variável para verificar se o case está aberto
         // Reserva as posições de X e Y da câmera
         this.centroX = this.cameras.main.worldView.x + this.cameras.main.width / 2;
         this.centroY = this.cameras.main.worldView.y + this.cameras.main.height / 2;
@@ -67,6 +68,7 @@ class CenaCases extends Phaser.Scene {
 
         this.abrirCase = this.scene.get("cenaHUD"); // Pega a cena HUD para abrir o case       
         const abrirCase = () => {
+            this.caseAberto = true;
             // Adiciona as informações do caso na tela de casos
             this.primeiraCena.controlesHabilitados = false; // Desabilita os controles do jogador
             const caso = this.primeiraCena.objetoCaso.caso;
@@ -92,5 +94,21 @@ class CenaCases extends Phaser.Scene {
         }
         this.abrirCase.events.on("abrirCase", abrirCase, this); // Evento para abrir o case
         this.primeiraCena.events.on("abrirCase", abrirCase, this); // Evento para abrir o case
+        const pageDown = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.PAGE_DOWN);
+        pageDown.on("up", () => {
+            if (this.caseAberto){
+                this.efeitoSonoroBotaoX.play();
+                this.nomeTexto.destroy();
+                this.casoTexto.destroy();
+                this.sintomasTexto.destroy();
+                this.classificacaoTexto.destroy();
+                this.casoImage.destroy();
+                this.case1.setVisible(false);
+                this.botaoX.setVisible(false);
+                this.primeiraCena.events.emit("fecharCase");
+                this.caseAberto = false;    
+                this.primeiraCena.controlesHabilitados = true; // Habilita os controles do jogador
+            }
+        })
     } 
 }

@@ -123,27 +123,35 @@ class Quiz extends Phaser.Scene {
                     width: 500
                 }
             }).setOrigin(0.5).setVisible(false);
+            const pageDown = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.PAGE_DOWN);
+            pageDown.on("up", () => {
+                if (this.alternativaRespondida){
+                    this.alternativaRespondida = false;
+                    this.cenaHUD.textoTempoDescontado.setVisible(false);
+                    this.cenaHUD.fundoTempoDescontado.setVisible(false);
+                    this.primeiraCena.controlesHabilitados = true;
+                    this.alternativa1.destroy();
+                    this.alternativa2.destroy();
+                    this.textoExplicacaoAlternativaErrada.destroy();
+                    this.textoExplicacaoAlternativaCerta.destroy();
+                    this.primeiraCena.events.emit("fimApresentacao");
+                    this.scene.sleep("quiz");
+                    // Reinicia a cena para cada vez que ocorre o overlap com a tenda o quiz voltar a sua forma padrão para que o jogador possa jogar de novo
+                    this.scene.restart();
+                    // Resume a física na cena "cenaPrincipal", é útil se a cena principal contiver objetos físicos em movimento ou interações físicas que precisem ser retomadas após o término do quiz
+                }
+                else {
+                    this.verificarResposta(1, caso.quiz.alternativaCorreta);
+                    this.alternativaRespondida = true;
+                }
+            })
         })
 
 
         // Adicionando o botão "X" para voltar à cena principal
         const botaoX = this.add.image(bgWhite.x + 300, bgWhite.y - 200, "x").setScale(0.3).setInteractive();
-        botaoX.on("pointerdown", () => {
-            // Pausa a cena atual ("quiz")
-            this.alternativaRespondida = false;
-            this.cenaHUD.textoTempoDescontado.setVisible(false);
-            this.cenaHUD.fundoTempoDescontado.setVisible(false);
-            this.primeiraCena.controlesHabilitados = true;
-            this.alternativa1.destroy();
-            this.alternativa2.destroy();
-            this.textoExplicacaoAlternativaErrada.destroy();
-            this.textoExplicacaoAlternativaCerta.destroy();
-            this.scene.sleep("quiz");
-            // Reinicia a cena para cada vez que ocorre o overlap com a tenda o quiz voltar a sua forma padrão para que o jogador possa jogar de novo
-            this.scene.restart();
-            // Resume a física na cena "cenaPrincipal", é útil se a cena principal contiver objetos físicos em movimento ou interações físicas que precisem ser retomadas após o término do quiz
-            
-        });
+        
+        
     }
 
     verificarResposta(resposta, alternativaCorreta) {

@@ -4,11 +4,7 @@ class CenaPrincipal extends Phaser.Scene {
   joystickForce = 0;
   atualDialogoIndice = 0;
   dialogo = [
-    `Bom dia, alunos e alunas!
-Bem-vindos à Faculdade de Medicina da USP.
-Eu sou a Dra. Tina e serei a instrutora de vocês.
-Hoje é um dia muito especial... O Dia da Prevenção!!
-Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos acerca do tema...... QUEIMADURAS!`, 
+    `Bom dia, Intelers! Estamos fazendo um projeto social para coscientizar jovens sobre prevenção de queimaduras, vocês podem nos ajudar a evitar casos como esse?`, 
   //NEW DIALOGUE
   "A dinâmica funciona em ciclos e cada um deles terá 3 passos. O primeiro passo, é ler o case que irei entregar à vocês;", 
   "O segundo passo é estudar o case na tenda de livros, aqui mesmo. Lá vocês encontrarão 3 livros, cada um com uma informação diferente. A informação correta está em um dos livros.",
@@ -159,6 +155,7 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
   }
 
   create() {
+    const pageDown = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.PAGE_DOWN);
     this.prontoParaJogar = false;
     this.maquinaEstado = new StateMachine("cameraPanParaDialogoInicial");
     this.sorteados = [];
@@ -171,7 +168,25 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
     this.centroY = this.cameras.main.worldView.y + this.cameras.main.height / 2; // Reserva as posições de X e Y da câmera
     this.overlapCollider;
     this.objetoCaso = {
-      caso: null,
+      caso: {
+        nome: "VÍTIMA ANÔNIMA",
+        fotoKey: "caseReal",
+        desc: "Durante um almoço em família, uma toalha foi colocada sobre a mesa. Uma criança, ao brincar perto da mesa, acabou puxando a toalha sem perceber e derrubou uma panela com água fervendo sobre si mesma.",
+        colored: ["toalha", "panela", "água", "fervendo", "mesa"],
+        sintomas: "Queimaduras em 60% do corpo, com áreas de pele carbonizada e ausência de sensibilidade ao toque.",
+        classificacao: "TERCEIRO GRAU",
+        classificacaoCor: "0xFF0000",
+        quiz: {
+          pergunta: "O que poderia ter feito para evitar esse tipo de queimadura?",
+          alternativas: [
+            "Aplicar gelo na área queimada para aliviar a dor",
+            "Jogar Turma da Prevenção"
+          ],
+          alternativaCorreta: 1
+        },
+        feedbackRespostaErrada: "Ops! Essa resposta está incorreta. Em casos de queimaduras de 3º Grau, é essencial não mover a vítima e chamar imediatamente uma equipe médica especializada.",
+        feedbackRespostaCerta: "Parabéns! Em casos de queimaduras de 3º Grau, é essencial não mover a vítima e chamar imediatamente uma equipe médica, muito menos tocar nela."
+      },
       status: false,
     };
 
@@ -263,14 +278,12 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
         this.dialogBox.setVisible(true);
         this.cameras.main.setBounds(0, 0, 1120, 1120);
         this.dialogText = new TypeWritter(this, 420, 353, "iosevka", this.dialogo[0], 16, 20, () => {
-        this.dialogBox.once("pointerdown", () => {
-          console.log("teste0")
-          this.maquinaEstado.transitionTo("cameraPanSegundoDialogo");
-          this.cameras.main.pan(0, 645, 1000);
-          this.dialogBox.setVisible(false);
-          this.botaoCheck.setVisible(false);
-          this.dialogText.setVisible(false);
-        });
+          pageDown.once("up", () => {
+            this.dialogText.destroy();
+            this.botaoCheck.setVisible(false);
+            this.dialogBox.setVisible(false);
+            this.events.emit("abrirCase")
+          })
         }).setMaxWidth(380).setScrollFactor(0).setInteractive().on("pointerdown", () => { this.dialogText.skip()});
       }
       if (this.maquinaEstado.currentState() === "cameraPanSegundoDialogo") {
@@ -282,7 +295,9 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
         this.scene.wake("livros");
       }
       if (this.maquinaEstado.currentState() === "cameraPanParaTendaQuiz") {
-        console.log("teste")
+        this.cameras.main.pan(1000, 560, 1000);
+        this.cameras.main.zoomTo(4, 1000);
+        this.maquinaEstado.transitionTo("zoomTendaQuiz")
       }
     })
     this.cameras.main.on("camerazoomcomplete", () => {
@@ -294,11 +309,23 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
         this.cameras.main.pan(1000, 560, 1000);
         this.maquinaEstado.transitionTo("cameraPanParaTendaQuiz");
       }
+      else if (this.maquinaEstado.currentState() === "zoomTendaQuiz") {
+        this.cameras.main.zoomTo(2.2, 1000);
+        this.maquinaEstado.transitionTo("removeZoom");
+      }
+      else if (this.maquinaEstado.currentState() === "removeZoom") {
+        this.scene.wake("quiz");
+        this.events.emit("abrirQuiz");
+      }
     })
     this.events.on("tendaQuiz", () => {
       this.cameras.main.zoomTo(2.2, 1000);
       this.maquinaEstado.transitionTo("zoomOut");
     });
+    this.events.on("fecharCase", () => {
+      this.maquinaEstado.transitionTo("cameraPanSegundoDialogo");
+      this.cameras.main.pan(0, 645, 1000);
+    })
   }
 
   update() {

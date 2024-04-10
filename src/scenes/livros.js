@@ -58,9 +58,9 @@ class Livros extends Phaser.Scene {
         // this.eventoGatilho.on("tendaLivros", () => {
         // Adiciona o background e livros a serem apresentados na cena
         this.add.image(0, 0, "backgroundLivros").setOrigin(0, 0).setScale(2);
-        this.livroVerde = this.add.image(100, 200, "livroVerde").setOrigin(0, 0).setScale(1.6).setInteractive();
+        this.livroVerde = this.add.image(900, 200, "livroVerde").setOrigin(0, 0).setScale(1.6).setInteractive();
         this.livroAmarelo = this.add.image(500, 200, "livroAmarelo").setOrigin(0, 0).setScale(1.6).setInteractive();
-        this.livroVermelho = this.add.image(900, 200, "livroVermelho").setOrigin(0, 0).setScale(1.6).setInteractive();
+        this.livroVermelho = this.add.image(100, 200, "livroVermelho").setOrigin(0, 0).setScale(1.6).setInteractive();
         this.livroAmareloAberto = this.add.image(640, 350, "livroAmareloAberto").setScale(2.6).setVisible(false);
         this.livroVermelhoAberto = this.add.image(640, 350, "livroVermelhoAberto").setScale(2.6).setVisible(false);
         this.livroVerdeAberto = this.add.image(640, 350, "livroVerdeAberto").setScale(2.6).setVisible(false);
@@ -78,17 +78,17 @@ class Livros extends Phaser.Scene {
         pageDown.on("up", () => {
             console.log(this.maquinaEstado.currentState());
             this.efeitoSonoroVirarPagina.play();
-            if (this.maquinaEstado.currentState() >= 2 && this.maquinaEstado.currentState() <= this.paginasVerde.length){
-                this.paginasVerde[this.maquinaEstado.currentState() - 2].setVisible(false);
-                this.paginasVerde[this.maquinaEstado.currentState() - 1].setVisible(false);
+            if (this.maquinaEstado.currentState() >= 2 && this.maquinaEstado.currentState() <= this.paginasVermelha.length){
+                this.paginasVermelha[this.maquinaEstado.currentState() - 2].setVisible(false);
+                this.paginasVermelha[this.maquinaEstado.currentState() - 1].setVisible(false);
             }
-            if (this.maquinaEstado.currentState() > 2 + this.paginasVerde.length && this.maquinaEstado.currentState() <= 2 + this.paginasVerde.length + this.paginasAmarela.length){
-                this.paginasAmarela[this.maquinaEstado.currentState() - 4 - this.paginasVerde.length].setVisible(false);
-                this.paginasAmarela[this.maquinaEstado.currentState() - 3 - this.paginasVerde.length].setVisible(false);
+            if (this.maquinaEstado.currentState() > 2 + this.paginasVermelha.length && this.maquinaEstado.currentState() <= 2 + this.paginasVermelha.length + this.paginasAmarela.length){
+                this.paginasAmarela[this.maquinaEstado.currentState() - 4 - this.paginasVermelha.length].setVisible(false);
+                this.paginasAmarela[this.maquinaEstado.currentState() - 3 - this.paginasVermelha.length].setVisible(false);
             }
-            if (this.maquinaEstado.currentState() > 4 + this.paginasVerde.length + this.paginasAmarela.length && this.maquinaEstado.currentState() <= 4 + this.paginasVerde.length + this.paginasAmarela.length + this.paginasVermelha.length){
-                this.paginasVermelha[this.maquinaEstado.currentState() - 6 - this.paginasVerde.length - this.paginasAmarela.length].setVisible(false);
-                this.paginasVermelha[this.maquinaEstado.currentState() - 5 - this.paginasVerde.length - this.paginasAmarela.length].setVisible(false);
+            if (this.maquinaEstado.currentState() > 4 + this.paginasVermelha.length + this.paginasAmarela.length && this.maquinaEstado.currentState() <= 4 + this.paginasVermelha.length + this.paginasAmarela.length + this.paginasVerde.length){
+                this.paginasVerde[this.maquinaEstado.currentState() - 6 - this.paginasVermelha.length - this.paginasAmarela.length].setVisible(false);
+                this.paginasVerde[this.maquinaEstado.currentState() - 5 - this.paginasVermelha.length - this.paginasAmarela.length].setVisible(false);
             }
             if (this.maquinaEstado.currentState() >= 6 + this.paginasVerde.length + this.paginasAmarela.length + this.paginasVermelha.length){
                 this.primeiraCena.events.emit("tendaQuiz");
@@ -100,18 +100,18 @@ class Livros extends Phaser.Scene {
         });
         pageUp.on("up", () => {
             this.efeitoSonoroVirarPagina.play();
-            if (this.maquinaEstado.currentState() >= 2 && this.maquinaEstado.currentState() <= this.paginasVerde.length){
-                this.paginasVerde[this.maquinaEstado.currentState() - 2].setVisible(false);
-                this.paginasVerde[this.maquinaEstado.currentState() - 1].setVisible(false);
+            if (this.maquinaEstado.currentState() >= 2 && this.maquinaEstado.currentState() <= this.paginasVermelha.length){
+                this.paginasVermelha[this.maquinaEstado.currentState() - 2].setVisible(false);
+                this.paginasVermelha[this.maquinaEstado.currentState() - 1].setVisible(false);
             }
-            console.log(this.maquinaEstado.currentState() >= 4 + this.paginasVerde.length, this.maquinaEstado.currentState() < 4 + this.paginasVerde.length + this.paginasAmarela.length);
-            if (this.maquinaEstado.currentState() ,this.maquinaEstado.currentState() >= 4 + this.paginasVerde.length && this.maquinaEstado.currentState() < 4 + this.paginasVerde.length + this.paginasAmarela.length){
-                this.paginasAmarela[this.maquinaEstado.currentState() - 4 - this.paginasVerde.length].setVisible(false);
-                this.paginasAmarela[this.maquinaEstado.currentState() - 3 - this.paginasVerde.length].setVisible(false);
+            console.log(this.maquinaEstado.currentState() >= 4 + this.paginasVermelha.length, this.maquinaEstado.currentState() < 4 + this.paginasVermelha.length + this.paginasAmarela.length);
+            if (this.maquinaEstado.currentState() ,this.maquinaEstado.currentState() >= 4 + this.paginasVermelha.length && this.maquinaEstado.currentState() < 4 + this.paginasVermelha.length + this.paginasAmarela.length){
+                this.paginasAmarela[this.maquinaEstado.currentState() - 4 - this.paginasVermelha.length].setVisible(false);
+                this.paginasAmarela[this.maquinaEstado.currentState() - 3 - this.paginasVermelha.length].setVisible(false);
             }
-            if (this.maquinaEstado.currentState() >= 6 + this.paginasVerde.length + this.paginasAmarela.length && this.maquinaEstado.currentState() < 6 + this.paginasVerde.length + this.paginasAmarela.length + this.paginasVermelha.length){
-                this.paginasVermelha[this.maquinaEstado.currentState() - 6 - this.paginasVerde.length - this.paginasAmarela.length].setVisible(false);
-                this.paginasVermelha[this.maquinaEstado.currentState() - 5 - this.paginasVerde.length - this.paginasAmarela.length].setVisible(false);
+            if (this.maquinaEstado.currentState() >= 6 + this.paginasVermelha.length + this.paginasAmarela.length && this.maquinaEstado.currentState() < 6 + this.paginasVerde.length + this.paginasAmarela.length + this.paginasVermelha.length){
+                this.paginasVerde[this.maquinaEstado.currentState() - 6 - this.paginasVermelha.length - this.paginasAmarela.length].setVisible(false);
+                this.paginasVerde[this.maquinaEstado.currentState() - 5 - this.paginasVermelha.length - this.paginasAmarela.length].setVisible(false);
             }
             this.maquinaEstado.currentState() <= 2 ? this.maquinaEstado.transitionTo(0) : this.maquinaEstado.transitionTo(this.maquinaEstado.currentState() - 2);
         })
@@ -134,31 +134,31 @@ class Livros extends Phaser.Scene {
                 pagina.setVisible(false);
             });
         }
-        if (this.maquinaEstado.currentState()  >= 2 && this.maquinaEstado.currentState() < 2 + this.paginasVerde.length) {
-            this.livroVerde.setVisible(false);
-            this.livroAmarelo.setVisible(false);
-            this.livroVermelho.setVisible(false);
-            this.livroVerdeAberto.setVisible(true);
-            this.paginasVerde[this.maquinaEstado.currentState() - 2].setVisible(true);
-            this.paginasVerde[this.maquinaEstado.currentState() - 1].setVisible(true);
-        }
-        if (this.maquinaEstado.currentState() > 2 + this.paginasVerde.length && this.maquinaEstado.currentState() <= 2 + this.paginasVerde.length + this.paginasAmarela.length){
-            this.livroVerde.setVisible(false);
-            this.livroAmarelo.setVisible(false);
-            this.livroVermelho.setVisible(false);
-            this.livroAmareloAberto.setVisible(true);
-            this.paginasAmarela[this.maquinaEstado.currentState() - 4 - this.paginasVerde.length].setVisible(true);
-            this.paginasAmarela[this.maquinaEstado.currentState() - 3 - this.paginasVerde.length].setVisible(true);
-        }
-        if (this.maquinaEstado.currentState() > 4 + this.paginasVerde.length + this.paginasAmarela.length && this.maquinaEstado.currentState() <= 4 + this.paginasVerde.length + this.paginasAmarela.length + this.paginasVermelha.length){
+        if (this.maquinaEstado.currentState()  >= 2 && this.maquinaEstado.currentState() < 2 + this.paginasVermelha.length) {
             this.livroVerde.setVisible(false);
             this.livroAmarelo.setVisible(false);
             this.livroVermelho.setVisible(false);
             this.livroVermelhoAberto.setVisible(true);
-            this.paginasVermelha[this.maquinaEstado.currentState() - 6 - this.paginasVerde.length - this.paginasAmarela.length].setVisible(true);
-            this.paginasVermelha[this.maquinaEstado.currentState() - 5 - this.paginasVerde.length - this.paginasAmarela.length].setVisible(true);
+            this.paginasVermelha[this.maquinaEstado.currentState() - 2].setVisible(true);
+            this.paginasVermelha[this.maquinaEstado.currentState() - 1].setVisible(true);
         }
-        if (this.maquinaEstado.currentState() === this.paginasVerde.length + 2){
+        if (this.maquinaEstado.currentState() > 2 + this.paginasVermelha.length && this.maquinaEstado.currentState() <= 2 + this.paginasVermelha.length + this.paginasAmarela.length){
+            this.livroVerde.setVisible(false);
+            this.livroAmarelo.setVisible(false);
+            this.livroVermelho.setVisible(false);
+            this.livroAmareloAberto.setVisible(true);
+            this.paginasAmarela[this.maquinaEstado.currentState() - 4 - this.paginasVermelha.length].setVisible(true);
+            this.paginasAmarela[this.maquinaEstado.currentState() - 3 - this.paginasVermelha.length].setVisible(true);
+        }
+        if (this.maquinaEstado.currentState() > 4 + this.paginasVermelha.length + this.paginasAmarela.length && this.maquinaEstado.currentState() <= 4 + this.paginasVerde.length + this.paginasAmarela.length + this.paginasVermelha.length){
+            this.livroVerde.setVisible(false);
+            this.livroAmarelo.setVisible(false);
+            this.livroVermelho.setVisible(false);
+            this.livroVerdeAberto.setVisible(true);
+            this.paginasVerde[this.maquinaEstado.currentState() - 6 - this.paginasVermelha.length - this.paginasAmarela.length].setVisible(true);
+            this.paginasVerde[this.maquinaEstado.currentState() - 5 - this.paginasVermelha.length - this.paginasAmarela.length].setVisible(true);
+        }
+        if (this.maquinaEstado.currentState() === this.paginasVermelha.length + 2){
             this.livroVerde.setVisible(true);
             this.livroAmarelo.setVisible(true);
             this.livroVermelho.setVisible(true);
@@ -175,7 +175,7 @@ class Livros extends Phaser.Scene {
                 pagina.setVisible(false);
             });
         }
-        if (this.maquinaEstado.currentState() === this.paginasVerde.length + this.paginasAmarela.length + 4){
+        if (this.maquinaEstado.currentState() === this.paginasVermelha.length + this.paginasAmarela.length + 4){
             this.livroVerde.setVisible(true);
             this.livroAmarelo.setVisible(true);
             this.livroVermelho.setVisible(true);
