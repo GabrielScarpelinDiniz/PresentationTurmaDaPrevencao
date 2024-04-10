@@ -50,7 +50,7 @@ class Livros extends Phaser.Scene {
     create() {
         this.primeiraCena = this.scene.get("cenaPrincipal");
         this.scene.sleep("livros")
-        this.texto = this.cache.json.get("conteudo-livros");
+        this.maquinaEstado = new StateMachine(0);
         // this.eventoGatilho.on("tendaLivros", () => {
         // Adiciona o background e livros a serem apresentados na cena
         this.add.image(0, 0, "backgroundLivros").setOrigin(0, 0).setScale(2);
@@ -60,323 +60,51 @@ class Livros extends Phaser.Scene {
         this.livroAmareloAberto = this.add.image(640, 350, "livroAmareloAberto").setScale(2.6).setVisible(false);
         this.livroVermelhoAberto = this.add.image(640, 350, "livroVermelhoAberto").setScale(2.6).setVisible(false);
         this.livroVerdeAberto = this.add.image(640, 350, "livroVerdeAberto").setScale(2.6).setVisible(false);
+        this.paginasVerde = [this.add.image(400, 325, "verdeCase1").setVisible(false), this.add.image(850, 325, "verdeCase2").setVisible(false), this.add.image(400, 325, "verdeCase3").setVisible(false), this.add.image(850, 325, "verdeCase4").setVisible(false)];
+        this.paginasAmarela = [this.add.image(400, 325, "amareloCase6").setVisible(false), this.add.image(850, 325, "amareloCase7").setVisible(false), this.add.image(400, 325, "amareloCase8").setVisible(false), this.add.image(850, 325, "amareloCase9").setVisible(false)];
+        this.paginasVermelha = [this.add.image(400, 325, "vermelhoCase11").setVisible(false), this.add.image(850, 325, "vermelhoCase12").setVisible(false)];
         // inicia os objetos iniciais da cena livro
         // Adiciona efeito sonoro de virar a página
         this.efeitoSonoroVirarPagina = this.sound.add("efeitoSonoroVirarPagina", {
             volume: 0.5
         });
-
-        this.verdeCase1 = this.add.image(850, 325, "verdeCase1").setVisible(false);
-        this.verdeCase2 = this.add.image(850, 325, "verdeCase2").setVisible(false);
-        this.verdeCase3 = this.add.image(400, 325, "verdeCase3").setVisible(false);
-        this.verdeCase4 = this.add.image(850, 325, "verdeCase4").setVisible(false);
-        this.verdeCase5 = this.add.image(400, 325, "verdeCase5").setVisible(false);
-
-        this.amareloCase6 = this.add.image(850, 325, "amareloCase6").setVisible(false);
-        this.amareloCase7 = this.add.image(850, 325, "amareloCase7").setVisible(false);
-        this.amareloCase8 = this.add.image(400, 325, "amareloCase8").setVisible(false);
-        this.amareloCase9 = this.add.image(850, 325, "amareloCase9").setVisible(false);
-        this.amareloCase10 = this.add.image(400, 325, "amareloCase10").setVisible(false);
-
-        this.vermelhoCase11 = this.add.image(850, 325, "vermelhoCase11").setVisible(false);
-        this.vermelhoCase12 = this.add.image(400, 325, "vermelhoCase12").setVisible(false);
-
-        this.tipos = this.add.image(400, 325, "tiposQueimadura").setVisible(false);
-
-        this.livroVerde.on("pointerdown", () => { // Define função que chama o livro verde aberto quando clicar no livro verde fechado
-            // Adiciona o evento de clique no livro verde, ao clicar o livro verde é aberto
-            this.efeitoSonoroVirarPagina.play();
-            this.livroVerde.setVisible(false);
-            this.livroAmarelo.setVisible(false);
-            this.livroVermelho.setVisible(false);
-            this.livroVerdeAberto.setVisible(true);
-            this.paginaAtual = 0;
-            this.primeiroGrau1 = this.add.image(400, 325, "primeirograu1").setVisible(true);
-            this.primeiroGrau2 = this.add.image(850, 325, "primeirograu2").setVisible(true);
-            this.setaDireita = this.add.image(1180, 360, "setaVerde").setScale(0.75).setInteractive().setScrollFactor(0);
-            this.setaEsquerda = this.add.image(100, 360, "setaVerde").setScale(0.75).setInteractive().setScrollFactor(0).setVisible(false).setFlip(true, false);
-
-            this.setaDireita.on("pointerdown", () => {
-                this.efeitoSonoroVirarPagina.play();
-                this.paginaAtual++;
-
-                switch (this.paginaAtual) {
-
-                    case 1:
-                        console.log(this.paginaAtual);
-                        this.primeiroGrau1.setVisible(false);
-                        this.primeiroGrau2.setVisible(false);
-                        this.setaEsquerda.setVisible(true);
-                        this.tipos.setVisible(true);
-                        this.verdeCase1.setVisible(true);
-                        break;
-
-                    case 2:
-                        console.log(this.paginaAtual);
-                        this.tipos.setVisible(false);
-                        this.verdeCase1.setVisible(false);
-                        this.verdeCase2.setVisible(true);
-                        this.verdeCase3.setVisible(true);
-                        break;
-
-                    case 3:
-                        console.log(this.paginaAtual);
-                        this.verdeCase2.setVisible(false);
-                        this.verdeCase3.setVisible(false);
-                        this.verdeCase4.setVisible(true);
-                        this.verdeCase5.setVisible(true);
-                        this.setaDireita.setVisible(false);
-                }
-
-            });
-
-            this.setaEsquerda.on("pointerdown", () => {
-                this.efeitoSonoroVirarPagina.play();
-                this.paginaAtual--;
-
-                switch (this.paginaAtual) {
-                    case -1:
-                        this.primeiroGrau1.setVisible(false);
-                        this.primeiroGrau2.setVisible(false);
-                        this.setaEsquerda.setVisible(false);
-                        this.setaDireita.setVisible(false);
-                        this.livroVerde.setVisible(true);
-                        this.livroAmarelo.setVisible(true);
-                        this.livroVermelho.setVisible(true);
-                        this.livroVerdeAberto.setVisible(false);
-                        break;
-                    case 0:
-                        console.log(this.paginaAtual);
-                        this.primeiroGrau1.setVisible(true);
-                        this.primeiroGrau2.setVisible(true);
-                        this.verdeCase1.setVisible(false);
-                        this.tipos.setVisible(false);
-                        this.setaEsquerda.setVisible(true);
-                        this.setaDireita.setVisible(true);
-                        break;
-
-                    case 1:
-
-                        this.verdeCase2.setVisible(false);
-                        this.verdeCase3.setVisible(false);
-                        this.verdeCase1.setVisible(true);
-                        this.tipos.setVisible(true)
-                        this.setaEsquerda.setVisible(true);
-                        console.log(this.paginaAtual);
-                        break;
-
-                    case 2:
-                        this.verdeCase2.setVisible(true);
-                        this.verdeCase3.setVisible(true);
-                        this.verdeCase4.setVisible(false);
-                        this.verdeCase5.setVisible(false);
-                        this.setaDireita.setVisible(true);
-                        console.log(this.paginaAtual);
-                        break;
-
-                    case 3:
-                        this.verdeCase4.setVisible(true);
-                        this.verdeCase5.setVisible(true);
-                        console.log(this.paginaAtual);
-                        this.setaEsquerda.setVisible(true);
-                        break;
-                }
-
-            })
-
-        });
-
-
-        this.livroAmarelo.on("pointerdown", () => { // Define função que chama o livro amarelo aberto quando clicar no livro amarelo fechado
-            // Adiciona o evento de clique no livro amarelo, ao clicar o livro amarelo é aberto
-            this.efeitoSonoroVirarPagina.play();
-            this.livroVerde.setVisible(false);
-            this.livroAmarelo.setVisible(false);
-            this.livroVermelho.setVisible(false);
-            this.livroAmareloAberto.setVisible(true);
-            this.paginaAtual = 0;
-            this.segundoGrau1= this.add.image(400, 325, "segundograu1").setVisible(true);
-            this.segundoGrau2 = this.add.image(850, 325, "segundograu2").setVisible(true);            
-            this.setaDireita = this.add.image(1180, 360, "setaAmarela").setScale(0.75).setInteractive().setScrollFactor(0);
-            this.setaEsquerda = this.add.image(100, 360, "setaAmarela").setScale(0.75).setInteractive().setScrollFactor(0).setVisible(false).setFlip(true, false);
-
-            this.setaDireita.on("pointerdown", () => {
-                this.efeitoSonoroVirarPagina.play();
-                this.paginaAtual++;
-
-                switch (this.paginaAtual) {
-
-                    case 1:
-                        console.log(this.paginaAtual);
-                        this.segundoGrau1.setVisible(false);
-                        this.segundoGrau2.setVisible(false);
-                        this.setaEsquerda.setVisible(true);
-                        this.tipos.setVisible(true);
-                        this.amareloCase6.setVisible(true);
-                        break;
-
-                    case 2:
-                        console.log(this.paginaAtual);
-                        this.tipos.setVisible(false);
-                        this.amareloCase6.setVisible(false);
-                        this.amareloCase7.setVisible(true);
-                        this.amareloCase8.setVisible(true);
-                        break;
-
-                    case 3:
-                        console.log(this.paginaAtual);
-                        this.amareloCase7.setVisible(false);
-                        this.amareloCase8.setVisible(false);
-                        this.amareloCase9.setVisible(true);
-                        this.amareloCase10.setVisible(true);
-                        this.setaDireita.setVisible(false);
-                        break;
-                }
-
-            });
-
-            this.setaEsquerda.on("pointerdown", () => {
-                this.efeitoSonoroVirarPagina.play();
-                this.paginaAtual--;
-
-                switch (this.paginaAtual) {
-                    case -1:
-                        this.segundoGrau1.setVisible(false);
-                        this.segundoGrau2.setVisible(false);
-                        this.setaEsquerda.setVisible(false);
-                        this.setaDireita.setVisible(false);
-                        this.livroVerde.setVisible(true);
-                        this.livroAmarelo.setVisible(true);
-                        this.livroVermelho.setVisible(true);
-                        this.livroAmareloAberto.setVisible(false);
-                        break;
-                    case 0:
-                        console.log(this.paginaAtual);
-                        this.segundoGrau1.setVisible(true);
-                        this.segundoGrau2.setVisible(true);
-                        this.amareloCase6.setVisible(false);
-                        this.tipos.setVisible(false);
-                        this.setaEsquerda.setVisible(true);
-                        this.setaDireita.setVisible(true);
-                        break;
-
-                    case 1:
-
-                        this.amareloCase7.setVisible(false);
-                        this.amareloCase8.setVisible(false);
-                        this.amareloCase6.setVisible(true);
-                        this.tipos.setVisible(true)
-                        this.setaEsquerda.setVisible(true);
-                        console.log(this.paginaAtual);
-                        break;
-
-                    case 2:
-                        this.amareloCase7.setVisible(true);
-                        this.amareloCase8.setVisible(true);
-                        this.amareloCase9.setVisible(false);
-                        this.amareloCase10.setVisible(false);
-                        this.setaDireita.setVisible(true);
-                        console.log(this.paginaAtual);
-                        break;
-
-                    case 3:
-                        this.amareloCase9.setVisible(true);
-                        this.amareloCase10.setVisible(true);
-                        console.log(this.paginaAtual);
-                        this.setaDireita.setVisible(false);
-                        break;
-                }
-
-            })
-        });
-
-        this.livroVermelho.on("pointerdown", () => { // Define função que chama o livro vermelho aberto quando clicar no livro vermelho fechado
-            // Adiciona o evento de clique no livro vermelho, ao clicar o livro vermelho é aberto
-            this.efeitoSonoroVirarPagina.play();
-            this.livroVerde.setVisible(false);
-            this.livroAmarelo.setVisible(false);
-            this.livroVermelho.setVisible(false);
-            this.livroVermelhoAberto.setVisible(true);
-            this.paginaAtual = 0;
-            this.terceiroGrau1= this.add.image(400, 325, "terceirograu1").setVisible(true);
-            this.terceiroGrau2 = this.add.image(850, 325, "terceirograu2").setVisible(true);            
-            this.setaDireita = this.add.image(1180, 360, "setaVermelha").setScale(0.75).setInteractive().setScrollFactor(0);
-            this.setaEsquerda = this.add.image(100, 360, "setaVermelha").setScale(0.75).setInteractive().setScrollFactor(0).setVisible(false).setFlip(true, false);
-
-            this.setaDireita.on("pointerdown", () => {
-                this.efeitoSonoroVirarPagina.play();
-                this.paginaAtual++;
-
-                switch (this.paginaAtual) {
-                    
-                    case 1:
-                        console.log(this.paginaAtual);
-                        this.terceiroGrau1.setVisible(false);
-                        this.terceiroGrau2.setVisible(false);
-                        this.setaEsquerda.setVisible(true);
-                        this.tipos.setVisible(true);
-                        this.vermelhoCase11.setVisible(true);
-                        break;
-                    
-                    case 2:
-                        console.log(this.paginaAtual);
-                        this.tipos.setVisible(false);
-                        this.vermelhoCase11.setVisible(false);
-                        this.vermelhoCase12.setVisible(true);
-                        this.setaDireita.setVisible(false);
-                        break;
-                }
-
-            });
-
-            this.setaEsquerda.on("pointerdown", () => {
-                this.efeitoSonoroVirarPagina.play();
-                this.paginaAtual--;
-
-                switch (this.paginaAtual) {
-                    case -1:
-                        this.terceiroGrau1.setVisible(false);
-                        this.terceiroGrau2.setVisible(false);
-                        this.setaEsquerda.setVisible(false);
-                        this.setaDireita.setVisible(false);
-                        this.livroVerde.setVisible(true);
-                        this.livroAmarelo.setVisible(true);
-                        this.livroVermelho.setVisible(true);
-                        this.livroVermelhoAberto.setVisible(false);
-                        break;
-                    case 0:
-
-                        this.terceiroGrau1.setVisible(true);
-                        this.terceiroGrau2.setVisible(true);
-                        this.vermelhoCase11.setVisible(false);
-                        this.tipos.setVisible(false);
-                        this.setaEsquerda.setVisible(true);
-                        this.setaDireita.setVisible(true);
-                        console.log(this.paginaAtual);
-                        break;
-
-                    case 1:
-
-                        console.log(this.paginaAtual);
-                        this.vermelhoCase11.setVisible(true);
-                        this.tipos.setVisible(true);
-                        this.vermelhoCase12.setVisible(false);
-                        this.setaEsquerda.setVisible(true);
-                        this.setaDireita.setVisible(true);
-
-                        break;
-                    
-                    case 2: 
-                    
-                        console.log(this.paginaAtual);
-                        this.setaDireita.setVisible(false);
-                        this.vermelhoCase12.setVisible(false);
-                        break;
-                }
-
-            })
-        });
+        const pageDown = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.PAGE_DOWN);
+        const pageUp = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.PAGE_UP);
         
+        pageDown.on("up", () => {
+            console.log(this.maquinaEstado.currentState());
+            this.efeitoSonoroVirarPagina.play();
+            if (this.maquinaEstado.currentState() >= 2 && this.maquinaEstado.currentState() <= this.paginasVerde.length){
+                this.paginasVerde[this.maquinaEstado.currentState() - 2].setVisible(false);
+                this.paginasVerde[this.maquinaEstado.currentState() - 1].setVisible(false);
+            }
+            if (this.maquinaEstado.currentState() > 2 + this.paginasVerde.length && this.maquinaEstado.currentState() <= 2 + this.paginasVerde.length + this.paginasAmarela.length){
+                this.paginasAmarela[this.maquinaEstado.currentState() - 4 - this.paginasVerde.length].setVisible(false);
+                this.paginasAmarela[this.maquinaEstado.currentState() - 3 - this.paginasVerde.length].setVisible(false);
+            }
+            if (this.maquinaEstado.currentState() > 4 + this.paginasVerde.length + this.paginasAmarela.length && this.maquinaEstado.currentState() <= 4 + this.paginasVerde.length + this.paginasAmarela.length + this.paginasVermelha.length){
+                this.paginasVermelha[this.maquinaEstado.currentState() - 6 - this.paginasVerde.length - this.paginasAmarela.length].setVisible(false);
+                this.paginasVermelha[this.maquinaEstado.currentState() - 5 - this.paginasVerde.length - this.paginasAmarela.length].setVisible(false);
+            }
+            this.maquinaEstado.transitionTo(this.maquinaEstado.currentState() + 2);
+        });
+        pageUp.on("up", () => {
+            this.efeitoSonoroVirarPagina.play();
+            if (this.maquinaEstado.currentState() >= 2 && this.maquinaEstado.currentState() <= this.paginasVerde.length){
+                this.paginasVerde[this.maquinaEstado.currentState() - 2].setVisible(false);
+                this.paginasVerde[this.maquinaEstado.currentState() - 1].setVisible(false);
+            }
+            console.log(this.maquinaEstado.currentState() >= 4 + this.paginasVerde.length, this.maquinaEstado.currentState() < 4 + this.paginasVerde.length + this.paginasAmarela.length);
+            if (this.maquinaEstado.currentState() ,this.maquinaEstado.currentState() >= 4 + this.paginasVerde.length && this.maquinaEstado.currentState() < 4 + this.paginasVerde.length + this.paginasAmarela.length){
+                this.paginasAmarela[this.maquinaEstado.currentState() - 4 - this.paginasVerde.length].setVisible(false);
+                this.paginasAmarela[this.maquinaEstado.currentState() - 3 - this.paginasVerde.length].setVisible(false);
+            }
+            if (this.maquinaEstado.currentState() >= 6 + this.paginasVerde.length + this.paginasAmarela.length && this.maquinaEstado.currentState() <= 6 + this.paginasVerde.length + this.paginasAmarela.length + this.paginasVermelha.length){
+                this.paginasVermelha[this.maquinaEstado.currentState() - 6 - this.paginasVerde.length - this.paginasAmarela.length].setVisible(false);
+                this.paginasVermelha[this.maquinaEstado.currentState() - 5 - this.paginasVerde.length - this.paginasAmarela.length].setVisible(false);
+            }
+            this.maquinaEstado.currentState() <= 2 ? this.maquinaEstado.transitionTo(0) : this.maquinaEstado.transitionTo(this.maquinaEstado.currentState() - 2);
+        })
         // Adiciona o botão de fechar a cena e adiciona o evento de clique
         this.botaoFechar = this.add.sprite(1200, 50, "botaoX").setScale(0.5).setInteractive().setScrollFactor(0);
         this.botaoFechar.on("pointerdown", () => {
@@ -388,5 +116,82 @@ class Livros extends Phaser.Scene {
             this.primeiraCena.physics.resume()
         });
     }
-
+    update(){
+        if (this.maquinaEstado.currentState() == 0) {
+            this.livroVerde.setVisible(true);
+            this.livroAmarelo.setVisible(true);
+            this.livroVermelho.setVisible(true);
+            this.livroAmareloAberto.setVisible(false);
+            this.livroVermelhoAberto.setVisible(false);
+            this.livroVerdeAberto.setVisible(false);
+            this.paginasVerde.forEach(pagina => {
+                pagina.setVisible(false);
+            });
+            this.paginasAmarela.forEach(pagina => {
+                pagina.setVisible(false);
+            });
+            this.paginasVermelha.forEach(pagina => {
+                pagina.setVisible(false);
+            });
+        }
+        if (this.maquinaEstado.currentState()  >= 2 && this.maquinaEstado.currentState() < 2 + this.paginasVerde.length) {
+            this.livroVerde.setVisible(false);
+            this.livroAmarelo.setVisible(false);
+            this.livroVermelho.setVisible(false);
+            this.livroVerdeAberto.setVisible(true);
+            this.paginasVerde[this.maquinaEstado.currentState() - 2].setVisible(true);
+            this.paginasVerde[this.maquinaEstado.currentState() - 1].setVisible(true);
+        }
+        if (this.maquinaEstado.currentState() > 2 + this.paginasVerde.length && this.maquinaEstado.currentState() <= 2 + this.paginasVerde.length + this.paginasAmarela.length){
+            this.livroVerde.setVisible(false);
+            this.livroAmarelo.setVisible(false);
+            this.livroVermelho.setVisible(false);
+            this.livroAmareloAberto.setVisible(true);
+            this.paginasAmarela[this.maquinaEstado.currentState() - 4 - this.paginasVerde.length].setVisible(true);
+            this.paginasAmarela[this.maquinaEstado.currentState() - 3 - this.paginasVerde.length].setVisible(true);
+        }
+        if (this.maquinaEstado.currentState() > 4 + this.paginasVerde.length + this.paginasAmarela.length && this.maquinaEstado.currentState() <= 4 + this.paginasVerde.length + this.paginasAmarela.length + this.paginasVermelha.length){
+            this.livroVerde.setVisible(false);
+            this.livroAmarelo.setVisible(false);
+            this.livroVermelho.setVisible(false);
+            this.livroVermelhoAberto.setVisible(true);
+            this.paginasVermelha[this.maquinaEstado.currentState() - 6 - this.paginasVerde.length - this.paginasAmarela.length].setVisible(true);
+            this.paginasVermelha[this.maquinaEstado.currentState() - 5 - this.paginasVerde.length - this.paginasAmarela.length].setVisible(true);
+        }
+        if (this.maquinaEstado.currentState() === this.paginasVerde.length + 2){
+            this.livroVerde.setVisible(true);
+            this.livroAmarelo.setVisible(true);
+            this.livroVermelho.setVisible(true);
+            this.livroAmareloAberto.setVisible(false);
+            this.livroVermelhoAberto.setVisible(false);
+            this.livroVerdeAberto.setVisible(false);
+            this.paginasVerde.forEach(pagina => {
+                pagina.setVisible(false);
+            });
+            this.paginasAmarela.forEach(pagina => {
+                pagina.setVisible(false);
+            });
+            this.paginasVermelha.forEach(pagina => {
+                pagina.setVisible(false);
+            });
+        }
+        if (this.maquinaEstado.currentState() === this.paginasVerde.length + this.paginasAmarela.length + 4){
+            this.livroVerde.setVisible(true);
+            this.livroAmarelo.setVisible(true);
+            this.livroVermelho.setVisible(true);
+            this.livroAmareloAberto.setVisible(false);
+            this.livroVermelhoAberto.setVisible(false);
+            this.livroVerdeAberto.setVisible(false);
+            this.paginasVerde.forEach(pagina => {
+                pagina.setVisible(false);
+            });
+            this.paginasAmarela.forEach(pagina => {
+                pagina.setVisible(false);
+            });
+            this.paginasVermelha.forEach(pagina => {
+                pagina.setVisible(false);
+            });
+        }
+    }
 }
+// !honest bar
