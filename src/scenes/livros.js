@@ -24,18 +24,22 @@ class Livros extends Phaser.Scene {
         this.load.image("setaVerde", "src/assets/setaVerde.png");
         this.load.image("setaAmarela", "src/assets/setaAmarela.png");
 
-        this.load.image("verdeCase1", "src/assets/paginaCases/case1.png");
-        this.load.image("verdeCase2", "src/assets/paginaCases/case2.png");
-        this.load.image("verdeCase3", "src/assets/paginaCases/case3.png");
-        this.load.image("verdeCase4", "src/assets/paginaCases/case4.png");
-        this.load.image("verdeCase5", "src/assets/paginaCases/case5.png");
-        this.load.image("amareloCase6", "src/assets/paginaCases/case6.png");
-        this.load.image("amareloCase7", "src/assets/paginaCases/case7.png");
-        this.load.image("amareloCase8", "src/assets/paginaCases/case8.png");
-        this.load.image("amareloCase9", "src/assets/paginaCases/case9.png");
-        this.load.image("amareloCase10", "src/assets/paginaCases/case10.png");
-        this.load.image("vermelhoCase11", "src/assets/paginaCases/case11.png");
-        this.load.image("vermelhoCase12", "src/assets/paginaCases/case12.png");
+        this.load.image("verdePag1", "src/assets/paginaCases/verdePag1.png");
+        this.load.image("verdePag2", "src/assets/paginaCases/verdePag2.png");
+        this.load.image("verdePag3", "src/assets/paginaCases/verdePag3.png");
+        this.load.image("verdePag4", "src/assets/paginaCases/verdePag4.png");
+        this.load.image("verdePag5", "src/assets/paginaCases/verdePag5.png");
+        this.load.image("verdePag6", "src/assets/paginaCases/verdePag6.png");
+        this.load.image("verdePag7", "src/assets/paginaCases/verdePag7.png");
+        this.load.image("verdePag8", "src/assets/paginaCases/verdePag8.png");
+
+        this.load.image("amareloPag1", "src/assets/paginaCases/amareloPag1.png");
+        this.load.image("amareloPag2", "src/assets/paginaCases/amareloPag2.png");
+        this.load.image("amareloPag3", "src/assets/paginaCases/amareloPag3.png");
+        this.load.image("amareloPag4", "src/assets/paginaCases/amareloPag4.png");
+
+        this.load.image("vermelhoPag1", "src/assets/paginaCases/vermelhoPag1.png");
+        this.load.image("vermelhoPag2", "src/assets/paginaCases/vermelhoPag2.png");
 
         this.load.image("tiposQueimadura", "src/assets/paginasIniciais/tipo.png");
         this.load.image("primeirograu1", "src/assets/paginasIniciais/primeirograu1.png");
@@ -60,9 +64,9 @@ class Livros extends Phaser.Scene {
         this.livroAmareloAberto = this.add.image(640, 350, "livroAmareloAberto").setScale(2.6).setVisible(false);
         this.livroVermelhoAberto = this.add.image(640, 350, "livroVermelhoAberto").setScale(2.6).setVisible(false);
         this.livroVerdeAberto = this.add.image(640, 350, "livroVerdeAberto").setScale(2.6).setVisible(false);
-        this.paginasVerde = [this.add.image(400, 325, "verdeCase1").setVisible(false), this.add.image(850, 325, "verdeCase2").setVisible(false), this.add.image(400, 325, "verdeCase3").setVisible(false), this.add.image(850, 325, "verdeCase4").setVisible(false)];
-        this.paginasAmarela = [this.add.image(400, 325, "amareloCase6").setVisible(false), this.add.image(850, 325, "amareloCase7").setVisible(false), this.add.image(400, 325, "amareloCase8").setVisible(false), this.add.image(850, 325, "amareloCase9").setVisible(false)];
-        this.paginasVermelha = [this.add.image(400, 325, "vermelhoCase11").setVisible(false), this.add.image(850, 325, "vermelhoCase12").setVisible(false)];
+        this.paginasVerde = [this.add.image(400, 325, "verdePag1").setVisible(false), this.add.image(850, 325, "verdePag2").setVisible(false), this.add.image(400, 325, "verdePag3").setVisible(false), this.add.image(850, 325, "verdePag4").setVisible(false), this.add.image(400, 325, "verdePag5").setVisible(false), this.add.image(850, 325, "verdePag6").setVisible(false), this.add.image(400, 325, "verdePag7").setVisible(false), this.add.image(850, 325, "verdePag8").setVisible(false)];
+        this.paginasAmarela = [this.add.image(400, 325, "amareloPag1").setVisible(false), this.add.image(850, 325, "amareloPag2").setVisible(false), this.add.image(400, 325, "amareloPag3").setVisible(false), this.add.image(850, 325, "amareloPag4").setVisible(false)];
+        this.paginasVermelha = [this.add.image(400, 325, "vermelhoPag1").setVisible(false), this.add.image(850, 325, "vermelhoPag2").setVisible(false)];
         // inicia os objetos iniciais da cena livro
         // Adiciona efeito sonoro de virar a página
         this.efeitoSonoroVirarPagina = this.sound.add("efeitoSonoroVirarPagina", {
@@ -86,6 +90,12 @@ class Livros extends Phaser.Scene {
                 this.paginasVermelha[this.maquinaEstado.currentState() - 6 - this.paginasVerde.length - this.paginasAmarela.length].setVisible(false);
                 this.paginasVermelha[this.maquinaEstado.currentState() - 5 - this.paginasVerde.length - this.paginasAmarela.length].setVisible(false);
             }
+            if (this.maquinaEstado.currentState() >= 6 + this.paginasVerde.length + this.paginasAmarela.length + this.paginasVermelha.length){
+                this.primeiraCena.events.emit("tendaQuiz");
+                this.scene.sleep("livros");
+                this.scene.restart();
+                this.primeiraCena.physics.resume();
+            }
             this.maquinaEstado.transitionTo(this.maquinaEstado.currentState() + 2);
         });
         pageUp.on("up", () => {
@@ -99,22 +109,12 @@ class Livros extends Phaser.Scene {
                 this.paginasAmarela[this.maquinaEstado.currentState() - 4 - this.paginasVerde.length].setVisible(false);
                 this.paginasAmarela[this.maquinaEstado.currentState() - 3 - this.paginasVerde.length].setVisible(false);
             }
-            if (this.maquinaEstado.currentState() >= 6 + this.paginasVerde.length + this.paginasAmarela.length && this.maquinaEstado.currentState() <= 6 + this.paginasVerde.length + this.paginasAmarela.length + this.paginasVermelha.length){
+            if (this.maquinaEstado.currentState() >= 6 + this.paginasVerde.length + this.paginasAmarela.length && this.maquinaEstado.currentState() < 6 + this.paginasVerde.length + this.paginasAmarela.length + this.paginasVermelha.length){
                 this.paginasVermelha[this.maquinaEstado.currentState() - 6 - this.paginasVerde.length - this.paginasAmarela.length].setVisible(false);
                 this.paginasVermelha[this.maquinaEstado.currentState() - 5 - this.paginasVerde.length - this.paginasAmarela.length].setVisible(false);
             }
             this.maquinaEstado.currentState() <= 2 ? this.maquinaEstado.transitionTo(0) : this.maquinaEstado.transitionTo(this.maquinaEstado.currentState() - 2);
         })
-        // Adiciona o botão de fechar a cena e adiciona o evento de clique
-        this.botaoFechar = this.add.sprite(1200, 50, "botaoX").setScale(0.5).setInteractive().setScrollFactor(0);
-        this.botaoFechar.on("pointerdown", () => {
-            // Fecha a cena de livros
-            // Inicie a cena principal passando os dados relevantes do estado da cena principal
-            this.events.emit("mudaTarefaParaQuiz");
-            this.scene.sleep("livros");
-            this.scene.restart();
-            this.primeiraCena.physics.resume()
-        });
     }
     update(){
         if (this.maquinaEstado.currentState() == 0) {
@@ -176,6 +176,23 @@ class Livros extends Phaser.Scene {
             });
         }
         if (this.maquinaEstado.currentState() === this.paginasVerde.length + this.paginasAmarela.length + 4){
+            this.livroVerde.setVisible(true);
+            this.livroAmarelo.setVisible(true);
+            this.livroVermelho.setVisible(true);
+            this.livroAmareloAberto.setVisible(false);
+            this.livroVermelhoAberto.setVisible(false);
+            this.livroVerdeAberto.setVisible(false);
+            this.paginasVerde.forEach(pagina => {
+                pagina.setVisible(false);
+            });
+            this.paginasAmarela.forEach(pagina => {
+                pagina.setVisible(false);
+            });
+            this.paginasVermelha.forEach(pagina => {
+                pagina.setVisible(false);
+            });
+        }
+        if (this.maquinaEstado.currentState() === this.paginasVerde.length + this.paginasAmarela.length + this.paginasVermelha.length + 6){
             this.livroVerde.setVisible(true);
             this.livroAmarelo.setVisible(true);
             this.livroVermelho.setVisible(true);

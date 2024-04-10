@@ -281,12 +281,24 @@ Para celebrarmos, vamos fazer uma dinâmica muito divertida com todos os alunos 
       if (this.maquinaEstado.currentState() === "abrirLivros") {
         this.scene.wake("livros");
       }
+      if (this.maquinaEstado.currentState() === "cameraPanParaTendaQuiz") {
+        console.log("teste")
+      }
     })
     this.cameras.main.on("camerazoomcomplete", () => {
-      this.cameras.main.pan(50, 560, 100);
+      if (this.maquinaEstado.currentState() === "zoomIn") {
+        this.cameras.main.pan(50, 560, 100);
         this.maquinaEstado.transitionTo("abrirLivros")
+      }
+      else if (this.maquinaEstado.currentState() === "zoomOut") {
+        this.cameras.main.pan(1000, 560, 1000);
+        this.maquinaEstado.transitionTo("cameraPanParaTendaQuiz");
+      }
     })
-    
+    this.events.on("tendaQuiz", () => {
+      this.cameras.main.zoomTo(2.2, 1000);
+      this.maquinaEstado.transitionTo("zoomOut");
+    });
   }
 
   update() {
