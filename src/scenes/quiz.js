@@ -78,7 +78,7 @@ class Quiz extends Phaser.Scene {
                 }
             });
     
-            this.alternativa2 = this.add.text(bgWhite.x, bgWhite.y + 140, caso.quiz.alternativas[1], {
+            this.alternativa2 = this.add.text(bgWhite.x, bgWhite.y + 75, caso.quiz.alternativas[1], {
                 fontSize: "21px",
                 color: "#000",
                 fontFamily: "Arial",
