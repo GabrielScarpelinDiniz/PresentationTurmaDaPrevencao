@@ -182,9 +182,9 @@ class CenaPrincipal extends Phaser.Scene {
         classificacao: "",
         classificacaoCor: "0xFF0000",
         quiz: {
-          pergunta: "O que poderia ter feito para evitar esse tipo de queimadura?",
+          pergunta: "Qual a melhor maneira de se conscientizar sobre queimaduras?",
           alternativas: [
-            "Aplicar gelo na área queimada para aliviar a dor",
+            "",
             "Jogar Turma da Prevenção"
           ],
           alternativaCorreta: 1

@@ -111,7 +111,7 @@ class Livros extends Phaser.Scene {
         
         pageDown.on("up", () => {
             console.log(this.maquinaEstado.currentState());
-            this.efeitoSonoroVirarPagina.play();
+            // this.efeitoSonoroVirarPagina.play();
             if (this.maquinaEstado.currentState() >= 2 && this.maquinaEstado.currentState() <= this.paginasVermelha.length){
                 this.paginasVermelha[this.maquinaEstado.currentState() - 2].setVisible(false);
                 this.paginasVermelha[this.maquinaEstado.currentState() - 1].setVisible(false);
@@ -133,7 +133,7 @@ class Livros extends Phaser.Scene {
             this.maquinaEstado.transitionTo(this.maquinaEstado.currentState() + 2);
         });
         pageUp.on("up", () => {
-            this.efeitoSonoroVirarPagina.play();
+            // this.efeitoSonoroVirarPagina.play();
             if (this.maquinaEstado.currentState() >= 2 && this.maquinaEstado.currentState() <= this.paginasVermelha.length){
                 this.paginasVermelha[this.maquinaEstado.currentState() - 2].setVisible(false);
                 this.paginasVermelha[this.maquinaEstado.currentState() - 1].setVisible(false);

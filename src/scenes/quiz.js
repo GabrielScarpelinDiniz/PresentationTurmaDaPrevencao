@@ -55,9 +55,9 @@ class Quiz extends Phaser.Scene {
             // Adicionando as alternativas à cena e suas aparências na interface
             this.alternativa1 = this.add.text(bgWhite.x, bgWhite.y + 60, caso.quiz.alternativas[0], {
                 fontSize: "23px",
-                color: "#000",
+                color: "#ffffff",
                 fontFamily: "Arial",
-                backgroundColor: "#008CCC",
+                backgroundColor: "#ffffff",
                 padding: {
                     x: 10,
                     y: 10

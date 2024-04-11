@@ -103,7 +103,7 @@ class MenuPrincipal extends Phaser.Scene {
     // Evento disparado ao clicar no botão (Código temporário apenas para demonstração da funcionalidade na sprint 1)
     this.botaoJogar.on("pointerup", () => {
       // Evento de click do mouse
-      this.efeitoSonoroBotaoIniciar.play();
+      // this.efeitoSonoroBotaoIniciar.play();
       if (!this.scale.isFullscreen) {
         this.scale.startFullscreen();
       }
@@ -128,7 +128,7 @@ class MenuPrincipal extends Phaser.Scene {
       }
     })
     pageDown.on("up", () => {
-      this.efeitoSonoroBotaoIniciar.play();
+      // this.efeitoSonoroBotaoIniciar.play();
       if (!this.scale.isFullscreen) {
         this.scale.startFullscreen();
       }

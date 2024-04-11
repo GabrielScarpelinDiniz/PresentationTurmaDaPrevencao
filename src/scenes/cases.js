@@ -52,7 +52,7 @@ class CenaCases extends Phaser.Scene {
         // Evento disparado ao clicar no botão (Código temporário apenas para demonstração da funcionalidade na sprint 1)
         this.botaoX.on("pointerdown", () => {
             //Fecha tudo do case e volta para o jogo
-            this.efeitoSonoroBotaoX.play();
+            // this.efeitoSonoroBotaoX.play();
             this.nomeTexto.destroy();
             this.casoTexto.destroy();
             this.sintomasTexto.destroy();
@@ -72,7 +72,7 @@ class CenaCases extends Phaser.Scene {
             // Adiciona as informações do caso na tela de casos
             this.primeiraCena.controlesHabilitados = false; // Desabilita os controles do jogador
             const caso = this.primeiraCena.objetoCaso.caso;
-            this.efeitoSonoroBotaoX.play(); // Efeito sonoro do botão de fechar
+            // this.efeitoSonoroBotaoX.play(); // Efeito sonoro do botão de fechar
             this.case1.setVisible(false);
             this.botaoX.setVisible(false); // Mostra o botão de fechar
             this.nomeTexto ? this.nomeTexto.destroy() : null; // Verifica se o texto já existe, se sim, destroi
@@ -97,7 +97,7 @@ class CenaCases extends Phaser.Scene {
         const pageDown = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.PAGE_DOWN);
         pageDown.on("up", () => {
             if (this.caseAberto){
-                this.efeitoSonoroBotaoX.play();
+                // this.efeitoSonoroBotaoX.play();
                 this.nomeTexto.destroy();
                 this.casoTexto.destroy();
                 this.sintomasTexto.destroy();
